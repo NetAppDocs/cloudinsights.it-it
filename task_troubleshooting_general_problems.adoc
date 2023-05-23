@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_troubleshooting_general_problems.html 
 summary: Suggerimenti generali per la risoluzione dei problemi di Cloud Insights. 
-keywords: troubleshooting, problems, browser, login, log in, accessing, access to 
+keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
 ---
 = Risoluzione dei problemi generali di Cloud Insights
 :allow-uri-read: 
@@ -41,6 +41,29 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 
 | Altri errori di accesso | Provare la modalità incognito in Chrome o cancellare la cronologia del browser, i cookie e la cache. Provare con un profilo del browser diverso (ad esempio Chrome - Aggiungi persona). 
 |===
+
+
+== Altri problemi
+
+|===
+
+
+| *Domanda:* | *Risposta:* 
+
+
+| Le mie quote rigide Qtree vengono visualizzate correttamente nelle query, ma le mie quote morbide vengono visualizzate come capacità totale del volume. È corretto? | Solo le quote rigide, impostate manualmente o tramite Trident, verranno visualizzate come quote impostate; se non vengono specificate quote rigide, la capacità Qtree sarà la capacità del volume interno. 
+
+
+| Ho impostato manualmente una quota soft e una hard nello stesso Qtree, ma la capacità totale indicata è la quota hard; è corretto? | Sì, se viene specificata una quota rigida, questa verrà visualizzata come capacità totale. 
+|===
+
+
+== Risorse
+
+Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili nella link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
+
+Ulteriori informazioni di supporto sono disponibili sul sito Cloud Insights link:concept_requesting_support.html["Supporto"] pagina.
+
 Se disponi di un abbonamento Cloud Insights attivo, puoi utilizzare le seguenti opzioni di supporto:
 
 link:https://www.netapp.com/us/contact-us/support.aspx["Telefono"]
