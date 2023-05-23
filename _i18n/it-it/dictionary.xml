@@ -11175,4 +11175,6 @@
   <block id="1b6ed64bac10ec68f4d03a8505f91c8d" category="cell">Ho impostato manualmente una quota soft e una hard nello stesso Qtree, ma la capacità totale indicata è la quota hard; è corretto?</block>
   <block id="9c93ad73825174675cbb17fb678b3a8c" category="cell">Sì, se viene specificata una quota rigida, questa verrà visualizzata come capacità totale.</block>
   <block id="37b418c8c2b422040e90081e18556979" category="section-title">Problemi di accesso</block>
+  <block id="04e7b6395fd3a2be3a25869ea1196f3d" category="cell">Subito dopo l'installazione di NetApp Kubernetes Monitoring Operator, nei miei registri viene visualizzato quanto segue: [inputs.prometheus] errore nel plugin: Errore durante la richiesta HTTP a<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> Ottieni<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> dial tcp: lookube-state-metrics.&lt;namespace&gt;.svc.cluster.local: no tale host</block>
+  <block id="d232f49a9877a99204dde54474c23ce6" category="cell">Questo messaggio viene visualizzato in genere solo quando viene installato un nuovo operatore e il pod _telegraf-rs_ è attivo prima che il pod _ksm_ sia attivo. Questi messaggi dovrebbero interrompersi una volta che tutti i pod sono in esecuzione.</block>
 </blocks>
