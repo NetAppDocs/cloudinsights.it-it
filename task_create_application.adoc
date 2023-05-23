@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_create_application.html 
+summary: 'È possibile creare regole di annotazione per applicare automaticamente le annotazioni a più risorse in base ai criteri definiti dall"utente.' 
+keywords: application, create application, 
+---
+= Creazione di applicazioni
+:allow-uri-read: 
+
+
+[role="lead"]
+Per tenere traccia dei dati associati a specifiche applicazioni in esecuzione nel proprio ambiente, è possibile definire le applicazioni in Cloud Insights.
+
+.Prima di iniziare
+Se si desidera associare l'applicazione a un'entità aziendale, è necessario creare l'entità aziendale prima di definire l'applicazione.
+
+.A proposito di questa attività
+Cloud Insights consente di tenere traccia dei dati delle risorse associate alle applicazioni per attività come l'utilizzo o il reporting dei costi.
+
+.Fasi
+. Nel menu Cloud Insights, fare clic su *Gestisci > applicazioni*.
++
+Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).
+
+. Immettere un nome univoco per l'applicazione.
+. Selezionare una priorità per l'applicazione.
+. Fare clic su *Save* (Salva).
+
+
+Dopo aver definito un'applicazione, è possibile assegnarla alle risorse.
+
+
+
+== Assegnazione di applicazioni alle risorse
+
+Questa procedura assegna l'applicazione a un host come esempio. È possibile assegnare a un'applicazione host, macchine virtuali, volumi o volumi interni.
+
+.Fasi
+. Individuare la risorsa a cui si desidera assegnare l'applicazione:
+. Fare clic su *Query > +Nuova query* e cercare host.
+. Fare clic sulla casella di controllo a sinistra dell'host che si desidera associare all'applicazione.
+. Fare clic su *azioni in blocco > Aggiungi applicazione*.
+. Selezionare l'applicazione a cui si desidera assegnare la risorsa.
+
+
+Tutte le nuove applicazioni assegnate hanno la precedenza su quelle derivate da un'altra risorsa. Ad esempio, i volumi ereditano le applicazioni dagli host e, quando vengono assegnate nuove applicazioni a un volume, la nuova applicazione ha la precedenza sull'applicazione derivata.
+
+
+NOTE: Per gli ambienti con grandi quantità di risorse correlate, l'ereditarietà delle assegnazioni delle applicazioni a tali risorse potrebbe richiedere diversi minuti. Attendere più tempo per l'ereditarietà se si dispone di molte risorse correlate.
+
+.Al termine
+Dopo aver assegnato l'host all'applicazione, è possibile assegnare le risorse rimanenti all'applicazione. Per accedere alla landing page dell'applicazione, fare clic su *Manage > Application* (Gestisci > applicazione) e selezionare l'applicazione creata.

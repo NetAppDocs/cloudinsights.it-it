@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_webhook_example_teams.html 
+keywords: webhook, notification, Microsoft, Teams, integration 
+summary: Crea un webhook per avvisare sulle soglie di performance o inventario per i team Microsoft 
+---
+= Esempio di Webhook per i team Microsoft
+:allow-uri-read: 
+
+
+[role="lead lead"]
+I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato. Questa pagina fornisce un esempio per la configurazione di webhook per i team.
+
+
+NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che potrebbero essere soggette a modifiche. Fare riferimento a. link:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Documentazione del team"] per le informazioni più aggiornate.
+
+
+
+== Configurazione dei team:
+
+. In Teams (squadre), selezionare il kebab e cercare Incoming Webhook (Webhook in entrata).
++
+image:Webhooks_Teams_Create_Webhook.png["Webhook in entrata nei team"]
+
+. Selezionare *Aggiungi a un raggruppamento > Seleziona un raggruppamento > Configura un connettore*.
+. Copiare l'URL del webhook. È necessario incollarlo nella configurazione di Cloud Insights webhook.
+
+
+
+
+== Crea un webhook Cloud Insights:
+
+. In Cloud Insights, accedere a *Amministratore > Notifiche* e selezionare la scheda *webhook*. Fare clic su *+Webhook* per creare un nuovo webhook.
+. Assegnare al webhook un nome significativo, ad esempio "Teams Webhook".
+. Nell'elenco a discesa _Template Type_, selezionare *Teams*.
+
+
+image:Webhooks-Teams_example.png["Modello di webhook per i team"]
+
+. Incollare l'URL dall'alto nel campo _URL_.
+
+
+
+
+== Notifiche tramite Webhook
+
+Per notificare gli eventi tramite webhook, in Cloud Insights selezionare *Avvisi > Monitor* e fare clic su *+Monitor* per crearne uno nuovo link:task_create_monitor.html["monitorare"].
+
+* Selezionare una metrica e definire le condizioni del monitor.
+* In _set up team notification(s), scegliere il metodo di consegna *Webhook*.
+* Scegliere il webhook "Teams" per gli eventi desiderati (critico, Avviso, risolto)
++
+image:Webhooks_Teams_Notifications.png["Notifiche Webhook"]
+
+

@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task_config_cs_data_collectors.html 
+keywords: acquisition, AU, data collector, collector 
+summary: Configurare i data colleziones 
+---
+= Configurazione di Data Collector
+:allow-uri-read: 
+
+
+[role="lead"]
+È possibile configurare i Data Collector nell'ambiente Cloud Insights per raccogliere dati da host, servizi o dispositivi nel data center.
+
+.Prima di iniziare
+* Per configurare i data collezioner, è necessario disporre dei privilegi di amministratore o proprietario dell'account.
+* Prima di iniziare a raccogliere i dati, è necessario aver configurato un'unità di acquisizione (per Infrastructre) o un agente (per servizi o host).
+* Sono necessarie le credenziali per i dispositivi dell'infrastruttura da cui si stanno raccogliendo i dati.
++
+Gli indirizzi di rete, le informazioni sull'account e le password dei dispositivi sono necessari per tutti i dispositivi da cui si desidera raccogliere i dati.
+
+
+
+
+
+== Sicurezza delle credenziali
+
+Le credenziali del data collector vengono crittografate quando vengono immesse in Cloud Insights e inviate all'unità di acquisizione (AU) crittografate prima dalla chiave pubblica dell'AU, quindi crittografate su HTTPS. I valori crittografati vengono decifrati quando l'AU li utilizza per comunicare con dispositivi e software.
+
+
+
+== Configurazione di Data Collector
+
+* Dal menu Cloud Insights, fare clic su *Admin > Data Collector* e fare clic sul pulsante *+ Data Collector*. Puoi scegliere di visualizzare tutti i data collezionisti o di filtrare per visualizzare solo i data collezionisti disponibili in base al tuo abbonamento.
+
+
+* A seconda del tipo di data collector scelto, i passaggi per l'installazione variano.
+
+
+
+
+=== Sistemi operativi:
+
+È necessario installare almeno un agente Cloud Insights per iniziare a raccogliere i dati del sistema operativo o del servizio dal proprio ambiente. È possibile installare tutti gli agenti che si desidera. Ogni agente può raccogliere dati da più servizi.
+
+Oltre a raccogliere dati dai servizi, ogni agente funge anche da data collector per la macchina virtuale/host su cui è installato. I dati raccolti vengono presentati come dati "nodo" in widget dashboard o query.
+
+. Fare clic sul tipo di piattaforma o sul sistema operativo della macchina virtuale o dell'host (ad esempio, il nodo) da cui si accede a Cloud Insights.
+. Scegliere un tasto di accesso dell'agente.
+. Copiare il comando visualizzato negli Appunti. È possibile fare clic sull'icona degli Appunti per copiare rapidamente il comando.
+. Aprire una finestra terminale/comando sulla macchina virtuale/host dell'agente e incollare il comando. Premere Invio per eseguire il comando.
+. Una volta installato l'agente, fare clic su *fine*. L'agente inizia a raccogliere i dati.
++
+Potrebbero essere necessari fino a due periodi di polling prima che i dati del nodo vengano visualizzati in dashboard o disponibili per la query.
+
+
+
+
+
+=== Servizi:
+
+I servizi di raccolta dati sono quelli basati sull'agente telegrafe, come Docker o Kibana.
+
+.Prima di iniziare
+* Per raccogliere i dati del servizio dal proprio ambiente, è necessario disporre di almeno un agente Cloud Insights. Se non si dispone di un agente installato, viene richiesto di installarlo quando si configura un servizio di raccolta dati.
+* Il Servizio dal quale si desidera raccogliere i dati deve essere installato e in esecuzione nel proprio ambiente.
++
+.. Fare clic su un data collector di servizi.
+.. Scegliere un sistema operativo o una piattaforma dell'agente. Se non è stato installato un agente per la piattaforma, seguire le istruzioni per eseguire questa operazione.
+.. Scegliere un tasto di accesso dell'agente.
+.. Fare clic su *continua*.
+.. Seguire le istruzioni per la configurazione del data collector. È possibile fare clic sull'icona degli Appunti per copiare rapidamente i comandi o i frammenti di codice visualizzati.
+.. Una volta configurato correttamente il data collector, fare clic su *fine*.
++
+Potrebbero essere necessari fino a due periodi di polling prima che i dati del servizio vengano visualizzati in dashboard o disponibili per la query.
+
+
+
+
+
+
+
+=== Infrastruttura:
+
+I data collettori dell'infrastruttura includono elementi come lo storage o gli switch.
+
+.Prima di iniziare
+* Per iniziare a raccogliere i dati dell'infrastruttura, è necessario configurare almeno un'unità di acquisizione.
++
+.. Fare clic su un data collector per l'infrastruttura.
+.. Inserire un nome per il data collector. I nomi possono contenere i seguenti caratteri:
+
+
+* lettera (a-z)
+* numero (0-9)
+* trattino (-)
+* sottolineatura (_)
+* periodo (.)
+* spazio ( )
++
+I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.
+
++
+.. Inserire l'unità di acquisizione da associare a questo data collector.
+.. Inserire i campi obbligatori nella schermata Configuration (Configurazione).
+.. Fare clic su *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori campi di configurazione. Non tutti i data collettori richiedono una configurazione avanzata.
+.. Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
+.. Al termine, fare clic su *Add Collector*.
+
+
+
+
+Per informazioni sull'aggiunta di una nuova unità di acquisizione, vedere link:task_configure_acquisition_unit.html["Configurazione delle unità di acquisizione"]
+
+Inoltre, potrebbero essere necessari fino a due periodi di polling prima che i dati dell'ambiente vengano visualizzati in dashboard o disponibili per la query.

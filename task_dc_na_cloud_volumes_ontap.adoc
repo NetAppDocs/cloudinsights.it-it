@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_cloud_volumes_ontap.html 
+summary: Configurare NetApp Cloud Volumes ONTAP data collector 
+keywords: data collector, NetApp, Cloud, ONTAP 
+---
+= Data collector NetApp Cloud Volumes ONTAP
+:allow-uri-read: 
+
+
+[role="lead"]
+Questo data collector supporta la raccolta dell'inventario dalle configurazioni Cloud Volumes ONTAP.
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP di gestione NetApp | Indirizzo IP per Cloud Volumens ONTAP 
+
+
+| Nome utente | Nome utente per Cloud Volumes ONTAP 
+
+
+| Password | Password per l'utente sopra indicato 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Tipo di connessione | HTTPS consigliato. Mostra anche la porta predefinita. 
+
+
+| Ignora porta di comunicazione | Porta da utilizzare se non predefinita. 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti. 
+
+
+| Inventario Conteggio thread simultanei | Numero di thread simultanei. 
+
+
+| Forza TLS per HTTPS | Forza TLS su HTTPS 
+
+
+| Cerca automaticamente i netgroup | Cerca automaticamente i netgroup 
+
+
+| Espansione netgroup | Selezionare Shell o file 
+
+
+| Timeout di lettura HTTP in secondi | Il valore predefinito è 30 secondi 
+
+
+| Forzare le risposte come UTF-8 | Forzare le risposte come UTF-8 
+
+
+| Intervallo di polling delle performance (min) | Il valore predefinito è 900 secondi. 
+
+
+| Performance Concurrent thread Count | Numero di thread simultanei. 
+
+
+| Advanced Counter Data Collection | Selezionare questa opzione per fare in modo che Cloud Insights raccolga le metriche avanzate dall'elenco riportato di seguito. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

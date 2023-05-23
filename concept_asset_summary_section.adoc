@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: concept_asset_summary_section.html 
+summary: Panoramica della sezione Riepilogo della pagina delle risorse in Cloud Insights. 
+keywords: asset, summary, landing page, topology 
+---
+= Sezione Riepilogo pagina risorse
+:allow-uri-read: 
+
+
+[role="lead"]
+La sezione Summary (Riepilogo) di una pagina asset visualizza informazioni generali su una risorsa, tra cui se le metriche o le policy sulle performance sono fonte di preoccupazione. Le aree potenzialmente problematiche sono indicate da un cerchio rosso.
+
+image:Summary_Section_Example.png[""]
+
+Nota: Le informazioni visualizzate nella sezione Riepilogo variano a seconda del tipo di risorsa visualizzata.
+
+È possibile fare clic su uno dei collegamenti alle risorse per visualizzarne le pagine. Ad esempio, se si sta visualizzando un nodo di storage, è possibile fare clic su un collegamento per visualizzare la pagina delle risorse dello storage a cui è associato.
+
+È possibile visualizzare le metriche associate alla risorsa. Un cerchio rosso accanto a una metrica indica che potrebbe essere necessario diagnosticare e risolvere potenziali problemi.
+
+
+NOTE: È possibile che la capacità del volume sia superiore al 100% su alcune risorse di storage. Ciò è dovuto ai metadati relativi alla capacità del volume che fa parte dei dati di capacità consumata riportati dall'asset.
+
+Se applicabile, è possibile fare clic su un collegamento di avviso per visualizzare l'avviso e il monitor associati alla risorsa.
+
+
+
+== Topologia
+
+In alcune pagine di risorse, la sezione di riepilogo contiene un collegamento per visualizzare la topologia della risorsa e le relative connessioni.
+
+La topologia è disponibile per i seguenti tipi di risorse:
+
+* Applicazione
+* Disco
+* Fabric
+* Host
+* Volume interno
+* Porta
+* Switch
+* Macchina virtuale
+* VMDK
+* Volume
+
+
+image:TopologyExample.png[""]

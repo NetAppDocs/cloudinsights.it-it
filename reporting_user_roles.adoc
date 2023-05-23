@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: reporting_user_roles.html 
+summary: 'Le operazioni che è possibile eseguire con i report Cloud Insights dipendono dal ruolo dell"utente.' 
+keywords: reporting, cognos, data warehouse, dwh, users, roles, user roles 
+---
+= Ruoli utente dei report Cloud Insights
+:allow-uri-read: 
+
+
+[role="lead"]
+Se si dispone di Cloud Insights Premium Edition con Reporting, ogni utente Cloud Insights dell'ambiente dispone anche di un accesso Single Sign-on (SSO) all'applicazione di reporting (ad esempio Cognos). Basta fare clic sul collegamento *Report* nel menu per accedere automaticamente a Reporting.
+
+Il tuo ruolo utente in Cloud Insights determina il tuo ruolo utente di reporting:
+
+|===
+
+
+| Ruolo di Cloud Insights | Ruolo di reporting | Autorizzazioni di reporting 
+
+
+| Ospite | Consumatore | Consente di visualizzare, pianificare ed eseguire report e di impostare preferenze personali, ad esempio per lingue e fusi orari. Gli utenti non possono creare report o eseguire attività amministrative. 
+
+
+| Utente | Autore | Può eseguire tutte le funzioni Consumer, nonché creare e gestire report e dashboard. 
+
+
+| Amministratore | Amministratore | Può eseguire tutte le funzioni di autore e tutte le attività amministrative, come la configurazione dei report e l'arresto e il riavvio delle attività di reporting. 
+|===
+La tabella seguente mostra le funzioni disponibili per ciascun ruolo di reporting.
+
+|===
+
+
+| Funzione | Consumatore | Autore | Amministratore 
+
+
+| Visualizzare i report nella scheda contenuto team | Sì | Sì | Sì 
+
+
+| Eseguire i report | Sì | Sì | Sì 
+
+
+| Pianifica i report | Sì | Sì | Sì 
+
+
+| Caricare file esterni | No | Sì | Sì 
+
+
+| Creare lavori | No | Sì | Sì 
+
+
+| Crea storie | No | Sì | Sì 
+
+
+| Creare report | No | Sì | Sì 
+
+
+| Creare pacchetti e moduli dati | No | Sì | Sì 
+
+
+| Eseguire attività amministrative | No | No | Sì 
+
+
+| Aggiungi/Modifica elemento HTML | No | No | Sì 
+
+
+| Esegui report con HTML Item | Sì | Sì | Sì 
+
+
+| Aggiungi/Modifica SQL personalizzato | No | No | Sì 
+
+
+| Esegui report con SQL personalizzato | Sì | Sì | Sì 
+|===
+
+
+== Impostazione delle preferenze e-mail di Reporting (Cognos)
+
+
+NOTE: Se si modificano le preferenze e-mail dell'utente all'interno di Report Cloud Insights (ad esempio, l'applicazione Cognos), tali preferenze sono attive _solo per la sessione corrente_. Disconnettendo da Cognos e tornando, verranno ripristinate le preferenze e-mail.
+
+
+
+== Nota importante per i clienti esistenti
+
+Se non hai ancora accesso a Cloud Insights con Reporting, benvenuto! Non c'è altro da fare per iniziare a utilizzare il reporting.
+
+Se sei un cliente Premium Edition, SSO non viene attivato automaticamente per il tuo ambiente. Quando si attiva SSO, l'utente amministratore del portale di reporting (Cognos) cessa di esistere. Ciò significa che tutti i report contenuti nella cartella _My Content_ vengono rimossi e devono essere reinstallati o ricreati in _Team Content_. Inoltre, una volta attivato SSO, è necessario configurare i report pianificati.
+
+
+
+=== Quali sono i passaggi da seguire per preparare l'ambiente esistente per l'abilitazione di SSO?
+
+Per garantire la conservazione dei report, migrare tutti i report da _My Content_ a _Team Content_ seguendo la procedura riportata di seguito. È necessario eseguire questa operazione prima di attivare SSO nell'ambiente:
+
+. Selezionare *Menu > contenuto*
+
+
+image:Reporting_Menu.png["Menu Cognos in alto a sinistra"]
+
+. Creare una nuova cartella in *_Team Content_*
++
+.. Se sono stati creati più utenti, creare una cartella separata per ciascun utente per evitare di sovrascrivere i report con nomi duplicati
+
+
+. Accedere a _My Content_
+. Selezionare tutti i report che si desidera conservare.
+. Nell'angolo superiore destro del menu, selezionare "Copia o Sposta"
+. Accedere alla cartella appena creata in _contenuto del team_
+. Incollare i report nella cartella appena creata utilizzando i pulsanti "Copia in" o "Sposta in"
+. Una volta abilitato SSO per Cognos, accedere a Cloud Insights con l'indirizzo e-mail utilizzato per creare l'account.
+. Accedere alla cartella _Team Content_ all'interno di Cognos e copiare o spostare i report precedentemente salvati in _My Content_.
+

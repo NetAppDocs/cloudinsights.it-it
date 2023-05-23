@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task_dc_huawei_oceanstor.html 
+keywords: data collector, Huawei, OceanStor, Dorado 
+summary: 'Configurazione del data collector Huawei OceanStor (REST/HTTPS).' 
+---
+= Data collector di Huawei OceanStor
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector REST/HTTPS (Huawei OceanStor) per rilevare l'inventario e le performance dello storage di Huawei OceanStor e OceanStor Dorado.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario e performance da Huawei OceanStor. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Pool di storage | Pool di storage 
+
+
+| File System | Volume interno 
+
+
+| Controller | Nodo di storage 
+
+
+| Porta FC (mappata) | Mappa del volume 
+
+
+| Iniziatore FC host (mappato) | Maschera di volume 
+
+
+| Condivisione NFS/CIFS | Condividere 
+
+
+| Destinazione del collegamento iSCSI | Nodo di destinazione iSCSI 
+
+
+| ISCSI link Initiator | Nodo iniziatore iSCSI 
+
+
+| Disco | Disco 
+
+
+| LUN | Volume 
+|===
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* Indirizzo IP del dispositivo
+* Credenziali per accedere a OceanStor Device Manager
+* La porta 8088 deve essere disponibile
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP host OceanStor | Indirizzo IP o nome di dominio completo di OceanStor Device Manager 
+
+
+| Nome utente | Nome utilizzato per accedere a OceanStor Device Manager 
+
+
+| Password | Password utilizzata per accedere a OceanStor Device Manager 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione a OceanStor Device Manager. Il valore predefinito è 8088. 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+
+
+| Intervallo di polling delle performance (sec). | L'impostazione predefinita è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

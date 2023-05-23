@@ -1,0 +1,140 @@
+---
+sidebar: sidebar 
+permalink: concept_requesting_support.html 
+summary: È possibile visualizzare articoli della Knowledge base, connettersi con la community NetApp, visualizzare video o aprire un ticket per richiedere supporto. 
+keywords: support, knowledgebase, documentation, community, chat, videos, help, contact, intercom 
+---
+= Richiesta di supporto
+:allow-uri-read: 
+
+
+
+toc::[]
+È possibile accedere alle opzioni di supporto in Cloud Insights facendo clic su *Guida > supporto*. Le opzioni di supporto disponibili dipendono dall'edizione Cloud Insights.
+
+
+NOTE: L'opzione di supporto della chat live non è disponibile nell'edizione federale di Cloud Insights.
+
+image:SupportPageWithLearningCenter.png["Pagina di supporto"]
+
+
+
+== Attivazione dei diritti di supporto
+
+Cloud Insights offre supporto self-service ed e-mail quando viene eseguito in modalità di prova. Una volta effettuato l'abbonamento al servizio, si consiglia di attivare il diritto al supporto. L'attivazione dei diritti di supporto consente di accedere al supporto tecnico tramite chat online, sistema di web ticketing e telefono. La modalità di supporto predefinita è self-service fino al completamento della registrazione. Vedere link:#obtaining-support-information["dettagli"] di seguito.
+
+Durante il processo di sottoscrizione iniziale, l'istanza di Cloud Insights genererà un numero seriale NetApp a 20 cifre che inizia con "950". Questo numero di serie NetApp rappresenta l'abbonamento Cloud Insights associato al tuo account. È necessario registrare il numero di serie NetApp per attivare il supporto. Offriamo due opzioni per la registrazione del supporto:
+
+. Utente con account SSO NetApp Support Site (NSS) preesistente (ad es. Cliente NetApp attuale)
+. Nuovo cliente NetApp senza account SSO NetApp Support Site (NSS) preesistente
+
+
+
+
+=== Opzione 1: Procedura per un utente con un account SSO NetApp Support Site (NSS) preesistente
+
+.Fasi
+. Accedere al sito Web di registrazione di NetApp https://register.netapp.com[]
+. Selezionare "sono già registrato come cliente NetApp" e scegliere _Cloud Insights_ come linea di prodotti. Selezionare il proprio provider di fatturazione (NetApp o AWS) e fornire il numero di serie e il nome dell'abbonamento NetApp o l'ID cliente AWS facendo riferimento al menu "Guida > supporto" nell'interfaccia utente di Cloud Insights:
++
+image:SupportPage_SN_Section-NA.png["SN_screen"]
+
+. Compilare il modulo di registrazione cliente esistente e fare clic su *Invia*.
++
+image:ExistingCustomerRegExample.png["modulo cliente esistente"]
+
+. Se non si verificano errori, l'utente viene indirizzato a una pagina "registrazione inviata correttamente". L'indirizzo e-mail associato al nome utente SSO NSS utilizzato per la registrazione riceverà un'e-mail entro un paio di minuti con la dicitura "il prodotto è ora idoneo per il supporto".
+. Si tratta di una registrazione una tantum per il numero di serie NetApp di Cloud Insights.
+
+
+
+
+=== Opzione 2: Passaggi per un nuovo cliente NetApp senza account SSO NetApp Support Site (NSS) preesistente
+
+.Fasi
+. Accedere al sito Web di registrazione di NetApp https://register.netapp.com[]
+. Selezionare "non sono un cliente NetApp registrato" e compilare le informazioni richieste nel modulo di esempio riportato di seguito:
+
+
+image:NewCustomerRegExample.png["modulo nuovo cliente"]
+
+. Selezionare _Cloud Insights_ come linea di prodotti. Selezionare il proprio provider di fatturazione (NetApp o AWS) e fornire il numero di serie e il nome dell'abbonamento NetApp o l'ID cliente AWS facendo riferimento al menu "Guida > supporto" nell'interfaccia utente di Cloud Insights:
++
+image:SupportPage_SN_Section-NA.png["SN_screen"]
+
+. Se non si verificano errori, l'utente viene indirizzato a una pagina "registrazione inviata correttamente". L'indirizzo e-mail associato al nome utente SSO NSS utilizzato per la registrazione riceverà un'e-mail entro poche ore con la dicitura "il prodotto è ora idoneo per il supporto".
+. In qualità di nuovo cliente NetApp, dovrai anche creare un account utente NetApp Support Site (NSS) per le registrazioni future e accedere al portale di supporto per chat di supporto tecnico e ticketing web. Questo link si trova all'indirizzo https://mysupport.netapp.com/eservice/public/now.do[]. Per accelerare il processo, è possibile fornire il numero di serie Cloud Insights appena registrato.
+. Si tratta di una registrazione unica per il numero di serie NetApp di Cloud Insights.
+
+
+
+
+== Ottenere informazioni di supporto
+
+NetApp fornisce supporto per Cloud Insights in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) o la community NetApp. Per gli utenti che hanno sottoscritto una qualsiasi delle edizioni Cloud Insights (di base*, standard, premium), il supporto tecnico è disponibile tramite telefono o ticketing web. Per il ticket Web e la gestione del caso è necessario un account SSO NetApp Support Site (NSS).
+
+*Il supporto è disponibile con Basic Edition purché tutti i sistemi storage NetApp siano coperti almeno al livello Premium Support.
+
+
+
+=== Supporto self-service:
+
+Queste opzioni di supporto sono disponibili in modalità di prova e sono disponibili gratuitamente 24 ore su 24, 7 giorni su 7:
+
+* *link:https://mysupport.netapp.com/site/search?q=cloud%20insights&offset=0&searchType=Manual&autocorrect=true&origin=CI_Suppport_KB&filter=%28content_type%3D%3D%22knowledgebase%22;product%3D%3D%22Cloud%20Insights%22%29["Knowledge base"]*
++
+Facendo clic sui collegamenti in questa sezione, si passa alla Knowledge base di NetApp, dove è possibile cercare articoli, procedure e altro ancora.
+
+
+
+* *link:https://docs.netapp.com/us-en/cloudinsights/["Documentazione"]*
++
+Facendo clic sul collegamento Documentation (documentazione) si passa a questo centro di documentazione.
+
+* *link:https://mysupport.netapp.com/site/search?q=cloud%20insights&offset=0&searchType=Manual&autocorrect=true&origin=CI_Support_Community&filter=%28content_type%3D%3D%22community%22;product%3D%3D%22Cloud%20Insights%22%29["Comunità"]*
++
+Facendo clic sul link della community, potrai accedere alla community NetApp Cloud Insights, dove potrai entrare in contatto con colleghi ed esperti.
+
+
+
+Esiste anche un link da fornire link:mailto:ng-cloudinsights-customerfeedback@netapp.com["*Feedback*"] Per aiutarci a migliorare Cloud Insights.
+
+
+
+=== Supporto in abbonamento
+
+Oltre alle opzioni di supporto autonomo descritte in precedenza, se si dispone di un abbonamento Cloud Insights o di un supporto a pagamento per prodotti o servizi NetApp monitorati, è possibile collaborare con un tecnico del supporto NetApp per risolvere il problema.
+
+
+NOTE: Per eseguire questa operazione, è necessario registrarsi <<Activating support entitlement and accessing support,attivare il supporto>> Per i prodotti NetApp Cloud. Per registrarti, visita il sito di NetApp link:https://register.netapp.com["Registrazione del supporto Cloud Data Services"].
+
+Si consiglia vivamente di selezionare la casella per consentire a un tecnico del supporto NetApp di accedere al proprio ambiente Cloud Insights durante la sessione di supporto. In questo modo, il tecnico potrà risolvere il problema e risolverlo rapidamente. Una volta risolto il problema o terminata la sessione di supporto, è possibile deselezionare la casella.
+
+È possibile richiedere il supporto utilizzando uno dei seguenti metodi. Per utilizzare queste opzioni di supporto, è necessario disporre di un abbonamento Cloud Insights attivo:
+
+* link:https://www.netapp.com/us/contact-us/support.aspx["*Telefono*"]
+* link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["*Support Ticket*"]
+* *Chat* - sarai in contatto con il personale di supporto NetApp per ricevere assistenza (solo nei giorni feriali). La chat è disponibile nell'opzione di menu *Guida > Chat live* in alto a destra di qualsiasi schermata di Cloud Insights.
+
+
+È inoltre possibile richiedere il supporto alle vendite facendo clic sul pulsante link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Contattare il reparto vendite*"] collegamento.
+
+Il numero di serie di Cloud Insights è visibile nel servizio dal menu *Guida > supporto*. In caso di problemi di accesso al servizio e se in precedenza si è registrato un numero di serie con NetApp, è possibile visualizzare l'elenco dei numeri di serie Cloud Insights dal sito del supporto NetApp come segue:
+
+* Accedere a mysupport.netapp.com
+* Dalla scheda del menu prodotti > prodotti personali, utilizzare la famiglia di prodotti "SaaS Cloud Insights" per individuare tutti i numeri di serie registrati:
+
+
+image:Support_View_SN.png["Visualizza SN. Supporto"]
+
+
+
+== Matrice di supporto per data collector Cloud Insights
+
+È possibile visualizzare o scaricare informazioni e dettagli sui Data Collector supportati in link:CloudInsightsDataCollectorSupportMatrix.pdf["*Matrice di supporto per data collector Cloud Insights*, role="external""].
+
+
+
+=== Centro di apprendimento
+
+Indipendentemente dal tuo abbonamento, *Guida > supporto* si collega a diverse offerte di corsi NetApp University per aiutarti a ottenere il massimo da Cloud Insights. Dai un'occhiata!

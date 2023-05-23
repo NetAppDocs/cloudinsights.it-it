@@ -1,0 +1,193 @@
+---
+sidebar: sidebar 
+permalink: security_admin_tool.html 
+summary: 'Cloud Insights segue le Best practice di sicurezza durante l"intero ciclo di vita del rilascio.' 
+keywords: security, risk, protection 
+---
+= Strumento securityadmin
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights include funzionalità di sicurezza che consentono al tuo ambiente di operare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all'hashing delle password e alla possibilità di modificare le password utente interne, nonché coppie di chiavi che crittografano e decrittare le password.
+
+Per proteggere i dati sensibili, NetApp consiglia di modificare le chiavi predefinite e la password utente _Acquisition_ dopo un'installazione o un aggiornamento.
+
+Le password crittografate dell'origine dati vengono memorizzate in Cloud Insights, che utilizza una chiave pubblica per crittografare le password quando un utente le inserisce in una pagina di configurazione del data collector. Cloud Insights non dispone delle chiavi private necessarie per decrittare le password del data collector; solo le unità di acquisizione (aus) dispongono della chiave privata del data collector necessaria per decrittare le password del data collector.
+
+
+
+== Considerazioni sull'aggiornamento e l'installazione
+
+Se il sistema Insight contiene configurazioni di sicurezza non predefinite (ad esempio, password ridigettate), è necessario eseguire il backup delle configurazioni di sicurezza. L'installazione di un nuovo software o, in alcuni casi, l'aggiornamento del software ripristina la configurazione di sicurezza predefinita del sistema. Quando il sistema torna alla configurazione predefinita, è necessario ripristinare la configurazione non predefinita per il corretto funzionamento del sistema.
+
+
+
+== Gestione della sicurezza sull'unità di acquisizione
+
+Lo strumento securityadmin consente di gestire le opzioni di sicurezza per Cloud Insights e viene eseguito sul sistema dell'unità di acquisizione. La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.
+
+
+
+== Prima di iniziare
+
+* Per installare il software dell'unità di acquisizione (che include lo strumento securityadmin), è necessario disporre dei privilegi di amministratore sul sistema AU.
+* Se in seguito si dispone di utenti non amministratori che dovranno accedere allo strumento securityadmin, questi devono essere aggiunti al gruppo _cisys_. Il gruppo _cisys_ viene creato durante l'installazione dell'AU.
+
+
+Dopo l'installazione di AU, lo strumento securityadmin si trova nel sistema dell'unità di acquisizione in una delle seguenti posizioni:
+
+....
+Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat
+Linux - /bin/oci-securityadmin.sh
+....
+
+
+== Utilizzando lo strumento securityadmin
+
+Avviare lo strumento securityadmin in modalità interattiva (-i).
+
+
+NOTE: Si consiglia di utilizzare lo strumento securityadmin in modalità interattiva, per evitare di trasmettere segreti sulla riga di comando, che possono essere acquisiti nei registri.
+
+Vengono visualizzate le seguenti opzioni:
+
+image:SecurityAdminMenuChoices.png["Opzioni per securityadmin Tool (Linux)"]
+
+. *Backup*
++
+Crea un file zip di backup del vault contenente tutte le password e le chiavi e colloca il file in una posizione specificata dall'utente o nelle seguenti posizioni predefinite:
+
++
+....
+Windows - C:\Program Files\SANscreen\backup\vault
+Linux - /var/log/netapp/oci/backup/vault
+....
++
+Si consiglia di mantenere al sicuro i backup del vault, poiché includono informazioni riservate.
+
+. *Ripristina*
++
+Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le password e le chiavi vengono ripristinate ai valori esistenti al momento della creazione del backup.
+
++
+Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio utilizzando i seguenti passaggi: 1) modificare le chiavi di crittografia sull'AU. 2) creare un backup del vault. 3) ripristinare il backup del vault in ciascuna delle aus.
+
+. *Registra / Aggiorna script di recupero chiave esterna*
++
+Utilizzare uno script esterno per registrare o modificare le chiavi di crittografia AU utilizzate per crittografare o decrittare le password del dispositivo.
+
++
+Quando si modificano le chiavi di crittografia, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
++
+Nota questa opzione è disponibile solo su Linux.
+
++
+Quando si utilizza il proprio script di recupero delle chiavi con lo strumento securityadmin, tenere presente quanto segue:
+
++
+** L'algoritmo attualmente supportato è RSA con un minimo di 2048 bit.
+** Lo script deve restituire le chiavi private e pubbliche in testo normale. Lo script non deve restituire chiavi private e pubbliche crittografate.
+** Lo script deve restituire contenuti codificati raw (solo formato PEM).
+** Lo script esterno deve disporre delle autorizzazioni _execute_.
+
+
+. *Ruota chiavi di crittografia*
++
+Ruotare le chiavi di crittografia (Annulla la registrazione delle chiavi correnti e registra le nuove chiavi). Per utilizzare una chiave di un sistema di gestione delle chiavi esterno, è necessario specificare l'id della chiave pubblica e l'ID della chiave privata.
+
+
+
+. *Ripristina chiavi predefinite*
++
+Ripristina la password utente di acquisizione e le chiavi di crittografia dell'utente di acquisizione sui valori predefiniti. I valori predefiniti sono quelli forniti durante l'installazione.
+
+. *Modifica password Truststore*
++
+Modificare la password del truststore.
+
+. *Modifica password keystore*
++
+Modificare la password del keystore.
+
+. *Encrypt Collector Password*
++
+Crittografare la password del data collector.
+
+. *Esci*
++
+Uscire dallo strumento securityadmin.
+
+
+
+Scegliere l'opzione che si desidera configurare e seguire le istruzioni.
+
+
+
+== Specificare un utente per eseguire lo strumento
+
+Se ci si trova in un ambiente controllato e consapevole della sicurezza, è possibile che non si disponga del gruppo _cisys_, ma che si desideri comunque che utenti specifici eseguano lo strumento securityadmin.
+
+Per ottenere questo risultato, installare manualmente il software AU e specificare l'utente/gruppo a cui si desidera accedere.
+
+* Utilizzando l'API, scaricare il programma di installazione ci nel sistema AU e decomprimerlo.
++
+** È necessario un token di autorizzazione una tantum. Consultare la documentazione API Swagger (_Admin > API Access_ e selezionare il link _API Documentation_) e individuare la sezione _GET /au/oneTimeToken_ API.
+** Una volta ottenuto il token, utilizzare l'API _GET /au/installers/{platform}/{version}_ per scaricare il file di installazione. È necessario fornire la versione della piattaforma (Linux o Windows) e dell'installatore.
+
+
+* Copiare il file di installazione scaricato nel sistema AU e decomprimerlo.
+* Accedere alla cartella contenente i file ed eseguire il programma di installazione come root, specificando l'utente e il gruppo:
++
+ ./cloudinsights-install.sh <User> <Group>
+
+
+Se l'utente e/o il gruppo specificati non esistono, verranno creati. L'utente avrà accesso allo strumento securityadmin.
+
+
+
+== Aggiornamento o rimozione del proxy
+
+Lo strumento securityadmin può essere utilizzato per impostare o rimuovere le informazioni proxy per l'unità di acquisizione eseguendo lo strumento con il parametro _-pr_:
+
+[listing]
+----
+[root@ci-eng-linau bin]# ./securityadmin -pr
+usage: securityadmin -pr -ap <arg> | -h | -rp | -upr <arg>
+
+The purpose of this tool is to enable reconfiguration of security aspects
+of the Acquisition Unit such as encryption keys, and proxy configuration,
+etc. For more information about this tool, please check the Cloud Insights
+Documentation.
+
+-ap,--add-proxy <arg>       add a proxy server.  Arguments: ip=ip
+                             port=port user=user password=password
+                             domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+-h,--help
+-rp,--remove-proxy          remove proxy server
+-upr,--update-proxy <arg>   update a proxy.  Arguments: ip=ip port=port
+                             user=user password=password domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+----
+Ad esempio, per rimuovere il proxy, eseguire il seguente comando:
+
+ [root@ci-eng-linau bin]# ./securityadmin -pr -rp
+Dopo aver eseguito il comando, riavviare l'unità di acquisizione.
+
+Per aggiornare un proxy, il comando è
+
+ ./securityadmin -pr -upr <arg>

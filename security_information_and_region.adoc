@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: security_information_and_region.html 
+summary: 'Cloud Insights segue le Best practice di sicurezza durante l"intero ciclo di vita del rilascio.' 
+keywords: security, risk, protection 
+---
+= Informazioni e Regione
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp prende molto sul serio la sicurezza delle informazioni dei clienti. Ecco come e dove Cloud Insights memorizza le tue informazioni.
+
+
+
+== Quali informazioni memorizza Cloud Insights?
+
+Cloud Insights memorizza le seguenti informazioni:
+
+* Dati sulle performance
++
+I dati sulle performance sono dati Time-Series che forniscono informazioni sulle performance del dispositivo/origine monitorato. Ad esempio, il numero di iOS forniti da un sistema di storage, il throughput di una porta FibreChannel, il numero di pagine inviate da un server Web, il tempo di risposta di un database e molto altro ancora.
+
+* Dati di inventario
++
+I dati di inventario sono costituiti da metadati che descrivono il dispositivo/origine monitorato e il modo in cui sono configurati. Ad esempio, le versioni hardware e software installate, i dischi e le LUN in un sistema di storage, i core della CPU, la RAM e i dischi di una macchina virtuale, gli spazi delle tabelle di un database, il numero e il tipo di porte su uno switch SAN, i nomi di directory/file (se la protezione del carico di lavoro dello storage è attivata) e così via
+
+* Dati di configurazione
++
+In questo modo vengono riepilogati i dati di configurazione forniti dal cliente utilizzati per gestire l'inventario e le operazioni del cliente, ad esempio nomi host o indirizzi IP dei dispositivi monitorati, intervalli di polling, valori di timeout, ecc.
+
+* Segreti
++
+I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione Cloud Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando AES-256 e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE Cloud Insights con privilegi non sono in grado di accedere ai segreti dei clienti in formato testo semplice a causa di questo design.
+
+* Dati funzionali
++
+Si tratta di dati generati in seguito alla fornitura da parte di NetApp del Cloud Data Service, che informa NetApp sullo sviluppo, l'implementazione, le operazioni, la manutenzione e la protezione del Cloud Data Service. I dati funzionali non contengono informazioni sul cliente o informazioni personali.
+
+* Dati di accesso dell'utente
++
+Informazioni di autenticazione e accesso che consentono a NetApp Cloud Central di comunicare con i siti Cloud Insights regionali, inclusi i dati relativi all'autorizzazione dell'utente.
+
+* Storage workload Security User Directory Data
++
+Nei casi in cui la funzionalità workload Security è attivata E il cliente sceglie di attivare User Directory Collector, il sistema memorizza i nomi degli utenti, gli indirizzi e-mail aziendali e altre informazioni raccolte da Active Directory.
+
+
+
+
+NOTE: I dati della directory utente si riferiscono alle informazioni della directory utente raccolte dal data collector della directory utente di workload Security, non ai dati relativi agli utenti di Cloud Insights/workload Security stessi.
+
+*Nessun dato personale esplicito* viene raccolto dalle risorse dell'infrastruttura e dei servizi. Le informazioni raccolte comprendono solo metriche delle performance, informazioni di configurazione e metadati dell'infrastruttura, come molti case telefoniche dei vendor, tra cui il supporto automatico di NetApp e ActiveIQ. Tuttavia, a seconda delle convenzioni di denominazione di un cliente, i dati per condivisioni, volumi, macchine virtuali, qtree, le applicazioni, ecc. possono contenere informazioni di identificazione personale.
+
+Se la sicurezza del carico di lavoro è attivata, il sistema esamina inoltre i nomi di file e directory su SMB o altre condivisioni, che potrebbero contenere informazioni di identificazione personale. Quando i clienti abilitano il modulo di raccolta directory utente per la sicurezza del carico di lavoro (che essenzialmente associa i SID di Windows ai nomi utente tramite Active Directory), il nome visualizzato, l'indirizzo di posta elettronica aziendale e gli eventuali attributi aggiuntivi selezionati verranno raccolti e memorizzati da Cloud Insights.
+
+Inoltre, i registri di accesso a Cloud Insights vengono mantenuti e contengono gli indirizzi IP e di posta elettronica degli utenti utilizzati per accedere al servizio.
+
+
+
+== Dove sono memorizzate le mie informazioni?
+
+Cloud Insights memorizza le informazioni in base alla regione in cui viene creato l'ambiente.
+
+Nella regione host vengono memorizzate le seguenti informazioni:
+
+* Telemetria e informazioni su asset/oggetti, inclusi contatori e metriche delle performance
+* Informazioni sull'unità di acquisizione
+* Dati funzionali
+* Informazioni di audit sulle attività degli utenti all'interno di Cloud Insights
+* Sicurezza del carico di lavoro informazioni su Active Directory
+* Informazioni sulla verifica della sicurezza del carico di lavoro
+
+
+Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla regione in cui risiede l'ambiente Cloud Insights:
+
+* Informazioni sul sito dell'ambiente (talvolta chiamate "tenant"), come il proprietario del sito o dell'account.
+* Informazioni che consentono a NetApp Cloud Central di comunicare con i siti Cloud Insights regionali, incluso qualsiasi cosa relativa all'autorizzazione dell'utente.
+* Informazioni relative alla relazione tra l'utente Cloud Insights e il tenant.
+
+
+
+
+=== Regioni host
+
+Le regioni host includono:
+
+* USA: US-est-1
+* EMEA: eu-Central-1
+* APAC: ap-sud-est-2
+
+
+
+
+== Ulteriori informazioni
+
+Per ulteriori informazioni sulla privacy e la sicurezza di NetApp, consultare i seguenti link:
+
+* link:https://www.netapp.com/us/company/trust-center/index.aspx["Trust Center"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["Trasferimenti di dati transfrontalieri"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["Regole aziendali vincolanti"]
+* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["Risposta a richieste di dati di terze parti"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["Principi di privacy di NetApp"]
+

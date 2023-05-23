@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: task_identify_inactive_devices.html 
+keywords: inactive, device, 
+summary: 'L"identificazione dei dispositivi inattivi consente di scegliere se eliminarli o assegnarli a un ruolo attivo.' 
+---
+= Identificazione dei dispositivi inattivi
+:allow-uri-read: 
+
+
+[role="lead"]
+Identificare le risorse di cui disponi e chi le utilizza è fondamentale per il "dimensionamento corretto" e liberare l'infrastruttura inutilizzata. Puoi riallocare o decommissionare facilmente le risorse sottoutilizzate ed evitare acquisti non necessari.
+
+Per identificare le risorse inattive, procedere come segue.
+
+.Fasi
+. Nel menu Cloud Insights, fare clic su *Query > Nuova query*
+. In `Search For` selezionare il tipo di risorsa da interrogare
+. Fare clic su *+ > is Active (attiva)*
+. Fare clic su *qualsiasi* e modificarlo in *No*
++
+Il sistema visualizza un elenco di risorse inattive del tipo di dispositivo selezionato.
+
+

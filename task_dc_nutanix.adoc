@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nutanix.html 
+keywords: data collector, Nutanix, NX Series 
+summary: Configurazione del data collector Nutanix. 
+---
+= Data collector Nutanix NX
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector Nutanix per rilevare i dati di inventario e performance dei sistemi storage Nutanix NX.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector Nutanix. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Contenitore Nutanix | Volume interno 
+
+
+| Contenitore Nutanix | Condivisione file 
+
+
+| Condivisione NFS | Condividere 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* L'indirizzo IP dei servizi dati esterni per il cluster
+* Nome utente e password di sola lettura, a meno che non siano in uso gruppi_volumi, nel qual caso sono richiesti nome utente e password amministratore
+* Requisito della porta: HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP esterno PRISM | L'indirizzo IP dei servizi dati esterni per il cluster 
+
+
+| Nome utente | Nome utente per l'account Admin 
+
+
+| Password | Password per l'account Admin 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione all'array Nutanix. Il valore predefinito è 9440. 
+
+
+| Intervallo di polling dell'inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. L'impostazione predefinita è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

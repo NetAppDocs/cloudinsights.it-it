@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: cs_notifications_email.html 
+summary: Aggiunta di indirizzi e-mail per le notifiche degli avvisi di sicurezza del carico di lavoro. 
+keywords: email, notifications, alerts, warnings, attacks 
+---
+= Configurazione delle notifiche e-mail per gli avvisi, gli avvisi e lo stato del servizio di raccolta origine dati/agente
+:allow-uri-read: 
+
+
+[role="lead"]
+Per configurare i destinatari degli avvisi di workload Security, fare clic su *Admin > Notifiche* e inserire gli indirizzi e-mail nelle sezioni appropriate per ciascun destinatario.
+
+
+NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
+
+
+
+== Avvisi e avvisi di potenziali attacchi
+
+Per inviare notifiche di avviso di _potenziali attacchi_, inserire gli indirizzi e-mail dei destinatari nella sezione _Invia avvisi potenziali attacchi_. Le notifiche e-mail vengono inviate all'elenco dei destinatari degli avvisi per ogni azione dell'avviso.
+
+Per inviare notifiche di tipo _Warning_, inserire gli indirizzi e-mail dei destinatari nella sezione _Send Warning Alerts_.
+
+
+
+== Monitoraggio dello stato di salute di Agent e Data Collector
+
+È possibile monitorare lo stato degli agenti e delle origini dati attraverso le notifiche.
+
+Per ricevere notifiche in caso di mancato funzionamento di un agente o di un Data Source Collector, inserire gli indirizzi e-mail dei destinatari nella sezione _Data Collection Health Alerts_.
+
+Tenere presente quanto segue:
+
+* Gli avvisi sullo stato di salute verranno inviati solo dopo che l'agente/raccoglitore ha interrotto la segnalazione per almeno un'ora.
+* Viene inviata una sola notifica via email ai destinatari in un dato periodo di 24 ore, anche se l'agente o il Data Collector sono disconnessi per un periodo di tempo più lungo.
+* In caso di guasto di un Agente, verrà inviato un avviso (non uno per raccoglitore). L'e-mail includerà un elenco di tutte le SVM interessate.
+* Un errore di raccolta Active Directory viene segnalato come avviso e non influisce sul rilevamento ransomware.
+* L'elenco di configurazione per iniziare ora include una nuova fase di _Configurazione delle notifiche e-mail_.
+

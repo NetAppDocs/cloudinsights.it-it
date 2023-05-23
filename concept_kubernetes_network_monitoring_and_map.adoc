@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: concept_kubernetes_network_monitoring_and_map.html 
+keywords: service map, workloads, Kubernetes, 
+summary: Presenta le dipendenze e i flussi dei carichi di lavoro di Kubernetes e evidenzia i problemi di rete e di performance 
+---
+= Kubernetes Network Performance Monitoring and Map
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La funzionalità Kubernetes Network Performance Monitoring and Map semplifica il troubleshooting mappando le dipendenze tra i carichi di lavoro Kubernetes. Fornisce visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e revisionando i flussi di traffico Kubernetes.
+
+
+NOTE: Kubernetes Network Performance Monitoring and Map è un link:concept_preview_features.html["Anteprima"] e sono soggetti a modifiche.
+
+Caratteristiche principali: • La mappa del carico di lavoro presenta le dipendenze e i flussi dei carichi di lavoro di Kubernetes e evidenzia i problemi di rete e di performance. • Monitora il traffico di rete tra pod, carichi di lavoro e nodi Kubernetes; identifica l'origine dei problemi di traffico e latenza. • Riduci i costi complessivi analizzando il traffico di rete in entrata, in uscita, cross-region e cross-zone.
+
+image:workload-map-animated.gif["Esempio di mappa del carico di lavoro"]
+
+
+
+== Prerequisiti
+
+Prima di poter utilizzare Kubernetes Network Performance Monitoring and Map, è necessario aver configurato link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] per attivare questa opzione. Durante l'implementazione dell'operatore, selezionare la casella di controllo "Network Performance and Map" (prestazioni di rete e mappa) per attivarla. È inoltre possibile attivare questa opzione accedendo a una landing page di Kubernetes e selezionando "Modify Deployment" (Modifica distribuzione).
+
+image:ServiceMap_NKMO_Deployment_Options.png["Selezionare l'opzione Map (Mappa) durante l'impostazione NKMO stup (blocco NKMO)"]
+
+
+
+== Monitor
+
+La mappa del carico di lavoro utilizza link:task_create_monitor.html["monitor"] per ricavare informazioni. Cloud Insights fornisce una serie di monitor Kubernetes predefiniti (si noti che per impostazione predefinita potrebbero essere _in pausa_). È possibile _riprendere_ (ad esempio attivare) i monitor desiderati) oppure creare monitor personalizzati per gli oggetti Kubernetes, che verranno utilizzati anche dalla mappa del carico di lavoro.
+
+
+
+== La mappa
+
+La mappa mostra i servizi (chiamati anche carichi di lavoro) e le loro relazioni tra loro. Le frecce indicano le direzioni del traffico. Passando il mouse su un carico di lavoro vengono visualizzate informazioni riepilogative per tale carico di lavoro, come si può vedere in questo esempio:
+
+image:ServiceMap_Simple_Example.png["Esempio di carico di lavoro di una mappa del carico di lavoro"]
+
+Le icone all'interno dei cerchi rappresentano diversi tipi di servizio. Si noti che le icone sono visibili solo se sono presenti gli oggetti sottostanti <<workload-labels,etichette>>.
+
+image:ServiceMap_Icons.png["Spiegazione delle icone di servizio"]
+
+La dimensione di ciascun cerchio indica la dimensione del nodo. Si noti che queste dimensioni sono relative, il livello di zoom del browser o le dimensioni dello schermo potrebbero influire sulle dimensioni effettive dei cerchi. Allo stesso modo, lo stile della linea di traffico offre una vista a colpo d'occhio delle dimensioni della connessione; le linee solide in grassetto sono un traffico elevato, mentre le linee tratteggiate sono un traffico minore.
+
+I numeri all'interno dei cerchi sono il numero di connessioni esterne attualmente elaborate dal servizio.
+
+image:ServiceMap_Node_and_Connection_Legend.png["legenda che mostra le dimensioni relative del cerchio (nodo) e della connessione"]
+
+
+
+== Avvisi e dettagli sul carico di lavoro
+
+I cerchi visualizzati a colori indicano un avviso o un avviso di livello critico per il carico di lavoro. Passare il puntatore del mouse sul cerchio per visualizzare un riepilogo del problema oppure fare clic sul cerchio per aprire un pannello a scorrimento con maggiori dettagli.
+
+image:Workload_Map_Slideout_with_Alert.png["Dettagli dello slidout del workload con avvisi"]
+
+
+
+== Filtraggio
+
+Come per le altre funzionalità di Cloud Insights, è possibile impostare facilmente i filtri in modo che si concentrino sugli oggetti o sugli attributi dei carichi di lavoro specifici desiderati.
+
+image:Workload_Map_Filtering.png["Filtro delle mappe dei carichi di lavoro"]
+
+
+
+== Etichette dei carichi di lavoro
+
+Le etichette dei carichi di lavoro sono necessarie se si desidera che la mappa identifichi i tipi di carichi di lavoro visualizzati (ad esempio, le icone dei cerchi). Le etichette sono derivate come segue:
+
+* Nome del servizio/applicazione in esecuzione in termini generici
+* Se l'origine è un pod:
++
+** Derivato dall'etichetta del carico di lavoro del pod
+** Etichetta prevista sul carico di lavoro: App.kubernetes.io/component
+** Riferimento nome etichetta: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
+** Etichette consigliate:
++
+*** frontend
+*** back-end
+*** database
+*** cache
+*** coda
+*** kafka
+
+
+
+
+* Se l'origine è esterna al cluster k8s:
++
+** Provare ad analizzare il nome DNS risolto ed estrarre il tipo di servizio
++
+esempio: s3.eu-north-1.amazonaws.com
+
++
+risolto il nome analizzato per ottenere s3
+
+
+
+

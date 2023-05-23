@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: concept_log_explorer.html 
+keywords: logs, monitors, alerts, EMS, Kubernetes, 
+summary: 'Log Explorer è un potente strumento per l"analisi dei problemi attraverso diversi log di sistema.' 
+---
+= Esplora log
+:allow-uri-read: 
+
+
+[role="lead"]
+Esplora log di Cloud Insights è un potente strumento per eseguire query sui log di sistema. Oltre a fornire assistenza per le analisi, è possibile salvare una query di log in un monitor per fornire avvisi quando vengono attivati i trigger di log specifici.
+
+Per iniziare a esplorare i log, fare clic su *Query > +Nuova query di log*.
+
+image:LogExplorerMenu.png["Menu delle query di log, 480"]
+
+Selezionare un registro disponibile dall'elenco.
+
+image:LogExplorer_2022.png["Scegliere il registro"]
+
+
+NOTE: I tipi di log disponibili per le query possono variare a seconda dell'ambiente in uso. È possibile aggiungere altri tipi di log nel tempo.
+
+È possibile impostare filtri per perfezionare ulteriormente i risultati della query. Ad esempio, per trovare tutti i messaggi di registro che mostrano un errore, impostare un filtro per _messaggi_ contenente la parola "non riuscito".
+
+
+TIP: È possibile iniziare a digitare il testo desiderato nel campo del filtro; Cloud Insights richiederà di creare una ricerca con caratteri jolly contenente la stringa durante la digitazione.
+
+I risultati vengono visualizzati in un grafico che mostra il numero di istanze di log in ciascun periodo di tempo visualizzato. Sotto il grafico sono riportati i modelli di voci di log. Il grafico e le voci si aggiornano automaticamente in base all'intervallo di tempo selezionato.
+
+image:LogExplorer_QueryForFailed.png["Esempio di query che mostra il filtro"]
+
+
+
+== Il grafico del registro
+
+Il grafico mostra il numero di voci di log, raggruppate in _bucket_, che si basano sull'intervallo di tempo selezionato per la dashboard. I bucket per ciascun intervallo di tempo sono i seguenti:
+
+|===
+
+
+| Intervallo di tempo della dashboard | Dimensione della benna 
+
+
+| Ultimi 15 minuti | 10 secondi 
+
+
+| Ultimi 30 minuti | 15 secondi 
+
+
+| Ultimi 60 minuti | 30 secondi 
+
+
+| Ultime 2 ore | 1 minuto 
+
+
+| Ultime 3 ore | 5 minuti 
+
+
+| Ultime 6 ore | 5 minuti 
+
+
+| Ultime 12 ore | 10 minuti 
+
+
+| Ultime 24 ore | 15 minuti 
+
+
+| Ultimi 2 giorni | 30 minuti 
+
+
+| Ultimi 3 giorni | 45 minuti 
+
+
+| Ultimi 7 giorni | 2 ore 
+
+
+| Ultimi 30 giorni | 1 giorno 
+|===
+Per ingrandire il grafico, è sufficiente trascinare i dispositivi di scorrimento da entrambi i lati. Per eseguire una panoramica dell'area ingrandita, fare clic e tenere premuto nell'area bianca e spostarsi a sinistra o a destra. Fare clic su _Reset Zoom_ (Ripristina zoom) per ripristinare il livello di zoom.
+
+image:LogExplorer_Zoom_2.png["Ingrandire trascinando i lati del grafico"]
+
+Si noti che quando si esegue lo zoom del grafico o si scorre la tabella, l'aggiornamento automatico della dashboard si interrompe e l'intervallo di tempo mostra il tempo di blocco. Per riprendere l'aggiornamento, fare clic sul pulsante _Riprendi_ image:ResumeButton.png[""]. In questo modo viene ripristinato anche il livello di zoom.
+
+In qualsiasi momento, è possibile fare clic su _Create a Log Monitor_ per creare un nuovo monitor in base al filtro corrente.
+
+
+
+== Dettagli registro
+
+Facendo clic in un punto qualsiasi di una voce di registro nell'elenco, viene aperto un riquadro dei dettagli per tale voce. Qui puoi esplorare ulteriori informazioni sull'evento.
+
+Fare clic su "Add Filter" (Aggiungi filtro) per aggiungere il campo selezionato al filtro corrente. L'elenco delle voci di registro viene aggiornato in base al nuovo filtro.
+
+image:LogExplorer_DetailPane.png["Riquadro Log Entry Detail"]
+
+
+
+== Risoluzione dei problemi
+
+Qui troverai suggerimenti per la risoluzione dei problemi relativi alle query di log.
+
+|===
+
+
+| *Problema:* | *Provare questo:* 
+
+
+| Non vengono visualizzati messaggi di "debug" nella query del log | La messaggistica del registro di debug non viene raccolta. Per acquisire i messaggi desiderati, impostare la gravità del messaggio su _informativo, errore, avviso, emergenza o livello _avviso_. 
+|===

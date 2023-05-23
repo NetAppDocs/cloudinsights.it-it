@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: task_webhook_example_discord.html 
+keywords: webhook, notification, Discord, integration 
+summary: Crea un webhook per avvisare sulle soglie di performance o inventario per discordare 
+---
+= Esempio di Webhook per discordia
+:allow-uri-read: 
+
+
+[role="lead"]
+I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato. In questa pagina viene fornito un esempio di configurazione di webhook per discordia.
+
+
+NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che potrebbero essere soggette a modifiche. Fare riferimento a. link:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["Discordare la documentazione"] per le informazioni più aggiornate.
+
+
+
+== Discordare Setup:
+
+* In Disord (Discordia), selezionare il server, sotto Text Channels (canali di testo), selezionare Edit Channel (Modifica canale) (icona ingranaggio)
+* Selezionare *integrazioni > Visualizza webhook* e fare clic su *nuovo webhook*
+* Copiare l'URL del webhook. È necessario incollarlo nella configurazione di Cloud Insights webhook.
+
+
+
+
+== Crea un webhook Cloud Insights:
+
+. In Cloud Insights, accedere a *Amministratore > Notifiche* e selezionare la scheda *webhook*. Fare clic su *+Webhook* per creare un nuovo webhook.
+. Assegnare al webhook un nome significativo, ad esempio "discordia".
+. Nell'elenco a discesa _Template Type_, selezionare *discord*.
+. Incollare l'URL dall'alto nel campo _URL_.
+
+
+image:Webhooks-Discord_example.png["Disregistrare il modello webhook"]
+
+
+NOTE: Per eseguire il test del webhook, sostituire temporaneamente il valore dell'URL nel corpo del messaggio con un URL valido (ad esempio _https://netapp.com_), quindi fare clic sul pulsante _Test Webhook_. Assicurarsi di ripristinare il corpo del messaggio una volta completato il test.
+
+
+
+== Notifiche tramite Webhook
+
+Per notificare gli eventi tramite webhook, in Cloud Insights selezionare *Avvisi > Monitor* e fare clic su *+Monitor* per crearne uno nuovo link:task_create_monitor.html["monitorare"].
+
+* Selezionare una metrica e definire le condizioni del monitor.
+* In _set up team notification(s), scegliere il metodo di consegna *Webhook*.
+* Scegliere il webhook "discording" per gli eventi desiderati (critico, Avviso, risolto)
++
+image:Webhooks_Discord_Notifications.png["Notifiche Webhook"]
+
+

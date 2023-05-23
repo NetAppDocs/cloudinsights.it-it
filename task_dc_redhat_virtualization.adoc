@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: task_dc_redhat_virtualization.html 
+keywords: data collector, Red Hat Virtualization 
+summary: Configurazione di Red Hat Virtualization Data Collector. 
+---
+= Data collector Red Hat Virtualization
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector per la virtualizzazione Red Hat per raccogliere i dati di inventario dai carichi di lavoro virtualizzati di Linux e Microsoft Windows.
+
+
+
+== Terminologia
+
+Per ogni tipo di risorsa acquisita da Cloud Insights, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Disco | Disco virtuale 
+
+
+| Host | Host 
+
+
+| Macchina virtuale | Macchina virtuale 
+
+
+| Dominio di storage | Data Store 
+
+
+| Unità logica | LUN 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Indirizzo IP del server RHEV sulla porta 443 tramite API REST
+* Nome utente e password di sola lettura
+* RHEV versione 3.0+
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP del server RHEV | Indirizzo IP del sistema di storage 
+
+
+| Nome utente | Nome utente con privilegi di amministratore 
+
+
+| Password per l'account con privilegi di amministratore | Password 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta di comunicazione HTTPS | Porta utilizzata per la comunicazione HTTPS con RHEV 
+
+
+| Intervallo di polling dell'inventario (min) | L'impostazione predefinita è 20 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

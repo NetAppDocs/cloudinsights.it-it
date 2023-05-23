@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: task_dc_infinidat_infinibox.html 
+keywords: data collector, infinidat, InfiniBox 
+summary: Configurazione del data collector Infinidat InfiniBox. 
+---
+= Data collector Infinidat InfiniBox
+:allow-uri-read: 
+
+
+[role="lead"]
+Il data collector Infinidat InfiniBox (HTTP) viene utilizzato per raccogliere le informazioni di inventario dal sistema storage Infinidat InfiniBox.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector Infinidat InfiniBox. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Nodo | Controller 
+
+
+| Filesystem | Volume interno 
+
+
+| Filesystem | Condivisione file 
+
+
+| Esportazioni di file system | Condividere 
+|===
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questo data collector.
+
+* Indirizzo IP o FQDN del nodo di gestione InfiniBox
+* Admin userid e password
+* Porta 443 tramite API REST
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Host InfiniBox | Indirizzo IP o nome di dominio completo di InfiniBox Management Node 
+
+
+| Nome utente | Nome utente di InfiniBox Management Node 
+
+
+| Password | Password per InfiniBox Management Node 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione a InfiniBox Server. Il valore predefinito è 443. 
+
+
+| Intervallo polling inventario | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

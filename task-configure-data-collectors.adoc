@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: task_configure_data_collectors.html 
+keywords: acquisition, AU, data collector, collector, notification, notify, 
+summary: Istruzioni generali per il data collector 
+---
+= Configurazione di Data Collector
+:allow-uri-read: 
+
+
+[role="lead"]
+I Data Collector vengono configurati nell'ambiente Cloud Insights per la raccolta dei dati dai dispositivi del data center.
+
+.Prima di iniziare
+* È necessario aver configurato un'unità di acquisizione prima di iniziare la raccolta dei dati.
+* Sono necessarie le credenziali per i dispositivi da cui si stanno raccogliendo i dati.
+* Per tutti i dispositivi da cui si stanno raccogliendo i dati sono necessari indirizzi di rete, informazioni sull'account e password.
+
+
+.Fasi
+. Dal menu Cloud Insights, fare clic su *Admin > Data Collector*
++
+Il sistema visualizza i Data Collector disponibili organizzati in base al vendor.
+
+. Fare clic su *+ Collector* sul vendor desiderato e selezionare il data collector da configurare.
++
+Nella finestra di dialogo è possibile configurare il data collector e aggiungere un'unità di acquisizione.
+
+. Inserire un nome per il data collector.
++
+I nomi possono contenere lettere (a-z), numeri (0-9), trattini (-), caratteri di sottolineatura (_), apostrofi ('), e punti (.).
+
+. Inserire l'unità di acquisizione da associare a questo data collector.
+. Inserire i campi obbligatori nella schermata Configuration (Configurazione).
+. Quando viene richiesto di configurare le notifiche, scegliere di inviare avvisi tramite e-mail, Webhook o entrambi e scegliere i tipi di avvisi in base ai quali inviare la notifica (critico, Avviso, informativo e/o risolto). È possibile scegliere di inviare una notifica all'elenco dei destinatari di Global Monitor (configurato in *Admin > Notifiche*) o specificare altri destinatari. Quando si desidera continuare, fare clic su *complete Setup* (completa installazione).
+
+
+image:CollectorNotifications.jpg["Notifiche di Collector"]
+
+Quando si visualizza una landing page di *ONTAP data collector*, è possibile modificare le notifiche facendo clic sull'icona a forma di matita nel campo "Notifiche" della sezione di riepilogo del data collector.
+
+
+NOTE: Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifica specifica del Monitor rilevante per il cluster/data collector. L'elenco dei destinatari impostato per Data Collector riceverà gli avvisi di data collector. Se non sono presenti avvisi di data collector attivi, gli avvisi generati dal monitor verranno inviati a destinatari specifici del monitor.
+
+image:CollectorNotifications_Edit.jpg["Modifica delle notifiche di Collector"]
+
+. Fare clic su *Advanced Configuration* (Configurazione avanzata) per aggiungere ulteriori campi di configurazione. (Non tutti i data collettori richiedono una configurazione avanzata).
+. Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
+. Fare clic su *Aggiungi modulo di raccolta* per salvare la configurazione e aggiungere il modulo di raccolta dati al tenant Cloud Insights.
+
+
+Dopo aver aggiunto un nuovo data collector, Cloud Insights avvia tre sondaggi:
+
+* primo sondaggio di inventario: immediatamente
+* 1° sondaggio sui dati delle performance per stabilire un riferimento: immediatamente dopo il sondaggio dell'inventario
+* secondo sondaggio sulle performance: entro 15 secondi dal completamento del primo sondaggio sulle performance
+
+
+Il polling procede quindi in base agli intervalli di polling delle performance e dell'inventario configurati.

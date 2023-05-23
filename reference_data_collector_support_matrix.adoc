@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: reference_data_collector_support_matrix.html 
+summary: La matrice di supporto per Data Collector contiene informazioni dettagliate sui data collector supportati. 
+keywords: support matrix, vendor, NetApp, IBM, EMC, dell, HP, Hitachi, VMware, Huawei, OpenStack, 
+---
+= Matrice di supporto per data collector Cloud Insights
+:allow-uri-read: 
+
+
+[role="lead"]
+La matrice di supporto del Data Collector fornisce riferimenti per i Data Collector supportati da Cloud Insights, incluse informazioni su vendor e modello.
+
+La matrice è fornita in formato .PDF.
+
+Fare clic sul collegamento per aprirlo. Fare clic con il pulsante destro del mouse e scegliere _Save As..._ per scaricare una copia.
+
+link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["*Matrice di supporto Data Collector*"]

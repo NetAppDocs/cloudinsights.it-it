@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_agent_requirements.html 
+summary: Il server o la macchina virtuale utilizzata come agente deve soddisfare i requisiti minimi 
+keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
+---
+= Requisiti dell'agente per la sicurezza del carico di lavoro
+:allow-uri-read: 
+
+
+[role="lead"]
+È necessario link:task_cs_add_agent.html["Installare un Agent"] al fine di acquisire informazioni dai tuoi data colleziones. Prima di installare l'Agent, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo, CPU, memoria e spazio su disco.
+
+
+NOTE: La protezione del carico di lavoro dello storage non è disponibile nell'edizione federale di Cloud Insights.
+
+[cols="36,60"]
+|===
+| Componente | Requisiti Linux 
+
+
+| Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti sistemi: Red Hat Enterprise Linux 7.x, 8.x 64-bit CentOS 7.x 64-bit CentOS 8 Stream Ubuntu 20 attraverso 22 64-bit Rocky 8.x 64-bit, Rocky 9.x 64-bit questo computer non deve eseguire alcun altro software a livello applicativo. Si consiglia di utilizzare un server dedicato. Se (Security Enhanced) Linux non è supportato. 
+
+
+| Comandi | per l'installazione è necessario decomprimere. Inoltre, il comando 'sudo su –' è necessario per l'installazione, l'esecuzione di script e la disinstallazione. 
+
+
+| CPU | 4 core CPU 
+
+
+| Memoria | 16 GB DI RAM 
+
+
+| Spazio su disco disponibile | Lo spazio su disco deve essere allocato in questo modo: /Opt/netapp 35 GB (minimo) se /opt è una cartella montata da uno storage NAS, assicurarsi che gli utenti locali abbiano accesso a questa cartella. L'installazione dell'agente o del Data Collector potrebbe non riuscire se gli utenti locali non dispongono dell'autorizzazione per questa cartella. vedere link:task_cs_add_agent.html#troubleshooting-agent-errors["risoluzione dei problemi"] per ulteriori dettagli. 
+
+
+| Rete | Connessione Ethernet da 100 Mbps a 1 Gbps, indirizzo IP statico, connettività IP a tutti i dispositivi e porta richiesta per l'istanza di workload Security (80 o 443). 
+|===
+Nota: L'agente workload Security può essere installato sullo stesso computer di un'unità di acquisizione e/o agente Cloud Insights. Tuttavia, è consigliabile installarli in computer separati. Nel caso in cui siano installati sullo stesso computer, allocare lo spazio su disco come mostrato di seguito:
+
+|===
+
+
+| Spazio su disco disponibile | 50-55 GB per Linux, lo spazio su disco deve essere allocato in questo modo: /Opt/netapp 25-30 GB /var/log/netapp 25 GB 
+|===
+
+
+== Consigli aggiuntivi
+
+* Si consiglia vivamente di sincronizzare l'ora sul sistema ONTAP e sul computer dell'agente utilizzando *protocollo NTP (Network Time Protocol)* o *SNTP (Simple Network Time Protocol)*.
+
+
+
+
+== Regole di accesso alla rete cloud
+
+Per ambienti di workload Security * basati su * Stati Uniti:
+
+[cols="5*"]
+|===
+| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+
+
+| TCP | 443 | <site_name>.cs01.cloudinsights.netapp.com <site_name>.c01.cloudinsights.netapp.com <site_name>.c02.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+
+
+| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+|===
+Per ambienti di sicurezza dei workload *basati sull'Europa*:
+
+[cols="5*"]
+|===
+| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+
+
+| TCP | 443 | <site_name>.cs01-eu-1.cloudinsights.netapp.com <site_name>.c01-eu-1.cloudinsights.netapp.com <site_name>.c02-eu-1.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+
+
+| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+|===
+Per ambienti di sicurezza dei workload * basati su APAC*:
+
+[cols="5*"]
+|===
+| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+
+
+| TCP | 443 | <site_name>.cs01-ap-1.cloudinsights.netapp.com <site_name>.c01-ap-1.cloudinsights.netapp.com <site_name>.c02-ap-1.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+
+
+| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+|===
+
+
+== Regole in-network
+
+Notare che quando si aggiunge _link:task_add_collector_svm.html#permissions-when-adding-via-cluster-management-ip["csuser"]_, l'utente richiede l'accesso SSH alla LIF di gestione ONTAP.
+
+[cols="5*"]
+|===
+| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+
+
+| TCP | 389 (LDAP) 636 (LDAPS / start-tls) | URL del server LDAP | In uscita | Connettersi a LDAP 
+
+
+| TCP | 443 | Cluster o SVM Management IP Address (a seconda della configurazione del collettore SVM) | In uscita | Comunicazione API con ONTAP 
+
+
+| TCP | 35000 - 55000 | Indirizzi IP LIF dati SVM | In entrata | Comunicazione con ONTAP per eventi Fpolicy 
+
+
+| TCP | 7 | Indirizzi IP LIF dati SVM | In uscita | Unidirezionale tra ONTAP e sicurezza del carico di lavoro. L'agente esegue il ping dei Lifs SVM. 
+
+
+| SSH | 22 | Gestione del cluster | In uscita | Necessario per il blocco degli utenti CIFS/SMB. 
+|===
+
+
+== Dimensionamento del sistema
+
+Vedere link:concept_cs_event_rate_checker.html["Controllo della velocità degli eventi"] documentazione per informazioni sul dimensionamento.

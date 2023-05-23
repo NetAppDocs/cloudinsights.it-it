@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: forensic_entity_detail.html 
+keywords: Forensic, entity, entity overview, entity behavior, detail 
+summary: Dettaglio entità legale 
+---
+= Dettaglio entità forense
+:allow-uri-read: 
+
+
+toc: macro :hardbreaks: :toclevels: 1 :nofooter: :icons: font :linkattrs: :imagesdir: ./media/
+
+Utilizzare la pagina Entity Detail per accedere a informazioni dettagliate su un'entità.
+
+
+
+== Esame delle informazioni sull'entità
+
+È possibile accedere a.
+
+Profilo entità:: Descrive i dettagli, tra cui:
++
+--
+* Nome
++
+** Fare clic per accedere a [Entity Overview] (Panoramica entità)
+
+
+* Tipo
+* Community
+* Percorso
+* Ultimo accesso
++
+** Fare clic su User (utente) per accedere a [User Overview] (Panoramica utente)
+
+
+* Dimensione
+
+
+--
+Utente e community::
++
+--
+* Il numero di volte in cui gli utenti hanno effettuato l'accesso all'entità
+* Il numero di volte in cui le community hanno effettuato l'accesso all'entità.
+
+
+--
+Entità Bahavior::
++
+--
+* Attività recente:
++
+** Data dell'ultimo accesso
+** Utente che ha effettuato l'ultimo accesso all'entità
+** Ubicazione da cui è stata effettuata l'accesso all'entità
+
+
+* Operazioni
++
+** Numero di operazioni di scrittura
+** Numero di operazioni di lettura
+** Numero di accessi ai metadati
+
+
+
+
+--
+

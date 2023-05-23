@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: reporting_querying_database.html 
+summary: Utilizzare le API di Cloud Insights per eseguire query direttamente nel database di reporting. 
+keywords: reporting, cognos, data warehouse, dwh, API 
+---
+= Accedere al database dei report tramite API
+:allow-uri-read: 
+
+
+[role="lead"]
+La potente API di Cloud Insights consente agli utenti di eseguire query direttamente nel database dei report di Cloud Insights, senza utilizzare l'ambiente di reporting di Cognos.
+
+
+NOTE: La presente documentazione fa riferimento alla funzione di reporting di Cloud Insights, disponibile in link:/concept_subscribing_to_cloud_insights.html#editions["Premium Edition"].
+
+
+
+== OData
+
+L'API di reporting Cloud Insights segue link:https://www.odata.org/["OData v4"] (Open Data Protocol) standard per la query del database di Reporting. Per ulteriori informazioni o per saperne di più, consulta l'articolo link:https://www.odata.org/getting-started/basic-tutorial/["questo tutorial"] Su OData.
+
+Tutte le richieste inizieranno con l'URL _/https://<Cloud Insights URL>/REST/v1/dwh-management/odata_
+
+
+
+== Generazione di una apiKey
+
+Scopri di più link:API_Overview.html["API Cloud Insights"].
+
+Per generare una chiave API, procedere come segue:
+
+* Accedere all'ambiente Cloud Insights e selezionare *Amministratore > accesso API*.
+* Fare clic su "+ API Access Token".
+* Immettere un Nome e una Descrizione.
+* Per tipo, scegliere _Data Warehouse_.
+* Impostare le autorizzazioni come lettura/scrittura.
+* Impostare una data di scadenza desiderata.
+* Fare clic su "Save" (Salva), quindi *copiare la chiave e salvarla* in un luogo sicuro. Non sarà possibile accedere alla chiave completa in un secondo momento.
+
+
+Gli APIkeys sono validi per _Sync_ o _Async_.
+
+
+
+== Query diretta delle tabelle
+
+Con la chiave API in uso, sono ora possibili query dirette del database di Reporting. Gli URL lunghi possono essere semplificati fino a https://.../odata/ per scopi di visualizzazione piuttosto che per l'intero https://<Cloud Insights URL>/REST/v1/dwh-management/odata/
+
+Prova semplici query come
+
+* Https://<Cloud Insights URL>/REST/v1/dwh-management/odata/dwh_custom
+* Https://<Cloud Insights URL>/REST/v1/dwh-management/odata/dwh_inventory
+* Https://<Cloud Insights URL>/REST/v1/dwh-management/odata/dwh_inventory/storage
+* Https://<Cloud Insights URL>/REST/v1/gestione dwh/odata/inventario dwh/disco
+* https://.../odata/dwh_custom/custom_queries
+
+
+
+
+== Esempi di API REST
+
+L'URL per tutte le chiamate è _/https://<Cloud Insights URL>/REST/v1/dwh-management/odata_.
+
+* GET /{schema}/** - Recupera i dati dal database dei report.
+
+
+Formato: _/https://<Cloud Insights URL>/REST/v1/dwh-management/odata/<schema_name>/<query>_
+
+Esempio:
+
+ https://<domain>/rest/v1/dwh-management/odata/dwh_inventory/fabric?$count=true&$orderby=name
+Risultato:
+
+....
+{
+   "@odata.context": "$metadata#fabric",
+   "@odata.count": 2,
+   "value": [
+       {
+           "id": 851,
+           "identifier": "10:00:50:EB:1A:40:3B:44",
+           "wwn": "10:00:50:EB:1A:40:3B:44",
+           "name": "10:00:50:EB:1A:40:3B:44",
+           "vsanEnabled": "0",
+           "vsanId": null,
+           "zoningEnabled": "0",
+           "url": "https://<domain>/web/#/assets/fabrics/941716"
+       },
+       {
+           "id": 852,
+           "identifier": "10:00:50:EB:1A:40:44:0C",
+           "wwn": "10:00:50:EB:1A:40:44:0C",
+           "name": "10:00:50:EB:1A:40:44:0C",
+           "vsanEnabled": "0",
+           "vsanId": null,
+           "zoningEnabled": "0",
+           "url": "https://<domain>/web/#/assets/fabrics/941836"
+        }
+    ]
+}
+....
+
+
+== Suggerimenti utili
+
+Quando si utilizzano le query API di reporting, tenere presente quanto segue.
+
+* Il payload della query deve essere una stringa JSON valida
+* Il payload della query deve essere contenuto in una singola riga
+* Le virgolette doppie devono essere escapate, ad esempio "
+* Le schede sono supportate come
+* Evitare i commenti
+* Sono supportati i nomi delle tabelle in minuscolo
+
+
+Inoltre:
+
+* Sono richieste 2 intestazioni:
++
+** Nome "X-CloudInsights-apiKey"
+** Valore attributo "<apikey>"
+
+
+
+
+La chiave API sarà specifica per l'ambiente Cloud Insights.

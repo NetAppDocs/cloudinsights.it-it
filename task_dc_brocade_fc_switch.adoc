@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_fc_switch.html 
+keywords: data collector, Brocade, FC switch, 
+summary: Configurazione del data collector degli switch Brocade FC. 
+---
+= Data collector per switch Brocade FC
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza l'origine dati dello switch FC Brocade (SSH) per rilevare l'inventario dei dispositivi switch Brocade o rebranded con firmware FOS 4.2 e versioni successive. Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector dello switch FC Brocade. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Switch | Switch 
+
+
+| Porta | Porta 
+
+
+| Fabric virtuale, fabric fisico | Fabric 
+
+
+| Zona | Zona 
+
+
+| Switch logico | Switch logico 
+
+
+| Volume virtuale | Volume 
+
+
+| Zona LSAN | Zona IVR 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* L'unità di acquisizione Cloud Insights (AU) avvia le connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario. L'AU avvierà inoltre le connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
+* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo Discover All Switch in the Fabric (rileva tutti gli switch nel fabric), Cloud Insights identifica tutti gli switch del fabric; tuttavia, per rilevarli, è necessaria la connettività IP per questi switch aggiuntivi.
+* Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare putty (emulatore di terminale open source) per confermare l'accesso.
+* Le porte 161 e 162 devono essere aperte per tutti gli switch del fabric per il polling delle prestazioni SNMP.
+* Stringa di comunità di sola lettura SNMP
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| IP dello switch | Indirizzo IP o nome di dominio completo del server EFC 
+
+
+| Nome utente | Nome utente dello switch 
+
+
+| Password | Password per lo switch 
+
+
+| SNMP | Versione SNMP 
+
+
+| Stringa di comunità SNMP | Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch 
+
+
+| Nome utente SNMP | Nome utente SNMP 
+
+
+| Password SNMP | Password SNMP 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Nome fabric | Nome del fabric che deve essere segnalato dal data collector. Lasciare vuoto per riportare il nome del fabric come WWN. 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 15. 
+
+
+| Dispositivi esclusi | Elenco separato da virgole degli ID dei dispositivi da escludere dal polling 
+
+
+| Domini amministrativi attivi | Selezionare se si utilizzano i domini di amministrazione 
+
+
+| Recuperare i dati MPR | Selezionare questa opzione per acquisire i dati di routing dal router multiprotocollo. 
+
+
+| Attivare il trapping | Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP. 
+
+
+| Tempo minimo tra trap (sec) | Tempo minimo tra i tentativi di acquisizione attivati dalle trap. Il valore predefinito è 10. 
+
+
+| Scopri tutti gli switch del fabric | Selezionare per rilevare tutti gli switch nel fabric 
+
+
+| Scegli di favorire HBA vs Alias zona | Scegliere se favorire gli alias HBA o di zona 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+
+
+| Protocollo SNMP Auth | Protocollo di autenticazione SNMP (solo SNMP v3) 
+
+
+| Password per la privacy SNMP | Password per la privacy SNMP (solo SNMP v3) 
+
+
+| Tentativi SNMP | Numero di tentativi SNMP 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| L'acquisizione dell'inventario dell'origine dati Brocade non riesce e viene visualizzato l'errore: ERRORE <date> <time> [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] errore 2 su 2: <datasource name> [errore interno] - Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori ([Device name <name>]): Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori) | Il problema potrebbe essere causato quando lo switch Brocade impiega troppo tempo per tornare con un prompt, superando il timeout predefinito di 5 secondi. Nelle impostazioni di configurazione avanzata del data collector in Cloud Insights, provare ad aumentare il valore di _timeout attesa banner SSH (sec)_. 
+
+
+| Errore: "Cloud Insights ha ricevuto un ruolo chassis non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
+
+
+| Errore: "Indirizzo IP chassis non corrispondente" | Modificare la configurazione dell'origine dati per utilizzare l'indirizzo IP dello chassis. 
+
+
+| Viene visualizzato un messaggio che indica che più di un nodo è connesso alla porta Access Gateway | Verificare che il dispositivo NPV funzioni correttamente e che siano presenti tutti i WWN collegati. Non acquisire direttamente il dispositivo NPV. Invece, l'acquisizione dello switch fabric core raccoglierà i dati del dispositivo NPV. 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

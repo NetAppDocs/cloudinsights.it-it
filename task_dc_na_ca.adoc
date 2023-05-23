@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_ca.html 
+keywords: data collector, netapp, config advisor 
+summary: Data Collector NetApp Config Advisor 
+---
+= Data collector NetApp Config Advisor
+:allow-uri-read: 
+
+
+[role="lead"]
+Questo data collector acquisisce i dati di configurazione dai sistemi storage che eseguono ONTAP e gli switch connessi utilizzando chiamate di sola lettura. Questo data collector esegue anche la convalida della configurazione e i controlli dello stato di salute sull'intero stack di configurazione del cluster ONTAP per identificare problemi di cablaggio, configurazione, resilienza, disponibilità e sicurezza.
+
+
+NOTE: Questo data collector è link:task_getting_started_with_cloud_insights.html#useful-definitions["obsoleto"].
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce i dati di configurazione da ONTAP e switch con il data collector Config Advisor. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Disco | Disco 
+
+
+| Switch | Switch 
+
+
+| Cluster | Storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| Aggregato | Pool di storage 
+
+
+| LUN | Volume 
+
+
+| Volume | Volume interno 
+|===
+Inoltre, le metriche Config Advisor saranno disponibili nella dashboard e in altre query con il tag _netapp_ontap.configADVISOR_.image:ConfigAdvisorTags.png["menu a discesa che mostra il tag metrico di configadvisor"]
+
+
+
+== Terminologia Config Advisor
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nei dashboard di Config Advisor.
+
+
+
+=== Riepilogo dispositivi
+
+* Modello – un elenco delimitato da virgole dei nomi dei modelli di nodi univoci e discreti all'interno di questo cluster. Se tutti i nodi nei cluster sono dello stesso tipo di modello, viene visualizzato un solo nome di modello.
+* Device Type/Type (tipo/tipo dispositivo) - tipo di dispositivo nell'origine dati - Storage Controller/Switch (Controller/Switch storage)
+* Vendor/subtype (vendor/sottotipo): Stesso nome del vendor che si vedrebbe se si configurasse una nuova origine dati.
+* Serial Number (numero di serie): Il numero di serie dell'array. Nei sistemi storage con architettura cluster come la gestione dei dati ONTAP, questo numero di serie potrebbe essere meno utile dei singoli numeri di serie dei "nodi di storage".
+* Hostname - hostname configurati nell'origine dati.
+* Version (versione) – versione del sistema operativo o del firmware.
+
+
+
+
+=== Risultati della regola
+
+* Rule (regola) – un controllo eseguito in base al sistema che analizza la deviazione nella configurazione rispetto alle procedure consigliate o identifica i problemi noti.
+* Rule Name (Nome regola): Nome breve per la regola o per il controllo eseguito.
+* Rule ID (ID regola): Identificativo della regola.
+* Destinazione - componente su cui viene applicata la regola. Il nome del cluster, il nome del nodo o il nome dello switch.
+* Impatto: Impatto del rischio sul sistema. I livelli di impatto sono classificati come segue
++
+** Impatto elevato: Potenziale perdita di accesso ai dati o perdita prolungata della ridondanza dei nodi
+** Impatto medio: Peggioramento delle performance o perdita a breve termine della ridondanza dei nodi.
+** Basso impatto: Scenari a basso impatto
+** Best practice: Differenze rispetto alle Best practice documentate
+
+
+* Descrizione – breve descrizione dell'errore.
+* Details (Dettagli): Descrizione dettagliata dell'errore che elenca i componenti interessati
++
+** Raccomandazioni – link agli articoli della Knowledge base o alla documentazione NetApp che forniscono ulteriori dettagli sul rischio o sulla risoluzione dei problemi.
+
+
+
+
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
+
+* È necessario disporre dell'accesso a un account amministratore configurato per l'accesso in sola lettura per le chiamate SSH e ONTAPi su ONTAP.
+* È necessario disporre dell'accesso a un account amministratore configurato per l'accesso in sola lettura per le chiamate SSH sui centralini, se fanno parte della raccolta
+* I dettagli dell'account includono nome utente e password. Facoltativamente, può passare la chiave privata SSH se ONTAP è configurato per l'autenticazione basata su chiave SSH o l'autenticazione multifattore (MFA)
+* Requisiti delle porte: 22, 80 o 443
+* Permessi dell'account:
++
+** Nome del ruolo di sola lettura per l'applicazione ssh o/e ontapi sul Vserver predefinito
+** Account Admin con almeno l'autorizzazione di sola lettura sugli switch
+
+
+
+
+
+
+== Configurazione
+
+|===
+
+
+| Campo | Descrizione 
+
+
+| IP di gestione NetApp | Indirizzo IP o nome di dominio completo del cluster NetApp 
+
+
+| Nome utente | Nome utente del cluster NetApp 
+
+
+| Password | Password per il cluster NetApp 
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+| Attivare MFA per ONTAP | Selezionare questa opzione per attivare l'autenticazione a più fattori su ONTAP 
+
+
+| Chiave privata SSH | Incollare il contenuto della chiave privata SSH se ONTAP utilizza l'autenticazione della chiave SSH o l'autenticazione MFA 
+
+
+| Tipo di connessione | Scegliere HTTP (porta predefinita 80) o HTTPS (porta predefinita 443). L'impostazione predefinita è HTTPS 
+
+
+| Porta SSH ONTAP | Consente di specificare una porta SSH personalizzata per la connessione ONTAP 
+
+
+| Porta SSH dello switch | Consente di specificare una porta SSH personalizzata per la connessione dello switch 
+
+
+| Intervallo di polling (min) | L'impostazione predefinita è 1440 minuti o 24 ore. Può impostare un minimo di 60 minuti 
+|===
+
+
+== Sistemi operativi supportati
+
+Config Advisor può essere eseguito sui seguenti sistemi operativi. Se Collector è installato su un'unità di acquisizione con sistema operativo non presente in questo elenco, le raccolte non funzionerebbero.
+
+* Windows 10 (64 bit)
+* Windows 2012 R2 Server (64 bit)
+* Windows 2016 Server (64 bit)
+* Windows 2019 Server (64 bit)
+* Red Hat Enterprise Linux (RHEL) 7.7 e versioni successive (64 bit)
+* Ubuntu 14.0 e versioni successive
+
+
+
+
+== Supporto e video
+
+Guarda questi video per scoprire come installare il data collector e utilizzare le dashboard per ottenere il massimo da Config Advisor in Cloud Insights:
+
+
+
+=== Installazione e configurazione del data collector:
+
+video::Config_Advisor_Collector_Part1.mp4[Installing and Configuring the Config Advisor data collector]
+
+
+=== Creazione di una dashboard Config Advisor:
+
+video::Config_Advisor_Collector_Part2.mp4[Using dashboards to view Config Advisor data]
+
+
+=== Altro supporto
+
+Per altre domande associate a Config Advisor, aprire un ticket dallo strumento Config Advisor facendo clic su Guida -> Apri ticket di supporto.
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

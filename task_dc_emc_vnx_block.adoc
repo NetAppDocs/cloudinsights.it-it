@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnx_block.html 
+keywords: data collector, EMC, clariion, VNX block 
+summary: 'Configurazione DELLO storage a blocchi DELL EMC VNX (in precedenza CLARiiON).' 
+---
+= Data collector Dell EMC VNX Block Storage (navicli)
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector Dell EMC VNX Block Storage (Navisec) (in precedenza CLARiiON) per acquisire dati di inventario e performance.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector dello storage a blocchi EMC VNX. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Disco | Disco 
+
+
+| Storage | Storage 
+
+
+| Processore per lo storage | Nodo di storage 
+
+
+| Questo pool, gruppo RAID | Pool di storage 
+
+
+| LUN | Volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+
+
+== Requisiti
+
+Per raccogliere i dati, è necessario soddisfare i seguenti requisiti:
+
+* Un indirizzo IP di ciascun processore di storage a blocchi VNX
+* Nome utente e password Navisphere di sola lettura per gli array di storage a blocchi VNX
+* NaviSecCli deve essere installato su Cloud Insights AU
+* Convalida degli accessi: Eseguire NaviSecCLI dall'AU Cloud Insights a ciascun array utilizzando il nome utente e la password.
+* Requisiti delle porte: 80, 443
+* La versione di NaviSecCLI deve corrispondere al codice FLARE più recente sull'array
+* Per le performance, è necessario attivare la registrazione delle statistiche.
+
+
+
+
+== Sintassi dell'interfaccia della riga di comando di Navisphere
+
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope,use 0 for global scope> -port comando <use 443 by default>
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP dello storage a blocchi VNX | Indirizzo IP o nome di dominio completo dello storage a blocchi VNX 
+
+
+| Nome utente | Nome utilizzato per accedere al dispositivo di storage a blocchi VNX. 
+
+
+| Password | Password utilizzata per accedere al dispositivo di storage a blocchi VNX. 
+
+
+| Percorso CLI a naviseccli.exe | Percorso completo della cartella contenente l'eseguibile _navigeccli.exe_ 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40 minuti. 
+
+
+| Scopo | L'ambito del client sicuro. L'impostazione predefinita è Globale. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. L'impostazione predefinita è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: • Agente non in esecuzione • Impossibile trovare navigli • Impossibile eseguire qualsiasi comando | • Verificare che Navisphere CLI sia installato sull'unità di acquisizione Cloud Insight • non è stata selezionata l'opzione "Usa client sicuro" nella configurazione guidata del data collector e non è installata una versione non sicura di Navisphere CLI. • Verificare che la directory di installazione di Navisphere CLI sia corretta nella configurazione del data collector • verificare che l'IP dello storage a blocchi VNX sia corretto nella configurazione del data collector: • Dall'unità di acquisizione Cloud Insights: - Aprire un CMD. - Cambiare la directory nella directory di installazione configurata - provare a stabilire una connessione con il dispositivo di storage a blocchi VNX digitando "navicli -h {ip} getagent" (sostituire l' {ip} con l'IP effettivo) 
+
+
+| Errore: 4.29 emc235848 emc241018 getall Impossibile analizzare le informazioni alias host | Questo è probabilmente causato da un problema DI corruzione FLARE 29 del database iniziatore host sull'array stesso. Consulta gli articoli della Knowledge base EMC: Emc235848, emc241018. Puoi anche controllare https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[] 
+
+
+| Errore: Impossibile recuperare i Meta LUN. Errore durante l'esecuzione di java -jar navicli.jar | • Modificare la configurazione del data collector per utilizzare il client sicuro (scelta consigliata) • installare navicli.jar nel percorso CLI a navicli.exe O naviseccli.exe • Nota: navicli.jar è obsoleto a partire dalla versione 6.26 di EMC Navisphere • il navicli.jar potrebbe essere disponibile su http://powerlink.emc.com[] 
+
+
+| Errore: I pool di storage non riportano i dischi sul Service Processor all'indirizzo IP configurato | Configurare il data collector con entrambi gli IP del Service Processor, separati da una virgola 
+
+
+| Errore: Errore di mancata corrispondenza della revisione | • Questo problema è dovuto in genere all'aggiornamento del firmware sul dispositivo di storage a blocchi VNX, ma non all'aggiornamento dell'installazione di navicli.exe. Questo potrebbe essere causato anche dalla presenza di dispositivi diversi con firmware diversi, ma solo una CLI installata (con una versione firmware diversa). • Verificare che il dispositivo e l'host eseguano versioni identiche del software: - Dall'unità di acquisizione Cloud Insights, aprire una finestra della riga di comando - modificare la directory nella directory di installazione configurata - stabilire una connessione con il dispositivo CLARiiON digitando "navicli -h{ip} getagent" - cercare il numero di versione sulle prime due righe. Esempio: "Agent Rev: 6.16.2 (0.1)" - cercare e confrontare la versione sulla prima riga. Esempio: "Navisphere CLI Revisione 6.07.00.04.07" 
+
+
+| Errore: Configurazione non supportata - Nessuna porta Fibre Channel | Il dispositivo non è configurato con porte Fibre Channel. Attualmente, sono supportate solo le configurazioni FC. Verificare che questa versione/firmware sia supportata. 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_datadomain.html 
+keywords: data collector, Data Domain, EMC, DELL 
+summary: Configurazione di DELL EMC Data Domain Data Collector. 
+---
+= Data collector DELL EMC Data Domain
+:allow-uri-read: 
+
+
+[role="lead"]
+Questo data collector raccoglie le informazioni di inventario e performance dai sistemi storage DI deduplica DELL EMC Data Domain. Per configurare questo data collector, è necessario seguire specifiche istruzioni di configurazione e consigli sull'utilizzo.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector del dominio dati. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Disco | Disco 
+
+
+| Array | Storage 
+
+
+| Porta FC | Porta 
+
+
+| File System | Volume interno 
+
+
+| Quota | Quota 
+
+
+| Condivisione NFS e CIFS | FileShare 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo colletor di dati.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Indirizzo IP del dispositivo Data Domain
+* Nome utente e password di sola lettura per lo storage Data Domain
+* Porta SSH 22
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP | L'indirizzo IP o il nome di dominio completo dell'array di storage Data Domain 
+
+
+| Nome utente | Il nome utente dell'array di storage Data Domain 
+
+
+| Password | La password per l'array di storage Data Domain 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20. 
+
+
+| Porta SSH | Porta di servizio SSH 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

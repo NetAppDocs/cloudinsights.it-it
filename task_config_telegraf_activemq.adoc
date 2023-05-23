@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_activemq.html 
+keywords: telegraf, installation, install, ActiveMQ 
+summary: Configurazione del data collector HTTP 
+---
+= ActiveMQ Data Collector
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche da ActiveMQ.
+
+
+
+== Installazione
+
+. Da *Admin > Data Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere ActiveMQ.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per la raccolta o se si desidera installare un Agent per un sistema operativo o una piattaforma differente, fare clic su _Show Instructions_ (Mostra istruzioni) per espandere la link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:ActiveMQDCConfigWindows.png["Configurazione ActiveMQ"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili in http://activemq.apache.org/getting-started.html["Documentazione ActiveMQ"]
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Coda ActiveMQ | Namespace Queue Port Server | Node Name Node IP Node UID | Consumer Count Dequeue Count Enqueue Count dimensione coda 
+
+
+| Abbonato ActiveMQ | ID client ID Connection ID Port Server namespace | È attivo Node di destinazione Node Node IP Node UID Node OS Selector Subscription | Numero di dequeue numero di invii dimensione coda spedita Conteggio coda in attesa dimensione coda 
+
+
+| Argomento ActiveMQ | Argomento namespace Port Server | Node Name Node IP Node UID Node OS | Dimensioni Conteggio incoditi Conteggio incoditi Conte clienti 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

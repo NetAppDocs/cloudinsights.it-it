@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: concept_determining_data_collector_acq_status.html 
+summary: Stato di acquisizione di Data Collector 
+keywords: collector, acquisition, status 
+---
+= Determinazione dello stato di acquisizione del data collector
+:allow-uri-read: 
+
+
+[role="lead"]
+Poiché i data collezioner sono la principale fonte di informazioni per Cloud Insights, è fondamentale assicurarsi che rimangano in uno stato di esecuzione.
+
+Lo stato del data collector viene visualizzato nell'angolo in alto a destra di qualsiasi pagina asset come messaggio "Acquisited N minutes ago" (acquisito N minuti fa), dove N indica il tempo di acquisizione più recente del data collector dell'asset. Viene visualizzata anche la data e l'ora di acquisizione.
+
+Facendo clic sul messaggio viene visualizzata una tabella con il nome del data collector, lo stato e l'ultimo tempo di acquisizione riuscito. Se si effettua l'accesso come amministratore, facendo clic sul collegamento relativo al nome del data collector nella tabella si accede alla pagina dei dettagli del data collector.

@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: concept_preview_features.html 
+summary: Le funzionalità di anteprima sono disponibili in capacità limitata e le funzionalità di evidenziazione non sono ancora pronte per il primo tempo. 
+keywords: coming soon, preview, 
+---
+= Funzionalità e funzionalità di anteprima
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights mette in evidenza le nuove funzionalità in un'anteprima. Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
+
+Se si desidera visualizzare l'anteprima di una o più di queste funzioni, contattare il link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Team di vendita NetApp"] per ulteriori informazioni.
+
+|===
+
+
+| *Funzione* | *Descrizione* 
+
+
+| Recuperare lo storage a freddo ONTAP | Fornisce visualizzazioni dei carichi di lavoro dei volumi ONTAP con capacità a freddo e altre metriche correlate. 
+|===

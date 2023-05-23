@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: concept_acquisition_unit_requirements.html 
+summary: Il server o la macchina virtuale utilizzata come unità di acquisizione deve soddisfare i requisiti minimi 
+keywords: AU, acquisition unit, RAU, requirements, sizing 
+---
+= Requisiti dell'unità di acquisizione
+:allow-uri-read: 
+
+
+[role="lead"]
+È necessario installare un'unità di acquisizione (AU) per acquisire informazioni dai data collettori dell'infrastruttura (storage, VM, porta, EC2, ecc.). Prima di installare l'unità di acquisizione, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo, CPU, memoria e spazio su disco.
+
+
+
+== Requisiti
+
+|===
+
+
+| Componente | Requisiti Linux | Requisiti Windows 
+
+
+| Sistema operativo | Computer con una versione con licenza di uno dei seguenti: * CentOS (64 bit): Da 7.2 a 7.9, Stream 8, Stream 9 * Debian (64 bit): 9 e 10 * Oracle Enterprise Linux (64 bit): Da 7.5 a 7.9, da 8.1 a 8.4 * Red Hat Enterprise Linux (64 bit): Da 7.2 a 7.9, da 8.1 a 9.1 * Rocky 9.0, 9.1 * Ubuntu Server: 18.04 e 20.04 LTS questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato. | Un computer che esegue una versione con licenza di uno dei seguenti componenti: * Microsoft Windows 10 64-bit * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 questo computer non deve eseguire altri software a livello di applicazione. Si consiglia di utilizzare un server dedicato. 
+
+
+| CPU | 2 core CPU | Stesso 
+
+
+| Memoria | 8 GB DI RAM | Stesso 
+
+
+| Spazio su disco disponibile | 50 GB per Linux, lo spazio su disco deve essere allocato in questo modo: /Opt/netapp 10 GB /var/log/netapp 40 GB /tmp almeno 1 GB disponibile durante l'installazione | 50 GB 
+
+
+| Rete | È richiesta una connessione Ethernet a 100 Mbps/1 Gbps, un indirizzo IP statico e la connettività della porta 80 o 443 dall'unità di acquisizione a *.cloudinsights.netapp.com o all'ambiente Cloud Insights (ad es. Https://<environment_id>.c01.cloudinsights.netapp.com). Per i requisiti tra l'unità di acquisizione e ciascun Data Collector, fare riferimento alle istruzioni del link:data_collector_list.html["Data Collector"]. Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni per il funzionamento di Cloud Insights. Ad esempio, l'organizzazione blocca l'accesso per impostazione predefinita e consente l'accesso a siti/domini Web specifici solo in base all'eccezione? In tal caso, sarà necessario aggiungere il seguente dominio all'elenco delle eccezioni: *.cloudinsights.netapp.com per ulteriori informazioni, pronto su Proxy link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["qui"] oppure link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["qui"]. | Stesso 
+
+
+| Permessi | Sudo permissions on the Acquisition Unit server (sudo permessi sul server dell'unità /tmp deve essere montato con funzionalità exec. | Autorizzazioni di amministratore sul server dell'unità di acquisizione 
+
+
+| Virus Scan (scansione virus) |  | Durante l'installazione, è necessario disattivare completamente tutti i virus scanner. Dopo l'installazione, i percorsi utilizzati dal software dell'unità di acquisizione devono essere esclusi dalla scansione dei virus. 
+|===
+
+
+== Consigli aggiuntivi
+
+* Per un controllo accurato e la creazione di report dei dati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
+
+
+
+
+== Per quanto riguarda il dimensionamento
+
+È possibile iniziare con un'unità di acquisizione Cloud Insights con soli 8 GB di memoria e 50 GB di spazio su disco, tuttavia, per gli ambienti più grandi, è necessario porsi le seguenti domande:
+
+Prevedete di:
+
+* Scopri più di 2500 macchine virtuali o 10 cluster ONTAP di grandi dimensioni (> 2 nodi), array Symmetrix o array VSP/XP HDS/HPE su questa unità di acquisizione?
+* Implementare 75 o più data raccoglitori totali su questa unità di acquisizione?
+
+
+Per ogni risposta "Sì" sopra, si consiglia di aggiungere 8 GB di memoria e 50 GB di spazio su disco all'AU. Ad esempio, se hai risposto "Sì" a entrambi, devi implementare un sistema di memoria da 24 GB con almeno 150 GB di spazio su disco. Su Linux, lo spazio su disco da aggiungere alla posizione del log.
+
+Per ulteriori domande sul dimensionamento, contatta il supporto NetApp.
+
+
+
+== Requisito aggiuntivo della Federal Edition
+
+* Per le installazioni delle unità di acquisizione nei cluster Cloud Insights Edizione Federale, il sistema operativo sottostante deve avere una buona fonte di entropia. Sui sistemi Linux, questo viene generalmente eseguito installando _rng-tools_ o utilizzando la generazione di numeri casuali (RNG) dell'hardware. È responsabilità del cliente assicurarsi che questo requisito sia soddisfatto sulla macchina dell'unità di acquisizione.
+

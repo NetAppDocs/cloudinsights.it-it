@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_sphereon_intrepid.html 
+keywords: data collector, Brocade, Sphereon Intrepid, 
+summary: Configurazione del data collector Brocade Sphereon/Intrepid Switch 
+---
+= Configurazione del data collector Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector Brocade Sphereon/Intrepid Switch (SNMP) per rilevare l'inventario degli switch Brocade Sphereon o Intrepid.
+
+
+
+== Requisiti
+
+Per configurare questo data collector, è necessario soddisfare i seguenti requisiti:
+
+* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo Discover All Switch in the Fabric (rileva tutti gli switch nel fabric), Cloud Insights identifica tutti gli switch del fabric; tuttavia, per rilevarli, è necessaria la connettività IP per questi switch aggiuntivi.
+* Stringa di comunità di sola lettura se si utilizza SNMP V1 o SNMP V2.
+* Accesso HTTP allo switch per ottenere informazioni sullo zoning.
+* Accedere alla convalida eseguendo l'utility snmpwalk sullo switch (vedere _<install_path>_).
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Switch Sphereon | Indirizzo IP o nome di dominio completo dello switch 
+
+
+| Versione SNMP | Versione SNMP 
+
+
+| Stringa di comunità SNMP | Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch 
+
+
+| Nome utente SNMP | Nome utente SMI-S per lo switch (solo SNMP v3) 
+
+
+| Password SNMP | Password SMI-S per lo switch (solo SNMP v3) 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 15 minuti. 
+
+
+| Protocollo SNMP Auth | Protocollo di autenticazione SNMP (solo SNMP v3) 
+
+
+| Password per la privacy SNMP | Password per la privacy SNMP (solo SNMP v3) 
+
+
+| Numero di tentativi SNMP | Numero di tentativi SNMP 
+
+
+| Nome fabric | Nome del fabric che deve essere segnalato dal data collector. Lasciare vuoto per riportare il nome del fabric come WWN. 
+
+
+| Attivare il trapping | Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP. 
+
+
+| Tempo minimo tra trap (secondi) | Tempo minimo tra i tentativi di acquisizione attivati dalle trap. L'impostazione predefinita è 10 secondi. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. L'impostazione predefinita è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

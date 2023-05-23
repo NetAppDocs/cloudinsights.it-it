@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kubernetes.html 
+keywords: telegraf, installation, install, kubernetes 
+summary: Configurazione del data collector Kubernetes 
+---
+= Kubernetes Data Collector
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza questo data collector per raccogliere le metriche di Kubernetes Pod, Node e Container.
+
+
+
+== Installazione
+
+Per istruzioni sull'installazione di Kubernetes, consultare la link:task_config_telegraf_agent.html#kubernetes["Installazione dell'agente"] pagina.
+
+
+NOTE: Le informazioni relative alle *metriche di stato del kube* sono state spostate in link:task_config_telegraf_agent.html#kubernetes["Installazione dell'agente"] pagina.
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Container Kubernetes | Namespace Pod Container Cluster | Kubernetes Node Name Node OS Node UUID Node IP | CPU nanosecondi utilizzo CPU Nanocores memoria errori pagina principale memoria dimensione set residente (RSS) memoria working set memoria errori pagina utilizzo memoria root filesystem disponibile capacità root filesystem usato 
+
+
+| Nodo Kubernetes | Cluster di nodi Kubernetes | Node Name Node OS Node UID Node IP | Utilizzo della CPU Nanocores CPU utilizzo nanosecondi filesystem disponibile filesystem totale filesystem usato memoria disponibile utilizzo memoria Major Page Faults memoria pagina guasti memoria Resident Set Size (RSS) memoria Working Set Network RX errors (per sec) Network RX byte (per sec) Network TX errors (per sec) Network TX byte (Per sec) Runtime Image filesystem Available Runtime Image filesystem used Runtime Image filesystem Capacity 
+
+
+| Pod Kubernetes | Cluster Pod di namespace | Kubernetes Node Name Node Node IP Node OS Node UUID | Byte TX di rete (per sec) errori TX di rete (per sec) byte RX di rete (per sec) errori RX di rete (per sec) 
+
+
+| Volume del pod Kubernetes | Spazio dei nomi del cluster di pod di volumi | Kubernetes Node Node Name Node UUID Node IP Node OS | Capacità disponibile utilizzata 
+
+
+| Container di sistema Kubernetes | System Container Kubernetes Node Cluster | Node Name Node IP Node OS Node UID | Utilizzo della CPU Nanocores CPU Usage Core nanosecondi memoria errori pagina principale errori pagina memoria memoria dimensioni set residente (RSS) memoria utilizzo memoria Working Set Root filesystem disponibile Root filesystem capacità registri filesystem disponibile capacità filesystem disponibile 
+|===
+
+
+== Risoluzione dei problemi
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Ho eseguito il comando Kubernetes Agent installer, ma non vedo un pod di agenti Telegraf in esecuzione tramite: Sudo kubectl --namespace ci-monitoring get pods | Controllare se si sono verificati errori durante l'implementazione di DemonSet: Sudo kubectl --namespace ci-monitoring descrivi ds telegraf-ds se ci sono errori relativi a SecurityContextConstraints, procedere come segue: 1. Generare il Telegraf DemonSet YAML sudo kubectl --namespace ci-monitoring get ds telegraf-ds -o yaml > /tmp/telegraf-ds.yaml 2. Arrestare il servizio Telegraf sudo kubectl --namespace ci-monitoring delete ds telegraf-ds 3. Creare il SecurityContextConstraint necessario (vedere la sezione "Configurazione dell'agente per la raccolta dei dati") 4. Ricreare il DaemonSet di Telegrafo 
+
+
+| Ho configurato Telegraf per ottenere informazioni sul mio cluster Kubernetes, ma non vedo alcuna informazione in Cloud Insights. Nel file di log di Telegraf vengono visualizzati errori di "valore del campo di intestazione non valido" relativi al plug-in di input di kubernetes che ho configurato. | Assicurarsi che il file bearer_token di riferimento non abbia una nuova riga finale. Per verificare, eseguire il seguente comando e confermare che restituisce 0: Tail -c1 <bearer_token_file> 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

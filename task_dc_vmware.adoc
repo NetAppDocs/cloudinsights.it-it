@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: task_dc_vmware.html 
+keywords: data collector, VMware, 
+summary: Configurazione di VMware Data Collector. 
+---
+= Configurazione di VMware vSphere data collector
+:allow-uri-read: 
+
+
+[role="lead"]
+Il data collector per VMware vSphere raccoglie le informazioni dell'host ESX e richiede privilegi di sola lettura per tutti gli oggetti all'interno del Virtual Center.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector VMware vSphere. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Disco virtuale | Disco 
+
+
+| Host | Host 
+
+
+| Macchina virtuale | Macchina virtuale 
+
+
+| Archivio di dati | Archivio di dati 
+
+
+| LUN | Volume 
+
+
+| Porta Fibre Channel | Porta 
+|===
+Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Indirizzo IP del server Virtual Center
+* Nome utente e password di sola lettura in Virtual Center
+* Sono necessari privilegi di sola lettura per tutti gli oggetti all'interno di Virtual Center.
+* Accesso all'SDK sul server Virtual Center, normalmente già configurato.
+* Requisiti delle porte: http-80 https-443
+* Convalidare l'accesso:
++
+** Accedere a Virtual Center Client utilizzando il nome utente e la password indicati sopra
+** Verificare che SDK sia abilitato: telnet <vc_ip> 443
+
+
+
+
+
+
+== Installazione e connessione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Nome | Nome univoco del data collector 
+
+
+| Unità di acquisizione | Nome dell'unità di acquisizione 
+|===
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP del centro virtuale | Indirizzo IP del Virtual Center 
+
+
+| Nome utente | Nome utente utilizzato per accedere a Virtual Center 
+
+
+| Password | Password utilizzata per accedere al Virtual Center 
+|===
+
+
+== Configurazione avanzata
+
+Nella schermata Advanced Configuration (Configurazione avanzata), selezionare la casella *VM Performance* (prestazioni macchina virtuale) per raccogliere i dati sulle prestazioni. La raccolta dell'inventario è attivata per impostazione predefinita. È possibile configurare i seguenti campi:
+
+[cols="2*"]
+|===
+
+
+| Campo | Descrizione 
+
+
+| Intervallo di polling dell'inventario (min) | Il valore predefinito è 20 
+
+
+| Filtrare le macchine virtuali | Selezionare CLUSTER, DATA CENTER o HOST ESX 
+
+
+| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Creare un elenco di filtri (CLUSTER, DATA CENTER e/o ESX_HOST) 
+
+
+| Numero di tentativi | Il valore predefinito è 3 
+
+
+| Porta di comunicazione | Il valore predefinito è 443 
+
+
+| Filtra elenco dispositivi... | Questo elenco deve essere composto da corrispondenze di stringhe esatte. Se si intende filtrare in base a ESX_HOST, è necessario creare un elenco delimitato da virgole dei "nomi" esatti degli host ESX, come riportato in Cloud Insights e vSphere. Questi "nomi" possono essere indirizzi IP, semplici nomi host o FQDN (Fully Qualified Domain Name), in base al modo in cui questi host sono stati nominati al momento dell'aggiunta iniziale a vSphere. Durante il filtraggio in base AL CLUSTER, Utilizzare i nomi dei cluster in stile Cloud Insights come riportato dal ci sugli hypervisor. Cloud Insights precede il nome del cluster vSphere con il nome del datacenter vSphere e una barra in avanti. "DC1/clusterA" è il nome del cluster che Cloud Insights potrebbe riportare su un hypervisor in clusterA all'interno del data center DC1. 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: L'elenco di inclusione per il filtro delle macchine virtuali non può essere vuoto | Se è selezionata l'opzione Includi elenco, elencare i nomi di DataCenter, cluster o host validi per filtrare le macchine virtuali 
+
+
+| Errore: Impossibile creare un'istanza di connessione a VirtualCenter su IP | Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi. * Prova a comunicare con Virtual Center utilizzando VMware Infrastructure Client. * Provare a comunicare con Virtual Center utilizzando Managed Object browser (ad esempio MOB). 
+
+
+| Errore: VirtualCenter AT IP dispone di un certificato non conforme richiesto da JVM | Possibili soluzioni: * Consigliato: Ricreare il certificato per Virtual Center utilizzando una chiave RSA più potente (ad esempio 1024 bit). * Non consigliato: Modificare la configurazione di JVM java.security per sfruttare il vincolo jdk.certpath.disabledAlgorithms per consentire la chiave RSA a 512 bit. Vedere le note sulla versione di JDK 7 update 40 all'indirizzo "http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html"[] 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

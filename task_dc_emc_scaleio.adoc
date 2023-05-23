@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_scaleio.html 
+keywords: data collector, scaleIO, EMC, DELL 
+summary: Configurazione di DELL EMC ScaleIO data collector. 
+---
+= Data collector DELL EMC ScaleIO
+:allow-uri-read: 
+
+
+[role="lead"]
+Il data collector ScaleIO raccoglie le informazioni di inventario dallo storage ScaleIO. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO e un nome utente e una password admin.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Cluster MDM (Meta Data Manager) | Storage 
+
+
+| SDS (ScaleIO Data Server) | Nodo di storage 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Volume | Volume 
+
+
+| Dispositivo | Disco 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Accesso in sola lettura all'account utente Admin
+* Requisito della porta: Porta HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Gateway ScaleIO | Indirizzi IP o FQDN dei gateway ScaleIO, separati da virgola (,) o punto e virgola (;) 
+
+
+| Nome utente | Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO 
+
+
+| Password | Password utilizzata per accedere al dispositivo ScaleIO 
+|===
+
+
+== Configurazione avanzata
+
+Fare clic sulla casella di controllo Inventory (inventario) per attivare la raccolta dell'inventario.
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta HTTPS | 443 
+
+
+| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60. 
+
+
+| Timeout connessione (sec) | Il valore predefinito è 60. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

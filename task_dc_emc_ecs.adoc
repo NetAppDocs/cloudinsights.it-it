@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_ecs.html 
+keywords: data collector, ecs, EMC 
+summary: Configurazione di ECS data collector. 
+---
+= Configurazione del data collector EMC ECS
+:allow-uri-read: 
+
+
+[role="lead"]
+Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP del server ECS e un account di dominio di livello amministrativo.
+
+
+NOTE: Dell EMC ECS viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità ECS non formattata viene addebitato come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ECS. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Cluster | Storage 
+
+
+| Tenant | Pool di storage 
+
+
+| Bucket | Volume interno 
+
+
+| Disco | Disco 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Indirizzo IP della console di gestione ECS
+* Account di dominio di livello amministrativo per il sistema ECS
+* Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sul sistema ECS.
+* Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.
+* Per le prestazioni, è necessaria la porta 22.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Host ECS | Indirizzo IP o nome di dominio completo del sistema ECS 
+
+
+| Porta host ECS | Porta utilizzata per la comunicazione con l'host ECS 
+
+
+| ID fornitore ECS | ID vendor per ECS 
+
+
+| Password | Password utilizzata per ECS 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | L'impostazione predefinita è 360 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

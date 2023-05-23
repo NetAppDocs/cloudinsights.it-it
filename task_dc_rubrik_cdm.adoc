@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Configurazione di Rubrik CDM data collector. 
+---
+= Rubrik CDM Data Collector
+:allow-uri-read: 
+
+
+[role="lead"]
+Cloud Insights utilizza il data collector Rubrik per acquisire dati di inventario e performance dalle appliance di storage Rubrik.
+
+
+
+== Terminologia
+
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector Rubrik. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine Cloud Insights 
+
+
+| Cluster | Storage, pool di storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| Disco | Disco 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* L'unità di acquisizione Cloud Insights avvia le connessioni alla porta TCP 443 al cluster Rubrik. Un collector per cluster.
+* Indirizzo IP del cluster Rubrik.
+* Nome utente e password del cluster.
+* Requisito della porta: HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| IP | Indirizzo IP del cluster Rubrik 
+
+
+| Nome utente | Nome utente del cluster 
+
+
+| Password | Password per il cluster 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Ho ricevuto un messaggio che indica la creazione di più storage. | Verificare che il cluster sia configurato correttamente e che il raccoglitore faccia riferimento a un singolo cluster. 
+
+
+| Ho ricevuto un avviso che indica che l'API del disco ha restituito più dati | Rivolgersi al supporto per ottenere ulteriori dati. 
+|===
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
