@@ -1,0 +1,4186 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Configurazione di NetApp Kubernetes Monitoring Operator</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Configurazione di NetApp Kubernetes Monitoring Operator" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/cloudinsights/task_config_telegraf_agent_k8s.html" />
+	<meta property="og:description" content="Cloud Insights supporta Telegraf come agente per la raccolta di dati di integrazione su Kubernetes." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/cloudinsights/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Cloud Insights supporta Telegraf come agente per la raccolta di dati di integrazione su Kubernetes.">
+  <meta name="keywords" content=" telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s"><!-- Icons -->
+  <link rel="icon" href="/it-it/cloudinsights/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/cloudinsights/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/cloudinsights/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/cloudinsights/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloudinsights/task_config_telegraf_agent_k8s.html" />
+  <link rel='stylesheet' href='/it-it/cloudinsights/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/cloudinsights/js/na-search.js'></script><script src='/it-it/cloudinsights/js/na-pagenav.js'></script><script src='/it-it/cloudinsights/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/cloudinsights/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/cloudinsights/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/cloudinsights/js/na-utility.js'></script> -->
+  <script src='/it-it/cloudinsights/js/clouddocs.js'></script>
+  <script src='/it-it/cloudinsights/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/cloudinsights/js/toc.js'></script> -->
+  <!-- <script src='/it-it/cloudinsights/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/cloudinsights"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/cloudinsights/js/custom-dropdown.js'></script>
+  <script src='/it-it/cloudinsights/js/FileSaver.min.js'></script>
+  <script src='/it-it/cloudinsights/js/jszip-utils.min.js'></script>
+  <script src='/it-it/cloudinsights/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/cloudinsights/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloudinsights.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/cloudinsights/task_config_telegraf_agent_k8s.html&page-title=Configurazione di NetApp Kubernetes Monitoring Operator" class="page-nav-contribute-link" role="button"><img src="/it-it/cloudinsights/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/main/task_config_telegraf_agent_k8s.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/cloudinsights/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/cloudinsights/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/cloudinsights/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/cloudinsights/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/cloudinsights/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/cloudinsights/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloudinsights/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloudinsights/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/cloudinsights/task_config_telegraf_agent_k8s.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/cloudinsights/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/cloudinsights/pdfs/fullsite-sidebar/Documentazione_Cloud_Insights.pdf" >
+          <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Sicurezza.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Sicurezza
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Per_iniziare.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Per iniziare
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Raccolta_dei_dati.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Raccolta dei dati
+          </a>
+          
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Risoluzione_automatica_del_dispositivo.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Risoluzione automatica del dispositivo
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Creazione_di_dashboard.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Creazione di dashboard
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dashboard_di_esempio.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Dashboard di esempio
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Kubernetes.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Kubernetes
+          </a>
+          
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Approfondimenti.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Approfondimenti
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Lavorare_con_le_query.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Lavorare con le query
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Utilizzo_delle_annotazioni.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Utilizzo delle annotazioni
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Utilizzo_delle_applicazioni.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Utilizzo delle applicazioni
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Monitor_e_avvisi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Monitor e avvisi
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Monitoraggio_dell_ambiente.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Monitoraggio dell'ambiente
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Informazioni_sulla_pagina_delle_risorse.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Informazioni sulla pagina delle risorse
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Creazione_di_report.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Creazione di report
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Sicurezza_del_carico_di_lavoro_dello_storage.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Sicurezza del carico di lavoro dello storage
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Per_iniziare.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Per iniziare
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Analisi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Analisi
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Risoluzione_dei_problemi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Risoluzione dei problemi
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Riferimento_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Riferimento e supporto
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Data_Collector_Reference___infrastruttura.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Data Collector Reference - infrastruttura
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Broadcom.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Broadcom
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dell.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Dell
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dell_EMC.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Dell EMC
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/HP_Enterprise.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            HP Enterprise
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Hitachi_Data_Systems.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Hitachi Data Systems
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/IBM.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            IBM
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Microsoft.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Microsoft
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/NetApp.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Riferimento_Data_Collector___servizi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf.png" alt="" width="16" height="16"/>
+            Riferimento Data Collector - servizi
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/cloudinsights/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentazione Cloud Insights"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/index.html">
+        Documentazione Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_whats_new.html">
+        Novità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Iscrizione a Cloud Insights"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_cloud_insights_onboarding_1.html">
+        Iscrizione a Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Sicurezza</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di sicurezza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/security_overview.html">
+        Procedure di sicurezza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cosa memorizzare e dove"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/security_information_and_region.html">
+        Cosa memorizzare e dove
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Strumento securityadmin"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/security_admin_tool.html">
+        Strumento securityadmin
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Per iniziare"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Per iniziare</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tutorial sulle funzioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_feature_tutorials.html">
+        Tutorial sulle funzioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Raccolta dei dati"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Raccolta dei dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_getting_started_with_cloud_insights.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti dell'unità di acquisizione"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_acquisition_unit_requirements.html">
+        Requisiti dell'unità di acquisizione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un'unità di acquisizione"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_configure_acquisition_unit.html">
+        Configurazione di un'unità di acquisizione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un agente su Windows/Linux"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_agent.html">
+        Configurazione di un agente su Windows/Linux
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un operatore Kubernetes"
+      data-li-level="3#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_agent_k8s.html">
+        Configurazione di un operatore Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Data Collector"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_configure_data_collectors.html">
+        Configurazione di Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Determinazione dello stato di acquisizione del Data Collector"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_determining_data_collector_acq_status.html">
+        Determinazione dello stato di acquisizione del Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i Data Collector configurati"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_view_configured_data_collectors.html">
+        Gestire i Data Collector configurati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ricercare gli errori del data collector"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_research_failed_collector.html">
+        Ricercare gli errori del data collector
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Importazione di dashboard consigliati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_import_from_dashboard_gallery.html">
+        Importazione di dashboard consigliati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account utente e ruoli"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_user_roles.html">
+        Account utente e ruoli
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Collector List (elenco Data Collector)"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/data_collector_list.html">
+        Data Collector List (elenco Data Collector)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Iscrizione a Cloud Insights"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_subscribing_to_cloud_insights.html">
+        Iscrizione a Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione automatica del dispositivo"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Risoluzione automatica del dispositivo</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica sulla risoluzione dei dispositivi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_device_resolution_overview.html">
+        Panoramica sulla risoluzione dei dispositivi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Regole di risoluzione dei dispositivi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_device_resolution_rules.html">
+        Regole di risoluzione dei dispositivi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione del dispositivo Fibre Channel"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_device_resolution_fibre_channel.html">
+        Risoluzione del dispositivo Fibre Channel
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione del dispositivo IP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_device_resolution_ip.html">
+        Risoluzione del dispositivo IP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostazione delle preferenze di risoluzione del dispositivo"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_device_resolution_preferences.html">
+        Impostazione delle preferenze di risoluzione del dispositivo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esempi di espressioni regolari"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_device_resolution_regex_examples.html">
+        Esempi di espressioni regolari
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di dashboard"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Creazione di dashboard</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica della dashboard"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_dashboards_overview.html">
+        Panoramica della dashboard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Funzionalità dei dashboard"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_dashboard_features.html">
+        Funzionalità dei dashboard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard di esempio"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Dashboard di esempio</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance delle macchine virtuali"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dashboard_example_VM_performance.html">
+        Performance delle macchine virtuali
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Best practice per la dashboard"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_dashboard_best_practices.html">
+        Best practice per la dashboard
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Kubernetes</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pagina panoramica di Kubernetes"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/kubernetes_landing_page.html">
+        Pagina panoramica di Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guida introduttiva all'operatore di monitoraggio"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_agent_k8s.html">
+        Guida introduttiva all'operatore di monitoraggio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pagina del cluster Kubernetes"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/kubernetes_cluster_detail.html">
+        Pagina del cluster Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes Monitoring and Map (monitoraggio e mappa di Kubernetes)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_kubernetes_network_monitoring_and_map.html">
+        Kubernetes Monitoring and Map (monitoraggio e mappa di Kubernetes)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Approfondimenti"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Approfondimenti</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/insights_overview.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risorse condivise sotto stress"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/insights_shared_resources_under_stress.html">
+        Risorse condivise sotto stress
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes Namespace che esauriscono lo spazio"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/insights_k8s_namespaces_running_out_of_space.html">
+        Kubernetes Namespace che esauriscono lo spazio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Recuperare lo storage a freddo ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/insights_reclaim_ontap_cold_storage.html">
+        Recuperare lo storage a freddo ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elementi di base di ONTAP"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_ontap_essentials.html">
+        Elementi di base di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lavorare con le query"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Lavorare con le query</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esecuzione di query sulle risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_querying_assets.html">
+        Esecuzione di query sulle risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di una query"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_query.html">
+        Creazione di una query
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzazione delle query disponibili"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_view_queries.html">
+        Visualizzazione delle query disponibili
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esportazione dei risultati delle query in formato .CSV"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_export_query_results.html">
+        Esportazione dei risultati delle query in formato .CSV
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modifica o eliminazione di una query"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_modify_delete_query.html">
+        Modifica o eliminazione di una query
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Assegnazione di più applicazioni/annotazioni agli oggetti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_query_assign_multiple_applicationss.html">
+        Assegnazione di più applicazioni/annotazioni agli oggetti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Copia dei valori delle tabelle negli Appunti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_query_copy_table_values.html">
+        Copia dei valori delle tabelle negli Appunti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Query dei registri"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_log_explorer.html">
+        Query dei registri
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle annotazioni"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Utilizzo delle annotazioni</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Definizione delle annotazioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_defining_annotations.html">
+        Definizione delle annotazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle annotazioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_annotation.html">
+        Utilizzo delle annotazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle regole di annotazione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_annotation_rules.html">
+        Utilizzo delle regole di annotazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Importazione di annotazioni con API"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_annotation_import.html">
+        Importazione di annotazioni con API
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle applicazioni"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Utilizzo delle applicazioni</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concetti applicativi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_about_applications.html">
+        Concetti applicativi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione delle applicazioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_application.html">
+        Configurazione delle applicazioni
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor e avvisi"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Monitor e avvisi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di monitor"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_monitor.html">
+        Creazione di monitor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzazione e gestione degli avvisi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_view_and_manage_alerts.html">
+        Visualizzazione e gestione degli avvisi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione dei destinatari delle notifiche"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_notifications_email.html">
+        Configurazione dei destinatari delle notifiche
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor definiti dal sistema"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_system_monitors.html">
+        Monitor definiti dal sistema
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle API"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/API_Overview.html">
+        Utilizzo delle API
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notifica Webhook"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_create_webhook.html">
+        Notifica Webhook
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitoraggio dell'ambiente"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Monitoraggio dell'ambiente</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eventi di controllo"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_audit.html">
+        Eventi di controllo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="TTL e downsampling"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_ttl_and_downsampling.html">
+        TTL e downsampling
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informazioni sulla pagina delle risorse"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Informazioni sulla pagina delle risorse</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica della pagina delle risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_asset_page_overview.html">
+        Panoramica della pagina delle risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Filtraggio nel contesto degli oggetti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_in_context_filters.html">
+        Filtraggio nel contesto degli oggetti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezioni Riepilogo e topologia"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_asset_summary_section.html">
+        Sezioni Riepilogo e topologia
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione Expert View"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_asset_expert_view_section.html">
+        Sezione Expert View
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione dati utente"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_asset_user_data_section.html">
+        Sezione dati utente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione Avvisi correlati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_asset_alerts_section.html">
+        Sezione Avvisi correlati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtualizzazione dello storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_storage_virtualization.html">
+        Virtualizzazione dello storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Suggerimenti e suggerimenti per la ricerca delle risorse"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_searching_assets.html">
+        Suggerimenti e suggerimenti per la ricerca delle risorse
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di report"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Creazione di report</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica sui report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_overview.html">
+        Panoramica sui report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ruoli utente di reporting"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_user_roles.html">
+        Ruoli utente di reporting
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo dei report predefiniti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_predefined_reports.html">
+        Utilizzo dei report predefiniti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard di Storage Manager"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_storage_manager_dashboard.html">
+        Dashboard di Storage Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di un report di esempio"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_create_example.html">
+        Creazione di un report di esempio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione dei report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_managing_reports.html">
+        Gestione dei report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Report personalizzati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_creating_custom_reports.html">
+        Report personalizzati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modelli di dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_creating_custom_reports.html#reporting-data-models">
+        Modelli di dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API del database di reporting"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_querying_database.html">
+        API del database di reporting
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conservazione dei dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_data_retention.html">
+        Conservazione dei dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Diagrammi dello schema"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reporting_schema_diagrams.html">
+        Diagrammi dello schema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tabelle dello schema"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reference_schemas.html">
+        Tabelle dello schema
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza del carico di lavoro dello storage"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Sicurezza del carico di lavoro dello storage</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informazioni sulla sicurezza del carico di lavoro"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/cs_intro.html">
+        Informazioni sulla sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Per iniziare"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Per iniziare</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introduzione alla sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_cs_getting_started.html">
+        Introduzione alla sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti dell'agente per la sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_cs_agent_requirements.html">
+        Requisiti dell'agente per la sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Workload Security Agent"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_cs_add_agent.html">
+        Configurazione di Workload Security Agent
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminazione di un agente di sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_cs_delete_agent.html">
+        Eliminazione di un agente di sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un servizio di raccolta directory ad"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_user_dir_connect.html">
+        Configurazione di un servizio di raccolta directory ad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un servizio di raccolta directory LDAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_user_dir_connect_ldap.html">
+        Configurazione di un servizio di raccolta directory LDAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione del Data Collector SVM di ONTAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_add_collector_svm.html">
+        Configurazione del Data Collector SVM di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Cloud ONTAP Data Collector"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_cs_incloud.html">
+        Configurazione di Cloud ONTAP Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione degli utenti per la sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_cs_user_management.html">
+        Gestione degli utenti per la sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Event Rate Checker (Guida alle dimensioni dell'agente)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_cs_event_rate_checker.html">
+        Event Rate Checker (Guida alle dimensioni dell'agente)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Avvisi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/cs_alert_data.html">
+        Avvisi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Analisi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi delle attività - tutte le attività"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/forensic_activity_history.html">
+        Analisi delle attività - tutte le attività
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi delle attività - entità"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/forensic_entity_detail.html">
+        Analisi delle attività - entità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utenti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/forensic_user_overview.html">
+        Utenti
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Policy di risposta automatizzate"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/cs_automated_response_policies.html">
+        Policy di risposta automatizzate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrazione della protezione ransomware autonoma di ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_cs_integration_with_ontap_arp.html">
+        Integrazione della protezione ransomware autonoma di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Blocco dell'accesso utente"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/cs_restrict_user_access.html">
+        Blocco dell'accesso utente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Simulazione di un attacco ransomware"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_cs_attack_simulator.html">
+        Simulazione di un attacco ransomware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notifiche"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/cs_notifications_email.html">
+        Notifiche
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API per la sicurezza del carico di lavoro"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_cs_api.html">
+        API per la sicurezza del carico di lavoro
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Active IQ"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_activeiq.html">
+        Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Risoluzione dei problemi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione generale dei problemi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_troubleshooting_general_problems.html">
+        Risoluzione generale dei problemi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi relativi all'unità di acquisizione Linux"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_troubleshooting_linux_acquisition_unit_problems.html">
+        Risoluzione dei problemi relativi all'unità di acquisizione Linux
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi relativi all'unità di acquisizione di Windows"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_troubleshooting_windows_acquisition_unit_problems.html">
+        Risoluzione dei problemi relativi all'unità di acquisizione di Windows
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ricerca degli errori di Data Collector"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_research_failed_collector.html">
+        Ricerca degli errori di Data Collector
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento e supporto"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Riferimento e supporto</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiesta di supporto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_requesting_support.html">
+        Richiesta di supporto
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Matrice di supporto Data Collector"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reference_data_collector_support_matrix.html">
+        Matrice di supporto Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Collector Reference - infrastruttura"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Data Collector Reference - infrastruttura</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica di riferimento del vendor"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/concept_data_collector_reference.html">
+        Panoramica di riferimento del vendor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_amazon_ec2.html">
+        AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amazon FSX per NetApp ONTAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_amazon_fsx.html">
+        Amazon FSX per NetApp ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ms_azure.html">
+        Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Broadcom"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Broadcom</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Brocade Network Advisor"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_brocade_bna.html">
+        Brocade Network Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Switch Fibre Channel"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_brocade_fc_switch.html">
+        Switch Fibre Channel
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cisco"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_cisco_fc_switch.html">
+        Cisco
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SmartfFiles di Cohesity"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_cohesity_smartfiles.html">
+        SmartfFiles di Cohesity
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dell"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Dell</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Serie XC"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_dell_xc_series.html">
+        Serie XC
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dell EMC"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Dell EMC</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Domain (dominio dati)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_datadomain.html">
+        Data Domain (dominio dati)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ECS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_ecs.html">
+        ECS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerScale"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_isilon.html">
+        PowerScale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ISILON/PowerScale REST"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_isilon_rest.html">
+        ISILON/PowerScale REST
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerStore"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_powerstore.html">
+        PowerStore
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="RecoverPoint"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_recoverpoint.html">
+        RecoverPoint
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ScaleIO"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_scaleio.html">
+        ScaleIO
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Unità (VNXe)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_unity.html">
+        Unità (VNXe)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMAX/PowerMax"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_vmax_powermax.html">
+        VMAX/PowerMax
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Blocco VNX (CLARiiON)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_vnx_block.html">
+        Blocco VNX (CLARiiON)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="File VNX (Celerra)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_vnx_file.html">
+        File VNX (Celerra)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VNX unificato"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_vnx_unified.html">
+        VNX unificato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VPLEX"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_vplex.html">
+        VPLEX
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="XtremIO"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_emc_xio.html">
+        XtremIO
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Fujitsu"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_fujitsu_eternus.html">
+        Fujitsu
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Google"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_google_cloud.html">
+        Google
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HP Enterprise"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> HP Enterprise</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HP Alletra 9000 e Primera"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hp_3par.html">
+        HP Alletra 9000 e Primera
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AE HP Command View"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hpe_commandview.html">
+        AE HP Command View
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HPE Alletra 6000"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hpe_nimble.html">
+        HPE Alletra 6000
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hitachi Data Systems"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Hitachi Data Systems</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Suite di comandi HDS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hds_commandsuite.html">
+        Suite di comandi HDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HNAS HDS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hds_nas.html">
+        HNAS HDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Centro operativo HDS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_hds_ops_center.html">
+        Centro operativo HDS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Infinidat"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_infinidat_infinibox.html">
+        Infinidat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Huawei"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_huawei_oceanstor.html">
+        Huawei
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="IBM"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> IBM</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cleversafe"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_cleversafe.html">
+        Cleversafe
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SERIE CS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_cs.html">
+        SERIE CS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage di sistema serie DS8000"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_ds.html">
+        Storage di sistema serie DS8000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerVM"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_powervm.html">
+        PowerVM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Controller volume SAN (SVC)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_svc.html">
+        Controller volume SAN (SVC)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="XIV/A9000"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ibm_xiv.html">
+        XIV/A9000
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lenovo"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_lenovo.html">
+        Lenovo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Microsoft"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Microsoft</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure NetApp Files"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ms_anf.html">
+        Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V."
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_ms_hyperv.html">
+        Hyper-V.
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> NetApp</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connessione cloud per ONTAP 9.9+"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_cloud_connection.html">
+        Connessione cloud per ONTAP 9.9+
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_cloud_volumes_ontap.html">
+        Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes Services per AWS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_cloud_volumes.html">
+        Cloud Volumes Services per AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Config Advisor"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_ca.html">
+        Config Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Software per la gestione dei dati ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_cdot.html">
+        Software per la gestione dei dati ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modalità Data ONTAP 7"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_7mode.html">
+        Modalità Data ONTAP 7
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="E-Series"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_eseries.html">
+        E-Series
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Server di gestione NetApp HCI"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_hci.html">
+        Server di gestione NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SolidFire"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_solidfire.html">
+        SolidFire
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="StorageGRID"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_na_storagegrid.html">
+        StorageGRID
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nutanix"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_nutanix.html">
+        Nutanix
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="OpenStack"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_openstack.html">
+        OpenStack
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Oracle"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_oracle_zfs.html">
+        Oracle
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Puro"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_pure_flasharray.html">
+        Puro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Red Hat"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_redhat_virtualization.html">
+        Red Hat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rubrik CDM"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_rubrik_cdm.html">
+        Rubrik CDM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_dc_vmware.html">
+        VMware
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento Data Collector - servizi"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Riferimento Data Collector - servizi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Host/nodo"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_node.html">
+        Host/nodo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ActiveMQ"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_activemq.html">
+        ActiveMQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Apache"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_apache.html">
+        Apache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Console"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_consul.html">
+        Console
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Couchbase"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_couchbase.html">
+        Couchbase
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Database dei CouchDB"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_couchdb.html">
+        Database dei CouchDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Docker"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_docker.html">
+        Docker
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elasticsearch"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_elasticsearch.html">
+        Elasticsearch
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flink"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_flink.html">
+        Flink
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hadoop"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_hadoop.html">
+        Hadoop
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HAProxy"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_haproxy.html">
+        HAProxy
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Java"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_jvm.html">
+        Java
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kafka"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_kafka.html">
+        Kafka
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kapacitor"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_kapacitor.html">
+        Kapacitor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kibana"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_kibana.html">
+        Kibana
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_agent.html#kubernetes">
+        Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Memcached"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_memcached.html">
+        Memcached
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MongoDB"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_mongodb.html">
+        MongoDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MySQL"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_mysql.html">
+        MySQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Netstat"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_netstat.html">
+        Netstat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nginx"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_nginx.html">
+        Nginx
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="OpenZFS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_openzfs.html">
+        OpenZFS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PostgreSQL"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_postgresql.html">
+        PostgreSQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Marionetta"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_puppetagent.html">
+        Marionetta
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Redis"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_redis.html">
+        Redis
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="RethinkDB"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_rethinkdb.html">
+        RethinkDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Zoosekeeper"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/task_config_telegraf_zookeeper.html">
+        Zoosekeeper
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento icona oggetto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reference_object_icons.html">
+        Riferimento icona oggetto
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloudinsights/reference_legal_notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/cloudinsights/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/cloudinsights/">Cloud&nbsp;Insights</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/cloudinsights/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Configurazione di NetApp Kubernetes Monitoring Operator</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Cloud Insights utilizza una serie di componenti, tra cui <a href="https://docs.fluentbit.io/manual">"Bit fluente"</a> e. <a href="https://docs.influxdata.com/telegraf/">"Telefono"</a>, Per la raccolta di dati Kubernetes. Telegraf è un agente server basato su plug-in che può essere utilizzato per raccogliere e generare report su metriche, eventi e registri. I plug-in di input vengono utilizzati per raccogliere le informazioni desiderate nell&#8217;agente accedendo direttamente al sistema/sistema operativo, chiamando API di terze parti o ascoltando flussi configurati (ad esempio Kafka, statsD, ecc.). I plug-in di output vengono utilizzati per inviare metriche, eventi e registri raccolti dall&#8217;agente a Cloud Insights.</p>
+</div>
+<!-- toc disabled -->
+<div class="paragraph">
+<p>Cloud Insights offre la raccolta * NetApp Kubernetes Monitoring Operator* (NKMO) per Kubernetes. Quando si aggiunge un data collector, è sufficiente selezionare la sezione Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="kubernetes_tile.png" alt="Sezione Kubernetes Data Collector"></span></p>
+</div>
+<div class="paragraph">
+<p>Di seguito è riportata un&#8217;illustrazione di alto livello che mostra la posizione dell&#8217;operatore nell&#8217;ambiente in uso. A seconda dell&#8217;ambiente in uso, <em>Proxy Server</em> potrebbe essere richiesto o meno.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="CI_Diagram_with_NKMO.png" alt="Una mappa di alto livello che mostra l&#8217;NKMO residente nel cluster Kubernetes, con frecce che mostrano come i dati viaggiano verso il cluster dagli host, dal server proxy, tutti rotolando fino a Cloud Insights"></span></p>
+</div>
+<div class="paragraph">
+<p>L&#8217;operatore (NKMO) e i data collezioner vengono scaricati dal Registro di sistema di Cloud Insights. Una volta installato, NKMO gestisce quindi tutti i collettori compatibili con gli operatori implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prima-di-installare-netapp-kubernetes-monitoring-operator">Prima di installare NetApp Kubernetes Monitoring Operator</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">Prerequisiti:</div>
+<ul>
+<li>
+<p>Se si utilizza un repository di docker privato o personalizzato, seguire le istruzioni nella sezione utilizzo di un repository di docker privato o personalizzato</p>
+</li>
+<li>
+<p>L&#8217;installazione di NetApp Kubernetes Monitoring Operator è supportata con Kubernetes versione 1.20 o successiva.</p>
+</li>
+<li>
+<p>Quando Cloud Insights sta monitorando lo storage back-end e Kubernetes viene utilizzato con il runtime del container Docker, Cloud Insights può visualizzare le mappature e le metriche pod-to-PV-to-storage per NFS e iSCSI; altre runtime mostrano solo NFS.</p>
+</li>
+<li>
+<p>A partire da agosto 2022, NetApp Kubernetes Monitoring Operator include il supporto per Pod Security Policy (PSP). Se il tuo ambiente utilizza PSP, devi eseguire l&#8217;aggiornamento all&#8217;ultimo NetApp Kubernetes Monitoring Operator.</p>
+</li>
+<li>
+<p>Se si utilizza OpenShift 4.6 o versione successiva, è necessario seguire le istruzioni di OpenShift riportate di seguito oltre a garantire che questi prerequisiti siano soddisfatti.</p>
+</li>
+<li>
+<p>Il monitoraggio viene installato solo sui nodi Linux Cloud Insights supporta il monitoraggio dei nodi Kubernetes che eseguono Linux, specificando un selettore di nodi Kubernetes che cerca le seguenti etichette Kubernetes su queste piattaforme:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piattaforma</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Etichetta</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes v1.20 e versioni successive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes.io/os = linux</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rancher + Cattle.io come piattaforma di orchestrazione/Kubernetes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cattle.io/os = linux</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>NetApp Kubernetes Monitoring Operator e le relative dipendenze (telegraf, kube-state-metrics, fluentbit, ecc.) non sono supportate sui nodi che eseguono l&#8217;architettura Arm64.</p>
+</li>
+<li>
+<p>Devono essere disponibili i seguenti comandi: Curl, kubectl. Il comando docker è necessario per una fase di installazione opzionale. Per ottenere risultati ottimali, aggiungere questi comandi al PERCORSO. Si noti che kubectl deve essere configurato con accesso minimo ai seguenti oggetti kubernetes: Agenti, clusterrolebinding, customresourcedefinizioni, implementazioni, namespace, ruoli, associazioni di ruoli, segreti, serviceaccounts, e servizi. Vedere qui per un file .yaml di esempio con questi privilegi minimi di ruolo del clusterrole.</p>
+</li>
+<li>
+<p>L&#8217;host da utilizzare per l&#8217;installazione dell&#8217;operatore di monitoraggio Kubernetes di NetApp deve avere kubectl configurato per comunicare con il cluster K8s di destinazione e disporre di connettività Internet all&#8217;ambiente Cloud Insights.</p>
+</li>
+<li>
+<p>Se si utilizza un proxy durante l&#8217;installazione o quando si utilizza il cluster K8s da monitorare, seguire le istruzioni nella sezione Configurazione del supporto proxy.</p>
+</li>
+<li>
+<p>NetApp Kubernetes Monitoring Operator installa le proprie metriche di stato kube per evitare conflitti con altre istanze. Per un controllo accurato e la creazione di report dei dati, si consiglia di sincronizzare l&#8217;ora sul computer dell&#8217;agente utilizzando il protocollo NTP (Network Time Protocol) o SNTP (Simple Network Time Protocol).</p>
+</li>
+<li>
+<p>Se si sta ridistribuendo l&#8217;operatore (ovvero si sta aggiornando o sostituendo), non è necessario creare un token API <em>new</em>; è possibile riutilizzare il token precedente.</p>
+</li>
+<li>
+<p>Si noti inoltre che se si dispone di un recente NetApp Kubernetes Monitoring Operator installato e si utilizza un token di accesso API rinnovabile, i token in scadenza verranno sostituiti automaticamente da token di accesso API nuovi/aggiornati.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="annotarli-prima-di-iniziare">Annotarli prima di iniziare</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se si utilizza un <a href="#configuring-proxy-support">proxy</a>, hanno un <a href="#using-a-custom-or-private-docker-repository">repository personalizzato</a>, o stanno utilizzando <a href="#openshift-instructions">OpenShift</a>, leggere attentamente le seguenti sezioni.</p>
+</div>
+<div class="paragraph">
+<p>Se si sta eseguendo l&#8217;aggiornamento da un&#8217;installazione precedente, leggere anche la <a href="#aggiornamento in corso">Aggiornamento in corso</a> informazioni.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configurazione-delloperatore">Configurazione dell&#8217;operatore</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nelle versioni più recenti dell&#8217;operatore, le impostazioni modificate più comunemente possono essere configurate nella risorsa personalizzata <em>AgentConfiguration</em>. È possibile modificare questa risorsa prima di implementare l&#8217;operatore modificando il file <em>operator-config.yaml</em>. Questo file include esempi commentati di alcune impostazioni. Vedere l&#8217;elenco di <a href="telegraf_agent_k8s_config_options.html">"impostazioni disponibili"</a> per la versione più recente dell&#8217;operatore.</p>
+</div>
+<div class="paragraph">
+<p>È inoltre possibile modificare questa risorsa dopo che l&#8217;operatore è stato distribuito utilizzando il seguente comando:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring edit AgentConfiguration
+Per determinare se la versione implementata dell'operatore supporta AgentConfiguration, eseguire il seguente comando:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl get crd agentconfigurations.monitoring.netapp.com
+Se viene visualizzato il messaggio "Error from server (notfound)" (errore dal server (non trovato)), l'operatore deve essere aggiornato prima di poter utilizzare AgentConfiguration.</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configurazione-del-supporto-proxy">Configurazione del supporto proxy</h3>
+<div class="paragraph">
+<p>Per installare NetApp Kubernetes Monitoring Operator, è possibile utilizzare un proxy nel proprio ambiente in due punti. Questi possono essere sistemi proxy identici o separati:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Proxy necessario durante l&#8217;esecuzione del frammento di codice di installazione (utilizzando "curl") per connettere il sistema in cui viene eseguito il frammento all&#8217;ambiente Cloud Insights</p>
+</li>
+<li>
+<p>Proxy necessario dal cluster Kubernetes di destinazione per comunicare con l&#8217;ambiente Cloud Insights</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se si utilizza un proxy per uno o entrambi questi, per installare il monitor operativo di NetApp Kubernetes è necessario prima assicurarsi che il proxy sia configurato per consentire una buona comunicazione con l&#8217;ambiente Cloud Insights. Se si dispone di un proxy e si può accedere a Cloud Insights dal server/VM da cui si desidera installare l&#8217;operatore, è probabile che il proxy sia configurato correttamente.</p>
+</div>
+<div class="paragraph">
+<p>Per il proxy utilizzato per installare NetApp Kubernetes Operating Monitor, prima di installare l&#8217;operatore, impostare le variabili di ambiente <em>http_proxy/https_proxy</em>. Per alcuni ambienti proxy, potrebbe essere necessario impostare la variabile <em>no_proxy environment</em>.</p>
+</div>
+<div class="paragraph">
+<p>Per impostare le variabili, eseguire le seguenti operazioni sul sistema <strong>prima</strong> dell&#8217;installazione di NetApp Kubernetes Monitoring Operator:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Impostare le variabili di ambiente <em>https_proxy</em> e/o <em>http_proxy</em> per l&#8217;utente corrente:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Se il proxy da configurare non dispone dell&#8217;autenticazione (nome utente/password), eseguire il seguente comando:</p>
+<div class="literalblock">
+<div class="content">
+<pre> export https_proxy=&lt;proxy_server&gt;:&lt;proxy_port&gt;
+.. Se il proxy da configurare dispone dell'autenticazione (nome utente/password), eseguire questo comando:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>export http_proxy=&lt;proxy_username&gt;:&lt;proxy_password&gt;@&lt;proxy_server&gt;:&lt;proxy_port&gt;</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Per il proxy utilizzato per la comunicazione del cluster Kubernetes con l&#8217;ambiente Cloud Insights, installare l&#8217;operatore di monitoraggio Kubernetes dopo aver letto tutte le istruzioni.</p>
+</div>
+<div class="paragraph">
+<p>Configurare la sezione proxy di AgentConfiguration in operator-config.yaml prima di implementare NetApp Kubernetes Monitoring Operator.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>proxy:
+
+   server: &lt;server for proxy&gt;
+   port: &lt;port for proxy&gt;
+   username: &lt;username for proxy&gt;
+   password: &lt;password for proxy&gt;
+
+# In the noproxy section, enter a comma-separated list of
+# IP addresses and/or resolvable hostnames that should bypass
+# the proxy:
+
+   noproxy: &lt;comma separated list&gt;
+   isTelegrafProxyEnabled: true
+   isFluentbitProxyEnabled: &lt;true or false&gt; # true if Events Log enabled
+   isCollectorsProxyEnabled: &lt;true or false&gt; # true if Network Performance and Map enabled
+   isAuProxyEnabled: &lt;true or false&gt; # true if AU enabled</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="utilizzando-un-repository-di-docker-personalizzato-o-privato">Utilizzando un repository di docker personalizzato o privato</h3>
+<div class="paragraph">
+<p>Per impostazione predefinita, l&#8217;operatore di monitoraggio di NetApp Kubernetes estrarrà le immagini container dal repository Cloud Insights. Se si utilizza un cluster Kubernetes come destinazione per il monitoraggio e tale cluster è configurato in modo da estrarre solo immagini container da un repository Docker personalizzato o privato o da un registro container, è necessario configurare l&#8217;accesso ai container richiesti dall&#8217;operatore di monitoraggio NetApp Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p>Eseguire il frammento Image Pull dalla sezione di installazione di NetApp Monitoring Operator. Questo comando effettua l&#8217;accesso al repository Cloud Insights, inserisce tutte le dipendenze dell&#8217;immagine per l&#8217;operatore e si disconnette dal repository Cloud Insights. Quando richiesto, inserire la password temporanea del repository fornita. Questo comando scarica tutte le immagini utilizzate dall&#8217;operatore, incluse le funzioni opzionali. Vedere di seguito per quali funzioni vengono utilizzate queste immagini.</p>
+</div>
+<div class="paragraph">
+<p>Funzionalità principale dell&#8217;operatore e monitoraggio Kubernetes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>monitoraggio netapp</p>
+</li>
+<li>
+<p>kube-rbac-proxy</p>
+</li>
+<li>
+<p>kube-state-metrics</p>
+</li>
+<li>
+<p>telefono</p>
+</li>
+<li>
+<p>distroless-root-user</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Registro eventi</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fluente</p>
+</li>
+<li>
+<p>kubernetes-event-exportent</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mappa e performance di rete</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ci-net-osservatore</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Trasferire l&#8217;immagine del gestore nel repository del supporto privato/locale/aziendale in base alle policy aziendali. Assicurarsi che i tag delle immagini e i percorsi delle directory per queste immagini nel repository siano coerenti con quelli nel repository Cloud Insights.</p>
+</div>
+<div class="paragraph">
+<p>Modificare l&#8217;implementazione dell&#8217;operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image: &lt;docker repo of the enterprise/corp docker repo&gt;/kube-rbac-proxy:&lt;kube-rbac-proxy version&gt;
+image: &lt;docker repo of the enterprise/corp docker repo&gt;/netapp-monitoring:&lt;version&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Modificare la configurazione dell&#8217;agente in operator-config.yaml in modo che rifletta la nuova posizione del responsabile del docker. Crea un nuovo imagePullSecret per il tuo repository privato; per ulteriori dettagli, consulta <em><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/" class="bare">https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</a></em></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
+# Please see documentation link here:
+dockerRepo: your.docker.repo/long/path/to/test
+# Optional: A docker image pull secret that maybe needed for your private docker registry
+dockerImagePullSecret: docker-secret-name</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="istruzioni-per-openshift">Istruzioni per OpenShift</h3>
+<div class="paragraph">
+<p>Se si utilizza OpenShift 4.6 o versione successiva, è necessario modificare la configurazione dell&#8217;agente in <em>operator-config.yaml</em> per attivare l&#8217;impostazione <em>runPrivileged</em>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># Set runPrivileged to true SELinux is enabled on your kubernetes nodes
+runPrivileged: true</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>OpenShift potrebbe implementare un ulteriore livello di sicurezza che potrebbe bloccare l&#8217;accesso ad alcuni componenti di Kubernetes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installazione-di-netapp-kubernetes-monitoring-operator">Installazione di NetApp Kubernetes Monitoring Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="NKMO-Instructions-1.png" alt=""></span>
+<span class="image"><img src="NKMO-Instructions-2.png" alt=""></span></p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedura per installare NetApp Kubernetes Monitoring Operator Agent su Kubernetes:</div>
+<ol class="arabic">
+<li>
+<p>Immettere un nome cluster e uno spazio dei nomi univoci. Se lo sei <a href="#aggiornamento in corso">aggiornamento in corso</a> Da un agente basato su script o da un precedente operatore Kubernetes, utilizzare lo stesso nome del cluster e lo stesso namespace.</p>
+</li>
+<li>
+<p>Una volta immessi, è possibile copiare il frammento Download Command negli Appunti.</p>
+</li>
+<li>
+<p>Incollare il frammento in una finestra <em>bash</em> ed eseguirlo. I file di installazione dell&#8217;operatore verranno scaricati. Tenere presente che il frammento ha una chiave univoca ed è valido per 24 ore.</p>
+</li>
+<li>
+<p>Se si dispone di un repository personalizzato o privato, copiare il frammento Image Pull opzionale, incollarlo in una shell <em>bash</em> ed eseguirlo. Una volta estratte le immagini, copiarle nel repository privato. Assicurarsi di mantenere gli stessi tag e la stessa struttura di cartelle. Aggiornare i percorsi in <em>operator-deployment.yaml</em> e le impostazioni del repository di docker in <em>operator-config.yaml</em>.</p>
+</li>
+<li>
+<p>Se lo si desidera, esaminare le opzioni di configurazione disponibili, ad esempio le impostazioni del proxy o del repository privato. Ulteriori informazioni su <a href="telegraf_agent_k8s_config_options.html">"opzioni di configurazione"</a>.</p>
+</li>
+<li>
+<p>Quando sei pronto, implementa l&#8217;operatore copiando il frammento kubectl apply, scaricandolo ed eseguendolo.</p>
+</li>
+<li>
+<p>L&#8217;installazione procede automaticamente. Una volta completata l&#8217;operazione, fare clic sul pulsante <em>Avanti</em>.</p>
+</li>
+<li>
+<p>Al termine dell&#8217;installazione, fare clic sul pulsante <em>Next</em>. Assicurarsi inoltre di eliminare o memorizzare in modo sicuro il file <em>operator-secrets.yaml</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Scopri di più <a href="#configuring-proxy-support">configurazione del proxy</a>.</p>
+</div>
+<div class="paragraph">
+<p>Scopri di più <a href="#using-a-custom-or-private-docker-repository">utilizzando un repository di docker personalizzato/privato</a>.</p>
+</div>
+<div class="paragraph">
+<p>La raccolta dei log EMS di Kubernetes è attivata per impostazione predefinita quando si installa NetApp Kubernetes Monitoring Operator. Per disattivare questa raccolta dopo l&#8217;installazione, fare clic sul pulsante <strong>Modify Deployment</strong> (Modifica distribuzione) nella parte superiore della pagina dei dettagli del cluster Kubernetes e deselezionare "Log collection" (raccolta log).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="K8s_Modify_Deployment_Screen.png" alt="Schermata Modify Deployment (Modifica distribuzione) che mostra la casella di controllo per &quot;log Collection&quot;"></span></p>
+</div>
+<div class="paragraph">
+<p>Questa schermata mostra anche lo stato corrente della raccolta dei log. Di seguito sono riportati i possibili stati:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Disattivato</p>
+</li>
+<li>
+<p>Attivato</p>
+</li>
+<li>
+<p>Enabled (attivato) - Installazione in corso</p>
+</li>
+<li>
+<p>Abilitato - non in linea</p>
+</li>
+<li>
+<p>Abilitato - Online</p>
+</li>
+<li>
+<p>Errore - le autorizzazioni della chiave API non sono sufficienti</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="aggiornamento-in-corso">Aggiornamento in corso</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloudinsights/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Se si dispone di un agente basato su script precedentemente installato, è necessario eseguire l&#8217;aggiornamento a NetApp Kubernetes Monitoring Operator.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="aggiornamento-da-agente-basato-su-script-a-netapp-kubernetes-monitoring-operator">Aggiornamento da agente basato su script a NetApp Kubernetes Monitoring Operator</h3>
+<div class="paragraph">
+<p>Per aggiornare telegraf Agent, procedere come segue:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prendere nota del nome del cluster riconosciuto da Cloud Insights. È possibile visualizzare il nome del cluster eseguendo il seguente comando. Se lo spazio dei nomi non è quello predefinito (<em>ci-monitoring</em>), sostituire lo spazio dei nomi appropriato:</p>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl -n ci-monitoring get cm telegraf-conf -o jsonpath='{.data}' |grep "kubernetes_cluster ="</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Salvare il nome del cluster K8s da utilizzare durante l&#8217;installazione della soluzione di monitoraggio basata sull&#8217;operatore K8s per garantire la continuità dei dati.</p>
+<div class="paragraph">
+<p>Se non si ricorda il nome del cluster K8s in ci, è possibile estrarlo dalla configurazione salvata con la seguente riga di comando:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> cat /tmp/telegraf-configs.yaml | grep kubernetes_cluster | head -2
+. Rimuovere il monitoraggio basato su script</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Per disinstallare l&#8217;agente basato su script su Kubernetes, procedere come segue:</p>
+</div>
+<div class="paragraph">
+<p>Se lo spazio dei nomi di monitoraggio viene utilizzato esclusivamente per Telegraf:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace ci-monitoring delete ds,rs,cm,sa,clusterrole,clusterrolebinding -l app=ci-telegraf</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl delete ns ci-monitoring</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se lo spazio dei nomi di monitoraggio viene utilizzato per altri scopi oltre a Telegraf:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl --namespace ci-monitoring delete ds,rs,cm,sa,clusterrole,clusterrolebinding -l app=ci-telegraf
+. &lt;&lt;installing-the-netapp-kubernetes-monitoring-operator,Installare&gt;&gt; L'operatore corrente. Assicurarsi di utilizzare lo stesso nome del cluster indicato al punto 1 precedente.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="aggiornamento-allultimo-netapp-kubernetes-monitoring-operator">Aggiornamento all&#8217;ultimo NetApp Kubernetes Monitoring Operator</h3>
+<div class="paragraph">
+<p>Determinare se esiste una configurazione Agentcon l&#8217;operatore esistente (se lo spazio dei nomi non è il <em>monitoraggio netapp</em> predefinito, sostituire lo spazio dei nomi appropriato):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
+Se esiste una configurazione AgentConfiguration:</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#installing-the-netapp-kubernetes-monitoring-operator">Installare</a> L&#8217;operatore più recente rispetto all&#8217;operatore esistente.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Assicurati di sì <a href="#using-a-custom-or-private-docker-repository">estrarre le immagini container più recenti</a> se si utilizza un repository personalizzato.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se AgentConfiguration non esiste:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prendere nota del nome del cluster riconosciuto da Cloud Insights (se lo spazio dei nomi non è il monitoraggio netapp predefinito, sostituire lo spazio dei nomi appropriato):</p>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring get agent -o jsonpath='{.items[0].spec.cluster-name}'
+* Creare un backup dell'operatore esistente (se lo spazio dei nomi non è il monitoraggio netapp predefinito, sostituire lo spazio dei nomi appropriato):</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring get agent -o yaml &gt; agent_backup.yaml
+* &lt;&lt;to-remove-the-netapp-kubernetes-monitoring-operator,Disinstallare&gt;&gt; L'operatore esistente.
+* &lt;&lt;installing-the-netapp-kubernetes-monitoring-operator,Installare&gt;&gt; L'operatore più recente.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Utilizzare lo stesso nome del cluster.</p>
+</li>
+<li>
+<p>Dopo aver scaricato i file YAML dell&#8217;operatore più recenti, portare le personalizzazioni trovate in Agent_backup.yaml nell&#8217;operator-config.yaml scaricato prima di eseguire la distribuzione.</p>
+</li>
+<li>
+<p>Assicurati di sì <a href="#using-a-custom-or-private-docker-repository">estrarre le immagini container più recenti</a> se si utilizza un repository personalizzato.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="arresto-e-avvio-di-netapp-kubernetes-monitoring-operator">Arresto e avvio di NetApp Kubernetes Monitoring Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Per arrestare NetApp Kubernetes Monitoring Operator:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring scale deploy monitoring-operator --replicas=0
+Per avviare NetApp Kubernetes Monitoring Operator:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl -n netapp-monitoring scale deploy monitoring-operator --replicas=1</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disinstallazione-in-corso">Disinstallazione in corso</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloudinsights/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Se si utilizza un agente Kubernetes basato su script precedentemente installato, è necessario <a href="#aggiornamento in corso">eseguire l&#8217;upgrade</a> Al NetApp Kubernetes Monitoring Operator.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="per-rimuovere-lagente-obsoleto-basato-su-script">Per rimuovere l&#8217;agente obsoleto basato su script</h3>
+<div class="paragraph">
+<p>Si noti che questi comandi utilizzano lo spazio dei nomi predefinito "ci-monitoring". Se è stato impostato uno spazio dei nomi personalizzato, sostituire tale spazio dei nomi in questi e in tutti i comandi e file successivi.</p>
+</div>
+<div class="paragraph">
+<p>Per disinstallare l&#8217;agente basato su script su Kubernetes (ad esempio, quando si esegue l&#8217;aggiornamento a NetApp Kubernetes Monitoring Operator), procedere come segue:</p>
+</div>
+<div class="paragraph">
+<p>Se lo spazio dei nomi di monitoraggio viene utilizzato esclusivamente per Telegraf:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> kubectl --namespace ci-monitoring delete ds,rs,cm,sa,clusterrole,clusterrolebinding -l app=ci-telegraf
+ kubectl delete ns ci-monitoring
+Se lo spazio dei nomi di monitoraggio viene utilizzato per altri scopi oltre a Telegraf:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl --namespace ci-monitoring delete ds,rs,cm,sa,clusterrole,clusterrolebinding -l app=ci-telegraf</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="per-rimuovere-netapp-kubernetes-monitoring-operator">Per rimuovere NetApp Kubernetes Monitoring Operator</h3>
+<div class="paragraph">
+<p>Si noti che lo spazio dei nomi predefinito per NetApp Kubernetes Monitoring Operator è "netapp-monitoring". Se è stato impostato uno spazio dei nomi personalizzato, sostituire tale spazio dei nomi in questi e in tutti i comandi e file successivi.</p>
+</div>
+<div class="paragraph">
+<p>Le versioni più recenti dell&#8217;operatore di monitoraggio possono essere disinstallate con i seguenti comandi:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl delete agent -A -l installed-by=nkmo-&lt;name-space&gt;
+kubectl delete ns,clusterrole,clusterrolebinding,crd -l installed-by=nkmo-&lt;name-space&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se il primo comando restituisce "Nessuna risorsa trovata", attenersi alle istruzioni riportate di seguito per disinstallare le versioni precedenti dell&#8217;operatore di monitoraggio.</p>
+</div>
+<div class="paragraph">
+<p>Eseguire ciascuno dei seguenti comandi nell&#8217;ordine indicato. A seconda dell&#8217;installazione corrente, alcuni di questi comandi potrebbero restituire i messaggi ‘oggetto non trovato’. Questi messaggi possono essere ignorati in modo sicuro.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl -n &lt;NAMESPACE&gt; delete agent agent-monitoring-netapp
+kubectl delete crd agents.monitoring.netapp.com
+kubectl -n &lt;NAMESPACE&gt; delete role agent-leader-election-role
+kubectl delete clusterrole agent-manager-role agent-proxy-role agent-metrics-reader &lt;NAMESPACE&gt;-agent-manager-role &lt;NAMESPACE&gt;-agent-proxy-role &lt;NAMESPACE&gt;-cluster-role-privileged
+kubectl delete clusterrolebinding agent-manager-rolebinding agent-proxy-rolebinding agent-cluster-admin-rolebinding &lt;NAMESPACE&gt;-agent-manager-rolebinding &lt;NAMESPACE&gt;-agent-proxy-rolebinding &lt;NAMESPACE&gt;-cluster-role-binding-privileged
+kubectl delete &lt;NAMESPACE&gt;-psp-nkmo
+kubectl delete ns &lt;NAMESPACE&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se in precedenza è stato creato manualmente un vincolo di contesto di protezione per un&#8217;installazione di Telegraf basata su script:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kubectl delete scc telegraf-hostaccess</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="a-proposito-di-kube-state-metrics">A proposito di Kube-state-metrics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp Kubernetes Monitoring Operator installa automaticamente le metriche dello stato kube, senza richiedere alcuna interazione da parte dell&#8217;utente.</p>
+</div>
+<div class="sect2">
+<h3 id="contatori-di-metriche-di-stato-kube">Contatori di metriche di stato kube</h3>
+<div class="paragraph">
+<p>Utilizzare i seguenti collegamenti per accedere alle informazioni relative ai contatori delle metriche di stato del kube:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/configmap-metrics.md">"Metriche di ConfigMap"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/daemonset-metrics.md">"Metriche DemonSet"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/deployment-metrics.md">"Metriche di implementazione"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/ingress-metrics.md">"Metriche di ingresso"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/namespace-metrics.md">"Metriche dello spazio dei nomi"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/node-metrics.md">"Metriche del nodo"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/persistentvolume-metrics.md">"Metriche di volume persistenti"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/persistentvolumeclaim-metrics.md">"Metriche delle richieste di rimborso per volumi persistenti"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/pod-metrics.md">"Metriche pod"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/replicaset-metrics.md">"Metriche ReplicaSet"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/secret-metrics.md">"Metriche segrete"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/service-metrics.md">"Metriche del servizio"</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kube-state-metrics/blob/master/docs/statefulset-metrics.md">"Metriche StatefulSet"</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verifica-dei-checksum-di-kubernetes">Verifica dei checksum di Kubernetes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il programma di installazione dell&#8217;agente Cloud Insights esegue controlli di integrità, ma alcuni utenti potrebbero voler eseguire le proprie verifiche prima di installare o applicare gli artefatti scaricati. Per eseguire un&#8217;operazione di solo download (invece del download e dell&#8217;installazione predefiniti), questi utenti possono modificare il comando di installazione dell&#8217;agente ottenuto dall&#8217;interfaccia utente e rimuovere l&#8217;opzione finale di "installazione".</p>
+</div>
+<div class="paragraph">
+<p>Attenersi alla seguente procedura:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copiare il frammento del programma di installazione dell&#8217;agente come indicato.</p>
+</li>
+<li>
+<p>Invece di incollare il frammento in una finestra di comando, incollarlo in un editor di testo.</p>
+</li>
+<li>
+<p>Rimuovere il file "--install" finale dal comando.</p>
+</li>
+<li>
+<p>Copiare l&#8217;intero comando dall&#8217;editor di testo.</p>
+</li>
+<li>
+<p>Incollarlo nella finestra di comando (in una directory di lavoro) ed eseguirlo.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Download e installazione (impostazione predefinita):</p>
+<div class="literalblock">
+<div class="content">
+<pre> installerName=cloudinsights-kubernetes.sh … &amp;&amp; sudo -E -H ./$installerName --download –-install
+** Solo download:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>installerName=cloudinsights-kubernetes.sh … &amp;&amp; sudo -E -H ./$installerName --download</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Il comando di solo download scaricherà tutti gli artefatti richiesti da Cloud Insights nella directory di lavoro. Gli artefatti includono, ma non possono essere limitati a:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>uno script di installazione</p>
+</li>
+<li>
+<p>un file di ambiente</p>
+</li>
+<li>
+<p>File YAML</p>
+</li>
+<li>
+<p>un file checksum firmato (sha256.signed)</p>
+</li>
+<li>
+<p>Un file PEM (netapp_cert.pem) per la verifica della firma</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Lo script di installazione, il file di ambiente e i file YAML possono essere verificati utilizzando l&#8217;ispezione visiva.</p>
+</div>
+<div class="paragraph">
+<p>Il file PEM può essere verificato confermando che l&#8217;impronta digitale è la seguente:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> 1A918038E8E127BB5C87A202DF173B97A05B4996
+In particolare,</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> openssl x509 -fingerprint -sha1 -noout -inform pem -in netapp_cert.pem
+Il file checksum firmato può essere verificato utilizzando il file PEM:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> openssl smime -verify -in sha256.signed -CAfile netapp_cert.pem -purpose any
+Una volta verificati correttamente tutti gli artefatti, l'installazione dell'agente può essere avviata eseguendo:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo -E -H ./&lt;installation_script_name&gt; --install</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="risoluzione-dei-problemi">Risoluzione dei problemi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Alcune cose da provare in caso di problemi durante la configurazione dell&#8217;operatore di monitoraggio di NetApp Kubernetes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Problema:</th>
+<th class="tableblock halign-left valign-top">Prova:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non viene visualizzato un collegamento ipertestuale/connessione tra il volume persistente Kubernetes e il dispositivo di storage back-end corrispondente. Il volume persistente Kubernetes viene configurato utilizzando il nome host del server di storage.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seguire la procedura per disinstallare l&#8217;agente Telegraf esistente, quindi reinstallare l&#8217;agente Telegraf più recente. È necessario utilizzare Telegraf versione 2.0 o successiva e lo storage del cluster Kubernetes deve essere monitorato attivamente da Cloud Insights.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I messaggi nei log sono simili ai seguenti: E0901 15:21:39.962145 1 Reflector.go:178] k8s.io/kube-state-metrics/internal/store/builder.go:352: Non è stato possibile elencare *v1.MutatingWebhookConfiguration: Il server non ha trovato la risorsa richiesta E0901 15 178:21 352:43.168161 1 Reflector.go.so the internal course to be reflector.i/kio-klist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Questi messaggi possono verificarsi se si utilizza kube-state-metrics versione 2.0.0 o superiore con versioni di Kubernetes inferiori alla 1.20. Per ottenere la versione di Kubernetes: <em>Kubectl version</em> per ottenere la versione di kube-state-metrics: <em>Kubectl get deploy/kube-state-metrics -o jsonpath='{..image}'</em> per evitare che questi messaggi si verifichino, gli utenti possono modificare la loro implementazione di kube-state-metrics per disabilitare le seguenti Leases: _Mutatingwebcooki_argomenti_conserviI possono usare le configurazioni_convalide_construzione_web: Resources=certificatesigningrequests,configmaps,crontowjobs,demonset,implementazioni,endpoint,horizontalpodautoscaler,ingassets,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims,proxims, validatingwebhookconfigurations,volumeattachments"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vedo messaggi di errore da Telegraf simili a quanto segue, ma Telegraf si avvia ed esegue: 11 14 ottobre:23:41 ip-172-31-39-47 systemd[1]: Ha avviato l&#8217;agente server basato su plug-in per la segnalazione delle metriche in InfluxDB. Ottobre 11 14:23:41 ip-172-31-39-47 telegraf[1827]: Time="2021-10-11T14:23:41Z" level=error msg="Impossibile creare la directory della cache. /etc/telegraf/.cache/snowflake, err: mkdir /etc/telegraf/.ca che: permesso negato. Ignored&#8217;n" func="gosnflake.(*defaultLogger).Errorf" file="log.go:120" ott 11 14:23:41 ip-172-31-39-47 telegraf[1827]: Time="2021-10-11T14:23:41Z" level=error msg="Impossibile aprire. Ignorato. Aprire /etc/telegraf/.cache/Snowflake/ocsp_Response_cache.json: Nessun file o directory di questo tipo. Func="gosnflake.(*defaultLogger).Errorf" file="log.go:120" ott 11 14:23:41 ip-172 1827 23-31 2021-39-47 10 t114z! Avvio di Telegraf 1.19.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Si tratta di un problema noto. Fare riferimento a. <a href="https://github.com/influxdata/telegraf/issues/9407">"Questo articolo di GitHub"</a> per ulteriori dettagli. Finché Telegraf è in funzione, gli utenti possono ignorare questi messaggi di errore.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Su Kubernetes, i miei pod Telegraf riportano il seguente errore: "Errore nell&#8217;elaborazione delle informazioni sui mountstats: Impossibile aprire il file mountstats: /Hostfs/proc/1/mountstats, errore: Open /hostfs/proc/1/mountstats: Permesso negato"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se SELinux è abilitato e abilitato, probabilmente impedisce ai pod Telegraf di accedere al file /proc/1/mountstats sui nodi Kubernetes. Per allentare questa restrizione, modificare l&#8217;agente (<code>kubectl edit agent agent-monitoring-netapp</code>) e modificare "privileged-mode: false" in "privileged-mode: true"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Su Kubernetes, il mio pod ReplicaSet Telegraf riporta il seguente errore: [inputs.prometheus] errore nel plugin: Impossibile caricare la coppia di chiavi /etc/kubernetes/pki/etcd/server.crt:/etc/kubernetes/pki/etcd/server.key: Aprire /etc/kubernetes/pki/etcd/server.no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Il pod ReplicaSet di Telegraf è destinato all&#8217;esecuzione su un nodo designato come master o etcd. Se il pod ReplicaSet non è in esecuzione su uno di questi nodi, si otterranno questi errori. Verificare se i nodi master/etcd presentano delle contaminazioni. In tal caso, aggiungere le tolleranze necessarie a Telegraf ReplicaSet, telegraf-rs. Ad esempio, modificare il Replica Set&#8230;&#8203; kubectl edita rs telegraf-rs &#8230;&#8203;e aggiunga le tolleranze appropriate alla specifica. Quindi, riavviare il pod ReplicaSet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ho un ambiente PSP/PSA. Questo influisce sul mio operatore di monitoraggio?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se il cluster Kubernetes è in esecuzione con Pod Security Policy (PSP) o Pod Security Admission (PSA), è necessario eseguire l&#8217;aggiornamento all&#8217;ultimo NetApp Kubernetes Monitoring Operator. Per eseguire l&#8217;aggiornamento al sistema NKMO con supporto per PSP/PSA, procedere come segue: 1. <a href="#uninstalling">Disinstallare</a> L&#8217;operatore di monitoraggio precedente: Kubectl delete Agent-monitoring-netapp -n netapp-monitoring kubectl delete ns netapp-monitoring kubectl delete crd agents.monitoring.netapp.com kubectl delete clusterrole Agent-manager-role Agent-proxy-role Agent-metrics-reader kubectl delete clusterrolebinding Agent-manager-binding Agent-proxy-rolebinding Agent-cluster-admin-role2. <a href="#installing-the-netapp-kubernetes-monitoring-operator">Installare</a> la versione più recente dell&#8217;operatore di monitoraggio.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ho riscontrato problemi nel tentativo di implementare NKMO e ho utilizzato PSP/PSA.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Modificare l&#8217;agente utilizzando il seguente comando: Kubectl -n &lt;name-space&gt; edit Agent 2. Contrassegna "Security-policy-enabled" come "false". In questo modo verranno disabilitati i criteri di sicurezza Pod e l&#8217;ammissione alla sicurezza Pod e verrà consentito l&#8217;implementazione di NKMO. Confermare con i seguenti comandi: Kubectl Get psp (dovrebbe mostrare la politica di sicurezza Pod rimossa) kubectl Get all -n &lt;namespace&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">grep -i psp (dovrebbe mostrare che non viene trovato nulla)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Errori "ImagePullBackoff" rilevati</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Questi errori possono essere rilevati se si dispone di un repository di docker personalizzato o privato e non si è ancora configurato NetApp Kubernetes Monitoring Operator per riconoscerlo correttamente. <a href="#using-a-custom-or-private-docker-repository">Scopri di più</a> informazioni sulla configurazione per repo personalizzato/privato.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Si verifica un problema con l&#8217;implementazione dell&#8217;operatore di monitoraggio e la documentazione corrente non mi aiuta a risolverlo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Acquisire o annotare in altro modo l&#8217;output dei seguenti comandi e contattare il team di supporto tecnico.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> kubectl -n netapp-monitoring get all
+ kubectl -n netapp-monitoring describe all
+ kubectl -n netapp-monitoring logs &lt;monitoring-operator-pod&gt; --all-containers=true
+ kubectl -n netapp-monitoring logs &lt;telegraf-pod&gt; --all-containers=true</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I pod Net-Observer (Workload Map) nello spazio dei nomi NKMO si trovano in CrashLoopBackOff</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Questi pod corrispondono al data collector Workload Map per l&#8217;osservabilità della rete. Prova: • Verifica i log di uno dei pod per confermare la versione minima del kernel. Ad esempio: ---- {"ci-tenant-id":"your-tenant-id","collector-cluster":"your-k8s-cluster-name","ambiente":"prod","level":"error","msg":"failed in validation. Motivo: La versione del kernel 3.10.0 è inferiore alla versione minima del kernel di 4.18.0","Time":"2022-11-09T08:23:08Z"} --- • i pod Net-Observer richiedono che la versione del kernel Linux sia almeno 4.18.0. Controllare la versione del kernel usando il comando "uname -r" e assicurarsi che siano &gt;= 4.18.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I pod Net-Observer nello spazio dei nomi NKMO sono in CrashLoopBackOff in ambiente OpenShift 4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attualmente non è supportato. Tieni d&#8217;occhio il supporto da aggiungere in un aggiornamento futuro.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I pod vengono eseguiti nello spazio dei nomi NKMO (impostazione predefinita: monitoraggio netapp), ma non vengono visualizzati dati nell&#8217;interfaccia utente per la mappa del carico di lavoro o le metriche Kubernetes nelle query</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controllare l&#8217;impostazione dell&#8217;ora sui nodi del cluster K8S. Per un controllo accurato e la creazione di report dei dati, si consiglia di sincronizzare l&#8217;ora sul computer dell&#8217;agente utilizzando il protocollo NTP (Network Time Protocol) o SNTP (Simple Network Time Protocol).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alcuni dei pod net-osservatore nello spazio dei nomi NKMO sono in stato Pending</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Per ulteriori informazioni, consultare <a href="concept_requesting_support.html">"Supporto"</a> o in <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">"Matrice di supporto Data Collector"</a>.</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloudinsights/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/cloudinsights/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/cloudinsights/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/cloudinsights/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/cloudinsights/js/tabbed-blocks.js'></script>
+    <script src='/it-it/cloudinsights/js/sidebar.js'></script>
+  </body></html>
