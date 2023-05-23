@@ -3180,7 +3180,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-05-23 19:17:18 +0000">05/23/2023</time>
     
   
 
@@ -4033,6 +4033,10 @@ Una volta verificati correttamente tutti gli artefatti, l'installazione dell'age
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Controllare l&#8217;impostazione dell&#8217;ora sui nodi del cluster K8S. Per un controllo accurato e la creazione di report dei dati, si consiglia di sincronizzare l&#8217;ora sul computer dell&#8217;agente utilizzando il protocollo NTP (Network Time Protocol) o SNTP (Simple Network Time Protocol).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Alcuni dei pod net-osservatore nello spazio dei nomi NKMO sono in stato Pending</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NET-osservatore è un DemonSet che esegue un pod in ogni nodo del cluster k8s. • Prendere nota del pod in stato Pending (in sospeso) e verificare se si verifica un problema di risorse per la CPU o la memoria. Assicurarsi che la memoria e la CPU richieste siano disponibili nel nodo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subito dopo l&#8217;installazione di NetApp Kubernetes Monitoring Operator, nei miei registri viene visualizzato quanto segue: [inputs.prometheus] errore nel plugin: Errore durante la richiesta HTTP a <a href="http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:" class="bare">http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:</a> Ottieni <a href="http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:" class="bare">http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:</a> dial tcp: lookube-state-metrics.&lt;namespace&gt;.svc.cluster.local: no tale host</p></td>
 </tr>
 </tbody>
 </table>
