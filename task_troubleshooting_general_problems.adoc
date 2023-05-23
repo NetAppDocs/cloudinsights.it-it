@@ -15,7 +15,7 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 
 
 
-== Problemi di accesso:
+== Problemi di accesso
 
 |===
 | *Problema:* | *Provare questo:* 

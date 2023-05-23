@@ -8009,7 +8009,6 @@
   <block id="33d5b65987e920095c97ae5d99207a0e" category="inline-link-macro">Risoluzione dei problemi relativi all'unità di acquisizione Linux</block>
   <block id="62c67fa153e5c97540977071f595a3e2" category="inline-link-macro">Risoluzione dei problemi relativi all'unità di acquisizione di Windows</block>
   <block id="06aca4757909dd673728a20d193d0656" category="paragraph">Vedere anche <block ref="35efea8886727053938c867d4e4688d5" category="inline-link-macro-rx"></block> e. <block ref="5e216da5f7cd032fff10ef75fa563a40" category="inline-link-macro-rx"></block>.</block>
-  <block id="b22cca9a93dc0eb73fc0c386fc686eb3" category="section-title">Problemi di accesso:</block>
   <block id="55117c7bec968b88df3f1dfc434eac84" category="cell">Cloud Insights si disconnette ogni 5 minuti</block>
   <block id="396149d67edd166e53b49c38f4b707ba" category="cell">Consentire l'accettazione da parte di terzi dei cookie NetApp e auth0 necessari. Esempio: In Chrome, immettere "Chrome://settings/cookies" nell'URL del browser. Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie). *O* selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per [*.]auth0.com e [*.]netapp.com. Nota: Quando si crea un'eccezione, assicurarsi di selezionare l'opzione "includere cookie di terze parti in questo sito".</block>
   <block id="e4ff2e59dd571d2bbd5a906b6fad2546" category="cell">Dispongo di un account Cloud Central ma non riesco ad accedere a Cloud Central.</block>
@@ -11175,4 +11174,5 @@
   <block id="5a68833b2f8ecb97cbb14d60c5b420a8" category="cell">Solo le quote rigide, impostate manualmente o tramite Trident, verranno visualizzate come quote impostate; se non vengono specificate quote rigide, la capacità Qtree sarà la capacità del volume interno.</block>
   <block id="1b6ed64bac10ec68f4d03a8505f91c8d" category="cell">Ho impostato manualmente una quota soft e una hard nello stesso Qtree, ma la capacità totale indicata è la quota hard; è corretto?</block>
   <block id="9c93ad73825174675cbb17fb678b3a8c" category="cell">Sì, se viene specificata una quota rigida, questa verrà visualizzata come capacità totale.</block>
+  <block id="37b418c8c2b422040e90081e18556979" category="section-title">Problemi di accesso</block>
 </blocks>
