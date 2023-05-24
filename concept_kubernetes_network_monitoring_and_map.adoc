@@ -70,11 +70,15 @@ image:Workload_Map_Slideout_with_Alert.png["Dettagli dello slidout del workload 
 
 
 
-== Filtraggio
+== Ricerca e filtraggio
 
 Come per le altre funzionalità di Cloud Insights, è possibile impostare facilmente i filtri in modo che si concentrino sugli oggetti o sugli attributi dei carichi di lavoro specifici desiderati.
 
 image:Workload_Map_Filtering.png["Filtro delle mappe dei carichi di lavoro"]
+
+Allo stesso modo, digitando una stringa nel campo _Find_ si evidenzieranno i carichi di lavoro corrispondenti.
+
+image:Workload_Map_Find_Highlighting.png["digitando la casella trova si evidenziano i carichi di lavoro"]
 
 
 
