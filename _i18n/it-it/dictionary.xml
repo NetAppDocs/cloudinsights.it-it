@@ -11174,7 +11174,6 @@
   <block id="75d129f3fd06394d5b75cb67aea1f2d8" category="inline-image-macro">digitando la casella trova si evidenziano i carichi di lavoro</block>
   <block id="5ddf6f9c2416ad391ccea53c53433147" category="paragraph"><block ref="5ddf6f9c2416ad391ccea53c53433147" category="inline-image-macro-rx" type="image"></block></block>
   <block id="642d357bd708eba3d8ac3744a27588a3" category="paragraph">La funzionalità Kubernetes Network Performance Monitoring and Map semplifica il troubleshooting mappando le dipendenze tra i servizi Kubernetes (detti anche carichi di lavoro). Fornisce visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e revisionando i flussi di traffico Kubernetes.</block>
-  <block id="2e4063447ef8819aa5df170524b0bc11" category="paragraph">È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che l'oggetto sia raggruppato per ID.</block>
   <block id="98f8d8a203eae9b3f98baf54dc4901f5" category="list-text">kubernetes.workload</block>
   <block id="d725c339f86ba7e7be92e93dcf7902bc" category="list-text">kubernetes.demonset</block>
   <block id="caefb2c0b47809252c440b0c84abc26e" category="list-text">kubernetes.deployment</block>
@@ -11199,4 +11198,5 @@
   <block id="bc73b2df84aeadcf404198608adc15f8" category="paragraph">Infine, selezionando _Go to Asset Page_ si apre la landing page dettagliata delle risorse per il carico di lavoro.</block>
   <block id="1f77b1ef877148b891f2cb01d5adad8a" category="inline-image-macro">Pagina delle risorse del workload</block>
   <block id="208df78ccb496daba189129b4e1d9439" category="paragraph"><block ref="208df78ccb496daba189129b4e1d9439" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ec69e962ebca3d9f0e5279aa138f19a" category="paragraph">È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che i dati siano raggruppati in base al tipo di oggetto predefinito.</block>
 </blocks>

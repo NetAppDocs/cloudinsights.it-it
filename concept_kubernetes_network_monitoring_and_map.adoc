@@ -42,7 +42,7 @@ image:ServiceMap_NKMO_Deployment_Options.png["Selezionare l'opzione Map (Mappa) 
 
 La mappa del carico di lavoro utilizza link:task_create_monitor.html["monitor"] per ricavare informazioni. Cloud Insights fornisce una serie di monitor Kubernetes predefiniti (si noti che per impostazione predefinita potrebbero essere _in pausa_). È possibile _riprendere_ (ad esempio attivare) i monitor desiderati) oppure creare monitor personalizzati per gli oggetti Kubernetes, che verranno utilizzati anche dalla mappa del carico di lavoro.
 
-È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che l'oggetto sia raggruppato per ID.
+È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che i dati siano raggruppati in base al tipo di oggetto predefinito.
 
 * kubernetes.workload
 * kubernetes.demonset
