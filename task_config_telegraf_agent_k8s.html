@@ -3180,7 +3180,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 19:17:18 +0000">05/23/2023</time>
+    <time datetime="2023-05-24 19:34:01 +0000">05/24/2023</time>
     
   
 
@@ -3375,22 +3375,25 @@ Se viene visualizzato il messaggio "Error from server (notfound)" (errore dal se
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>proxy:
+<pre>agent:
+  ...
+  proxy:
+    server: &lt;server for proxy&gt;
+    port: &lt;port for proxy&gt;
+    username: &lt;username for proxy&gt;
+    password: &lt;password for proxy&gt;
 
-   server: &lt;server for proxy&gt;
-   port: &lt;port for proxy&gt;
-   username: &lt;username for proxy&gt;
-   password: &lt;password for proxy&gt;
+    # In the noproxy section, enter a comma-separated list of
+    # IP addresses and/or resolvable hostnames that should bypass
+    # the proxy
+    noproxy: &lt;comma separated list&gt;
 
-# In the noproxy section, enter a comma-separated list of
-# IP addresses and/or resolvable hostnames that should bypass
-# the proxy:
-
-   noproxy: &lt;comma separated list&gt;
-   isTelegrafProxyEnabled: true
-   isFluentbitProxyEnabled: &lt;true or false&gt; # true if Events Log enabled
-   isCollectorsProxyEnabled: &lt;true or false&gt; # true if Network Performance and Map enabled
-   isAuProxyEnabled: &lt;true or false&gt; # true if AU enabled</pre>
+    isTelegrafProxyEnabled: true
+    isFluentbitProxyEnabled: &lt;true or false&gt; # true if Events Log enabled
+    isCollectorsProxyEnabled: &lt;true or false&gt; # true if Network Performance and Map enabled
+    isAuProxyEnabled: &lt;true or false&gt; # true if AU enabled
+  ...
+...</pre>
 </div>
 </div>
 </div>
@@ -3462,13 +3465,15 @@ image: &lt;docker repo of the enterprise/corp docker repo&gt;/netapp-monitoring:
 <div class="paragraph">
 <p>Modificare la configurazione dell&#8217;agente in operator-config.yaml in modo che rifletta la nuova posizione del responsabile del docker. Crea un nuovo imagePullSecret per il tuo repository privato; per ulteriori dettagli, consulta <em><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/" class="bare">https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</a></em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre># An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-# Please see documentation link here:
-dockerRepo: your.docker.repo/long/path/to/test
-# Optional: A docker image pull secret that maybe needed for your private docker registry
-dockerImagePullSecret: docker-secret-name</pre>
+<pre>agent:
+  ...
+  # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
+  # Please see documentation link here: https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  dockerRepo: your.docker.repo/long/path/to/test
+  # Optional: A docker image pull secret that maybe needed for your private docker registry
+  dockerImagePullSecret: docker-secret-name</pre>
 </div>
 </div>
 </div>
