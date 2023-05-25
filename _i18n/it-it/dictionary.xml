@@ -9259,7 +9259,6 @@
   <block id="a9d11491cdc145dca25e537c123d978b" category="summary">Configurare la connessione cloud NetApp per il data collector ONTAP 9.9+</block>
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">Connessione cloud NetApp per data collector ONTAP 9.9+</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">Questo data collector crea una connessione cloud per supportare la raccolta di dati dai sistemi CVO, AFF e FAS di ONTAP 9.9+.</block>
-  <block id="e4b936a4866074908ad57fac7de40e48" category="admonition">Questo data collector non è più disponibile per l'installazione in Cloud Insights a partire dal 4 aprile 2023 e verrà rimosso da tutte le installazioni di Cloud Insights a partire dal 25 maggio 2023. Per informazioni sulla transizione alla raccolta di dati basata su AU, vedere <block ref="334c0315e59c6351d5f9bac4d495b3ee" category="inline-link-macro-rx"></block>.</block>
   <block id="6c7a2689e34fea8a2e2f6251e00a37e0" category="summary">Errori di data collector</block>
   <block id="9009284ca76bdf43ce3d25fe9fb46252" category="doc">Ricerca di un data collector guasto</block>
   <block id="4641be38ec7baadf988b5ae603d6238b" category="paragraph">Se un data collector presenta un messaggio di errore e un impatto alto o medio, è necessario ricercare il problema utilizzando la pagina di riepilogo del data collector con le relative informazioni collegate.</block>
@@ -11199,4 +11198,5 @@
   <block id="1f77b1ef877148b891f2cb01d5adad8a" category="inline-image-macro">Pagina delle risorse del workload</block>
   <block id="208df78ccb496daba189129b4e1d9439" category="paragraph"><block ref="208df78ccb496daba189129b4e1d9439" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2ec69e962ebca3d9f0e5279aa138f19a" category="paragraph">È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che i dati siano raggruppati in base al tipo di oggetto predefinito.</block>
+  <block id="50d6312212b08c0755c2248f03f03828" category="admonition">Questo data collector non è più disponibile per l'installazione in Cloud Insights a partire dal 4 aprile 2023 e verrà rimosso da tutte le installazioni di Cloud Insights a luglio 2023. Per informazioni sulla transizione alla raccolta di dati basata su AU, vedere <block ref="334c0315e59c6351d5f9bac4d495b3ee" category="inline-link-macro-rx"></block>.</block>
 </blocks>
