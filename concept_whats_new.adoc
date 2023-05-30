@@ -62,8 +62,6 @@ Quando si crea un link:task_create_webhook.html["Webhook"] notifica, ora puoi in
 
 === Creazione di report sui dati Kubernetes
 
-Cloud Insights è ora in grado di creare report su tutti i dati Kubernetes, inclusi PV, PVC, workload, cluster e namespace.
-
 I dati Kubernetes raccolti da Cloud Insights, inclusi volumi persistenti (PV), PVC, carichi di lavoro, cluster e namespace, sono ora disponibili per l'utilizzo in Reporting, che consente chargeback, trend, previsioni, calcoli TTF, E altri report aziendali sulle metriche per Kubernetes.
 
 
