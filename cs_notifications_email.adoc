@@ -38,3 +38,23 @@ Tenere presente quanto segue:
 * Un errore di raccolta Active Directory viene segnalato come avviso e non influisce sul rilevamento ransomware.
 * L'elenco di configurazione per iniziare ora include una nuova fase di _Configurazione delle notifiche e-mail_.
 
+
+
+
+== Ricezione delle notifiche di aggiornamento di Agent e Data Collector
+
+* Inserire gli ID e-mail in "Avvisi sullo stato di salute della raccolta dati".
+* La casella di controllo "Enable upgrade notifications" (attiva notifiche di aggiornamento) viene attivata.
+* Le notifiche e-mail di aggiornamento di Agent e Data Collector vengono inviate agli ID e-mail un giorno prima dell'aggiornamento pianificato.
+
+
+
+
+== Risoluzione dei problemi
+
+|===
+| *Problema:* | *Provare questo:* 
+
+
+| Gli ID e-mail sono presenti negli "Avvisi sullo stato di salute di Data Collector", ma non ricevo notifiche. | Le e-mail di notifica vengono inviate dal dominio NetApp Cloud Insights, ad esempio da _accounts@service.cloudinsights.netapp.com_. Alcune aziende bloccano le e-mail in arrivo se provengono da un dominio esterno. Assicurarsi che le notifiche esterne dai domini NetApp Cloud Insights siano inseriti nella whitelist. 
+|===
