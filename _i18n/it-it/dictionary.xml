@@ -8122,9 +8122,7 @@
   <block id="5439b902968ffabf767c31e6ae62e61b" category="summary">È possibile impostare policy di risposta automatiche per potenziali attacchi (come ransomware) e/o avvisi di attività</block>
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">Policy di risposta automatizzate</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">Le policy di risposta attivano azioni come l'esecuzione di uno snapshot o la limitazione dell'accesso dell'utente in caso di attacco o comportamento anomalo dell'utente.</block>
-  <block id="4a2c418e248f1a17cef7314e84e4d21f" category="paragraph">È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi. Per impostare un criterio di risposta, selezionare *Admin &gt; Automated Response Policies* (Amministrazione &gt; Criteri di risposta automatici) e fare clic sul pulsante *+Policy+ appropriato. È possibile creare policy per gli attacchi o per gli avvisi.</block>
   <block id="74caaeae1f2607ea4824df314e3bd233" category="inline-image-macro">Creare una policy di attacco</block>
-  <block id="96dd8b86864f9c90bf0289c5f7b02b4d" category="paragraph"><block ref="96dd8b86864f9c90bf0289c5f7b02b4d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">È necessario salvare il criterio con un nome univoco.</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">Per disattivare un'azione di risposta automatica (ad esempio, Take Snapshot), è sufficiente deselezionare l'azione e salvare la policy.</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">Pagina dei dettagli degli avvisi</block>
@@ -11205,4 +11203,6 @@
   <block id="f7e530357a9fe13372b34f49bcbf5513" category="list-text">Le notifiche e-mail di aggiornamento di Agent e Data Collector vengono inviate agli ID e-mail un giorno prima dell'aggiornamento pianificato.</block>
   <block id="be8e3ac01b05912cba21f26369a5a852" category="cell">Gli ID e-mail sono presenti negli "Avvisi sullo stato di salute di Data Collector", ma non ricevo notifiche.</block>
   <block id="9080956b20cd0e2cc8124ec3684655c3" category="cell">Le e-mail di notifica vengono inviate dal dominio NetApp Cloud Insights, ad esempio da _accounts@service.cloudinsights.netapp.com_. Alcune aziende bloccano le e-mail in arrivo se provengono da un dominio esterno. Assicurarsi che le notifiche esterne dai domini NetApp Cloud Insights siano inseriti nella whitelist.</block>
+  <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi. Per impostare un criterio di risposta, selezionare *Admin &gt; Automated Response Policies* (Amministrazione &gt; Criteri di risposta automatici) e fare clic sul pulsante *+Policy* appropriato. È possibile creare policy per gli attacchi o per gli avvisi.</block>
+  <block id="7ee8aae70113b376d8eb550719ded4da" category="paragraph"><block ref="7ee8aae70113b376d8eb550719ded4da" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
