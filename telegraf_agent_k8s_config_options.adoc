@@ -39,7 +39,7 @@ La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:
 | telefono |  | Opzioni di configurazione che consentono di personalizzare l'installazione di telegraf dell'operatore 
 
 
-|  | CollectionInterval | Intervallo di raccolta delle metriche, in secondi 
+|  | CollectionInterval | Intervallo di raccolta delle metriche, in secondi (max=60s) 
 
 
 |  | DsCpuLimit | Limite CPU per telegraf ds 
