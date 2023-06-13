@@ -3180,7 +3180,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-24 19:34:01 +0000">05/24/2023</time>
+    <time datetime="2023-06-13 17:39:29 +0000">06/13/2023</time>
     
   
 
@@ -3190,6 +3190,41 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#prima-di-installare-netapp-kubernetes-monitoring-operator">Prima di installare NetApp Kubernetes Monitoring Operator</a></li>
+<li><a href="#annotarli-prima-di-iniziare">Annotarli prima di iniziare</a></li>
+<li><a href="#configurazione-delloperatore">Configurazione dell&#8217;operatore</a>
+<ul class="sectlevel2">
+<li><a href="#configurazione-del-supporto-proxy">Configurazione del supporto proxy</a></li>
+<li><a href="#utilizzando-un-repository-di-docker-personalizzato-o-privato">Utilizzando un repository di docker personalizzato o privato</a></li>
+<li><a href="#istruzioni-per-openshift">Istruzioni per OpenShift</a></li>
+</ul>
+</li>
+<li><a href="#installazione-di-netapp-kubernetes-monitoring-operator">Installazione di NetApp Kubernetes Monitoring Operator</a></li>
+<li><a href="#aggiornamento-in-corso">Aggiornamento in corso</a>
+<ul class="sectlevel2">
+<li><a href="#aggiornamento-da-agente-basato-su-script-a-netapp-kubernetes-monitoring-operator">Aggiornamento da agente basato su script a NetApp Kubernetes Monitoring Operator</a></li>
+<li><a href="#aggiornamento-allultimo-netapp-kubernetes-monitoring-operator">Aggiornamento all&#8217;ultimo NetApp Kubernetes Monitoring Operator</a></li>
+</ul>
+</li>
+<li><a href="#arresto-e-avvio-di-netapp-kubernetes-monitoring-operator">Arresto e avvio di NetApp Kubernetes Monitoring Operator</a></li>
+<li><a href="#disinstallazione-in-corso">Disinstallazione in corso</a>
+<ul class="sectlevel2">
+<li><a href="#per-rimuovere-lagente-obsoleto-basato-su-script">Per rimuovere l&#8217;agente obsoleto basato su script</a></li>
+<li><a href="#per-rimuovere-netapp-kubernetes-monitoring-operator">Per rimuovere NetApp Kubernetes Monitoring Operator</a></li>
+</ul>
+</li>
+<li><a href="#a-proposito-di-kube-state-metrics">A proposito di Kube-state-metrics</a>
+<ul class="sectlevel2">
+<li><a href="#contatori-di-metriche-di-stato-kube">Contatori di metriche di stato kube</a></li>
+</ul>
+</li>
+<li><a href="#verifica-dei-checksum-di-kubernetes">Verifica dei checksum di Kubernetes</a></li>
+<li><a href="#risoluzione-dei-problemi">Risoluzione dei problemi</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3200,13 +3235,13 @@
 <p>Cloud Insights offre la raccolta * NetApp Kubernetes Monitoring Operator* (NKMO) per Kubernetes. Quando si aggiunge un data collector, è sufficiente selezionare la sezione Kubernetes.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="kubernetes_tile.png" alt="Sezione Kubernetes Data Collector"></span></p>
+<p><span class="image"><img src="./media/kubernetes_tile.png" alt="Sezione Kubernetes Data Collector"></span></p>
 </div>
 <div class="paragraph">
 <p>Di seguito è riportata un&#8217;illustrazione di alto livello che mostra la posizione dell&#8217;operatore nell&#8217;ambiente in uso. A seconda dell&#8217;ambiente in uso, <em>Proxy Server</em> potrebbe essere richiesto o meno.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="CI_Diagram_with_NKMO.png" alt="Una mappa di alto livello che mostra l&#8217;NKMO residente nel cluster Kubernetes, con frecce che mostrano come i dati viaggiano verso il cluster dagli host, dal server proxy, tutti rotolando fino a Cloud Insights"></span></p>
+<p><span class="image"><img src="./media/CI_Diagram_with_NKMO.png" alt="Una mappa di alto livello che mostra l&#8217;NKMO residente nel cluster Kubernetes, con frecce che mostrano come i dati viaggiano verso il cluster dagli host, dal server proxy, tutti rotolando fino a Cloud Insights"></span></p>
 </div>
 <div class="paragraph">
 <p>L&#8217;operatore (NKMO) e i data collezioner vengono scaricati dal Registro di sistema di Cloud Insights. Una volta installato, NKMO gestisce quindi tutti i collettori compatibili con gli operatori implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</p>
@@ -3498,8 +3533,8 @@ runPrivileged: true</pre>
 <h2 id="installazione-di-netapp-kubernetes-monitoring-operator">Installazione di NetApp Kubernetes Monitoring Operator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="NKMO-Instructions-1.png" alt=""></span>
-<span class="image"><img src="NKMO-Instructions-2.png" alt=""></span></p>
+<p><span class="image"><img src="./media/NKMO-Instructions-1.png" alt=""></span><br>
+<span class="image"><img src="./media/NKMO-Instructions-2.png" alt=""></span></p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedura per installare NetApp Kubernetes Monitoring Operator Agent su Kubernetes:</div>
@@ -3540,7 +3575,7 @@ runPrivileged: true</pre>
 <p>La raccolta dei log EMS di Kubernetes è attivata per impostazione predefinita quando si installa NetApp Kubernetes Monitoring Operator. Per disattivare questa raccolta dopo l&#8217;installazione, fare clic sul pulsante <strong>Modify Deployment</strong> (Modifica distribuzione) nella parte superiore della pagina dei dettagli del cluster Kubernetes e deselezionare "Log collection" (raccolta log).</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="K8s_Modify_Deployment_Screen.png" alt="Schermata Modify Deployment (Modifica distribuzione) che mostra la casella di controllo per &quot;log Collection&quot;"></span></p>
+<p><span class="image"><img src="./media/K8s_Modify_Deployment_Screen.png" alt="Schermata Modify Deployment (Modifica distribuzione) che mostra la casella di controllo per &quot;log Collection&quot;"></span></p>
 </div>
 <div class="paragraph">
 <p>Questa schermata mostra anche lo stato corrente della raccolta dei log. Di seguito sono riportati i possibili stati:</p>
@@ -3991,7 +4026,7 @@ Una volta verificati correttamente tutti gli artefatti, l'installazione dell'age
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Su Kubernetes, i miei pod Telegraf riportano il seguente errore: "Errore nell&#8217;elaborazione delle informazioni sui mountstats: Impossibile aprire il file mountstats: /Hostfs/proc/1/mountstats, errore: Open /hostfs/proc/1/mountstats: Permesso negato"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se SELinux è abilitato e abilitato, probabilmente impedisce ai pod Telegraf di accedere al file /proc/1/mountstats sui nodi Kubernetes. Per allentare questa restrizione, modificare l&#8217;agente (<code>kubectl edit agent agent-monitoring-netapp</code>) e modificare "privileged-mode: false" in "privileged-mode: true"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se SELinux è abilitato e abilitato, probabilmente impedisce ai pod Telegraf di accedere al file /proc/1/mountstats sul nodo Kubernetes. Per superare questa restrizione, modificare la configurazione dell&#8217;agente e attivare l&#8217;impostazione runPrivileged. Per ulteriori informazioni, fare riferimento a: <a href="https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html#openshift-instructions" class="bare">https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html#openshift-instructions</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Su Kubernetes, il mio pod ReplicaSet Telegraf riporta il seguente errore: [inputs.prometheus] errore nel plugin: Impossibile caricare la coppia di chiavi /etc/kubernetes/pki/etcd/server.crt:/etc/kubernetes/pki/etcd/server.key: Aprire /etc/kubernetes/pki/etcd/server.no</p></td>
