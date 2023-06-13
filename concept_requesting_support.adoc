@@ -114,7 +114,7 @@ Si consiglia vivamente di selezionare la casella per consentire a un tecnico del
 
 * link:https://www.netapp.com/us/contact-us/support.aspx["*Telefono*"]
 * link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["*Support Ticket*"]
-* *Chat* - sarai in contatto con il personale di supporto NetApp per ricevere assistenza (solo nei giorni feriali). La chat è disponibile nell'opzione di menu *Guida > Chat live* in alto a destra di qualsiasi schermata di Cloud Insights.
+* *Chat* - sarai in contatto con il personale di supporto di NetApp per ricevere assistenza (solo nei giorni feriali). La chat è disponibile nell'opzione di menu *Guida > Chat live* in alto a destra di qualsiasi schermata di Cloud Insights.
 
 
 È inoltre possibile richiedere il supporto alle vendite facendo clic sul pulsante link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Contattare il reparto vendite*"] collegamento.

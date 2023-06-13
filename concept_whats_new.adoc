@@ -25,6 +25,61 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Giugno 2023
+
+
+
+=== Verifica l'utilizzo
+
+A partire da giugno 2023, Cloud Insights fornisce un'analisi dettagliata dell'utilizzo delle unità gestite in base al set di funzionalità. Ora è possibile visualizzare e monitorare rapidamente l'utilizzo delle unità gestite (MU) per l'infrastruttura e l'utilizzo delle UM legate a Kubernetes.
+
+image:Metering_Usage.png["Riduzione dei guasti in base all'utilizzo"]
+
+
+
+=== Kubernetes Network Monitoring and Map è disponibile per tutti
+
+Il link:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes Network Performance and Map_"] Semplifica il troubleshooting mappando le dipendenze tra i carichi di lavoro Kubernetes, fornendo visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Molti clienti lo hanno trovato utile durante l'anteprima e ora è disponibile per tutti.
+
+
+
+=== Creazione di report
+
+Il componente di reporting di Cloud Insights è stato chiamato nuovamente "Cloud Insights Analytics". Tuttavia, non preoccuparti, le funzionalità rimangono le stesse.
+
+
+
+=== Modifiche di acquisizione/raccolta:
+
+Sono state apportate le seguenti modifiche al Data Collector/Acquisition Unit:
+
+* Le UM di Data Domain e Cohesity vengono dosate a 40 TIB: 1 MU.
+* Le unità di acquisizione supportano ora RHEL e Rocky 9.0 e 9.1.
+
+
+
+
+=== Nuove dashboard di ONTAP Essentials
+
+Le seguenti dashboard di ONTAP Essentials sono disponibili negli ambienti di anteprima e ora sono disponibili per tutti:
+
+* Dashboard di sicurezza
+* Data Protection Dashboard (include panoramiche sulla protezione locale e remota)
+
+
+
+
+=== Monitor di sistema aggiuntivi
+
+Cloud Insights include i seguenti monitor di sistema:
+
+* Servizio FCP Storage VM non disponibile
+* Servizio iSCSI Storage VM non disponibile
+
+
+'''
+
+
 == Maggio 2023
 
 

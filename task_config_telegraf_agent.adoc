@@ -50,6 +50,17 @@ NOTE: Se si utilizza un proxy, leggere le istruzioni per il proxy della piattafo
 
 
 
+=== Posizioni dei log
+
+I messaggi di log di Telegraf vengono reindirizzati da stdout ai seguenti file di log.
+
+* RHEL/CentOS: /Var/log/telegraf/telegraf.log
+* Ubuntu/Debian: /Var/log/telegraf/telegraf.log
+* Windows: C: File di programma telegraf.log
+
+
+
+
 === Windows
 
 

@@ -212,4 +212,12 @@ I risultati della ricerca con e senza / saranno diversi
 
 
 | Alcuni eventi NFS non vengono visualizzati nell'interfaccia utente. | Controllare quanto segue: 1. È necessario eseguire un User Directory Collector per server ad con attributi POSIX impostati con l'attributo unixid attivato dall'interfaccia utente. 2. Qualsiasi utente che esegue l'accesso NFS deve essere visualizzato quando effettua una ricerca nella pagina utente dall'interfaccia utente 3. Gli eventi raw (eventi per i quali l'utente non è ancora stato scoperto) non sono supportati per NFS 4. L'accesso anonimo all'esportazione NFS non verrà monitorato. 5. Assicurarsi che la versione di NFS utilizzata sia inferiore a NFS4.1. 
+
+
+| Dopo aver digitato alcune lettere contenenti un carattere jolly come l'asterisco (*) nei filtri delle pagine Forensics _All Activity_ o _Entities_, le pagine vengono caricate molto lentamente. | Un asterisco (*) nella stringa di ricerca cerca tutto. Tuttavia, le stringhe con caratteri jolly come _*<searchTerm>_ o _*<searchTerm>*_ causano una query lenta.
+Per ottenere prestazioni migliori, utilizzare le stringhe di prefisso nel formato _<searchTerm>*_ (in altre parole, aggiungere l'asterisco (*) _dopo_ un termine di ricerca).
+Esempio: Utilizzare la stringa _testvolume*_, invece di _*testvolume_ o _*test*volume_.
+
+Utilizza una ricerca basata su prefisso per visualizzare tutte le attività sotto una data cartella in modo ricorrente (ricerca gerarchica). ad esempio _/path1/path2/path3_ o _"/path1/path2/path3"_ elenchiamo tutte le attività in modo ricorrente sotto _/path1/path2/path3_.
+In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella scheda All Activity (tutte le attività). 
 |===
