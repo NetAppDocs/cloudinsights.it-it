@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-30 21:24:51 +0000">05/30/2023</time>
+    <time datetime="2023-06-13 15:01:07 +0000">06/13/2023</time>
     
   
 
@@ -3193,6 +3193,16 @@
 <div id="toc" class="toc">
 <div id="toctitle">Sommario</div>
 <ul class="sectlevel1">
+<li><a href="#giugno-2023">Giugno 2023</a>
+<ul class="sectlevel2">
+<li><a href="#verifica-lutilizzo">Verifica l&#8217;utilizzo</a></li>
+<li><a href="#kubernetes-network-monitoring-and-map-è-disponibile-per-tutti">Kubernetes Network Monitoring and Map è disponibile per tutti</a></li>
+<li><a href="#creazione-di-report">Creazione di report</a></li>
+<li><a href="#modifiche-di-acquisizioneraccolta">Modifiche di acquisizione/raccolta:</a></li>
+<li><a href="#nuove-dashboard-di-ontap-essentials">Nuove dashboard di ONTAP Essentials</a></li>
+<li><a href="#monitor-di-sistema-aggiuntivi">Monitor di sistema aggiuntivi</a></li>
+</ul>
+</li>
 <li><a href="#maggio-2023">Maggio 2023</a>
 <ul class="sectlevel2">
 <li><a href="#installazione-migliorata-delloperatore-di-monitoraggio-kubernetes">Installazione migliorata dell&#8217;operatore di monitoraggio Kubernetes</a></li>
@@ -3507,7 +3517,7 @@
 </li>
 <li><a href="#ottobre-2019">Ottobre 2019</a>
 <ul class="sectlevel2">
-<li><a href="#creazione-di-report">Creazione di report</a></li>
+<li><a href="#creazione-di-report-2">Creazione di report</a></li>
 <li><a href="#miglioramenti-di-active-iq">Miglioramenti di Active IQ</a></li>
 </ul>
 </li>
@@ -3606,6 +3616,81 @@ Alcune di queste funzionalità potrebbero non essere disponibili nell&#8217;ediz
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="giugno-2023">Giugno 2023</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="verifica-lutilizzo">Verifica l&#8217;utilizzo</h3>
+<div class="paragraph">
+<p>A partire da giugno 2023, Cloud Insights fornisce un&#8217;analisi dettagliata dell&#8217;utilizzo delle unità gestite in base al set di funzionalità. Ora è possibile visualizzare e monitorare rapidamente l&#8217;utilizzo delle unità gestite (MU) per l&#8217;infrastruttura e l&#8217;utilizzo delle UM legate a Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Metering_Usage.png" alt="Riduzione dei guasti in base all&#8217;utilizzo"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="kubernetes-network-monitoring-and-map-è-disponibile-per-tutti">Kubernetes Network Monitoring and Map è disponibile per tutti</h3>
+<div class="paragraph">
+<p>Il <a href="concept_kubernetes_network_monitoring_and_map.html">"<em>Kubernetes Network Performance and Map</em>"</a> Semplifica il troubleshooting mappando le dipendenze tra i carichi di lavoro Kubernetes, fornendo visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Molti clienti lo hanno trovato utile durante l&#8217;anteprima e ora è disponibile per tutti.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creazione-di-report">Creazione di report</h3>
+<div class="paragraph">
+<p>Il componente di reporting di Cloud Insights è stato chiamato nuovamente "Cloud Insights Analytics". Tuttavia, non preoccuparti, le funzionalità rimangono le stesse.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="modifiche-di-acquisizioneraccolta">Modifiche di acquisizione/raccolta:</h3>
+<div class="paragraph">
+<p>Sono state apportate le seguenti modifiche al Data Collector/Acquisition Unit:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le UM di Data Domain e Cohesity vengono dosate a 40 TIB: 1 MU.</p>
+</li>
+<li>
+<p>Le unità di acquisizione supportano ora RHEL e Rocky 9.0 e 9.1.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="nuove-dashboard-di-ontap-essentials">Nuove dashboard di ONTAP Essentials</h3>
+<div class="paragraph">
+<p>Le seguenti dashboard di ONTAP Essentials sono disponibili negli ambienti di anteprima e ora sono disponibili per tutti:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dashboard di sicurezza</p>
+</li>
+<li>
+<p>Data Protection Dashboard (include panoramiche sulla protezione locale e remota)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="monitor-di-sistema-aggiuntivi">Monitor di sistema aggiuntivi</h3>
+<div class="paragraph">
+<p>Cloud Insights include i seguenti monitor di sistema:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Servizio FCP Storage VM non disponibile</p>
+</li>
+<li>
+<p>Servizio iSCSI Storage VM non disponibile</p>
+</li>
+</ul>
+</div>
+<hr>
 </div>
 </div>
 </div>
@@ -6290,7 +6375,7 @@ SSO è disponibile solo in Cloud Insights Premium Edition e deve essere configur
 <h2 id="ottobre-2019">Ottobre 2019</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="creazione-di-report">Creazione di report</h3>
+<h3 id="creazione-di-report-2">Creazione di report</h3>
 <div class="paragraph">
 <p><a href="reporting_overview.html">"<strong>Report Cloud Insights</strong>"</a> è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati. Con Reporting è possibile eseguire le seguenti attività:</p>
 </div>
