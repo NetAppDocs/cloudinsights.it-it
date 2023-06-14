@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,16 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#best-practice-per-la-sicurezza">Best practice per la sicurezza</a></li>
+<li><a href="#metriche-o-log-monitor">Metriche o Log Monitor?</a></li>
+<li><a href="#elenco-monitor">Elenco monitor</a></li>
+<li><a href="#gruppi-di-monitor">Gruppi di monitor</a></li>
+<li><a href="#monitor-definiti-dal-sistema-2">Monitor definiti dal sistema</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3242,7 +3252,7 @@ Monitor e avvisi sono disponibili in tutte le edizioni Cloud Insights, tuttavia,
 <li>
 <p>Per aggiungere un monitor, fare clic su <strong>+ Monitor</strong>.</p>
 <div class="paragraph">
-<p><span class="image"><img src="Monitor_log_or_metric.png" alt="Scegliere il monitor di sistema o di log"></span></p>
+<p><span class="image"><img src="./media/Monitor_log_or_metric.png" alt="Scegliere il monitor di sistema o di log"></span></p>
 </div>
 <div class="paragraph">
 <p>Quando si aggiunge un nuovo monitor, viene richiesto di creare un monitor metrico o un monitor di registro.</p>
@@ -3276,7 +3286,7 @@ Monitor e avvisi sono disponibili in tutte le edizioni Cloud Insights, tuttavia,
 <p>È possibile impostare i filtri per limitare gli attributi o le metriche degli oggetti da monitorare.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="MonitorMetricFilter.png" alt="Filtraggio delle metriche"></span></p>
+<p><span class="image"><img src="./media/MonitorMetricFilter.png" alt="Filtraggio delle metriche"></span></p>
 </div>
 <div class="paragraph">
 <p>Quando si lavora con i dati di integrazione (Kubernetes, dati avanzati ONTAP, ecc.), il filtraggio metrico rimuove i singoli punti dati/non corrispondenti dalla serie di dati plottati, a differenza dei dati dell&#8217;infrastruttura (storage, VM, porte, ecc.) in cui i filtri funzionano sul valore aggregato della serie di dati e potenzialmente rimuovono l&#8217;intero oggetto dal grafico.</p>
@@ -3315,7 +3325,7 @@ Per creare un monitor multi-condizione (ad esempio, IOPS &gt; X e latenza &gt; Y
 <p>Puoi scegliere di attivare un avviso quando una soglia viene violata o di attendere che la soglia si trovi in una violazione continua per un certo periodo di tempo. Nel nostro esempio, non vogliamo essere avvisati ogni volta che gli IOPS totali superano il livello di avviso o critico, ma solo quando un oggetto monitorato supera continuamente uno di questi livelli per almeno 15 minuti.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitor_metric_conditions.png" alt="Definire le condizioni del monitor"></span></p>
+<p><span class="image"><img src="./media/Monitor_metric_conditions.png" alt="Definire le condizioni del monitor"></span></p>
 </div>
 </li>
 </ol>
@@ -3340,7 +3350,7 @@ Il filtro Log Monitor non può essere vuoto.
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitor_Group_By_Example.png" alt="Scegliere il registro da monitorare, impostare un filtro e, se si desidera, selezionare il gruppo per metodo"></span></p>
+<p><span class="image"><img src="./media/Monitor_Group_By_Example.png" alt="Scegliere il registro da monitorare, impostare un filtro e, se si desidera, selezionare il gruppo per metodo"></span></p>
 </div>
 <div class="sect3">
 <h4 id="definire-il-comportamento-degli-avvisi">Definire il comportamento degli avvisi</h4>
@@ -3367,13 +3377,13 @@ Il filtro Log Monitor non può essere vuoto.
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="LogMonitorAlertResolution.png" alt="Opzioni di risoluzione degli avvisi"></span></p>
+<p><span class="image"><img src="./media/LogMonitorAlertResolution.png" alt="Opzioni di risoluzione degli avvisi"></span></p>
 </div>
 <div class="paragraph">
 <p>/// * <strong>Risolvi immediatamente</strong>: L&#8217;avviso viene risolto immediatamente senza ulteriori azioni * <strong>Risolvi in base al tempo</strong>: L&#8217;avviso viene risolto dopo il tempo specificato * <strong>Risolvi in base alla voce di registro</strong>: L&#8217;avviso viene risolto quando si verifica un&#8217;attività di log successiva. Ad esempio, quando un oggetto viene registrato come "disponibile".</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitor_log_monitor_resolution.png" alt="Risoluzione degli avvisi"></span>///</p>
+<p><span class="image"><img src="./media/Monitor_log_monitor_resolution.png" alt="Risoluzione degli avvisi"></span>///</p>
 </div>
 </div>
 </div>
@@ -3383,7 +3393,7 @@ Il filtro Log Monitor non può essere vuoto.
 <p>Nella sezione <em>impostare le notifiche del team</em>, puoi scegliere se avvisare il tuo team tramite e-mail o Webhook.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Webhook_Choose_Monitor_Notification.png" alt="Scegliere il metodo di avviso"></span></p>
+<p><span class="image"><img src="./media/Webhook_Choose_Monitor_Notification.png" alt="Scegliere il metodo di avviso"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>Avvisi via email:</strong></p>
@@ -3392,7 +3402,7 @@ Il filtro Log Monitor non può essere vuoto.
 <p>Specificare i destinatari dell&#8217;e-mail per le notifiche degli avvisi. Se lo si desidera, è possibile scegliere diversi destinatari per gli avvisi di avviso o critici.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="email_monitor_alerts.png" alt="Destinatari degli avvisi e-mail"></span></p>
+<p><span class="image"><img src="./media/email_monitor_alerts.png" alt="Destinatari degli avvisi e-mail"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>Avvisi via Webhook:</strong></p>
@@ -3401,7 +3411,7 @@ Il filtro Log Monitor non può essere vuoto.
 <p>Specificare i webhook per le notifiche degli avvisi. Se lo si desidera, è possibile scegliere diversi webhook per gli avvisi critici o di avviso.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Webhook_Monitor_Notifications.png" alt="Avvisi Webhook"></span></p>
+<p><span class="image"><img src="./media/Webhook_Monitor_Notifications.png" alt="Avvisi Webhook"></span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3425,7 +3435,7 @@ Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifi
 <p>In questi campi è possibile fornire note, collegamenti o procedure per correggere o risolvere in altro modo l&#8217;avviso.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitors_Alert_Description.png" alt="Azioni correttive e descrizione degli avvisi"></span></p>
+<p><span class="image"><img src="./media/Monitors_Alert_Description.png" alt="Azioni correttive e descrizione degli avvisi"></span></p>
 </div>
 </div>
 <div class="sect2">
@@ -3486,7 +3496,7 @@ Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifi
 <p>Il raggruppamento consente di visualizzare e gestire i monitor correlati. Ad esempio, è possibile disporre di un gruppo di monitor dedicato allo storage nell&#8217;ambiente o di monitoraggi relativi a un determinato elenco di destinatari.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitors_GroupList.png" alt="Raggruppamento dei monitor"></span></p>
+<p><span class="image"><img src="./media/Monitors_GroupList.png" alt="Raggruppamento dei monitor"></span></p>
 </div>
 <div class="paragraph">
 <p>Vengono visualizzati i seguenti gruppi di monitor. Il numero di monitor contenuti in un gruppo viene visualizzato accanto al nome del gruppo.</p>
@@ -3556,7 +3566,7 @@ I monitor personalizzati possono essere messi in pausa, ripristinati, cancellati
 <li>
 <p>Fare clic sul nome del monitor per aprire la vista di modifica del monitor e selezionare un gruppo nella sezione <em>Associa a un gruppo di monitor</em>.</p>
 <div class="paragraph">
-<p><span class="image"><img src="Monitors_AssociateToGroup.png" alt="Associare al gruppo"></span></p>
+<p><span class="image"><img src="./media/Monitors_AssociateToGroup.png" alt="Associare al gruppo"></span></p>
 </div>
 </li>
 </ul>
@@ -3586,7 +3596,7 @@ La rimozione di un monitor da un gruppo non elimina il monitor da Cloud Insights
 <p>Utilizzare lo stesso menu per rinominare o eliminare un gruppo. L&#8217;eliminazione di un gruppo non elimina i monitor da Cloud Insights, ma sono ancora disponibili in <em>tutti i monitor</em>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Monitors_PauseGroup.png" alt="Mettere in pausa un gruppo"></span></p>
+<p><span class="image"><img src="./media/Monitors_PauseGroup.png" alt="Mettere in pausa un gruppo"></span></p>
 </div>
 </div>
 </div>

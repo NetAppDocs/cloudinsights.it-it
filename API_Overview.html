@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,39 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#requisiti-per-laccesso-api">Requisiti per l&#8217;accesso API</a></li>
+<li><a href="#documentazione-api-swagger">Documentazione API (Swagger)</a></li>
+<li><a href="#token-di-accesso-api">Token di accesso API</a></li>
+<li><a href="#tipo-api">Tipo API</a></li>
+<li><a href="#attraversamento-dellinventario">Attraversamento dell&#8217;inventario</a>
+<ul class="sectlevel2">
+<li><a href="#oggetti-di-livello-superiore">Oggetti di livello superiore</a></li>
+<li><a href="#figli-e-oggetti-correlati">Figli e oggetti correlati</a></li>
+</ul>
+</li>
+<li><a href="#si-espande">Si espande</a></li>
+<li><a href="#dati-sulle-performance">Dati sulle performance</a></li>
+<li><a href="#metriche-delle-performance-degli-oggetti">Metriche delle performance degli oggetti</a></li>
+<li><a href="#dati-della-cronologia-delle-performance">Dati della cronologia delle performance</a></li>
+<li><a href="#oggetti-con-attributi-di-capacità">Oggetti con attributi di capacità</a>
+<ul class="sectlevel2">
+<li><a href="#capacityitem">CapacityItem</a></li>
+</ul>
+</li>
+<li><a href="#utilizzo-di-search-per-cercare-oggetti">Utilizzo di Search per cercare oggetti</a></li>
+<li><a href="#disattivazione-o-revoca-di-un-token-api">Disattivazione o revoca di un token API</a></li>
+<li><a href="#rotazione-dei-token-di-accesso-api-scaduti">Rotazione dei token di accesso API scaduti</a>
+<ul class="sectlevel3">
+<li><a href="#kubernetes">Kubernetes</a></li>
+<li><a href="#rhelcentos-e-debianubuntu">RHEL/CentOS e Debian/Ubuntu</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3214,39 +3247,39 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unità di acquisizione</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Raccolta di dati</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avvisi</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Risorse</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Acquisizione dei dati</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Gestione dei log</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><span class="image"><img src="./media/SmallCheckMark.png" alt=""></span></strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -3277,13 +3310,13 @@
 <p>Le informazioni API più recenti si trovano accedendo a Cloud Insights e accedendo a <strong>Amministratore &gt; accesso API</strong>. Fare clic sul collegamento <strong>documentazione API</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="API_Swagger_Types.png" alt="Tipi di API"></span></p>
+<p><span class="image"><img src="./media/API_Swagger_Types.png" alt="Tipi di API"></span></p>
 </div>
 <div class="paragraph">
 <p>La documentazione API è basata su Swagger, che fornisce una breve descrizione e informazioni sull&#8217;utilizzo dell&#8217;API e consente di provarla nel proprio ambiente. A seconda del ruolo dell&#8217;utente e/o dell&#8217;edizione di Cloud Insights, i tipi di API disponibili possono variare.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="API_Swagger_Example.png" alt="Esempio di API Swagger"></span></p>
+<p><span class="image"><img src="./media/API_Swagger_Example.png" alt="Esempio di API Swagger"></span></p>
 </div>
 </div>
 </div>
@@ -3461,7 +3494,7 @@ L'API restituisce tutte le espansi disponibili per l'oggetto come segue:</pre>
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="expands.gif" alt="espande l&#8217;esempio"></span></p>
+<p><span class="image"><img src="./media/expands.gif" alt="espande l&#8217;esempio"></span></p>
 </div>
 <div class="paragraph">
 <p>Ogni espansione contiene dati, un URL o entrambi. Il parametro expand supporta attributi multipli e nidificati, ad esempio:</p>
@@ -3512,7 +3545,7 @@ Expand consente di trasferire molti dati correlati in un'unica risposta. NetApp 
 <p>Un Riepilogo delle performance contiene una descrizione, un&#8217;unità, un&#8217;ora di inizio del campione, un&#8217;ora di fine del campione e un insieme di valori riepilogati (corrente, min, max, media, ecc.) calcolati da un singolo contatore delle performance in un intervallo di tempo (1 ora, 24 ore, 3 giorni e così via).</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="API_Performance.png" alt="Esempio di performance API"></span></p>
+<p><span class="image"><img src="./media/API_Performance.png" alt="Esempio di performance API"></span></p>
 </div>
 <div class="paragraph">
 <p>Il dizionario dei dati sulle prestazioni risultante dispone delle seguenti chiavi:</p>
@@ -3603,7 +3636,7 @@ Timestamp è in formato UNIX Time.
 <p>Di seguito viene riportato un esempio di dati JSON relativi alle performance per un disco:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="DiskPerformanceExample.png" alt="JSON per le performance dei dischi"></span></p>
+<p><span class="image"><img src="./media/DiskPerformanceExample.png" alt="JSON per le performance dei dischi"></span></p>
 </div>
 </div>
 </div>
@@ -3630,7 +3663,7 @@ Timestamp è in formato UNIX Time.
 <p>Di seguito viene illustrata la capacità di StoragePools con contatori di capacità multipli:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="StoragePoolCapacity.png" alt="Esempio di capacità del pool di storage"></span></p>
+<p><span class="image"><img src="./media/StoragePoolCapacity.png" alt="Esempio di capacità del pool di storage"></span></p>
 </div>
 </div>
 </div>
@@ -3659,7 +3692,7 @@ Timestamp è in formato UNIX Time.
 <p>Per rimuovere in modo permanente un token API, selezionare "revoca" dal menu. Non è possibile riattivare un token revocato; è necessario creare un nuovo token.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="API_Disable_Token.png" alt="Disattiva o revoca e token API"></span></p>
+<p><span class="image"><img src="./media/API_Disable_Token.png" alt="Disattiva o revoca e token API"></span></p>
 </div>
 </div>
 </div>

@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,18 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#panoramica">Panoramica</a></li>
+<li><a href="#protezione-dei-dati">Protezione dei dati</a></li>
+<li><a href="#sicurezza">Sicurezza</a></li>
+<li><a href="#avvisi">Avvisi</a></li>
+<li><a href="#infrastruttura">Infrastruttura</a></li>
+<li><a href="#networking">Networking</a></li>
+<li><a href="#carichi-di-lavoro">Carichi di lavoro</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3221,7 +3233,7 @@
 <p>Per iniziare l&#8217;esplorazione, selezionare <strong>elementi essenziali di ONTAP</strong> dal menu principale di Cloud Insights.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="OE_Overview.png" alt="Dashboard di panoramica per ONTAP Essentials"></span></p>
+<p><span class="image"><img src="./media/OE_Overview.png" alt="Dashboard di panoramica per ONTAP Essentials"></span></p>
 </div>
 <div class="paragraph">
 <p>La dashboard <strong>Overview</strong> visualizza informazioni utili come il numero di cluster nell&#8217;ambiente con le relative percentuali di capacità e performance complessive. Verranno inoltre visualizzati dati predittivi relativi al numero di giorni previsti fino a quando la capacità dello storage o la capacità delle performance non esauriscono lo spazio. Inoltre, se alcuni controller dell&#8217;infrastruttura sono in esecuzione con la CPU a oltre il 65% - potenzialmente mettendo il cluster a rischio in caso di failover - ONTAP Essentials li mostra come controller "hot".</p>
@@ -3276,7 +3288,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="DataProtectionDashboard_OverviewWidgets_.png" alt="Widget Data Protection Dashboard che mostrano panoramiche locali e remote"></span></p>
+<p><span class="image"><img src="./media/DataProtectionDashboard_OverviewWidgets_.png" alt="Widget Data Protection Dashboard che mostrano panoramiche locali e remote"></span></p>
 </div>
 <div class="paragraph">
 <p>La griglia <em>Clusters</em> nella parte inferiore della pagina fornisce i dettagli relativi a quanto segue:</p>
@@ -3298,7 +3310,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="DataProtectionDashboard_ClusterList.png" alt="Data Protection Cluster List (elenco cluster protezione dati)"></span></p>
+<p><span class="image"><img src="./media/DataProtectionDashboard_ClusterList.png" alt="Data Protection Cluster List (elenco cluster protezione dati)"></span></p>
 </div>
 </div>
 </div>
@@ -3312,7 +3324,7 @@
 <p>Selezionare uno dei conteggi di crittografia o anti-ransomware da inserire nell&#8217;ambiente.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="OE_SecurityDashboard.png" alt="Dashboard di sicurezza di ONTAP Essentials"></span></p>
+<p><span class="image"><img src="./media/OE_SecurityDashboard.png" alt="Dashboard di sicurezza di ONTAP Essentials"></span></p>
 </div>
 <div class="paragraph">
 <p>La dashboard di sicurezza di base di ONTAP monitora il tuo ambiente per determinare lo stato di conformità del cluster. Fare riferimento a. <a href="https://docs.netapp.com/us-en/active-iq-unified-manager/health-checker/reference_cluster_compliance_categories.html">"Categorie di conformità del cluster"</a> per saperne di più. ONTAP Essentials utilizza i seguenti monitor per determinare la conformità:</p>
@@ -3397,7 +3409,7 @@
 <p>Si noti che se un monitor di cui sopra è disattivato, i dettagli del cluster mostreranno il valore come ‘non selezionato’ per l&#8217;attributo di conformità di sicurezza corrispondente.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="OE_Cluster_Compliance_Example.png" alt="Stato di conformità del cluster"></span></p>
+<p><span class="image"><img src="./media/OE_Cluster_Compliance_Example.png" alt="Stato di conformità del cluster"></span></p>
 </div>
 <div class="paragraph">
 <p>Per le SVM, la dashboard di sicurezza esamina i seguenti monitor:</p>
@@ -3437,13 +3449,13 @@
 <p>Nell&#8217;elenco dei cluster, selezionare <em>View Details</em> (Visualizza dettagli) per ciascun cluster per aprire un pannello a scorrimento che mostra le impostazioni correnti di <em>Cluster, Storage VM</em> o <em>Anti-ransomware</em>.</p>
 </div>
 <div class="paragraph">
-<p>I dettagli del cluster includono stato della connessione, informazioni sul certificato e molto altro ancora:<span class="image"><img src="OE_Cluster_Slideout.png" alt="Pannello a slideout dettaglio cluster"></span></p>
+<p>I dettagli del cluster includono stato della connessione, informazioni sul certificato e molto altro ancora:<span class="image"><img src="./media/OE_Cluster_Slideout.png" alt="Pannello a slideout dettaglio cluster"></span></p>
 </div>
 <div class="paragraph">
-<p>I dettagli delle VM di storage mostrano le informazioni di audit e SSH:<span class="image"><img src="OE_Storage_Slideout.png" alt="Scheda Storage (archiviazione)"></span></p>
+<p>I dettagli delle VM di storage mostrano le informazioni di audit e SSH:<span class="image"><img src="./media/OE_Storage_Slideout.png" alt="Scheda Storage (archiviazione)"></span></p>
 </div>
 <div class="paragraph">
-<p>I dettagli anti-ransomware mostrano se una VM di storage è protetta dalla protezione anti-ransomware di ONTAP o dalla sicurezza del carico di lavoro Cloud Insights. La colonna ARP ONTAP visualizza lo stato corrente della protezione anti-ransomware integrata di ONTAP, configurata sul sistema ONTAP. La sicurezza del carico di lavoro Cloud Insights può essere attivata selezionando "Proteggi" nella colonna.<span class="image"><img src="OE_Anti-Ransomware_Slideout.png" alt="Scheda anti-ransomware"></span></p>
+<p>I dettagli anti-ransomware mostrano se una VM di storage è protetta dalla protezione anti-ransomware di ONTAP o dalla sicurezza del carico di lavoro Cloud Insights. La colonna ARP ONTAP visualizza lo stato corrente della protezione anti-ransomware integrata di ONTAP, configurata sul sistema ONTAP. La sicurezza del carico di lavoro Cloud Insights può essere attivata selezionando "Proteggi" nella colonna.<span class="image"><img src="./media/OE_Anti-Ransomware_Slideout.png" alt="Scheda anti-ransomware"></span></p>
 </div>
 </div>
 </div>
@@ -3454,7 +3466,7 @@
 <p>Qui è possibile visualizzare gli avvisi attivi nel proprio ambiente e analizzare rapidamente i potenziali problemi. Selezionare la scheda <em>Resolved</em> per visualizzare gli avvisi risolti.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="OE_Alerts.png" alt="Elenco degli avvisi di base di ONTAP"></span></p>
+<p><span class="image"><img src="./media/OE_Alerts.png" alt="Elenco degli avvisi di base di ONTAP"></span></p>
 </div>
 </div>
 </div>
@@ -3465,10 +3477,10 @@
 <p>La pagina ONTAP Essentials <strong>infrastruttura</strong> offre una panoramica dello stato e delle performance del cluster, utilizzando query predefinite (ancora ulteriormente personalizzabili) su tutti gli oggetti ONTAP di base. Selezionare il tipo di oggetto che si desidera esplorare (cluster, pool di storage, ecc.) e scegliere se visualizzare le informazioni sullo stato o sulle performance. Imposta i filtri per approfondire i singoli sistemi.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="ONTAP_Essentials_Health_Performance.png" alt="Selezioni dell&#8217;infrastruttura per i pool di storage"></span></p>
+<p><span class="image"><img src="./media/ONTAP_Essentials_Health_Performance.png" alt="Selezioni dell&#8217;infrastruttura per i pool di storage"></span></p>
 </div>
 <div class="paragraph">
-<p>Pagina dell&#8217;infrastruttura che mostra lo stato del cluster:<span class="image"><img src="ONTAP_Essentials_Infrastructure_A.png" alt="Oggetti dell&#8217;infrastruttura da esplorare"></span></p>
+<p>Pagina dell&#8217;infrastruttura che mostra lo stato del cluster:<span class="image"><img src="./media/ONTAP_Essentials_Infrastructure_A.png" alt="Oggetti dell&#8217;infrastruttura da esplorare"></span></p>
 </div>
 </div>
 </div>
@@ -3479,8 +3491,8 @@
 <p>Il networking di base di ONTAP ti offre una panoramica dell&#8217;infrastruttura FC, FC NVME, Ethernet e iSCSI. In queste pagine è possibile esplorare le porte dei cluster e dei relativi nodi.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="ONTAP_Essentials_Alerts_Menu.png" alt="Menu di rete di base di ONTAP"></span>
-<span class="image"><img src="ONTAP_Essentials_Alerts_Page.png" alt="Pagina ONTAP Essentials Networking FC che mostra le porte nei nodi del cluster"></span></p>
+<p><span class="image"><img src="./media/ONTAP_Essentials_Alerts_Menu.png" alt="Menu di rete di base di ONTAP"></span><br>
+<span class="image"><img src="./media/ONTAP_Essentials_Alerts_Page.png" alt="Pagina ONTAP Essentials Networking FC che mostra le porte nei nodi del cluster"></span></p>
 </div>
 </div>
 </div>
@@ -3491,10 +3503,10 @@
 <p>Visualizza ed esplora i carichi di lavoro su LUN/volumi, condivisioni NFS o SMB o Qtree nel tuo ambiente.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="ONTAP_Essentials_Workloads_Menu.png" alt="Menu workload"></span></p>
+<p><span class="image"><img src="./media/ONTAP_Essentials_Workloads_Menu.png" alt="Menu workload"></span></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="ONTAP_Essentials_Workloads_Page.png" alt="Pagina dell&#8217;elenco dei carichi di lavoro"></span></p>
+<p><span class="image"><img src="./media/ONTAP_Essentials_Workloads_Page.png" alt="Pagina dell&#8217;elenco dei carichi di lavoro"></span></p>
 </div>
 </div>
 </div>

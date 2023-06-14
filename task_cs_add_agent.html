@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,15 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#prima-di-iniziare">Prima di iniziare</a></li>
+<li><a href="#procedura-per-linstallazione-dellagente">Procedura per l&#8217;installazione dell&#8217;agente</a></li>
+<li><a href="#configurazione-di-rete">Configurazione di rete</a></li>
+<li><a href="#risoluzione-dei-problemi-relativi-agli-errori-dellagente">Risoluzione dei problemi relativi agli errori dell&#8217;agente</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3237,7 +3246,7 @@ La sicurezza del carico di lavoro non è disponibile nell&#8217;edizione federal
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="Add-agent-1.png" alt="Aggiungi agente 1">
+<img src="./media/Add-agent-1.png" alt="Aggiungi agente 1">
 </div>
 </div>
 </li>
@@ -3250,7 +3259,7 @@ La sicurezza del carico di lavoro non è disponibile nell&#8217;edizione federal
 <li>
 <p>Se la rete utilizza un server proxy, impostare i dettagli del server proxy seguendo le istruzioni nella sezione Proxy.</p>
 <div class="paragraph">
-<p><span class="image"><img src="CloudSecureAgentWithProxy_Instructions.png" alt="Agent Install with Proxy (Installazione agente con proxy) Nota"></span></p>
+<p><span class="image"><img src="./media/CloudSecureAgentWithProxy_Instructions.png" alt="Agent Install with Proxy (Installazione agente con proxy) Nota"></span></p>
 </div>
 </li>
 <li>
@@ -3263,7 +3272,7 @@ La sicurezza del carico di lavoro non è disponibile nell&#8217;edizione federal
 <p>Al termine dell&#8217;installazione, il sistema visualizza il seguente messaggio:</p>
 <div class="imageblock">
 <div class="content">
-<img src="new-agent-detect.png" alt="rilevamento nuovo agente">
+<img src="./media/new-agent-detect.png" alt="rilevamento nuovo agente">
 </div>
 </div>
 </li>
@@ -3370,11 +3379,11 @@ La sicurezza del carico di lavoro non è disponibile nell&#8217;edizione federal
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;agente è stato installato ed era in esecuzione. Tuttavia, l&#8217;agente si è arrestato improvvisamente.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SSH al computer dell&#8217;agente. Controllare lo stato del servizio dell&#8217;agente tramite <code>sudo systemctl status cloudsecure-agent.service</code>. 1. Controllare se nei registri viene visualizzato il messaggio "Impossibile avviare il servizio daemon di sicurezza workload" . 2. Controllare se l&#8217;utente cssys esiste o meno nel computer dell&#8217;agente. Eseguire i seguenti comandi uno alla volta con l&#8217;autorizzazione root e controllare se l&#8217;utente e il gruppo cssys esistono.
-<code>sudo id cssys</code>
-<code>sudo groups cssys`3. Se non ne esiste alcuna, è possibile che un criterio di monitoraggio centralizzato abbia eliminato l&#8217;utente cssys. 4. Creare manualmente un utente e un gruppo cssys eseguendo i seguenti comandi.
-`sudo useradd cssys</code>
-`sudo groupadd cssys`5. Riavviare il servizio dell&#8217;agente eseguendo il seguente comando:
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSH al computer dell&#8217;agente. Controllare lo stato del servizio dell&#8217;agente tramite <code>sudo systemctl status cloudsecure-agent.service</code>. 1. Controllare se nei registri viene visualizzato il messaggio "Impossibile avviare il servizio daemon di sicurezza workload" . 2. Controllare se l&#8217;utente cssys esiste o meno nel computer dell&#8217;agente. Eseguire i seguenti comandi uno alla volta con l&#8217;autorizzazione root e controllare se l&#8217;utente e il gruppo cssys esistono.<br>
+<code>sudo id cssys</code><br>
+<code>sudo groups cssys`3. Se non ne esiste alcuna, è possibile che un criterio di monitoraggio centralizzato abbia eliminato l&#8217;utente cssys. 4. Creare manualmente un utente e un gruppo cssys eseguendo i seguenti comandi.<br>
+`sudo useradd cssys</code><br>
+`sudo groupadd cssys`5. Riavviare il servizio dell&#8217;agente eseguendo il seguente comando:<br>
 `sudo systemctl restart cloudsecure-agent.service`6. Se non è ancora in esecuzione, controllare le altre opzioni di risoluzione dei problemi.</p></td>
 </tr>
 <tr>
@@ -3383,7 +3392,7 @@ La sicurezza del carico di lavoro non è disponibile nell&#8217;edizione federal
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;interfaccia utente mostra che l&#8217;agente è in stato NOT_CONNECTED.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Procedura per riavviare l&#8217;agente. 1. SSH al computer dell&#8217;agente. 2. Riavviare il servizio dell&#8217;agente eseguendo il seguente comando:
+<td class="tableblock halign-left valign-top"><p class="tableblock">Procedura per riavviare l&#8217;agente. 1. SSH al computer dell&#8217;agente. 2. Riavviare il servizio dell&#8217;agente eseguendo il seguente comando:<br>
 <code>sudo systemctl restart cloudsecure-agent.service`3. Controllare lo stato del servizio dell&#8217;agente tramite `sudo systemctl status cloudsecure-agent.service</code>. 4. L&#8217;agente deve passare allo stato CONNESSO.</p></td>
 </tr>
 <tr>

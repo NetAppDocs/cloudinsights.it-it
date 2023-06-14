@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,67 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#datamart-dellinventario">Datamart dell&#8217;inventario</a>
+<ul class="sectlevel2">
+<li><a href="#annotazioni">Annotazioni</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li>
+<li><a href="#metriche-kubernetes">Metriche Kubernetes</a></li>
+<li><a href="#nas">NAS</a></li>
+<li><a href="#percorsi-e-violazioni">Percorsi e violazioni</a></li>
+<li><a href="#connettività-delle-porte">Connettività delle porte</a></li>
+<li><a href="#fabric-san">Fabric SAN</a></li>
+<li><a href="#storage">Storage</a></li>
+<li><a href="#nodo-di-storage">Nodo di storage</a></li>
+<li><a href="#macchina-virtuale">MACCHINA VIRTUALE</a></li>
+</ul>
+</li>
+<li><a href="#capacity-datamart">Capacity Datamart</a>
+<ul class="sectlevel2">
+<li><a href="#chargeback">Chargeback</a></li>
+<li><a href="#capacità-del-gruppo-di-dischi">Capacità del gruppo di dischi</a></li>
+<li><a href="#utilizzo-del-file-system">Utilizzo del file system</a></li>
+<li><a href="#capacità-del-volume-interno">Capacità del volume interno</a></li>
+<li><a href="#kubernetes-pv-capacity-capacità-pv-kubernetes">Kubernetes PV Capacity (capacità PV Kubernetes)</a></li>
+<li><a href="#capacità-della-porta">Capacità della porta</a></li>
+<li><a href="#capacità-del-qtree">Capacità del qtree</a></li>
+<li><a href="#efficienza-della-capacità-dello-storage">Efficienza della capacità dello storage</a></li>
+<li><a href="#capacità-dello-storage-e-del-pool-di-storage">Capacità dello storage e del pool di storage</a></li>
+<li><a href="#capacità-del-nodo-di-storage">Capacità del nodo di storage</a></li>
+<li><a href="#capacità-delle-macchine-virtuali">Capacità delle macchine virtuali</a></li>
+<li><a href="#capacità-del-volume">Capacità del volume</a></li>
+</ul>
+</li>
+<li><a href="#performance-datamart">Performance Datamart</a>
+<ul class="sectlevel2">
+<li><a href="#performance-orarie-del-volume-applicativo">Performance orarie del volume applicativo</a></li>
+<li><a href="#performance-giornaliere-dei-dischi">Performance giornaliere dei dischi</a></li>
+<li><a href="#performance-orarie-del-disco">Performance orarie del disco</a></li>
+<li><a href="#performance-orarie-dellhost">Performance orarie dell&#8217;host</a></li>
+<li><a href="#performance-orarie-del-volume-interno">Performance orarie del volume interno</a></li>
+<li><a href="#performance-giornaliera-del-volume-interno">Performance giornaliera del volume interno</a></li>
+<li><a href="#performance-giornaliere-di-qtree">Performance giornaliere di qtree</a></li>
+<li><a href="#performance-giornaliere-dei-nodi-di-storage">Performance giornaliere dei nodi di storage</a></li>
+<li><a href="#performance-orarie-del-nodo-di-storage">Performance orarie del nodo di storage</a></li>
+<li><a href="#prestazioni-orarie-dello-switch-per-host">Prestazioni orarie dello switch per host</a></li>
+<li><a href="#prestazioni-orarie-dello-switch-per-la-porta">Prestazioni orarie dello switch per la porta</a></li>
+<li><a href="#performance-orarie-dello-switch-per-lo-storage">Performance orarie dello switch per lo storage</a></li>
+<li><a href="#prestazioni-orarie-dello-switch-per-il-nastro">Prestazioni orarie dello switch per il nastro</a></li>
+<li><a href="#performance-delle-macchine-virtuali">Performance delle macchine virtuali</a></li>
+<li><a href="#performance-giornaliere-delle-macchine-virtuali-per-host">Performance giornaliere delle macchine virtuali per host</a></li>
+<li><a href="#performance-orarie-delle-macchine-virtuali-per-host">Performance orarie delle macchine virtuali per host</a></li>
+<li><a href="#performance-giornaliere-delle-macchine-virtuali-per-host-2">Performance giornaliere delle macchine virtuali per host</a></li>
+<li><a href="#performance-orarie-delle-macchine-virtuali-per-host-2">Performance orarie delle macchine virtuali per host</a></li>
+<li><a href="#performance-giornaliera-di-vmdk">Performance giornaliera di VMDK</a></li>
+<li><a href="#performance-orarie-di-vmdk">Performance orarie di VMDK</a></li>
+<li><a href="#performance-orarie-del-volume">Performance orarie del volume</a></li>
+<li><a href="#volume-daily-performance">Volume Daily Performance</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3216,91 +3277,91 @@ La funzione di reporting è disponibile in Cloud Insights <a href="concept_subsc
 <div class="sect2">
 <h3 id="annotazioni">Annotazioni</h3>
 <div class="paragraph">
-<p><span class="image"><img src="annotations.png" alt=""></span></p>
+<p><span class="image"><img src="./media/annotations.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="applicazioni">Applicazioni</h3>
 <div class="paragraph">
-<p><span class="image"><img src="apps_annot.png" alt=""></span></p>
+<p><span class="image"><img src="./media/apps_annot.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="metriche-kubernetes">Metriche Kubernetes</h3>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_schema.jpg" alt="Kubernetes"></span></p>
+<p><span class="image"><img src="./media/k8s_schema.jpg" alt="Kubernetes"></span></p>
 </div>
 <div class="sect3">
 <h4 id="dati-sulle-metriche-dei-cluster-di-kubernetes">Dati sulle metriche dei cluster di Kubernetes</h4>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_cluster_metrics_fact.jpg" alt="Dati sulle metriche dei cluster di Kubernetes"></span></p>
+<p><span class="image"><img src="./media/k8s_cluster_metrics_fact.jpg" alt="Dati sulle metriche dei cluster di Kubernetes"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="il-fatto-delle-metriche-dello-spazio-dei-nomi-kubernetes">Il fatto delle metriche dello spazio dei nomi Kubernetes</h4>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_namespace_metrics_fact.jpg" alt="Il fatto delle metriche dello spazio dei nomi Kubernetes"></span></p>
+<p><span class="image"><img src="./media/k8s_namespace_metrics_fact.jpg" alt="Il fatto delle metriche dello spazio dei nomi Kubernetes"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="dati-relativi-alle-metriche-dei-nodi-di-kubernetes">Dati relativi alle metriche dei nodi di Kubernetes</h4>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_node_metrics_fact.jpg" alt="Dati relativi alle metriche dei nodi di Kubernetes"></span></p>
+<p><span class="image"><img src="./media/k8s_node_metrics_fact.jpg" alt="Dati relativi alle metriche dei nodi di Kubernetes"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="kubernetes-pvc-metrics-fatto">Kubernetes PVC Metrics fatto</h4>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_pvc_metrics_fact.jpg" alt="Kubernetes PVC Metrics fatto"></span></p>
+<p><span class="image"><img src="./media/k8s_pvc_metrics_fact.jpg" alt="Kubernetes PVC Metrics fatto"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="kubernetes-workload-metrics">Kubernetes Workload Metrics</h4>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_workload_metrics_fact.jpg" alt="Kubernetes Workload Metrics"></span></p>
+<p><span class="image"><img src="./media/k8s_workload_metrics_fact.jpg" alt="Kubernetes Workload Metrics"></span></p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="nas">NAS</h3>
 <div class="paragraph">
-<p><span class="image"><img src="nas.png" alt=""></span></p>
+<p><span class="image"><img src="./media/nas.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="percorsi-e-violazioni">Percorsi e violazioni</h3>
 <div class="paragraph">
-<p><span class="image"><img src="logical.png" alt=""></span></p>
+<p><span class="image"><img src="./media/logical.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="connettività-delle-porte">Connettività delle porte</h3>
 <div class="paragraph">
-<p><span class="image"><img src="connectivity.png" alt=""></span></p>
+<p><span class="image"><img src="./media/connectivity.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="fabric-san">Fabric SAN</h3>
 <div class="paragraph">
-<p><span class="image"><img src="fabric.png" alt=""></span></p>
+<p><span class="image"><img src="./media/fabric.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="storage">Storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="storage.png" alt=""></span></p>
+<p><span class="image"><img src="./media/storage.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="nodo-di-storage">Nodo di storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="storage_node.png" alt=""></span></p>
+<p><span class="image"><img src="./media/storage_node.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="macchina-virtuale">MACCHINA VIRTUALE</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm.png" alt=""></span></p>
 </div>
 <hr>
 </div>
@@ -3315,73 +3376,73 @@ La funzione di reporting è disponibile in Cloud Insights <a href="concept_subsc
 <div class="sect2">
 <h3 id="chargeback">Chargeback</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Chargeback_Fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Chargeback_Fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-del-gruppo-di-dischi">Capacità del gruppo di dischi</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Disk_Group_Capacity.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Disk_Group_Capacity.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="utilizzo-del-file-system">Utilizzo del file system</h3>
 <div class="paragraph">
-<p><span class="image"><img src="fs_util.png" alt=""></span></p>
+<p><span class="image"><img src="./media/fs_util.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-del-volume-interno">Capacità del volume interno</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Internal_Volume_Capacity_Fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Internal_Volume_Capacity_Fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="kubernetes-pv-capacity-capacità-pv-kubernetes">Kubernetes PV Capacity (capacità PV Kubernetes)</h3>
 <div class="paragraph">
-<p><span class="image"><img src="k8s_pvc_capacity_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/k8s_pvc_capacity_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-della-porta">Capacità della porta</h3>
 <div class="paragraph">
-<p><span class="image"><img src="ports.png" alt=""></span></p>
+<p><span class="image"><img src="./media/ports.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-del-qtree">Capacità del qtree</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Qtree_Capacity_Fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Qtree_Capacity_Fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="efficienza-della-capacità-dello-storage">Efficienza della capacità dello storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="efficiency.png" alt=""></span></p>
+<p><span class="image"><img src="./media/efficiency.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-dello-storage-e-del-pool-di-storage">Capacità dello storage e del pool di storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Storage_and_Storage_Pool_Capacity_Fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Storage_and_Storage_Pool_Capacity_Fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-del-nodo-di-storage">Capacità del nodo di storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Storage_Node_Capacity_Fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/Storage_Node_Capacity_Fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-delle-macchine-virtuali">Capacità delle macchine virtuali</h3>
 <div class="paragraph">
-<p><span class="image"><img src="VM_Capacity_Fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/VM_Capacity_Fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="capacità-del-volume">Capacità del volume</h3>
 <div class="paragraph">
-<p><span class="image"><img src="Volume_Capacity.png" alt=""></span></p>
+<p><span class="image"><img src="./media/Volume_Capacity.png" alt=""></span></p>
 </div>
 <hr>
 </div>
@@ -3396,133 +3457,133 @@ La funzione di reporting è disponibile in Cloud Insights <a href="concept_subsc
 <div class="sect2">
 <h3 id="performance-orarie-del-volume-applicativo">Performance orarie del volume applicativo</h3>
 <div class="paragraph">
-<p><span class="image"><img src="application_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/application_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliere-dei-dischi">Performance giornaliere dei dischi</h3>
 <div class="paragraph">
-<p><span class="image"><img src="disk_daily_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/disk_daily_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-del-disco">Performance orarie del disco</h3>
 <div class="paragraph">
-<p><span class="image"><img src="disk_hourly_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/disk_hourly_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-dellhost">Performance orarie dell&#8217;host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="host_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/host_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-del-volume-interno">Performance orarie del volume interno</h3>
 <div class="paragraph">
-<p><span class="image"><img src="internal_volume_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/internal_volume_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliera-del-volume-interno">Performance giornaliera del volume interno</h3>
 <div class="paragraph">
-<p><span class="image"><img src="internal_volume_daily_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/internal_volume_daily_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliere-di-qtree">Performance giornaliere di qtree</h3>
 <div class="paragraph">
-<p><span class="image"><img src="QtreeDailyPerformanceFact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/QtreeDailyPerformanceFact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliere-dei-nodi-di-storage">Performance giornaliere dei nodi di storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="storage_node_daily_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/storage_node_daily_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-del-nodo-di-storage">Performance orarie del nodo di storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="storage_node_hourly_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/storage_node_hourly_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="prestazioni-orarie-dello-switch-per-host">Prestazioni orarie dello switch per host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="switch_performance_for_host_hourly_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/switch_performance_for_host_hourly_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="prestazioni-orarie-dello-switch-per-la-porta">Prestazioni orarie dello switch per la porta</h3>
 <div class="paragraph">
-<p><span class="image"><img src="switch_performance_for_port_hourly_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/switch_performance_for_port_hourly_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-dello-switch-per-lo-storage">Performance orarie dello switch per lo storage</h3>
 <div class="paragraph">
-<p><span class="image"><img src="switch_performance_for_storage_hourly_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/switch_performance_for_storage_hourly_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="prestazioni-orarie-dello-switch-per-il-nastro">Prestazioni orarie dello switch per il nastro</h3>
 <div class="paragraph">
-<p><span class="image"><img src="switch_performance_for_tape_hourly_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/switch_performance_for_tape_hourly_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-delle-macchine-virtuali">Performance delle macchine virtuali</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm_hourly_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm_hourly_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliere-delle-macchine-virtuali-per-host">Performance giornaliere delle macchine virtuali per host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm_daily_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm_daily_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-delle-macchine-virtuali-per-host">Performance orarie delle macchine virtuali per host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm_hourly_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm_hourly_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliere-delle-macchine-virtuali-per-host-2">Performance giornaliere delle macchine virtuali per host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm_daily_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm_daily_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-delle-macchine-virtuali-per-host-2">Performance orarie delle macchine virtuali per host</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vm_hourly_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vm_hourly_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-giornaliera-di-vmdk">Performance giornaliera di VMDK</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vmdk_daily_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vmdk_daily_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-di-vmdk">Performance orarie di VMDK</h3>
 <div class="paragraph">
-<p><span class="image"><img src="vmdk_hourly_performance_fact.png" alt=""></span></p>
+<p><span class="image"><img src="./media/vmdk_hourly_performance_fact.png" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="performance-orarie-del-volume">Performance orarie del volume</h3>
 <div class="paragraph">
-<p><span class="image"><img src="volume_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/volume_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="volume-daily-performance">Volume Daily Performance</h3>
 <div class="paragraph">
-<p><span class="image"><img src="volume_daily_performance_fact.jpg" alt=""></span></p>
+<p><span class="image"><img src="./media/volume_daily_performance_fact.jpg" alt=""></span></p>
 </div>
 </div>
 </div>

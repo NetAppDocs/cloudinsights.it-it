@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,16 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#livelli-di-autorizzazione">Livelli di autorizzazione</a></li>
+<li><a href="#creazione-di-account-invitando-gli-utenti">Creazione di account invitando gli utenti</a></li>
+<li><a href="#modifica-del-ruolo-di-un-utente-esistente">Modifica del ruolo di un utente esistente</a></li>
+<li><a href="#eliminazione-di-utenti">Eliminazione di utenti</a></li>
+<li><a href="#single-sign-on-sso-e-identity-federation">Single Sign-on (SSO) e Identity Federation</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3480,7 +3490,7 @@ Le funzionalità e i ruoli tra cui scegliere dipendono dalle funzioni a cui si h
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="UserRoleChoices.png" alt="Scelte di ruolo dell&#8217;utente"></span></p>
+<p><span class="image"><img src="./media/UserRoleChoices.png" alt="Scelte di ruolo dell&#8217;utente"></span></p>
 </div>
 </li>
 <li>
@@ -3537,7 +3547,7 @@ Le funzionalità e i ruoli tra cui scegliere dipendono dalle funzioni a cui si h
 </ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Assign_Account_Owner.png" alt="finestra di dialogo di modifica dell&#8217;utente che mostra la scelta del proprietario dell&#8217;account"></span></p>
+<p><span class="image"><img src="./media/Assign_Account_Owner.png" alt="finestra di dialogo di modifica dell&#8217;utente che mostra la scelta del proprietario dell&#8217;account"></span></p>
 </div>
 <div class="paragraph">
 <p>Puoi avere tutti i proprietari di account che desideri, ma la Best practice consiste nel limitare il ruolo del proprietario solo a selezionare le persone.</p>
@@ -3578,7 +3588,7 @@ Le funzionalità e i ruoli tra cui scegliere dipendono dalle funzioni a cui si h
 <p>Gli account utente sono gestiti in NetApp Cloud Central per tutti i servizi cloud. Per impostazione predefinita, l&#8217;autenticazione viene eseguita utilizzando il profilo utente locale di Cloud Central. Di seguito è riportata una panoramica semplificata di tale processo:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="CloudCentralAuthentication.png" alt="Autenticazione Cloud Central"></span></p>
+<p><span class="image"><img src="./media/CloudCentralAuthentication.png" alt="Autenticazione Cloud Central"></span></p>
 </div>
 <div class="paragraph">
 <p>Tuttavia, alcuni clienti desiderano utilizzare il proprio provider di identità per autenticare i propri utenti per Cloud Insights e gli altri servizi NetApp Cloud Central. Con Identity Federation, gli account NetApp Cloud Central vengono autenticati utilizzando le credenziali della directory aziendale.</p>
@@ -3587,7 +3597,7 @@ Le funzionalità e i ruoli tra cui scegliere dipendono dalle funzioni a cui si h
 <p>Di seguito viene riportato un esempio semplificato di tale processo:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="IdentityFederationDiagram-2.png" alt="Federazione di identità illustrata"></span></p>
+<p><span class="image"><img src="./media/IdentityFederationDiagram-2.png" alt="Federazione di identità illustrata"></span></p>
 </div>
 <div class="paragraph">
 <p>Nel diagramma precedente, quando un utente accede a Cloud Insights, tale utente viene indirizzato al sistema di gestione delle identità del cliente per l&#8217;autenticazione. Una volta autenticato l&#8217;account, l&#8217;utente viene indirizzato all&#8217;URL del tenant Cloud Insights.</p>
@@ -3623,7 +3633,7 @@ Le funzionalità e i ruoli tra cui scegliere dipendono dalle funzioni a cui si h
 <p>Per configurare <em>SSO User Auto-Provisioning</em>, nella pagina <strong>Admin &gt; User Management</strong>, fare clic sul pulsante <strong>Request Federation</strong>. Una volta configurato, gli amministratori possono abilitare l&#8217;accesso utente SSO. Quando un amministratore abilita <em>SSO User Auto-Provisioning</em>, sceglie un ruolo predefinito per tutti gli utenti SSO (come Guest o User). Gli utenti che accedono tramite SSO avranno questo ruolo predefinito.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Roles_federation_Banner.png" alt="Gestione degli utenti con Federation"></span></p>
+<p><span class="image"><img src="./media/Roles_federation_Banner.png" alt="Gestione degli utenti con Federation"></span></p>
 </div>
 <div class="paragraph">
 <p>A volte, un amministratore desidera promuovere un singolo utente al di fuori del ruolo SSO predefinito (ad esempio, per renderlo un amministratore). Per eseguire questa operazione, fare clic sul menu a destra della pagina <strong>Admin &gt; User Management</strong> e selezionare <em>Assign role</em>. Gli utenti a cui viene assegnato un ruolo esplicito in questo modo continuano ad avere accesso a Cloud Insights anche se il provisioning automatico dell&#8217;utente SSO viene successivamente disattivato.</p>

@@ -3178,7 +3178,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-13 15:01:07 +0000">06/13/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3188,6 +3188,20 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#esame-di-tutti-i-dati-delle-attività">Esame di tutti i dati delle attività</a></li>
+<li><a href="#filtraggio-dei-dati-forensic-activity-history">Filtraggio dei dati Forensic Activity History</a></li>
+<li><a href="#ordinamento-dei-dati-forensic-activity-history">Ordinamento dei dati Forensic Activity History</a></li>
+<li><a href="#esportazione-di-tutte-le-attività">Esportazione di tutte le attività</a></li>
+<li><a href="#selezione-colonna-per-tutte-le-attività">Selezione colonna per tutte le attività</a></li>
+<li><a href="#conservazione-della-cronologia-delle-attività">Conservazione della cronologia delle attività</a></li>
+<li><a href="#applicabilità-dei-filtri-nella-pagina-forensics">Applicabilità dei filtri nella pagina Forensics</a></li>
+<li><a href="#ricerca-percorso-percorso-originale">Ricerca percorso / percorso originale</a></li>
+<li><a href="#risoluzione-dei-problemi">Risoluzione dei problemi</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3221,7 +3235,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>La tabella <em>*tutte le attività*</em> mostra le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull&#8217;icona "ingranaggio" <span class="image"><img src="GearIcon.png" alt="icona ingranaggio"></span>.</p>
+<p>La tabella <em>*tutte le attività*</em> mostra le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull&#8217;icona "ingranaggio" <span class="image"><img src="./media/GearIcon.png" alt="icona ingranaggio"></span>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3310,7 +3324,7 @@
 <p>Selezionare il filtro appropriato dal widget ‘Filtra per’ in alto facendo clic sul pulsante <strong>[+]</strong>:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Forensic_Activity_Filter.png" alt="Entity Filer, width=500"></span></p>
+<p><span class="image"><img src="./media/Forensic_Activity_Filter.png" alt="Entity Filer, width=500"></span></p>
 </div>
 <div class="paragraph">
 <p>Inserire il testo di ricerca</p>
@@ -3409,7 +3423,7 @@
 <p>La tabella <em>All activity</em> mostra le colonne Select per impostazione predefinita. Per aggiungere, rimuovere o modificare le colonne, fare clic sull&#8217;icona a forma di ingranaggio a destra della tabella e selezionare dall&#8217;elenco delle colonne disponibili.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="CloudSecure_ActivitySelection.png" alt="Activity Selector, width=30%"></span></p>
+<p><span class="image"><img src="./media/CloudSecure_ActivitySelection.png" alt="Activity Selector, width=30%"></span></p>
 </div>
 </div>
 </div>
@@ -3569,10 +3583,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dopo aver digitato alcune lettere contenenti un carattere jolly come l&#8217;asterisco (*) nei filtri delle pagine Forensics <em>All Activity</em> o <em>Entities</em>, le pagine vengono caricate molto lentamente.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Un asterisco (<strong>) nella stringa di ricerca cerca tutto. Tuttavia, le stringhe con caratteri jolly come <em></strong>&lt;searchTerm&gt;</em> o <em>*&lt;searchTerm&gt;*</em> causano una query lenta.
-Per ottenere prestazioni migliori, utilizzare le stringhe di prefisso nel formato <em>&lt;searchTerm&gt;*</em> (in altre parole, aggiungere l&#8217;asterisco (*) <em>dopo</em> un termine di ricerca).
-Esempio: Utilizzare la stringa <em>testvolume*</em>, invece di <em>*testvolume</em> o <em>*test*volume</em>.</p>
-<p class="tableblock">Utilizza una ricerca basata su prefisso per visualizzare tutte le attività sotto una data cartella in modo ricorrente (ricerca gerarchica). ad esempio <em>/path1/path2/path3</em> o <em>"/path1/path2/path3"</em> elenchiamo tutte le attività in modo ricorrente sotto <em>/path1/path2/path3</em>.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un asterisco (<strong>) nella stringa di ricerca cerca tutto. Tuttavia, le stringhe con caratteri jolly come <em></strong>&lt;searchTerm&gt;</em> o <em>*&lt;searchTerm&gt;*</em> causano una query lenta.<br>
+Per ottenere prestazioni migliori, utilizzare le stringhe di prefisso nel formato <em>&lt;searchTerm&gt;*</em> (in altre parole, aggiungere l&#8217;asterisco (*) <em>dopo</em> un termine di ricerca).<br>
+Esempio: Utilizzare la stringa <em>testvolume*</em>, invece di <em>*testvolume</em> o <em>*test*volume</em>.<br>
+<br>
+Utilizza una ricerca basata su prefisso per visualizzare tutte le attività sotto una data cartella in modo ricorrente (ricerca gerarchica). ad esempio <em>/path1/path2/path3</em> o <em>"/path1/path2/path3"</em> elenchiamo tutte le attività in modo ricorrente sotto <em>/path1/path2/path3</em>.<br>
 In alternativa, utilizzare l&#8217;opzione "Add to Filter" (Aggiungi al filtro) nella scheda All Activity (tutte le attività).</p></td>
 </tr>
 </tbody>

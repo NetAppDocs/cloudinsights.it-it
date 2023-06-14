@@ -3176,7 +3176,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 12:50:19 +0000">05/23/2023</time>
+    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
     
   
 
@@ -3186,6 +3186,13 @@
 
 </p>
 
+<div id="toc" class="toc">
+<div id="toctitle">Sommario</div>
+<ul class="sectlevel1">
+<li><a href="#conservazione-dei-dati-time-to-live">Conservazione dei dati (time-to-live)</a></li>
+<li><a href="#downsampling-dei-dati">Downsampling dei dati</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
@@ -3270,7 +3277,7 @@
 <p>Poiché stiamo scegliendo un intervallo di tempo inferiore a 7 giorni e abbiamo meno di 1,000 punti dati da inserire nel grafico, i dati visualizzati sono dati effettivi. Non si verifica alcun downsampling.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Charts_NoDownsample.png" alt="Nessun downsampling"></span></p>
+<p><span class="image"><img src="./media/Charts_NoDownsample.png" alt="Nessun downsampling"></span></p>
 </div>
 <div class="paragraph">
 <p>Tuttavia, se si visualizzano i dati scegliendo 30d nel selettore di tempo della pagina delle risorse, Oppure impostando un intervallo di tempo personalizzato di più di 7 giorni (o nel caso in cui Cloud Insights abbia raccolto più di 1,000 campioni di dati per il periodo di tempo scelto), i dati vengono sottoposti a downsampling prima di essere visualizzati. Quando si esegue lo zoom avanti su un grafico sottocampionato, il display continua a mostrare i dati approssimati.</p>
@@ -3291,7 +3298,7 @@ Quando si esegue lo zoom avanti su una mappa con sottocampionatura, lo zoom è u
 <p>La figura seguente mostra l&#8217;intervallo di tempo impostato su 30d, quindi il grafico viene ingrandito per visualizzare lo stesso periodo di 24 ore di cui sopra.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="Charts_Downsampled.png" alt="Downsampling"></span></p>
+<p><span class="image"><img src="./media/Charts_Downsampled.png" alt="Downsampling"></span></p>
 </div>
 <div class="paragraph">
 <p>I grafici sottocampionati mostrano lo stesso periodo di 24 ore dei grafici "effettivi" di cui sopra, quindi le linee seguono la stessa forma generale, consentendo di individuare rapidamente picchi o valli interessanti nei dati delle performance.</p>
