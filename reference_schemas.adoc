@@ -5,7 +5,17 @@ summary: Diagrammi e tabelle dello schema di Data Warehouse da utilizzare con Re
 keywords: dwh, data warehouse, schema, reporting 
 ---
 = Schemi Cloud Insights per il reporting
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

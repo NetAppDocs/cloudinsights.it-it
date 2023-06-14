@@ -5,7 +5,17 @@ summary: Crea, proteggi e regola il tuo data estate multi-cloud ibrido da un sin
 keywords: bluexp, cloud manager, cm, storage, data, services, integrated 
 ---
 = Cloud Insights fa parte di BlueXP
+:toc: macro
+:hardbreaks:
+:toclevels: 2
 :allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

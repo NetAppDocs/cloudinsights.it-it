@@ -5,7 +5,17 @@ summary: Panoramica dei dashboard in Cloud Insights.
 keywords: dashboard, widget, custom, view, data 
 ---
 = Panoramica delle dashboard
+:toc: macro
+:hardbreaks:
+:toclevels: 2
 :allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

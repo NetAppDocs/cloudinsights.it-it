@@ -5,7 +5,17 @@ keywords: annotations, annotation rules, manual annotations,
 summary: 'Come creare un"annotazione.' 
 ---
 = Utilizzo delle annotazioni
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

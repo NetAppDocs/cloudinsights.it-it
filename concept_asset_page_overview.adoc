@@ -5,7 +5,17 @@ summary: Le pagine delle risorse possono essere visualizzate per la maggior part
 keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric 
 ---
 = Panoramica della pagina delle risorse
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

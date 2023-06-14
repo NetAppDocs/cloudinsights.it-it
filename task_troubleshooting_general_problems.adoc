@@ -5,7 +5,17 @@ summary: Suggerimenti generali per la risoluzione dei problemi di Cloud Insights
 keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
 ---
 = Risoluzione dei problemi generali di Cloud Insights
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

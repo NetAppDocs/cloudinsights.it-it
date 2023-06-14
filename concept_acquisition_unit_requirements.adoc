@@ -5,7 +5,17 @@ summary: Il server o la macchina virtuale utilizzata come unità di acquisizione
 keywords: AU, acquisition unit, RAU, requirements, sizing 
 ---
 = Requisiti dell'unità di acquisizione
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

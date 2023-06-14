@@ -5,7 +5,17 @@ summary: Report predefiniti e personalizzati dei tuoi dati con Cloud Insights.
 keywords: reporting, cognos, data warehouse, dwh 
 ---
 = Panoramica dei report Cloud Insights
+:toc: macro
+:hardbreaks:
+:toclevels: 2
 :allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

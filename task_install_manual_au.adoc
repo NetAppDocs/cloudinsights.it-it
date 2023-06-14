@@ -1,0 +1,176 @@
+---
+sidebar: sidebar 
+permalink: task_install_manual_au.html 
+keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving 
+summary: 'Cloud Insights può essere configurato per l"aggiornamento manuale del software AU, garantendo un maggiore controllo sul software installato nell"ambiente.' 
+---
+= Installazione manuale del software dell'unità di acquisizione
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Per impostazione predefinita, Cloud Insights aggiorna automaticamente il software dell'unità di acquisizione (AU) non appena vengono implementati gli aggiornamenti. Tuttavia, in ambienti controllati sicuri, l'aggiornamento automatico potrebbe non essere possibile o desiderato.  In questi casi, Cloud Insights può essere configurato per l'aggiornamento manuale del software AU, garantendo un maggiore controllo sul software installato nell'ambiente.
+
+Per scaricare e installare manualmente il software AU, procedere come segue. Cloud Insights fornisce un'utile pagina di documentazione di Swagger che è possibile utilizzare per molte di queste istruzioni, oppure è possibile utilizzare i propri script/comandi API. Accedere a Admin > API Access (Amministrazione > accesso API) e fare clic sul collegamento "API Documentation" (documentazione API).
+
+Il processo è simile per Linux e Windows.
+
+
+
+=== Esecuzione di UNA nuova installazione AU su Linux:
+
+. In Cloud Insights, creare un token API.
++
+.. Accedere a *Admin > API Access* e selezionare *+API Access Token*.
++
+... Impostare *Nome* e *Descrizione* facili da identificare
+... Tipo: *Acquisition Unit*
+... Permessi: *Lettura/scrittura*
+... Selezionare i valori desiderati *scadenza* e *rinnovo automatico*
+
+
+.. Fare clic su *Save* (Salva)
+.. Copiare il token di accesso API generato. Questa fase deve essere eseguita prima di poter chiudere la finestra.
+
+
+
+
+image:Manual_AU_Create_API_Token.png[""]
+
+. In Swagger (Amministratore > accesso API > documentazione API), utilizzare il token per autorizzare le API Cloud Insights
++
+.. Fare clic su _autorizzare_ nella parte superiore destra della schermata Swagger
+.. Incollare il token copiato dall'alto nel campo Customer apiKey
+.. Fare clic su *autorizzare*
+.. Chiudere la finestra
+
+
+
+
+image:Manual_AU_Authorization.png[""]
+
+. Scaricare l'AU Installer utilizzando _/au/installers/{platform}/latest_ o _/au/installers/{platform}/{version}_ API:
++
+.. Piattaforma: *linux*
+.. Versione: *<version>* (più recente o specificata)
+
+
+
+
+image:Manual_AU_API_Retrieve_latest.png["API per recuperare la versione più recente dell'AU"]
+
+
+NOTE: Se non si sta scaricando la versione più recente, confermare con NetApp la versione AU da specificare per il download.
+
+. Fare clic su *Download file* (Scarica file). Se si esegue questa procedura su un sistema diverso da quello AU, copiare il file scaricato nel sistema AU.
+. In alternativa, è possibile eseguire il comando CURL risultante sul sistema AU:
++
+ curl -X GET "<tenant>/rest/v1/au/installers/linux/<AU version>" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <token>"
+. A questo punto, il file di installazione dovrebbe essere presente sul sistema AU.
+
+
+
+IMPORTANT: I passaggi successivi richiedono l'utilizzo di un token temporaneo. Non utilizzare il token di accesso API creato in precedenza.
+
+. Nello Swagger API di Cloud Insights, creare un token una tantum utilizzando l'API _/au/oneTimeToken_.
++
+.. Copia il token monouso risultante.
+
+
+
+
+image:Manual_AU_one_time_token.png[""]
+image:Manual_AU_one_time_token_response.png[""]
+
+. Sul computer in cui verrà installata l'AU, accedere alla cartella contenente il file di installazione scaricato. I comandi seguenti richiedono all'utente di disporre delle autorizzazioni root.
++
+.. Decomprimere il file di installazione
+.. Passare alla cartella del programma di installazione risultante
+.. Esportare il token una tantum e la versione del programma di installazione in variabili di ambiente eseguendo le seguenti operazioni:
++
+ export TOKEN=<One-Time Token>
+.. Eseguire le seguenti operazioni per installare ci con un utente e un gruppo personalizzati:
++
+ ./cloudinsights-install.sh <custom user> <custom group>
++
+Nota: Se non si desidera utilizzare un utente e un gruppo personalizzati, è possibile utilizzare l'utente e il gruppo "Cisys" predefiniti.  In questo caso, eseguire il comando di installazione riportato sopra ma non specificare l'utente e il gruppo.
+
+
+
+
+
+A questo punto, il software AU viene installato sul sistema ed è accessibile dall'utente e dal gruppo personalizzati. Tuttavia, non è possibile aggiungere raccolta dati. Per eseguire questa operazione manualmente, è necessario copiare il file datasources.war nella posizione corretta.
+
+. Accedere al percorso di origine per datasources.war e verificare il file zip:
++
+....
+cd /opt/netapp/cloudinsights/acq
+ls -al
+…
+-rw-rw----  1 test-user1 test-group1 282103053 Mar 12 12:27 datasources-war-<version>>.zip
+…
+....
+. Prendere nota delle autorizzazioni sulla cartella predefinita datasources.war:
++
+....
+ls -al /var/lib/netapp/cloudinsights/acq/
+…
+drwxrwx--- 2 test-user1 test-group-1  4096 Feb 16 10:10 datasources.war
+…
+....
+. Per i passi successivi, passare all'utente personalizzato (o disconnettersi da root e accedere con).
++
+ su <custom user>
++
+.. Nota: Se si utilizzano l'utente e il gruppo "cisys" predefiniti, non è necessario eseguire questo passaggio.
+.. Nota: L'utente personalizzato può essere qualsiasi utente membro di un gruppo personalizzato fornito a cloudinsights-install.sh durante l'installazione dell'AU e può essere uguale o diverso dall'utente personalizzato fornito durante l'installazione dell'AU.
+
+
+. Creare una cartella di lavoro e regolarla alle stesse autorizzazioni:
++
+....
+mkdir /var/lib/netapp/cloudinsights/acq/download
+chmod 770 /var/lib/netapp/cloudinsights/acq/download
+ls -al /var/lib/netapp/cloudinsights/acq
+…
+drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 datasources.war
+…
+....
++
+.. Nota: Se si utilizzano l'utente e il gruppo "cisys", questi verranno visualizzati nell'output riportato sopra.
+
+
+. Copiare il file _datasources-war-<version>.zip_ nella cartella di lavoro. Ad esempio:
++
+ cp /opt/netapp/cloudinsights/acq/ TBD/var/lib/netapp/cloudinsights/acq/download
+. Passare alla cartella di download e decomprimere il file:
++
+ cd /var/lib/netapp/cloudinsights/acq/download
++
+....
+unzip datasources-war-<version>.zip -d /var/lib/netapp/cloudinsights/acq/datasources.war/
+ls -al /var/lib/netapp/cloudinsights/acq/datasources.war
+....
++
+.. assicurarsi che l'utente, il gruppo e le autorizzazioni siano corretti su tutti i file:
++
+ -rw-rw---- 1 test-user2 test-group1  3420067 Mar 10 17:20 netapp_ontap.jar
+
+
+. Nota: Se si prevede di amministrare AU utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate su lettura e scrittura sia per il proprietario che per il gruppo (_chmod 660 …_)
+. Riavviare l'AU.
++
+.. In Cloud Insights, accedere a *Amministratore > raccolta dati* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.
+
+
+

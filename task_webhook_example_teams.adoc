@@ -5,10 +5,20 @@ keywords: webhook, notification, Microsoft, Teams, integration
 summary: Crea un webhook per avvisare sulle soglie di performance o inventario per i team Microsoft 
 ---
 = Esempio di Webhook per i team Microsoft
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
-[role="lead lead"]
+[role="lead"]
 I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato. Questa pagina fornisce un esempio per la configurazione di webhook per i team.
 
 

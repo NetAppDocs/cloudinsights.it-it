@@ -5,7 +5,17 @@ summary: La matrice di supporto per Data Collector contiene informazioni dettagl
 keywords: support matrix, vendor, NetApp, IBM, EMC, dell, HP, Hitachi, VMware, Huawei, OpenStack, 
 ---
 = Matrice di supporto per data collector Cloud Insights
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

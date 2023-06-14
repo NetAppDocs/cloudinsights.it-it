@@ -5,7 +5,12 @@ keywords: alert, attack, ransomware, activity, security, abnormal
 summary: 'Workload Security crea avvisi in caso di attività utente anomale o potenziale attacco. La pagina Avvisi elenca queste attività per un"analisi rapida e semplice.' 
 ---
 = Avvisi
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media
 
 
 [role="lead"]

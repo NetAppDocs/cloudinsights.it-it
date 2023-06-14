@@ -5,7 +5,12 @@ keywords: Forensic, user, user, activity
 summary: 'dettagli forensi per l"utente' 
 ---
 = Panoramica dell'utente legale
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 Le informazioni per ciascun utente sono fornite nella Panoramica utente. Utilizzare queste viste per comprendere le caratteristiche dell'utente, le entità associate e le attività recenti.

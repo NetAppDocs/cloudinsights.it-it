@@ -5,7 +5,12 @@ keywords: alert, snapshot,  attack
 summary: 'Con workload Security, puoi limitare l"accesso degli utenti in caso di sospetto sabotaggio' 
 ---
 = Blocco dell'accesso utente
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media
 
 
 [role="lead"]

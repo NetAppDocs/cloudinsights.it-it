@@ -5,7 +5,17 @@ summary: Introduzione al costo del cloud.
 keywords: analysis, cost, analyzer 
 ---
 = Introduzione al costo del cloud
+:toc: macro
+:hardbreaks:
+:toclevels: 2
 :allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]

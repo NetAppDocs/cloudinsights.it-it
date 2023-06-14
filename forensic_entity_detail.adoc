@@ -5,10 +5,18 @@ keywords: Forensic, entity, entity overview, entity behavior, detail
 summary: Dettaglio entità legale 
 ---
 = Dettaglio entità forense
+:toc: macro
+:hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
-
-toc: macro :hardbreaks: :toclevels: 1 :nofooter: :icons: font :linkattrs: :imagesdir: ./media/
 
 Utilizzare la pagina Entity Detail per accedere a informazioni dettagliate su un'entità.
 
