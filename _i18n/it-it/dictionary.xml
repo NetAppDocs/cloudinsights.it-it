@@ -11261,4 +11261,5 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="c894bcc14d41b007df81ed9d077a249c" category="list-text">Riavviare l'AU.</block>
   <block id="cd949e1f65deb02e57f3144acb21e0aa" category="list-text">In Cloud Insights, accedere a *Amministratore &gt; raccolta dati* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.</block>
   <block id="c35a33c9875991494585fbfbed175784" category="paragraph">Il <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> è possibile personalizzare l'installazione e la configurazione.</block>
+  <block id="8d44687186d37f705aa7f2282722aeb5" category="sidebar">Opzioni operatore di monitoraggio</block>
 </blocks>
