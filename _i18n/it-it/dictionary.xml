@@ -8209,7 +8209,6 @@
   <block id="d3c3f5c1a2706c55910136e97da08e3d" category="paragraph">Cloud Insights esegue audit e convalide indipendenti di terze parti da parte di una società CPA con licenza esterna in relazione alla sicurezza, ai processi e ai servizi, incluso il completamento dell'audit SOC 2.</block>
   <block id="1d292eb6751a0db171502dec84f9f7c0" category="summary">NetApp Kubernetes Monitoring Operator dispone di numerose opzioni configurabili.</block>
   <block id="57e4cf9437210e6248eb8a2137609c4e" category="doc">Opzioni di configurazione dell'operatore di monitoraggio NetApp Kubernetes</block>
-  <block id="fb1f92a623639f258302e35ca56fe965" category="paragraph">È possibile personalizzare l'installazione e la configurazione dell'operatore di monitoraggio di NetApp Kubernetes.</block>
   <block id="7753286779cc80ff196972ced13aef62" category="paragraph">La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:</block>
   <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">agente</block>
   <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">Opzioni di configurazione comuni a tutti i componenti che l'operatore può installare. Queste opzioni possono essere considerate "globali".</block>
@@ -8221,8 +8220,6 @@
   <block id="c21207144818cb50a67a3aa45ad90cc1" category="cell">Campo di testo libero che identifica in modo univoco un cluster in tutti i cluster dei clienti. Questo dovrebbe essere unico in un tenant Cloud Insights. Il valore predefinito è quello che il cliente inserisce nell'interfaccia utente per il campo "Cluster Name" (Nome cluster)</block>
   <block id="b5249bb082b669e275606cdef10879b6" category="cell">Proxy Format: Proxy: Server: Porta: Nome utente: Password: NoProxy: IsTelegrafProxyEnabled: IsAuProxyEnabled: IsFluentbitProxyEnabled: IsCollectorProxyEnabled:</block>
   <block id="f430d84b3603b6c921d2a45741baab1e" category="cell">Opzionale per il cliente per impostare il proxy. Di solito si tratta di un proxy aziendale del cliente.</block>
-  <block id="268e939178fee1d0125caa135f483ac0" category="cell">UID agente</block>
-  <block id="53984dbf2cd283b6f60a1ba6a7af0c10" category="cell">Stringa identificata in modo univoco in tutte le installazioni degli operatori Cloud Insights. Questa impostazione viene generalmente impostata automaticamente da Cloud Insights.</block>
   <block id="aa3a0177193f5479812eadbbb3e6c303" category="cell">telefono</block>
   <block id="0c8011c6947aae43789eb8972c306e85" category="cell">Opzioni di configurazione che consentono di personalizzare l'installazione di telegraf dell'operatore</block>
   <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">CollectionInterval</block>
@@ -11263,4 +11260,5 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="a0698382f5e68c4355ea29e32842015d" category="list-text">Nota: Se si prevede di amministrare AU utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate su lettura e scrittura sia per il proprietario che per il gruppo (_chmod 660 …_)</block>
   <block id="c894bcc14d41b007df81ed9d077a249c" category="list-text">Riavviare l'AU.</block>
   <block id="cd949e1f65deb02e57f3144acb21e0aa" category="list-text">In Cloud Insights, accedere a *Amministratore &gt; raccolta dati* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.</block>
+  <block id="c35a33c9875991494585fbfbed175784" category="paragraph">Il <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> è possibile personalizzare l'installazione e la configurazione.</block>
 </blocks>
