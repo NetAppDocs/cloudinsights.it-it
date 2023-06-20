@@ -3189,7 +3189,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-13 17:39:29 +0000">06/13/2023</time>
+    <time datetime="2023-06-20 15:12:03 +0000">06/20/2023</time>
     
   
 
@@ -4086,6 +4086,10 @@ Una volta verificati correttamente tutti gli artefatti, l'installazione dell'age
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NET-osservatore è un DemonSet che esegue un pod in ogni nodo del cluster k8s. • Prendere nota del pod in stato Pending (in sospeso) e verificare se si verifica un problema di risorse per la CPU o la memoria. Assicurarsi che la memoria e la CPU richieste siano disponibili nel nodo.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subito dopo l&#8217;installazione di NetApp Kubernetes Monitoring Operator, nei miei registri viene visualizzato quanto segue: [inputs.prometheus] errore nel plugin: Errore durante la richiesta HTTP a <a href="http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:" class="bare">http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:</a> Ottieni <a href="http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:" class="bare">http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:</a> dial tcp: lookube-state-metrics.&lt;namespace&gt;.svc.cluster.local: no tale host</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Questo messaggio viene visualizzato in genere solo quando viene installato un nuovo operatore e il pod <em>telegraf-rs</em> è attivo prima che il pod <em>ksm</em> sia attivo. Questi messaggi dovrebbero interrompersi una volta che tutti i pod sono in esecuzione.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster.</p></td>
 </tr>
 </tbody>
 </table>
