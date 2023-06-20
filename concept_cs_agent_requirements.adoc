@@ -29,7 +29,18 @@ NOTE: La protezione del carico di lavoro dello storage non è disponibile nell'e
 | Componente | Requisiti Linux 
 
 
-| Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti sistemi: Red Hat Enterprise Linux 7.x, 8.x 64-bit CentOS 7.x 64-bit CentOS 8 Stream Ubuntu 20 attraverso 22 64-bit Rocky 8.x 64-bit, Rocky 9.x 64-bit questo computer non deve eseguire alcun altro software a livello applicativo. Si consiglia di utilizzare un server dedicato. Se (Security Enhanced) Linux non è supportato. 
+| Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+Red Hat Enterprise Linux 7.x, 8.x a 64 bit
+CentOS 7.x a 64 bit
+Flusso CentOS 8
+Ubuntu 20 fino a 22 64 bit
+Rocky 8.x 64 bit, Rocky 9.x 64 bit
+SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
+
+Se (Security Enhanced) Linux non è supportato. 
 
 
 | Comandi | per l'installazione è necessario decomprimere. Inoltre, il comando 'sudo su –' è necessario per l'installazione, l'esecuzione di script e la disinstallazione. 

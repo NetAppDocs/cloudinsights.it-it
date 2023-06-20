@@ -7134,7 +7134,6 @@
   <block id="2cb05e4bb7830be982f0922fed86b4cd" category="cell">Componente</block>
   <block id="129f8880167531920bb3396830948e86" category="cell">Requisiti Linux</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">Sistema operativo</block>
-  <block id="c41953836f0cf08f49697db26ddf6a47" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti sistemi: Red Hat Enterprise Linux 7.x, 8.x 64-bit CentOS 7.x 64-bit CentOS 8 Stream Ubuntu 20 attraverso 22 64-bit Rocky 8.x 64-bit, Rocky 9.x 64-bit questo computer non deve eseguire alcun altro software a livello applicativo. Si consiglia di utilizzare un server dedicato. Se (Security Enhanced) Linux non è supportato.</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">Comandi</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">per l'installazione è necessario decomprimere. Inoltre, il comando 'sudo su –' è necessario per l'installazione, l'esecuzione di script e la disinstallazione.</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
@@ -11264,4 +11263,16 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="8d44687186d37f705aa7f2282722aeb5" category="sidebar">Opzioni operatore di monitoraggio</block>
   <block id="02230bab9788e4843408e124331bb1ca" category="cell">Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster.</block>
   <block id="81467098050f12a1f4ece9dea82405f0" category="cell">Verificare la versione di Kubernetes (ad es<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l'operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job.</block>
+  <block id="9f0b6346113de87bff4b194abaf599f1" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+Red Hat Enterprise Linux 7.x, 8.x a 64 bit
+CentOS 7.x a 64 bit
+Flusso CentOS 8
+Ubuntu 20 fino a 22 64 bit
+Rocky 8.x 64 bit, Rocky 9.x 64 bit
+SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
+
+Se (Security Enhanced) Linux non è supportato.</block>
 </blocks>
