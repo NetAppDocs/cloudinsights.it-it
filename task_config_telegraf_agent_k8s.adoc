@@ -509,5 +509,8 @@ Acquisire o annotare in altro modo l'output dei seguenti comandi e contattare il
 
 
 | Subito dopo l'installazione di NetApp Kubernetes Monitoring Operator, nei miei registri viene visualizzato quanto segue: [inputs.prometheus] errore nel plugin: Errore durante la richiesta HTTP a http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics:[] Ottieni http://kube-state-metrics.<namespace>.svc.cluster.local:8080/metrics:[] dial tcp: lookube-state-metrics.<namespace>.svc.cluster.local: no tale host | Questo messaggio viene visualizzato in genere solo quando viene installato un nuovo operatore e il pod _telegraf-rs_ è attivo prima che il pod _ksm_ sia attivo. Questi messaggi dovrebbero interrompersi una volta che tutti i pod sono in esecuzione. 
+
+
+| Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster. | Verificare la versione di Kubernetes (ad es `kubectl version`).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l'operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
