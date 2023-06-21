@@ -124,6 +124,12 @@ La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:
 |  | etichette | un elenco separato da virgole di risorse che le metriche di stato kube devono acquisire +++ esempio: cronjobs=[*],demonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*][+][+][+][+][+] 
 
 
+|  | CpuLimit | Limite di CPU per l'implementazione delle metriche di stato kube 
+
+
+|  | MemLimit | Limite MEM per l'implementazione delle metriche dello stato del kube 
+
+
 | registri |  | Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione dei log dell'operatore 
 
 

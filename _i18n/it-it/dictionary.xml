@@ -11275,4 +11275,6 @@ SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
 Se (Security Enhanced) Linux non è supportato.</block>
+  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">Limite di CPU per l'implementazione delle metriche di stato kube</block>
+  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">Limite MEM per l'implementazione delle metriche dello stato del kube</block>
 </blocks>
