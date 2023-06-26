@@ -31,12 +31,12 @@ NOTE: La protezione del carico di lavoro dello storage non è disponibile nell'e
 
 | Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti componenti:
 
-Red Hat Enterprise Linux 7.x, 8.x a 64 bit
-CentOS 7.x a 64 bit
-Flusso CentOS 8
+Red Hat Enterprise Linux 7.x, 8.x 64 bit, SELinux
+CentOS 7.x a 64 bit, SELinux
+CentOS 8 Stream, SELinux
 Ubuntu 20 fino a 22 64 bit
-Rocky 8.x 64 bit, Rocky 9.x 64 bit
-SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4
+Rocky 8.x 64 bit, Rocky 9.x 64 bit, SELinux
+SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinux su SUSE 15 SP3
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 

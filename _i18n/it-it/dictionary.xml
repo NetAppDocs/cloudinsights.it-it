@@ -11261,18 +11261,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="8d44687186d37f705aa7f2282722aeb5" category="sidebar">Opzioni operatore di monitoraggio</block>
   <block id="02230bab9788e4843408e124331bb1ca" category="cell">Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster.</block>
   <block id="81467098050f12a1f4ece9dea82405f0" category="cell">Verificare la versione di Kubernetes (ad es<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l'operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job.</block>
-  <block id="9f0b6346113de87bff4b194abaf599f1" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
-
-Red Hat Enterprise Linux 7.x, 8.x a 64 bit
-CentOS 7.x a 64 bit
-Flusso CentOS 8
-Ubuntu 20 fino a 22 64 bit
-Rocky 8.x 64 bit, Rocky 9.x 64 bit
-SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4
-
-Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
-
-Se (Security Enhanced) Linux non è supportato.</block>
   <block id="8b673d5f702e58efd947465ead5c9647" category="cell">Limite di CPU per l'implementazione delle metriche di stato kube</block>
   <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">Limite MEM per l'implementazione delle metriche dello stato del kube</block>
   <block id="4d0f1a88ac64f025d3fa96e291e7a276" category="section-title">Icone dell'infrastruttura:</block>
@@ -11284,4 +11272,16 @@ Se (Security Enhanced) Linux non è supportato.</block>
   <block id="ea0512b988d2823de06af98254ea6811" category="section-title">Icone mappa e monitoraggio delle performance di rete di Kubernetes:</block>
   <block id="9039c950f48328372952e360cb5e909a" category="inline-image-macro">Kubernetes Network Performance Monitoring and Map (monitoraggio e mappa delle performance di rete Kubernetes), WIDTH=640</block>
   <block id="680bf29e063b6b3133c4881cb55b6d34" category="paragraph"><block ref="680bf29e063b6b3133c4881cb55b6d34" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c21ecdc3b22488b71dfec9e5360e46ce" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+Red Hat Enterprise Linux 7.x, 8.x 64 bit, SELinux
+CentOS 7.x a 64 bit, SELinux
+CentOS 8 Stream, SELinux
+Ubuntu 20 fino a 22 64 bit
+Rocky 8.x 64 bit, Rocky 9.x 64 bit, SELinux
+SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinux su SUSE 15 SP3
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
+
+Se (Security Enhanced) Linux non è supportato.</block>
 </blocks>
