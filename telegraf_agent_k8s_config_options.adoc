@@ -112,6 +112,12 @@ La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:
 | kube-state-metrics |  | Opzioni di configurazione che possono personalizzare l'installazione delle metriche di stato kube dell'operatore 
 
 
+|  | CpuLimit | Limite di CPU per l'implementazione delle metriche di stato kube 
+
+
+|  | MemLimit | Limite MEM per l'implementazione delle metriche dello stato del kube 
+
+
 |  | CpuRequest | Richiesta di CPU per l'implementazione delle metriche di stato del kube 
 
 
@@ -122,12 +128,6 @@ La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:
 
 
 |  | etichette | un elenco separato da virgole di risorse che le metriche di stato kube devono acquisire +++ esempio: cronjobs=[*],demonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*][+][+][+][+][+] 
-
-
-|  | CpuLimit | Limite di CPU per l'implementazione delle metriche di stato kube 
-
-
-|  | MemLimit | Limite MEM per l'implementazione delle metriche dello stato del kube 
 
 
 | registri |  | Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione dei log dell'operatore 
@@ -211,13 +211,14 @@ spec:
   telegraf:
     # use these settings to fine tune data collection
     collectionInterval: 20s
-    #batchSize:
-    #bufferLimit:
-    #roundInterval:
-    #collectionJitter:
-    #precision:
-    #flushInterval:
-    #flushJitter:
+
+    # batchSize:
+    # bufferLimit:
+    # roundInterval:
+    # collectionJitter:
+    # precision:
+    # flushInterval:
+    # flushJitter:
 
     # Collect kubernetes.system_container metrics and objects in the kube-system|cattle-system namespaces for managed kubernetes clusters
     # (EKS, AKS, GKE, managed Rancher). Set this to true if you want collect these metrics.
@@ -242,6 +243,8 @@ spec:
     # rsMemRequest:
 
   kube-state-metrics:
+    # cpuLimit:
+    # memLimit:
     # cpuRequest:
     # memRequest:
 
