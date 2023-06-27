@@ -3189,7 +3189,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-27 15:17:11 +0000">06/27/2023</time>
+    <time datetime="2023-06-27 15:26:19 +0000">06/27/2023</time>
     
   
 
@@ -4090,10 +4090,6 @@ Una volta verificati correttamente tutti gli artefatti, l'installazione dell'age
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Questo messaggio viene visualizzato in genere solo quando viene installato un nuovo operatore e il pod <em>telegraf-rs</em> è attivo prima che il pod <em>ksm</em> sia attivo. Questi messaggi dovrebbero interrompersi una volta che tutti i pod sono in esecuzione.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Verificare la versione di Kubernetes (ad es <code>kubectl version</code>).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l&#8217;operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dopo aver installato l&#8217;operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione).</p></td>
 </tr>
 </tbody>
 </table>
