@@ -11284,4 +11284,8 @@ SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinu
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
 Se (Security Enhanced) Linux non è supportato.</block>
+  <block id="45698e13b1c2f7241751839133834506" category="cell">Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione).</block>
+  <block id="61f9b982e510e8aa9a5efaee7290eb4a" category="cell">Modificare la configurazione dell'agente di monitoraggio netapp e impostare _dockerMetricCollectionEnabled_ su false.  Per ulteriori dettagli, fare riferimento al manuale dell'operatore <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
+  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">DockerMetricCollectionEnabled</block>
+  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false.</block>
 </blocks>

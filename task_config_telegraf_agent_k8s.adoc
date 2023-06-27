@@ -512,5 +512,8 @@ Acquisire o annotare in altro modo l'output dei seguenti comandi e contattare il
 
 
 | Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster. | Verificare la versione di Kubernetes (ad es `kubectl version`).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l'operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job. 
+
+
+| Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione). | Modificare la configurazione dell'agente di monitoraggio netapp e impostare _dockerMetricCollectionEnabled_ su false.  Per ulteriori dettagli, fare riferimento al manuale dell'operatore link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"]. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
