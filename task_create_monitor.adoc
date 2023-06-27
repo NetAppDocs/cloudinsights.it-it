@@ -123,15 +123,11 @@ image:Monitor_Group_By_Example.png["Scegliere il registro da monitorare, imposta
 È possibile scegliere la modalità di risoluzione di un avviso di log monitor. Sono disponibili tre opzioni:
 
 * Risolvere immediatamente
-* Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e sopprime tutti gli avvisi successivi generati dal monitor fino al termine del periodo di conservazione dei dati.
-* Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione
+* Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.
+* Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.
 
 
 image:LogMonitorAlertResolution.png["Opzioni di risoluzione degli avvisi"]
-
-/// * *Risolvi immediatamente*: L'avviso viene risolto immediatamente senza ulteriori azioni * *Risolvi in base al tempo*: L'avviso viene risolto dopo il tempo specificato * *Risolvi in base alla voce di registro*: L'avviso viene risolto quando si verifica un'attività di log successiva. Ad esempio, quando un oggetto viene registrato come "disponibile".
-
-image:Monitor_log_monitor_resolution.png["Risoluzione degli avvisi"]///
 
 
 

@@ -4582,13 +4582,8 @@
   <block id="0625f5fb5e60f291ab595c8261238b23" category="section-title">Definire il comportamento di risoluzione degli avvisi</block>
   <block id="395204e03c9e6835fee3d859f3a52f45" category="paragraph">È possibile scegliere la modalità di risoluzione di un avviso di log monitor. Sono disponibili tre opzioni:</block>
   <block id="8d3d5857627846ebb0bfd18533d81373" category="list-text">Risolvere immediatamente</block>
-  <block id="17b8d34f8d949597a55a6101ce83364d" category="list-text">Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e sopprime tutti gli avvisi successivi generati dal monitor fino al termine del periodo di conservazione dei dati.</block>
-  <block id="befadb349d88b7326b91ea95e095647d" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione</block>
   <block id="e9e214a6e16f6beca61f905fa6ce3ab9" category="inline-image-macro">Opzioni di risoluzione degli avvisi</block>
   <block id="990eaf3ef2e3748beed4f15a2dc6d080" category="paragraph"><block ref="990eaf3ef2e3748beed4f15a2dc6d080" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6dfab0f82f494a8fd5d9bb100e34504b" category="paragraph">/// * *Risolvi immediatamente*: L'avviso viene risolto immediatamente senza ulteriori azioni * *Risolvi in base al tempo*: L'avviso viene risolto dopo il tempo specificato * *Risolvi in base alla voce di registro*: L'avviso viene risolto quando si verifica un'attività di log successiva. Ad esempio, quando un oggetto viene registrato come "disponibile".</block>
-  <block id="8728ea9412d646983052607068b25d61" category="inline-image-macro">Risoluzione degli avvisi</block>
-  <block id="e0155eef58f15e0fa7e34b03a853acaa" category="paragraph"><block ref="0267d15c881fe01be2ed5e9baa605285" category="inline-image-macro-rx" type="image"></block>///</block>
   <block id="0c2055379a44f0c3e3fa1c66b6e90e9d" category="section-title">Selezionare il tipo di notifica e i destinatari</block>
   <block id="89275c0783a0e53b681cf17404e53efd" category="paragraph">Nella sezione _impostare le notifiche del team_, puoi scegliere se avvisare il tuo team tramite e-mail o Webhook.</block>
   <block id="f5ea0637921e9f794d41cae2031b1d5c" category="inline-image-macro">Scegliere il metodo di avviso</block>
@@ -11284,8 +11279,6 @@ SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinu
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
 Se (Security Enhanced) Linux non è supportato.</block>
-  <block id="45698e13b1c2f7241751839133834506" category="cell">Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione).</block>
-  <block id="61f9b982e510e8aa9a5efaee7290eb4a" category="cell">Modificare la configurazione dell'agente di monitoraggio netapp e impostare _dockerMetricCollectionEnabled_ su false.  Per ulteriori dettagli, fare riferimento al manuale dell'operatore <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
-  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">DockerMetricCollectionEnabled</block>
-  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false.</block>
+  <block id="63c80d21f4266efe4883c2f6f1d26fc2" category="list-text">Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.</block>
+  <block id="46f506a87cfed781f4ca50c5456e5dea" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.</block>
 </blocks>
