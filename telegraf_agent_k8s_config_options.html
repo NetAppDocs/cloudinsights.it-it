@@ -3187,7 +3187,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-23 17:34:27 +0000">06/23/2023</time>
+    <time datetime="2023-06-27 15:17:11 +0000">06/27/2023</time>
     
   
 
@@ -3361,6 +3361,11 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Vedere <a href="https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent">"Documentazione sulla configurazione di Telegraf"</a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DockerMetricCollectionEnabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">kube-state-metrics</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opzioni di configurazione che possono personalizzare l&#8217;installazione delle metriche di stato kube dell&#8217;operatore</p></td>
@@ -3522,6 +3527,10 @@ spec:
 
     # Declare Rancher cluster as managed. Set this to true if your Rancher cluster is managed as opposed to on-premise.
     #isManagedRancher: true|false
+
+    # By default, docker metrics will be collected for on-premise, docker-based k8s deployments. To disable docker metric collection, set this to false.
+    # dockerMetricCollectionEnabled: true|false
+
 
     # Deamonset CPU/Mem limits and requests
     # dsCpuLimit:
