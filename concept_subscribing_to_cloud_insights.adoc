@@ -78,6 +78,7 @@ Il prezzo di Cloud Insights è pari a *unità gestita*. L'utilizzo delle unità 
 
 * 1 unità gestita = 2 host (qualsiasi macchina virtuale o fisica)
 * 1 unità gestita = 4 TIB di capacità non formattata di dischi fisici o virtuali
+* 1 unità gestita = 4 vCPU di Kuberentes
 
 
 Si noti che i seguenti data colleziones vengono misurati a un diverso tasso di TIB raw rispetto a quello di unità gestite. Ogni 40 TiB di capacità non formattata su questi data collettori viene addebitato come 1 unità gestita (MU):
@@ -97,7 +98,7 @@ Se il tuo ambiente include o prevede di includere 1,000 o più unità gestite, s
 
 === Stima del costo dell'abbonamento
 
-I calcolatori degli abbonamenti forniscono un costo Cloud Insights mensile stimato in base al numero di unità gestite stimato necessario. I valori correnti sono precompilati e puoi modificarli per aiutarti nella pianificazione della crescita futura stimata. È possibile regolare i valori per Infrastructure (infrastruttura), Kubernetes (Kubernetes) o entrambi.
+I calcolatori degli abbonamenti consentono di stimare il costo dell'abbonamento a Cloud Insights in base al numero di unità gestite necessarie. I valori correnti sono precompilati e puoi modificarli per aiutarti nella pianificazione della crescita futura stimata. È possibile regolare i valori per Infrastructure (infrastruttura), Kubernetes (Kubernetes) o entrambi.
 
 Il costo di listino stimato cambierà in base alla durata dell'abbonamento.
 NOTA: I calcolatori sono solo a scopo di stima. Il tuo prezzo esatto verrà impostato al momento dell'iscrizione.
@@ -148,6 +149,7 @@ La scheda Subscription Summary (Riepilogo abbonamento) visualizza quanto segue:
 * Numero di serie dell'abbonamento
 * Utilizzo corrente delle UM e "cosa succederebbe se?" stimatori dei costi
 * Link per modificare l'abbonamento
+* Viste dell'utilizzo dell'unità gestita
 
 
 
