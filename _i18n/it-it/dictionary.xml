@@ -2660,7 +2660,6 @@
   <block id="6b6a5e540baae01020db6abcb69752a2" category="list-text">Questo data collector è supportato con i seguenti elementi:</block>
   <block id="951c04e880867f48ee0c8c023c066950" category="inline-link-macro">questo problema</block>
   <block id="c335e20fcf63e64f7ad3799d0c6d5e4f" category="list-text">Data ONTAP 9.2 e versioni successive. Per ottenere prestazioni ottimali, utilizzare una versione di Data ONTAP dove <block ref="1a759d0cc6a190cf88e8cd818eb0eba6" category="inline-link-macro-rx"></block> è fisso.</block>
-  <block id="e6624b1e82461272ada2be584f22a093" category="list-text">Protocollo SMB versione 3.1 e precedenti. Si noti che la sicurezza del carico di lavoro non funziona con le configurazioni SMB che utilizzano FlexCache. A partire da ONTAP9.7, Fpolicy è supportato solo in un ambiente NFS.</block>
   <block id="a65bf0155aa66d72adb09356ef35ba5b" category="list-text">Protocollo NFS versione 4.0 e precedenti</block>
   <block id="ca25fd447f71b95ab21d53b012fa1ddc" category="list-text">FlexGroup è supportato da ONTAP 9.4 e versioni successive</block>
   <block id="1b1cd01c54254af639999400741a0b75" category="list-text">ONTAP Select è supportato</block>
@@ -11281,4 +11280,5 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
 Se (Security Enhanced) Linux non è supportato.</block>
   <block id="63c80d21f4266efe4883c2f6f1d26fc2" category="list-text">Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.</block>
   <block id="46f506a87cfed781f4ca50c5456e5dea" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.</block>
+  <block id="e3177fae37278722b7908e612a5b872b" category="list-text">Protocollo SMB versione 3.1 e precedenti.  Si noti che la sicurezza del carico di lavoro non funziona con le configurazioni SMB che utilizzano FlexCache. Nei sistemi che utilizzano FlexCache, a partire da ONTAP 9.7, Fpolicy è supportato solo in un ambiente NFS.</block>
 </blocks>
