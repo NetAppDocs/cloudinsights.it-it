@@ -43,12 +43,6 @@ Il link:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes Network 
 
 
 
-=== Creazione di report
-
-Il componente di reporting di Cloud Insights è stato chiamato nuovamente "Cloud Insights Analytics". Tuttavia, non preoccuparti, le funzionalità rimangono le stesse.
-
-
-
 === Modifiche di acquisizione/raccolta:
 
 Sono state apportate le seguenti modifiche al Data Collector/Acquisition Unit:
