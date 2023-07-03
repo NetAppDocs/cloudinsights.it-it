@@ -11168,7 +11168,6 @@ NOTA: I calcolatori sono solo a scopo di stima. Il tuo prezzo esatto verrà impo
   <block id="2d6f8cb777e4d6f5a232c7cc211f17a7" category="paragraph"><block ref="2d6f8cb777e4d6f5a232c7cc211f17a7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6300dcea0c6867921931afe8fd5ccb4b" category="section-title">Kubernetes Network Monitoring and Map è disponibile per tutti</block>
   <block id="00f8e358a2df2f5a1f3b0492b0d11763" category="paragraph">Il <block ref="bfbd4b14aa5d5e760ae10e06c192ceef" category="inline-link-macro-rx"></block> Semplifica il troubleshooting mappando le dipendenze tra i carichi di lavoro Kubernetes, fornendo visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Molti clienti lo hanno trovato utile durante l'anteprima e ora è disponibile per tutti.</block>
-  <block id="cc833fa398edd8b5e8c8888354dea479" category="paragraph">Il componente di reporting di Cloud Insights è stato chiamato nuovamente "Cloud Insights Analytics". Tuttavia, non preoccuparti, le funzionalità rimangono le stesse.</block>
   <block id="05a035fa9dd41dc72ca47e19017a5669" category="section-title">Modifiche di acquisizione/raccolta:</block>
   <block id="fce2019180d27d21008b37f6d8133ab8" category="paragraph">Sono state apportate le seguenti modifiche al Data Collector/Acquisition Unit:</block>
   <block id="799e9d9ce6893191f44a0124794ae43a" category="list-text">Le UM di Data Domain e Cohesity vengono dosate a 40 TIB: 1 MU.</block>
@@ -11283,4 +11282,6 @@ Se (Security Enhanced) Linux non è supportato.</block>
   <block id="c418d072678072a9d451ca92f8cbbcdd" category="list-text">1 unità gestita = 4 vCPU di Kuberentes</block>
   <block id="72a8f3e5ddcd565deaadfe888f6ec6ad" category="paragraph">I calcolatori degli abbonamenti consentono di stimare il costo dell'abbonamento a Cloud Insights in base al numero di unità gestite necessarie. I valori correnti sono precompilati e puoi modificarli per aiutarti nella pianificazione della crescita futura stimata. È possibile regolare i valori per Infrastructure (infrastruttura), Kubernetes (Kubernetes) o entrambi.</block>
   <block id="e83566ec8beb942e786f102a35482e5d" category="list-text">Viste dell'utilizzo dell'unità gestita</block>
+  <block id="5fe48850b2ef6a213ed01dde1958dfa4" category="section-title">Modifica di un report esistente</block>
+  <block id="5bd415396ca9b48afa3306c238307445" category="paragraph">Tenere presente che la modifica dei file nella posizione predefinita comporta il rischio di sovrascrittura dei report al successivo aggiornamento del catalogo dei report. Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione non predefinita.</block>
 </blocks>

@@ -88,6 +88,12 @@ image:Reporting_Open_From_Clipboard.png["Apertura di un report dagli Appunti"]
 
 
 
+== Modifica di un report esistente
+
+Tenere presente che la modifica dei file nella posizione predefinita comporta il rischio di sovrascrittura dei report al successivo aggiornamento del catalogo dei report. Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione non predefinita.
+
+
+
 == Risoluzione dei problemi
 
 Qui troverai suggerimenti per la risoluzione dei problemi con Reporting.
