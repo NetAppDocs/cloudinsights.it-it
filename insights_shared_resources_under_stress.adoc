@@ -43,20 +43,20 @@ Si verifica un *conflitto* o *saturazione* quando gli IOPS influiscono su altre 
 
 == Carichi di lavoro impegnativi
 
-Per iniziare a esaminare i carichi di lavoro impegnativi e influenzati nelle risorse condivise, fare clic su *Dashboard > risorse condivise sotto stress* nel menu Cloud Insights.
+Per iniziare a esaminare i carichi di lavoro impegnativi e influenzati nelle risorse condivise, fare clic su *Dashboard > Insights* e selezionare l'Insight * risorse condivise sotto stress*.
 
-image:Shared_resources_Under_Stress_menu.png["Elenco dei carichi di lavoro"]
+image:InsightsMenu.png["Menu Insight"]
 
-Cloud Insights visualizza un elenco dei carichi di lavoro in cui è stata rilevata una saturazione. Si noti che Cloud Insights mostrerà solo i carichi di lavoro in cui è stata rilevata almeno una _risorsa impegnativa_ *e* almeno una _risorsa interessata_.
+Cloud Insights visualizza un elenco dei carichi di lavoro in cui è stata rilevata una saturazione. Si noti che Cloud Insights mostrerà i carichi di lavoro in cui è stata rilevata almeno una _risorsa impegnativa_ *o* _risorsa interessata_.
 
 Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto/saturazione.
 
-image:Shared_resources_Under_Stress_SharedResource.png["Risorsa condivisa che mostra conflitti"]
+image:ResourceInsightShared.png["Risorsa condivisa che mostra conflitti"]
 
 Di seguito sono riportati due grafici che mostrano i carichi di lavoro _esigenti_ e i carichi di lavoro _interessati_ da quelli esigenti.
 
-image:Insights_Demanding_Workload_Chart.png["Grafico dei carichi di lavoro esigenti"]
-image:Insights_Impacted_Workload_Chart.png["Grafico dei carichi di lavoro interessati"]
+image:ResourceInsightDemanding.png["Grafico dei carichi di lavoro esigenti"]
+image:ResourceInsightImpacted-a.png["Grafico dei carichi di lavoro interessati"]
 
 Sotto ogni tabella è riportato un elenco dei carichi di lavoro e/o delle risorse che influiscono o sono interessate dal conflitto. Facendo clic su una risorsa (ad esempio, una macchina virtuale) si apre una pagina dei dettagli relativa a tale risorsa. Facendo clic su un workload si apre una pagina di query che mostra i pod coinvolti. Si noti che se il collegamento apre una query vuota, il pod interessato potrebbe non essere più parte del conflitto attivo. È possibile modificare l'intervallo di tempo della query per visualizzare l'elenco di pod in un intervallo di tempo maggiore o più mirato.
 
