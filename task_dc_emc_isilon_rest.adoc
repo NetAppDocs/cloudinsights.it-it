@@ -19,7 +19,7 @@ summary: Configurazione del data collector REST Dell EMC Isilon/PowerScale.
 
 
 [role="lead"]
-Cloud Insights utilizza il data collector REST di Dell EMC ISILON/PowerScale per acquisire dati di inventario e performance dallo storage Dell EMC ISILON o PowerScale.
+Cloud Insights utilizza il data collector REST di Dell EMC ISILON/PowerScale per acquisire dati di inventario e performance dallo storage Dell EMC ISILON o PowerScale. Questo collector supporta gli array che eseguono OneFS 8.0.0+.
 
 
 
@@ -60,6 +60,7 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 * Un account utente e una password. Non è necessario che questo account sia admin/root, ma È NECESSARIO concedere un numero considerevole di privilegi di sola lettura all'account di servizio (vedere la tabella riportata di seguito)
 * Indirizzo IP/Nome di dominio completo del cluster Dell EMC Isilon/PowerScale
 * Accesso HTTPS alla porta 8080
+* Cluster Isilon/PowerScale con OneFS 8.0.0 o superiore
 
 
 [cols="3*"]
