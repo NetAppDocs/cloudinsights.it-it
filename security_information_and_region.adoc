@@ -41,7 +41,7 @@ In questo modo vengono riepilogati i dati di configurazione forniti dal cliente 
 
 * Segreti
 +
-I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione Cloud Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando AES-256 e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE Cloud Insights con privilegi non sono in grado di accedere ai segreti dei clienti in formato testo semplice a causa di questo design.
+I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione Cloud Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando una crittografia asimmetrica avanzata e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE Cloud Insights con privilegi non sono in grado di accedere ai segreti dei clienti in formato testo semplice a causa di questo design.
 
 * Dati funzionali
 +
