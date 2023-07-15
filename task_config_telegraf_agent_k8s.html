@@ -3189,7 +3189,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-27 15:26:19 +0000">06/27/2023</time>
+    <time datetime="2023-07-15 04:18:14 +0000">07/15/2023</time>
     
   
 
@@ -3209,6 +3209,7 @@
 <li><a href="#configurazione-del-supporto-proxy">Configurazione del supporto proxy</a></li>
 <li><a href="#utilizzando-un-repository-di-docker-personalizzato-o-privato">Utilizzando un repository di docker personalizzato o privato</a></li>
 <li><a href="#istruzioni-per-openshift">Istruzioni per OpenShift</a></li>
+<li><a href="#tolerazioni-e-contamini">Tolerazioni e contamini</a></li>
 </ul>
 </li>
 <li><a href="#installazione-di-netapp-kubernetes-monitoring-operator">Installazione di NetApp Kubernetes Monitoring Operator</a></li>
@@ -3534,6 +3535,15 @@ runPrivileged: true</pre>
 </div>
 <div class="paragraph">
 <p>OpenShift potrebbe implementare un ulteriore livello di sicurezza che potrebbe bloccare l&#8217;accesso ad alcuni componenti di Kubernetes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tolerazioni-e-contamini">Tolerazioni e contamini</h3>
+<div class="paragraph">
+<p>I DemonSet <em>telegraf</em>, <em>fluent-bit</em> e <em>net-obever</em> devono pianificare un pod su ogni nodo del cluster per raccogliere correttamente i dati su tutti i nodi. L&#8217;operatore è stato configurato in modo da tollerare alcuni <strong>segni</strong> noti. Se sono stati configurati dei tipi di contamini personalizzati sui nodi, impedendo l&#8217;esecuzione dei pod su ogni nodo, è possibile creare una <strong>tolleranza</strong> per tali tipi di contamini <a href="telegraf_agent_k8s_config_options.html">"In <em>AgentConfiguration</em>"</a>. Se sono stati applicati dei tipi di manutenzione personalizzati a tutti i nodi del cluster, è necessario aggiungere anche le tolleranze necessarie all&#8217;implementazione dell&#8217;operatore per consentire la pianificazione e l&#8217;esecuzione del pod operatore.</p>
+</div>
+<div class="paragraph">
+<p>Scopri di più su Kubernetes <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">"Contamini e pedaggi"</a>.</p>
 </div>
 </div>
 </div>
@@ -4090,6 +4100,10 @@ Una volta verificati correttamente tutti gli artefatti, l'installazione dell'age
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Questo messaggio viene visualizzato in genere solo quando viene installato un nuovo operatore e il pod <em>telegraf-rs</em> è attivo prima che il pod <em>ksm</em> sia attivo. Questi messaggi dovrebbero interrompersi una volta che tutti i pod sono in esecuzione.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verificare la versione di Kubernetes (ad es <code>kubectl version</code>).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l&#8217;operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dopo aver installato l&#8217;operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione).</p></td>
 </tr>
 </tbody>
 </table>

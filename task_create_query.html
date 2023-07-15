@@ -3187,7 +3187,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-14 20:39:07 +0000">06/14/2023</time>
+    <time datetime="2023-07-15 04:18:14 +0000">07/15/2023</time>
     
   
 
@@ -3200,6 +3200,7 @@
 <div id="toc" class="toc">
 <div id="toctitle">Sommario</div>
 <ul class="sectlevel1">
+<li><a href="#scegliere-aggregazione-unità-formattazione-condizionale">Scegliere aggregazione, unità, Formattazione condizionale</a></li>
 <li><a href="#ulteriori-informazioni-sul-filtraggio">Ulteriori informazioni sul filtraggio</a></li>
 <li><a href="#cosa-fare-ora-che-si-ottengono-i-risultati-delle-query">Cosa fare ora che si ottengono i risultati delle query?</a></li>
 <li><a href="#le-regole-di-annotazione-richiedono-una-query">Le regole di annotazione richiedono una query</a></li>
@@ -3247,8 +3248,61 @@
 <div class="paragraph">
 <p><span class="image"><img src="./media/QuerySelectColumns.png" alt="Selezionare colonne"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scegliere-aggregazione-unità-formattazione-condizionale">Scegliere aggregazione, unità, Formattazione condizionale</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="aggregazione-e-unità">Aggregazione e unità</h3>
+<div class="paragraph">
+<p>Per le colonne "valore", è possibile perfezionare ulteriormente i risultati della query scegliendo la modalità di aggregazione dei valori visualizzati e selezionando le unità in cui tali valori vengono visualizzati. Queste opzioni si trovano selezionando il menu "tre punti" nell&#8217;angolo superiore di una colonna.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Query_Page_Aggregation_etc.png" alt="Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna"></span></p>
+</div>
+<div class="sect3">
+<h4 id="unità">Unità</h4>
+<div class="paragraph">
+<p>È possibile selezionare le unità in cui visualizzare i valori. Ad esempio, se la colonna selezionata mostra la capacità raw e i valori sono visualizzati in GiB, ma si preferisce visualizzarli come TIB, selezionare TIB dall&#8217;elenco a discesa Unit Display (visualizzazione unità).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aggregazione">Aggregazione</h4>
+<div class="paragraph">
+<p>Con lo stesso token, se i valori mostrati sono aggregati dai dati sottostanti come "medi", Tuttavia, si preferisce visualizzare la somma di tutti i valori, selezionare "somma" dal menu a discesa <em>Raggruppa per</em> (se si desidera che i valori raggruppati mostrino le somme) o dal menu a discesa <em>aggregato di tempo per</em> (se si desidera che i valori delle righe mostrino le somme dei dati sottostanti).</p>
+</div>
+<div class="paragraph">
+<p>Puoi scegliere di aggregare i punti dati raggruppati per <em>Avg, Max, min o Sum</em>.</p>
+</div>
+<div class="paragraph">
+<p>È possibile aggregare i dati delle singole righe in base a <em>Average, Last data point Acquired, Maximum, Minimum o Sum</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="formattazione-condizionale">Formattazione condizionale</h4>
+<div class="paragraph">
+<p>La formattazione condizionale consente di evidenziare le soglie a livello di avviso e critico nell&#8217;elenco dei risultati della query, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Query_Page_Conditional_Formatting.png" alt="Formattazione condizionale nella pagina di query"></span></p>
+</div>
+<div class="paragraph">
+<p>La formattazione condizionale viene impostata separatamente per ciascuna colonna. Ad esempio, è possibile scegliere un set di soglie per una colonna di capacità e un altro set per una colonna di throughput.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rinominare-la-colonna">Rinominare la colonna</h4>
+<div class="paragraph">
+<p>La ridenominazione di una colonna modifica il nome visualizzato nell&#8217;elenco risultati query. Il nome della nuova colonna viene visualizzato anche nel file risultante se si esporta l&#8217;elenco di query in formato .CSV.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="salva">Salva</h3>
 <div class="paragraph">
 <p>Dopo aver configurato la query per visualizzare i risultati desiderati, fare clic sul pulsante <strong>Save</strong> (Salva) per salvare la query per un utilizzo futuro. Assegna un nome significativo e unico.</p>
+</div>
 </div>
 </div>
 </div>

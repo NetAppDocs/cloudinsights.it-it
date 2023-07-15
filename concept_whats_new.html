@@ -3187,7 +3187,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-29 20:38:43 +0000">06/29/2023</time>
+    <time datetime="2023-07-15 04:18:14 +0000">07/15/2023</time>
     
   
 
@@ -3202,6 +3202,17 @@
 <div id="toc" class="toc">
 <div id="toctitle">Sommario</div>
 <ul class="sectlevel1">
+<li><a href="#luglio-2023">Luglio 2023</a>
+<ul class="sectlevel2">
+<li><a href="#mostra-modifiche-recenti">Mostra modifiche recenti</a></li>
+<li><a href="#miglioramenti-per-loperatore">Miglioramenti per l&#8217;operatore</a></li>
+<li><a href="#insight-recuperare-lo-storage-a-freddo">Insight: Recuperare lo storage a freddo</a></li>
+<li><a href="#firma-immagine-operatore">Firma immagine operatore</a></li>
+<li><a href="#aggregazione-formattazione-condizionale-e-altro-ancora-per-le-query">Aggregazione, formattazione condizionale e altro ancora per le query</a></li>
+<li><a href="#api-per-laudit">API per l&#8217;audit</a></li>
+<li><a href="#data-collector-trident-economy">Data Collector: Trident Economy</a></li>
+</ul>
+</li>
 <li><a href="#giugno-2023">Giugno 2023</a>
 <ul class="sectlevel2">
 <li><a href="#verifica-lutilizzo">Verifica l&#8217;utilizzo</a></li>
@@ -3624,6 +3635,92 @@ Alcune di queste funzionalità potrebbero non essere disponibili nell&#8217;ediz
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="luglio-2023">Luglio 2023</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="mostra-modifiche-recenti">Mostra modifiche recenti</h3>
+<div class="paragraph">
+<p>Le landing page di Data Collector ora includono un elenco di modifiche recenti. Fai clic sul pulsante "Recent Changes" (modifiche recenti) nella parte inferiore della landing page del data collector per visualizzare le modifiche recenti del data collector.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Recent_Changes_Example.png" alt="Esempio di modifiche recenti"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="miglioramenti-per-loperatore">Miglioramenti per l&#8217;operatore</h3>
+<div class="paragraph">
+<p>Sono stati apportati i seguenti miglioramenti <a href="/telegraf_agent_k8s_config_options.html">"Operatore Kubernetes"</a> implementazione:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opzione per ignorare la raccolta di metriche docker</p>
+</li>
+<li>
+<p>Possibilità di aggiungere e personalizzare le tolleranze ai set di demoni e repliche di telegraf</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="insight-recuperare-lo-storage-a-freddo">Insight: Recuperare lo storage a freddo</h3>
+<div class="paragraph">
+<p>Il <a href="insights_reclaim_ontap_cold_storage.html">"Recuperare le informazioni sullo storage a freddo di ONTAP"</a> Ora supporta FlexGroups ed è ora disponibile per tutti i clienti.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="firma-immagine-operatore">Firma immagine operatore</h3>
+<div class="paragraph">
+<p>Per i clienti che utilizzano un repository privato per il proprio operatore di monitoraggio Kubernetes NetApp, è ora possibile copiare la chiave pubblica della firma immagine durante l&#8217;installazione dell&#8217;operatore, consentendo di confermare l&#8217;autenticità del software scaricato. Selezionare il pulsante <em>Copy Image Signature Public Key</em> durante la fase opzionale per <em>caricare l&#8217;immagine dell&#8217;operatore nel repository privato</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Operator_Public_Image_Key.png" alt="Scarica la chiave pubblica"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="aggregazione-formattazione-condizionale-e-altro-ancora-per-le-query">Aggregazione, formattazione condizionale e altro ancora per le query</h3>
+<div class="paragraph">
+<p>Aggregazione, selezione dell&#8217;unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <a href="/task_create_query.html">"Query"</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Query_Page_Aggregation_etc.png" alt="Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna"></span></p>
+</div>
+<div class="paragraph">
+<p>Queste funzionalità sono ora disponibili per i dati di tipo integrato (Kubernetes, metriche avanzate ONTAP, ecc.) e saranno presto disponibili per gli oggetti infrastruttura (storage, volume, switch, ecc.).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-per-laudit">API per l&#8217;audit</h3>
+<div class="paragraph">
+<p>È ora possibile utilizzare un&#8217;API per eseguire query o esportare eventi controllati. Accedere a Admin &gt; API Access (Amministrazione &gt; accesso API) e selezionare il collegamento <em>API Documentation</em> (documentazione API) per informazioni.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Audit_API_Swagger.png" alt="API Swagger for Audit, width=400"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-collector-trident-economy">Data Collector: Trident Economy</h3>
+<div class="paragraph">
+<p>Cloud Insights ora supporta il driver economico Trident, ottenendo questi vantaggi:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ottieni visibilità sulla mappatura del Qtree pod-to-ONTAP e sulle metriche delle performance.</p>
+</li>
+<li>
+<p>Risoluzione dei problemi perfetta e facile navigazione dai pod Kubernetes allo storage back-end</p>
+</li>
+<li>
+<p>Rilevamento proattivo dei problemi di performance back-end con i monitor</p>
+</li>
+</ul>
+</div>
+<hr>
 </div>
 </div>
 </div>
