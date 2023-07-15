@@ -204,6 +204,14 @@ OpenShift potrebbe implementare un ulteriore livello di sicurezza che potrebbe b
 
 
 
+=== Tolerazioni e contamini
+
+I DemonSet _telegraf_, _fluent-bit_ e _net-obever_ devono pianificare un pod su ogni nodo del cluster per raccogliere correttamente i dati su tutti i nodi. L'operatore è stato configurato in modo da tollerare alcuni *segni* noti. Se sono stati configurati dei tipi di contamini personalizzati sui nodi, impedendo l'esecuzione dei pod su ogni nodo, è possibile creare una *tolleranza* per tali tipi di contamini link:telegraf_agent_k8s_config_options.html["In _AgentConfiguration_"]. Se sono stati applicati dei tipi di manutenzione personalizzati a tutti i nodi del cluster, è necessario aggiungere anche le tolleranze necessarie all'implementazione dell'operatore per consentire la pianificazione e l'esecuzione del pod operatore.
+
+Scopri di più su Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/["Contamini e pedaggi"].
+
+
+
 == Installazione di NetApp Kubernetes Monitoring Operator
 
 image:NKMO-Instructions-1.png[""]
@@ -512,5 +520,8 @@ Acquisire o annotare in altro modo l'output dei seguenti comandi e contattare il
 
 
 | Non vedo alcuna metrica raccolta per Kubernetes Cronjobs che esiste nel mio cluster. | Verificare la versione di Kubernetes (ad es `kubectl version`).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release di metriche dello stato kube implementata con l'operatore di monitoraggio Kubernetes di NetApp supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job. 
+
+
+| Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione). | Modificare la configurazione dell'agente di monitoraggio netapp e impostare _dockerMetricCollectionEnabled_ su false.  Per ulteriori dettagli, fare riferimento al manuale dell'operatore link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"]. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].

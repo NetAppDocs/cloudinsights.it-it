@@ -44,6 +44,54 @@ L'elenco dei risultati della query mostra una serie di colonne predefinite, a se
 
 image:QuerySelectColumns.png["Selezionare colonne"]
 
+
+
+== Scegliere aggregazione, unità, Formattazione condizionale
+
+
+
+=== Aggregazione e unità
+
+Per le colonne "valore", è possibile perfezionare ulteriormente i risultati della query scegliendo la modalità di aggregazione dei valori visualizzati e selezionando le unità in cui tali valori vengono visualizzati. Queste opzioni si trovano selezionando il menu "tre punti" nell'angolo superiore di una colonna.
+
+image:Query_Page_Aggregation_etc.png["Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna"]
+
+
+
+==== Unità
+
+È possibile selezionare le unità in cui visualizzare i valori. Ad esempio, se la colonna selezionata mostra la capacità raw e i valori sono visualizzati in GiB, ma si preferisce visualizzarli come TIB, selezionare TIB dall'elenco a discesa Unit Display (visualizzazione unità).
+
+
+
+==== Aggregazione
+
+Con lo stesso token, se i valori mostrati sono aggregati dai dati sottostanti come "medi", Tuttavia, si preferisce visualizzare la somma di tutti i valori, selezionare "somma" dal menu a discesa _Raggruppa per_ (se si desidera che i valori raggruppati mostrino le somme) o dal menu a discesa _aggregato di tempo per_ (se si desidera che i valori delle righe mostrino le somme dei dati sottostanti).
+
+Puoi scegliere di aggregare i punti dati raggruppati per _Avg, Max, min o Sum_.
+
+È possibile aggregare i dati delle singole righe in base a _Average, Last data point Acquired, Maximum, Minimum o Sum_.
+
+
+
+==== Formattazione condizionale
+
+La formattazione condizionale consente di evidenziare le soglie a livello di avviso e critico nell'elenco dei risultati della query, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.
+
+image:Query_Page_Conditional_Formatting.png["Formattazione condizionale nella pagina di query"]
+
+La formattazione condizionale viene impostata separatamente per ciascuna colonna. Ad esempio, è possibile scegliere un set di soglie per una colonna di capacità e un altro set per una colonna di throughput.
+
+
+
+==== Rinominare la colonna
+
+La ridenominazione di una colonna modifica il nome visualizzato nell'elenco risultati query. Il nome della nuova colonna viene visualizzato anche nel file risultante se si esporta l'elenco di query in formato .CSV.
+
+
+
+=== Salva
+
 Dopo aver configurato la query per visualizzare i risultati desiderati, fare clic sul pulsante *Save* (Salva) per salvare la query per un utilizzo futuro. Assegna un nome significativo e unico.
 
 

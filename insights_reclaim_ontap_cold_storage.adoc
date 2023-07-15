@@ -21,9 +21,6 @@ summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle
 [role="lead"]
 L'analisi di _recupero dello storage a freddo ONTAP_ fornisce dati sulla capacità a freddo, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP.
 
-
-NOTE: L'analisi di _recupero dello storage a freddo ONTAP_ è considerata una link:concept_preview_features.html["_Anteprima_"] ed è pertanto soggetto a modifiche.
-
 Per visualizzare queste informazioni, accedere a *Dashboard > informazioni* e dare un'occhiata alle _informazioni sullo storage a freddo ONTAP_. Tenere presente che questa analisi elencherà solo le memorie interessate se Cloud Insights ha rilevato il cold storage, altrimenti verrà visualizzato un messaggio "tutto chiaro".
 
 Tenere presente che i dati cold meno di 30 giorni non vengono visualizzati.

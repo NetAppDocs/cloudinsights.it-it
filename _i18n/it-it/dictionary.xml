@@ -4378,7 +4378,6 @@
   <block id="82976cdea05b7eb7fbe896786a79f35b" category="paragraph">Sì, Cloud Insights rileva e mappa dinamicamente i costrutti logici e fisici, fornendo una vista topologia end-to-end interattiva di calcolo, fabric, virtualizzatori e storage back-end. Le icone della topologia consentono di accedere rapidamente alle risorse interessate e di identificare i carichi di lavoro e le violazioni negli ambienti di storage condivisi.</block>
   <block id="9d6898c9d6fff2bd62d85b66643bb3d1" category="doc">Approfondimenti: Recuperare lo storage a freddo ONTAP</block>
   <block id="0d76fbb36f181c92649274af9d5b537e" category="paragraph">L'analisi di _recupero dello storage a freddo ONTAP_ fornisce dati sulla capacità a freddo, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP.</block>
-  <block id="dc258ad625dfe61afe78bdd8eaced72a" category="admonition">L'analisi di _recupero dello storage a freddo ONTAP_ è considerata una <block ref="27c8300c0999ba5a7834ba70e02e86cc" category="inline-link-macro-rx"></block> ed è pertanto soggetto a modifiche.</block>
   <block id="62cbec5499f7528b78b111c904e78b71" category="paragraph">Per visualizzare queste informazioni, accedere a *Dashboard &gt; informazioni* e dare un'occhiata alle _informazioni sullo storage a freddo ONTAP_. Tenere presente che questa analisi elencherà solo le memorie interessate se Cloud Insights ha rilevato il cold storage, altrimenti verrà visualizzato un messaggio "tutto chiaro".</block>
   <block id="d752ee7de9162d5e0fa475e8a383ea29" category="paragraph">Tenere presente che i dati cold meno di 30 giorni non vengono visualizzati.</block>
   <block id="da69b960f5bb93c02fdd4886868836f6" category="inline-image-macro">Elenco di Insight che mostra 3 storage con dati cold</block>
@@ -8253,7 +8252,6 @@
   <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">risorse</block>
   <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">un elenco separato da virgole di risorse da acquisire. esempio: cronjobs,demonset,implementazioni,inserimenti,job,namespaces,nodi,persistentvolumeclaims, persistentvolumes,pod,replicasets,resourcequotas,servizi,statefulsets</block>
   <block id="42cecfeff00cc916fef4f64e7b921079" category="cell">etichette</block>
-  <block id="d250be49afad7b894de05a3b7ae8bbae" category="cell">un elenco separato da virgole di risorse che le metriche di stato kube devono acquisire +++ esempio: cronjobs=[*],demonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*][+][+][+][+][+]</block>
   <block id="2165e4fa5bddb65a31f6a0c495c2fa37" category="cell">registri</block>
   <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione dei log dell'operatore</block>
   <block id="031104420a282e1bdb63e280c40a4938" category="cell">ReadFromHead</block>
@@ -11288,4 +11286,77 @@ Se (Security Enhanced) Linux non è supportato.</block>
   <block id="ba538d1194e2af4196c883d4ad4d8417" category="paragraph">Cloud Insights utilizza il data collector REST di Dell EMC ISILON/PowerScale per acquisire dati di inventario e performance dallo storage Dell EMC ISILON o PowerScale. Questo collector supporta gli array che eseguono OneFS 8.0.0+.</block>
   <block id="6776f941038bab0f04ff47368b5bef54" category="list-text">Cluster Isilon/PowerScale con OneFS 8.0.0 o superiore</block>
   <block id="ffa95e8fd7e458c2481c8a1213dd74e9" category="paragraph">I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione Cloud Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando una crittografia asimmetrica avanzata e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE Cloud Insights con privilegi non sono in grado di accedere ai segreti dei clienti in formato testo semplice a causa di questo design.</block>
+  <block id="16601c709d6f082c4421fe1d28974834" category="section-title">Scegliere aggregazione, unità, Formattazione condizionale</block>
+  <block id="0a9f1c237356720961c024fce3f78a12" category="section-title">Aggregazione e unità</block>
+  <block id="c4d2b1e614724dc8838bf027b78d7fe8" category="paragraph">Per le colonne "valore", è possibile perfezionare ulteriormente i risultati della query scegliendo la modalità di aggregazione dei valori visualizzati e selezionando le unità in cui tali valori vengono visualizzati. Queste opzioni si trovano selezionando il menu "tre punti" nell'angolo superiore di una colonna.</block>
+  <block id="4d5e2bd7c10a04613e320165a2aef636" category="inline-image-macro">Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna</block>
+  <block id="6359b5d0dddbd864f91ddfec03e1db49" category="paragraph"><block ref="6359b5d0dddbd864f91ddfec03e1db49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5771a362d88a71a657bfcd21ca54b3f" category="section-title">Unità</block>
+  <block id="ae2ad730f8b9e34404a53be6603eb8e4" category="paragraph">È possibile selezionare le unità in cui visualizzare i valori. Ad esempio, se la colonna selezionata mostra la capacità raw e i valori sono visualizzati in GiB, ma si preferisce visualizzarli come TIB, selezionare TIB dall'elenco a discesa Unit Display (visualizzazione unità).</block>
+  <block id="d9ceca6b3a280ab6926157d124ea15d7" category="section-title">Aggregazione</block>
+  <block id="e108aa85577531fd71feda784d41caf3" category="paragraph">Con lo stesso token, se i valori mostrati sono aggregati dai dati sottostanti come "medi", Tuttavia, si preferisce visualizzare la somma di tutti i valori, selezionare "somma" dal menu a discesa _Raggruppa per_ (se si desidera che i valori raggruppati mostrino le somme) o dal menu a discesa _aggregato di tempo per_ (se si desidera che i valori delle righe mostrino le somme dei dati sottostanti).</block>
+  <block id="4a0aedb71a2047b4501702b3bbc92002" category="paragraph">Puoi scegliere di aggregare i punti dati raggruppati per _Avg, Max, min o Sum_.</block>
+  <block id="93ad26b5f738a3399877d18e809c4ffe" category="paragraph">È possibile aggregare i dati delle singole righe in base a _Average, Last data point Acquired, Maximum, Minimum o Sum_.</block>
+  <block id="d07a67a9bf91a7e251537433f822107d" category="section-title">Formattazione condizionale</block>
+  <block id="b286203207ee36be1b0daa6eb3a4e2f8" category="paragraph">La formattazione condizionale consente di evidenziare le soglie a livello di avviso e critico nell'elenco dei risultati della query, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.</block>
+  <block id="4c941a5536be07eee34fa9b29bd005c9" category="inline-image-macro">Formattazione condizionale nella pagina di query</block>
+  <block id="077eb3e55847ad3494e20a7b4b22abfd" category="paragraph"><block ref="077eb3e55847ad3494e20a7b4b22abfd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a83a3620bfc4182656b8b3bba751d85b" category="paragraph">La formattazione condizionale viene impostata separatamente per ciascuna colonna. Ad esempio, è possibile scegliere un set di soglie per una colonna di capacità e un altro set per una colonna di throughput.</block>
+  <block id="b416aba7067608c1cc6b8c37ef3753a2" category="section-title">Rinominare la colonna</block>
+  <block id="c478709a4fc402ef4317c5de6580c96f" category="paragraph">La ridenominazione di una colonna modifica il nome visualizzato nell'elenco risultati query. Il nome della nuova colonna viene visualizzato anche nel file risultante se si esporta l'elenco di query in formato .CSV.</block>
+  <block id="c9cc8cce247e49bae79f15173ce97354" category="section-title">Salva</block>
+  <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">Luglio 2023</block>
+  <block id="8d6bad49c4eea7a9cf27fd507f44022c" category="section-title">Mostra modifiche recenti</block>
+  <block id="210e83cd3251fb18d6b85fcfa343be97" category="paragraph">Le landing page di Data Collector ora includono un elenco di modifiche recenti. Fai clic sul pulsante "Recent Changes" (modifiche recenti) nella parte inferiore della landing page del data collector per visualizzare le modifiche recenti del data collector.</block>
+  <block id="f7796a8f8185c8c1d264bce4bad25eee" category="inline-image-macro">Esempio di modifiche recenti</block>
+  <block id="57c43929c060c6b6731a95fee2e6ac4b" category="paragraph"><block ref="57c43929c060c6b6731a95fee2e6ac4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7106bac801506d89011c164f7281f183" category="section-title">Miglioramenti per l'operatore</block>
+  <block id="c6d80de9d1332fa033db27b32896a7ca" category="paragraph">Sono stati apportati i seguenti miglioramenti <block ref="89b3ece041fc6e3eaf91d1f18cb70562" category="inline-link-macro-rx"></block> implementazione:</block>
+  <block id="2a81267b1c9c4611addccc58ffea4ce5" category="list-text">Opzione per ignorare la raccolta di metriche docker</block>
+  <block id="62643d895d41437dc1854e6321bbca7d" category="list-text">Possibilità di aggiungere e personalizzare le tolleranze ai set di demoni e repliche di telegraf</block>
+  <block id="4157bbc9478996de33c632d1be8b4617" category="section-title">Insight: Recuperare lo storage a freddo</block>
+  <block id="82f32ca1972e78989f469529f9e93e21" category="inline-link-macro">Recuperare le informazioni sullo storage a freddo di ONTAP</block>
+  <block id="2703e92da2def9a17ac70dcd90bd8ab5" category="paragraph">Il <block ref="a08e2a6a27f9f88fce91a86a2a4aaa0e" category="inline-link-macro-rx"></block> Ora supporta FlexGroups ed è ora disponibile per tutti i clienti.</block>
+  <block id="ffd94c31fd478610bae8a28f858f4967" category="section-title">Firma immagine operatore</block>
+  <block id="b58a6be98adebdc6de5cd79aa5cf7223" category="paragraph">Per i clienti che utilizzano un repository privato per il proprio operatore di monitoraggio Kubernetes NetApp, è ora possibile copiare la chiave pubblica della firma immagine durante l'installazione dell'operatore, consentendo di confermare l'autenticità del software scaricato. Selezionare il pulsante _Copy Image Signature Public Key_ durante la fase opzionale per _caricare l'immagine dell'operatore nel repository privato_.</block>
+  <block id="b48c3957268aba1d2cb9774cdfb76b1a" category="inline-image-macro">Scarica la chiave pubblica</block>
+  <block id="241e648e3eaa9f9b228db06a6cf403f7" category="paragraph"><block ref="241e648e3eaa9f9b228db06a6cf403f7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="659e26ba67b278fd61383664fb1ed670" category="section-title">Aggregazione, formattazione condizionale e altro ancora per le query</block>
+  <block id="7d7ce3fd83ffcf864f9c0285f8d8b6ab" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="f011edc734cda8dc5136e8e133afbd9b" category="inline-link-macro-rx"></block>.</block>
+  <block id="2b88de4b6bcbafe41a9b2e66846672ee" category="paragraph">Queste funzionalità sono ora disponibili per i dati di tipo integrato (Kubernetes, metriche avanzate ONTAP, ecc.) e saranno presto disponibili per gli oggetti infrastruttura (storage, volume, switch, ecc.).</block>
+  <block id="2b4c43183ba48840a9a245b4b11ed0f1" category="section-title">API per l'audit</block>
+  <block id="8b0aa17c3cd1f148c8d84b8d9eade119" category="paragraph">È ora possibile utilizzare un'API per eseguire query o esportare eventi controllati. Accedere a Admin &gt; API Access (Amministrazione &gt; accesso API) e selezionare il collegamento _API Documentation_ (documentazione API) per informazioni.</block>
+  <block id="f0d8b3eaae91d14b5849226503f1f130" category="inline-image-macro">API Swagger for Audit, width=400</block>
+  <block id="08eebc22528b6ae269764bbbfbd37d98" category="paragraph"><block ref="08eebc22528b6ae269764bbbfbd37d98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9d9cc2d70ab2dbd66579e01f859b8da3" category="section-title">Data Collector: Trident Economy</block>
+  <block id="3b9a2bab6a97ecd5c040555f8147b32b" category="paragraph">Cloud Insights ora supporta il driver economico Trident, ottenendo questi vantaggi:</block>
+  <block id="5b51c0421974fa9b23cfbe623de43e2e" category="list-text">Ottieni visibilità sulla mappatura del Qtree pod-to-ONTAP e sulle metriche delle performance.</block>
+  <block id="0e6dfce910a8488d971baa1019611d0e" category="list-text">Risoluzione dei problemi perfetta e facile navigazione dai pod Kubernetes allo storage back-end</block>
+  <block id="d43e029b6a4626717198326d15889721" category="list-text">Rilevamento proattivo dei problemi di performance back-end con i monitor</block>
+  <block id="ae233b4bee0ed9f611ffe211f5804e00" category="section-title">Tolerazioni e contamini</block>
+  <block id="6aae913b976c156306d8a5cbbbc06ad5" category="inline-link-macro">In _AgentConfiguration_</block>
+  <block id="896815f9ea37359e86504cac9ab58b31" category="paragraph">I DemonSet _telegraf_, _fluent-bit_ e _net-obever_ devono pianificare un pod su ogni nodo del cluster per raccogliere correttamente i dati su tutti i nodi. L'operatore è stato configurato in modo da tollerare alcuni *segni* noti. Se sono stati configurati dei tipi di contamini personalizzati sui nodi, impedendo l'esecuzione dei pod su ogni nodo, è possibile creare una *tolleranza* per tali tipi di contamini <block ref="dc90f93af5ccf5020646213d9b7d2c3d" category="inline-link-macro-rx"></block>. Se sono stati applicati dei tipi di manutenzione personalizzati a tutti i nodi del cluster, è necessario aggiungere anche le tolleranze necessarie all'implementazione dell'operatore per consentire la pianificazione e l'esecuzione del pod operatore.</block>
+  <block id="e1e08e40036f927a0e660c22aa837f88" category="inline-link-macro">Contamini e pedaggi</block>
+  <block id="9680829f0eb82d9736ac7fe477135a87" category="paragraph">Scopri di più su Kubernetes <block ref="2a69bcb19ea6a4db3f5d1b466ff78e77" category="inline-link-macro-rx"></block>.</block>
+  <block id="45698e13b1c2f7241751839133834506" category="cell">Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i registri del pod indicano "su: Authentication failure" (su: Errore di autenticazione).</block>
+  <block id="61f9b982e510e8aa9a5efaee7290eb4a" category="cell">Modificare la configurazione dell'agente di monitoraggio netapp e impostare _dockerMetricCollectionEnabled_ su false.  Per ulteriori dettagli, fare riferimento al manuale dell'operatore <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
+  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">DockerMetricCollectionEnabled</block>
+  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false.</block>
+  <block id="bb0a12c3834207119851374142a76ac0" category="cell">DsTolerazioni</block>
+  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">teletegraf-ds tollerazioni aggiuntive.</block>
+  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">RsTolerazioni</block>
+  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">tollerazioni aggiuntive di telegraf-rs.</block>
+  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">tollerazioni</block>
+  <block id="c511c601aee805f46f3767063104cdd8" category="cell">tolleranze aggiuntive delle metriche dello stato del kube.</block>
+  <block id="cea61529c4fbcfd86c0a3459bc229a87" category="cell">un elenco separato da virgole di risorse che kube-state-metrics dovrebbe acquisire
+
++++
+esempio: cronjobs=[*],demonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*],
+persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*]
++++</block>
+  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">tolleranza ai bit fluente</block>
+  <block id="035bf5f67349238f72eae5d508efac99" category="cell">tolleranza aggiuntiva ai bit fluenti.</block>
+  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">tolleranza-evento-esportatore</block>
+  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">tolleranza aggiuntiva per gli esportatori di eventi.</block>
+  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-tollerazioni</block>
 </blocks>
