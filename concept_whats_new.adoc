@@ -39,7 +39,7 @@ image:Recent_Changes_Example.png["Esempio di modifiche recenti"]
 
 === Miglioramenti per l'operatore
 
-Sono stati apportati i seguenti miglioramenti link:/telegraf_agent_k8s_config_options.html["Operatore Kubernetes"] implementazione:
+Sono stati apportati i seguenti miglioramenti link:telegraf_agent_k8s_config_options.html["Operatore Kubernetes"] implementazione:
 
 * Opzione per ignorare la raccolta di metriche docker
 * Possibilità di aggiungere e personalizzare le tolleranze ai set di demoni e repliche di telegraf
@@ -63,7 +63,7 @@ image:Operator_Public_Image_Key.png["Scarica la chiave pubblica"]
 
 === Aggregazione, formattazione condizionale e altro ancora per le query
 
-Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per link:/task_create_query.html["Query"].
+Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per link:task_create_query.html["Query"].
 
 image:Query_Page_Aggregation_etc.png["Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna"]
 

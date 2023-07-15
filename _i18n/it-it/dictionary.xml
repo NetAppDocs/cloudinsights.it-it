@@ -11311,7 +11311,6 @@ Se (Security Enhanced) Linux non è supportato.</block>
   <block id="f7796a8f8185c8c1d264bce4bad25eee" category="inline-image-macro">Esempio di modifiche recenti</block>
   <block id="57c43929c060c6b6731a95fee2e6ac4b" category="paragraph"><block ref="57c43929c060c6b6731a95fee2e6ac4b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7106bac801506d89011c164f7281f183" category="section-title">Miglioramenti per l'operatore</block>
-  <block id="c6d80de9d1332fa033db27b32896a7ca" category="paragraph">Sono stati apportati i seguenti miglioramenti <block ref="89b3ece041fc6e3eaf91d1f18cb70562" category="inline-link-macro-rx"></block> implementazione:</block>
   <block id="2a81267b1c9c4611addccc58ffea4ce5" category="list-text">Opzione per ignorare la raccolta di metriche docker</block>
   <block id="62643d895d41437dc1854e6321bbca7d" category="list-text">Possibilità di aggiungere e personalizzare le tolleranze ai set di demoni e repliche di telegraf</block>
   <block id="4157bbc9478996de33c632d1be8b4617" category="section-title">Insight: Recuperare lo storage a freddo</block>
@@ -11322,7 +11321,6 @@ Se (Security Enhanced) Linux non è supportato.</block>
   <block id="b48c3957268aba1d2cb9774cdfb76b1a" category="inline-image-macro">Scarica la chiave pubblica</block>
   <block id="241e648e3eaa9f9b228db06a6cf403f7" category="paragraph"><block ref="241e648e3eaa9f9b228db06a6cf403f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="659e26ba67b278fd61383664fb1ed670" category="section-title">Aggregazione, formattazione condizionale e altro ancora per le query</block>
-  <block id="7d7ce3fd83ffcf864f9c0285f8d8b6ab" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="f011edc734cda8dc5136e8e133afbd9b" category="inline-link-macro-rx"></block>.</block>
   <block id="2b88de4b6bcbafe41a9b2e66846672ee" category="paragraph">Queste funzionalità sono ora disponibili per i dati di tipo integrato (Kubernetes, metriche avanzate ONTAP, ecc.) e saranno presto disponibili per gli oggetti infrastruttura (storage, volume, switch, ecc.).</block>
   <block id="2b4c43183ba48840a9a245b4b11ed0f1" category="section-title">API per l'audit</block>
   <block id="8b0aa17c3cd1f148c8d84b8d9eade119" category="paragraph">È ora possibile utilizzare un'API per eseguire query o esportare eventi controllati. Accedere a Admin &gt; API Access (Amministrazione &gt; accesso API) e selezionare il collegamento _API Documentation_ (documentazione API) per informazioni.</block>
@@ -11359,4 +11357,6 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
   <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">tolleranza-evento-esportatore</block>
   <block id="bac5ce71f32beb834c27a988cad33543" category="cell">tolleranza aggiuntiva per gli esportatori di eventi.</block>
   <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-tollerazioni</block>
+  <block id="259addbbe43276d62a91ef44d4dd55a8" category="paragraph">Sono stati apportati i seguenti miglioramenti <block ref="b13d2921c99b8ae4a991204f54e7f54b" category="inline-link-macro-rx"></block> implementazione:</block>
+  <block id="e69cca83cc71ef5f7c5439d8944e108d" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="2b0568ca01fc8a058b93978c376cc13e" category="inline-link-macro-rx"></block>.</block>
 </blocks>
