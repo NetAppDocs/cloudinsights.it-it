@@ -11358,5 +11358,5 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
   <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-tollerazioni</block>
   <block id="259addbbe43276d62a91ef44d4dd55a8" category="paragraph">Sono stati apportati i seguenti miglioramenti <block ref="b13d2921c99b8ae4a991204f54e7f54b" category="inline-link-macro-rx"></block> implementazione:</block>
   <block id="e69cca83cc71ef5f7c5439d8944e108d" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="2b0568ca01fc8a058b93978c376cc13e" category="inline-link-macro-rx"></block>.</block>
-  <block id="e8b13bb5980b04b84716acf64b3b0abb" category="paragraph">Modificare l'implementazione dell'operatore di monitoraggio in operator-config.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</block>
+  <block id="8b4599b5810466dc4e8956fc5bc3c54c" category="paragraph">Modificare l'implementazione dell'operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</block>
 </blocks>
