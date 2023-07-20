@@ -8775,7 +8775,6 @@
   <block id="e081b29a739e8831bbe1f8ad1c2a2859" category="paragraph">Mappa e performance di rete</block>
   <block id="a050c9f3e338616510e46bf6d9714f64" category="list-text">ci-net-osservatore</block>
   <block id="a3cdf80b89a5235481aa9bc21b5857e9" category="paragraph">Trasferire l'immagine del gestore nel repository del supporto privato/locale/aziendale in base alle policy aziendali. Assicurarsi che i tag delle immagini e i percorsi delle directory per queste immagini nel repository siano coerenti con quelli nel repository Cloud Insights.</block>
-  <block id="8b4599b5810466dc4e8956fc5bc3c54c" category="paragraph">Modificare l'implementazione dell'operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</block>
   <block id="49174c164a8c6cc17236236504f05c4e" category="paragraph">Modificare la configurazione dell'agente in operator-config.yaml in modo che rifletta la nuova posizione del responsabile del docker. Crea un nuovo imagePullSecret per il tuo repository privato; per ulteriori dettagli, consulta _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_</block>
   <block id="90e3576ed0e73e03c00705419f3411a3" category="section-title">Istruzioni per OpenShift</block>
   <block id="ed8127bf6d6013cbef18d300d151a78a" category="paragraph">Se si utilizza OpenShift 4.6 o versione successiva, è necessario modificare la configurazione dell'agente in _operator-config.yaml_ per attivare l'impostazione _runPrivileged_:</block>
@@ -11359,4 +11358,5 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
   <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-tollerazioni</block>
   <block id="259addbbe43276d62a91ef44d4dd55a8" category="paragraph">Sono stati apportati i seguenti miglioramenti <block ref="b13d2921c99b8ae4a991204f54e7f54b" category="inline-link-macro-rx"></block> implementazione:</block>
   <block id="e69cca83cc71ef5f7c5439d8944e108d" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="2b0568ca01fc8a058b93978c376cc13e" category="inline-link-macro-rx"></block>.</block>
+  <block id="e8b13bb5980b04b84716acf64b3b0abb" category="paragraph">Modificare l'implementazione dell'operatore di monitoraggio in operator-config.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</block>
 </blocks>

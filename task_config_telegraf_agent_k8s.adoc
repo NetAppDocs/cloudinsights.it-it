@@ -172,7 +172,7 @@ Mappa e performance di rete
 
 Trasferire l'immagine del gestore nel repository del supporto privato/locale/aziendale in base alle policy aziendali. Assicurarsi che i tag delle immagini e i percorsi delle directory per queste immagini nel repository siano coerenti con quelli nel repository Cloud Insights.
 
-Modificare l'implementazione dell'operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.
+Modificare l'implementazione dell'operatore di monitoraggio in operator-config.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.
 
 ....
 image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<kube-rbac-proxy version>
