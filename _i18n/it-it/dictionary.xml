@@ -11378,4 +11378,5 @@ timeout = "10 s"
 ...
 
 Quindi, riavviare Telegraf.</block>
+  <block id="302f46075983be9c47bafd103c8fbf36" category="paragraph">Consulta le pagine swagger per esempi specifici dell'API che desideri utilizzare.</block>
 </blocks>
