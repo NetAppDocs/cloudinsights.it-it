@@ -11379,4 +11379,37 @@ timeout = "10 s"
 
 Quindi, riavviare Telegraf.</block>
   <block id="302f46075983be9c47bafd103c8fbf36" category="paragraph">Consulta le pagine swagger per esempi specifici dell'API che desideri utilizzare.</block>
+  <block id="ad8f9b24701da9364290a4c2eee40c64" category="section-title">Metriche di potenza ONTAP</block>
+  <block id="b665630963f971c488f8e065e0c06fa9" category="paragraph">Diversi modelli ONTAP forniscono metriche di alimentazione per Cloud Insights che possono essere utilizzate per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.</block>
+  <block id="4331e7abe05d195d44f5ad7553810841" category="paragraph">Modelli supportati:</block>
+  <block id="1c7aba313bcd844b750939db18c6ba3f" category="paragraph">R200
+R220
+R250
+R300
+R320
+R400
+R700
+A700s
+R800
+R900
+C190
+FAS2240-4
+FAS2552
+FAS2650
+FAS2720
+FAS2750
+FAS8200
+FAS8300
+FAS8700
+FAS9000</block>
+  <block id="f9e69d73975332449ef353ece92feba1" category="paragraph">Modelli non supportati:</block>
+  <block id="6b9e2344af026f5b0bd0790abba3451c" category="paragraph">FAS2620
+FAS3250
+FAS3270
+FAS500f
+FAS6280
+FAS/AFF 8020
+FAS/AFF 8040
+FAS/AFF 8060
+FAS/AFF 8080</block>
 </blocks>

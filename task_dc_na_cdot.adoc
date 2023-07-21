@@ -185,6 +185,47 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 |===
 
 
+== Metriche di potenza ONTAP
+
+Diversi modelli ONTAP forniscono metriche di alimentazione per Cloud Insights che possono essere utilizzate per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
+
+Modelli supportati:
+
+R200
+R220
+R250
+R300
+R320
+R400
+R700
+A700s
+R800
+R900
+C190
+FAS2240-4
+FAS2552
+FAS2650
+FAS2720
+FAS2750
+FAS8200
+FAS8300
+FAS8700
+FAS9000
+
+Modelli non supportati:
+
+FAS2620
+FAS3250
+FAS3270
+FAS500f
+FAS6280
+FAS/AFF 8020
+FAS/AFF 8040
+FAS/AFF 8060
+FAS/AFF 8080
+
+
+
 == Nota sulle autorizzazioni
 
 Poiché alcuni dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario attivare *raccolta dati contatore avanzata* nella sezione Configurazione avanzata del data collector.
