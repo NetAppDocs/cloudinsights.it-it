@@ -11359,4 +11359,23 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
   <block id="e69cca83cc71ef5f7c5439d8944e108d" category="paragraph">Aggregazione, selezione dell'unità, formattazione condizionale e ridenominazione delle colonne sono tra le funzionalità più utili di un widget della tabella della dashboard e ora sono disponibili le stesse funzionalità per <block ref="2b0568ca01fc8a058b93978c376cc13e" category="inline-link-macro-rx"></block>.</block>
   <block id="8b4599b5810466dc4e8956fc5bc3c54c" category="paragraph">Modificare l'implementazione dell'operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.</block>
   <block id="3aabe2789e92746b5404b30428bb4f9e" category="paragraph">Se si utilizza un proxy per uno o entrambi questi, per installare il monitor operativo Kubernetes di NetApp è necessario prima assicurarsi che il proxy sia configurato per consentire una buona comunicazione con l'ambiente Cloud Insights. Ad esempio, dai server/VM da cui si desidera installare l'operatore, è necessario poter accedere a Cloud Insights e scaricare i file binari da Cloud Insights.</block>
+  <block id="9de497f607f8a73311408d3d7b337399" category="cell">Nei registri di Telegraf vengono visualizzati messaggi di errore ricorrenti simili a quelli riportati di seguito:
+
+ E! [Agent] Error writing to outputs.http: Post <block ref="95209f65da8fece27c962b4b503ef61a" category="inline-link-rx"></block> Scadenza contesto superata (timeout client superato in attesa di intestazioni)</block>
+  <block id="34e1dafcca7166ebef6820ec79ddd7cf" category="cell">Modificare ciascun file di configurazione di Telegraf (ad esempio /etc/telegraf/telegraf.d/*.conf) e aumentare il timeout per i plug-in di output di Telegraf.  Ad esempio, in ogni file .conf, sostituire tutte le istanze di...
+
+[[outputs.http]]
+...
+timeout = "5s"
+...
+
+
+...con le seguenti opzioni:
+
+[[outputs.http]]
+...
+timeout = "10 s"
+...
+
+Quindi, riavviare Telegraf.</block>
 </blocks>
