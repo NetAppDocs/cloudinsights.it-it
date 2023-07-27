@@ -4854,7 +4854,6 @@
   <block id="a8b3e330b031eece100735ab55ee1c1a" category="sidebar">Pagina panoramica di Kubernetes</block>
   <block id="5f87ab561452069f2b8a72e3e1d6b9c5" category="sidebar">Guida introduttiva all'operatore di monitoraggio</block>
   <block id="a63aef0458bbdbd190555891aec8dcd7" category="sidebar">Pagina del cluster Kubernetes</block>
-  <block id="d443a554afc0274206e1dc6ca6c51767" category="sidebar">Kubernetes Monitoring and Map (monitoraggio e mappa di Kubernetes)</block>
   <block id="98a765989815a9f6076db83630a8d40a" category="sidebar">Lavorare con le query</block>
   <block id="25e900254ad6189a853f2503238e3517" category="sidebar">Esecuzione di query sulle risorse</block>
   <block id="45a1e5f81eda87259a02f230c2cd17b9" category="sidebar">Creazione di una query</block>
@@ -11412,4 +11411,5 @@ FAS/AFF 8020
 FAS/AFF 8040
 FAS/AFF 8060
 FAS/AFF 8080</block>
+  <block id="be7979b5db831ae076c107584fa4f37c" category="sidebar">Monitoraggio di rete e mappa</block>
 </blocks>
