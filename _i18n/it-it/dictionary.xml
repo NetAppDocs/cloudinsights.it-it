@@ -4200,10 +4200,6 @@
   <block id="2c4a65782f3fcd193e8e3aab503fa515" category="section-title">Policy di conservazione</block>
   <block id="106f889ad7fb5a787f85bc5d8d8471ec" category="paragraph">Gli avvisi e le avvertenze vengono conservati per 13 mesi. Gli avvisi e le avvertenze di età superiore a 13 mesi verranno eliminati. Se si elimina l'ambiente workload Security, vengono eliminati anche tutti i dati associati all'ambiente.</block>
   <block id="77422aee0786be7f7c1880b7b0954687" category="cell">Prova:</block>
-  <block id="431fef516df90830b5c1c21b6ce07235" category="cell">Per gli snapshot creati da workload Security (CS), esiste un periodo di eliminazione/archiviazione per gli snapshot CS?</block>
-  <block id="5aec7bee9bf7098941b7fab790f89ec8" category="cell">No Non è stato impostato alcun periodo di eliminazione/archiviazione per le snapshot CS. L'utente deve definire una policy di eliminazione per le snapshot CS. Fare riferimento a. <block ref="e3477019d6e8e26c6e36a5c10c372344" category="inline-link-macro-rx"></block> su come impostare i criteri.</block>
-  <block id="e6fb05f0da5acc86f543947f4c4e697e" category="cell">Esiste una situazione in cui ONTAP esegue snapshot orarie al giorno. Le snapshot di workload Security (CS) ne influenzeranno? CS snapshot prenderà il posto orario dello snapshot? Lo snapshot orario predefinito viene arrestato?</block>
-  <block id="726c7f3f596062ccd907feb3815a05e0" category="cell">Le snapshot di workload Security non influiscono sulle snapshot orarie. GLI snapshot CS non acquisiranno lo spazio orario e questo dovrebbe continuare come prima. Lo snapshot orario predefinito non viene arrestato.</block>
   <block id="97142806b6f8ba5285f1650e6822a478" category="cell">Cosa accade se viene raggiunto il numero massimo di snapshot in ONTAP?</block>
   <block id="c718437c95f9699cf92562f47fc2c706" category="inline-link-macro">Impostazione del criterio di eliminazione Snapshot</block>
   <block id="dbc12ef69e34122bf8f4ac6b397d0011" category="cell">Se viene raggiunto il numero massimo di snapshot, l'acquisizione successiva di Snapshot non riesce e Workload Security visualizza un messaggio di errore che indica che Snapshot è pieno. L'utente deve definire le policy di Snapshot per eliminare le snapshot meno recenti, altrimenti non verranno eseguite. In ONTAP 9.3 e versioni precedenti, un volume può contenere fino a 255 copie Snapshot. In ONTAP 9.4 e versioni successive, un volume può contenere fino a 1023 copie Snapshot. Per informazioni su, consultare la documentazione di ONTAP <block ref="be93a0e4b8c5168a6ec2dc10f7f34d59" category="inline-link-macro-rx"></block>.</block>
@@ -7926,7 +7922,6 @@
   <block id="2855135907eef979db329ca6aebe0464" category="section-title">Linee guida prima di eseguire il simulatore:</block>
   <block id="d786b68b9cf5f686784afa64b69b3bce" category="list-text">Assicurarsi che i file crittografati non siano vuoti.</block>
   <block id="dc77d098f1840a6fa69f5b878fac260d" category="list-text">Assicurarsi di crittografare &gt; 50 file. Un numero limitato di file verrà ignorato.</block>
-  <block id="dfabdab4d722d2b248490b96ddf9add5" category="list-text">Non eseguire più attacchi con lo stesso utente. Dopo alcune volte, CS imparerà questo comportamento dell'utente e supporrà che si tratti del comportamento normale dell'utente.</block>
   <block id="7a5e4b833809f504d9c40568ed0a5cec" category="list-text">Non crittografare i file creati dallo stesso utente. La modifica di un file appena creato da un utente non è considerata un'attività rischiosa. Utilizzare invece i file creati da un altro utente O attendere qualche ora tra la creazione e la crittografia dei file.</block>
   <block id="3eee06b6e6c02b14b6bf0a76a8e1ee71" category="section-title">Preparare il sistema</block>
   <block id="0864c33fc7e49f7b5dabd2b27c2805d5" category="paragraph">Per prima cosa, montare il volume di destinazione sulla macchina. È possibile montare un montaggio NFS o un'esportazione CIFS.</block>
@@ -11412,4 +11407,7 @@ FAS/AFF 8040
 FAS/AFF 8060
 FAS/AFF 8080</block>
   <block id="be7979b5db831ae076c107584fa4f37c" category="sidebar">Monitoraggio di rete e mappa</block>
+  <block id="8d41e3bd6529669109fc47034b6cec4c" category="cell">Esiste una situazione in cui ONTAP esegue snapshot orarie al giorno. Le snapshot di workload Security (WS) ne influenzeranno? WS Snapshot prenderà lo snapshot orario? Lo snapshot orario predefinito viene arrestato?</block>
+  <block id="9abb3d91142b5821f0ea7a72b15b21d3" category="cell">Le snapshot di workload Security non influiscono sulle snapshot orarie. Le snapshot WS non acquisiranno lo spazio orario delle snapshot e questo dovrebbe continuare come prima. Lo snapshot orario predefinito non viene arrestato.</block>
+  <block id="9cdd30f36b5b67d9fc64c9bd48e9fac8" category="list-text">Non eseguire più attacchi con lo stesso utente. Dopo alcune volte, workload Security apprenderà questo comportamento dell'utente e supporrà che si tratti del comportamento normale dell'utente.</block>
 </blocks>
