@@ -141,9 +141,6 @@ Gli avvisi e le avvertenze vengono conservati per 13 mesi. Gli avvisi e le avver
 | Problema: | Prova: 
 
 
-| Per gli snapshot creati da workload Security (CS), esiste un periodo di eliminazione/archiviazione per gli snapshot CS? | No Non è stato impostato alcun periodo di eliminazione/archiviazione per le snapshot CS. L'utente deve definire una policy di eliminazione per le snapshot CS. Fare riferimento a. link:https://library.netapp.com/ecmdocs/ECMP1196819/html/GUID-27D0E37F-5AF1-4AF9-BDEB-9A4B7AF3B4A9.html["Documentazione ONTAP"] su come impostare i criteri. 
-
-
 | Esiste una situazione in cui ONTAP esegue snapshot orarie al giorno. Le snapshot di workload Security (CS) ne influenzeranno? CS snapshot prenderà il posto orario dello snapshot? Lo snapshot orario predefinito viene arrestato? | Le snapshot di workload Security non influiscono sulle snapshot orarie. GLI snapshot CS non acquisiranno lo spazio orario e questo dovrebbe continuare come prima. Lo snapshot orario predefinito non viene arrestato. 
 
 
