@@ -25,6 +25,70 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Agosto 2023
+
+
+
+=== Menu migliorati
+
+Abbiamo aggiornato il menu di navigazione a sinistra per supportare meglio i flussi di lavoro dei nostri clienti. I nuovi elementi di livello superiore come _Kubernetes_ forniscono un accesso accelerato a ciò di cui il cliente ha bisogno, mentre una console di amministratori consolidata supporta il ruolo di proprietario del tenant.
+
+Ecco alcuni esempi aggiuntivi delle modifiche:
+
+* Il menu _Observability_ di primo livello mostra il rilevamento dei dati, gli avvisi e le query di registro
+* La funzionalità "accesso API" per l'osservabilità e la sicurezza del carico di lavoro si trova in un unico menu
+* Allo stesso modo per la funzionalità ‘Notifiche’ di osservabilità e sicurezza del carico di lavoro, ora anche in un unico menu
+
+
+image:NewLeftNavMenu.png["Menu di navigazione sinistro aggiornato"]
+
+Di seguito è riportato un breve elenco delle funzioni disponibili in ogni menu:
+
+Osservabilità:
+
+* Esplora (dashboard, query metriche, approfondimenti sull'infrastruttura)
+* Avvisi (monitor e avvisi)
+* Collettori (Data Collector e unità di acquisizione)
+* Eseguire il log delle query
+* Arricchimento (Annotazioni e regole di annotazione, applicazioni, risoluzione del dispositivo)
+* Creazione di report
+
+
+Kubernetes:
+
+* Esplorazione cluster e mappa della rete
+
+
+Sicurezza del carico di lavoro:
+
+* Avvisi
+* Analisi
+* Collezionisti
+* Policy
+
+
+Informazioni di base su ONTAP:
+
+* Protezione dei dati
+* Sicurezza
+* Avvisi
+* Infrastruttura
+* Networking
+* Carichi di lavoro
+*VMware
+
+
+Amministratore:
+
+* Accesso API
+* Controllo
+* Notifiche
+* Informazioni sulla sottoscrizione
+* Gestione utenti
+
+
+
+
 == Luglio 2023
 
 
