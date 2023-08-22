@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_asset_page_overview.html 
 summary: Le pagine delle risorse possono essere visualizzate per la maggior parte dei tipi di oggetti. 
-keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric 
+keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric, refresh 
 ---
 = Panoramica della pagina delle risorse
 :toc: macro
@@ -69,6 +69,8 @@ Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 o
 
 
 L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni consecutivi. È inoltre possibile impostare l'ora di inizio e l'ora di fine del giorno per questo intervallo. L'ora di inizio predefinita è 12:00 AM nel primo giorno selezionato e l'ora di fine predefinita è 11:59 PM nell'ultimo giorno selezionato. Fare clic su Apply (Applica) per applicare l'intervallo di tempo personalizzato alla pagina delle risorse.
+
+Le informazioni contenute in una sezione di riepilogo delle pagine di asset, nonché in qualsiasi tabella o widget personalizzati sulla pagina, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo superiore destro della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.
 
 
 

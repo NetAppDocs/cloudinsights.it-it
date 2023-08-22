@@ -7564,7 +7564,6 @@
   <block id="f60c6ac1e23b041f6405b995ba051e43" category="cell">Tempo minimo tra i tentativi di acquisizione attivati dalle trap. L'impostazione predefinita è 10 secondi.</block>
   <block id="27a216601981d13fcf078fa6774638a5" category="summary">La sezione Expert View di una pagina di risorse è un potente strumento per la risoluzione dei problemi o il monitoraggio.</block>
   <block id="b7020f7cb2b885f482e520e38265e6b0" category="doc">Vista degli esperti</block>
-  <block id="6769810373d64f6178c70417f3100129" category="paragraph">La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto, con un periodo di tempo selezionato nel grafico delle performance e le risorse ad essa correlate.</block>
   <block id="a095544b81060891734744ad5bd2a5c3" category="section-title">Utilizzando la sezione visualizzazione avanzata</block>
   <block id="62329137e14077120c0de9e866ecae4b" category="paragraph">Di seguito viene riportato un esempio della sezione Expert View in una pagina di risorse di storage:</block>
   <block id="beaa4bde61b31a115ee598bebfa3f120" category="inline-image-macro">Esempio di vista degli esperti</block>
@@ -12933,4 +12932,7 @@ VMware vCenter Server 8.0.1 Build-21860503</block>
   <block id="6eaf2b51f37d7f4d356ffe2a342af267" category="paragraph">Scheda utilizzo:
 <block ref="09c99a3559c7afea569b832bd175894f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f4e0f73d094f0d65c6a05d5a032c2723" category="list-text">Le unità di acquisizione supportano ora RHEL 8,7.</block>
+  <block id="01149343ed19ae68ec1c689ec3722a5c" category="paragraph">La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto, con un periodo di tempo selezionato nel grafico delle performance e le risorse ad essa correlate.  I dati nei grafici si aggiornano automaticamente quando i data collector effettuano il polling e vengono acquisiti i dati aggiornati.</block>
+  <block id="05c3e307f6dc616e1f39e3e2b33522d0" category="paragraph">Le informazioni contenute in una sezione di riepilogo delle pagine di asset, nonché in qualsiasi tabella o widget personalizzati sulla pagina, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo superiore destro della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.</block>
+  <block id="a529577c999092a8f244f1064ee16c6e" category="paragraph">Le informazioni contenute nella sezione di riepilogo, nonché in qualsiasi tabella o widget personalizzati nella pagina di asset, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. È possibile visualizzare la frequenza di aggiornamento corrente nell'angolo superiore destro della sezione Riepilogo, nelle tabelle e in qualsiasi widget personalizzato.</block>
 </blocks>

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_asset_expert_view_section.html 
 summary: La sezione Expert View di una pagina di risorse è un potente strumento per la risoluzione dei problemi o il monitoraggio. 
-keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, 
+keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh 
 ---
 = Vista degli esperti
 :toc: macro
@@ -19,7 +19,7 @@ keywords: asset page, expert view, metrics, greedy, degraded, correlated, contri
 
 
 [role="lead"]
-La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto, con un periodo di tempo selezionato nel grafico delle performance e le risorse ad essa correlate.
+La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto, con un periodo di tempo selezionato nel grafico delle performance e le risorse ad essa correlate.  I dati nei grafici si aggiornano automaticamente quando i data collector effettuano il polling e vengono acquisiti i dati aggiornati.
 
 
 

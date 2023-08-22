@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_asset_summary_section.html 
 summary: Panoramica della sezione Riepilogo della pagina delle risorse in Cloud Insights. 
-keywords: asset, summary, landing page, topology 
+keywords: asset, summary, landing page, topology, auto, refresh 
 ---
 = Sezione Riepilogo pagina risorse
 :toc: macro
@@ -20,6 +20,8 @@ keywords: asset, summary, landing page, topology
 
 [role="lead"]
 La sezione Summary (Riepilogo) di una pagina asset visualizza informazioni generali su una risorsa, tra cui se le metriche o le policy sulle performance sono fonte di preoccupazione. Le aree potenzialmente problematiche sono indicate da un cerchio rosso.
+
+Le informazioni contenute nella sezione di riepilogo, nonché in qualsiasi tabella o widget personalizzati nella pagina di asset, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. È possibile visualizzare la frequenza di aggiornamento corrente nell'angolo superiore destro della sezione Riepilogo, nelle tabelle e in qualsiasi widget personalizzato.
 
 image:Summary_Section_Example.png[""]
 
