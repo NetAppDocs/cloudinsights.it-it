@@ -126,4 +126,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | "Errore di configurazione" con messaggi di errore che iniziano con "la policy non consente" o "non sei autorizzato" | * Controllare l'indirizzo ip * controllare il nome utente e la password 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

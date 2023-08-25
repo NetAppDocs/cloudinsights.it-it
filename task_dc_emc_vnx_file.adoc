@@ -107,4 +107,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore: Impossibile continuare mentre è in corso l'aggiornamento DART | Soluzione possibile: Mettere in pausa il data collector e attendere il completamento dell'aggiornamento DART prima di tentare un'altra richiesta di acquisizione. 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

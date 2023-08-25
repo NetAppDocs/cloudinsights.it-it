@@ -96,4 +96,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

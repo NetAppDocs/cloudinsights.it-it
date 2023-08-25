@@ -108,4 +108,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | "Errore di connessione" con messaggi di errore "Impossibile creare un'istanza di connessione SSH allo storage" o "Impossibile creare un'istanza di connessione a VirtualCenter" | Cause probabili: * Credenziali errate. * Indirizzo IP errato. * Problema di rete. * Lo storage potrebbe essere inattivo o non rispondere. Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con lo storage utilizzando il client SSH. 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

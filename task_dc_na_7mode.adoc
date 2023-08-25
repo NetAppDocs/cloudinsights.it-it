@@ -216,4 +216,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore "Impossibile connettersi a vFiler" | Verificare che le funzionalità dell'utente in fase di acquisizione includano almeno quanto segue: api-* Security-api-vfiler login-http-admin verificare che il filer utilizzi almeno ONTAPI versione 1.7. 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

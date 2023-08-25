@@ -114,4 +114,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | "Credenziali di accesso non valide" con messaggi di errore "la policy non consente" o "non sei autorizzato" | Convalidare l'account utente e la password pure tramite l'interfaccia pure http 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

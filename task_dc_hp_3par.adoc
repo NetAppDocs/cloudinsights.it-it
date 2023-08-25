@@ -138,4 +138,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Cloud Insights afferma che non è possibile connettersi/accedere al servizio SMI-S. | Verificare che non vi sia alcun firewall tra l'AU ci e l'array che impedisce all'AU ci di effettuare connessioni TCP a 5988 o 5989. Una volta fatto questo, e se hai confermato che non c'è alcun firewall, dovresti eseguire l'SSH sull'array e utilizzare il comando "showcim" per confermare. Verificare che: * Il servizio sia abilitato * HTTPS sia abilitato * la porta HTTPS deve essere 5989. In tal caso, provare a "stopcim" e quindi a "startcim" per riavviare il CIM (ad esempio, il servizio SMI-S). 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

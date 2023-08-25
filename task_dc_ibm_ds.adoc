@@ -129,4 +129,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Dall'unità di acquisizione Cloud Insights aprire un file CMD * aprire il file CLI.CFG nella directory home di CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente * visualizzare la versione di Java installata su questa macchina, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di storage IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

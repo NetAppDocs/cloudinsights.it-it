@@ -157,4 +157,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore: VirtualCenter AT IP dispone di un certificato non conforme richiesto da JVM | Possibili soluzioni: * Consigliato: Ricreare il certificato per Virtual Center utilizzando una chiave RSA più potente (ad esempio 1024 bit). * Non consigliato: Modificare la configurazione di JVM java.security per sfruttare il vincolo jdk.certpath.disabledAlgorithms per consentire la chiave RSA a 512 bit. Vedere le note sulla versione di JDK 7 update 40 all'indirizzo "http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html"[] 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

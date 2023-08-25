@@ -85,4 +85,4 @@ Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seg
 
 == Risoluzione dei problemi
 
-Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni su questo Data Collector, consultare il link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

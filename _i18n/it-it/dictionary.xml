@@ -6757,7 +6757,6 @@
   <block id="123823c1c5909eba4c00c4d8585c250f" category="cell">Il valore predefinito è 30 minuti</block>
   <block id="28d14a9ee241f7011a6670c176790bf0" category="cell">Intervallo di polling delle performance fino a 3600 secondi</block>
   <block id="468d07d06d2be54342422802bbb9a1a7" category="cell">Il valore predefinito è 300 secondi</block>
-  <block id="aec2bde654bf8419f40a1a37b865d3df" category="paragraph">Per ulteriori informazioni su questo data collector, consultare <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>.</block>
   <block id="1e66f3ea1e335e37bed1a50e1a8bb94c" category="summary">Sicurezza del carico di lavoro gli account utente vengono gestiti tramite la gestione degli utenti di Cloud Insights</block>
   <block id="92726ab5faeb2cb9208eaac9af0346bd" category="doc">Gestione utenti</block>
   <block id="b6ddb5866df8e3256ac245cbce10a9a2" category="paragraph">Workload gli account utente di sicurezza vengono gestiti tramite Cloud Insights.</block>
@@ -12936,4 +12935,6 @@ VMware vCenter Server 8.0.1 Build-21860503</block>
   <block id="ffe8a4f426307f8dd53338d7bc39db00" category="paragraph">Le informazioni contenute in una sezione di riepilogo delle pagine di asset, nonché in qualsiasi tabella o widget personalizzati sulla pagina, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo in alto a destra della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.</block>
   <block id="820c5f3d48103a56a44610787108dad5" category="doc">Novità di Cloud Insights</block>
   <block id="a86bd6cf348747cd34bce0fd7d6a84a9" category="paragraph">Per ulteriori informazioni su questo Data Collector, consultare il <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
+  <block id="47c66df8007a6168673191bfaef7dfab" category="paragraph">Per ulteriori informazioni, consultare <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
+  <block id="e07849f7cb6b62fcc60bd889bb8954df" category="paragraph">Per ulteriori informazioni su questo data collector, consultare <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
 </blocks>

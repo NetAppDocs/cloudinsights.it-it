@@ -316,4 +316,4 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 | Errore "Impossibile raccogliere le prestazioni da ZAPI" | Questo è dovuto in genere al mancato funzionamento di perf stat. Provare il seguente comando su ciascun nodo: > _system node systemshell -node * -command "spmctl -h cmd –stop; spmctl -h cmd –exec"_ 
 |===
-Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["Matrice di supporto Data Collector"].
+Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
