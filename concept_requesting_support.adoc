@@ -141,7 +141,7 @@ image:Support_View_SN.png["Visualizza SN. Supporto"]
 
 == Matrice di supporto per data collector Cloud Insights
 
-È possibile visualizzare o scaricare informazioni e dettagli sui Data Collector supportati in link:CloudInsightsDataCollectorSupportMatrix.pdf["*Matrice di supporto per data collector Cloud Insights*, role="external""].
+È possibile visualizzare o scaricare informazioni e dettagli sui Data Collector supportati in link:reference_data_collector_support_matrix.html["*Matrice di supporto per data collector Cloud Insights*, role="external""].
 
 
 
