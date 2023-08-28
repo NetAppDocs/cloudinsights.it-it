@@ -9140,10 +9140,7 @@
   <block id="688a6828f5a23c0464c7c77887f34d29" category="paragraph">Oltre a eseguire query per le risorse di inventario e le relative metriche di performance, è possibile eseguire query anche per le metriche *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con metriche avanzate di ONTAP.</block>
   <block id="1ef2bc789e2222bd0185009ea74b515d" category="inline-image-macro">Esempio di filtro query di integrazione</block>
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8c8b20c16b839b518d90f5b38558a3cb" category="summary">Configurazione di Cloud Insights con NetApp ONTAP Streaming Telemetry</block>
-  <block id="93254a992ce8a5bbebb5d43f09f243d7" category="doc">Streaming telemetrico NetApp ONTAP</block>
   <block id="6051317bfc603cd4488e0e5a5946f64c" category="inline-link-macro">Connessione cloud NetApp per ONTAP 9.9+</block>
-  <block id="458a37db2666885e234720ccdea58253" category="paragraph">Per informazioni aggiornate, consultare <block ref="16021e77167161423bb6653c8cf910d8" category="inline-link-macro-rx"></block> pagina data collector.</block>
   <block id="1914b55914b6ee44bc0dcd84cc7caeb3" category="summary">Configurazione del data collector Apache</block>
   <block id="a2c447b19901c50472d86c46b78e4269" category="doc">Apache Data Collector</block>
   <block id="7f9a66bbf7786386f3da129eb0ca4ce8" category="paragraph">Questo data collector consente la raccolta di dati dai server Apache nel tuo ambiente.</block>
@@ -12935,4 +12932,11 @@ VMware vCenter Server 8.0.1 Build-21860503</block>
   <block id="47c66df8007a6168673191bfaef7dfab" category="paragraph">Per ulteriori informazioni, consultare <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
   <block id="e07849f7cb6b62fcc60bd889bb8954df" category="paragraph">Per ulteriori informazioni su questo data collector, consultare <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o in <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
   <block id="4a186b8a397cc2aad62c7d9c7e9d9a66" category="paragraph">È possibile visualizzare o scaricare informazioni e dettagli sui Data Collector supportati in <block ref="1300170f2732d2d2d53f76de553810b4" category="inline-link-macro-rx"></block>.</block>
+  <block id="4099aa818be44a204ef7ec3ba69b96c7" category="inline-link-macro">aggregati da visualizzare</block>
+  <block id="6046897f8c0f41425f2e47227c5932e8" category="paragraph">Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che <block ref="c09eb6051f010e6e01a634a8b6a5c304" category="inline-link-macro-rx"></block>, Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.</block>
+  <block id="8f0ae9ae8e0fd7f3e8fe6ff175a59943" category="list-text">Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/&lt;namespace&gt;-additional-permissions_</block>
+  <block id="8a75e64ac585bb8eb6efae44768cfc8e" category="list-text">Creare una nuova regola per gli apartGroup e le risorse desiderati con i verbi ["Get", "Watch", "list"]. Vedere \https://kubernetes.io/docs/reference/access-authn-authz/rbac/</block>
+  <block id="5aa700b8892918bb447b666e3ba9b2a8" category="list-text">Applicare le modifiche al cluster</block>
+  <block id="4f05106cca363b0f3c492314ab777534" category="cell">Mancano i dati _involvedobject_ per alcuni registri eventi.</block>
+  <block id="2420d7dae924d9613e0f888211903abc" category="cell">Assicurarsi di aver seguito i passaggi descritti in <block ref="abccd48aba555dd896a8cc74442f4360" category="inline-xref-macro-rx"></block> sezione precedente.</block>
 </blocks>
