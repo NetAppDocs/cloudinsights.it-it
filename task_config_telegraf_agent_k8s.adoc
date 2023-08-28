@@ -212,17 +212,6 @@ Scopri di più su Kubernetes link:https://kubernetes.io/docs/concepts/scheduling
 
 
 
-=== Permessi
-
-Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["aggregati da visualizzare"], Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.
-
-. Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/<namespace>-additional-permissions_
-. Creare una nuova regola per gli apartGroup e le risorse desiderati con i verbi ["Get", "Watch", "list"]. Vedere \https://kubernetes.io/docs/reference/access-authn-authz/rbac/
-. Applicare le modifiche al cluster
-
-
-
-
 == Installazione di NetApp Kubernetes Monitoring Operator
 
 image:NKMO-Instructions-1.png[""]
@@ -570,8 +559,5 @@ timeout = "10 s"
 ...
 
 Quindi, riavviare Telegraf. 
-
-
-| Mancano i dati _involvedobject_ per alcuni registri eventi. | Assicurarsi di aver seguito i passaggi descritti in <<permissions,Permessi>> sezione precedente. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
