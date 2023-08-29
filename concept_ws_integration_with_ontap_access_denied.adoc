@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: concept_ws_integration_with_ontap_access_denied.html 
+summary: Workload Security si integra con ONTAP per ricevere gli eventi di accesso negato e fornire un livello aggiuntivo di analisi e risposte automatiche. 
+keywords: ransomware, Access Denied, Protection, Security 
+---
+= Integrazione con accesso ONTAP negato
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La funzionalità accesso negato di ONTAP utilizza l'analisi dei carichi di lavoro negli ambienti NAS (NFS e SMB) per rilevare in modo proattivo e avvisare in caso di operazioni di file non riuscite (ad esempio, un utente che tenta di eseguire un'operazione per cui non dispone dell'autorizzazione). Queste notifiche di operazioni sui file non riuscite, specialmente in caso di errori relativi alla sicurezza, aiuteranno ulteriormente a bloccare gli attacchi interni nelle fasi iniziali.
+
+Workload Security si integra con ONTAP per ricevere gli eventi di accesso negato e fornire un livello di risposta automatico e analitico aggiuntivo.
+
+.Prerequisiti
+* Versione ONTAP minima: 9.13.0
+* La funzione accesso negato è disattivata per impostazione predefinita. Un amministratore di sicurezza del carico di lavoro può attivare questa funzione mentre aggiunge un nuovo collettore o modifica un collettore esistente. Per attivare, in sicurezza del carico di lavoro > Collectors, aggiungere o modificare il collettore desiderato e selezionare la casella di controllo _Monitor Access Denied Events_ in Configurazione avanzata.
+
+
+image:WS_Access_Denied_Enable.png["Abilitazione accesso negato"]
+
+
+
+== Autorizzazioni utente richieste
+
+Se il raccoglitore viene aggiunto utilizzando le credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
+
+Se il collector viene aggiunto utilizzando un utente personalizzato (ad esempio _csuser_) con autorizzazioni assegnate all'utente, attenersi alla procedura riportata di seguito per assegnare autorizzazioni alla protezione del carico di lavoro per registrarsi all'evento ONTAP for Access Denied .
+
+Per _csuser_ con credenziali cluster, eseguire i seguenti comandi dalla riga di comando di ONTAP:
+
+....
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole
+security login rest-role create -role csrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+....
+Per _csuser_ con credenziali SVM, eseguire i seguenti comandi dalla riga di comando di ONTAP:
+
+....
+security login rest-role create -role csrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
+security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole
+....
+Nota: Nei comandi sopra riportati, _csrole_ è il ruolo personalizzato e _csuser_ è l'utente personalizzato di ONTAP.
+
+
+
+== Esempio di evento accesso negato
+
+Viene visualizzato un esempio di evento Access Denied (accesso negato) come illustrato nelle immagini seguenti. È inoltre possibile visualizzare l'elenco delle autorizzazioni desiderate che l'utente mancava per una particolare operazione nella colonna _attività desiderata_ che è possibile visualizzare facoltativamente.
+
+image:WS_Access_Denied_Sample_Event.png["Accesso negato all'evento campione"]
+image:WS_Access_Denied_Sample_Event-2.png["Accesso negato evento di esempio che mostra le colonne attività negate"]
