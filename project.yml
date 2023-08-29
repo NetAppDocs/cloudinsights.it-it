@@ -205,7 +205,7 @@ sidebar:
       url: "/reporting_schema_diagrams.html"
     - title: Tabelle dello schema
       url: "/reference_schemas.html"
-  - title: Sicurezza del carico di lavoro dello storage
+  - title: Sicurezza del carico di lavoro
     entries:
     - title: Informazioni sulla sicurezza del carico di lavoro
       url: "/cs_intro.html"
