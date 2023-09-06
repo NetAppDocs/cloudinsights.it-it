@@ -265,12 +265,12 @@ sidebar:
       url: "/task_troubleshooting_windows_acquisition_unit_problems.html"
     - title: Ricerca degli errori di Data Collector
       url: "/task_research_failed_collector.html"
+  - title: Matrice di supporto Data Collector
+    url: "/reference_data_collector_support_matrix.html"
   - title: Riferimento e supporto
     entries:
     - title: Richiesta di supporto
       url: "/concept_requesting_support.html"
-    - title: Matrice di supporto Data Collector
-      url: "/reference_data_collector_support_matrix.html"
     - title: Data Collector Reference - infrastruttura
       entries:
       - title: Panoramica di riferimento del vendor

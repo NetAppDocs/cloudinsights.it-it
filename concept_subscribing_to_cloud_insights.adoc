@@ -33,6 +33,9 @@ NOTE: Se non diversamente specificato, le informazioni contenute in questa pagin
 
 Per un confronto completo delle funzionalità disponibili nelle edizioni Cloud Insights di base e Premium, vedere link:https://bluexp.netapp.com/cloud-insights-pricing["Prezzi Cloud Insights"] pagina.
 
+
+WARNING: Gli ambienti inattivi dell'edizione di base di Cloud Insights vengono cancellati e le relative risorse vengono recuperate. Un ambiente viene considerato inattivo se non vi sono attività dell'utente per 30 giorni consecutivi, o se non vi sono dati acquisiti per 7 giorni consecutivi. Cloud Insights invierà una notifica e fornirà un periodo di tolleranza di quattro giorni prima dell'eliminazione di un ambiente.
+
 Quando si utilizza Cloud Insights, se viene visualizzata un'icona a forma di lucchetto image:padlock.png["Lucchetto"], Significa che la funzione non è disponibile nell'edizione corrente o è disponibile in una forma limitata. Effettua l'aggiornamento per accedere completamente alla funzionalità.
 
 
