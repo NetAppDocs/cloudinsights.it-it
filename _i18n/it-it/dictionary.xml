@@ -9981,9 +9981,6 @@
   <block id="a042a0a750858e6060db4dfe64a00752" category="summary">Log Explorer è un potente strumento per l'analisi dei problemi attraverso diversi log di sistema.</block>
   <block id="f605eb6ac9043e9f1502d006629b9dc3" category="doc">Esplora log</block>
   <block id="8525c63db9fcf944b97e51df898b6440" category="paragraph">Esplora log di Cloud Insights è un potente strumento per eseguire query sui log di sistema. Oltre a fornire assistenza per le analisi, è possibile salvare una query di log in un monitor per fornire avvisi quando vengono attivati i trigger di log specifici.</block>
-  <block id="72ab1611127dabda382ded8d35eabd5f" category="paragraph">Per iniziare a esplorare i log, fare clic su *Query &gt; +Nuova query di log*.</block>
-  <block id="5e618eb9ef1c438e7d5d6afda86417f3" category="inline-image-macro">Menu delle query di log, 480</block>
-  <block id="d93346d5cd40cfc415b92ee8b9831053" category="paragraph"><block ref="d93346d5cd40cfc415b92ee8b9831053" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bf74dd0ba8bacde3d960739103ba63c6" category="paragraph">Selezionare un registro disponibile dall'elenco.</block>
   <block id="0aa526404a7affc36dc5d2429d255945" category="inline-image-macro">Scegliere il registro</block>
   <block id="dc2dd49825ec74e1ca580d41456c912b" category="paragraph"><block ref="dc2dd49825ec74e1ca580d41456c912b" category="inline-image-macro-rx" type="image"></block></block>
@@ -9993,10 +9990,7 @@
   <block id="4fc206dee5c28b63ff442e3ed9df6b96" category="paragraph">I risultati vengono visualizzati in un grafico che mostra il numero di istanze di log in ciascun periodo di tempo visualizzato. Sotto il grafico sono riportati i modelli di voci di log. Il grafico e le voci si aggiornano automaticamente in base all'intervallo di tempo selezionato.</block>
   <block id="8ef03d84e3fb3a5e09cc1a40b1e60f8d" category="inline-image-macro">Esempio di query che mostra il filtro</block>
   <block id="a5841d3432662ae9190489b4bf13e03c" category="paragraph"><block ref="a5841d3432662ae9190489b4bf13e03c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6525698622e5d4dd87d39bc69750d2e3" category="section-title">Il grafico del registro</block>
-  <block id="5ca1a83f7b7763185645c408d9237058" category="paragraph">Il grafico mostra il numero di voci di log, raggruppate in _bucket_, che si basano sull'intervallo di tempo selezionato per la dashboard. I bucket per ciascun intervallo di tempo sono i seguenti:</block>
   <block id="a311182bfffa770574efa58415204e5e" category="cell">Intervallo di tempo della dashboard</block>
-  <block id="1a07cd9ad36405911f4a827c02141cb5" category="cell">Dimensione della benna</block>
   <block id="19835cec9600eb5f9fc332ed671fc46a" category="cell">10 secondi</block>
   <block id="cc2ce94ec935cfe3b39913486e0ee27c" category="cell">15 secondi</block>
   <block id="e0e8774db3dbc0633c02ff72ce710ba3" category="cell">30 secondi</block>
@@ -10005,14 +9999,7 @@
   <block id="4b9fb98e0952078c236a9fb09c0c6dc7" category="cell">5 minuti</block>
   <block id="3a3853e1fe25e10ecaa88617010f9e41" category="cell">10 minuti</block>
   <block id="0d109f2a2e5b1f92e8b4de51b6bd9363" category="cell">15 minuti</block>
-  <block id="06cdf20b6eaa0ae9f8c50b0f6158589f" category="cell">30 minuti</block>
-  <block id="90085ccde7a8c066e1f3a5b7580ef07d" category="cell">45 minuti</block>
   <block id="5ce155ac62ee03701f7a117676333008" category="cell">2 ore</block>
-  <block id="0d730df753ae6a369323fe6dc1641eb2" category="cell">1 giorno</block>
-  <block id="0aa0ba82527e49e5c56d1dfce41fc246" category="paragraph">Per ingrandire il grafico, è sufficiente trascinare i dispositivi di scorrimento da entrambi i lati. Per eseguire una panoramica dell'area ingrandita, fare clic e tenere premuto nell'area bianca e spostarsi a sinistra o a destra. Fare clic su _Reset Zoom_ (Ripristina zoom) per ripristinare il livello di zoom.</block>
-  <block id="51e0a539e27933abd9022ece5ebb9dc0" category="inline-image-macro">Ingrandire trascinando i lati del grafico</block>
-  <block id="03bbd7f405795c5f2f9e6b2aa10a9485" category="paragraph"><block ref="03bbd7f405795c5f2f9e6b2aa10a9485" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9861da4e593f0d876c27ae2472947ec7" category="paragraph">Si noti che quando si esegue lo zoom del grafico o si scorre la tabella, l'aggiornamento automatico della dashboard si interrompe e l'intervallo di tempo mostra il tempo di blocco. Per riprendere l'aggiornamento, fare clic sul pulsante _Riprendi_ <block ref="aba9fdfd6cc8b6ea17b1ffd7798083ed" category="inline-image-macro-rx" type="image"></block>. In questo modo viene ripristinato anche il livello di zoom.</block>
   <block id="d376c886c5ff2fc65131f62ba9752f91" category="paragraph">In qualsiasi momento, è possibile fare clic su _Create a Log Monitor_ per creare un nuovo monitor in base al filtro corrente.</block>
   <block id="5498a5f4896f117c2848f41304cec816" category="section-title">Dettagli registro</block>
   <block id="359af7e1e51e6ea2bf3b35d99ff965eb" category="paragraph">Facendo clic in un punto qualsiasi di una voce di registro nell'elenco, viene aperto un riquadro dei dettagli per tale voce. Qui puoi esplorare ulteriori informazioni sull'evento.</block>
@@ -12464,4 +12451,30 @@ V9,2.4,2</block>
 9,9.1P8
 9,9.1P9</block>
   <block id="c33b15606594c79bf9d409ec6f7e05b0" category="admonition">Gli ambienti inattivi dell'edizione di base di Cloud Insights vengono cancellati e le relative risorse vengono recuperate. Un ambiente viene considerato inattivo se non vi sono attività dell'utente per 30 giorni consecutivi, o se non vi sono dati acquisiti per 7 giorni consecutivi. Cloud Insights invierà una notifica e fornirà un periodo di tolleranza di quattro giorni prima dell'eliminazione di un ambiente.</block>
+  <block id="12a4857a4dbeb827f3ccc062e3e95447" category="paragraph">Per iniziare a esplorare i registri, fare clic su *Log queries &gt; +New Log Query*.</block>
+  <block id="9a588db8471730dbfebac65cd5467ad8" category="section-title">Filtraggio</block>
+  <block id="c372ce68f746709e625ff6a439caabb9" category="section-title">Includi/Escludi</block>
+  <block id="2787899688f12e7489007de8b12213d5" category="paragraph">Quando si filtrano i log, è possibile scegliere di *includere* (ad esempio "filtro a") o *escludere* le stringhe digitate. Le stringhe escluse vengono visualizzate nel filtro completato come "NON &lt;string&gt;".</block>
+  <block id="1734ff7c4f75b54c961ad7d4359787e1" category="inline-image-macro">Filtro registro che mostra l'opzione Escludi</block>
+  <block id="405c7a3556714c3c384503dcad4e730a" category="paragraph"><block ref="405c7a3556714c3c384503dcad4e730a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53fe9d76b1ba589991576c0208798009" category="section-title">Filtraggio avanzato</block>
+  <block id="110b3aa692108cdd731e2a20e7fab59a" category="paragraph">Quando si filtrano valori di testo o di elenco nelle query o nei widget della dashboard, quando si inizia a digitare viene visualizzata l'opzione per creare un filtro * con caratteri jolly* in base al testo corrente. Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione con caratteri jolly. È inoltre possibile creare espressioni utilizzando NON, E, o o, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli.</block>
+  <block id="ca6fcfb5b3944c9f5e1fc9d91e8b5fc9" category="admonition">Assicurarsi di salvare la query in anticipo e spesso durante la creazione del filtro. L'interrogazione avanzata è una voce di stringa "free-form" e gli errori di analisi possono verificarsi durante la compilazione.</block>
+  <block id="6682349270b7766210b24eb769ff2f4b" category="paragraph">Date un'occhiata a questa immagine della schermata che mostra i risultati filtrati per una query avanzata del log _logs.kuPQ.event_. C'è molto in corso in questa pagina, che è spiegato sotto l'immagine:</block>
+  <block id="1e7fa24e8c554b3ada8b33899f9054fb" category="inline-image-macro">Viene illustrata la schermata Advanced Query (interrogazione avanzata)</block>
+  <block id="67e358a5c19a682585f241c67623688b" category="paragraph"><block ref="67e358a5c19a682585f241c67623688b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="46a8b17ae4f06cb7ca1032e9fd81030d" category="list-text">Questa stringa di query avanzata filtra per quanto segue:</block>
+  <block id="8cc6fe8efec4a3d6fc5ed7b779e8c094" category="list-text">Filtro per le voci di registro con _reason_ che include la parola "FAILED", ma non qualsiasi cosa con il motivo specifico di "FailedMount".</block>
+  <block id="0d08e6b786ad26cf3562710d1355fea7" category="list-text">Includere una qualsiasi di quelle voci che includono anche un _metadata.namespace_ compresa la parola "monitoraggio", ma escludere gli spazi dei nomi specifici di "monitoraggio cm" o "monitoraggio es.".</block>
+  <block id="2b54fd64a2706073e8bc271891bd6d2d" category="paragraph">Si noti che nel caso precedente, poiché sia "cm-monitoring" che "eg-monitoring" contengono un trattino ("-"), le stringhe devono essere incluse tra virgolette doppie o verrà visualizzato un errore di analisi. Le stringhe che non includono trattini, spazi, ecc. non devono essere racchiuse tra virgolette. In caso di dubbi, provare a inserire la stringa tra virgolette.</block>
+  <block id="af949190b79fd7ebdb106c82bad91ccd" category="list-text">I risultati del filtro corrente, inclusi i valori "Filtra per" E il filtro query avanzate. L'elenco può essere ordinato in base alle colonne visualizzate. Per visualizzare colonne aggiuntive, selezionare l'icona "marcia".</block>
+  <block id="b61d5955be1f96c1051d023bbbb0885a" category="list-text">Il grafico è stato ingrandito per visualizzare solo i risultati del registro che si sono verificati in un intervallo di tempo specifico. L'intervallo di tempo mostrato qui riflette il livello di zoom corrente. Selezionare il pulsante _Reimposta zoom_ per riportare il livello di zoom all'intervallo temporale Cloud Insights corrente.</block>
+  <block id="e9c3a605437c1d21260249137747effc" category="list-text">I risultati del grafico sono stati raggruppati in base al campo _source_. Il grafico mostra i risultati in ogni colonna raggruppati in colori. Passando con il mouse sopra una colonna del grafico vengono visualizzati alcuni dettagli relativi alle voci specifiche.</block>
+  <block id="ddebec2cff3de7b17694a2b5c55254a5" category="inline-image-macro">Dettagli del passaggio del mouse raggruppati</block>
+  <block id="540bd2dacf8012f1036c7cbb4c950e57" category="paragraph"><block ref="540bd2dacf8012f1036c7cbb4c950e57" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c9bb5a9e84c262c583c25b07c1af190" category="paragraph">È possibile combinare un filtro semplice con un filtro query avanzato; il filtro risultante è un "AND" dei due.</block>
+  <block id="b761d7a9aa49f18da68cf21ea910b857" category="section-title">La legenda del grafico</block>
+  <block id="772a480c61e419a52923d1da92b228e7" category="paragraph">Anche la _Legend_ sotto il grafico presenta alcune sorprese. Per ciascun risultato (in base al filtro corrente) visualizzato nella legenda, è possibile visualizzare solo i risultati per tale riga (Aggiungi filtro) o i risultati NON per quella riga (Aggiungi filtro esclusione). Il grafico e l'elenco voci registro vengono aggiornati per visualizzare i risultati in base alla selezione effettuata.  Per rimuovere questo filtro, aprire nuovamente la legenda e selezionare [X] per cancellare il filtro basato su legenda.</block>
+  <block id="d14acaf1ab19304c31907532625c28a1" category="inline-image-macro">Legen query avanzate che mostra "Aggiungi filtro" per il primo risultato</block>
+  <block id="342c7491dc2f013cbb7933ea5b7db958" category="paragraph"><block ref="342c7491dc2f013cbb7933ea5b7db958" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
