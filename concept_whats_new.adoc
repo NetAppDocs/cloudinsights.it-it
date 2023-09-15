@@ -25,6 +25,71 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Settembre 2023
+
+
+
+=== Trova facilmente ciò che vuoi nei registri
+
+Query registro (*osservabilità > query registro > +Nuova query registro*) include un numero di link:concept_log_explorer.html#advanced-filtering["miglioramenti"] per rendere l'esplorazione dei log più semplice e più informativa.
+
+
+
+==== Includi/Escludi
+
+Quando si filtra un valore, è possibile scegliere facilmente se includere i risultati *includere* o *escludere* corrispondenti al filtro. Selezionando "Escludi" si crea un filtro "NON <value>". È possibile combinare i valori Includi ed Escludi in un singolo filtro.
+
+image:Log_Query_Exclude_Filter.png["Filtro che mostra il pulsante di opzione Escludi"]
+
+
+
+==== Query avanzata
+
+*L'interrogazione avanzata* offre la possibilità di creare filtri in "formato libero", combinando o escludendo i valori utilizzando E, NON, O, caratteri jolly, ecc.
+
+image:Log_Advanced_Query_Example.png["Esempio di query di registro che illustra le funzioni E, NOT e O."]
+
+"Filter by" (Filtra per) e Advanced Query (Query avanzata) vengono "E" insieme per formare una singola query. I risultati vengono visualizzati nell'elenco dei risultati e nel grafico.
+
+
+
+==== Raggruppamento nel grafico
+
+Quando si seleziona un attributo di registro in *Raggruppa per*, l'elenco e il grafico mostrano i risultati del filtro corrente. Nel grafico, le colonne sono raggruppate in colori. Passando con il mouse sopra una colonna del grafico vengono visualizzati i dettagli relativi alle voci specifiche, in modo simile alle informazioni generali visualizzate quando si espande la legenda del grafico.  Nella legenda è inoltre possibile scegliere di impostare un filtro Includi o Escludi per un raggruppamento specifico.
+
+image:Log_Query_Group_By_Chart.png["Registra gruppo di query per esempio che mostra colonne impilate nel grafico"]
+
+
+
+=== Pannello Dettagli registro "mobile"
+
+Quando si esplorano i registri utilizzando la query del registro, selezionando una voce nell'elenco si apre un pannello dei dettagli per tale voce. A questo punto potete scegliere di visualizzare il pannello scorrevole "fluttuante" (cioè visualizzato sul resto dello schermo) o "nella pagina" (cioè visualizzato come proprio fotogramma all'interno della pagina). Per passare da una vista all'altra, seleziona il pulsante "in Page / Floating" nell'angolo in alto a destra del pannello.
+
+image:Log_Query_Floating_Detail_Panel.png["Pannello scorrevole \"in-Page\" con pulsante evidenziato"]
+
+
+
+=== Chiudere il menu
+
+È possibile comprimere il menu di navigazione Cloud Insights sul lato sinistro selezionando il pulsante "Riduci a icona" sotto il menu. Mentre il menu è ridotto a icona, passare il mouse su un'icona per vedere quale sezione si apre; selezionando l'icona si apre il menu e si accede direttamente a quella sezione.
+
+image:CI_Menu_Minimize_Button.png["Ridurre a icona il menu"]
+
+
+
+=== Miglioramenti a Data Collector
+
+Cloud Insights ha semplificato la visualizzazione e la ricerca delle informazioni di raccolta dati:
+
+* *L'elaborazione degli elenchi di raccolta dati* è più efficiente, il che significa che il tempo necessario per visualizzare e navigare in questi elenchi è notevolmente ridotto. Se si dispone di un ambiente di grandi dimensioni con molti raccoglitori di dati, si noterà un miglioramento significativo quando si elencano i raccoglitori di dati.
+
+
+* La *Data Collector Support Matrix* è stata spostata da un file .PDF a una pagina basata su .HTML, in modo più rapido e facile da gestire. Consulta la nuova tabella qui: https://docs.netapp.com/us-en/cloudinsights/reference_data_collector_support_matrix.html[]
+
+
+'''
+
+
 == Agosto 2023
 
 
