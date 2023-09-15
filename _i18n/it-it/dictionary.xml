@@ -12394,6 +12394,8 @@ V9,2.4,2</block>
   <block id="82ae7df2222778ee2748567434e1d911" category="section-title">Variabili varie</block>
   <block id="327fbef93ac997add024577e1fdbe932" category="cell">CURL_CMD_PLACEHOLDER</block>
   <block id="e26f9e15502407e5b6563d355fe4ae2c" category="cell">Il comando curl utilizzato per scaricare varie risorse. Ex) "arricciatura" o "arricciatura -k"</block>
-  <block id="ce657060a1d97a0550e523e90be61acd" category="admonition">Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.
-'''</block>
+  <block id="1f0e93b0a15bd60e04388c6d5ff59fdc" category="admonition">Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.</block>
+  <block id="6ca3f10b5393d86f93fd0734db3cecd7" category="paragraph">Per la risoluzione del dispositivo viene utilizzata un'unità di acquisizione con una stella accanto. Prima di rimuovere questa AU, è necessario selezionare un'altra AU da utilizzare per la risoluzione del dispositivo. Passare il mouse su un'AU diversa e aprire il menu "tre punti" per selezionare "Usa per la risoluzione del dispositivo".</block>
+  <block id="c5e5e7a28ba316db52d09e89bd288fc9" category="inline-image-macro">Au utilizzato per la risoluzione del dispositivo</block>
+  <block id="793f9fde8e6064cae75d4cbfd2efe0fb" category="paragraph"><block ref="793f9fde8e6064cae75d4cbfd2efe0fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

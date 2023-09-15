@@ -200,7 +200,10 @@ Se si disinstalla un'unità di acquisizione *Linux*:
 
 
 NOTE: Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.
-'''
+
+Per la risoluzione del dispositivo viene utilizzata un'unità di acquisizione con una stella accanto. Prima di rimuovere questa AU, è necessario selezionare un'altra AU da utilizzare per la risoluzione del dispositivo. Passare il mouse su un'AU diversa e aprire il menu "tre punti" per selezionare "Usa per la risoluzione del dispositivo".
+
+image:AU_for_Device_Resolution.png["Au utilizzato per la risoluzione del dispositivo"]
 
 
 
