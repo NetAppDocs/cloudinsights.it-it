@@ -198,9 +198,10 @@ Se si disinstalla un'unità di acquisizione *Linux*:
 . Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
 
 
-NOTA:non è possibile eliminare l'unità di acquisizione predefinita. Selezionare un altro AU come predefinito prima di eliminare quello precedente.
 
+NOTE: Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.
 '''
+
 
 
 == Reinstallazione di un'unità di acquisizione

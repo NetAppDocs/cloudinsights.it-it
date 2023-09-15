@@ -6820,7 +6820,6 @@
   <block id="1a4b5bab3c6a1557ac96614783640d94" category="paragraph">*Dopo* disinstallazione dell'AU:</block>
   <block id="f84622756d630c61f2eb9ed3a66d0828" category="list-text">In Cloud Insights, selezionare *Amministratore &gt; raccolta dati* e selezionare la scheda *unità di acquisizione*.</block>
   <block id="c3cda1df3a7bb86d771c8e59aac35b0e" category="list-text">Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.</block>
-  <block id="4262a364178344226a6201df72deaa22" category="paragraph">NOTA:non è possibile eliminare l'unità di acquisizione predefinita. Selezionare un altro AU come predefinito prima di eliminare quello precedente.</block>
   <block id="9cfc47a14abb521242e2e73ee615049c" category="section-title">Reinstallazione di un'unità di acquisizione</block>
   <block id="957deaa4b12e9e98b0ee4181b18c7361" category="paragraph">Per reinstallare un'unità di acquisizione sullo stesso server/macchina virtuale, attenersi alla seguente procedura:</block>
   <block id="1405103bcf8e1e217a5c701e0664adf3" category="paragraph">Prima di reinstallare un'unità di acquisizione, è necessario configurare un'unità di acquisizione temporanea su un server/macchina virtuale separato.</block>
@@ -8440,14 +8439,7 @@
   <block id="697ee668360d1c19e858e5fdd25062e6" category="cell">L'esecuzione di Event Rate Checker con un agente già esistente può causare un aumento della latenza sulla SVM. Questo aumento sarà temporaneo durante l'esecuzione di Event Rate Checker.</block>
   <block id="c75d4b042f6604bc016e5b15ff4dea18" category="summary">Cloud Insights supporta Telegraf come agente per la raccolta di dati di integrazione su Kubernetes.</block>
   <block id="562442a302f1457c8c9df7cbde80c0b4" category="doc">Configurazione di NetApp Kubernetes Monitoring Operator</block>
-  <block id="5da82ececca61ed15fcd7ca2e6f43b59" category="inline-link-macro">Bit fluente</block>
-  <block id="21b0eec92dd9a89050827e1eb2801ea8" category="paragraph">Cloud Insights utilizza una serie di componenti, tra cui <block ref="5dd2dd4557ccd99c6f8d2bb01747a70d" category="inline-link-macro-rx"></block> e. <block ref="603b55048bd80ae5555b5b03845c58cc" category="inline-link-macro-rx"></block>, Per la raccolta di dati Kubernetes. Telegraf è un agente server basato su plug-in che può essere utilizzato per raccogliere e generare report su metriche, eventi e registri. I plug-in di input vengono utilizzati per raccogliere le informazioni desiderate nell'agente accedendo direttamente al sistema/sistema operativo, chiamando API di terze parti o ascoltando flussi configurati (ad esempio Kafka, statsD, ecc.). I plug-in di output vengono utilizzati per inviare metriche, eventi e registri raccolti dall'agente a Cloud Insights.</block>
   <block id="b9f54c4d152facdb82c18e1719662b9f" category="paragraph">Cloud Insights offre la raccolta * NetApp Kubernetes Monitoring Operator* (NKMO) per Kubernetes. Quando si aggiunge un data collector, è sufficiente selezionare la sezione Kubernetes.</block>
-  <block id="f34adaf8e760e7cb58ba333e44c4dc52" category="inline-image-macro">Sezione Kubernetes Data Collector</block>
-  <block id="a0eda368f17db54a54c6f0246fd5c816" category="paragraph"><block ref="a0eda368f17db54a54c6f0246fd5c816" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bca1503414d74a046e28b7530006b1be" category="paragraph">Di seguito è riportata un'illustrazione di alto livello che mostra la posizione dell'operatore nell'ambiente in uso. A seconda dell'ambiente in uso, _Proxy Server_ potrebbe essere richiesto o meno.</block>
-  <block id="ba242d5a39d9f558e864fb59273d1683" category="inline-image-macro">Una mappa di alto livello che mostra l'NKMO residente nel cluster Kubernetes, con frecce che mostrano come i dati viaggiano verso il cluster dagli host, dal server proxy, tutti rotolando fino a Cloud Insights</block>
-  <block id="40071b38a2f52894172d224dcc8c0caa" category="paragraph"><block ref="40071b38a2f52894172d224dcc8c0caa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fe5c84e62a55503753fc6f02fa98fbd5" category="paragraph">L'operatore (NKMO) e i data collezioner vengono scaricati dal Registro di sistema di Cloud Insights. Una volta installato, NKMO gestisce quindi tutti i collettori compatibili con gli operatori implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</block>
   <block id="6a65175f7f76169aeeaf32acdda0d82f" category="section-title">Prima di installare NetApp Kubernetes Monitoring Operator</block>
   <block id="13f0cf7e64ed13ef0b58a80209d8e032" category="list-text">Se si utilizza un repository di docker privato o personalizzato, seguire le istruzioni nella sezione utilizzo di un repository di docker privato o personalizzato</block>
@@ -12402,4 +12394,6 @@ V9,2.4,2</block>
   <block id="82ae7df2222778ee2748567434e1d911" category="section-title">Variabili varie</block>
   <block id="327fbef93ac997add024577e1fdbe932" category="cell">CURL_CMD_PLACEHOLDER</block>
   <block id="e26f9e15502407e5b6563d355fe4ae2c" category="cell">Il comando curl utilizzato per scaricare varie risorse. Ex) "arricciatura" o "arricciatura -k"</block>
+  <block id="ce657060a1d97a0550e523e90be61acd" category="admonition">Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.
+'''</block>
 </blocks>
