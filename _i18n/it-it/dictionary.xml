@@ -2509,7 +2509,6 @@
   <block id="1e6f2d5fb7c78a27ba0dc78e9cc7c9b5" category="doc">Requisiti dell'unità di acquisizione</block>
   <block id="15948ad6c9474a20f044eee0ea809fda" category="paragraph">È necessario installare un'unità di acquisizione (AU) per acquisire informazioni dai data collettori dell'infrastruttura (storage, VM, porta, EC2, ecc.). Prima di installare l'unità di acquisizione, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo, CPU, memoria e spazio su disco.</block>
   <block id="033d64e0352a24070b4d6ba6e37207af" category="cell">Requisiti Windows</block>
-  <block id="17cf4a6ff78f85ddfaf7692d70368ade" category="cell">Computer con una versione con licenza di uno dei seguenti: * CentOS (64 bit): Da 7.2 a 7.9, Stream 8, Stream 9 * Debian (64 bit): 9 e 10 * Oracle Enterprise Linux (64 bit): Da 7.5 a 7.9, da 8.1 a 8.4 * Red Hat Enterprise Linux (64 bit): Da 7.2 a 7.9, da 8.1 a 9.1 * Rocky 9.0, 9.1 * Ubuntu Server: 18.04 e 20.04 LTS questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
   <block id="bc551a8dcf48d42b6ea5cf411242afd9" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti: * Microsoft Windows 10 64-bit * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 questo computer non deve eseguire altri software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
   <block id="36b415ace97b614344903d1d039cc60d" category="cell">2 core CPU</block>
   <block id="c90a13d8ec8fe53c6bb33fe10af6f2fe" category="cell">Stesso</block>
@@ -12433,4 +12432,14 @@ V9,2.4,2</block>
   <block id="8c5de4bef31a79ea191d0f5740fcd0d7" category="paragraph">Cloud Insights ha semplificato la visualizzazione e la ricerca delle informazioni di raccolta dati:</block>
   <block id="203714762dd5efde1be30c09220249eb" category="list-text">*L'elaborazione degli elenchi di raccolta dati* è più efficiente, il che significa che il tempo necessario per visualizzare e navigare in questi elenchi è notevolmente ridotto. Se si dispone di un ambiente di grandi dimensioni con molti raccoglitori di dati, si noterà un miglioramento significativo quando si elencano i raccoglitori di dati.</block>
   <block id="213f6f47f9ff1cc9f4851725d89b4a7e" category="list-text">La *Data Collector Support Matrix* è stata spostata da un file .PDF a una pagina basata su .HTML, in modo più rapido e facile da gestire. Consulta la nuova tabella qui:<block ref="8ac5ec571a7bfa27b3b068af3462bfb9" category="inline-link-rx"></block></block>
+  <block id="76bcb8d1f49c96aae75d78c035df4a9b" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+* CentOS (64 bit): Da 7,2 a 7,9, Stream 8, Stream 9
+* Debian (64 bit): 9 e 10
+* Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,4
+* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,7, 9,1
+* Rocky 9,0, 9,1
+* Ubuntu Server: 18,04 e 20,04 LTS
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
 </blocks>
