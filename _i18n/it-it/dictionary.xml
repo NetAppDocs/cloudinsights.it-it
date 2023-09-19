@@ -9417,23 +9417,7 @@
   <block id="478d052d4cfb6a52aa1167cc91369a53" category="cell">FSX Volume cache Miss ratio (rapporto errori cache volume FSX)</block>
   <block id="3285dee4815080320066f09ef70efdc0" category="cell">In caso di violazione della soglia critica, è necessario intraprendere azioni immediate per ridurre al minimo l'interruzione del servizio: 1. Spostare alcuni carichi di lavoro fuori dal nodo del volume per ridurre il carico di i/o 2. Ridurre la richiesta di carichi di lavoro con priorità inferiore sullo stesso nodo tramite i limiti di QoS…considerare azioni immediate in caso di superamento della soglia di avviso: 1. Spostare alcuni carichi di lavoro fuori dal nodo del volume per ridurre il carico di i/o 2. Ridurre la domanda di carichi di lavoro con priorità inferiore sullo stesso nodo tramite i limiti di QoS 3. Modifica delle caratteristiche del carico di lavoro (dimensioni del blocco, caching delle applicazioni, ecc.)</block>
   <block id="fff01ad725d8d95091bb3ef05163c7ba" category="section-title">Monitor K8s</block>
-  <block id="f294f708940b046c4b5c6c3fe2beb74d" category="cell">POD creato</block>
   <block id="5391f9a882a54c787b206138ed6d28b0" category="cell">Informativo</block>
-  <block id="2b52cb18ad3dc04e8b3f5b0a217dab16" category="cell">Questo avviso viene visualizzato quando viene creato un POD.</block>
-  <block id="f0b518884d4692e825876fc2d7fca44a" category="cell">POD cancellato</block>
-  <block id="0639cadac03e80ed4b6257e91f9bd8e3" category="cell">Questo avviso si verifica quando un POD viene cancellato.</block>
-  <block id="39d7b0860d5ecdb0380a2c77c4dc332e" category="cell">Demonset creato</block>
-  <block id="e098953d5def2535f5787c6fcd748361" category="cell">Questo avviso si verifica quando viene creato un demonset.</block>
-  <block id="0de1cf7dabd7089b851b4cbcb81dac73" category="cell">Demonset cancellato</block>
-  <block id="c9e4867a446fa930c3f7f1dff2ddaf9c" category="cell">Questo avviso si verifica quando viene eliminata una demonset.</block>
-  <block id="3d89b8eed7c69a8a767fb928b4562a31" category="cell">Replicaset creato</block>
-  <block id="73ce536af3f9104c8f119e8eb860e726" category="cell">Questo avviso viene visualizzato quando viene creato un Replicaset.</block>
-  <block id="eeabcf367afdad2d67693fc3246849de" category="cell">Replicaset cancellato</block>
-  <block id="33230c56cde1b140e9cd5f9fc6dd1815" category="cell">Questo avviso si verifica quando un Replicaset viene cancellato.</block>
-  <block id="5e68de0568b7ee3ce1ee168f6023b496" category="cell">Implementazione creata</block>
-  <block id="bcf54384c450fe942a8b2365ec90cc58" category="cell">Questo avviso viene visualizzato quando viene creata un'implementazione.</block>
-  <block id="90582794610cecc6bf6c1b849f118be0" category="cell">POD non riuscito</block>
-  <block id="1fb5af0b070e3edfc1b28299d45542c7" category="cell">Questo avviso si verifica quando un POD non funziona.</block>
   <block id="fac4e44d90149e3d2fdc712cbc9bb991" category="cell">Collegamento POD non riuscito</block>
   <block id="b60b475ab9762e47d4888115edfe5fe4" category="cell">Questo avviso si verifica quando un allegato di un volume con POD non funziona.</block>
   <block id="309238af720d23dd7b5017c92842c5ed" category="cell">Persistente richiesta di rimborso del volume non riuscita</block>
@@ -12443,4 +12427,172 @@ V9,2.4,2</block>
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
   <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">tolleranza aggiuntiva net-observer-l4-ds.</block>
+  <block id="5549e3ded48b31ecc7b00b810fa6b7ea" category="cell">Azioni correttive</block>
+  <block id="dacff74646dd80517d0cffd123266041" category="cell">Gravità/soglia</block>
+  <block id="a0fc1910fcbc18de2726e16e8e450c0e" category="cell">Latenza del volume persistente alta</block>
+  <block id="acf1a4cb85a03e701ce12c2b5af1697c" category="cell">Elevate latenze di volume persistente significano che le applicazioni stesse potrebbero soffrirne e non essere in grado di eseguire le loro attività. Il monitoraggio delle latenze dei volumi persistenti è fondamentale per mantenere performance coerenti con le applicazioni. Di seguito sono riportate le latenze previste in base al tipo di supporto: SSD fino a 1-2 millisecondi; SAS fino a 8-10 millisecondi e HDD SATA 17-20 millisecondi.</block>
+  <block id="23342e50cb508ff10388d5171bab5292" category="cell">**Azioni immediate**
+	In caso di violazione della soglia critica, prendere in considerazione azioni immediate per ridurre al minimo l'interruzione del servizio:
+		Se al volume è assegnata una policy di QoS, valutarne le soglie limite in caso di rallentamento del carico di lavoro del volume.
+		**Azioni da intraprendere a breve**
+	Se la soglia di avviso viene violata, pianificare le seguenti azioni immediate:
+		1. Se anche il pool di storage sta riscontrando un elevato utilizzo, spostare il volume in un altro pool di storage.
+	2. Se al volume è stato assegnato un criterio QoS, valutarne le soglie limite nel caso in cui il carico di lavoro del volume venga rallentato.
+	3. Se anche il controller sta ricevendo un elevato utilizzo, sposta il volume su un altro controller o riduci il carico di lavoro totale del controller.</block>
+  <block id="803448f7213deba01eb02cdcf79fd429" category="cell">Avvertenza a &gt; 6.000 μs
+	Critico a &gt; 12.000 μs</block>
+  <block id="90b04ed8e7a658e5a53536008dbc49ca" category="cell">Saturazione memoria cluster alta</block>
+  <block id="647a330e362524d08e4713d9d799fac3" category="cell">La saturazione della memoria allocabile del cluster è elevata.
+	La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo della memoria divisa per la somma della memoria allocabile in tutti i K8s nodi.</block>
+  <block id="5ddf5dd104ca2c41c79e1923eafaab0a" category="cell">Aggiungere nodi.
+	Correggere eventuali nodi non pianificati.
+	Pod di dimensioni adeguate per liberare memoria sui nodi.</block>
+  <block id="5e2de4e8a6fc94dfdcde0d23d16a4b45" category="cell">Avvertenza a &gt; 80 %
+	Critico a &gt; 90%</block>
+  <block id="0eaadb4fcb48a0a0ed7bc9868be9fbaa" category="cell">Attenzione</block>
+  <block id="45418d6dfe7cd04b64a53acde16e3ac3" category="cell">Elevata velocità di ritrasmissione</block>
+  <block id="bfb4c85db6684f06b563d6cdd7918965" category="cell">Velocità di ritrasmissione TCP elevata</block>
+  <block id="d99165642f1db07fbe730ecc58aa4786" category="cell">Controllare la congestione di rete - identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+	Controllare l'utilizzo elevato della CPU del pod.
+	Controllare le prestazioni della rete hardware.</block>
+  <block id="27d40f1ffa3b1b63509d8c164f792e2b" category="cell">Avvertenza a &gt; 10 %
+	Critico a &gt; 25%</block>
+  <block id="4e969a481a508599577f19a66c5a2c7d" category="cell">Capacità file system nodo alta</block>
+  <block id="fb781ac8e192e21d893a740ed76df796" category="cell">- Aumentare le dimensioni dei dischi del nodo per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+- Ridurre l'utilizzo del file dell'applicazione.</block>
+  <block id="987be04e5e051fed3f030c2cd4ff1d32" category="cell">Avvertenza a &gt; 80 %
+ Critico a &gt; 90%</block>
+  <block id="0d69047d13e9146b8262619f5d342fbf" category="cell">Jitter di rete del carico di lavoro alto</block>
+  <block id="4c6d9c0e11174f170d06049863db3bb1" category="cell">Jitter TCP elevato (variazioni dei tempi di risposta/latenza elevata)</block>
+  <block id="0fc3d756aa02a551d20d8ecba29b15a1" category="cell">Verificare la presenza di congestione della rete. Identifica i workload che consumano una notevole larghezza di banda della rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware</block>
+  <block id="0b08522ca39f06e97361791696c099e6" category="cell">Avvertenza @ &gt; 30 ms.
+ Critico a &gt; 50 ms.</block>
+  <block id="5c8d95aa52f5f7fa3c761dc1931f2437" category="cell">Throughput del volume persistente</block>
+  <block id="ce667327ae727d17bb7630071127ce99" category="cell">Le soglie di MBPS sui volumi persistenti possono essere utilizzate per avvisare un amministratore quando i volumi persistenti superano le aspettative di performance predefinite, con un potenziale impatto su altri volumi persistenti. L'attivazione di questo monitor genera avvisi appropriati per il profilo di throughput tipico dei volumi persistenti su SSD. Questo monitor copre tutti i volumi persistenti dell'ambiente. I valori di soglia critici e di avvertenza possono essere modificati in base agli obiettivi di monitoraggio duplicando questo monitor e impostando le soglie appropriate per la classe di archiviazione. Un monitor duplicato può essere ulteriormente indirizzato a un sottoinsieme dei volumi persistenti nell'ambiente.</block>
+  <block id="349a265834d31c44dd4c4d988ae086a5" category="cell">**Azioni immediate**
+Se la soglia critica viene violata, pianificare azioni immediate per ridurre al minimo l'interruzione del servizio:
+1. Introdurre i limiti QoS MBPS per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.
+**Azioni da intraprendere a breve**
+Se la soglia di avviso viene violata, pianificare di eseguire le seguenti azioni immediate:
+1. Introdurre i limiti QoS MBPS per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.</block>
+  <block id="da3a106e23c4f2bb1f4abed10895a5eb" category="cell">Avvertenza @ &gt; 10.000 MB/s.
+ Critico a &gt; 15.000 MB/s.</block>
+  <block id="2cb486fc59da30d769c702eb01d788ed" category="cell">Contenitore a rischio di morte OOM</block>
+  <block id="4451a534f9bef0a82e96f0c18b8f16bd" category="cell">I limiti di memoria del contenitore sono troppo bassi. Il contenitore è a rischio di sfratto (esaurimento della memoria).</block>
+  <block id="77f8b545bfce1b75706171f18d013f8c" category="cell">Aumentare i limiti della memoria del contenitore.</block>
+  <block id="a2c21993b043d505436e461c962d53a6" category="cell">Avvertenza a &gt; 95 %</block>
+  <block id="381bd9782459bd6690d99e8a8a81ea06" category="cell">Riduzione del carico di lavoro</block>
+  <block id="d17f44dd62f560c6b98986fba619fcaa" category="cell">Il carico di lavoro non dispone di pod integri.</block>
+  <block id="317b54184772540ad23340d4d76c09ef" category="cell">Critico a &lt; 1</block>
+  <block id="8d889f31bcf23267b347a3fb4cb1ff1a" category="cell">I limiti di ResourceQuota Mem stanno per superare</block>
+  <block id="e6f393bbe1c9300a33e61931440df8d0" category="cell">I limiti di memoria per lo spazio dei nomi stanno per superare ResourceQuota</block>
+  <block id="cb6d920e3afdddd6d3dd2e25a249a7ce" category="cell">Le richieste di ResourceQuota Mem stanno per superare</block>
+  <block id="e5355e449eb03dfd98c1255687241437" category="cell">Le richieste di memoria per lo spazio dei nomi stanno per superare ResourceQuota</block>
+  <block id="d056d53ae2322df97c75b1ce5dac5cff" category="cell">Creazione nodo non riuscita</block>
+  <block id="c941e3d6c35513ec6bad317f797958dd" category="cell">Impossibile pianificare il nodo a causa di un errore di configurazione.</block>
+  <block id="701714f5fbd36524d1a2977a95a150a5" category="cell">Controllare il registro eventi di Kubernetes per verificare la causa dell'errore di configurazione.</block>
+  <block id="278d01e5af56273bae1bb99a98b370cd" category="cell">Critico</block>
+  <block id="0e14c27d69d1477839d9efc8b0ad46f8" category="cell">Recupero volume persistente non riuscito</block>
+  <block id="8c8cbcc14840938903ba6a12977112a5" category="cell">Il recupero automatico del volume non è riuscito.</block>
+  <block id="f6aad30681bba4322fc5af1af69cf8ef" category="cell">Avvertenza @ &gt; 0 B.</block>
+  <block id="a01254b5fadca078ea74cbeb0e57fe0c" category="cell">Limitazione della CPU del container</block>
+  <block id="1bf5d16fa7c5d9c8897cd4d824dac923" category="cell">I limiti della CPU del contenitore sono impostati su un valore troppo basso. I processi dei container vengono rallentati.</block>
+  <block id="62a706a5ff0ecfd04050efa911929788" category="cell">Aumentare i limiti della CPU del container.</block>
+  <block id="de6571525c704c8657b3102f71cd1329" category="cell">Avvertenza a &gt; 95 %
+ Critico a &gt; 98%</block>
+  <block id="12ffb413fda4bff7ed3d529fab7e21dd" category="cell">Impossibile eliminare il bilanciamento del carico del servizio</block>
+  <block id="b50c21eaa4dde5dcceb05f3d5e10e7c3" category="cell">IOPS volume persistente</block>
+  <block id="54e09e4f57136b1abc2be3badec732b0" category="cell">Le soglie di IOPS sui volumi persistenti possono essere utilizzate per avvisare un amministratore quando i volumi persistenti superano le aspettative di performance predefinite. L'attivazione di questo monitor genera avvisi appropriati per il profilo IOPS tipico dei volumi di persistenza. Questo monitor copre tutti i volumi persistenti dell'ambiente. I valori di soglia critici e di avvertenza possono essere regolati in base agli obiettivi di monitoraggio duplicando questo monitor e impostando le soglie appropriate per il carico di lavoro.</block>
+  <block id="c9b0218269436ed0877e903ae0a00283" category="cell">**Azioni immediate**
+Se la soglia critica viene violata, pianificare azioni immediate per ridurre al minimo l'interruzione del servizio:
+1. Introduciamo i limiti di IOPS di qualità del servizio per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.
+**Azioni da intraprendere a breve**
+Se la soglia di avviso viene violata, pianificare le seguenti azioni immediate:
+1. Introduciamo i limiti di IOPS di qualità del servizio per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.</block>
+  <block id="29b0560962e1c0212afb7c4ecbb71c93" category="cell">Avvertenza @ &gt; 20.000 i/s.
+ Critico a &gt; 25.000 i/s.</block>
+  <block id="87cfeec4bdb82649fe26dbd8b7bf29f9" category="cell">Impossibile aggiornare il bilanciamento del carico del servizio</block>
+  <block id="2643d59c01ffa8a1c0684fc4eb390bcc" category="cell">Pressione PID nodo</block>
+  <block id="1288eedc6e2511d2721df59f399ac7fa" category="cell">Gli identificatori di processo disponibili sul nodo (Linux) sono scesi al di sotto di una soglia di sfratto.</block>
+  <block id="8d9541f2f1d32c5fb01855176e5c57c1" category="cell">Trova e correggi i pod che generano molti processi e occupano il nodo degli ID di processo disponibili.
+Configura PodPidsLimit per proteggere il tuo nodo da pod o container che generano troppi processi.</block>
+  <block id="4dbefdf4b1ddb3ca9769f134be871e4b" category="cell">Critico a &gt; 0</block>
+  <block id="95bea6890aa529aa4331870c42c52bea" category="cell">Errore estrazione immagine pod</block>
+  <block id="25a9cfb04ab08da2d3408b6841891ac7" category="cell">Kubernetes non è riuscito a estrarre l'immagine del contenitore di pod.</block>
+  <block id="6f6bdaa9544f6281972ea06985fb9ab7" category="cell">- Assicurarsi che l'immagine del pod sia scritta correttamente nella configurazione del pod.
+- Verificare che il tag immagine esista nel registro.
+- Verificare le credenziali per il registro delle immagini.
+- Verificare la presenza di problemi di connettività del Registro di sistema.
+- Verificare di non aver raggiunto i limiti di velocità imposti dai provider pubblici del Registro di sistema.</block>
+  <block id="94c150c1b83894781d50071af135ea80" category="cell">Processo in esecuzione troppo lungo</block>
+  <block id="1cf41ef56ce8a9eb75257ff3c8693f09" category="cell">Processo in esecuzione troppo a lungo</block>
+  <block id="3d1aa5736ce76c14a4ebe18eaf3a77d6" category="cell">Avvertenza @ &gt; 1 ore
+ Critico a &gt; 5 ore</block>
+  <block id="7841d72460ad10b826b67c603889a136" category="cell">Memoria nodo alta</block>
+  <block id="2aceb65bfe4bea21524bfc1a1b116165" category="cell">L'utilizzo della memoria del nodo è elevato</block>
+  <block id="71da577c9b69706906f95d0fd5696368" category="cell">Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod di dimensioni adeguate per liberare memoria sui nodi.</block>
+  <block id="e5e09bf52d280084c87d12264b756edd" category="cell">Avvertenza a &gt; 85 %
+ Critico a &gt; 90%</block>
+  <block id="74ef7bdeeb51a483e58c7ded021952ed" category="cell">I limiti CPU di ResourceQuota stanno per superare</block>
+  <block id="9b8e4b0bb0460afb26f3786cfd249927" category="cell">I limiti CPU per lo spazio dei nomi stanno per superare ResourceQuota</block>
+  <block id="aa5d59f5b34fcd2e6570cb5b597748ae" category="cell">Backoff ciclo di arresto del pod</block>
+  <block id="2f6430566c6afc6ea2ca5b08f5bb7c01" category="cell">Pod si è bloccato e ha tentato di riavviarsi più volte.</block>
+  <block id="3bdafc039774c767282dbe18d44c1c99" category="cell">Critico a &gt; 3</block>
+  <block id="147f45a9ef97cc0341380f6f8a1d6e01" category="cell">CPU nodo alta</block>
+  <block id="3e37bc9b357938449001aad25ef8f753" category="cell">L'utilizzo della CPU del nodo è elevato.</block>
+  <block id="2681406d533aa4d58826e3edffbcc642" category="cell">Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod ideali per liberare la CPU sui nodi.</block>
+  <block id="bbbc0887121969dffaaac1addd997c03" category="cell">Latenza rete carico di lavoro RTT alta</block>
+  <block id="9d45c8691c30b49f5f9bb02bd9d560b0" category="cell">Elevata latenza RTT TCP (tempo di andata e ritorno)</block>
+  <block id="d7fb4a35576851603f71e722e49b7694" category="cell">Controllare la congestione di rete ▒ identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware.</block>
+  <block id="5e8fb3d2a2c4c6e442f16a447b6ce44c" category="cell">Avvertenza @ &gt; 150 ms.
+ Critico a &gt; 300 ms.</block>
+  <block id="f51ad3a32d20f12a4aa62f7865c24b05" category="cell">Processo non riuscito</block>
+  <block id="62cc8941365780e844a7a1a3edfdae70" category="cell">Il processo non è stato completato correttamente a causa di un arresto anomalo del nodo o di un riavvio, di un esaurimento delle risorse, di un timeout del processo o di un errore di pianificazione del pod.</block>
+  <block id="5ee1a3ccbcd9ac286dece4ebf73be882" category="cell">Controllare i registri eventi di Kubernetes per verificare le cause dei guasti.</block>
+  <block id="2ec669c0c57f515b14422f2029d0d00c" category="cell">Avvertenza @ &gt; 1</block>
+  <block id="4b9573f7ad02d63bbbaee8beda615e22" category="cell">Volume persistente pieno in pochi giorni</block>
+  <block id="f24107b73347142c35cd13250c79c514" category="cell">Il volume persistente esaurirà lo spazio nell'arco di pochi giorni</block>
+  <block id="ff886ed7d916977aab8b3fb7aae56d53" category="cell">-Aumentare le dimensioni del volume per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+-Ridurre la quantità di dati memorizzati nelle applicazioni.</block>
+  <block id="c9e8926f037a4aaf0bfbc95008a28ce5" category="cell">Avvertenza @ &lt; 8 giorno
+ Critico a &lt; 3 giorno</block>
+  <block id="c314f44daabd371d9d8799b6e3cffa7a" category="cell">Pressione memoria nodo</block>
+  <block id="348e57fa4d72e6a73235b6317cc9498e" category="cell">Il nodo sta esaurendo la memoria. La memoria disponibile ha raggiunto la soglia di evocazione.</block>
+  <block id="13e758d164117d8a33c597c0707dc8f5" category="cell">Nodo non pronto</block>
+  <block id="3c15047d3f6252c3a62c846cf5fcc9aa" category="cell">Il nodo è stato non pronto per 5 minuti</block>
+  <block id="9aa3333109c5063bd5f328edf601ba38" category="cell">Verificare che il nodo disponga di risorse sufficienti per CPU, memoria e disco.
+Controllare la connettività di rete del nodo.
+Controllare i registri eventi di Kubernetes per verificare le cause dei guasti.</block>
+  <block id="72fc9f4b384a114b1502bdf2b1a4981b" category="cell">Capacità volume persistente alta</block>
+  <block id="9e20a4e791e5b3fcd5f0cdf5e58976a0" category="cell">La capacità utilizzata di backend del volume persistente è elevata.</block>
+  <block id="1af3a99d19897f9593f718d7e186ede9" category="cell">- Aumentare le dimensioni del volume per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+Consente di ridurre la quantità di dati memorizzati nelle applicazioni.</block>
+  <block id="342ebde848a696c7b94b3852d026d450" category="cell">Impossibile creare il bilanciamento del carico del servizio</block>
+  <block id="fdc1b09aa1ad52660639e653ccf495f9" category="cell">Creazione del bilanciamento del carico del servizio non riuscita</block>
+  <block id="e00662f582c55c273e64f4e3cffcd0dd" category="cell">Mancata corrispondenza della replica del carico di lavoro</block>
+  <block id="bc323bcbe0862d9bb52aeff43583e9ee" category="cell">Alcuni pod non sono attualmente disponibili per una distribuzione o un DaemonSet.</block>
+  <block id="88009a6fc741fb272943a946dcf66624" category="cell">Le richieste CPU di ResourceQuota stanno per superare</block>
+  <block id="5e6016e4c2bd2e4bd4df818a1bf2e362" category="cell">Le richieste CPU per lo spazio dei nomi stanno per superare ResourceQuota</block>
+  <block id="e9ab30ecefea517194998d555f0b0e37" category="cell">Controllare la congestione di rete - identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware.</block>
+  <block id="a42092b4bcc7ac433713e0441e1787b1" category="cell">Avvertenza a &gt; 10 %
+ Critico a &gt; 25%</block>
+  <block id="b0e0b6c8516b4a336ca0958188e4ddc7" category="cell">Pressione del disco del nodo</block>
+  <block id="b0faff68997bb5f0c79ea09d9187e7ce" category="cell">Lo spazio disponibile su disco e gli inodes sul filesystem root del nodo o sul filesystem di immagine hanno soddisfatto una soglia di eviction.</block>
+  <block id="7a630b16f340cd744188cfe88ea277e0" category="cell">Saturazione CPU cluster alta</block>
+  <block id="ef9e90b0a74afb98891334eb9c2fec60" category="cell">La saturazione della CPU allocabile del cluster è elevata.
+La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo della CPU divisa per la somma della CPU allocabile in tutti i K8s nodi.</block>
 </blocks>

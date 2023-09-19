@@ -373,40 +373,193 @@ Di seguito sono riportati i monitor di sistema attualmente inclusi in Cloud Insi
 |===
 
 
-| Nome monitor | Severità | Descrizione del monitor 
+| Nome monitor | Descrizione | Azioni correttive | Gravità/soglia 
 
 
-| POD creato | Informativo | Questo avviso viene visualizzato quando viene creato un POD. 
+| Latenza del volume persistente alta | Elevate latenze di volume persistente significano che le applicazioni stesse potrebbero soffrirne e non essere in grado di eseguire le loro attività. Il monitoraggio delle latenze dei volumi persistenti è fondamentale per mantenere performance coerenti con le applicazioni. Di seguito sono riportate le latenze previste in base al tipo di supporto: SSD fino a 1-2 millisecondi; SAS fino a 8-10 millisecondi e HDD SATA 17-20 millisecondi. | **Azioni immediate**
+	In caso di violazione della soglia critica, prendere in considerazione azioni immediate per ridurre al minimo l'interruzione del servizio:
+		Se al volume è assegnata una policy di QoS, valutarne le soglie limite in caso di rallentamento del carico di lavoro del volume.
+		**Azioni da intraprendere a breve**
+	Se la soglia di avviso viene violata, pianificare le seguenti azioni immediate:
+		1. Se anche il pool di storage sta riscontrando un elevato utilizzo, spostare il volume in un altro pool di storage.
+	2. Se al volume è stato assegnato un criterio QoS, valutarne le soglie limite nel caso in cui il carico di lavoro del volume venga rallentato.
+	3. Se anche il controller sta ricevendo un elevato utilizzo, sposta il volume su un altro controller o riduci il carico di lavoro totale del controller. | Avvertenza a > 6.000 μs
+	Critico a > 12.000 μs 
 
 
-| POD cancellato | Informativo | Questo avviso si verifica quando un POD viene cancellato. 
+| Saturazione memoria cluster alta | La saturazione della memoria allocabile del cluster è elevata.
+	La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo della memoria divisa per la somma della memoria allocabile in tutti i K8s nodi. | Aggiungere nodi.
+	Correggere eventuali nodi non pianificati.
+	Pod di dimensioni adeguate per liberare memoria sui nodi. | Avvertenza a > 80 %
+	Critico a > 90% 
 
 
-| Demonset creato | Informativo | Questo avviso si verifica quando viene creato un demonset. 
+| Collegamento POD non riuscito | Questo avviso si verifica quando un allegato di un volume con POD non funziona. |  | Attenzione 
 
 
-| Demonset cancellato | Informativo | Questo avviso si verifica quando viene eliminata una demonset. 
+| Elevata velocità di ritrasmissione | Velocità di ritrasmissione TCP elevata | Controllare la congestione di rete - identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+	Controllare l'utilizzo elevato della CPU del pod.
+	Controllare le prestazioni della rete hardware. | Avvertenza a > 10 %
+	Critico a > 25% 
 
 
-| Replicaset creato | Informativo | Questo avviso viene visualizzato quando viene creato un Replicaset. 
+| Capacità file system nodo alta | Capacità file system nodo alta | - Aumentare le dimensioni dei dischi del nodo per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+- Ridurre l'utilizzo del file dell'applicazione. | Avvertenza a > 80 %
+ Critico a > 90% 
 
 
-| Replicaset cancellato | Informativo | Questo avviso si verifica quando un Replicaset viene cancellato. 
+| Jitter di rete del carico di lavoro alto | Jitter TCP elevato (variazioni dei tempi di risposta/latenza elevata) | Verificare la presenza di congestione della rete. Identifica i workload che consumano una notevole larghezza di banda della rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware | Avvertenza @ > 30 ms.
+ Critico a > 50 ms. 
 
 
-| Implementazione creata | Informativo | Questo avviso viene visualizzato quando viene creata un'implementazione. 
+| Throughput del volume persistente | Le soglie di MBPS sui volumi persistenti possono essere utilizzate per avvisare un amministratore quando i volumi persistenti superano le aspettative di performance predefinite, con un potenziale impatto su altri volumi persistenti. L'attivazione di questo monitor genera avvisi appropriati per il profilo di throughput tipico dei volumi persistenti su SSD. Questo monitor copre tutti i volumi persistenti dell'ambiente. I valori di soglia critici e di avvertenza possono essere modificati in base agli obiettivi di monitoraggio duplicando questo monitor e impostando le soglie appropriate per la classe di archiviazione. Un monitor duplicato può essere ulteriormente indirizzato a un sottoinsieme dei volumi persistenti nell'ambiente. | **Azioni immediate**
+Se la soglia critica viene violata, pianificare azioni immediate per ridurre al minimo l'interruzione del servizio:
+1. Introdurre i limiti QoS MBPS per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.
+**Azioni da intraprendere a breve**
+Se la soglia di avviso viene violata, pianificare di eseguire le seguenti azioni immediate:
+1. Introdurre i limiti QoS MBPS per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie. | Avvertenza @ > 10.000 MB/s.
+ Critico a > 15.000 MB/s. 
 
 
-| POD non riuscito | ATTENZIONE | Questo avviso si verifica quando un POD non funziona. 
+| Contenitore a rischio di morte OOM | I limiti di memoria del contenitore sono troppo bassi. Il contenitore è a rischio di sfratto (esaurimento della memoria). | Aumentare i limiti della memoria del contenitore. | Avvertenza a > 95 % 
 
 
-| Collegamento POD non riuscito | ATTENZIONE | Questo avviso si verifica quando un allegato di un volume con POD non funziona. 
+| Riduzione del carico di lavoro | Il carico di lavoro non dispone di pod integri. |  | Critico a < 1 
 
 
-| Persistente richiesta di rimborso del volume non riuscita | ATTENZIONE | Questo avviso si verifica quando un'associazione su un PVC non riesce. 
+| Persistente richiesta di rimborso del volume non riuscita | Questo avviso si verifica quando un'associazione su un PVC non riesce. |  | Attenzione 
 
 
-| MONTAGGIO POD non riuscito | ATTENZIONE | Questo avviso si verifica quando un montaggio su un POD non funziona. 
+| I limiti di ResourceQuota Mem stanno per superare | I limiti di memoria per lo spazio dei nomi stanno per superare ResourceQuota |  | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Le richieste di ResourceQuota Mem stanno per superare | Le richieste di memoria per lo spazio dei nomi stanno per superare ResourceQuota |  | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Creazione nodo non riuscita | Impossibile pianificare il nodo a causa di un errore di configurazione. | Controllare il registro eventi di Kubernetes per verificare la causa dell'errore di configurazione. | Critico 
+
+
+| Recupero volume persistente non riuscito | Il recupero automatico del volume non è riuscito. |  | Avvertenza @ > 0 B. 
+
+
+| Limitazione della CPU del container | I limiti della CPU del contenitore sono impostati su un valore troppo basso. I processi dei container vengono rallentati. | Aumentare i limiti della CPU del container. | Avvertenza a > 95 %
+ Critico a > 98% 
+
+
+| Impossibile eliminare il bilanciamento del carico del servizio |  |  | Attenzione 
+
+
+| IOPS volume persistente | Le soglie di IOPS sui volumi persistenti possono essere utilizzate per avvisare un amministratore quando i volumi persistenti superano le aspettative di performance predefinite. L'attivazione di questo monitor genera avvisi appropriati per il profilo IOPS tipico dei volumi di persistenza. Questo monitor copre tutti i volumi persistenti dell'ambiente. I valori di soglia critici e di avvertenza possono essere regolati in base agli obiettivi di monitoraggio duplicando questo monitor e impostando le soglie appropriate per il carico di lavoro. | **Azioni immediate**
+Se la soglia critica viene violata, pianificare azioni immediate per ridurre al minimo l'interruzione del servizio:
+1. Introduciamo i limiti di IOPS di qualità del servizio per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie.
+**Azioni da intraprendere a breve**
+Se la soglia di avviso viene violata, pianificare le seguenti azioni immediate:
+1. Introduciamo i limiti di IOPS di qualità del servizio per il volume.
+2. Esaminare l'applicazione che gestisce il carico di lavoro sul volume per rilevare eventuali anomalie. | Avvertenza @ > 20.000 i/s.
+ Critico a > 25.000 i/s. 
+
+
+| Impossibile aggiornare il bilanciamento del carico del servizio |  |  | Attenzione 
+
+
+| MONTAGGIO POD non riuscito | Questo avviso si verifica quando un montaggio su un POD non funziona. |  | Attenzione 
+
+
+| Pressione PID nodo | Gli identificatori di processo disponibili sul nodo (Linux) sono scesi al di sotto di una soglia di sfratto. | Trova e correggi i pod che generano molti processi e occupano il nodo degli ID di processo disponibili.
+Configura PodPidsLimit per proteggere il tuo nodo da pod o container che generano troppi processi. | Critico a > 0 
+
+
+| Errore estrazione immagine pod | Kubernetes non è riuscito a estrarre l'immagine del contenitore di pod. | - Assicurarsi che l'immagine del pod sia scritta correttamente nella configurazione del pod.
+- Verificare che il tag immagine esista nel registro.
+- Verificare le credenziali per il registro delle immagini.
+- Verificare la presenza di problemi di connettività del Registro di sistema.
+- Verificare di non aver raggiunto i limiti di velocità imposti dai provider pubblici del Registro di sistema. | Attenzione 
+
+
+| Processo in esecuzione troppo lungo | Processo in esecuzione troppo a lungo |  | Avvertenza @ > 1 ore
+ Critico a > 5 ore 
+
+
+| Memoria nodo alta | L'utilizzo della memoria del nodo è elevato | Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod di dimensioni adeguate per liberare memoria sui nodi. | Avvertenza a > 85 %
+ Critico a > 90% 
+
+
+| I limiti CPU di ResourceQuota stanno per superare | I limiti CPU per lo spazio dei nomi stanno per superare ResourceQuota |  | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Backoff ciclo di arresto del pod | Pod si è bloccato e ha tentato di riavviarsi più volte. |  | Critico a > 3 
+
+
+| CPU nodo alta | L'utilizzo della CPU del nodo è elevato. | Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod ideali per liberare la CPU sui nodi. | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Latenza rete carico di lavoro RTT alta | Elevata latenza RTT TCP (tempo di andata e ritorno) | Controllare la congestione di rete ▒ identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware. | Avvertenza @ > 150 ms.
+ Critico a > 300 ms. 
+
+
+| Processo non riuscito | Il processo non è stato completato correttamente a causa di un arresto anomalo del nodo o di un riavvio, di un esaurimento delle risorse, di un timeout del processo o di un errore di pianificazione del pod. | Controllare i registri eventi di Kubernetes per verificare le cause dei guasti. | Avvertenza @ > 1 
+
+
+| Volume persistente pieno in pochi giorni | Il volume persistente esaurirà lo spazio nell'arco di pochi giorni | -Aumentare le dimensioni del volume per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+-Ridurre la quantità di dati memorizzati nelle applicazioni. | Avvertenza @ < 8 giorno
+ Critico a < 3 giorno 
+
+
+| Pressione memoria nodo | Il nodo sta esaurendo la memoria. La memoria disponibile ha raggiunto la soglia di evocazione. | Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod di dimensioni adeguate per liberare memoria sui nodi. | Critico a > 0 
+
+
+| Nodo non pronto | Il nodo è stato non pronto per 5 minuti | Verificare che il nodo disponga di risorse sufficienti per CPU, memoria e disco.
+Controllare la connettività di rete del nodo.
+Controllare i registri eventi di Kubernetes per verificare le cause dei guasti. | Critico a < 1 
+
+
+| Capacità volume persistente alta | La capacità utilizzata di backend del volume persistente è elevata. | - Aumentare le dimensioni del volume per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+Consente di ridurre la quantità di dati memorizzati nelle applicazioni. | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Impossibile creare il bilanciamento del carico del servizio | Creazione del bilanciamento del carico del servizio non riuscita |  | Critico 
+
+
+| Mancata corrispondenza della replica del carico di lavoro | Alcuni pod non sono attualmente disponibili per una distribuzione o un DaemonSet. |  | Avvertenza @ > 1 
+
+
+| Le richieste CPU di ResourceQuota stanno per superare | Le richieste CPU per lo spazio dei nomi stanno per superare ResourceQuota |  | Avvertenza a > 80 %
+ Critico a > 90% 
+
+
+| Elevata velocità di ritrasmissione | Velocità di ritrasmissione TCP elevata | Controllare la congestione di rete - identificare i carichi di lavoro che consumano una grande quantità di larghezza di banda di rete.
+Controllare l'utilizzo elevato della CPU del pod.
+Controllare le prestazioni della rete hardware. | Avvertenza a > 10 %
+ Critico a > 25% 
+
+
+| Pressione del disco del nodo | Lo spazio disponibile su disco e gli inodes sul filesystem root del nodo o sul filesystem di immagine hanno soddisfatto una soglia di eviction. | - Aumentare le dimensioni dei dischi del nodo per assicurarsi che vi sia spazio sufficiente per i file dell'applicazione.
+- Ridurre l'utilizzo del file dell'applicazione. | Critico a > 0 
+
+
+| Saturazione CPU cluster alta | La saturazione della CPU allocabile del cluster è elevata.
+La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo della CPU divisa per la somma della CPU allocabile in tutti i K8s nodi. | Aggiungere nodi.
+Correggere eventuali nodi non pianificati.
+Pod ideali per liberare la CPU sui nodi. | Avvertenza a > 80 %
+ Critico a > 90% 
 |===
 <<top,Torna all'inizio>>
 
