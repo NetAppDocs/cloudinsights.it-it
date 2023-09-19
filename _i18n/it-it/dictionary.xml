@@ -12442,4 +12442,5 @@ V9,2.4,2</block>
 * Ubuntu Server: 18,04 e 20,04 LTS
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
+  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">tolleranza aggiuntiva net-observer-l4-ds.</block>
 </blocks>

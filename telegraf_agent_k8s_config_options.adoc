@@ -159,6 +159,12 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
 |  | DnsMode | TCP/UDP, modalità per DNS 
 
 
+|  | tolleranza ai bit fluente | tolleranza aggiuntiva ai bit fluenti. 
+
+
+|  | tolleranza-evento-esportatore | tolleranza aggiuntiva per gli esportatori di eventi. 
+
+
 | mappa del carico di lavoro |  | Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione della mappa del carico di lavoro dell'operatore 
 
 
@@ -183,13 +189,7 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
 |  | EnableDNSLookup | Vero/falso, attiva ricerca DNS 
 
 
-|  | tolleranza ai bit fluente | tolleranza aggiuntiva ai bit fluenti. 
-
-
-|  | tolleranza-evento-esportatore | tolleranza aggiuntiva per gli esportatori di eventi. 
-
-
-| mappa del carico di lavoro |  | l4-tollerazioni 
+|  | l4-tollerazioni | tolleranza aggiuntiva net-observer-l4-ds. 
 |===
 
 
