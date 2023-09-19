@@ -78,7 +78,7 @@ Si noti che nel caso precedente, poiché sia "cm-monitoring" che "eg-monitoring"
 
 
 
-. I risultati del filtro corrente, inclusi i valori "Filtra per" E il filtro query avanzate. L'elenco può essere ordinato in base alle colonne visualizzate. Per visualizzare colonne aggiuntive, selezionare l'icona "marcia".
+. I risultati del filtro corrente, compresi i valori "Filtra per" E il filtro query avanzate, vengono visualizzati nell'elenco dei risultati. L'elenco può essere ordinato in base alle colonne visualizzate. Per visualizzare colonne aggiuntive, selezionare l'icona "marcia".
 . Il grafico è stato ingrandito per visualizzare solo i risultati del registro che si sono verificati in un intervallo di tempo specifico. L'intervallo di tempo mostrato qui riflette il livello di zoom corrente. Selezionare il pulsante _Reimposta zoom_ per riportare il livello di zoom all'intervallo temporale Cloud Insights corrente.
 . I risultati del grafico sono stati raggruppati in base al campo _source_. Il grafico mostra i risultati in ogni colonna raggruppati in colori. Passando con il mouse sopra una colonna del grafico vengono visualizzati alcuni dettagli relativi alle voci specifiche.
 +

@@ -87,7 +87,9 @@ sidebar:
     entries:
     - title: Pagina panoramica di Kubernetes
       url: "/kubernetes_landing_page.html"
-    - title: Guida introduttiva all'operatore di monitoraggio
+    - title: Prima di installare o aggiornare l'operatore
+      url: "/pre-requisites_for_k8s_operator.html"
+    - title: Installazione dell'operatore di monitoraggio
       url: "/task_config_telegraf_agent_k8s.html"
     - title: Opzioni operatore di monitoraggio
       url: "/telegraf_agent_k8s_config_options.html"
