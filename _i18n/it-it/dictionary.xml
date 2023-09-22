@@ -144,17 +144,12 @@
   <block id="b523f7997888942f06b8d3a5bcbc4a29" category="cell">ID vendor per ECS</block>
   <block id="0750f8ac8a07b8a8acba23993fc3de34" category="cell">Password utilizzata per ECS</block>
   <block id="2d74084218f04becb882422545c77d5f" category="cell">L'impostazione predefinita è 360 minuti.</block>
-  <block id="4a4a6b257377a1be5e4488cf0a12459b" category="summary">Spiegazione del time-to-live (TTL) e del downsampling</block>
-  <block id="ded51882afc1e18389057617d96454cb" category="doc">TTL (Time-to-live) e dati downsampled</block>
   <block id="6ced38f7d8372fb9ae8761297e3a7cee" category="paragraph">Poiché Cloud Insights conserva i dati per un determinato periodo (per edizione), è possibile elaborare migliaia di punti dati. I dati possono quindi essere sottoposti a downsampling prima di essere visualizzati in grafici e tabelle.</block>
-  <block id="9f006f2f14b484069511ef4a3f5315b3" category="section-title">Conservazione dei dati (time-to-live)</block>
   <block id="997ee7d33c8902a31e71ef5f06a181ea" category="paragraph">Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva. La conservazione dei dati è nota anche come Time-to-Live o TTL.</block>
   <block id="226c03c443192cffffa4a924b4ccffde" category="cell">Edizione</block>
-  <block id="433a6d1dc9f59395173b9c44da198568" category="cell">TTL</block>
   <block id="972e73b7a882d0802a4e3a16946a2f94" category="cell">Di base</block>
   <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">Standard</block>
   <block id="8d5e7e72f12067991186cdf3cb7d5d9d" category="cell">Premium</block>
-  <block id="c6de11ce9bf3311bd827033947947ad4" category="paragraph">Gli abbonamenti Premium Edition con almeno 500 unità gestite (MU) conservano anche i dati di Business Intelligence e Reporting per il periodo di 13 mesi.</block>
   <block id="876f04f443f4acb1176812eb95c5206c" category="section-title">Downsampling dei dati</block>
   <block id="832befb5fcd1bf513bc9413c7b9a2e13" category="paragraph">Il downsampling* fornisce un'approssimazione statistica dei dati nei grafici, offrendo una panoramica efficiente dei dati senza dover visualizzare ogni punto dati, mantenendo al contempo una visione accurata dei dati raccolti.</block>
   <block id="b75dadfce21049a86b69409a71f9d89d" category="section-title">Perché è necessario eseguire il downsampling?</block>
@@ -10131,8 +10126,6 @@
   <block id="b1753b5e08c7b339c92f3054363e10bb" category="paragraph">Durante il processo di registrazione, è possibile scegliere la regione globale in cui ospitare l'ambiente Cloud Insights. Per ulteriori informazioni, leggi informazioni su Cloud Insights <block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
   <block id="fd8da5ef10133e4ba884d6f85e21c49d" category="cell">Conservazione dei dati</block>
   <block id="374616a0b786e9bffadc7f28e68d6c59" category="cell">7 giorni</block>
-  <block id="4ad5aab71ddf80b1c8c2c18804db012d" category="cell">90 giorni</block>
-  <block id="025025548582d3777fd0b072c16e2656" category="cell">13 mesi</block>
   <block id="b42c726529f30f475409276e435fe377" category="cell">Single Sign-on (SSO)</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">Lucchetto</block>
   <block id="b6dea3b24cc18d2214ac0d7ea31d17ec" category="paragraph">Quando si utilizza Cloud Insights, se viene visualizzata un'icona a forma di lucchetto <block ref="3d68554889a6297f572b65a3534d0ef0" category="inline-image-macro-rx" type="image"></block>, Significa che la funzione non è disponibile nell'edizione corrente o è disponibile in una forma limitata. Effettua l'aggiornamento per accedere completamente alla funzionalità.</block>
@@ -12730,4 +12723,9 @@ Quindi, riavviare Telegraf.</block>
   <block id="efe4baadff5bd15b524eb5bdb921fc23" category="sidebar">Prima di installare o aggiornare l'operatore</block>
   <block id="0fa09a2babfce9f13e5281cf6d3521b9" category="sidebar">Installazione dell'operatore di monitoraggio</block>
   <block id="1de805c2687b2c30b46a937270519488" category="cell">MetricAggregationInterval</block>
+  <block id="fb16f782ec011ac7ae93ce05210079df" category="summary">Time-to-Live (TTL): Vengono spiegate la conservazione dei dati e il downsampling</block>
+  <block id="782b9b68a916b155b0332eb5fb675b34" category="doc">Conservazione dei dati e dati sottocampionati</block>
+  <block id="8ba5588aa6038b7e374c4f0c61705cf9" category="section-title">Data retention (nota anche come time-to-live)</block>
+  <block id="ed0c9b5fb2f44a77915d0ce45d0c501c" category="cell">90 giorni</block>
+  <block id="33d8f1359dfc1ccc57d04578cc9e1907" category="paragraph">Gli abbonamenti Premium Edition con almeno 500 unità gestite (MU) conservano i dati di Business Intelligence e Reporting per 13 mesi.</block>
 </blocks>
