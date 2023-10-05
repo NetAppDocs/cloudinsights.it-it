@@ -10367,18 +10367,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="ea0512b988d2823de06af98254ea6811" category="section-title">Icone mappa e monitoraggio delle performance di rete di Kubernetes:</block>
   <block id="9039c950f48328372952e360cb5e909a" category="inline-image-macro">Kubernetes Network Performance Monitoring and Map (monitoraggio e mappa delle performance di rete Kubernetes), WIDTH=640</block>
   <block id="680bf29e063b6b3133c4881cb55b6d34" category="paragraph"><block ref="680bf29e063b6b3133c4881cb55b6d34" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c21ecdc3b22488b71dfec9e5360e46ce" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
-
-Red Hat Enterprise Linux 7.x, 8.x 64 bit, SELinux
-CentOS 7.x a 64 bit, SELinux
-CentOS 8 Stream, SELinux
-Ubuntu 20 fino a 22 64 bit
-Rocky 8.x 64 bit, Rocky 9.x 64 bit, SELinux
-SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinux su SUSE 15 SP3
-
-Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
-
-Se (Security Enhanced) Linux non è supportato.</block>
   <block id="63c80d21f4266efe4883c2f6f1d26fc2" category="list-text">Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.</block>
   <block id="46f506a87cfed781f4ca50c5456e5dea" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.</block>
   <block id="e3177fae37278722b7908e612a5b872b" category="list-text">Protocollo SMB versione 3.1 e precedenti.  Si noti che la sicurezza del carico di lavoro non funziona con le configurazioni SMB che utilizzano FlexCache. Nei sistemi che utilizzano FlexCache, a partire da ONTAP 9.7, Fpolicy è supportato solo in un ambiente NFS.</block>
@@ -12519,7 +12507,6 @@ La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo
   <block id="a0eda368f17db54a54c6f0246fd5c816" category="paragraph"><block ref="a0eda368f17db54a54c6f0246fd5c816" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eaee203e2e728070e3c454936f257fdf" category="paragraph">L'operatore e i raccoglitori di dati vengono scaricati dal Registro Docker di Cloud Insights. Una volta installato, NKMO gestisce quindi tutti i collettori compatibili con gli operatori implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</block>
   <block id="3e4299c002d64ba4e1a384acbdafad4c" category="inline-link-macro">*Prima dell'installazione o dell'aggiornamento*</block>
-  <block id="f8d86927776a602d23bcf32f5dc5ea76" category="admonition">Leggere il <block ref="0b7fc724dd1c400c20e2b859e6c06230" category="inline-link-macro-rx"></block> Documentazione prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes.</block>
   <block id="20e38ff1d741d05cb351043049612af2" category="section-title">Aggiornamento all'ultimo NetApp Kubernetes Monitoring Operator</block>
   <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">Determinare se esiste una configurazione Agentcon l'operatore esistente (se lo spazio dei nomi non è il _monitoraggio netapp_ predefinito, sostituire lo spazio dei nomi appropriato):</block>
   <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">Se esiste una configurazione AgentConfiguration:</block>
@@ -12728,4 +12715,22 @@ Quindi, riavviare Telegraf.</block>
   <block id="8ba5588aa6038b7e374c4f0c61705cf9" category="section-title">Data retention (nota anche come time-to-live)</block>
   <block id="ed0c9b5fb2f44a77915d0ce45d0c501c" category="cell">90 giorni</block>
   <block id="33d8f1359dfc1ccc57d04578cc9e1907" category="paragraph">Gli abbonamenti Premium Edition con almeno 500 unità gestite (MU) conservano i dati di Business Intelligence e Reporting per 13 mesi.</block>
+  <block id="4099aa818be44a204ef7ec3ba69b96c7" category="inline-link-macro">aggregati da visualizzare</block>
+  <block id="6046897f8c0f41425f2e47227c5932e8" category="paragraph">Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che <block ref="c09eb6051f010e6e01a634a8b6a5c304" category="inline-link-macro-rx"></block>, Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.</block>
+  <block id="8f0ae9ae8e0fd7f3e8fe6ff175a59943" category="list-text">Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/&lt;namespace&gt;-additional-permissions_</block>
+  <block id="8a75e64ac585bb8eb6efae44768cfc8e" category="list-text">Creare una nuova regola per gli apartGroup e le risorse desiderati con i verbi ["Get", "Watch", "list"]. Vedere \https://kubernetes.io/docs/reference/access-authn-authz/rbac/</block>
+  <block id="5aa700b8892918bb447b666e3ba9b2a8" category="list-text">Applicare le modifiche al cluster</block>
+  <block id="fc053bcc2bca8112838f33be578f7479" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+Red Hat Enterprise Linux 7.x, 8.x 64 bit, SELinux
+CentOS 7.x a 64 bit, SELinux
+CentOS 8 Stream, SELinux
+Ubuntu 20 fino a 22 64 bit
+Rocky 8.x 64 bit, Rocky 9.x 64 bit, SELinux
+SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinux su SUSE 15 SP3
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
+  <block id="449735a59883598ca6b4afe7cb57336a" category="admonition">Leggere il <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> Documentazione prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes.</block>
+  <block id="4f05106cca363b0f3c492314ab777534" category="cell">Mancano i dati _involvedobject_ per alcuni registri eventi.</block>
+  <block id="67ee92e19812baa7cedb346320ca0182" category="cell">Assicurarsi di aver seguito i passaggi descritti in <block ref="d9283cdb1b027ed2a61fa92c8dc3e314" category="inline-link-macro-rx"></block> sezione precedente.</block>
 </blocks>

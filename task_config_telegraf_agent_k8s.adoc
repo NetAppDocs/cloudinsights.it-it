@@ -32,7 +32,7 @@ L'operatore e i raccoglitori di dati vengono scaricati dal Registro Docker di Cl
 == Prima di installare NetApp Kubernetes Monitoring Operator
 
 
-IMPORTANT: Leggere il link:/pre-requisites_for_k8s_operator.html["*Prima dell'installazione o dell'aggiornamento*"] Documentazione prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes.
+IMPORTANT: Leggere il link:pre-requisites_for_k8s_operator.html["*Prima dell'installazione o dell'aggiornamento*"] Documentazione prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes.
 
 
 
@@ -523,5 +523,8 @@ timeout = "10 s"
 ...
 
 Quindi, riavviare Telegraf. 
+
+
+| Mancano i dati _involvedobject_ per alcuni registri eventi. | Assicurarsi di aver seguito i passaggi descritti in link:pre-requisites_for_k8s_operator.html["Permessi"] sezione precedente. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

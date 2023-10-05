@@ -193,6 +193,17 @@ OpenShift potrebbe implementare un ulteriore livello di sicurezza che potrebbe b
 
 
 
+=== Permessi
+
+Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che link:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["aggregati da visualizzare"], Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.
+
+. Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/<namespace>-additional-permissions_
+. Creare una nuova regola per gli apartGroup e le risorse desiderati con i verbi ["Get", "Watch", "list"]. Vedere \https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+. Applicare le modifiche al cluster
+
+
+
+
 === Tolerazioni e contamini
 
 I DemonSet _telegraf_, _fluent-bit_ e _net-obever_ devono pianificare un pod su ogni nodo del cluster per raccogliere correttamente i dati su tutti i nodi. L'operatore è stato configurato in modo da tollerare alcuni *segni* noti. Se sono stati configurati dei tipi di contamini personalizzati sui nodi, impedendo l'esecuzione dei pod su ogni nodo, è possibile creare una *tolleranza* per tali tipi di contamini link:telegraf_agent_k8s_config_options.html["In _AgentConfiguration_"]. Se sono stati applicati dei tipi di manutenzione personalizzati a tutti i nodi del cluster, è necessario aggiungere anche le tolleranze necessarie all'implementazione dell'operatore per consentire la pianificazione e l'esecuzione del pod operatore.
