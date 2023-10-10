@@ -53,7 +53,7 @@ NOTE: Se hai bisogno di ulteriore tempo per valutare Cloud Insights e la tua pro
 
 
 
-== Prova con AWS Marketplace
+=== Prova con AWS Marketplace
 
 Puoi anche iscriverti per una prova gratuita tramite AWS Marketplace. La versione di prova gratuita di AWS Marketplace ti offre l'accesso a Cloud Insights per un periodo di prova di 33 giorni e consente fino a 499 <<pricing,Unità gestite>> (Mus).
 
@@ -63,9 +63,41 @@ La versione di prova gratuita di AWS Marketplace non può essere estesa. In qual
 
 
 
-=== Cosa fare se la versione di prova è scaduta?
+==== Cosa fare se la versione di prova è scaduta?
 
 Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Cloud Insights, le funzionalità saranno limitate fino a quando non si effettua l'iscrizione.
+
+
+
+== Versioni di prova dei moduli
+
+Presto disponibile!
+
+
+NOTE: La versione di prova del modulo è considerata una funzionalità di anteprima ed è pertanto soggetta a modifiche.
+
+Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire anche di *versioni di prova dei moduli*. Ad esempio, se sei già abbonato all'osservabilità dell'infrastruttura ma stai aggiungendo Kubernetes al tuo ambiente, potrai entrare automaticamente in una prova di 30 giorni dell'osservabilità Kubernetes, a partire da quando installi l'operatore di monitoring NetApp Kubernetes. Ti verrà addebitato solo l'utilizzo delle unità gestite da Kubernetes Observability al termine del periodo di prova.
+
+
+NOTE: Tenere presente che dopo il periodo di prova verrà addebitato l'utilizzo di nuove unità gestite (MU), quindi assicurarsi di pianificare di conseguenza. Al termine del periodo di prova del modulo, verrà visualizzato un messaggio di notifica se sarà necessario aggiungere altre MU per evitare l'interruzione del servizio.
+
+È possibile monitorare l'utilizzo dell'unità gestita nella pagina *Admin > Subscription* della scheda *Usage*.
+
+image:Module_Trials_UsageTab.png["Schermata utilizzo UM"]
+
+
+
+=== Generatore di stime
+
+Durante una prova del modulo, non viene modificato l'utilizzo delle UM per le risorse consumate per il modulo, ma potete aprire il *Tool* (nella scheda _Summary_) per vedere come le MU saranno addebitate dopo la prova, così come giocare con gli scenari "What if" con il numero di MU che potreste avere bisogno in futuro. Azzerare i numeri uscendo dal calcolatore.
+
+image:Module_Trials_Estimator.png["Generatore di stime"]
+
+Selezionare la casella di controllo accanto a un modulo per aggiungere o rimuovere le UM dell'intero modulo dal costo stimato.
+
+Lo strumento di stima consente inoltre di vedere in che modo i numeri si accumulano per un Add on (Aggiungi), in cui si mantiene il periodo di abbonamento corrente e si aumenta il numero di unità gestite concesse in licenza, o per un'opzione Renew (Rinnova) per un abbonamento di rinnovo che si desidera acquistare al momento dell'abbonamento corrente termine terminato.
+
+Si noti che i clienti hanno diritto a una versione di prova del modulo una sola volta per abbonamento.
 
 
 

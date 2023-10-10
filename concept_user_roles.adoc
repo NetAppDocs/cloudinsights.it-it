@@ -263,3 +263,20 @@ Tuttavia, non attivare _SSO User Auto-Provisioning_ se una delle seguenti condiz
 * La tua organizzazione dispone di più tenant Cloud Insights
 * L'organizzazione non desidera che tutti gli utenti del dominio federato dispongano di un certo livello di accesso automatico al tenant Cloud Insights. _A questo punto, non abbiamo la possibilità di utilizzare i gruppi per controllare l'accesso ai ruoli con questa opzione_.
 
+
+
+
+== Limitazione dell'accesso per dominio
+
+Cloud Insights può limitare l'accesso degli utenti solo ai domini specificati. Nella pagina *Amministrazione > Gestione utenti*, selezionare "limita domini".
+
+image:Restrict_Domains_Modal.png["Limitazione dei domini solo ai domini predefiniti, ai valori predefiniti e ai domini aggiuntivi specificati o senza restrizioni"]
+
+Vengono visualizzate le seguenti opzioni:
+
+* Nessuna restrizione: Cloud Insights resta accessibile agli utenti indipendentemente dal loro dominio.
+* Limita accesso ai domini predefiniti: I domini predefiniti sono quelli utilizzati dai proprietari degli account dell'ambiente Cloud Insights. Questi domini sono sempre accessibili.
+* Limitare l'accesso ai valori predefiniti e ai domini specificati. Elencare tutti i domini ai quali si desidera accedere all'ambiente Cloud Insights, oltre ai domini predefiniti.
+
+
+image:Restrict_Domains_Tooltip.png[""]
