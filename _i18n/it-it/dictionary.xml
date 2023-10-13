@@ -10143,11 +10143,7 @@
   <block id="5fc2de3da890d5a9abd4414ec9849028" category="paragraph">Il prezzo di Cloud Insights è pari a *unità gestita*. L'utilizzo delle unità gestite viene calcolato in base al numero di *host o macchine virtuali* e alla quantità di *capacità non formattata* gestita nell'ambiente dell'infrastruttura.</block>
   <block id="0b8e651376aa14f43ba4123bb6c8d139" category="list-text">1 unità gestita = 2 host (qualsiasi macchina virtuale o fisica)</block>
   <block id="dc3f15e1a26ca80a17b59bb6db783b8a" category="list-text">1 unità gestita = 4 TIB di capacità non formattata di dischi fisici o virtuali</block>
-  <block id="5c478d648857e82323360d2328b3dc12" category="paragraph">Si noti che i seguenti data colleziones vengono misurati a un diverso tasso di TIB raw rispetto a quello di unità gestite. Ogni 40 TiB di capacità non formattata su questi data collettori viene addebitato come 1 unità gestita (MU):</block>
-  <block id="128edc3ff8c2d69c9c76b866643314ec" category="list-text">AWS S3</block>
-  <block id="e7289067e05f71335c1c33ab4cb274b5" category="list-text">ECS Dell EMC</block>
   <block id="de9af54682ac41397db654efb63c031a" category="list-text">Hitachi Content Platform</block>
-  <block id="7f0f78f6c5c0c1767395318a59e0e62a" category="list-text">NetApp StorageGRID</block>
   <block id="6cede1cfde12fc6d88ad1d8b6636a977" category="inline-xref">di seguito</block>
   <block id="d8be2988f45df4b59f1cfe2e32869556" category="paragraph">Se il tuo ambiente include o prevede di includere 1,000 o più unità gestite, sei idoneo per *Volume Pricing* e ti verrà richiesto di contattare NetApp Sales per iscriverti. Vedere <block ref="e38bca6fb8f053d6cea5cce9993ed45c" category="inline-xref-macro-rx"></block> per ulteriori dettagli.</block>
   <block id="bbf59ac32c05b550772acb1ca3799847" category="section-title">Stima del costo dell'abbonamento</block>
@@ -10250,8 +10246,6 @@
   <block id="e33adffcdf8ab2922b108932f9937051" category="paragraph">Puoi anche iscriverti per una prova gratuita tramite AWS Marketplace. La versione di prova gratuita di AWS Marketplace ti offre l'accesso a Cloud Insights per un periodo di prova di 33 giorni e consente fino a 499 <block ref="0dffd7fe70b4d03069ea72db3faf598d" category="inline-xref-macro-rx"></block> (Mus).</block>
   <block id="8d36d0a28768ec9f4de7566b028eb00b" category="paragraph">La versione di prova gratuita di AWS Marketplace non può essere estesa. In qualsiasi momento durante la prova, puoi eseguire il downgrade a un abbonamento Cloud Insights edizione base o passare a un abbonamento Cloud Insights a pagamento visitando la pagina *Amministratore -&gt; abbonamento*.</block>
   <block id="e26a4046c7e3fdd09a0a0aa9204017f9" category="paragraph">Per iscriverti, vai a *Admin -&gt; Subscription*. Oltre ai pulsanti *Subscribe*, potrai visualizzare i data collezioner installati e calcolare i prezzi stimati. Per un ambiente tipico, fare clic sul pulsante self-service AWS Marketplace. Se il tuo ambiente include o prevede di includere 1,000 o più unità gestite, sei idoneo per il Volume Pricing.</block>
-  <block id="260d3a5336ca87727913d1aaec8359f7" category="list-text">SmartFiles di Cohesity</block>
-  <block id="a1a04ea3436c6b700db87f125d4f2daa" category="list-text">Dominio dati Dell EMC</block>
   <block id="840c1d56416cb9ee31be4cf00ea5851b" category="paragraph">Il costo di listino stimato cambierà in base alla durata dell'abbonamento.
 NOTA: I calcolatori sono solo a scopo di stima. Il tuo prezzo esatto verrà impostato al momento dell'iscrizione.</block>
   <block id="3d3a14a6970653e82934d70556e92edc" category="inline-image-macro">Pagina di abbonamento che mostra i calcolatori di stima dei costi di infrastruttura e Kubernetes</block>
@@ -12756,4 +12750,5 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
   <block id="3fd4ae48fb6a82b317e55d474c186cee" category="list-text">Limita accesso ai domini predefiniti: I domini predefiniti sono quelli utilizzati dai proprietari degli account dell'ambiente Cloud Insights. Questi domini sono sempre accessibili.</block>
   <block id="846c4bffd2bae99bec40857d4f18da12" category="list-text">Limitare l'accesso ai valori predefiniti e ai domini specificati. Elencare tutti i domini ai quali si desidera accedere all'ambiente Cloud Insights, oltre ai domini predefiniti.</block>
   <block id="d604b89dedd622b0113a230ac1a109cc" category="paragraph"><block ref="d604b89dedd622b0113a230ac1a109cc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a67db23e86df970f58242b726cddbe4" category="list-text">1 unità gestita = 40 TiB di capacità non formattata dello storage secondario selezionato: AWS S3, Cohesity SmartFiles, Dell EMC Data Domain, Dell EMC ECS, Hitachi Content Platform, IBM Cleversafe, NetApp StorageGRID.</block>
 </blocks>
