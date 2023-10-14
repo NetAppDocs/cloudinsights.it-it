@@ -526,5 +526,8 @@ Quindi, riavviare Telegraf.
 
 
 | Mancano i dati _involvedobject_ per alcuni registri eventi. | Assicurarsi di aver seguito i passaggi descritti in link:pre-requisites_for_k8s_operator.html["Permessi"] sezione precedente. 
+
+
+| Perché vedo due pod operatore di monitoring in esecuzione, uno denominato netapp-ci-monitoring-operator-<pod> e l'altro denominato monitoring-operator-<pod>? | A partire dal 12 ottobre 2023, Cloud Insights ha ridefinito l'operatore per servire meglio i nostri utenti; affinché tali modifiche siano completamente adottate, è necessario <<uninstalling,rimuovere il vecchio operatore>> e. <<installing-the-netapp-kubernetes-monitoring-operator,installare il nuovo>>. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

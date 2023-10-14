@@ -25,6 +25,35 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Ottobre 2023
+
+
+
+=== Versioni di prova dei moduli
+
+Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire di link:/concept_subscribing_to_cloud_insights.html#module-trials["Versioni di prova dei moduli"]. Ad esempio, se sei già abbonato all'opzione Infrastructure Observability ma stai aggiungendo Kubernetes al tuo ambiente, potrai entrare automaticamente in una prova di 30 giorni di Kubernetes Observability. Ti verrà addebitato solo l'utilizzo delle unità gestite da Kubernetes Observability al termine del periodo di prova.
+
+
+
+=== Limitare l'accesso a domini specifici
+
+Gli amministratori e i proprietari di account ora hanno la possibilità di farlo link:/concept_user_roles.html#restricting-access-by-domain["Limitare l'accesso Cloud Insights"] per inviare e-mail ai domini specificati. Andare su *Admin > User Management* e selezionare il pulsante _Restringi domini_.
+
+image:Restrict_Domains_Modal.png["Limita modalità domini"]
+
+
+
+=== Aggiornamenti di Data Collector
+
+Sono state apportate le seguenti modifiche al Data Collector/Acquisition Unit:
+
+* *Isilon / PowerScale REST*: Sono stati aggiunti vari nuovi attributi e metriche alle funzionalità analitiche avanzate di Cloud Insights con il nome _emc_isilon.node_pool.*_. Questi contatori e attributi consentiranno agli utenti di creare dashboard e monitor per il consumo di capacità _node_pool_; gli utenti con cluster Isilon costruiti da modelli di nodi hardware diversi avranno pool di nodi multipli e la comprensione del consumo di capacità totale/HDD/SSD a livello di pool di nodi è utile sia per il monitoraggio che per la pianificazione.
+* *Supporto dell'autenticazione Rubrik* "account di servizio": Il collettore Rubrik di Cloud Insights ora supporta sia l'autenticazione di base HTTP tradizionale (nome utente e password) sia l'approccio dell'account di servizio di Rubrik, che richiede un nome utente + segreto + ID organizzazione.
+
+
+'''
+
+
 == Settembre 2023
 
 
