@@ -8378,7 +8378,6 @@
   <block id="b3431d54476e0f70ea6fc00bae48572b" category="summary">Questo script può essere eseguito per controllare la frequenza degli eventi nella SVM prima di installare una DSC SVM ONTAP</block>
   <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVM Event Rate Checker (Guida al dimensionamento dell'agente)</block>
   <block id="0a2bd44573247d8e7748ce7d2d2a4b8f" category="paragraph">La funzione di verifica del tasso di eventi viene utilizzata per controllare la velocità di eventi combinata NFS/SMB nella SVM prima di installare un data collector SVM ONTAP, per verificare il numero di macchine SVM che un agente è in grado di monitorare. Utilizza Event Rate Checker come guida al dimensionamento per pianificare il tuo ambiente di sicurezza.</block>
-  <block id="ee884395b0c6bb018cd831452f073916" category="paragraph">Un agente può supportare fino a 50 data colleziones.</block>
   <block id="3b31c3fb3c507b79d3f86f2b1e3392f5" category="section-title">Requisiti:</block>
   <block id="70087224b93e8179deda7438fae8e843" category="list-text">IP del cluster</block>
   <block id="baf16fe3173b840f1197987b16b3a8fc" category="list-text">Nome utente e password dell'amministratore del cluster</block>
@@ -8387,14 +8386,12 @@
   <block id="98349559eceadcec0dc76cadc5fbcc36" category="list-text">Installare l'Agent seguendo le istruzioni in CloudSecure.</block>
   <block id="2ec48fb989cd0668ab2b0f0b34915834" category="list-text">Una volta installato l'agente, eseguire lo script _server_data_rate_checker.sh_ come utente sudo:</block>
   <block id="7ad6363059d1736f3a11960eab53e364" category="list-text">Questo script richiede l'installazione di _sshpass_ nella macchina linux. Esistono due modi per installarlo:</block>
-  <block id="6cf31abcd39b8549a7f488c6aa8b2fef" category="list-text">Eseguire il comando fiolowing:</block>
   <block id="de60349d54fe34d614b0fb4793843635" category="list-text">Se questo non funziona, scaricare _sshpass_ sulla macchina linux dal web ed eseguire il seguente comando:</block>
   <block id="22716ce17ab9464ee020ed67252afe9c" category="list-text">Fornire i valori corretti quando richiesto. Per un esempio, vedere di seguito.</block>
   <block id="cd0c9650e0d2fb93465de9f54297b6d5" category="list-text">L'esecuzione dello script richiede circa 5 minuti.</block>
   <block id="cf34f3fb7645134a13186593549fa644" category="list-text">Al termine dell'esecuzione, lo script stampa la frequenza degli eventi dalla SVM. È possibile controllare il tasso di eventi per SVM nell'output della console:</block>
   <block id="6db04e87dfe97bac4b4b718639579432" category="paragraph">Ciascun Data Collector SVM di ONTAP può essere associato a una singola SVM, il che significa che ciascun data collector potrà ricevere il numero di eventi generati da una singola SVM.</block>
   <block id="08683ab3ff556022951d5dda41f12b0a" category="paragraph">Tenere presente quanto segue:</block>
-  <block id="81b0a686a7f070f4718258f6f1c90eea" category="paragraph">A) utilizzare questa tabella come guida generale al dimensionamento:</block>
   <block id="276e994cf948a6c752060d65f4332540" category="cell">Configurazione del computer dell'agente</block>
   <block id="4d12a2dc5213f7dd37735a4de1c0ab8e" category="cell">Numero di Data Collector SVM</block>
   <block id="71df4650d5b6e7efed16bede01137899" category="cell">Tasso massimo di eventi che il computer dell'agente può gestire</block>
@@ -12764,4 +12761,7 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
   <block id="1c1bebc9155c93bfe8263d7dd59e4d97" category="inline-xref">rimuovere il vecchio operatore</block>
   <block id="3aadd91c93bca2d335851fd692f310be" category="inline-xref">installare il nuovo</block>
   <block id="e7d6cf6485500824df0535ac307eb301" category="cell">A partire dal 12 ottobre 2023, Cloud Insights ha ridefinito l'operatore per servire meglio i nostri utenti; affinché tali modifiche siano completamente adottate, è necessario <block ref="860504374016936ed59489a365e20672" category="inline-xref-macro-rx"></block> e. <block ref="d0e6f11bd593aa32efc140a3c31c51b6" category="inline-xref-macro-rx"></block>.</block>
+  <block id="40202f910a40e1ff8a02506c288b507e" category="paragraph">Un agente può supportare fino a un massimo di 50 raccoglitori di dati.</block>
+  <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Eseguire il seguente comando:</block>
+  <block id="94870525f3ad4e44c2a59a8a8c218033" category="paragraph">A) utilizzare questa tabella come guida generale al dimensionamento. È possibile aumentare il numero di core e/o memoria per aumentare il numero di data collector supportati, fino a un massimo di 50 data collector:</block>
 </blocks>

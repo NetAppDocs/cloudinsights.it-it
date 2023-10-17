@@ -21,7 +21,7 @@ keywords: event, checker, rate, sizing, cloud secure
 [role="lead"]
 La funzione di verifica del tasso di eventi viene utilizzata per controllare la velocità di eventi combinata NFS/SMB nella SVM prima di installare un data collector SVM ONTAP, per verificare il numero di macchine SVM che un agente è in grado di monitorare. Utilizza Event Rate Checker come guida al dimensionamento per pianificare il tuo ambiente di sicurezza.
 
-Un agente può supportare fino a 50 data colleziones.
+Un agente può supportare fino a un massimo di 50 raccoglitori di dati.
 
 
 
@@ -42,7 +42,7 @@ Fasi:
  /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
 . Questo script richiede l'installazione di _sshpass_ nella macchina linux. Esistono due modi per installarlo:
 +
-.. Eseguire il comando fiolowing:
+.. Eseguire il seguente comando:
 +
  linux_prompt> yum install sshpass
 .. Se questo non funziona, scaricare _sshpass_ sulla macchina linux dal web ed eseguire il seguente comando:
@@ -61,7 +61,7 @@ Ciascun Data Collector SVM di ONTAP può essere associato a una singola SVM, il 
 
 Tenere presente quanto segue:
 
-A) utilizzare questa tabella come guida generale al dimensionamento:
+A) utilizzare questa tabella come guida generale al dimensionamento. È possibile aumentare il numero di core e/o memoria per aumentare il numero di data collector supportati, fino a un massimo di 50 data collector:
 
 |===
 
