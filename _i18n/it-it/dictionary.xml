@@ -12765,4 +12765,6 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
   <block id="9ec73c52f582999e7cc8d920ca844c81" category="list-text">Selezionate _Storage_ dal menu a discesa.</block>
   <block id="4c6af067d4990a4c05731f55b8095467" category="list-text">Fate clic sull'ingranaggio e aggiungete _isActive_ come colonna.</block>
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.</block>
+  <block id="94199173f712baeb6cb5de3780bf07fa" category="cell">Inventario stato recente: Dati non previsti recuperati - Array ha riportato 0 volume</block>
+  <block id="7e7b57722f915378d4f91beba7dfeeda" category="cell">In genere indica un problema di autorizzazione (non di autenticazione). Assicurarsi che le credenziali siano corrette e che il nome utente sia in grado di elencare tutti i volumi e visualizzarne gli attributi.</block>
 </blocks>

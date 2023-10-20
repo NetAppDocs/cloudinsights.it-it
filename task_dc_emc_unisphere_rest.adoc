@@ -95,5 +95,8 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 
 | Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
+
+
+| Inventario stato recente: Dati non previsti recuperati - Array ha riportato 0 volume | In genere indica un problema di autorizzazione (non di autenticazione). Assicurarsi che le credenziali siano corrette e che il nome utente sia in grado di elencare tutti i volumi e visualizzarne gli attributi. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
