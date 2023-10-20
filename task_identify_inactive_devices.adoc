@@ -24,11 +24,10 @@ Identificare le risorse di cui disponi e chi le utilizza è fondamentale per il 
 Per identificare le risorse inattive, procedere come segue.
 
 .Fasi
-. Nel menu Cloud Insights, fare clic su *Query > Nuova query*
-. In `Search For` selezionare il tipo di risorsa da interrogare
-. Fare clic su *+ > is Active (attiva)*
-. Fare clic su *qualsiasi* e modificarlo in *No*
+* Navigare a *Esplora -> +Nuova query metrica*.
+* Selezionate _Storage_ dal menu a discesa.
+* Fate clic sull'ingranaggio e aggiungete _isActive_ come colonna.
 +
-Il sistema visualizza un elenco di risorse inattive del tipo di dispositivo selezionato.
+Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.
 
 
