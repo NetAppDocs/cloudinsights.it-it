@@ -145,7 +145,6 @@
   <block id="0750f8ac8a07b8a8acba23993fc3de34" category="cell">Password utilizzata per ECS</block>
   <block id="2d74084218f04becb882422545c77d5f" category="cell">L'impostazione predefinita è 360 minuti.</block>
   <block id="6ced38f7d8372fb9ae8761297e3a7cee" category="paragraph">Poiché Cloud Insights conserva i dati per un determinato periodo (per edizione), è possibile elaborare migliaia di punti dati. I dati possono quindi essere sottoposti a downsampling prima di essere visualizzati in grafici e tabelle.</block>
-  <block id="997ee7d33c8902a31e71ef5f06a181ea" category="paragraph">Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva. La conservazione dei dati è nota anche come Time-to-Live o TTL.</block>
   <block id="226c03c443192cffffa4a924b4ccffde" category="cell">Edizione</block>
   <block id="972e73b7a882d0802a4e3a16946a2f94" category="cell">Di base</block>
   <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">Standard</block>
@@ -12701,11 +12700,6 @@ Quindi, riavviare Telegraf.</block>
   <block id="efe4baadff5bd15b524eb5bdb921fc23" category="sidebar">Prima di installare o aggiornare l'operatore</block>
   <block id="0fa09a2babfce9f13e5281cf6d3521b9" category="sidebar">Installazione dell'operatore di monitoraggio</block>
   <block id="1de805c2687b2c30b46a937270519488" category="cell">MetricAggregationInterval</block>
-  <block id="fb16f782ec011ac7ae93ce05210079df" category="summary">Time-to-Live (TTL): Vengono spiegate la conservazione dei dati e il downsampling</block>
-  <block id="782b9b68a916b155b0332eb5fb675b34" category="doc">Conservazione dei dati e dati sottocampionati</block>
-  <block id="8ba5588aa6038b7e374c4f0c61705cf9" category="section-title">Data retention (nota anche come time-to-live)</block>
-  <block id="ed0c9b5fb2f44a77915d0ce45d0c501c" category="cell">90 giorni</block>
-  <block id="33d8f1359dfc1ccc57d04578cc9e1907" category="paragraph">Gli abbonamenti Premium Edition con almeno 500 unità gestite (MU) conservano i dati di Business Intelligence e Reporting per 13 mesi.</block>
   <block id="4099aa818be44a204ef7ec3ba69b96c7" category="inline-link-macro">aggregati da visualizzare</block>
   <block id="6046897f8c0f41425f2e47227c5932e8" category="paragraph">Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che <block ref="c09eb6051f010e6e01a634a8b6a5c304" category="inline-link-macro-rx"></block>, Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.</block>
   <block id="8f0ae9ae8e0fd7f3e8fe6ff175a59943" category="list-text">Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/&lt;namespace&gt;-additional-permissions_</block>
@@ -12766,4 +12760,10 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
   <block id="33c5eb3627d84eaead652d4a93ba52dc" category="paragraph">Gli amministratori e i proprietari di account ora hanno la possibilità di farlo <block ref="e2c73aceed008b4a66710907280db867" category="inline-link-macro-rx"></block> per inviare e-mail ai domini specificati. Andare su *Admin &gt; User Management* e selezionare il pulsante _Restringi domini_.</block>
   <block id="ad61c1ba38ff9af26797e324a38dc514" category="inline-link-macro">Ruoli e regole</block>
   <block id="020c152c55787ea0a64eb78645d75f3e" category="admonition">Questo Cloud Insights Collector richiede un utente ONTAP con un ruolo _filesystem-scoped_. Consulta l'AWS <block ref="800e02d33bb8784b1a5d31d79acfd455" category="inline-link-macro-rx"></block> documentazione per le opzioni disponibili. Attualmente AWS supporta solo un tipo di ruolo utente con ambito filesystem, che è _fsxadmin_. Questo è il ruolo appropriato da utilizzare per il Collector Cloud Insights.</block>
+  <block id="7f6383a46fdc2ac52c791c8ea4cf03b6" category="summary">Spiegazione dei tempi di conservazione dei dati e del downsampling</block>
+  <block id="2acd8b96cc968efd569f0e0169390b9b" category="doc">Conservazione dei dati e dati sottocampionati</block>
+  <block id="8221571bdb4085e5cf8534456c5e5750" category="paragraph">Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva.</block>
+  <block id="025025548582d3777fd0b072c16e2656" category="cell">13 mesi</block>
+  <block id="a4d110a0ddc628e94b4e9223300af49b" category="inline-link-macro">Edizioni e Prezzi</block>
+  <block id="8a5a5004d445ce710c5fb829b859257b" category="paragraph">Un elenco completo delle funzioni disponibili in ciascuna edizione è disponibile sul Cloud Insights <block ref="9f9283f57379e70b90560c22a58eac88" category="inline-link-macro-rx"></block> pagina.</block>
 </blocks>

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_ttl_and_downsampling.html 
-summary: 'Time-to-Live (TTL): Vengono spiegate la conservazione dei dati e il downsampling' 
+summary: Spiegazione dei tempi di conservazione dei dati e del downsampling 
 keywords: time-to-live, TTL, downsampling, downsample, retention 
 ---
 = Conservazione dei dati e dati sottocampionati
@@ -23,9 +23,9 @@ Poiché Cloud Insights conserva i dati per un determinato periodo (per edizione)
 
 
 
-== Data retention (nota anche come time-to-live)
+== Conservazione dei dati
 
-Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva. La conservazione dei dati è nota anche come Time-to-Live o TTL.
+Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva.
 
 |===
 | Edizione | Conservazione dei dati 
@@ -34,9 +34,9 @@ Cloud Insights conserva i dati per un periodo di tempo determinato dall'edizione
 | Di base | 7 giorni 
 
 
-| Premium | 90 giorni 
+| Premium | 13 mesi 
 |===
-Gli abbonamenti Premium Edition con almeno 500 unità gestite (MU) conservano i dati di Business Intelligence e Reporting per 13 mesi.
+Un elenco completo delle funzioni disponibili in ciascuna edizione è disponibile sul Cloud Insights link:https://bluexp.netapp.com/cloud-insights-pricing["Edizioni e Prezzi"] pagina.
 
 
 
