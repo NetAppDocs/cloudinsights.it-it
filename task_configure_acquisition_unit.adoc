@@ -36,7 +36,7 @@ NOTE: Per un controllo accurato e la creazione di report dei dati, si consiglia 
 
 .Procedura per l'installazione dell'unità di acquisizione Linux
 . Accedere come amministratore o come proprietario dell'account all'ambiente Cloud Insights.
-. Fare clic su *Admin > Data Collector > Acquisition Units > +Acquisition Unit* (Amministrazione > raccolta dati > unità di acquisizione > +Acquisition
+. Fare clic su *osservabilità > Collector > unità di acquisizione > +unità di acquisizione*
 +
 Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegli Linux.
 
@@ -52,7 +52,7 @@ image:NewLinuxAUInstall.png["Istruzioni Linux AU"]
 
 
 .Al termine
-* Fare clic su *Admin > Data Collectors > Acquisition units* (Amministrazione > Data Collectors > unità di acquisizione) per controllare lo stato delle unità di acquisizione.
+* Fare clic su *osservabilità > Collector > unità di acquisizione* per controllare lo stato delle unità di acquisizione.
 * È possibile accedere ai registri delle unità di acquisizione all'indirizzo /var/log/netapp/cloudsights/acq/acq.log
 * Utilizzare il seguente script per controllare l'unità di acquisizione:
 +
@@ -112,7 +112,7 @@ Se nel proprio ambiente si dispone di workload Security, in questo elenco vengon
 .Procedura per l'installazione dell'unità di acquisizione Windows
 . Accedere al server/VM dell'unità di acquisizione come utente con autorizzazioni di amministratore.
 . Su tale server, aprire una finestra del browser e accedere all'ambiente Cloud Insights come Amministratore o Proprietario dell'account.
-. Fare clic su *Admin > Data Collector > Acquisition Units > +Acquisition Unit* (Amministrazione > Data Collector > unità di acquisizione > +Acquis
+. Fare clic su *osservabilità > Collettori > unità di acquisizione > +unità di acquisizione* .
 +
 Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegliere Windows.
 
@@ -130,7 +130,7 @@ image::NewWindowsAUInstall.png[Installazione di Windows AU]
 
 
 .Al termine
-* Fare clic su *Admin > Data Collectors > Acquisition units* (Amministrazione > Data Collectors > unità di acquisizione) per controllare lo stato delle unità di acquisizione.
+* Fare clic su * > osservabilità > Collector > unità di acquisizione* per controllare lo stato delle unità di acquisizione.
 * È possibile accedere al log dell'unità di acquisizione in <install dir>/informazioni sul cloud/unità di acquisizione/log acq.log
 * Utilizzare il seguente script per arrestare, avviare, riavviare o controllare lo stato dell'unità di acquisizione:
 +
@@ -194,7 +194,7 @@ Se si disinstalla un'unità di acquisizione *Linux*:
 
 *Dopo* disinstallazione dell'AU:
 
-. In Cloud Insights, selezionare *Amministratore > raccolta dati* e selezionare la scheda *unità di acquisizione*.
+. In Cloud Insights, andare su *osservabilità > Collector e selezionare la scheda *unità di acquisizione*.
 . Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
 
 
@@ -216,12 +216,12 @@ Prima di reinstallare un'unità di acquisizione, è necessario configurare un'un
 
 .Fasi
 . Accedere al server/VM dell'unità di acquisizione e disinstallare il software AU.
-. Accedere all'ambiente Cloud Insights e accedere a *Amministratore > Data Collector*.
+. Accedere all'ambiente Cloud Insights e andare a *osservabilità > Collector*.
 . Per ciascun data collector, fare clic sul menu Options (Opzioni) a destra e selezionare _Edit_ (Modifica). Assegnare il data collector all'unità di acquisizione temporanea e fare clic su *Save* (Salva).
 +
 È inoltre possibile selezionare più raccoglitori di dati dello stesso tipo e fare clic sul pulsante *azioni in blocco*. Scegliere _Edit_ e assegnare i data collezioner all'unità di acquisizione temporanea.
 
-. Dopo aver spostato tutti i data collector nell'unità di acquisizione temporanea, andare su *Admin > Data Collector* e selezionare la scheda *Acquisition Units* (unità di acquisizione).
+. Dopo aver spostato tutti i raccoglitori di dati nell'unità di acquisizione temporanea, andare su *osservabilità > Collector* e selezionare la scheda *unità di acquisizione*.
 . Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera reinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
 . È ora possibile reinstallare il software dell'unità di acquisizione sul server/VM originale. Fare clic su *+Acquisition Unit* (unità di acquisizione) e seguire le istruzioni riportate sopra per installare l'unità di acquisizione.
 . Una volta reinstallata l'unità di acquisizione, riassegnare i dati raccolti all'unità di acquisizione.

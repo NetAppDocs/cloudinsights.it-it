@@ -32,7 +32,7 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 
 .Procedura per la configurazione
 . Accedere come Amministratore o Proprietario dell'account all'ambiente workload Security.
-. Fare clic su *Admin > Data Collector > +Data Collector*
+. Fare clic su *osservabilità > Collector > +Data Collector*
 +
 Il sistema visualizza i Data Collector disponibili.
 
@@ -49,7 +49,7 @@ Viene visualizzata la pagina di configurazione Aggiungi data collector: SVM ONTA
 
 
 .Al termine
-* Fare clic su *Admin > Data Collectors* (Amministratore > Data Collector*) per controllare lo stato del collector configurato.
+* Fare clic su *sicurezza del carico di lavoro > Collector* per controllare lo stato del collettore configurato.
 +
 Di norma si verifica un ritardo prima che venga visualizzato lo stato del raccoglitore.
 

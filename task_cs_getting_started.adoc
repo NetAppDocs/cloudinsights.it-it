@@ -49,7 +49,13 @@ link:https://netapp.hubs.vidyard.com/watch/Lce7EaGg7NZfvCUw4Jwy5P?["*Video*: Imp
 link:https://netapp.hubs.vidyard.com/watch/NEmbmYrFjCHvPps7QMy8me?["*Video*: Connessione Active Directory"] 
 
 
-| Configurare i data colleziones | Fare clic su *Admin > Data Collectors* (Amministrazione > Data Collectors*) e fare clic sul data collector che si desidera configurare. Consultare la sezione Data Collector Vendor Reference della documentazione.link:https://netapp.hubs.vidyard.com/watch/YSQrcYA7DKXbj1UGeLYnSF?["*Video*: Connessione SVM ONTAP"] 
+| Configurare i data colleziones | Fare clic su *sicurezza del carico di lavoro > Collector*
+
+Fare clic sul data collector che si desidera configurare.
+
+Consultare la sezione Data Collector Vendor Reference della documentazione.
+
+link:https://netapp.hubs.vidyard.com/watch/YSQrcYA7DKXbj1UGeLYnSF?["*Video*: Connessione SVM ONTAP"] 
 
 
 | Creare account utente | link:concept_user_roles.html["Gestire gli account utente"] 

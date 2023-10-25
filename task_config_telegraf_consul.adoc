@@ -25,7 +25,7 @@ Cloud Insights utilizza questo data collector per raccogliere le metriche da con
 
 == Installazione
 
-. Da *Admin > Data Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Console.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Console.
 +
 Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"] nel tuo ambiente.
 

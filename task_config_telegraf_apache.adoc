@@ -31,7 +31,7 @@ Questo data collector consente la raccolta di dati dai server Apache nel tuo amb
 
 == Installazione
 
-. Da *Admin > Data Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Apache.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Apache.
 +
 Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
 

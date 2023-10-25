@@ -28,7 +28,8 @@ Workload Security può essere configurato per raccogliere gli attributi utente d
 
 
 .Procedura per la configurazione di un servizio di raccolta directory utente
-. Nel menu workload Security, fare clic su: *Admin > Data Collector > User Directory Collector > + User Directory Collector* e selezionare *Active Directory*
+. Nel menu workload Security (sicurezza del carico di lavoro), fare clic su:
+*Collector > User Directory Collector > + User Directory Collector* e selezionare *Active Directory*
 +
 Viene visualizzata la schermata Add User Directory (Aggiungi directory utente).
 

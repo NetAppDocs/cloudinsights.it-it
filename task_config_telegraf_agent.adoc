@@ -43,7 +43,7 @@ Se si sta installando un servizio di raccolta dati e non si è ancora configurat
 Per installare un agente, indipendentemente dalla piattaforma in uso, è necessario prima effettuare le seguenti operazioni:
 
 . Accedere all'host da utilizzare per l'agente.
-. Accedi al tuo sito Cloud Insights e vai a *Amministratore > Data Collector*.
+. Accedere all'ambiente Cloud Insights e accedere a *osservabilità > Collector*.
 . Fare clic su *+Data Collector* e scegliere un data collector da installare.
 . Scegli la piattaforma appropriata per il tuo host (Windows, Linux)
 . Seguire i passaggi rimanenti per ciascuna piattaforma.

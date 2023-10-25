@@ -37,7 +37,7 @@ NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federal
 == Procedura per l'installazione dell'agente
 
 . Accedere come Amministratore o Proprietario dell'account all'ambiente workload Security.
-. Nel menu *Security*, selezionare *Admin > Data Collector > Agent > +Agent*
+. Selezionare *Collector > Agents > +Agent*
 +
 Viene visualizzata la pagina Add an Agent (Aggiungi un agente):
 

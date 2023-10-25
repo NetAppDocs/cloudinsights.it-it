@@ -2623,7 +2623,7 @@ Quando si configurano i seguenti data collection, è possibile filtrare per incl
 
 === Raccolta di dati di modifica in blocco
 
-* È possibile modificare le informazioni per più data collezionisti contemporaneamente. Nella pagina *Admin > Data Collectors* (Amministrazione > Data Collectors*), selezionare i data collector da modificare selezionando la casella a sinistra di ciascuno e fare clic sul pulsante *Bulk Actions* (azioni in blocco). Scegliere *Modifica* e modificare i campi necessari.
+* È possibile modificare le informazioni per più data collezionisti contemporaneamente. Nella pagina *osservabilità > Collector*, selezionare i data collector da modificare selezionando la casella a sinistra di ciascuno di essi e fare clic sul pulsante *azioni in blocco*. Scegliere *Modifica* e modificare i campi necessari.
 +
 I data raccoglitori selezionati devono essere dello stesso fornitore e modello e risiedere nella stessa unità di acquisizione.
 

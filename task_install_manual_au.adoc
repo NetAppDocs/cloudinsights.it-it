@@ -167,10 +167,10 @@ ls -al /var/lib/netapp/cloudinsights/acq/datasources.war
  -rw-rw---- 1 test-user2 test-group1  3420067 Mar 10 17:20 netapp_ontap.jar
 
 
-. Nota: Se si prevede di amministrare AU utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate su lettura e scrittura sia per il proprietario che per il gruppo (_chmod 660 …_)
+. Nota: Se si prevede di utilizzare l'AU di ister con utenti personalizzati diversi, assicurarsi che le autorizzazioni di gruppo siano impostate per la lettura e la scrittura sia per il proprietario che per il gruppo (_chmod 660 …_)
 . Riavviare l'AU.
 +
-.. In Cloud Insights, accedere a *Amministratore > raccolta dati* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.
+.. In Cloud Insights, accedere a *osservabilità > Collector* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.
 
 
 

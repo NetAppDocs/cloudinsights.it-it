@@ -40,7 +40,7 @@ Le credenziali del data collector vengono crittografate quando vengono immesse i
 
 == Configurazione di Data Collector
 
-* Dal menu Cloud Insights, fare clic su *Admin > Data Collector* e fare clic sul pulsante *+ Data Collector*. Puoi scegliere di visualizzare tutti i data collezionisti o di filtrare per visualizzare solo i data collezionisti disponibili in base al tuo abbonamento.
+* Dal menu Cloud Insights, fare clic su *osservabilità > Collector* e fare clic sul pulsante *+ Data Collector*. Puoi scegliere di visualizzare tutti i data collezionisti o di filtrare per visualizzare solo i data collezionisti disponibili in base al tuo abbonamento.
 
 
 * A seconda del tipo di data collector scelto, i passaggi per l'installazione variano.
