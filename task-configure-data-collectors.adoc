@@ -32,7 +32,7 @@ I Data Collector vengono configurati nell'ambiente Cloud Insights per la raccolt
 +
 Il sistema visualizza i Data Collector disponibili organizzati in base al vendor.
 
-. Fare clic su *+ Collector* sul vendor desiderato e selezionare il data collector da configurare.
+. Fare clic su *+ Collector* e selezionare il data collector da configurare.
 +
 Nella finestra di dialogo è possibile configurare il data collector e aggiungere un'unità di acquisizione.
 
