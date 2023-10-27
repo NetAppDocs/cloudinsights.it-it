@@ -6207,7 +6207,6 @@
   <block id="1affaa3c0d19c2e084afa700debb8740" category="paragraph">Il data collector OpenStack (REST API / KVM) acquisisce i dati di inventario per tutte le istanze di OpenStack e, facoltativamente, i dati sulle performance delle macchine virtuali.</block>
   <block id="ee627d472fc6df1e0c1367deb7ee0063" category="list-text">Indirizzo IP del controller OpenStack</block>
   <block id="280f91bd66acb7cf04ec960fca75f64a" category="list-text">Credenziali del ruolo di amministratore di OpenStack e accesso sicuro all'hypervisor KVM Linux. Se non si utilizza l'account admin o privilegi equivalenti, sarà necessario utilizzare la versione di prova e gli errori per identificare le policy predefinite per rendere più semplice l'ID utente del data collector.</block>
-  <block id="ab920cce93179165ef5649da2b8c17f4" category="list-text">Il modulo OpenStack Ceilometer deve essere installato e configurato per la raccolta delle performance. La configurazione del Ceilometer viene eseguita modificando il file nova.conf per ciascun hypervisor e riavviando il servizio Nova Compute su ciascun hypervisor. Il nome dell'opzione cambia per le diverse versioni di OpenStack:</block>
   <block id="8beeeec38dbc6258291f2e47130835d8" category="list-text">Icehouse</block>
   <block id="291b02b25fbb9789119d2383e9f08e29" category="list-text">Juno</block>
   <block id="3afe87a2a8c61f8023e56883b9baccb8" category="list-text">Chilo</block>
@@ -6221,7 +6220,6 @@
   <block id="5829ef3d89411d46f0a05f6867ff2efd" category="list-text">22 per KVM SSH</block>
   <block id="a58963a7c2c9eafce2ab09ca28270ee0" category="list-text">8774 per Nova Compute Service</block>
   <block id="745b1ee1989bc6dd0ac838e4dcb448e5" category="list-text">8776 per Cinder Block Service</block>
-  <block id="3c96098040036cf157077588c3a5792d" category="list-text">8777 per Ceilometer Performance Service</block>
   <block id="ca3d2d05f916b41d8f53f506ace2e80e" category="list-text">9292 per Glance Image Service *Nota* la porta si collega al servizio specifico e il servizio può essere eseguito sul controller o su un altro host in ambienti più grandi.</block>
   <block id="9be07620e581c90b777b5fef1296cc28" category="cell">Indirizzo IP controller OpenStack</block>
   <block id="c5e968faf75175530ec61fb1846cfdce" category="cell">Indirizzo IP o nome di dominio completo del controller OpenStack</block>
@@ -12788,4 +12786,6 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="36d54fae49a56a7a2d78ca70082b370b" category="paragraph">Una volta inserito nella lista bianca, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito. Si noti che la policy _tipi di file consentiti_ è applicabile solo per il rilevamento del ransomware.</block>
   <block id="0aad5fb8995241aab40da2f6461ed327" category="paragraph">Ad esempio, se un file denominato _test.txt_ viene rinominato _test.txt.abc_ e workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere inserita nella whitelist. Dopo la whitelist, gli attacchi ransomware non verranno più generati contro file con estensione _.abc_.</block>
   <block id="b778d3252b5cc52999f0c844a033362f" category="paragraph">I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".*type", ".type*" o "*type*"). Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.</block>
+  <block id="c0ea429a2fadacc206fdc8f17cfa492c" category="list-text">Il modulo OpenStack Gnocchi deve essere installato e configurato per la raccolta delle prestazioni. La configurazione di Gnocchi avviene modificando il file nova.conf per ogni hypervisor e riavviando il servizio Nova Compute su ogni hypervisor. Il nome dell'opzione cambia per le diverse versioni di OpenStack:</block>
+  <block id="dfe1b74026ff6682b451240881e76be4" category="list-text">8777 per Gnocchi Performance Service</block>
 </blocks>
