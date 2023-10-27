@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ws_allowed_file_types.html 
+keywords: workload security, cloud secure, whitelist, ransomware 
+summary: Aggiungere estensioni di file a una whitelist per ridurre gli avvisi 
+---
+= Criteri tipi di file consentiti
+:allow-uri-read: 
+
+
+[role="lead"]
+Se viene rilevato un attacco ransomware per un'estensione di file nota e vengono generati degli avvisi nella schermata Alerts, puoi inserire questa estensione nella whitelist per evitare avvisi non necessari.
+
+Accedere a *sicurezza del carico di lavoro > Criteri* e andare alla scheda _Criteri del tipo di file consentiti_.
+
+image:WS_Allowed_File_Type_Policies.png["Criteri tipi di file consentiti"]
+
+Una volta inserito nella lista bianca, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito. Si noti che la policy _tipi di file consentiti_ è applicabile solo per il rilevamento del ransomware.
+
+Ad esempio, se un file denominato _test.txt_ viene rinominato _test.txt.abc_ e workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere inserita nella whitelist. Dopo la whitelist, gli attacchi ransomware non verranno più generati contro file con estensione _.abc_.
+
+I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".*type", ".type*" o "*type*"). Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.

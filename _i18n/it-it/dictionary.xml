@@ -12780,4 +12780,12 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="65a869cae61dbb29a2477a2c4b396c71" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Flink.</block>
   <block id="a5436f2e1642a935e668be1ae1bc7cb4" category="list-text">Accedere a sicurezza del carico di lavoro *Collectors* e fare clic sulla scheda *Agenti*.</block>
   <block id="3db8e6e28be63b5639b42d1210ec94f9" category="list-text">Fare clic su *+ Collector* e selezionare il data collector da configurare.</block>
+  <block id="4933fe8ec451e47e707dad28cf0d6a6f" category="summary">Aggiungere estensioni di file a una whitelist per ridurre gli avvisi</block>
+  <block id="2b38e4e9371e68c324f4d975aeec0b8b" category="doc">Criteri tipi di file consentiti</block>
+  <block id="e028554bdfbf2b31dfa2c86ea5c58f3b" category="paragraph">Se viene rilevato un attacco ransomware per un'estensione di file nota e vengono generati degli avvisi nella schermata Alerts, puoi inserire questa estensione nella whitelist per evitare avvisi non necessari.</block>
+  <block id="66c0454949e8e45058f66b8dbe1d1a38" category="paragraph">Accedere a *sicurezza del carico di lavoro &gt; Criteri* e andare alla scheda _Criteri del tipo di file consentiti_.</block>
+  <block id="8c06b62ca830efbad93bfb2ce294e0ef" category="paragraph"><block ref="8c06b62ca830efbad93bfb2ce294e0ef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="36d54fae49a56a7a2d78ca70082b370b" category="paragraph">Una volta inserito nella lista bianca, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito. Si noti che la policy _tipi di file consentiti_ è applicabile solo per il rilevamento del ransomware.</block>
+  <block id="0aad5fb8995241aab40da2f6461ed327" category="paragraph">Ad esempio, se un file denominato _test.txt_ viene rinominato _test.txt.abc_ e workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere inserita nella whitelist. Dopo la whitelist, gli attacchi ransomware non verranno più generati contro file con estensione _.abc_.</block>
+  <block id="b778d3252b5cc52999f0c844a033362f" category="paragraph">I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".*type", ".type*" o "*type*"). Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.</block>
 </blocks>
