@@ -12807,4 +12807,8 @@ Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare
 
 In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> e. <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> l'agente.</block>
   <block id="548f0024784a56dbfee8711265bd0855" category="paragraph">Si noti che i comandi CLI di FSX recuperano alcuni valori di capacità che FSX proibisce tramite API. Poiché Cloud Insights tenta di recuperare i dati FSX tramite API, alcuni valori di capacità (ad esempio quelli per i pool di storage) in Cloud Insights potrebbero essere diversi da quelli di FSX stesso. Per ulteriori informazioni, contatta il tuo rappresentante Amazon.</block>
+  <block id="2ec4305521a87758c3d2cf93b9fd5b14" category="cell">Quando si inserisce un tempo di pianificazione del rapporto Cognos, a volte mi ritrovo con una "m" extra nel tempo di programmazione. Ad esempio, se si immette l'ora come "02:15 PM", è possibile aggiungere un carattere extra: "02:15 PMM" (o PMM). Quando clicco all'esterno, lo cambia in "2:15:00 AM".
+
+È possibile salvare il report, ma quando si riapre il report salvato, l'ora pianificata viene visualizzata come AM (ad esempio, mattina), indipendentemente dal fatto che sia stato inserito AM o PM nell'ora pianificata.</block>
+  <block id="05b4ddcb7946bd7615ac3f1458e51d47" category="cell">Immettere nuovamente l'ora di programmazione, facendo attenzione a non inserire i caratteri "AM" o "PM" completi; è sufficiente digitare "A" per "AM o "P" per "PM". Se non viene visualizzato il carattere extra, l'ora di programmazione verrà impostata correttamente.</block>
 </blocks>

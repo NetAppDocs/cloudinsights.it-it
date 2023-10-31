@@ -65,6 +65,11 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 
 
 | Ho impostato manualmente una quota soft e una hard nello stesso Qtree, ma la capacità totale indicata è la quota hard; è corretto? | Sì, se viene specificata una quota rigida, questa verrà visualizzata come capacità totale. 
+
+
+| Quando si inserisce un tempo di pianificazione del rapporto Cognos, a volte mi ritrovo con una "m" extra nel tempo di programmazione. Ad esempio, se si immette l'ora come "02:15 PM", è possibile aggiungere un carattere extra: "02:15 PMM" (o PMM). Quando clicco all'esterno, lo cambia in "2:15:00 AM".
+
+È possibile salvare il report, ma quando si riapre il report salvato, l'ora pianificata viene visualizzata come AM (ad esempio, mattina), indipendentemente dal fatto che sia stato inserito AM o PM nell'ora pianificata. | Immettere nuovamente l'ora di programmazione, facendo attenzione a non inserire i caratteri "AM" o "PM" completi; è sufficiente digitare "A" per "AM o "P" per "PM". Se non viene visualizzato il carattere extra, l'ora di programmazione verrà impostata correttamente. 
 |===
 
 
