@@ -120,6 +120,8 @@ Questo data collector raccoglie le seguenti metriche avanzate da FSX per lo stor
 * workload_volume
 
 
+Si noti che i comandi CLI di FSX recuperano alcuni valori di capacità che FSX proibisce tramite API. Poiché Cloud Insights tenta di recuperare i dati FSX tramite API, alcuni valori di capacità (ad esempio quelli per i pool di storage) in Cloud Insights potrebbero essere diversi da quelli di FSX stesso. Per ulteriori informazioni, contatta il tuo rappresentante Amazon.
+
 
 
 == Risoluzione dei problemi
