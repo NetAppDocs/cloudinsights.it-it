@@ -528,9 +528,15 @@ Quindi, riavviare Telegraf.
 | Perché vedo due pod operatore di monitoring in esecuzione, uno denominato netapp-ci-monitoring-operator-<pod> e l'altro denominato monitoring-operator-<pod>? | A partire dal 12 ottobre 2023, Cloud Insights ha ridefinito l'operatore per servire meglio i nostri utenti; affinché tali modifiche siano completamente adottate, è necessario <<uninstalling,rimuovere il vecchio operatore>> e. <<installing-the-netapp-kubernetes-monitoring-operator,installare il nuovo>>. 
 
 
-| I miei eventi kuowski hanno inaspettatamente smesso di segnalare a Cloud Insights. | Recuperare il nome dell'evento-esportatore pod `kubectl -n netapp-monitoring get pods 
+| I miei eventi kuowski hanno inaspettatamente smesso di segnalare a Cloud Insights. | Recuperare il nome del pod dell'esportatore di eventi:
 
+ `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/`
 
-| grep event-exportant | awk '{print $1}' 
+Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare l'agente di monitoraggio `kubectl -n netapp-monitoring edit agent`, E impostare il valore per LOG_FILE in modo che rifletta il nome del pod dell'esportatore di eventi appropriato trovato nel passaggio precedente.  In particolare, LOG_FILE deve essere impostato su "/var/log/containers/netapp-ci-event-exportant.log" o "/var/log/containers/event-exportant*.log"
+
+    - Chiave: LOG_FILE
+      valori:
+      - /var/log/containers/netapp-ci-event-executives*.log
+In alternativa, si può anche <<uninstalling,disinstallazione>> e. <<installing-the-netapp-kubernetes-monitoring-operator,reinstallare>> l'agente. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
