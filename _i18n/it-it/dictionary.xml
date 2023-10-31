@@ -12793,14 +12793,17 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="b0ee45b6cf0875310e7eca0039f3378c" category="cell">ID utente per ECS</block>
   <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-xref">disinstallazione</block>
   <block id="7b4d917229221f1292dd0dc7b693cccf" category="inline-xref">reinstallare</block>
-  <block id="8469e2ae035ceb8a5938bd217eb94df0" category="cell">Recuperare il nome del pod dell'esportatore di eventi:
+  <block id="6491871b517e6620a9b0675a45a5322a" category="cell">Recuperare il nome del pod dell'esportatore di eventi:
 
 <block ref="981dffeaa3be6364470478327b8dd179" prefix=" " category="inline-code"></block>
 
 Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare l'agente di monitoraggio<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block>, E impostare il valore per LOG_FILE in modo che rifletta il nome del pod dell'esportatore di eventi appropriato trovato nel passaggio precedente.  In particolare, LOG_FILE deve essere impostato su "/var/log/containers/netapp-ci-event-exportant.log" o "/var/log/containers/event-exportant*.log"
 
-    - Chiave: LOG_FILE
-      valori:
-      - /var/log/containers/netapp-ci-event-executives*.log
+....
+ - Chiave: LOG_FILE
+   valori:
+   - /var/log/containers/netapp-ci-event-executives*.log
+....
+
 In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> e. <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> l'agente.</block>
 </blocks>
