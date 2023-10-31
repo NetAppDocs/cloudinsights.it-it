@@ -12588,8 +12588,6 @@ kubectl get all -n &lt;namespace&gt; | grep -i psp (dovrebbe mostrare che non si
 ----
 
 • I pod Net-observer richiedono che la versione del kernel Linux sia almeno 4.18.0. Controllare la versione del kernel usando il comando "uname -r" e assicurarsi che siano &gt;= 4.18.0</block>
-  <block id="43eb2ebe757bb3f2957ebacdbe1e409c" category="cell">I pod Net-Observer nello spazio dei nomi NKMO sono in CrashLoopBackOff in ambiente OpenShift 4</block>
-  <block id="c16b414538506d32ed8a234fa2331767" category="cell">Attualmente non è supportato. Tieni d'occhio il supporto da aggiungere in un aggiornamento futuro.</block>
   <block id="c37dcb848a7244594adc1af67cc44fb5" category="cell">I pod vengono eseguiti nello spazio dei nomi NKMO (impostazione predefinita: monitoraggio netapp), ma non vengono visualizzati dati nell'interfaccia utente per la mappa del carico di lavoro o le metriche Kubernetes nelle query</block>
   <block id="b301a7b156c241fb466de1bca776811c" category="cell">Controllare l'impostazione dell'ora sui nodi del cluster K8S. Per un controllo accurato e la creazione di report dei dati, si consiglia di sincronizzare l'ora sul computer dell'agente utilizzando il protocollo NTP (Network Time Protocol) o SNTP (Simple Network Time Protocol).</block>
   <block id="4ded7a1a9e117c3e40fb8fd746b0652d" category="cell">Alcuni dei pod net-osservatore nello spazio dei nomi NKMO sono in stato Pending</block>
@@ -12792,4 +12790,8 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="ed2b4bf5978e7c4c0546efaff8756311" category="paragraph">La sicurezza del carico di lavoro è stata migliorata con quanto segue:</block>
   <block id="b1f51a36e1f83c62064c47e5488e10c9" category="list-text">*Accesso negato*: Workload Security si integra con ONTAP per ricevere eventi di "accesso negato" e fornire un livello aggiuntivo di analisi e risposte automatiche.</block>
   <block id="b96f76a4321a90cf4dd8cf2472f58624" category="list-text">Whitelist *tipi di file consentiti*: Se viene rilevato un attacco ransomware per un'estensione di file nota, tale estensione può essere inserita nella whitelist per evitare avvisi non necessari. - <block ref="9ca779e4c57ed180231e35c02d12040d" category="inline-link-macro-rx"></block></block>
+  <block id="23cda888e57eaac9d48f4167127da1b8" category="cell">I miei eventi kuowski hanno inaspettatamente smesso di segnalare a Cloud Insights.</block>
+  <block id="530877d75874db688a349c68f4d664d6" category="cell">Recuperare il nome dell'evento-esportatore pod `kubectl -n netapp-monitoring get pods</block>
+  <block id="40de8508a016cb1e936ce464cfc06e93" category="cell">grep event-exportant</block>
+  <block id="60154ad86ed086052b09e30faded046b" category="cell">awk '{print $1}'</block>
 </blocks>
