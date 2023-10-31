@@ -19,7 +19,7 @@ summary: Configurazione di ECS data collector.
 
 
 [role="lead"]
-Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP del server ECS e un account di dominio di livello amministrativo.
+Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP o un nome host del cluster ECS e un nome utente e una password.
 
 
 NOTE: Dell EMC ECS viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità ECS non formattata viene addebitato come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
@@ -52,11 +52,9 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Requisiti
 
-* Indirizzo IP della console di gestione ECS
-* Account di dominio di livello amministrativo per il sistema ECS
-* Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sul sistema ECS.
-* Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.
-* Per le prestazioni, è necessaria la porta 22.
+* Un indirizzo IP o un nome host del cluster ECS
+* Un nome utente e una password per il sistema ECS
+* Porta 4443 (HTTPS).  Richiede la connettività in uscita alla porta TCP 4443 sul sistema ECS.
 
 
 
@@ -74,7 +72,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Porta host ECS | Porta utilizzata per la comunicazione con l'host ECS 
 
 
-| ID fornitore ECS | ID vendor per ECS 
+| ID utente ECS | ID utente per ECS 
 
 
 | Password | Password utilizzata per ECS 
@@ -94,4 +92,31 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Risoluzione dei problemi
 
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+==== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
+|===
+
+
+==== Performance
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: Dati non raccolti a sufficienza. | • Controllare la data e l'ora di raccolta nel file di log e modificare di conseguenza l'intervallo di polling • attendere più a lungo 
+
+
+| Errore: L'intervallo di polling delle prestazioni è troppo grande. | Controllare la data e l'ora di raccolta nel file di registro{logfile} e modificare di conseguenza l'intervallo di polling 
+|===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

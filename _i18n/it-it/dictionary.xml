@@ -127,21 +127,15 @@
   <block id="7ade6c64e9a88c6a4e7b10ff7debb111" category="paragraph">Si noti che la trasformazione delle metriche non modifica i dati sottostanti, ma solo il modo in cui vengono visualizzati.</block>
   <block id="97d56c15017ad32b1cbc85383d592281" category="summary">Configurazione di ECS data collector.</block>
   <block id="696067539a48ac7ca42724de79fbd051" category="doc">Configurazione del data collector EMC ECS</block>
-  <block id="0dd54ea5de1f0186d88f6171945bf17a" category="paragraph">Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP del server ECS e un account di dominio di livello amministrativo.</block>
   <block id="d157607d4f3b74d5627170cf0c710ee9" category="admonition">Dell EMC ECS viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità ECS non formattata viene addebitato come 1 <block ref="1802ea889a272a3510701d2ff63bbea6" category="inline-link-macro-rx"></block>.</block>
   <block id="babd4a2879d509662ea2e8a9168f34ed" category="paragraph">Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ECS. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:</block>
   <block id="30edf70db68aa84f05d3e72326807b0c" category="cell">Bucket</block>
-  <block id="f3d2ef1b407f9dac845144f7222446b0" category="list-text">Indirizzo IP della console di gestione ECS</block>
-  <block id="d53717de9f42bb927d66332c1b99aa0a" category="list-text">Account di dominio di livello amministrativo per il sistema ECS</block>
-  <block id="b28ad04cb96e374334fe66f0c126a953" category="list-text">Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sul sistema ECS.</block>
   <block id="c7ddbb8aa01975e2d488fdf90d356f2e" category="list-text">Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.</block>
   <block id="7f493bcc752a7f12df179d4529291e82" category="list-text">Per le prestazioni, è necessaria la porta 22.</block>
   <block id="7a03f89966abe32a9145c5711baac2c6" category="cell">Host ECS</block>
   <block id="60103158e1fa8a921007c1692b656462" category="cell">Indirizzo IP o nome di dominio completo del sistema ECS</block>
   <block id="2ef0586f8254b68b62f3912e0765fb08" category="cell">Porta host ECS</block>
   <block id="55f849af32f2bc9f6a84120627639721" category="cell">Porta utilizzata per la comunicazione con l'host ECS</block>
-  <block id="2e610591aff0a1797343c00ad6a93ae8" category="cell">ID fornitore ECS</block>
-  <block id="b523f7997888942f06b8d3a5bcbc4a29" category="cell">ID vendor per ECS</block>
   <block id="0750f8ac8a07b8a8acba23993fc3de34" category="cell">Password utilizzata per ECS</block>
   <block id="2d74084218f04becb882422545c77d5f" category="cell">L'impostazione predefinita è 360 minuti.</block>
   <block id="6ced38f7d8372fb9ae8761297e3a7cee" category="paragraph">Poiché Cloud Insights conserva i dati per un determinato periodo (per edizione), è possibile elaborare migliaia di punti dati. I dati possono quindi essere sottoposti a downsampling prima di essere visualizzati in grafici e tabelle.</block>
@@ -12794,4 +12788,10 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="530877d75874db688a349c68f4d664d6" category="cell">Recuperare il nome dell'evento-esportatore pod `kubectl -n netapp-monitoring get pods</block>
   <block id="40de8508a016cb1e936ce464cfc06e93" category="cell">grep event-exportant</block>
   <block id="60154ad86ed086052b09e30faded046b" category="cell">awk '{print $1}'</block>
+  <block id="51a7a0a9ece41f3000834202c4f9b529" category="paragraph">Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP o un nome host del cluster ECS e un nome utente e una password.</block>
+  <block id="f62de35c42266dd92c1a10e3daf56fd2" category="list-text">Un indirizzo IP o un nome host del cluster ECS</block>
+  <block id="2ed72e68497591d0803bef6bc9c16f79" category="list-text">Un nome utente e una password per il sistema ECS</block>
+  <block id="4b10979e526e6c6ecbe9f247ba883305" category="list-text">Porta 4443 (HTTPS).  Richiede la connettività in uscita alla porta TCP 4443 sul sistema ECS.</block>
+  <block id="e3bd341282cc459a09900310d9ce8e73" category="cell">ID utente ECS</block>
+  <block id="b0ee45b6cf0875310e7eca0039f3378c" category="cell">ID utente per ECS</block>
 </blocks>
