@@ -22,7 +22,7 @@ summary: Amazon FSX per NetApp ONTAP Data Collector
 Questo data collector acquisisce i dati di inventario e performance da Amazon FSX per NetApp ONTAP. Questo data collector sarà reso disponibile in modo incrementale in tutte le regioni del servizio Cloud Insights. Se l'icona di questo collector non viene visualizzata nel tuo ambiente Cloud Insights, contatta il tuo addetto alle vendite.
 
 
-NOTE: Questo Cloud Insights Collector richiede un utente ONTAP con un ruolo _filesystem-scoped_. Consulta l'AWS link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["Ruoli e regole"] documentazione per le opzioni disponibili. Attualmente AWS supporta solo un tipo di ruolo utente con ambito filesystem, che è _fsxadmin_. Questo è il ruolo appropriato da utilizzare per il Collector Cloud Insights.
+NOTE: Questo Cloud Insights Collector richiede un utente ONTAP con un ruolo _filesystem-scoped_. Consulta l'AWS link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["Ruoli e regole"] documentazione per le opzioni disponibili. Attualmente AWS supporta solo un tipo di ruolo utente con ambito filesystem, che è _fsxadmin_. Questo è il ruolo appropriato da utilizzare per il Collector Cloud Insights. All'utente dovrebbero essere assegnate anche tutte e tre le seguenti applicazioni: http, ontapi, ssh.
 
 
 
@@ -79,9 +79,9 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
 
-* È necessario disporre dell'accesso a un account Administrator configurato per le chiamate API di sola lettura.
+* È necessario avere accesso a un account con il ruolo "fsxadmin", con tre applicazioni assegnate - ssh, ontapi, http
 * I dettagli dell'account includono nome utente e password.
-* Requisiti delle porte: 80 o 443
+* Requisiti di porta: 443
 
 
 
@@ -120,7 +120,7 @@ Questo data collector raccoglie le seguenti metriche avanzate da FSX per lo stor
 * workload_volume
 
 
-Si noti che i comandi CLI di FSX recuperano alcuni valori di capacità che FSX proibisce tramite API. Poiché Cloud Insights tenta di recuperare i dati FSX tramite API, alcuni valori di capacità (ad esempio quelli per i pool di storage) in Cloud Insights potrebbero essere diversi da quelli di FSX stesso. Per ulteriori informazioni, contatta il tuo rappresentante Amazon.
+Si noti che i comandi CLI e API di FSX recuperano alcuni valori di capacità che Cloud Insights ZAPI non raccoglie, pertanto alcuni valori di capacità (come quelli per i pool di storage) potrebbero essere diversi in Cloud Insights rispetto ad FSX stesso.
 
 
 
