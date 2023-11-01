@@ -34,7 +34,7 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 La sicurezza del carico di lavoro è stata migliorata con quanto segue:
 
 * *Accesso negato*: Workload Security si integra con ONTAP per ricevere eventi di "accesso negato" e fornire un livello aggiuntivo di analisi e risposte automatiche.
-* Whitelist *tipi di file consentiti*: Se viene rilevato un attacco ransomware per un'estensione di file nota, tale estensione può essere inserita nella whitelist per evitare avvisi non necessari. - link:/ws_allowed_file_types.html["Scopri di più"]
+* *Tipi di file consentiti*: Se viene rilevato un attacco ransomware per un'estensione di file nota, tale estensione può essere aggiunta a un link:ws_allowed_file_types.html["tipi di file consentiti"] per evitare avvisi non necessari.
 
 
 
