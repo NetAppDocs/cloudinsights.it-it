@@ -4697,7 +4697,6 @@
   <block id="55b171ae91c4f30690df081e54631deb" category="sidebar">Raccolta dei dati</block>
   <block id="713f769811f3b7c68113061a88f193e4" category="sidebar">Configurazione di un'unità di acquisizione</block>
   <block id="8e20cbcdc4c35f7bead37d56391dbe9e" category="sidebar">Configurazione di un agente su Windows/Linux</block>
-  <block id="77206fd030aaac8141e97d837c255109" category="sidebar">Configurazione di un operatore Kubernetes</block>
   <block id="e30ee94d3d17494d7e3f549e9b179b61" category="sidebar">Determinazione dello stato di acquisizione del Data Collector</block>
   <block id="4aba696177ce8a74216803ac14343d2c" category="sidebar">Gestire i Data Collector configurati</block>
   <block id="72633c43eaf6d098d8df9b7b7cf5fb7a" category="sidebar">Ricercare gli errori del data collector</block>
@@ -12814,4 +12813,5 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="b85d0b41b181eb69881d2617c5514ba3" category="list-text">È necessario avere accesso a un account con il ruolo "fsxadmin", con tre applicazioni assegnate - ssh, ontapi, http</block>
   <block id="702a15850842eff4dc2587a96c210640" category="list-text">Requisiti di porta: 443</block>
   <block id="6106de3fb9edc97d16b4426ca0ae0dc8" category="paragraph">Si noti che i comandi CLI e API di FSX recuperano alcuni valori di capacità che Cloud Insights ZAPI non raccoglie, pertanto alcuni valori di capacità (come quelli per i pool di storage) potrebbero essere diversi in Cloud Insights rispetto ad FSX stesso.</block>
+  <block id="283dda2d69780214459b88b24889f026" category="paragraph">Per informazioni sull'installazione su Kubernetes, vedere <block ref="795cb2fef65468e8b6a28f3da1c0d62b" category="inline-link-macro-rx"></block>.</block>
 </blocks>
