@@ -12814,4 +12814,5 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="702a15850842eff4dc2587a96c210640" category="list-text">Requisiti di porta: 443</block>
   <block id="6106de3fb9edc97d16b4426ca0ae0dc8" category="paragraph">Si noti che i comandi CLI e API di FSX recuperano alcuni valori di capacità che Cloud Insights ZAPI non raccoglie, pertanto alcuni valori di capacità (come quelli per i pool di storage) potrebbero essere diversi in Cloud Insights rispetto ad FSX stesso.</block>
   <block id="6dac8d8f7e40ada8d5686e3e8192f90f" category="paragraph">Per informazioni sull'installazione su Kubernetes, vedere <block ref="36dbd85d6f83f853e5478a62019a359b" category="inline-link-macro-rx"></block>.</block>
+  <block id="4f39aea7decea72af93c7cb4ba3fe487" category="admonition">Se si dispone dell'edizione federale di Cloud Insights, le istruzioni di installazione e configurazione potrebbero essere diverse da quelle riportate su questa pagina. Seguire le istruzioni in Cloud Insights per installare l'operatore di monitoraggio NetApp Kubernetes.</block>
 </blocks>
