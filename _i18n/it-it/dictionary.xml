@@ -10235,7 +10235,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="f472c9f862f3493f5a8208582f693c5f" category="list-text">In Cloud Insights, creare un token API.</block>
   <block id="a2bab409e871524b831f0d1ac1686378" category="list-text">Accedere a *Admin &gt; API Access* e selezionare *+API Access Token*.</block>
   <block id="c3a742ff169c1de23c1c540f84b7ba61" category="list-text">Impostare *Nome* e *Descrizione* facili da identificare</block>
-  <block id="095edbf2eeed607f4203d4060d6bebab" category="list-text">Tipo: *Acquisition Unit*</block>
   <block id="c76ff4f2fa2b9f076ccfd7a6d6b3ce57" category="list-text">Permessi: *Lettura/scrittura*</block>
   <block id="e340f8e9c364a8bf77e13de322139268" category="list-text">Selezionare i valori desiderati *scadenza* e *rinnovo automatico*</block>
   <block id="438e82c6edd42a4c9ff5f88696126a91" category="list-text">Copiare il token di accesso API generato. Questa fase deve essere eseguita prima di poter chiudere la finestra.</block>
@@ -10266,18 +10265,10 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="b03ba9c0b65f3d61c05a13e6e0556f6e" category="list-text">Esportare il token una tantum e la versione del programma di installazione in variabili di ambiente eseguendo le seguenti operazioni:</block>
   <block id="f355abfc0309011b2480d033a0bd5a7c" category="list-text">Eseguire le seguenti operazioni per installare ci con un utente e un gruppo personalizzati:</block>
   <block id="c2edf0fde07151d96c99ce933b5db7fc" category="paragraph">Nota: Se non si desidera utilizzare un utente e un gruppo personalizzati, è possibile utilizzare l'utente e il gruppo "Cisys" predefiniti.  In questo caso, eseguire il comando di installazione riportato sopra ma non specificare l'utente e il gruppo.</block>
-  <block id="442acde7a27750391de6a8358d813ebf" category="paragraph">A questo punto, il software AU viene installato sul sistema ed è accessibile dall'utente e dal gruppo personalizzati. Tuttavia, non è possibile aggiungere raccolta dati. Per eseguire questa operazione manualmente, è necessario copiare il file datasources.war nella posizione corretta.</block>
-  <block id="aa65691c6297c950fcee712307bb1a91" category="list-text">Accedere al percorso di origine per datasources.war e verificare il file zip:</block>
-  <block id="a97626ad22c898bbe0080f7f7799f0e0" category="list-text">Prendere nota delle autorizzazioni sulla cartella predefinita datasources.war:</block>
   <block id="43b4370cb1861295e2cf1d82e2cf71ce" category="list-text">Per i passi successivi, passare all'utente personalizzato (o disconnettersi da root e accedere con).</block>
   <block id="c228e145e9e61000d0f54dd253874651" category="list-text">Nota: Se si utilizzano l'utente e il gruppo "cisys" predefiniti, non è necessario eseguire questo passaggio.</block>
   <block id="579e7c70138d11bebf2d5787d6df5c96" category="list-text">Nota: L'utente personalizzato può essere qualsiasi utente membro di un gruppo personalizzato fornito a cloudinsights-install.sh durante l'installazione dell'AU e può essere uguale o diverso dall'utente personalizzato fornito durante l'installazione dell'AU.</block>
-  <block id="802dfb282c205a5ce3de537f88b12f68" category="list-text">Creare una cartella di lavoro e regolarla alle stesse autorizzazioni:</block>
   <block id="93fb085f87c8ff2c36aa100fa213c9c8" category="list-text">Nota: Se si utilizzano l'utente e il gruppo "cisys", questi verranno visualizzati nell'output riportato sopra.</block>
-  <block id="1c4e1e0caf2fa69be4c90526b51f5f8e" category="list-text">Copiare il file _datasources-war-&lt;version&gt;.zip_ nella cartella di lavoro. Ad esempio:</block>
-  <block id="bf52ab28c85a4589393e5d683a2d027e" category="list-text">Passare alla cartella di download e decomprimere il file:</block>
-  <block id="0fcc45fcd734d4323f5a5d9ea3360815" category="list-text">assicurarsi che l'utente, il gruppo e le autorizzazioni siano corretti su tutti i file:</block>
-  <block id="c894bcc14d41b007df81ed9d077a249c" category="list-text">Riavviare l'AU.</block>
   <block id="c35a33c9875991494585fbfbed175784" category="paragraph">Il <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> è possibile personalizzare l'installazione e la configurazione.</block>
   <block id="8d44687186d37f705aa7f2282722aeb5" category="sidebar">Opzioni operatore di monitoraggio</block>
   <block id="8b673d5f702e58efd947465ead5c9647" category="cell">Limite di CPU per l'implementazione delle metriche di stato kube</block>
@@ -12737,8 +12728,6 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="5fbd88686e262efcf8b00d22f5dffa35" category="list-text">Nel menu workload Security (sicurezza del carico di lavoro), fare clic su:
 *Collector &gt; User Directory Collector &gt; + User Directory Collector* e selezionare *LDAP Directory Server*</block>
   <block id="4af3803e0bed14e15bd7e0f351022969" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Console.</block>
-  <block id="232088b7a66f0b9f18bd94f0ff1ccbd9" category="list-text">Nota: Se si prevede di utilizzare l'AU di ister con utenti personalizzati diversi, assicurarsi che le autorizzazioni di gruppo siano impostate per la lettura e la scrittura sia per il proprietario che per il gruppo (_chmod 660 …_)</block>
-  <block id="d9089236da8f5cf946e4497f9e886125" category="list-text">In Cloud Insights, accedere a *osservabilità &gt; Collector* e selezionare la scheda *unità di acquisizione*. Scegliere _Riavvia_ dal menu "tre punti" a destra dell'AU.</block>
   <block id="e54adc338b6508055df6c2c6fb796a92" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Apache.</block>
   <block id="658caf28e4d04a4c56e83fd4c34621bd" category="list-text">È possibile modificare le informazioni per più data collezionisti contemporaneamente. Nella pagina *osservabilità &gt; Collector*, selezionare i data collector da modificare selezionando la casella a sinistra di ciascuno di essi e fare clic sul pulsante *azioni in blocco*. Scegliere *Modifica* e modificare i campi necessari.</block>
   <block id="a1093e0f58751f9a01960a1fbf7beb53" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Memcached.</block>
@@ -12815,4 +12804,26 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="6106de3fb9edc97d16b4426ca0ae0dc8" category="paragraph">Si noti che i comandi CLI e API di FSX recuperano alcuni valori di capacità che Cloud Insights ZAPI non raccoglie, pertanto alcuni valori di capacità (come quelli per i pool di storage) potrebbero essere diversi in Cloud Insights rispetto ad FSX stesso.</block>
   <block id="6dac8d8f7e40ada8d5686e3e8192f90f" category="paragraph">Per informazioni sull'installazione su Kubernetes, vedere <block ref="36dbd85d6f83f853e5478a62019a359b" category="inline-link-macro-rx"></block>.</block>
   <block id="4f39aea7decea72af93c7cb4ba3fe487" category="admonition">Se si dispone dell'edizione federale di Cloud Insights, le istruzioni di installazione e configurazione potrebbero essere diverse da quelle riportate su questa pagina. Seguire le istruzioni in Cloud Insights per installare l'operatore di monitoraggio NetApp Kubernetes.</block>
+  <block id="a5e641ea50deeae492ae44180a6c1cd9" category="list-text">Tipo: Scegliere *unità di acquisizione* e *raccolta dati*</block>
+  <block id="156e10596fdc76ee5300bab931d89c0f" category="inline-xref">Patch</block>
+  <block id="1b61043ff027934bc2900e3c686978de" category="paragraph">A questo punto, il software AU viene installato sul sistema ed è accessibile dall'utente e dal gruppo personalizzati. Tuttavia, non è possibile aggiungere raccolta dati. Per eseguire questa operazione manualmente, leggere le istruzioni riportate di seguito. Se si desidera installare solo una patch, vedere la <block ref="40c0527ef35e12c3a3ce0496a70ee226" category="inline-xref-macro-rx"></block> di seguito.</block>
+  <block id="7235d692fc62fcacd964ca3ad6df04b4" category="section-title">Installazione manuale di Data Collector</block>
+  <block id="afa6999c343d1ebcba786b51f19dd530" category="paragraph">Scaricare le ultime datasources.war utilizzando l'API /collector/patch/datasourceswar/latest:</block>
+  <block id="c627c3d68517a1230074d11fcf8e07e0" category="inline-image-macro">API per recuperare le ultime datasources.war</block>
+  <block id="bbfdaaee0b61ad57c8df04fd101b7d16" category="paragraph"><block ref="bbfdaaee0b61ad57c8df04fd101b7d16" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c1ab1322fbfe20363f4fc51283afd1d" category="paragraph">Nota: Se non si sta scaricando la versione più recente, verificare con NetApp la versione da specificare per il download.</block>
+  <block id="00945739bcbd26c8c0d12c48597c0dbb" category="paragraph">Fare clic su Scarica file. Se si esegue questa procedura su un sistema diverso dal sistema AU, copiare il pacchetto zip datasources.war scaricato nel sistema AU.</block>
+  <block id="efe48ed5576d7a3ea1584a18c0c39de9" category="paragraph">Assicurati che il bundle datasources.war zip sia copiato nella seguente directory : /var/lib/netapp/cloudinsights/acq/download</block>
+  <block id="5edf51309b0e54b161dde9f3f2dbe815" category="paragraph">Accedere alla directory /var/lib/netapp/cloudinsights/acq/download per datasources.war e verificare il file zip:</block>
+  <block id="ed7dc5789cb36687315d95140bf88b49" category="list-text">Effettuare le seguenti operazioni:</block>
+  <block id="60b0ec4bd2a387eb3da948b9a799f786" category="paragraph">Nota: Se si prevede di installare utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate in lettura e scrittura sia per il proprietario che per il gruppo (chmod 660 …)</block>
+  <block id="9acc35fb262bf83f278335070c7ea2f2" category="list-text">Riavviare l'AU. In Cloud Insights, accedere a osservabilità &gt; collettori e selezionare la scheda unità di acquisizione. Scegliere Riavvia dal menu "tre punti" a destra dell'unità AU.</block>
+  <block id="57858de47985c55285f0cbb5890decfc" category="section-title">Download di una patch</block>
+  <block id="fc5e990e77fa1bad66c2b07f217c85ab" category="paragraph">Scaricare la patch utilizzando l'API /collector/patch/file/{version}:</block>
+  <block id="be2277f73c347adaa72509bcb1829517" category="inline-image-macro">API per recuperare la patch</block>
+  <block id="0c80703f9063a302ebd010cfe3b646e3" category="paragraph"><block ref="0c80703f9063a302ebd010cfe3b646e3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="de0ee35fb580f6913af161cbc6c1cc65" category="paragraph">Nota: Confermare con NetApp la versione da specificare per il download.</block>
+  <block id="b20aea1fa1664bcc048770ea0e008918" category="paragraph">Fare clic su Scarica file. Se si sta eseguendo questa procedura su un sistema diverso dal sistema AU, copiare il pacchetto zip della patch scaricato nel sistema AU.</block>
+  <block id="3e7f4643e7c9ebf9318c59a568b2521c" category="paragraph">Assicuratevi che il pacchetto zip della patch sia copiato nella seguente directory : /var/lib/netapp/cloudinsights/acq/download</block>
+  <block id="9cb12f64263025528c33b8d045cd0c4a" category="paragraph">Accedere alla directory /var/lib/netapp/cloudinsights/acq/download per la patch e verificare il file .zip:</block>
 </blocks>
