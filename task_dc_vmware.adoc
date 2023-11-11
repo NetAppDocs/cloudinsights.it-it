@@ -136,6 +136,21 @@ Nella schermata Advanced Configuration (Configurazione avanzata), selezionare la
 |===
 
 
+== Associazione dei tag VMware alle annotazioni Cloud Insights
+
+VMware Data Collector consente di popolare le annotazioni Cloud Insights con tag configurati su VMware. Le annotazioni devono essere denominate esattamente come i tag VMware. Cloud Insights compila sempre le annotazioni di tipo testo con lo stesso nome e farà un "miglior tentativo" di popolare le annotazioni di altri tipi (numero, booleano, ecc.). Se l'annotazione è di tipo diverso e il data collector non riesce a compilarla, potrebbe essere necessario rimuovere l'annotazione e ricrearla come testo.
+
+Tenere presente che i tag VMware possono fare distinzione tra maiuscole e minuscole, mentre i tag Cloud Insights non fanno distinzione tra maiuscole e minuscole. Quindi, se si crea un'annotazione denominata "PROPRIETARIO" in Cloud Insights e i tag denominati "PROPRIETARIO", "proprietario" e "proprietario" in VMware, tutte queste variazioni di "proprietario" verranno associate all'annotazione "PROPRIETARIO" di Cloud Insight.
+
+Tenere presente quanto segue:
+
+* Attualmente Cloud Insights pubblica automaticamente solo le informazioni di supporto per i dispositivi NetApp.
+* Poiché queste informazioni di supporto sono contenute in forma di annotazione, è possibile eseguirne una query o utilizzarle nei dashboard.
+* Se un utente sovrascrive o svuota il valore dell'annotazione, il valore viene riempito automaticamente quando Cloud Insights aggiorna le annotazioni, che viene eseguito una volta al giorno.
+
+
+
+
 == Risoluzione dei problemi
 
 Alcune operazioni da eseguire in caso di problemi con questo data collector:

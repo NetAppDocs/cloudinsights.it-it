@@ -113,7 +113,7 @@ Il prezzo di Cloud Insights è pari a *unità gestita*. L'utilizzo delle unità 
 
 * 1 unità gestita = 2 host (qualsiasi macchina virtuale o fisica)
 * 1 unità gestita = 4 TIB di capacità non formattata di dischi fisici o virtuali
-* 1 unità gestita = 40 TiB di capacità non formattata dello storage secondario selezionato: AWS S3, Cohesity SmartFiles, Dell EMC Data Domain, Dell EMC ECS, Hitachi Content Platform, IBM Cleversafe, NetApp StorageGRID.
+* 1 unità gestita = 40 TiB di capacità non formattata dello storage secondario selezionato: AWS S3, Cohesity SmartFiles, Dell EMC Data Domain, Dell EMC ECS, Hitachi Content Platform, IBM Cleversafe, NetApp StorageGRID, Rubrik.
 * 1 unità gestita = 4 vCPU di Kuberentes
 
 
