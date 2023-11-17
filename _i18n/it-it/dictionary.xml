@@ -12860,4 +12860,44 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="1679091c5a880faf6fb5e6087eb1b2dc" category="cell">6</block>
   <block id="90328fccc937505ade5c16d577869c88" category="cell">Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.</block>
   <block id="59a5587328a48d1f89316c0bf4e4be6f" category="cell">Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.</block>
+  <block id="cd5c932f5b2fa2206673bc29c081fa55" category="section-title">Recupero della chiave esterna</block>
+  <block id="7e344aed2e1990843db0c81944cc6f38" category="paragraph">Se si fornisce uno script di shell UNIX, può essere eseguito dall'unità di acquisizione per recuperare la *chiave privata* e la *chiave pubblica* dal sistema di gestione delle chiavi.</block>
+  <block id="76a8209497c46ce429a432b8cd7aba35" category="paragraph">Per recuperare la chiave, Cloud Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.</block>
+  <block id="09ca0fd15a1c6d7b2fe73ff5dea10c81" category="paragraph">Per inviare nuovamente il tasto all'unità di acquisizione, lo script deve stampare il tasto sull'output standard. Lo script deve stampare _solo_ la chiave per l'output standard; nessun altro testo deve essere stampato su output standard. Una volta che la chiave richiesta viene stampata nell'output standard, lo script deve uscire con un codice di uscita di 0; qualsiasi altro codice di ritorno viene considerato un errore.</block>
+  <block id="33290e9f863a844a70f389349e2d213c" category="paragraph">Lo script deve essere registrato con l'unità di acquisizione utilizzando lo strumento securityadmin, che eseguirà lo script insieme all'unità di acquisizione. Lo script deve avere l'autorizzazione _Read_ e _execute_ per l'utente root e "cisys". Se lo script della shell viene modificato dopo la registrazione, lo script della shell modificato deve essere nuovamente registrato con l'unità di acquisizione.</block>
+  <block id="c88fd792d889fe7e2f25a6da9c770e73" category="cell">parametro di input: id chiave</block>
+  <block id="aeb0eba0bd57d78a26a1f2f0aa9fc2f6" category="cell">Identificatore chiave utilizzato per identificare la chiave nel sistema di gestione delle chiavi del cliente.</block>
+  <block id="8fee5e82e6d0ac624c0ec7dac53c54cd" category="cell">parametro di immissione: tipo di chiave</block>
+  <block id="bc7e6c0080a5c5ce725875c7b24391d3" category="cell">pubblico o privato.</block>
+  <block id="78e6221f6393d1356681db398f14ce6d" category="cell">uscita</block>
+  <block id="f6c5e65e6ef69077f24adde05d387958" category="cell">La chiave richiesta deve essere stampata sull'output standard. La chiave RSA a 2048 bit è attualmente supportata. Le chiavi devono essere codificate e stampate nel seguente formato:
+
+Formato chiave privata - PEM, DER-encoded PKCS8 PrivateKeyInfo RFC 5958
+
+Formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280</block>
+  <block id="38a85e59e30b7717fc81292db9eb12a6" category="cell">codice di uscita</block>
+  <block id="7e1ef7a088c96cd46d5019ad5bdc9906" category="cell">Codice di uscita zero per successo. Tutti gli altri valori di uscita sono considerati falliti.</block>
+  <block id="8d75ffb8aae6aeca7452d699700fbaa3" category="cell">autorizzazioni script</block>
+  <block id="0d9d49f26f4aab969da2990ae2b8211d" category="cell">Lo script deve disporre dell'autorizzazione di lettura ed esecuzione per l'utente root e "cisys".</block>
+  <block id="0ea37d55eb317357221495bc546dcbaa" category="cell">Vengono registrate le esecuzioni degli script. I registri si trovano in -
+
+/var/log/netapp/cloudinsights/securityadmin/securityadmin.log
+
+/var/log/netapp/cloudinsigies/acq/acq.log</block>
+  <block id="5cb201937c70d0d7e6b436c37651b65f" category="section-title">Crittografia di una password per l'utilizzo in API</block>
+  <block id="8b70536956ac4293adf79e90bb3d3f2b" category="paragraph">L'opzione 8 consente di crittografare una password, che è quindi possibile passare a un agente di raccolta dati tramite API.</block>
+  <block id="4d51716521a241af558ff5a53edca414" category="paragraph">Avviare lo strumento securityadmin in modalità interattiva e selezionare l'opzione 8: _Encrypt Password_.</block>
+  <block id="0a3123506e337e1df2e9d5b4bb357d4a" category="paragraph">Viene richiesto di immettere la password che si desidera crittografare. I caratteri digitati non vengono visualizzati sullo schermo.  Inserire nuovamente la password quando richiesto.</block>
+  <block id="2948748e083c2f5528a585e7f88f7ff4" category="paragraph">In alternativa, se si utilizza il comando in uno script, sulla riga di comando utilizzare _securityadmin.sh_ con il parametro "-enc", passando la password non crittografata:</block>
+  <block id="eeb5a14a1174d84c9c51964c5fd6bcc7" category="inline-image-macro">Esempio CLI</block>
+  <block id="34f35c289dea93e5932a3510f4fa5bfd" category="paragraph"><block ref="34f35c289dea93e5932a3510f4fa5bfd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95c866463d0b969918d1f6e2fe8c5fd0" category="paragraph">La password crittografata viene visualizzata sullo schermo. Copiare l'intera stringa, inclusi i simboli iniziali o finali.</block>
+  <block id="23537177af171887aa709c82b7f95233" category="inline-image-macro">Password di crittografia in modalità interattiva, larghezza=640</block>
+  <block id="3ca1cac623f8adafa79329ed5ba66d22" category="paragraph"><block ref="3ca1cac623f8adafa79329ed5ba66d22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ee6cdd4ad08464db4fdf18fe2a00dff" category="paragraph">Per inviare la password crittografata a un data collector, è possibile utilizzare l'API di raccolta dati. Lo swagger per questa API si trova in *Admin &gt; API Access* e fare clic sul collegamento "API Documentation". Selezionare il tipo di API "raccolta dati".  Sotto l'intestazione _data_collection.data_collector_, scegliere l'API _/collector/datasources_ POST per questo esempio.</block>
+  <block id="f144badbb7a6b07df0df4b80507d0ffa" category="inline-image-macro">API per la raccolta dati</block>
+  <block id="33690babc268213da4a993f9f69e1d58" category="paragraph"><block ref="33690babc268213da4a993f9f69e1d58" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b738fcd06367fb3c33e6d367c3e7c7ba" category="paragraph">Se si imposta l'opzione _preEncrypted_ su _True_, qualsiasi password passata attraverso il comando API verrà considerata come *già crittografata*; l'API non crittograferà nuovamente le password. Quando si crea l'API, è sufficiente incollare la password precedentemente crittografata nella posizione appropriata.</block>
+  <block id="d9d5abe9014e781e9e8b7465a4527c53" category="inline-image-macro">Esempio API, width=600</block>
+  <block id="adf35aae3d2f06ba0ccf5e21b031b3d6" category="paragraph"><block ref="adf35aae3d2f06ba0ccf5e21b031b3d6" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
