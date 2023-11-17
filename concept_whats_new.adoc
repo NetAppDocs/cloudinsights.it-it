@@ -29,6 +29,12 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+=== Sicurezza del carico di lavoro: Pausa/ripresa di un servizio di raccolta
+
+In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_ o _Error_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.
+
+
+
 === Informazioni di supporto del nodo di storage
 
 Nella landing page di un nodo storage, la sezione _dati utente_ fornisce informazioni immediate sulla tua offerta di supporto, sullo stato corrente, sullo stato del supporto e sulla data di fine della garanzia. Si noti che attualmente Cloud Insights pubblica automaticamente queste informazioni solo per i dispositivi NetApp. Si noti inoltre che questi campi di supporto sono annotazioni, quindi possono essere utilizzati in query e dashboard.

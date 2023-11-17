@@ -12841,4 +12841,23 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="f528aa737a09ffef3755a1a747557c7a" category="list-text">Attualmente Cloud Insights pubblica automaticamente solo le informazioni di supporto per i dispositivi NetApp.</block>
   <block id="8455a8bde7347555ff461cd652af2821" category="list-text">Poiché queste informazioni di supporto sono contenute in forma di annotazione, è possibile eseguirne una query o utilizzarle nei dashboard.</block>
   <block id="8ed3dc52c7734ad3388658bf20175200" category="list-text">Se un utente sovrascrive o svuota il valore dell'annotazione, il valore viene riempito automaticamente quando Cloud Insights aggiorna le annotazioni, che viene eseguito una volta al giorno.</block>
+  <block id="b63d58d10a7cf952ba50c71631f55b80" category="section-title">Sicurezza del carico di lavoro: Pausa/ripresa di un servizio di raccolta</block>
+  <block id="84a9e424bdf106d03d3d28925f9d139f" category="paragraph">In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_ o _Error_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.</block>
+  <block id="27f986eca60850ba6afaf4deb6c8be29" category="section-title">Riproduci-Pausa Data Collector</block>
+  <block id="fc0a37407f79a45598558116e07830ba" category="paragraph">2 nuove operazioni sono ora visualizzate sul menu kebab del raccoglitore (PAUSA e RIPRESA).</block>
+  <block id="a1f56413bb240260818b1874baafc3b6" category="paragraph">Se Data Collector è in stato _running_ o _Error_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che nessun evento Fpolicy passerà da ONTAP al data collector e da lì a Cloud Insights.</block>
+  <block id="12a77ef251456c14c7516a531e07f62b" category="paragraph">Tenere presente che se in ONTAP vengono creati nuovi volumi e così via mentre il collector è in pausa, workload Security non raccoglierà i dati e quei volumi, ecc. non verranno riflessi in dashboard o tabelle.</block>
+  <block id="01abfc750a0c942167651c40d088531d" category="cell">N.</block>
+  <block id="a466ef2a0eac5ccca070b3013eaba386" category="cell">Comportamento sospeso del collezionista</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1</block>
+  <block id="ac08b45e1e6b3f3cb0a5ffc7cb738447" category="cell">L'eliminazione degli snapshot non avviene in base alle impostazioni configurate su un raccoglitore in pausa.</block>
+  <block id="301be6cbe57eeb518e76a0dacc06942b" category="cell">Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, Cloud Insights workload Security non sarà in grado di acquisire quell'evento.</block>
+  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="cell">3</block>
+  <block id="7e41836b686c17a31fd348a24ad244d1" category="cell">Le e-mail di notifica dello stato NON verranno inviate per un raccoglitore in pausa.</block>
+  <block id="3683774ed8a4e1ec359bda17c740e07d" category="cell">Le azioni manuali o automatiche (come Snapshot o blocco utente) non sono supportate in un raccoglitore in pausa.</block>
+  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
+  <block id="fa80f305470263b5f75374e020afeacd" category="cell">In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.</block>
+  <block id="1679091c5a880faf6fb5e6087eb1b2dc" category="cell">6</block>
+  <block id="90328fccc937505ade5c16d577869c88" category="cell">Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.</block>
+  <block id="59a5587328a48d1f89316c0bf4e4be6f" category="cell">Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.</block>
 </blocks>
