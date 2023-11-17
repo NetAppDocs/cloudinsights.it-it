@@ -408,24 +408,10 @@ Il comando di solo download scaricherà tutti gli artefatti richiesti da Cloud I
 * uno script di installazione
 * un file di ambiente
 * File YAML
-* un file checksum firmato (che termina con sha256.signed o sha256.ps1)
-* Un file PEM (netapp_cert.pem) per la verifica della firma
+* un file checksum (che termina con sha256.signed o sha256.ps1)
 
 
 Lo script di installazione, il file di ambiente e i file YAML possono essere verificati utilizzando l'ispezione visiva.
-
-Il file PEM può essere verificato confermando che l'impronta digitale è la seguente:
-
- 1A918038E8E127BB5C87A202DF173B97A05B4996
-In particolare,
-
-* Non Windows:
-+
- openssl x509 -fingerprint -sha1 -noout -inform pem -in netapp_cert.pem
-* Finestre:
-+
- Import-Certificate -Filepath .\netapp_cert.pem -CertStoreLocation Cert:\CurrentUser\Root
-
 
 
 
@@ -443,24 +429,18 @@ Per generare il valore del checksum, eseguire il seguente comando per la piattaf
 
 
 
-=== Verificare il checksum utilizzando il file PEM
+=== Verificare il checksum
 
-Il file checksum firmato può essere verificato utilizzando il file PEM:
+Estrarre il checksum previsto dal file checksum
 
 * Non Windows:
++
+ openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
+* Finestre:
++
+ (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
 
 
- openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any
-* Windows (dopo l'installazione del certificato tramite Importa certificato):
-
-
-....
-Get-AuthenticodeSignature -FilePath .\telegraf.zip.sha256.ps1
-$result = Get-AuthenticodeSignature -FilePath .\telegraf.zip.sha256.ps1
-$signer = $result.SignerCertificate
-Add-Type -Assembly System.Security
-[Security.Cryptography.x509Certificates.X509Certificate2UI]::DisplayCertificate($signer)
-....
 
 
 === Installare il pacchetto scaricato

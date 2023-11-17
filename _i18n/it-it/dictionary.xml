@@ -8255,7 +8255,6 @@
   <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">uno script di installazione</block>
   <block id="b015398c226e1e3576258432ece31819" category="list-text">un file di ambiente</block>
   <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">File YAML</block>
-  <block id="2f5e8cecf93bcfa467580ff86ae3e64a" category="list-text">un file checksum firmato (che termina con sha256.signed o sha256.ps1)</block>
   <block id="e1f4fa985535cfb2dd4b3f50c918b7eb" category="list-text">Un file PEM (netapp_cert.pem) per la verifica della firma</block>
   <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">Lo script di installazione, il file di ambiente e i file YAML possono essere verificati utilizzando l'ispezione visiva.</block>
   <block id="7c9f5399bb10652ab7e06778c4de02e1" category="paragraph">Il file PEM può essere verificato confermando che l'impronta digitale è la seguente:</block>
@@ -8264,9 +8263,7 @@
   <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">Generare un valore di checksum</block>
   <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">Per generare il valore del checksum, eseguire il seguente comando per la piattaforma appropriata:</block>
   <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL/Ubuntu:</block>
-  <block id="2759aa04a78ddf03f5db1a25acdca496" category="section-title">Verificare il checksum utilizzando il file PEM</block>
   <block id="76dfc651463ab4e67ce2140b8aadb473" category="paragraph">Il file checksum firmato può essere verificato utilizzando il file PEM:</block>
-  <block id="fbc384836aa7cdd1a408df0773faf595" category="list-text">Windows (dopo l'installazione del certificato tramite Importa certificato):</block>
   <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">Installare il pacchetto scaricato</block>
   <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">Una volta verificati correttamente tutti gli artefatti, l'installazione dell'agente può essere avviata eseguendo:</block>
   <block id="19032097e8464bc9b326d59737b0bdbc" category="paragraph">Alcuni suggerimenti da provare in caso di problemi durante la configurazione di un agente:</block>
@@ -12900,4 +12897,7 @@ Formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280</
   <block id="b738fcd06367fb3c33e6d367c3e7c7ba" category="paragraph">Se si imposta l'opzione _preEncrypted_ su _True_, qualsiasi password passata attraverso il comando API verrà considerata come *già crittografata*; l'API non crittograferà nuovamente le password. Quando si crea l'API, è sufficiente incollare la password precedentemente crittografata nella posizione appropriata.</block>
   <block id="d9d5abe9014e781e9e8b7465a4527c53" category="inline-image-macro">Esempio API, width=600</block>
   <block id="adf35aae3d2f06ba0ccf5e21b031b3d6" category="paragraph"><block ref="adf35aae3d2f06ba0ccf5e21b031b3d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">un file checksum (che termina con sha256.signed o sha256.ps1)</block>
+  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">Verificare il checksum</block>
+  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">Estrarre il checksum previsto dal file checksum</block>
 </blocks>
