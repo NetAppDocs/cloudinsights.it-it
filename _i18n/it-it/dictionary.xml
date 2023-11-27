@@ -5924,7 +5924,6 @@
   <block id="592b09bd3291d67037bc036b0c714470" category="cell">Nome foresta</block>
   <block id="7d29f1962bf2529a2067967e962ee3dd" category="cell">Livello di foresta della struttura di directory. Il nome della foresta consente di utilizzare entrambi i seguenti formati: _X. y.y.z_ =&gt; nome di dominio diretto così come lo si dispone sulla SVM. [Esempio: hq.companyname.com] _DC=x,DC=y,DC=z_ =&gt; nomi distinti relativi [esempio: DC=hq,DC= nomeazienda,DC=com] oppure è possibile specificare quanto segue: _OU=engineering,DC=hq,DC= companyname,DC=com_ [per filtrare in base all'ingegneria specifica dell'unità organizzativa] _CN=nome utente,OU=engineering,DC=companyname, DC=netapp, DC=com_ [per ottenere solo un utente specifico con &lt;username&gt; da OU &lt;engineering&gt;] _CN=utenti Acrobat,CN=utenti,DC=hq,DC=companyname,DC=companyname,DC=companyname,o=tutti gli utenti attendibili all'interno di quest'organizzazione sono supportati da Acrobat_S=i domini che sono supportati da Microsoft,S=i domini Microsoft,S=IT_.</block>
   <block id="58384d924f3205aaac5f4a09d3b33801" category="cell">DN di binding</block>
-  <block id="c84f7a37a2691cf36f1774d52de72e5c" category="cell">Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_</block>
   <block id="7066ea6d497311d6e3c4be6a9523999c" category="cell">ASSOCIARE la password</block>
   <block id="0d91a6f24e197b2dbd20b358e4f84785" category="cell">Password del server di directory (ad es. Password per il nome utente utilizzato in Bind DN)</block>
   <block id="aebd636047453941f5450b96d44c3195" category="cell">ldap, ldaps, ldap-start-tls</block>
@@ -12900,4 +12899,6 @@ Formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280</
   <block id="4fd45e6b48ed24b4e3dbd4f7522cab8c" category="cell">Indirizzi IP o FQDN dei gateway ScaleIO/PowerFlex, separati da virgola (,) o punto e virgola (;)</block>
   <block id="68d34ea912eb8ba5af30d244ed0f9227" category="cell">Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO/PowerFlex</block>
   <block id="682ba587c3d6c301fba76aadc4ddd8af" category="cell">Password utilizzata per accedere al dispositivo ScaleIO/PowerFlex</block>
+  <block id="9f3d8c0615d1ceba9f0f905f22c7d950" category="cell">Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_
+Inoltre, è richiesta l'autorizzazione di sola lettura del dominio.</block>
 </blocks>
