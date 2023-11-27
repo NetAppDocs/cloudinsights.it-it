@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_emc_scaleio.html 
-keywords: data collector, scaleIO, EMC, DELL 
-summary: Configurazione di DELL EMC ScaleIO data collector. 
+keywords: data collector, scaleIO, PowerFlex EMC, DELL 
+summary: Configurazione di DELL EMC ScaleIO/PowerFlex Data Collector. 
 ---
-= Data collector DELL EMC ScaleIO
+= Raccolta dati DELL EMC ScaleIO / PowerFlex
 :toc: macro
 :hardbreaks:
 :toclevels: 1
@@ -19,13 +19,13 @@ summary: Configurazione di DELL EMC ScaleIO data collector.
 
 
 [role="lead"]
-Il data collector ScaleIO raccoglie le informazioni di inventario dallo storage ScaleIO. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO e un nome utente e una password admin.
+Il data collector ScaleIO/PowerFlex raccoglie le informazioni di inventario dallo storage ScaleIO e PowerFlex. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO/PowerFlex e un nome utente e una password amministratore.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
@@ -35,7 +35,7 @@ Cloud Insights acquisisce le seguenti informazioni di inventario dal data collec
 | Cluster MDM (Meta Data Manager) | Storage 
 
 
-| SDS (ScaleIO Data Server) | Nodo di storage 
+| SDS (server dati ScaleIO/PowerFlex) | Nodo di storage 
 
 
 | Pool di storage | Pool di storage 
@@ -65,13 +65,13 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Gateway ScaleIO | Indirizzi IP o FQDN dei gateway ScaleIO, separati da virgola (,) o punto e virgola (;) 
+| Gateway ScaleIO/PowerFlex | Indirizzi IP o FQDN dei gateway ScaleIO/PowerFlex, separati da virgola (,) o punto e virgola (;) 
 
 
-| Nome utente | Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO 
+| Nome utente | Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO/PowerFlex 
 
 
-| Password | Password utilizzata per accedere al dispositivo ScaleIO 
+| Password | Password utilizzata per accedere al dispositivo ScaleIO/PowerFlex 
 |===
 
 

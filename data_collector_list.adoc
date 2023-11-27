@@ -94,7 +94,7 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | link:task_dc_emc_recoverpoint.html["Recoverpoint Dell EMC"] | Infrastruttura 
 
 
-| link:task_dc_emc_scaleio.html["ScaleIO Dell EMC"] | Infrastruttura 
+| link:task_dc_emc_scaleio.html["Dell EMC ScaleIO/PowerFlex "] | Infrastruttura 
 
 
 | link:task_dc_emc_unity.html["Dell EMC Unity"] | Infrastruttura 

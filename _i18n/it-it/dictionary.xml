@@ -292,18 +292,9 @@
   <block id="b0b134473b7922feefa2eaac79b9fb75" category="cell">Controllare se si utilizza csuser, le autorizzazioni vengono assegnate all'utente come indicato in precedenza.</block>
   <block id="5dfe08a6b6855a1ebeedad2a282e5824" category="cell">Il blocco dell'utente (indirizzo IP) per NFS funziona, ma per SMB / CIFS viene visualizzato un messaggio di errore: "Trasformazione SID in DomainName non riuscita. Timeout motivo: Socket non stabilito"</block>
   <block id="e8aaaf728a906b8e9d531bb2447c9cf2" category="cell">Ciò può accadere se _csuser_ non dispone dell'autorizzazione per eseguire ssh. (Verificare la connessione a livello di cluster, quindi assicurarsi che l'utente possa eseguire ssh). il ruolo _csuser_ richiede queste autorizzazioni.<block ref="3066b8235934d1594e54f7b043a73648" category="inline-link-rx"></block>Per _csuser_ con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP: ruolo di login di sicurezza create -role csrole -cmddirname "vserver export-policy rule" -access all security login role create -role csrole -cmddirname set -access all security login role create -role csrole -cmddirname "vserver cifs session" -access all security login role create -role csrole role -role csrole -cmddirname -cmddirname "vserver access service access service access-check authentication" Role create -role csrole -cmddirname "vserver name-mapping" -access all se _csuser_ non viene utilizzato e se viene utilizzato l'utente admin a livello di cluster, assicurarsi che l'utente admin disponga dell'autorizzazione ssh per ONTAP.</block>
-  <block id="cf38d319bc1b083afe717ce8be4a0e2a" category="summary">Configurazione di DELL EMC ScaleIO data collector.</block>
-  <block id="a502d590a35b78e5a42f13e7f79aefd5" category="doc">Data collector DELL EMC ScaleIO</block>
-  <block id="c502d2755afbc827d0b78e7bf29a63c3" category="paragraph">Il data collector ScaleIO raccoglie le informazioni di inventario dallo storage ScaleIO. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO e un nome utente e una password admin.</block>
-  <block id="0711dbe30737a04c398a5d6577ea7fb6" category="paragraph">Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:</block>
   <block id="d84428ff629eae2252af86f5b0c68597" category="cell">Cluster MDM (Meta Data Manager)</block>
-  <block id="32de3bca35dcedbe5dd77438efe818cd" category="cell">SDS (ScaleIO Data Server)</block>
   <block id="9bc4ba1e74d4345d8fb67c1039e8ee31" category="list-text">Accesso in sola lettura all'account utente Admin</block>
   <block id="0e75d3cb4ff238983ed93446b3df10b4" category="list-text">Requisito della porta: Porta HTTPS 443</block>
-  <block id="b598786f418563a6288a22d6b801761e" category="cell">Gateway ScaleIO</block>
-  <block id="7f1dace1c2447400ca7e254d9f7c680d" category="cell">Indirizzi IP o FQDN dei gateway ScaleIO, separati da virgola (,) o punto e virgola (;)</block>
-  <block id="d44a2e308ec90ea99344ff3ca9a81883" category="cell">Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO</block>
-  <block id="358e9f4d894beeefdde1369e74db160f" category="cell">Password utilizzata per accedere al dispositivo ScaleIO</block>
   <block id="fd4515531c9ce1d6eae38a306629e6eb" category="paragraph">Fare clic sulla casella di controllo Inventory (inventario) per attivare la raccolta dell'inventario.</block>
   <block id="f7130526f999ef4eed4ac1dbf86a0a03" category="cell">Porta HTTPS</block>
   <block id="5fdb13066473bd6f58da638bc9c08a77" category="cell">Il valore predefinito è 60.</block>
@@ -2716,8 +2707,6 @@
   <block id="1b109b38fea9959dbc53058628693aef" category="cell"><block ref="1b109b38fea9959dbc53058628693aef" category="inline-link-macro-rx"></block></block>
   <block id="f8e3c055426933bde369444cdafa0c6b" category="inline-link-macro">Recoverpoint Dell EMC</block>
   <block id="32f16e66f82b765e2355b037f437f0d6" category="cell"><block ref="32f16e66f82b765e2355b037f437f0d6" category="inline-link-macro-rx"></block></block>
-  <block id="9e41c813bafe9260d22ac12ca1d86d6b" category="inline-link-macro">ScaleIO Dell EMC</block>
-  <block id="e05a976ebc9a4cca05ffe391dc9aea64" category="cell"><block ref="e05a976ebc9a4cca05ffe391dc9aea64" category="inline-link-macro-rx"></block></block>
   <block id="42658796d03fcc8216277518ea2d5203" category="inline-link-macro">Dell EMC Unity</block>
   <block id="7d4fe4e454bc9f68e87ed3a86244c35a" category="cell"><block ref="7d4fe4e454bc9f68e87ed3a86244c35a" category="inline-link-macro-rx"></block></block>
   <block id="0cf39fe422a1bfd5d8bce06d5ce1b64f" category="inline-link-macro">Dell EMC Unisphere REST (RIPOSO unisfer</block>
@@ -12900,4 +12889,15 @@ Formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280</
   <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">un file checksum (che termina con sha256.signed o sha256.ps1)</block>
   <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">Verificare il checksum</block>
   <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">Estrarre il checksum previsto dal file checksum</block>
+  <block id="e399d76f82d333fa1c49eb069522e8ac" category="inline-link-macro">Dell EMC ScaleIO/PowerFlex </block>
+  <block id="f7ee83c5589aae26abcd6b7c1b853e5a" category="cell"><block ref="f7ee83c5589aae26abcd6b7c1b853e5a" category="inline-link-macro-rx"></block></block>
+  <block id="e3628e8ad35243dc8938a2b601a40729" category="summary">Configurazione di DELL EMC ScaleIO/PowerFlex Data Collector.</block>
+  <block id="b7cfbf9d7104ab3206a9e36e4f1cfed8" category="doc">Raccolta dati DELL EMC ScaleIO / PowerFlex</block>
+  <block id="eb2970c74f4003234e24b8bb86f7f1b1" category="paragraph">Il data collector ScaleIO/PowerFlex raccoglie le informazioni di inventario dallo storage ScaleIO e PowerFlex. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO/PowerFlex e un nome utente e una password amministratore.</block>
+  <block id="0605f6ce75ae8707c23e729bfc341dd5" category="paragraph">Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:</block>
+  <block id="1504819ba5c6757e9100d77628a826a2" category="cell">SDS (server dati ScaleIO/PowerFlex)</block>
+  <block id="52775d60a5ff510b7b7db324e92a528a" category="cell">Gateway ScaleIO/PowerFlex</block>
+  <block id="4fd45e6b48ed24b4e3dbd4f7522cab8c" category="cell">Indirizzi IP o FQDN dei gateway ScaleIO/PowerFlex, separati da virgola (,) o punto e virgola (;)</block>
+  <block id="68d34ea912eb8ba5af30d244ed0f9227" category="cell">Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO/PowerFlex</block>
+  <block id="682ba587c3d6c301fba76aadc4ddd8af" category="cell">Password utilizzata per accedere al dispositivo ScaleIO/PowerFlex</block>
 </blocks>
