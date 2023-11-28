@@ -31,7 +31,7 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 === Sicurezza del carico di lavoro: Pausa/ripresa di un servizio di raccolta
 
-In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_ o _Error_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.
+In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.
 
 
 

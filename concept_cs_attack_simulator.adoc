@@ -137,7 +137,11 @@ Dopo aver generato un attacco ransomware per un utente, passare a un altro utent
 
 == Creare file a livello di codice
 
-Prima di creare i file, è necessario interrompere l'elaborazione del data collector. Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.
+Prima di creare i file, è necessario interrompere o sospendere l'elaborazione del Data Collector.
+Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.
+
+
+NOTE: L'opzione consigliata è da a. link:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore"] prima di creare i file.]
 
 Prima di eseguire la simulazione, è necessario aggiungere i file da crittografare. È possibile copiare manualmente i file da crittografare nella cartella di destinazione oppure utilizzare uno script (vedere l'esempio seguente) per creare i file a livello di programmazione. Copiare almeno 1,000 file, indipendentemente dal metodo utilizzato.
 
@@ -169,4 +173,5 @@ nella cartella corrente verranno creati 1000 file.
 +
 Se il data collector è stato disattivato al punto 1, modificare il data collector, inserire la password corretta e salvare. Assicurarsi che il data collector sia nuovamente in esecuzione.
 
+. Se il raccoglitore è stato messo in pausa prima di procedere come indicato di seguito, assicurarsi di link:task_add_collector_svm.html#play-pause-data-collector["riprendere il raccoglitore"].
 

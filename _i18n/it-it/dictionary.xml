@@ -7604,7 +7604,6 @@
   <block id="508c80147534839c8ece65596b3e23ca" category="section-title">Eseguire lo script più volte</block>
   <block id="dd844f5768b1b38bb3eaa8aad66cc28d" category="paragraph">Dopo aver generato un attacco ransomware per un utente, passare a un altro utente per generare un attacco aggiuntivo. Workload Security apprende il comportamento dell'utente e non avvisa in caso di ripetuti attacchi ransomware entro un breve periodo di tempo per lo stesso utente.</block>
   <block id="3c00df162167ecfa7cae1012f21e271a" category="section-title">Creare file a livello di codice</block>
-  <block id="b7013d500ab0d5c0a0a5ed66e230d702" category="paragraph">Prima di creare i file, è necessario interrompere l'elaborazione del data collector. Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.</block>
   <block id="7fb4f29b2fbada5675e1ca18652cf155" category="paragraph">Prima di eseguire la simulazione, è necessario aggiungere i file da crittografare. È possibile copiare manualmente i file da crittografare nella cartella di destinazione oppure utilizzare uno script (vedere l'esempio seguente) per creare i file a livello di programmazione. Copiare almeno 1,000 file, indipendentemente dal metodo utilizzato.</block>
   <block id="ab1689bf65069d89f2858a33f94e7a0c" category="paragraph">Se si sceglie di creare i file a livello di programmazione, attenersi alla seguente procedura:</block>
   <block id="1ccbd3884a5f46ebee24ea2d455e82c6" category="list-text">Accedere alla casella Agente.</block>
@@ -12826,22 +12825,14 @@ In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" cate
   <block id="8455a8bde7347555ff461cd652af2821" category="list-text">Poiché queste informazioni di supporto sono contenute in forma di annotazione, è possibile eseguirne una query o utilizzarle nei dashboard.</block>
   <block id="8ed3dc52c7734ad3388658bf20175200" category="list-text">Se un utente sovrascrive o svuota il valore dell'annotazione, il valore viene riempito automaticamente quando Cloud Insights aggiorna le annotazioni, che viene eseguito una volta al giorno.</block>
   <block id="b63d58d10a7cf952ba50c71631f55b80" category="section-title">Sicurezza del carico di lavoro: Pausa/ripresa di un servizio di raccolta</block>
-  <block id="84a9e424bdf106d03d3d28925f9d139f" category="paragraph">In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_ o _Error_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.</block>
   <block id="27f986eca60850ba6afaf4deb6c8be29" category="section-title">Riproduci-Pausa Data Collector</block>
   <block id="fc0a37407f79a45598558116e07830ba" category="paragraph">2 nuove operazioni sono ora visualizzate sul menu kebab del raccoglitore (PAUSA e RIPRESA).</block>
-  <block id="a1f56413bb240260818b1874baafc3b6" category="paragraph">Se Data Collector è in stato _running_ o _Error_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che nessun evento Fpolicy passerà da ONTAP al data collector e da lì a Cloud Insights.</block>
   <block id="12a77ef251456c14c7516a531e07f62b" category="paragraph">Tenere presente che se in ONTAP vengono creati nuovi volumi e così via mentre il collector è in pausa, workload Security non raccoglierà i dati e quei volumi, ecc. non verranno riflessi in dashboard o tabelle.</block>
-  <block id="01abfc750a0c942167651c40d088531d" category="cell">N.</block>
-  <block id="a466ef2a0eac5ccca070b3013eaba386" category="cell">Comportamento sospeso del collezionista</block>
-  <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1</block>
   <block id="ac08b45e1e6b3f3cb0a5ffc7cb738447" category="cell">L'eliminazione degli snapshot non avviene in base alle impostazioni configurate su un raccoglitore in pausa.</block>
   <block id="301be6cbe57eeb518e76a0dacc06942b" category="cell">Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, Cloud Insights workload Security non sarà in grado di acquisire quell'evento.</block>
-  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="cell">3</block>
   <block id="7e41836b686c17a31fd348a24ad244d1" category="cell">Le e-mail di notifica dello stato NON verranno inviate per un raccoglitore in pausa.</block>
   <block id="3683774ed8a4e1ec359bda17c740e07d" category="cell">Le azioni manuali o automatiche (come Snapshot o blocco utente) non sono supportate in un raccoglitore in pausa.</block>
-  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
   <block id="fa80f305470263b5f75374e020afeacd" category="cell">In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.</block>
-  <block id="1679091c5a880faf6fb5e6087eb1b2dc" category="cell">6</block>
   <block id="90328fccc937505ade5c16d577869c88" category="cell">Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.</block>
   <block id="59a5587328a48d1f89316c0bf4e4be6f" category="cell">Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.</block>
   <block id="cd5c932f5b2fa2206673bc29c081fa55" category="section-title">Recupero della chiave esterna</block>
@@ -12908,4 +12899,12 @@ Per Linux, lo spazio su disco deve essere allocato in questo modo:
 /Opt/netapp 10 GB (20 GB per ambienti di grandi dimensioni)
 /Var/log/netapp 40 GB (80 GB per ambienti di grandi dimensioni)
 /Tmp almeno 1 GB disponibili durante l'installazione</block>
+  <block id="ddc197f26701abc15014fe5035957110" category="paragraph">Prima di creare i file, è necessario interrompere o sospendere l'elaborazione del Data Collector.
+Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.</block>
+  <block id="ce9b2cd4bcab7dbbf52b62cd18cb5c55" category="inline-link-macro">mettere in pausa il raccoglitore</block>
+  <block id="3fc1bb029faccb362d05bb964b9a5532" category="admonition">L'opzione consigliata è da a. <block ref="fab3704c9565365da788d72b33d2f55f" category="inline-link-macro-rx"></block> prima di creare i file.]</block>
+  <block id="77b868151a2234cc10d342f43b6cbb14" category="inline-link-macro">riprendere il raccoglitore</block>
+  <block id="d7392010d6df617dd55d326f0d9bf442" category="list-text">Se il raccoglitore è stato messo in pausa prima di procedere come indicato di seguito, assicurarsi di <block ref="277e805b18142e57dd69c30e47ad86c3" category="inline-link-macro-rx"></block>.</block>
+  <block id="60d7b95e24d1ecfc57f6986cabb1871a" category="paragraph">In sicurezza del carico di lavoro, è possibile sospendere un Data Collector se il collettore è in stato _running_. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Selezionare Riprendi per iniziare nuovamente la raccolta.</block>
+  <block id="cb4cb59ec3d83f1c614ac2210509e260" category="paragraph">Se Data Collector è in stato _running_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che nessun evento Fpolicy passerà da ONTAP al data collector e da lì a Cloud Insights.</block>
 </blocks>
