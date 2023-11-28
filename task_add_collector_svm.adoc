@@ -220,30 +220,15 @@ Tenere presente che se in ONTAP vengono creati nuovi volumi e così via mentre i
 
 Tenere presente quanto segue:
 
-|===
-| N. | Comportamento sospeso del collezionista 
+* L'eliminazione degli snapshot non avviene in base alle impostazioni configurate su un raccoglitore in pausa.
+* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, Cloud Insights workload Security non sarà in grado di acquisire quell'evento.
+* Le e-mail di notifica dello stato NON verranno inviate per un raccoglitore in pausa.
+* Le azioni manuali o automatiche (come Snapshot o blocco utente) non sono supportate in un raccoglitore in pausa.
+* In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.
+* Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.
+* Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.
 
 
-| 1 | L'eliminazione degli snapshot non avviene in base alle impostazioni configurate su un raccoglitore in pausa. 
-
-
-| 2 | Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, Cloud Insights workload Security non sarà in grado di acquisire quell'evento. 
-
-
-| 3 | Le e-mail di notifica dello stato NON verranno inviate per un raccoglitore in pausa. 
-
-
-| 4 | Le azioni manuali o automatiche (come Snapshot o blocco utente) non sono supportate in un raccoglitore in pausa. 
-
-
-| 5 | In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_. 
-
-
-| 6 | Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_. 
-
-
-| 7 | Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato. 
-|===
 
 
 == Risoluzione dei problemi
