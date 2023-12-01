@@ -104,7 +104,10 @@ La tabella seguente mostra le autorizzazioni Cloud Insights concesse a ciascun r
 | Data Collector: Add/Modify/poll/Delete (Aggiungi/Modifica/polling/Elimina) | Y | N | N 
 
 
-| Notifiche: Visualizza/Modifica | Y | N | N 
+| Notifiche: Visualizzazione | Y | Y | Y 
+
+
+| Notifiche: Modifica | Y | N | N 
 
 
 | Query: Crea/Modifica/Elimina | Y | Y | N 
