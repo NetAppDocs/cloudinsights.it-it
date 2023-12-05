@@ -232,9 +232,6 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | link:task_dc_na_cloud_connection.html["Connessione cloud NetApp per ONTAP 9.9+"] | Infrastruttura 
 
 
-| link:task_dc_na_ca.html["NetApp Config Advisor"] | Infrastruttura 
-
-
 | link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | Infrastruttura 
 
 
