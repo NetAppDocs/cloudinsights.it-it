@@ -151,7 +151,7 @@ Devi fornire il tuo Cloud Insights *numero di serie* al tuo commerciale NetApp p
 
 NOTE: Per poter applicare un abbonamento AWS Marketplace all'account di prova Cloud Insights esistente, devi essere un proprietario o un amministratore dell'account. Inoltre, devi disporre di un account Amazon Web Services (AWS).
 
-Facendo clic sul link Amazon Marketplace si apre AWS link:https://aws.amazon.com/marketplace/pp/B07HM8QQGY["Cloud Insights"] pagina di iscrizione, in cui puoi completare l'abbonamento. Nota: I valori immessi nel calcolatore non vengono inseriti nella pagina di abbonamento AWS; in questa pagina sarà necessario immettere il numero totale di unità gestite.
+Facendo clic sul link Amazon Marketplace si apre AWS https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Cloud Insights"] pagina di iscrizione, in cui puoi completare l'abbonamento. Nota: I valori immessi nel calcolatore non vengono inseriti nella pagina di abbonamento AWS; in questa pagina sarà necessario immettere il numero totale di unità gestite.
 
 Dopo aver inserito il numero totale di unità gestite e aver scelto un periodo di abbonamento di 12 mesi o 36 mesi, fare clic su *Configura account* per completare il processo di abbonamento.
 
