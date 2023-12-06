@@ -217,7 +217,7 @@ Gli avvisi vengono visualizzati quando l'utilizzo dell'unità gestita supera il 
 
 == Iscriviti direttamente e ignora la versione di prova
 
-Puoi anche iscriverti a Cloud Insights direttamente da link:https://aws.amazon.com/marketplace/pp/B07HM8QQGY["Mercato AWS"], senza prima creare un ambiente di prova. Una volta completato l'abbonamento e configurato l'ambiente, l'utente verrà immediatamente iscritto.
+Puoi anche iscriverti a Cloud Insights direttamente da https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Mercato AWS"], senza prima creare un ambiente di prova. Una volta completato l'abbonamento e configurato l'ambiente, l'utente verrà immediatamente iscritto.
 
 
 
