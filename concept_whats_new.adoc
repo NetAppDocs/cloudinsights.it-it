@@ -25,6 +25,50 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Dicembre 2023
+
+
+
+=== Cambia l'analisi in un colpo d'occhio
+
+Kubernetes link:kubernetes_change_analytics.html["Cambia analisi"] Fornire una vista completa delle recenti modifiche all'ambiente Kubernetes. Gli avvisi e lo stato dell'implementazione sono a portata di mano. Con Change Analytics, puoi monitorare ogni modifica di implementazione e configurazione e correlarla con lo stato e le performance dei servizi, dell'infrastruttura e dei cluster K8s.
+
+image:ChangeAnalytitcs_Main_Screen.png["Dashboard di Change Analytics"]
+
+
+
+=== Dashboard delle performance del carico di lavoro di Kubernetes
+
+Le performance dei workload sono disponibili in breve nella dashboard completa delle performance dei workload di Kubernetes. È possibile visualizzare rapidamente i grafici dei trend di volume, throughput, latenza e ritrasmissione, nonché una tabella del traffico del carico di lavoro per ogni spazio dei nomi nell'ambiente. I filtri consentono una facile messa a fuoco delle aree di interesse.
+
+image:K8s_Workload_performance.png["Menu Performance del carico di lavoro, larghezza=400"]
+
+image:K8s_Workload_performance_dashboard.png["Dashboard delle performance del carico di lavoro"]
+
+
+
+=== Dettagli query su un'unica schermata
+
+In una query, selezionando una riga si apre un pannello laterale che mostra attributi, annotazioni e dettagli metrici per la riga selezionata, fornendo informazioni utili senza dover eseguire il drill-down nella pagina di destinazione dell'oggetto. I collegamenti nella fila o nel pannello laterale consentono una facile navigazione.
+
+image:MetricQuerySlideoutPanel.png["Pannello Slideout per query metriche"]
+
+
+
+=== Aggiornamenti di Data Collector:
+
+* *Brocade FOS REST*: Questo raccoglitore viene spostato da "Preview" ed è ora generalmente disponibile. Alcune cose da notare:
++
+** FOS ha introdotto la propria API REST con FOS 8,2. Tuttavia, alcune funzioni come l'instradamento hanno ricevuto solo funzionalità di API REST con 9,0.
+** Se si dispone di un fabric costituito da risorse FOS miste 8,2 volte superiori, oltre a circa < 8,2, il REST Collector Cloud Insights FOS non sarà in grado di rilevare tali risorse precedenti. È possibile modificare il collettore REST FOS e creare un elenco delimitato da virgole dell'indirizzo IPv4 di tali dispositivi per l'esclusione da tale collettore.
+
+
+* *SELinux*: Cloud Insights include miglioramenti all'installazione iniziale dell'unità di acquisizione Linux per garantire la robustezza del funzionamento in ambienti Linux con l'applicazione SELinux abilitata. Questi miglioramenti hanno un impatto solo sulle distribuzioni _new_ AU; in caso di problemi di SELinux relativi agli aggiornamenti AU, contattare il supporto NetApp per risolvere la configurazione di SELinux.
+
+
+'''
+
+
 == Novembre 2023
 
 
