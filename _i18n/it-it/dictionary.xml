@@ -12922,4 +12922,6 @@ Prima di aggiungere il data collector all'agente, attenersi alla procedura ripor
   <block id="48a3bc3cb899a72fd89e65ce93812a1b" category="inline-image-macro">Pannello Dettagli errore distribuzione</block>
   <block id="14414cf8ddb2977c5888a488317daa8d" category="paragraph"><block ref="14414cf8ddb2977c5888a488317daa8d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cec6efc84112c97bd14aba77f80d27d1" category="paragraph">La selezione di un avviso fornisce dettagli sull'avviso, compreso il monitor che ha attivato l'avviso, nonché un grafico che mostra una timeline visiva per l'avviso.</block>
+  <block id="cf6b021661e577ef1017b5fe1ce38625" category="section-title">Pagina elenco webhook</block>
+  <block id="5bd2d7e216efca647c8b9d69cedb9410" category="paragraph">Nella pagina dell'elenco dei webhook, vengono visualizzati il nome, creato da, creato da, Stato, protetto, e ultimi campi segnalati.</block>
 </blocks>
