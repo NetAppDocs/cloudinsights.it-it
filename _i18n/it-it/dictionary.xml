@@ -12914,7 +12914,7 @@ Prima di aggiungere il data collector all'agente, attenersi alla procedura ripor
   <block id="cec6efc84112c97bd14aba77f80d27d1" category="paragraph">La selezione di un avviso fornisce dettagli sull'avviso, compreso il monitor che ha attivato l'avviso, nonché un grafico che mostra una timeline visiva per l'avviso.</block>
   <block id="cf6b021661e577ef1017b5fe1ce38625" category="section-title">Pagina elenco webhook</block>
   <block id="5bd2d7e216efca647c8b9d69cedb9410" category="paragraph">Nella pagina dell'elenco dei webhook, vengono visualizzati il nome, creato da, creato da, Stato, protetto, e ultimi campi segnalati.</block>
-  <block id="160f07c3cffd1000365e042aeeaeb427" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+  <block id="f58657b4c7806c2ae7d24a62c56cfb94" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
 
 * CentOS (64 bit): Da 7,2 a 7,9, Stream 8, Stream 9
 * Debian (64 bit): 9 e 10
@@ -12925,11 +12925,8 @@ Prima di aggiungere il data collector all'agente, attenersi alla procedura ripor
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; SELinux
 Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema dell'unità di acquisizione:
 
- _sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"_
- _Sudo restorecon -R /opt/netapp/cloudinsights_
-========
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; principale</block>
+ sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
+ Sudo restorecon -R /opt/netapp/cloudinsights</block>
 </blocks>

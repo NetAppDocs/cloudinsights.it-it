@@ -42,13 +42,10 @@ keywords: AU, acquisition unit, RAU, requirements, sizing
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
-<<<<<<<< SELinux
 Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema dell'unità di acquisizione:
 
- _sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"_
- _Sudo restorecon -R /opt/netapp/cloudinsights_
-========
->>>>>>> principale | Un computer che esegue una versione con licenza di uno dei seguenti componenti: * Microsoft Windows 10 64-bit * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 questo computer non deve eseguire altri software a livello di applicazione. Si consiglia di utilizzare un server dedicato. 
+ sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
+ Sudo restorecon -R /opt/netapp/cloudinsights | Un computer che esegue una versione con licenza di uno dei seguenti componenti: * Microsoft Windows 10 64-bit * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 questo computer non deve eseguire altri software a livello di applicazione. Si consiglia di utilizzare un server dedicato. 
 
 
 | CPU | 2 core CPU | Stesso 
