@@ -12151,16 +12151,6 @@ V9,2.4,2</block>
   <block id="8c5de4bef31a79ea191d0f5740fcd0d7" category="paragraph">Cloud Insights ha semplificato la visualizzazione e la ricerca delle informazioni di raccolta dati:</block>
   <block id="203714762dd5efde1be30c09220249eb" category="list-text">*L'elaborazione degli elenchi di raccolta dati* è più efficiente, il che significa che il tempo necessario per visualizzare e navigare in questi elenchi è notevolmente ridotto. Se si dispone di un ambiente di grandi dimensioni con molti raccoglitori di dati, si noterà un miglioramento significativo quando si elencano i raccoglitori di dati.</block>
   <block id="213f6f47f9ff1cc9f4851725d89b4a7e" category="list-text">La *Data Collector Support Matrix* è stata spostata da un file .PDF a una pagina basata su .HTML, in modo più rapido e facile da gestire. Consulta la nuova tabella qui:<block ref="8ac5ec571a7bfa27b3b068af3462bfb9" category="inline-link-rx"></block></block>
-  <block id="76bcb8d1f49c96aae75d78c035df4a9b" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
-
-* CentOS (64 bit): Da 7,2 a 7,9, Stream 8, Stream 9
-* Debian (64 bit): 9 e 10
-* Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,4
-* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,7, 9,1
-* Rocky 9,0, 9,1
-* Ubuntu Server: 18,04 e 20,04 LTS
-
-Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
   <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">tolleranza aggiuntiva net-observer-l4-ds.</block>
   <block id="5549e3ded48b31ecc7b00b810fa6b7ea" category="cell">Azioni correttive</block>
   <block id="dacff74646dd80517d0cffd123266041" category="cell">Gravità/soglia</block>
@@ -12924,4 +12914,22 @@ Prima di aggiungere il data collector all'agente, attenersi alla procedura ripor
   <block id="cec6efc84112c97bd14aba77f80d27d1" category="paragraph">La selezione di un avviso fornisce dettagli sull'avviso, compreso il monitor che ha attivato l'avviso, nonché un grafico che mostra una timeline visiva per l'avviso.</block>
   <block id="cf6b021661e577ef1017b5fe1ce38625" category="section-title">Pagina elenco webhook</block>
   <block id="5bd2d7e216efca647c8b9d69cedb9410" category="paragraph">Nella pagina dell'elenco dei webhook, vengono visualizzati il nome, creato da, creato da, Stato, protetto, e ultimi campi segnalati.</block>
+  <block id="160f07c3cffd1000365e042aeeaeb427" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti componenti:
+
+* CentOS (64 bit): Da 7,2 a 7,9, Stream 8, Stream 9
+* Debian (64 bit): 9 e 10
+* Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,4
+* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,7, 9,1
+* Rocky 9,0, 9,1
+* Ubuntu Server: 18,04 e 20,04 LTS
+
+Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; SELinux
+Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema dell'unità di acquisizione:
+
+ _sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"_
+ _Sudo restorecon -R /opt/netapp/cloudinsights_
+========
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; principale</block>
 </blocks>
