@@ -90,7 +90,11 @@ Se non è possibile utilizzare l'utente amministratore della gestione del cluste
 Per creare il nuovo utente, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
 
 ....
-security login role create -role csrole -cmddirname DEFAULT -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
 security login role create -role csrole -cmddirname "event catalog" -access all
