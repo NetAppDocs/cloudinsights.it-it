@@ -26,6 +26,8 @@ In questo argomento viene descritto come aggiungere unità di acquisizione e ven
 
 NOTE: Per un controllo accurato e la creazione di report dei dati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
 
+Informazioni sulla sicurezza di Cloud Insights link:security_overview.html["qui"].
+
 
 
 == Aggiunta di un'unità di acquisizione Linux

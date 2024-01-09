@@ -30,6 +30,7 @@ NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federal
 
 * Il privilegio sudo è necessario per l'installazione, l'esecuzione di script e la disinstallazione.
 * Durante l'installazione dell'agente, sul computer vengono creati un utente locale _cssys_ e un gruppo locale _cssys_. Se le impostazioni di autorizzazione non consentono la creazione di un utente locale e richiedono invece Active Directory, nel server Active Directory deve essere creato un utente con il nome utente _cssys_.
+* Informazioni sulla sicurezza di Cloud Insights link:security_overview.html["qui"].
 
 
 

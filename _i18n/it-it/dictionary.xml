@@ -835,8 +835,6 @@
   <block id="6d850c1b8745f8f15a5216d868cd9cd7" category="inline-image-macro">Crea un webhook slack</block>
   <block id="1718403f08c32585848d7d3c2dcf311b" category="paragraph"><block ref="1718403f08c32585848d7d3c2dcf311b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ad8a37e07ad3b700a99d9565d7a44843" category="list-text">Vai a Incoming webhooks, fai clic su _Activate Incoming webhooks_, Request to _Add New Webhook_ e seleziona il canale su cui pubblicare.</block>
-  <block id="55077038253242c2be9a96af7725a814" category="inline-image-macro">URL slack Webhook</block>
-  <block id="0c818f35934ac007c89967d7ee8faa3c" category="paragraph"><block ref="0c818f35934ac007c89967d7ee8faa3c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="703a2fff4ffc0a10f86335937d4af331" category="list-text">Assegnare al webhook un nome significativo, ad esempio "Slack Webhook".</block>
   <block id="82097f3f5575ce3befccf2d55fab468d" category="list-text">Nell'elenco a discesa _Template Type_, selezionare *slack*.</block>
   <block id="b8be5d787d20404395e80ce1c1614ddb" category="inline-image-macro">Slack modello webhook</block>
@@ -12929,4 +12927,8 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
  sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
  Sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="343a405f2f06197f662e42373c7fb059" category="list-text">Protocollo SMB versione 3.1 e precedenti.</block>
+  <block id="44922767e817f1f23f68cda06b3e0da9" category="list-text">Informazioni sulla sicurezza di Cloud Insights <block ref="543da5bd260d801b98cf781252e71d7c" category="inline-link-macro-rx"></block>.</block>
+  <block id="eebaff443664fe8dffc2c87c72413ce8" category="paragraph">Informazioni sulla sicurezza di Cloud Insights <block ref="543da5bd260d801b98cf781252e71d7c" category="inline-link-macro-rx"></block>.</block>
+  <block id="33443a936cc78a75cfb9473405764a37" category="section-title">Avvisi di sicurezza NetApp</block>
+  <block id="eaf8ac7783e69f8aba13d1bece2acbd5" category="paragraph">Puoi visualizzare gli avvisi sulla sicurezza disponibili di NetApp <block ref="c748e422d42ad69f84a6f8d804551466" category="inline-link-macro-rx"></block>.</block>
 </blocks>

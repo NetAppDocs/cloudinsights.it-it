@@ -108,3 +108,9 @@ Tutto il personale di Cloud Insights viene sottoposto a un training sulla sicure
 === Conformità
 
 Cloud Insights esegue audit e convalide indipendenti di terze parti da parte di una società CPA con licenza esterna in relazione alla sicurezza, ai processi e ai servizi, incluso il completamento dell'audit SOC 2.
+
+
+
+=== Avvisi di sicurezza NetApp
+
+Puoi visualizzare gli avvisi sulla sicurezza disponibili di NetApp link:https://security.netapp.com/advisory/["qui"].
