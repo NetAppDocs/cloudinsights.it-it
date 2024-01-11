@@ -12931,4 +12931,5 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="eebaff443664fe8dffc2c87c72413ce8" category="paragraph">Informazioni sulla sicurezza di Cloud Insights <block ref="543da5bd260d801b98cf781252e71d7c" category="inline-link-macro-rx"></block>.</block>
   <block id="33443a936cc78a75cfb9473405764a37" category="section-title">Avvisi di sicurezza NetApp</block>
   <block id="eaf8ac7783e69f8aba13d1bece2acbd5" category="paragraph">Puoi visualizzare gli avvisi sulla sicurezza disponibili di NetApp <block ref="c748e422d42ad69f84a6f8d804551466" category="inline-link-macro-rx"></block>.</block>
+  <block id="5d0efaff5017b27ebd557fe6acfbf979" category="paragraph">login di sicurezza create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver &lt;vservername&gt;</block>
 </blocks>
