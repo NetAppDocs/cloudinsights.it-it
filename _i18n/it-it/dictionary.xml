@@ -12680,19 +12680,6 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="b0ee45b6cf0875310e7eca0039f3378c" category="cell">ID utente per ECS</block>
   <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-xref">disinstallazione</block>
   <block id="7b4d917229221f1292dd0dc7b693cccf" category="inline-xref">reinstallare</block>
-  <block id="6491871b517e6620a9b0675a45a5322a" category="cell">Recuperare il nome del pod dell'esportatore di eventi:
-
-<block ref="981dffeaa3be6364470478327b8dd179" prefix=" " category="inline-code"></block>
-
-Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare l'agente di monitoraggio<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block>, E impostare il valore per LOG_FILE in modo che rifletta il nome del pod dell'esportatore di eventi appropriato trovato nel passaggio precedente.  In particolare, LOG_FILE deve essere impostato su "/var/log/containers/netapp-ci-event-exportant.log" o "/var/log/containers/event-exportant*.log"
-
-....
- - Chiave: LOG_FILE
-   valori:
-   - /var/log/containers/netapp-ci-event-executives*.log
-....
-
-In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> e. <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> l'agente.</block>
   <block id="2ec4305521a87758c3d2cf93b9fd5b14" category="cell">Quando si inserisce un tempo di pianificazione del rapporto Cognos, a volte mi ritrovo con una "m" extra nel tempo di programmazione. Ad esempio, se si immette l'ora come "02:15 PM", è possibile aggiungere un carattere extra: "02:15 PMM" (o PMM). Quando clicco all'esterno, lo cambia in "2:15:00 AM".
 
 È possibile salvare il report, ma quando si riapre il report salvato, l'ora pianificata viene visualizzata come AM (ad esempio, mattina), indipendentemente dal fatto che sia stato inserito AM o PM nell'ora pianificata.</block>
@@ -12931,4 +12918,9 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="33443a936cc78a75cfb9473405764a37" category="section-title">Avvisi di sicurezza NetApp</block>
   <block id="eaf8ac7783e69f8aba13d1bece2acbd5" category="paragraph">Puoi visualizzare gli avvisi sulla sicurezza disponibili di NetApp <block ref="c748e422d42ad69f84a6f8d804551466" category="inline-link-macro-rx"></block>.</block>
   <block id="570e0fa2a37c6838af341575ad05aec5" category="summary">Vengono definite le applicazioni che vengono quindi applicate alle risorse nell'ambiente in base alle esigenze.</block>
+  <block id="0f21fa822dc46792cc163d7e77fe6c2c" category="paragraph">Recuperare il nome del pod dell'esportatore di eventi:</block>
+  <block id="9df5220f9f1e94f2849e58be10655af5" category="paragraph">Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare l'agente di monitoraggio<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block>, E impostare il valore per LOG_FILE in modo che rifletta il nome del pod dell'esportatore di eventi appropriato trovato nel passaggio precedente.  In particolare, LOG_FILE deve essere impostato su "/var/log/containers/netapp-ci-event-exportant.log" o "/var/log/containers/event-exportant*.log"</block>
+  <block id="8878dc3c5cd3e696f38ddc994eba9593" category="paragraph">In alternativa, si può anche <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> e. <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> l'agente.</block>
+  <block id="5be7a9b90aa61d46f99cd06715e40a54" category="cell">Sto vedendo i pod implementati dal crash dell'operatore di monitoring NetApp Kubernetes a causa di risorse insufficienti.</block>
+  <block id="740cd109d583d1b28a1ebd66338906b7" category="cell">Fare riferimento all'operatore di monitoraggio Kubernetes NetApp <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> Per aumentare i limiti di CPU e/o memoria in base alle esigenze.</block>
 </blocks>
