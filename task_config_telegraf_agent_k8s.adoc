@@ -537,7 +537,7 @@ Quindi, riavviare Telegraf.
 | I miei eventi kuowski hanno inaspettatamente smesso di segnalare a Cloud Insights.  a| 
 Recuperare il nome del pod dell'esportatore di eventi:
 
- `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/`
+ `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/'`
 Deve essere "netapp-ci-event-exportant" o "event-exportant".  Quindi, modificare l'agente di monitoraggio `kubectl -n netapp-monitoring edit agent`, E impostare il valore per LOG_FILE in modo che rifletta il nome del pod dell'esportatore di eventi appropriato trovato nel passaggio precedente.  In particolare, LOG_FILE deve essere impostato su "/var/log/containers/netapp-ci-event-exportant.log" o "/var/log/containers/event-exportant*.log"
 
 ....
