@@ -29,6 +29,45 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+=== Prova le funzionalità di Cloud Insights che non hai ancora utilizzato
+
+Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire di link:/concept_subscribing_to_cloud_insights.html#module-trials["Versioni di prova dei moduli"]. Ad esempio, se sei abbonato a Cloud Insights e hai monitorato lo storage e le macchine virtuali, quando Aggiungi Kubernetes al tuo ambiente, entrerai automaticamente in una prova di 30 giorni di Kubernetes Observability. L'utilizzo delle unità gestite da Kubernetes Observability non verrà conteggiato in base al tuo diritto sottoscritto fino alla fine del periodo di prova.
+
+
+
+=== Quanto salutano i miei carichi di lavoro?
+
+Lo stato dei workload è disponibile con una semplice occhiata alla pagina *Kubernetes > Esplora > workload*, in modo da poter vedere rapidamente quali carichi di lavoro funzionano correttamente e quali potrebbero richiedere assistenza.
+
+image:WorkloadHealth.png["Panoramica sulla salute del workload"]
+
+
+
+=== Aggiornamenti di Data Collector
+
+
+
+==== Identificazione del dominio dati
+
+Il Data Domain Collector è stato migliorato per identificare meglio i sistemi ha per la durata negli eventi di failover. Questa modifica causerà una * una volta* riidentificazione delle appliance Data Domain nei sistemi ha, il che causerà la rimozione delle annotazioni su tali risorse (poiché questi array verranno riidentificati). Sarà necessario ricollegare le annotazioni agli oggetti Data Domain.
+
+
+
+=== Maggiore sicurezza dei carichi di lavoro
+
+La sicurezza del carico di lavoro include i seguenti miglioramenti:
+
+* Gli algoritmi di rilevamento sono stati migliorati per ridurre il numero di avvisi falsi positivi.
+* Le prestazioni dell'interfaccia utente sono state migliorate durante il caricamento, la visualizzazione e lo scorrimento delle pagine Forensics.
+
+
+'''
+
+
+== Gennaio 2024
+
+
+
 === Maggiore sicurezza dei carichi di lavoro
 
 La sicurezza del carico di lavoro include i seguenti miglioramenti:
