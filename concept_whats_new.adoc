@@ -31,7 +31,7 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 === Prova le funzionalità di Cloud Insights che non hai ancora utilizzato
 
-Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire di link:/concept_subscribing_to_cloud_insights.html#module-trials["Versioni di prova dei moduli"]. Ad esempio, se sei abbonato a Cloud Insights e hai monitorato lo storage e le macchine virtuali, quando Aggiungi Kubernetes al tuo ambiente, entrerai automaticamente in una prova di 30 giorni di Kubernetes Observability. L'utilizzo delle unità gestite da Kubernetes Observability non verrà conteggiato in base al tuo diritto sottoscritto fino alla fine del periodo di prova.
+Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire di link:concept_subscribing_to_cloud_insights.html#module-trials["Versioni di prova dei moduli"]. Ad esempio, se sei abbonato a Cloud Insights e hai monitorato lo storage e le macchine virtuali, quando Aggiungi Kubernetes al tuo ambiente, entrerai automaticamente in una prova di 30 giorni di Kubernetes Observability. L'utilizzo delle unità gestite da Kubernetes Observability non verrà conteggiato in base al tuo diritto sottoscritto fino alla fine del periodo di prova.
 
 
 
