@@ -29,6 +29,12 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+=== API per la sicurezza del carico di lavoro
+
+Sono disponibili nuove API per la sicurezza dei workload per la gestione di Data Collector (add/update/delete) e agenti. Accedere a *Admin > API Access > API Documentation* e selezionare il tipo di API _workload Security_ per ulteriori informazioni.
+
+
+
 === Prova le funzionalità di Cloud Insights che non hai ancora utilizzato
 
 Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire di link:concept_subscribing_to_cloud_insights.html#module-trials["Versioni di prova dei moduli"]. Ad esempio, se sei abbonato a Cloud Insights e hai monitorato lo storage e le macchine virtuali, quando Aggiungi Kubernetes al tuo ambiente, entrerai automaticamente in una prova di 30 giorni di Kubernetes Observability. L'utilizzo delle unità gestite da Kubernetes Observability non verrà conteggiato in base al tuo diritto sottoscritto fino alla fine del periodo di prova.
