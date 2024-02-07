@@ -12599,7 +12599,6 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.</block>
   <block id="94199173f712baeb6cb5de3780bf07fa" category="cell">Inventario stato recente: Dati non previsti recuperati - Array ha riportato 0 volume</block>
   <block id="7e7b57722f915378d4f91beba7dfeeda" category="cell">In genere indica un problema di autorizzazione (non di autenticazione). Assicurarsi che le credenziali siano corrette e che il nome utente sia in grado di elencare tutti i volumi e visualizzarne gli attributi.</block>
-  <block id="ff4b0f3d8b62285c71936aba1b29d4cc" category="list-text">Fare clic su *osservabilità &gt; Collector &gt; unità di acquisizione &gt; +unità di acquisizione*</block>
   <block id="293bcc0e7d6a9406090147d0fa8794ee" category="list-text">Fare clic su *osservabilità &gt; Collector &gt; unità di acquisizione* per controllare lo stato delle unità di acquisizione.</block>
   <block id="2e275d8e6835810edeb214f1d2d93419" category="list-text">Fare clic su *osservabilità &gt; Collettori &gt; unità di acquisizione &gt; +unità di acquisizione* .</block>
   <block id="304161318d9b8fb676a16c964b6f8f50" category="list-text">Fare clic su * &gt; osservabilità &gt; Collector &gt; unità di acquisizione* per controllare lo stato delle unità di acquisizione.</block>
@@ -12957,4 +12956,5 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="d3717aec38baca9f86dd49ee974d2ccf" category="paragraph">Una volta acquisiti gli eventi dal sistema ONTAP, la pagina analisi della sicurezza del workload mostra gli eventi di accesso negato. Oltre alle informazioni visualizzate, è possibile visualizzare i permessi utente mancanti per una particolare operazione aggiungendo la colonna _attività desiderata_ alla tabella dall'icona a forma di ingranaggio.</block>
   <block id="fb4e4dc5cb185934a7a50a8b788d9a18" category="inline-image-macro">Esempio di evento accesso negato</block>
   <block id="ad7abfbe23406b97a783bcc153795841" category="paragraph"><block ref="ad7abfbe23406b97a783bcc153795841" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fa7fb7843c2ca38571ee7a2500a1072e" category="list-text">Fare clic su *osservabilità &gt; Collector &gt; unità di acquisizione &gt; +unità di acquisizione*</block>
 </blocks>
