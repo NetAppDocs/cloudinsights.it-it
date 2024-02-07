@@ -25,13 +25,18 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
-== Gennaio 2024
+== Febbraio 2024
 
 
 
 === API per la sicurezza del carico di lavoro
 
 Sono disponibili nuove API per la sicurezza dei workload per la gestione di Data Collector (add/update/delete) e agenti. Accedere a *Admin > API Access > API Documentation* e selezionare il tipo di API _workload Security_ per ulteriori informazioni.
+
+'''
+
+
+== Gennaio 2024
 
 
 
