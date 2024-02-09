@@ -75,21 +75,6 @@ La sicurezza del carico di lavoro include i seguenti miglioramenti:
 '''
 
 
-== Gennaio 2024
-
-
-
-=== Maggiore sicurezza dei carichi di lavoro
-
-La sicurezza del carico di lavoro include i seguenti miglioramenti:
-
-* Gli algoritmi di rilevamento sono stati migliorati per ridurre il numero di avvisi falsi positivi.
-* Le prestazioni dell'interfaccia utente sono state migliorate durante il caricamento, la visualizzazione e lo scorrimento delle pagine Forensics.
-
-
-'''
-
-
 == Dicembre 2023
 
 
