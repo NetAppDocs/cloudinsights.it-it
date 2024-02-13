@@ -232,4 +232,7 @@ Esempio: Utilizzare la stringa _testvolume*_, invece di _*testvolume_ o _*test*v
 
 Utilizza una ricerca basata su prefisso per visualizzare tutte le attività sotto una data cartella in modo ricorrente (ricerca gerarchica). ad esempio _/path1/path2/path3_ o _"/path1/path2/path3"_ elenchiamo tutte le attività in modo ricorrente sotto _/path1/path2/path3_.
 In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella scheda All Activity (tutte le attività). 
+
+
+| Si verifica un errore di richiesta non riuscita con codice di stato 500/503 quando si utilizza un filtro percorso. | Provare a utilizzare un intervallo di date più piccolo per filtrare i record. 
 |===

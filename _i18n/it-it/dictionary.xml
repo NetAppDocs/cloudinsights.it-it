@@ -12944,4 +12944,6 @@ telegraf:
   <block id="0f282a47af79839bfb5e052b5cb08dcd" category="cell">Modificare la sezione telegraf in _AgentConfiguration_ e impostare _dockerMetricCollectionEnabled_ su false. Per ulteriori dettagli, fare riferimento al manuale dell'operatore  <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
   <block id="1ec5bf0286a53dd8fc091a9a9b037623" category="inline-link-macro">Eventi "accesso negato"</block>
   <block id="f6682194485ec630bf22981ff1031e29" category="list-text">*Accesso negato*: Workload Security si integra con ONTAP per ricevere <block ref="cf689af48c341111dcdcd455a22874dd" category="inline-link-macro-rx"></block> e fornire un livello aggiuntivo di analisi e risposte automatiche.</block>
+  <block id="e7b6c39291eb31c1a3a49eb83274bc99" category="cell">Si verifica un errore di richiesta non riuscita con codice di stato 500/503 quando si utilizza un filtro percorso.</block>
+  <block id="62ce499553ccf0270c3a01cc146e46fd" category="cell">Provare a utilizzare un intervallo di date più piccolo per filtrare i record.</block>
 </blocks>
