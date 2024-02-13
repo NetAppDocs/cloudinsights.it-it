@@ -12636,7 +12636,6 @@ Consultare la sezione Data Collector Vendor Reference della documentazione.
   <block id="dfe1b74026ff6682b451240881e76be4" category="list-text">8777 per Gnocchi Performance Service</block>
   <block id="ef4b4f7d7c8a48dd95b30b14ab90dd62" category="section-title">Maggiore sicurezza dei carichi di lavoro</block>
   <block id="ed2b4bf5978e7c4c0546efaff8756311" category="paragraph">La sicurezza del carico di lavoro è stata migliorata con quanto segue:</block>
-  <block id="b1f51a36e1f83c62064c47e5488e10c9" category="list-text">*Accesso negato*: Workload Security si integra con ONTAP per ricevere eventi di "accesso negato" e fornire un livello aggiuntivo di analisi e risposte automatiche.</block>
   <block id="23cda888e57eaac9d48f4167127da1b8" category="cell">I miei eventi kuowski hanno inaspettatamente smesso di segnalare a Cloud Insights.</block>
   <block id="51a7a0a9ece41f3000834202c4f9b529" category="paragraph">Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC ECS. Per la configurazione, il data collector richiede un indirizzo IP o un nome host del cluster ECS e un nome utente e una password.</block>
   <block id="f62de35c42266dd92c1a10e3daf56fd2" category="list-text">Un indirizzo IP o un nome host del cluster ECS</block>
@@ -12943,4 +12942,6 @@ telegraf:
     ...
 ...</block>
   <block id="0f282a47af79839bfb5e052b5cb08dcd" category="cell">Modificare la sezione telegraf in _AgentConfiguration_ e impostare _dockerMetricCollectionEnabled_ su false. Per ulteriori dettagli, fare riferimento al manuale dell'operatore  <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
+  <block id="1ec5bf0286a53dd8fc091a9a9b037623" category="inline-link-macro">Eventi "accesso negato"</block>
+  <block id="f6682194485ec630bf22981ff1031e29" category="list-text">*Accesso negato*: Workload Security si integra con ONTAP per ricevere <block ref="cf689af48c341111dcdcd455a22874dd" category="inline-link-macro-rx"></block> e fornire un livello aggiuntivo di analisi e risposte automatiche.</block>
 </blocks>

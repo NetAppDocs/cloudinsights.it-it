@@ -160,7 +160,7 @@ Prima di questo miglioramento, solo gli switch FOS 9,1.1c senza Virtual Fabrics 
 
 La sicurezza del carico di lavoro è stata migliorata con quanto segue:
 
-* *Accesso negato*: Workload Security si integra con ONTAP per ricevere eventi di "accesso negato" e fornire un livello aggiuntivo di analisi e risposte automatiche.
+* *Accesso negato*: Workload Security si integra con ONTAP per ricevere link:concept_ws_integration_with_ontap_access_denied.html["Eventi "accesso negato""] e fornire un livello aggiuntivo di analisi e risposte automatiche.
 * *Tipi di file consentiti*: Se viene rilevato un attacco ransomware per un'estensione di file nota, tale estensione può essere aggiunta a un link:ws_allowed_file_types.html["tipi di file consentiti"] per evitare avvisi non necessari.
 
 
