@@ -29,9 +29,9 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
-=== API per la sicurezza del carico di lavoro
+=== API Data Collector di sicurezza del workload
 
-Sono disponibili nuove API per la sicurezza dei workload per la gestione di Data Collector (add/update/delete) e agenti. Accedere a *Admin > API Access > API Documentation* e selezionare il tipo di API _workload Security_ per ulteriori informazioni.
+Negli ambienti di grandi dimensioni, è possibile automatizzare la creazione di Collector di sicurezza dei workload utilizzando la nuova API di Data Collector. Accedere a *Admin > API Access > API Documentation* e selezionare il tipo di API _workload Security_ per ulteriori informazioni.
 
 '''
 
@@ -64,13 +64,11 @@ Il Data Domain Collector è stato migliorato per identificare meglio i sistemi h
 
 
 
-=== Maggiore sicurezza dei carichi di lavoro
+=== Algoritmo ML di rilevamento ransomware avanzato
 
-La sicurezza del carico di lavoro include i seguenti miglioramenti:
+Workload Security include un nuovo algoritmo ML di rilevamento ransomware di 2nd generazione per rilevare in modo più rapido e preciso gli attacchi più sofisticati.
 
-* Gli algoritmi di rilevamento sono stati migliorati per ridurre il numero di avvisi falsi positivi.
-* Le prestazioni dell'interfaccia utente sono state migliorate durante il caricamento, la visualizzazione e lo scorrimento delle pagine Forensics.
-
+"Stagionalità" dei comportamenti: Il comportamento del fine settimana può seguire diversi modelli dal giorno della settimana, o il comportamento del mattino dal pomeriggio. Gli algoritmi di sicurezza del carico di lavoro tengono conto di questa stagionalità.
 
 '''
 
