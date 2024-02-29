@@ -79,7 +79,7 @@ Se viene visualizzato il messaggio "Error from server (notfound)" (errore dal se
 
 Se si utilizza un <<configuring-proxy-support,proxy>>, hanno un <<using-a-custom-or-private-docker-repository,repository personalizzato>>, o stanno utilizzando <<openshift-instructions,OpenShift>>, leggere attentamente le seguenti sezioni.
 
-Leggi anche di <<permissions,Permessi>>.
+Leggi anche di <<permessi,Permessi>>.
 
 Se si sta eseguendo l'aggiornamento da un'installazione precedente, leggere la <<aggiornamento in corso,Aggiornamento in corso>> informazioni.
 

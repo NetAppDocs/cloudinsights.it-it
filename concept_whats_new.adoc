@@ -5,17 +5,14 @@ summary: Nuove funzioni e funzionalità disponibili in Cloud Insights.
 keywords: features 
 ---
 = Novità di Cloud Insights
-:toc: macro
 :hardbreaks:
 :toclevels: 2
 :allow-uri-read: 
-:toc: 
 :toclevels: 2
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguito sono riportate alcune delle funzionalità più recenti disponibili nelle edizioni commerciali di Cloud Insights.
@@ -26,6 +23,52 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 == Febbraio 2024
+
+
+
+=== Miglioramenti di usabilità
+
+Salvare un'istantanea *istantanea* del dashboard corrente selezionando _Esporta come immagine_ dall'elenco a discesa nell'angolo destro. Cloud Insights crea un file .PNG degli stati del widget corrente.
+
+image:ExportAsImage.png["Menu a discesa Esporta come immagine"]
+
+*La selezione di oggetti e metriche* è più facile che mai per widget, monitor, ecc. Scegliere il tipo di oggetto desiderato, quindi selezionare una metrica relativa all'oggetto nell'elenco a discesa separato.
+
+image:ObjectAndMetricSelection.png["Selettori oggetto e metrico separati"]
+
+*Esportare gli elenchi Data Collector and Acquisition Unit* in .CSV selezionando l'icona nella parte superiore delle pagine.
+
+image:ExportDCList.png["Esporta elenchi DC e AU in formato .csv"]
+
+Abbiamo *riorganizzato la pagina Guida > supporto* in modo che sia più facile trovare ciò che si sta cercando e, poiché è stato richiesto, abbiamo aggiunto collegamenti diretti in questa pagina a *API Swagger* e alla documentazione per l'utente.
+
+image:Support_APIAccess.png["Collegamenti API nella pagina di supporto Guida >"]
+
+*Collegamenti* nella colonna “triggeredOn” della pagina dell’elenco Avvisi, si accede alla pagina di destinazione appropriata, se è disponibile una pagina di destinazione per quell’oggetto.
+
+image:TriggeredOnLink.png["Collegamenti nel campo di avviso TriggeredOn"]
+
+
+
+=== Visualizza tutte le modifiche nello spazio dei nomi
+
+L'analisi del cambiamento in Kubernetes ti consente ora di vedere una timeline delle modifiche quando si seleziona il cluster e il namespace. In precedenza, è necessario aver selezionato anche il carico di lavoro.  Quando si filtrano su cluster e namespace, la timeline di tutte le modifiche del carico di lavoro in tale spazio dei nomi viene visualizzata su un'unica riga.
+
+image:NamespaceTimeline.png["Sequenza temporale dello spazio dei nomi"]
+
+
+
+=== Registri correlati per gli avvisi
+
+Quando viene visualizzato un avviso di registro, le voci di registro correlate vengono visualizzate in una nuova tabella.  Una voce di registro è correlata se si verifica nella stessa origine e nello stesso intervallo di tempo dell'avviso ed è soggetta alle stesse condizioni. Selezionare "analizza registri" per ulteriori informazioni.
+
+image:RelatedLogsTable.png["Registri correlati su una pagina di destinazione degli avvisi di registro"]
+
+
+
+=== Raccogliere i dati degli switch ONTAP
+
+Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"] e ha l'appropriato link:["permessi"] impostare.
 
 
 
