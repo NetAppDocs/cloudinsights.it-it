@@ -182,6 +182,9 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 
 | Advanced Counter Data Collection | Abilitare l'integrazione ONTAP. Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Scegliere i contatori desiderati dall'elenco. 
+
+
+| Metriche switch cluster | Consentire a Cloud Insights di raccogliere i dati degli switch del cluster. Oltre ad attivare questa funzione sul lato Cloud Insights, è necessario configurare anche il sistema ONTAP in modo che fornisca link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"], e verificare che sia corretto <<a-note-about-permissions,permessi>> Sono impostati, per consentire l'invio dei dati dello switch a Cloud Insights. Vedere "Nota sulle autorizzazioni" di seguito. 
 |===
 
 
@@ -250,6 +253,9 @@ security login role create -role ci_readonly -access all -cmddirname {cluster ap
 Se si utilizza un account ad/LDAP, il comando deve essere
 
  security login create -user-or-group-name DOMAIN\aduser/adgroup -application ontapi -authentication-method domain -role ci_readonly
+Se si raccolgono dati sugli switch del cluster:
+
+ security login rest-role create -role ci_readonly -api /api/network/ethernet -access readonly
 Il ruolo e l'accesso utente risultanti saranno simili a quanto segue. L'output effettivo può variare:
 
 ....
@@ -267,6 +273,9 @@ UserName    Application   Method      Role Name      Locked
 ---------   -------      ----------- -------------- --------
 ci_user     ontapi      password    ci_readonly   no
 ....
+
+NOTE: Se il controllo dell'accesso ONTAP non è impostato correttamente, le chiamate di PAUSA Cloud Insights potrebbero non riuscire, con conseguenti interruzioni nei dati per il dispositivo.  Ad esempio, se è stato attivato nel raccoglitore Cloud Insights ma non sono state configurate le autorizzazioni sul ONTAP, l'acquisizione non verrà eseguita correttamente.  Inoltre, se il ruolo è precedentemente definito in ONTAP e si aggiungono le capacità dell'API REST, assicurarsi che _http_ sia aggiunto al ruolo.
+
 
 
 == Risoluzione dei problemi
