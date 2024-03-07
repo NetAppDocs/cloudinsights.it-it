@@ -39,23 +39,19 @@ Se Data Collector viene aggiunto utilizzando le credenziali di amministrazione d
 
 Se il servizio di raccolta viene aggiunto utilizzando un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, attenersi alla procedura riportata di seguito per assegnare a sicurezza del carico di lavoro l'autorizzazione necessaria per registrare gli eventi di accesso negato con ONTAP.
 
-Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Si noti che _csrole_ è un ruolo personalizzato e _csuser_ è un utente personalizzato di ONTAP.
+Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Si noti che _csrestrole_ è un ruolo personalizzato e _csuser_ è un utente personalizzato di ONTAP.
 
 [listing]
 ----
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole
-
-security login rest-role create -role csrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
 ----
 Per csuser con credenziali _SVM_, eseguire i seguenti comandi dalla riga di comando di ONTAP:
 
 [listing]
 ----
-security login rest-role create -role csrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
-
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
-security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
 ----
 
 
