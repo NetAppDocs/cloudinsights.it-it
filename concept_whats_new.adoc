@@ -22,6 +22,31 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Marzo 2024
+
+
+
+=== Dettagli agente di sicurezza del carico di lavoro
+
+Ogni agente di sicurezza del carico di lavoro dispone di una propria pagina di destinazione, in cui è possibile visualizzare facilmente le informazioni di riepilogo relative all'agente, nonché i Data Collector installati e i User Directory Collector associati a tale agente.
+
+image:Agent_Detail_Page.png["Esempio di pagina di destinazione dettagli agente"]
+
+
+
+=== Creare più dati con una maggiore rapidità
+
+Quando si analizzano i dati nella landing page di una risorsa, l'aggiunta di dati aggiuntivi ai grafici Expert View è un'operazione immediata. Per ogni tabella nella pagina di destinazione, se un tipo di oggetto contiene dati pertinenti, passare il mouse sull'oggetto per visualizzare l'icona "Aggiungi alla visualizzazione esperto". Selezionando questa icona si aggiunge l'oggetto alle risorse aggiuntive e lo si visualizza nei grafici Vista Esperti.
+
+image:AddToChartIcon.png["Aggiungere i dati della tabella alla vista esperto"]
+
+O forse vuoi vedere i dati di una tabella di una pagina di destinazione nel proprio grafico. È sufficiente selezionare l'icona _Mostra grafico_ per aprire il grafico sotto la tabella:
+
+image:LPTableShowChartIcon.png["Mostra icona grafico"]
+
+'''
+
+
 == Febbraio 2024
 
 
@@ -68,7 +93,7 @@ image:RelatedLogsTable.png["Registri correlati su una pagina di destinazione deg
 
 === Raccogliere i dati degli switch ONTAP
 
-Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"] e ha l'appropriato link:["permessi"] impostare.
+Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"] e ha l'appropriato <<a-note-about-permissions,permessi>> impostare.
 
 
 
