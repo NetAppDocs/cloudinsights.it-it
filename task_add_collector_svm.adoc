@@ -125,6 +125,47 @@ security login role create -vserver <vservername> -role csrole -cmddirname "volu
  security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
 
 
+=== Autorizzazioni per la protezione autonoma da ransomware ONTAP
+
+Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
+
+Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, seguire la procedura riportata di seguito per assegnare le autorizzazioni alla sicurezza del carico di lavoro per raccogliere informazioni relative all'ARP da ONTAP.
+
+Per _csuser_ con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:
+
+....
+security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
+security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+....
+Per ulteriori informazioni, consultare la sezione <<concept_cs_integration_with_ontap_arp.html,Integrazione con la protezione ransomware autonoma di ONTAP>>
+
+
+
+=== Autorizzazioni per accesso ONTAP negate
+
+Se Data Collector viene aggiunto utilizzando le credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
+
+Se il servizio di raccolta viene aggiunto utilizzando un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, attenersi alla procedura riportata di seguito per assegnare a sicurezza del carico di lavoro l'autorizzazione necessaria per registrare gli eventi di accesso negato con ONTAP.
+
+Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Si noti che _csrestrole_ è un ruolo personalizzato e _csuser_ è un utente personalizzato di ONTAP.
+
+[listing]
+----
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+----
+Per csuser con credenziali _SVM_, eseguire i seguenti comandi dalla riga di comando di ONTAP:
+
+[listing]
+----
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+----
+Per ulteriori informazioni, consultare la sezione <<concept_ws_integration_with_ontap_access_denied.html,Integrazione con accesso ONTAP negato>>
+
+
+
 == Configurare il data collector
 
 .Procedura per la configurazione
