@@ -62,7 +62,7 @@ security login rest-role create -role arwrole -api /api/storage/volumes -access 
 security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
 security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
 ....
-Ulteriori informazioni sulla configurazione di Altro <<task_add_collector_svm.html,Permessi ONTAP>>.
+Ulteriori informazioni sulla configurazione di Altro link:\task_add_collector_svm.html["Permessi ONTAP"].
 
 
 
