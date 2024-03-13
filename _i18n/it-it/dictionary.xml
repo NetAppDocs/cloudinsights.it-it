@@ -12968,11 +12968,9 @@ Per ulteriori informazioni, consultare informazioni sui proxy <block ref="05c875
   <block id="8a943496be1ad7baf6ce391c6f895b32" category="paragraph">Per ulteriori informazioni, consultare la sezione <block ref="263966d0f12d0c50ce396f6ff55a2e0d" category="inline-link-macro-rx"></block></block>
   <block id="2b9be21f00b184f2a6ee90f1574df505" category="summary">ONTAP REST Data Collector</block>
   <block id="e61b2d254813ba4e2bc2a8a223f0e0eb" category="doc">Raccolta dati REST NetApp ONTAP</block>
-  <block id="51c8777ccbe8cbbe060fa364f308995c" category="paragraph">Questo data collector acquisisce i dati di inventario e delle performance dai sistemi storage che eseguono ONTAP utilizzando chiamate API REST DI sola lettura da un account ONTAP. Questo data collector crea anche un record nel registro dell'applicazione del cluster per accelerare il supporto.</block>
   <block id="90242ff563fa212860e5c6a5b21da8f6" category="list-text">IOPS – derivato direttamente da chiamate REST ONTAP sull'oggetto del nodo.</block>
   <block id="ea32a37fff2b9c40d4e8dd0e0803a04b" category="list-text">Latenza – derivata direttamente da chiamate REST ONTAP sull'oggetto del nodo.</block>
   <block id="4084aa6c02ea4a6ea3d32bd1c73f4888" category="list-text">Throughput – derivato direttamente da chiamate REST ONTAP sull'oggetto del nodo.</block>
-  <block id="4493cd6343183bf0a790cf01a53cddd1" category="list-text">È necessario avere accesso a un account amministratore configurato per le chiamate API REST di sola lettura.</block>
   <block id="cc5802bcc5281dcb68264fed31e4a4a1" category="cell">Indirizzo IP di gestione ONTAP</block>
   <block id="7bcaf6369b1398f73e17d298aa39db60" category="cell">Nome utente REST ONTAP</block>
   <block id="bdb8fd1a64839a7885f10d1e33166bec" category="cell">Password REST ONTAP</block>
@@ -12981,7 +12979,6 @@ Per ulteriori informazioni, consultare informazioni sui proxy <block ref="05c875
   <block id="216ade60a8bebfa7b9ef8f8fec32e876" category="cell">Abilita raccolta eventi EMS</block>
   <block id="615eb0992cfadcf1dacb23db15c3598d" category="cell">Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP.</block>
   <block id="22454981300d227862b5ebd81b19f7de" category="cell">Intervallo polling EMS (sec)</block>
-  <block id="961f9cd0cfe447f73a20455c4f8f7973" category="paragraph">È inoltre necessario assicurarsi che l'autorizzazione di scrittura per l'API REST ONTAP sia attivata. In genere, questo richiede un account a livello di cluster con le autorizzazioni necessarie.</block>
   <block id="cfb13b3b743770c7f9772001c506ed28" category="list-text">Creare un ruolo utilizzando i seguenti comandi:</block>
   <block id="7d0153c84324ec12ea855f4910fdc574" category="paragraph">accesso di sicurezza creazione ruolo rest -ruolo {nome ruolo} -api /api -accesso in sola lettura
 accesso di sicurezza creazione ruolo rest -ruolo {nome ruolo} -api /api/cluster/agenti -accesso a tutto</block>
@@ -12993,4 +12990,10 @@ Configurazione: 10.193.70.14: ONTAP REST API at 10.193.70.14 non è disponibile:
 
 Per le versioni di ONTAP che supportano REST ma non sono 9.14.1 o successive, è possibile che venga visualizzato il seguente messaggio simile:
 Configurazione: 10.193.98.84: L'API REST ONTAP a 10.193.98.84 non è disponibile: 10.193.98.84: L'API REST ONTAP a 10.193.98.84 è disponibile: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-00505556b364a7 ma non è della versione minima 9.14.1.</block>
+  <block id="550bad6f96e635103df31a148cb33c00" category="paragraph">Questo raccolta di dati acquisisce dati di inventario, log EMS e prestazioni dai sistemi storage che eseguono ONTAP 9.14.1 e versioni successive utilizzando chiamate API REST. Per i sistemi ONTAP nelle versioni precedenti, utilizzare il tipo di collettore "NetApp ONTAP Data Management Software" basato su ZAPI.</block>
+  <block id="65e871e42dd717b74cdb0435f27e32f6" category="paragraph">Cloud Insights acquisisce dati di inventario, log e prestazioni dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:</block>
+  <block id="5eeda23f92dad663daa058631cc10210" category="list-text">Numero di serie – UUID dell'array</block>
+  <block id="fb6ea45004cffe21e52cde14678c6744" category="list-text">È necessario avere accesso a un account utente con il livello di accesso richiesto</block>
+  <block id="c40d45712b08c1aba1ce04dd1ac4cc5e" category="list-text">Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché ci si registri con l'array ONTAP. Vedere la nota sulle autorizzazioni riportata di seguito.</block>
+  <block id="b697879d40ceeef13c6f9527808724fe" category="paragraph">Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.</block>
 </blocks>

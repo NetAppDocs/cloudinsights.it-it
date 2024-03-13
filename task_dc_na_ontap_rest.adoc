@@ -16,13 +16,13 @@ summary: ONTAP REST Data Collector
 
 
 [role="lead"]
-Questo data collector acquisisce i dati di inventario e delle performance dai sistemi storage che eseguono ONTAP utilizzando chiamate API REST DI sola lettura da un account ONTAP. Questo data collector crea anche un record nel registro dell'applicazione del cluster per accelerare il supporto.
+Questo raccolta di dati acquisisce dati di inventario, log EMS e prestazioni dai sistemi storage che eseguono ONTAP 9.14.1 e versioni successive utilizzando chiamate API REST. Per i sistemi ONTAP nelle versioni precedenti, utilizzare il tipo di collettore "NetApp ONTAP Data Management Software" basato su ZAPI.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce i dati di inventario e performance dal data collector ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Cloud Insights acquisisce dati di inventario, log e prestazioni dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
@@ -61,7 +61,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 * Modello – un elenco delimitato da virgole dei nomi dei modelli di nodi univoci e discreti all'interno di questo cluster. Se tutti i nodi nei cluster sono dello stesso tipo di modello, viene visualizzato un solo nome di modello.
 * Vendor (vendor): Stesso nome del vendor che si potrebbe vedere se si configurava una nuova origine dati.
-* Serial Number (numero di serie): Il numero di serie dell'array. Nei sistemi storage con architettura cluster come la gestione dei dati ONTAP, questo numero di serie potrebbe essere meno utile dei singoli numeri di serie dei "nodi di storage".
+* Numero di serie – UUID dell'array
 * IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati.
 * Versione del microcodice – firmware.
 * Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo.
@@ -109,18 +109,12 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
 
-* È necessario avere accesso a un account amministratore configurato per le chiamate API REST di sola lettura.
+* È necessario avere accesso a un account utente con il livello di accesso richiesto
 * I dettagli dell'account includono nome utente e password.
-* Requisiti delle porte: 80 o 443
+* Requisiti di porta: 443
 * Permessi dell'account:
 +
-** Nome del ruolo di sola lettura per l'applicazione ontapi sul Vserver predefinito
-** Potrebbero essere necessarie ulteriori autorizzazioni di scrittura opzionali. Vedere la nota sulle autorizzazioni riportata di seguito.
-
-
-* Requisiti di licenza per ONTAP:
-+
-** Licenza FCP e volumi mappati/mascherati necessari per il rilevamento Fibre Channel
+** Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché ci si registri con l'array ONTAP. Vedere la nota sulle autorizzazioni riportata di seguito.
 
 
 
@@ -210,9 +204,7 @@ FAS/AFF 8080
 
 == Nota sulle autorizzazioni
 
-Poiché alcuni dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario attivare *raccolta dati contatore avanzata* nella sezione Configurazione avanzata del data collector.
-
-È inoltre necessario assicurarsi che l'autorizzazione di scrittura per l'API REST ONTAP sia attivata. In genere, questo richiede un account a livello di cluster con le autorizzazioni necessarie.
+Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
 
 Per creare un account locale per Cloud Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
 
