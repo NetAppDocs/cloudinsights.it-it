@@ -407,7 +407,7 @@ image::SecondaryAxisExplained.png[Esempio di asse secondario]
 
 == Espressioni nei widget
 
-In una dashboard, qualsiasi widget Time Series (linea, spline, area, area impilata), valore singolo, O Gauge Widget consente di creare espressioni a partire da metriche scelte e di visualizzare il risultato di tali espressioni in un singolo grafico. Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici. Nel primo esempio, vogliamo mostrare gli IOPS in lettura come percentuale degli IOPS totali per tutte le risorse di storage nel nostro ambiente. Il secondo esempio fornisce visibilità sugli IOPS "di sistema" o "overhead" che si verificano nel tuo ambiente, ovvero gli IOPS che non sono direttamente derivanti dalla lettura o dalla scrittura dei dati.
+In un dashboard, qualsiasi widget di serie temporali (linea, spline, area, area impilata), grafico a barre, grafico a colonne, grafico a torta o widget di tabella consente di creare espressioni dalle metriche scelte e di visualizzare il risultato di tali espressioni in un singolo grafico (o colonna nel caso di <<expressions-in-a-table-widget,widget di tabella>>). Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici. Nel primo esempio, vogliamo mostrare gli IOPS in lettura come percentuale degli IOPS totali per tutte le risorse di storage nel nostro ambiente. Il secondo esempio fornisce visibilità sugli IOPS "di sistema" o "overhead" che si verificano nel tuo ambiente, ovvero gli IOPS che non sono direttamente derivanti dalla lettura o dalla scrittura dei dati.
 
 È possibile utilizzare le variabili nelle espressioni (ad esempio, _€var1 * 100_)
 
@@ -446,9 +446,6 @@ Per il momento, rimanere in modalità Expression.
 Il grafico mostra la percentuale di lettura IOPS nel tempo per i dispositivi di storage selezionati. Se lo si desidera, è possibile impostare un filtro o scegliere un metodo di rollup diverso. Tenere presente che se si seleziona SUM come metodo di rollup, tutti i valori percentuali vengono sommati, che potenzialmente possono superare il 100%.
 
 . Fare clic su *Save* (Salva) per salvare il grafico nella dashboard.
-+
-È inoltre possibile utilizzare espressioni nei widget grafico a linee, grafico a spline o area sovrappurata.
-
 
 
 
@@ -499,6 +496,14 @@ Il grafico mostra gli IOPS totali come grafico a linee, con un grafico a aree ch
 
 
 Per utilizzare una variabile in un'espressione, è sufficiente digitare il nome della variabile, ad esempio _€var1 * 100_. Nelle espressioni possono essere utilizzate solo variabili numeriche.
+
+
+
+=== Espressioni in un widget di tabella
+
+I widget della tavola gestiscono le espressioni in modo leggermente diverso. È possibile includere fino a cinque espressioni in un singolo widget di tabella, ciascuna delle quali viene aggiunta come nuova colonna alla tabella. Ogni espressione può includere fino a cinque valori su cui eseguire il calcolo. È possibile assegnare un nome alla colonna in modo semplice e significativo.
+
+image:Expression Example.png["Espressione in un widget della tavola"]
 
 
 
