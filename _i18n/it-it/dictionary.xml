@@ -12975,9 +12975,7 @@ Per ulteriori informazioni, consultare informazioni sui proxy <block ref="05c875
   <block id="7bcaf6369b1398f73e17d298aa39db60" category="cell">Nome utente REST ONTAP</block>
   <block id="bdb8fd1a64839a7885f10d1e33166bec" category="cell">Password REST ONTAP</block>
   <block id="87a7b8cc9265881e0bc0f09c410ec474" category="cell">Il valore predefinito è 60 secondi.</block>
-  <block id="5062d1b8a50da7152b0877114d23bf65" category="cell">Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi.</block>
   <block id="216ade60a8bebfa7b9ef8f8fec32e876" category="cell">Abilita raccolta eventi EMS</block>
-  <block id="615eb0992cfadcf1dacb23db15c3598d" category="cell">Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP.</block>
   <block id="22454981300d227862b5ebd81b19f7de" category="cell">Intervallo polling EMS (sec)</block>
   <block id="cfb13b3b743770c7f9772001c506ed28" category="list-text">Creare un ruolo utilizzando i seguenti comandi:</block>
   <block id="7d0153c84324ec12ea855f4910fdc574" category="paragraph">accesso di sicurezza creazione ruolo rest -ruolo {nome ruolo} -api /api -accesso in sola lettura
@@ -12993,7 +12991,10 @@ Configurazione: 10.193.98.84: L'API REST ONTAP a 10.193.98.84 non è disponibile
   <block id="550bad6f96e635103df31a148cb33c00" category="paragraph">Questo raccolta di dati acquisisce dati di inventario, log EMS e prestazioni dai sistemi storage che eseguono ONTAP 9.14.1 e versioni successive utilizzando chiamate API REST. Per i sistemi ONTAP nelle versioni precedenti, utilizzare il tipo di collettore "NetApp ONTAP Data Management Software" basato su ZAPI.</block>
   <block id="65e871e42dd717b74cdb0435f27e32f6" category="paragraph">Cloud Insights acquisisce dati di inventario, log e prestazioni dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:</block>
   <block id="5eeda23f92dad663daa058631cc10210" category="list-text">Numero di serie – UUID dell'array</block>
-  <block id="fb6ea45004cffe21e52cde14678c6744" category="list-text">È necessario avere accesso a un account utente con il livello di accesso richiesto</block>
-  <block id="c40d45712b08c1aba1ce04dd1ac4cc5e" category="list-text">Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché ci si registri con l'array ONTAP. Vedere la nota sulle autorizzazioni riportata di seguito.</block>
   <block id="b697879d40ceeef13c6f9527808724fe" category="paragraph">Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.</block>
+  <block id="992ec6f152c405f64da205561d5810c3" category="list-text">È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.</block>
+  <block id="7716cde88803d3b7d809cbffb39a1d82" category="inline-xref">Nota sulle autorizzazioni</block>
+  <block id="267142a6c5298e3a85dfd745d6a91771" category="list-text">Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Cloud Insights possa registrarsi con l'array ONTAP. Vedere <block ref="2cd5e7e54a305dd942a55b6d20ef8f9c" category="inline-xref-macro-rx"></block> di seguito.</block>
+  <block id="45d6bfd686219a198a0983bc084e3b92" category="cell">Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Attivato per impostazione predefinita.</block>
+  <block id="19decc8950209e44f521507a99ab0792" category="cell">Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. Attivato per impostazione predefinita.</block>
 </blocks>

@@ -109,12 +109,12 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
 
-* È necessario avere accesso a un account utente con il livello di accesso richiesto
+* È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.
 * I dettagli dell'account includono nome utente e password.
 * Requisiti di porta: 443
 * Permessi dell'account:
 +
-** Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché ci si registri con l'array ONTAP. Vedere la nota sulle autorizzazioni riportata di seguito.
+** Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Cloud Insights possa registrarsi con l'array ONTAP. Vedere <<a-note-about-permissions,Nota sulle autorizzazioni>> di seguito.
 
 
 
@@ -151,10 +151,10 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 | Intervallo di polling delle performance (sec) | Il valore predefinito è 60 secondi. 
 
 
-| Advanced Counter Data Collection | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. 
+| Advanced Counter Data Collection | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Attivato per impostazione predefinita. 
 
 
-| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. 
+| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. Attivato per impostazione predefinita. 
 
 
 | Intervallo polling EMS (sec) | Il valore predefinito è 60 secondi. 
@@ -239,8 +239,8 @@ Il ruolo e l'accesso utente risultanti saranno simili a quanto segue. L'output e
 Role Command/ Access
 Vserver Name Directory Query Level
 ---------- ------------- --------- ------------------ --------
-cluster1 ci_readonly DEFAULT read only
-cluster1 ci_readonly security readonly
+cluster1   ci_readonly   DEFAULT   read only
+cluster1   ci_readonly   security  read only
 ....
 ....
 cluster1::security login> show
@@ -248,7 +248,7 @@ Vserver: cluster1
 Authentication Acct
 UserName    Application   Method      Role Name      Locked
 ---------   -------      ----------- -------------- --------
-ci_user     ontapi      password    ci_readonly   no
+ci_user     ontapi       password    ci_readonly    no
 ....
 
 
