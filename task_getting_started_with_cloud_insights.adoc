@@ -26,7 +26,7 @@ I raccoglitori di dati rilevano le informazioni provenienti dalle origini dati, 
 Cloud Insights ha a disposizione tre tipi di raccolta dati:
 
 * Infrastruttura (dispositivi storage, switch di rete, infrastruttura di calcolo)
-* Sistemi operativi (come VMware o Windows)
+* Sistemi operativi (ad esempio VMware o Windows)
 * Servizi (come Kafka)
 
 

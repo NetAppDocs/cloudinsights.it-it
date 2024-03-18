@@ -56,7 +56,7 @@ Cloud Insights acquisisce le seguenti informazioni di inventario dal data collec
 | Pool di storage | Pool di storage 
 
 
-| Informazioni generali sul blocco iSCSI, VMware VMFS | Condividere 
+| Informazioni generali blocco iSCSI, VMware VMFS | Condividere 
 
 
 | Sistema remoto di replica | Sincronizzazione 
