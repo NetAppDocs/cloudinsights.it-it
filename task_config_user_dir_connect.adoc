@@ -57,7 +57,8 @@ Configurare User Directory Collector inserendo i dati richiesti nelle seguenti t
 
 
 | DN di binding | Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_
-Inoltre, è richiesta l'autorizzazione di sola lettura del dominio. 
+Inoltre, è richiesta l'autorizzazione di sola lettura del dominio.
+L'utente deve essere membro del gruppo di protezione _Controller di dominio di sola lettura_. 
 
 
 | ASSOCIARE la password | Password del server di directory (ad es. Password per il nome utente utilizzato in Bind DN) 

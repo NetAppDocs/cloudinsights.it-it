@@ -50,8 +50,8 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 == Come attivare la funzione?
 
-* In Workload Security, selezionare *Admin > Automated Response Policies > Response Policy Settings > Block User Access* (Amministrazione > Criteri di risposta automatici > Impostazioni policy di risposta > Blocca accesso utente).
-* Impostare "Enable Block User Access" (attiva accesso utente a blocchi) su _Enabled_.
+* In sicurezza del carico di lavoro, accedere a *sicurezza del carico di lavoro > Criteri > Criteri di risposta automatizzati*.  Scegliere *+Criteri attacco*.
+* Selezionare (selezionare) _Blocca accesso file utente_.
 
 
 
@@ -93,8 +93,8 @@ Nella pagina dei dettagli degli avvisi e dei dettagli dell'utente, nel pannello 
 
 È possibile disattivare la funzione in qualsiasi momento. Se nel sistema sono presenti utenti con restrizioni, è necessario ripristinarne l'accesso.
 
-* In Workload Security, selezionare *Admin > Automated Response Policies > Response Policy Settings > Block User Access* (Amministrazione > Criteri di risposta automatici > Impostazioni policy di risposta > Blocca accesso utente)
-* Deselezionare "Enable Block User Access" (attiva accesso utente a blocchi) per disattivarlo.
+* In sicurezza del carico di lavoro, accedere a *sicurezza del carico di lavoro > Criteri > Criteri di risposta automatizzati*.  Scegliere *+Criteri attacco*.
+* Deselezionare _Blocca accesso al file utente_.
 
 
 La funzione verrà nascosta da tutte le pagine.

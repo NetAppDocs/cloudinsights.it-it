@@ -247,8 +247,6 @@
   <block id="4965f6590d5121fa73cf823f64ef219b" category="paragraph">Se si utilizza un utente personalizzato (ad esempio _csuser_) con autorizzazioni assegnate all'utente, seguire la procedura riportata di seguito per assegnare le autorizzazioni a workload Security per bloccare l'utente.</block>
   <block id="22c7df611bbc787fa84ac34fdd9613e0" category="paragraph">Per gli utenti csuser con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:</block>
   <block id="5a648726ddefbfa82103a1d9ad7f888d" category="section-title">Come attivare la funzione?</block>
-  <block id="8e0c9f34f42be5c07c87ecae239a8823" category="list-text">In Workload Security, selezionare *Admin &gt; Automated Response Policies &gt; Response Policy Settings &gt; Block User Access* (Amministrazione &gt; Criteri di risposta automatici &gt; Impostazioni policy di risposta &gt; Blocca accesso utente).</block>
-  <block id="d024f8c400c18ed25e7c797f6b13a110" category="list-text">Impostare "Enable Block User Access" (attiva accesso utente a blocchi) su _Enabled_.</block>
   <block id="8bdb8cb044f5c9cc0cc87ec310782e1a" category="section-title">Come si imposta il blocco automatico degli accessi degli utenti?</block>
   <block id="9e228488a6769acafe8dbd4abaaa23ff" category="list-text">Creare una nuova policy di attacco o modificare una policy di attacco esistente.</block>
   <block id="0791b390bcb1883a8ca3239cf8c8deed" category="list-text">Selezionare le SVM su cui monitorare la policy di attacco.</block>
@@ -266,8 +264,6 @@
   <block id="b030dc666e324798ee9403442dd23eb1" category="paragraph">Nella pagina dei dettagli degli avvisi e dei dettagli dell'utente, nel pannello utente, è possibile visualizzare un audit della cronologia delle limitazioni di accesso dell'utente: Tempo, azione (blocco, sblocco), durata, azione intrapresa da, Manuale/automatico e IP interessati per NFS.</block>
   <block id="b9a6eedc929b25f1d8a4be77ee9da64b" category="section-title">Come si disattiva la funzione?</block>
   <block id="6efa4058becdd76841666397b456b8bc" category="paragraph">È possibile disattivare la funzione in qualsiasi momento. Se nel sistema sono presenti utenti con restrizioni, è necessario ripristinarne l'accesso.</block>
-  <block id="d9c1a964d322cb7ed68da85eaa8a06b0" category="list-text">In Workload Security, selezionare *Admin &gt; Automated Response Policies &gt; Response Policy Settings &gt; Block User Access* (Amministrazione &gt; Criteri di risposta automatici &gt; Impostazioni policy di risposta &gt; Blocca accesso utente)</block>
-  <block id="01aa451dc1421e1b9d5fe5148ef31be7" category="list-text">Deselezionare "Enable Block User Access" (attiva accesso utente a blocchi) per disattivarlo.</block>
   <block id="d62cebbd54827b8db7ecf72f7e55fa9a" category="paragraph">La funzione verrà nascosta da tutte le pagine.</block>
   <block id="fdf597bf8083a921059736ff839ffae8" category="section-title">Ripristinare manualmente gli IP per NFS</block>
   <block id="ef3c0a55c240483a8b3ffe2b395d514d" category="paragraph">Attenersi alla seguente procedura per ripristinare manualmente gli IP da ONTAP se la versione di prova di workload Security scade o se l'agente/collector non è attivo.</block>
@@ -12721,8 +12717,6 @@ Formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280</
   <block id="4fd45e6b48ed24b4e3dbd4f7522cab8c" category="cell">Indirizzi IP o FQDN dei gateway ScaleIO/PowerFlex, separati da virgola (,) o punto e virgola (;)</block>
   <block id="68d34ea912eb8ba5af30d244ed0f9227" category="cell">Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO/PowerFlex</block>
   <block id="682ba587c3d6c301fba76aadc4ddd8af" category="cell">Password utilizzata per accedere al dispositivo ScaleIO/PowerFlex</block>
-  <block id="9f3d8c0615d1ceba9f0f905f22c7d950" category="cell">Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_
-Inoltre, è richiesta l'autorizzazione di sola lettura del dominio.</block>
   <block id="dada9839975856f2fd06228d265fea07" category="list-text">Monitoraggio della rete:</block>
   <block id="50e4ed16bb9f1a58d102b41d11b009d5" category="list-text">Richiede il kernel Linux versione 4.18.0 e superiore</block>
   <block id="7ae2ba2018b8e11d966acfdd0fce7a55" category="list-text">Il sistema operativo Photon non è supportato.</block>
@@ -13001,4 +12995,11 @@ Configurazione: 10.193.98.84: L'API REST ONTAP a 10.193.98.84 non è disponibile
   <block id="57b48c75a9a8cae2e174d4d2e1a20e06" category="paragraph">I widget della tavola gestiscono le espressioni in modo leggermente diverso. È possibile includere fino a cinque espressioni in un singolo widget di tabella, ciascuna delle quali viene aggiunta come nuova colonna alla tabella. Ogni espressione può includere fino a cinque valori su cui eseguire il calcolo. È possibile assegnare un nome alla colonna in modo semplice e significativo.</block>
   <block id="65d2c24b071888fa849372a7a32969e8" category="inline-image-macro">Espressione in un widget della tavola</block>
   <block id="87e868e2dc8c898d0c4017d8f7f66ea8" category="paragraph"><block ref="87e868e2dc8c898d0c4017d8f7f66ea8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6dd0ae1f18b7c9b4d5e3b4eec7ff6352" category="cell">Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_
+Inoltre, è richiesta l'autorizzazione di sola lettura del dominio.
+L'utente deve essere membro del gruppo di protezione _Controller di dominio di sola lettura_.</block>
+  <block id="644ee4d8e32f0fd5525b3665f3b1be90" category="cell">link:task_dc_brocade_rest.html</block>
+  <block id="690b59689f385d15b45ee131216725c7" category="list-text">In sicurezza del carico di lavoro, accedere a *sicurezza del carico di lavoro &gt; Criteri &gt; Criteri di risposta automatizzati*.  Scegliere *+Criteri attacco*.</block>
+  <block id="a0e5daf37fbc5d356df1518610cdff22" category="list-text">Selezionare (selezionare) _Blocca accesso file utente_.</block>
+  <block id="97436105e7ddd0da98d7e0207d74958a" category="list-text">Deselezionare _Blocca accesso al file utente_.</block>
 </blocks>
