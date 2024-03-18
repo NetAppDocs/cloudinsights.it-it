@@ -170,7 +170,7 @@ Per ulteriori informazioni, consultare la sezione link:concept_ws_integration_wi
 
 .Procedura per la configurazione
 . Accedere come amministratore o come proprietario dell'account all'ambiente Cloud Insights.
-. Fare clic su *osservabilità > Collector > +Data Collector*
+. Fare clic su *sicurezza del carico di lavoro > Collector > +Data Collector*
 +
 Il sistema visualizza i Data Collector disponibili.
 
