@@ -77,37 +77,37 @@ Per ambienti di workload Security * basati su * Stati Uniti:
 
 [cols="5*"]
 |===
-| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+| Protocollo | Porta | Origine | Destinazione | Descrizione 
 
 
-| TCP | 443 | <site_name>.cs01.cloudinsights.netapp.com <site_name>.c01.cloudinsights.netapp.com <site_name>.c02.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01.cloudinsights.netapp.com <site_name>.c01.cloudinsights.netapp.com <site_name>.c02.cloudinsights.netapp.com | Accesso a Cloud Insights 
 
 
-| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 Per ambienti di sicurezza dei workload *basati sull'Europa*:
 
 [cols="5*"]
 |===
-| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+| Protocollo | Porta | Origine | Destinazione | Descrizione 
 
 
-| TCP | 443 | <site_name>.cs01-eu-1.cloudinsights.netapp.com <site_name>.c01-eu-1.cloudinsights.netapp.com <site_name>.c02-eu-1.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01-eu-1.cloudinsights.netapp.com <site_name>.c01-eu-1.cloudinsights.netapp.com <site_name>.c02-eu-1.cloudinsights.netapp.com | Accesso a Cloud Insights 
 
 
-| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 Per ambienti di sicurezza dei workload * basati su APAC*:
 
 [cols="5*"]
 |===
-| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+| Protocollo | Porta | Origine | Destinazione | Descrizione 
 
 
-| TCP | 443 | <site_name>.cs01-ap-1.cloudinsights.netapp.com <site_name>.c01-ap-1.cloudinsights.netapp.com <site_name>.c02-ap-1.cloudinsights.netapp.com | In uscita | Accesso a Cloud Insights 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01-ap-1.cloudinsights.netapp.com <site_name>.c01-ap-1.cloudinsights.netapp.com <site_name>.c02-ap-1.cloudinsights.netapp.com | Accesso a Cloud Insights 
 
 
-| TCP | 443 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | In uscita | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 
 
@@ -117,22 +117,22 @@ Notare che quando si aggiunge _link:task_add_collector_svm.html#permissions-when
 
 [cols="5*"]
 |===
-| Protocollo | Porta | Destinazione | Direzione | Descrizione 
+| Protocollo | Porta | Origine | Destinazione | Descrizione 
 
 
-| TCP | 389 (LDAP) 636 (LDAPS / start-tls) | URL del server LDAP | In uscita | Connettersi a LDAP 
+| TCP | 389 (LDAP) 636 (LDAPS / start-tls) | Agente di sicurezza del carico di lavoro | URL del server LDAP | Connettersi a LDAP 
 
 
-| TCP | 443 | Cluster o SVM Management IP Address (a seconda della configurazione del collettore SVM) | In uscita | Comunicazione API con ONTAP 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | Cluster o SVM Management IP Address (a seconda della configurazione del collettore SVM) | Comunicazione API con ONTAP 
 
 
-| TCP | 35000 - 55000 | Indirizzi IP LIF dati SVM | In entrata | Comunicazione con ONTAP per eventi Fpolicy 
+| TCP | 35000 - 55000 | Indirizzi IP LIF dati SVM | Agente di sicurezza del carico di lavoro | Comunicazione con ONTAP per eventi Fpolicy 
 
 
-| TCP | 7 | Indirizzi IP LIF dati SVM | In uscita | Unidirezionale tra ONTAP e sicurezza del carico di lavoro. L'agente esegue il ping dei Lifs SVM. 
+| TCP | 7 | Agente di sicurezza del carico di lavoro | Indirizzi IP LIF dati SVM | Unidirezionale tra ONTAP e sicurezza del carico di lavoro. L'agente esegue il ping dei Lifs SVM. 
 
 
-| SSH | 22 | Gestione del cluster | In uscita | Necessario per il blocco degli utenti CIFS/SMB. 
+| SSH | 22 | Agente di sicurezza del carico di lavoro | Gestione del cluster | Necessario per il blocco degli utenti CIFS/SMB. 
 |===
 
 
