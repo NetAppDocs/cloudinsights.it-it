@@ -19,6 +19,9 @@ summary: ONTAP REST Data Collector
 Questo raccolta di dati acquisisce dati di inventario, log EMS e prestazioni dai sistemi storage che eseguono ONTAP 9.14.1 e versioni successive utilizzando chiamate API REST. Per i sistemi ONTAP nelle versioni precedenti, utilizzare il tipo di collettore "NetApp ONTAP Data Management Software" basato su ZAPI.
 
 
+NOTE: Il collettore REST ONTAP può essere utilizzato in sostituzione del collettore basato su ONTAPI precedente. In quanto tale, potrebbero esserci delle differenze nelle metriche raccolte o riportate. Per ulteriori informazioni sulle differenze tra ONTAPI e REST, vedere link:https://docs.netapp.com/us-en/ontap-restmap-9141/index.html["Mappatura ONTAP 9.14.1 ONTAPI a RIPOSO"] documentazione.
+
+
 
 == Terminologia
 
@@ -210,21 +213,15 @@ Per creare un account locale per Cloud Insights a livello di cluster, accedere a
 
 . Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
 . Creare un ruolo utilizzando i seguenti comandi:
-
-
-accesso di sicurezza creazione ruolo rest -ruolo {nome ruolo} -api /api -accesso in sola lettura
-accesso di sicurezza creazione ruolo rest -ruolo {nome ruolo} -api /api/cluster/agenti -accesso a tutto
-
-accesso web ai servizi vserver create -name spi -role {nome ruolo} -vserver {nome dal comando precedente}
-login di sicurezza create -user-or-group-name {username} -application http -authentication-method password -role {role name}
-
++
 ....
- ////
-security login role create -role ci_readonly -cmddirname DEFAULT -access readonly
- security login role create -role ci_readonly -cmddirname security -access readonly
- security login role create -role ci_readonly -access all -cmddirname {cluster application-record create}
- ////
+security login rest-role create -role {role name} -api /api -access readonly
+security login rest-role create -role {role name} -api /api/cluster/agents -access all
+vserver services web access create -name spi -role {role name} -vserver {name from above command}
+security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 ....
+
+
 . Creare l'utente di sola lettura utilizzando il seguente comando. Una volta eseguito il comando create, viene richiesto di inserire una password per questo utente.
 +
  security login create -username ci_user -application ontapi -authentication-method password -role ci_readonly
