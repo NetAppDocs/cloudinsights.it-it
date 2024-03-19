@@ -13002,4 +13002,23 @@ L'utente deve essere membro del gruppo di protezione _Controller di dominio di s
   <block id="56079badd056a19303cc26e6a4fcc7e0" category="sidebar">VMware</block>
   <block id="45dd5be4ea94f7d41cb728ccc4186440" category="list-text">Fare clic su *sicurezza del carico di lavoro &gt; Collector &gt; +Data Collector*</block>
   <block id="d0c65e48e2de27f37b54853eb602f10b" category="cell">Agente di sicurezza del carico di lavoro</block>
+  <block id="13dc8fdf158db5a2d5b4333f157d56f1" category="summary">Collettore del programma di risoluzione host DB generico</block>
+  <block id="7ca1df328d6c4c2791d1be4c81d122dc" category="doc">Resolver host DB generico NetApp</block>
+  <block id="bf69c00bf7c53458f130b812692fec27" category="paragraph">Questo data collector acquisisce l'inventario</block>
+  <block id="cf6810c807663f7e67a6dad9b4e3f30d" category="paragraph">Cloud Insights acquisisce l'inventario da questo raccoglitore.</block>
+  <block id="7cfb24a71b3d4346f06e58f1c56504c4" category="cell">Indirizzo IP del server DB</block>
+  <block id="fc0adf601bb47f61aeb001d2ca0fd014" category="cell">Indirizzo IP del server DB</block>
+  <block id="44265ee9a4e77507b46127bd8bb9410e" category="cell">Porta server DB</block>
+  <block id="8bffa07e351ddd5d04e99bb6b9da0978" category="cell">il valore predefinito è 3306</block>
+  <block id="6ed1c3c7709b624446439652394447b6" category="cell">Nome classe driver qualificato</block>
+  <block id="b39e9ab46f4a173d584dd68f9f196576" category="cell">Nome classe per il conducente.</block>
+  <block id="8fb99cf573d4a413b2e37c63794eb3e0" category="cell">URL del driver JDBC</block>
+  <block id="b89af963baa6e82f8621a668c14fbcd4" category="cell">URL del driver</block>
+  <block id="81658e723498b806a42aa7f578056dcf" category="cell">Query SQL</block>
+  <block id="ce3d730f469529eeaf2c008d233c540b" category="cell">Query utilizzata per restituire i dati dalla tabella</block>
+  <block id="0405664c8ac697fdc068d704ac81f69f" category="cell">Intervallo polling inventario (min)</block>
+  <block id="63c34e2f1175f732874e4e180adeffd2" category="cell">Attiva connessione SSL</block>
+  <block id="d0768c091a340f3c6007fff30de3ea50" category="cell">Selezionare per attivare la connessione tramite SSL</block>
+  <block id="ac5ff7aa53ae721accfc89d2e8327f56" category="cell">Segnala alias WWN</block>
+  <block id="2d97586297f1c09c58d04825a03405cf" category="cell">Selezionare per segnalare l'alias WWN</block>
 </blocks>
