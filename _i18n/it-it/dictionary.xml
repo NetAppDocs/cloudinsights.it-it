@@ -6746,7 +6746,6 @@
   <block id="9bf305870fa281c6eff0d16d2e8d6b6d" category="cell">Comunicazione API con ONTAP</block>
   <block id="c1d0965e767c67506aa60bc80d5b716e" category="cell">35000 - 55000</block>
   <block id="2c2ee9a7d99b7adb60d6152c3090a0f0" category="cell">Indirizzi IP LIF dati SVM</block>
-  <block id="3931fc64139cf87ea57a9ac2d318fe52" category="cell">Comunicazione con ONTAP per eventi Fpolicy</block>
   <block id="8f14e45fceea167a5a36dedd4bea2543" category="cell">7</block>
   <block id="52e3eb8960d4500b67360febd3b16b26" category="cell">Unidirezionale tra ONTAP e sicurezza del carico di lavoro. L'agente esegue il ping dei Lifs SVM.</block>
   <block id="1eb5ae63609e68a11106494d272615bf" category="cell">Gestione del cluster</block>
@@ -13021,4 +13020,5 @@ L'utente deve essere membro del gruppo di protezione _Controller di dominio di s
   <block id="d0768c091a340f3c6007fff30de3ea50" category="cell">Selezionare per attivare la connessione tramite SSL</block>
   <block id="ac5ff7aa53ae721accfc89d2e8327f56" category="cell">Segnala alias WWN</block>
   <block id="2d97586297f1c09c58d04825a03405cf" category="cell">Selezionare per segnalare l'alias WWN</block>
+  <block id="fd3eaf47a54b3fb99f483aa91af951ad" category="cell">Comunicazione con ONTAP per eventi Fpolicy. Affinché ONTAP possa inviarvi eventi, compresi eventuali firewall presenti nell'agente di protezione del carico di lavoro stesso (se presente), è necessario aprire queste porte verso l'agente di protezione del carico di lavoro.</block>
 </blocks>
