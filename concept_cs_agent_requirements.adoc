@@ -50,7 +50,13 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
 | Memoria | 16 GB DI RAM 
 
 
-| Spazio su disco disponibile | Lo spazio su disco deve essere allocato in questo modo: /Opt/netapp 35 GB (minimo) se /opt è una cartella montata da uno storage NAS, assicurarsi che gli utenti locali abbiano accesso a questa cartella. L'installazione dell'agente o del Data Collector potrebbe non riuscire se gli utenti locali non dispongono dell'autorizzazione per questa cartella. vedere link:task_cs_add_agent.html#troubleshooting-agent-errors["risoluzione dei problemi"] per ulteriori dettagli. 
+| Spazio su disco disponibile | Lo spazio su disco deve essere allocato in questo modo:
+/Opt/netapp 35 GB (minimo)
+
+Nota: Si consiglia di allocare un po' di spazio su disco in più per consentire la creazione del filesystem. Assicurarsi che ci siano almeno 35 GB di spazio libero nel filesystem.
+
+
+Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicurarsi che gli utenti locali abbiano accesso a questa cartella. L'installazione dell'agente o del Data Collector potrebbe non riuscire se gli utenti locali non dispongono dell'autorizzazione per questa cartella. vedere link:task_cs_add_agent.html#troubleshooting-agent-errors["risoluzione dei problemi"] per ulteriori dettagli. 
 
 
 | Rete | Connessione Ethernet da 100 Mbps a 1 Gbps, indirizzo IP statico, connettività IP a tutti i dispositivi e porta richiesta per l'istanza di workload Security (80 o 443). 
