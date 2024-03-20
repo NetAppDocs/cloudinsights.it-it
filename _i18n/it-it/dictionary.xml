@@ -13026,4 +13026,7 @@ Nota: Si consiglia di allocare un po' di spazio su disco in più per consentire 
 Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicurarsi che gli utenti locali abbiano accesso a questa cartella. L'installazione dell'agente o del Data Collector potrebbe non riuscire se gli utenti locali non dispongono dell'autorizzazione per questa cartella. vedere <block ref="b8e4bfa44cc0a900c6c15b3a86438fdc" category="inline-link-macro-rx"></block> per ulteriori dettagli.</block>
   <block id="764f447ccb3bf87ad75ec71c633b9966" category="inline-link-macro">Brocade FOS REST </block>
   <block id="882354c20e5e22e1c581f6c0c24ef8f3" category="cell"><block ref="882354c20e5e22e1c581f6c0c24ef8f3" category="inline-link-macro-rx"></block></block>
+  <block id="5c62f1c9f30e0ad47fc12431846b6858" category="inline-link-macro">Blocco degli accessi degli utenti</block>
+  <block id="8ddc916ec9b2ba8508e95584974411cf" category="paragraph">Tenere presente quanto segue per <block ref="84987077236e5a9982c9d1eae9e06415" category="inline-link-macro-rx"></block>:</block>
+  <block id="d725c02924790a2eff9bb2c7121e839d" category="paragraph">Assicurarsi di esaminare la sezione autorizzazioni di <block ref="8a91694a94b506bcdf4d50b0df6ab8bc" category="inline-link-macro-rx"></block> pagina pure.</block>
 </blocks>

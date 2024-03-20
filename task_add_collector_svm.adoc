@@ -79,6 +79,27 @@ Vedere link:concept_cs_agent_requirements.html["Requisiti dell'agente"] per info
 
 
 
+== Prerequisiti per il blocco dell'accesso utente
+
+Tenere presente quanto segue per link:/cloudinsights/cs_restrict_user_access.html["Blocco degli accessi degli utenti"]:
+
+Per il funzionamento di questa funzionalità sono necessarie credenziali a livello di cluster.
+
+Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
+
+Se si utilizza un utente personalizzato (ad esempio _csuser_) con autorizzazioni assegnate all'utente, seguire la procedura riportata di seguito per assegnare le autorizzazioni a workload Security per bloccare l'utente.
+
+Per gli utenti csuser con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:
+
+....
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+....
+
+
 == Nota sulle autorizzazioni
 
 
