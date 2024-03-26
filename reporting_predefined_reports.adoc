@@ -30,8 +30,6 @@ I report predefiniti mostrano l'inventario, la capacità dello storage, il charg
 
 È possibile generare report in diversi formati, tra cui HTML, PDF, CSV, XML, Ed Excel.
 
-Cloud Insights consente di gestire più tenancy nel reporting, consentendo di associare gli utenti alle business unit. Con questa funzione, gli amministratori possono separare dati o report in base agli attributi di un utente o della sua affiliazione.
-
 
 
 == Accedere ai report predefiniti
