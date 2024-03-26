@@ -6745,7 +6745,6 @@
   <block id="c1d0965e767c67506aa60bc80d5b716e" category="cell">35000 - 55000</block>
   <block id="2c2ee9a7d99b7adb60d6152c3090a0f0" category="cell">Indirizzi IP LIF dati SVM</block>
   <block id="8f14e45fceea167a5a36dedd4bea2543" category="cell">7</block>
-  <block id="52e3eb8960d4500b67360febd3b16b26" category="cell">Unidirezionale tra ONTAP e sicurezza del carico di lavoro. L'agente esegue il ping dei Lifs SVM.</block>
   <block id="1eb5ae63609e68a11106494d272615bf" category="cell">Gestione del cluster</block>
   <block id="269ab41459ba8b3de391eb30b649d222" category="cell">Necessario per il blocco degli utenti CIFS/SMB.</block>
   <block id="46a1d0dbde96d466dadd916b9b7a7d65" category="section-title">Dimensionamento del sistema</block>
@@ -13013,7 +13012,6 @@ L'utente deve essere membro del gruppo di protezione _Controller di dominio di s
   <block id="d0768c091a340f3c6007fff30de3ea50" category="cell">Selezionare per attivare la connessione tramite SSL</block>
   <block id="ac5ff7aa53ae721accfc89d2e8327f56" category="cell">Segnala alias WWN</block>
   <block id="2d97586297f1c09c58d04825a03405cf" category="cell">Selezionare per segnalare l'alias WWN</block>
-  <block id="fd3eaf47a54b3fb99f483aa91af951ad" category="cell">Comunicazione con ONTAP per eventi Fpolicy. Affinché ONTAP possa inviarvi eventi, compresi eventuali firewall presenti nell'agente di protezione del carico di lavoro stesso (se presente), è necessario aprire queste porte verso l'agente di protezione del carico di lavoro.</block>
   <block id="a5bc5e25da90f0de3436e66f223df7bc" category="inline-link-macro">Mappatura ONTAP 9.14.1 ONTAPI a RIPOSO</block>
   <block id="6e2fe63a1853939e7fbcdfb785f57e86" category="admonition">Il collettore REST ONTAP può essere utilizzato in sostituzione del collettore basato su ONTAPI precedente. In quanto tale, potrebbero esserci delle differenze nelle metriche raccolte o riportate. Per ulteriori informazioni sulle differenze tra ONTAPI e REST, vedere <block ref="239e0ab1e46437458ce3ffae42b58457" category="inline-link-macro-rx"></block> documentazione.</block>
   <block id="e8e49e7a35d758d776738dccc87a87b1" category="cell">Lo spazio su disco deve essere allocato in questo modo:
@@ -13041,4 +13039,6 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="01489ea97f62d455d744d92e643e44a9" category="cell">Vedo metriche vuote o "0" in cui il raccoglitore ONTAP ontapi mostra i dati.</block>
   <block id="e33c3a41c8a37e74fdb59ca792c91d5a" category="cell">ONTAP REST non riporta le metriche utilizzate internamente solo nel sistema ONTAP. Ad esempio, gli aggregati di sistema non verranno raccolti dal REST di ONTAP, ma verranno raccolte solo le SVM di tipo "dati".</block>
   <block id="93411b670be12318c5a6613f3fca054f" category="list-text">Aggiungere il REST Collector, inserendo tutti gli stessi utenti/autorizzazioni/ecc. hai avuto per il collezionista precedente.</block>
+  <block id="7e0b2932c814704a91b543d4f713d658" category="cell">Comunicazione da ONTAP all'agente di sicurezza del carico di lavoro per gli eventi Fpolicy.  Affinché ONTAP possa inviarvi eventi, compresi eventuali firewall presenti nell'agente di protezione del carico di lavoro stesso (se presente), è necessario aprire queste porte verso l'agente di protezione del carico di lavoro.</block>
+  <block id="a01bf0188d9c5ff4efed61a66bd7061b" category="cell">Eco dai Agent ai LIF dati SVM</block>
 </blocks>
