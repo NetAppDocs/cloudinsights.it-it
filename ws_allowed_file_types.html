@@ -1,0 +1,4155 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Criteri tipi di file consentiti</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Criteri tipi di file consentiti" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/cloudinsights/ws_allowed_file_types.html" />
+	<meta property="og:description" content="Aggiungere le estensioni di file a un elenco dei tipi di file consentiti per ridurre gli avvisi." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/cloudinsights/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Aggiungere le estensioni di file a un elenco dei tipi di file consentiti per ridurre gli avvisi.">
+  <meta name="keywords" content=" workload security, cloud secure, include list, allowed, file types, ransomware"><!-- Icons -->
+  <link rel="icon" href="/it-it/cloudinsights/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/cloudinsights/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/cloudinsights/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/cloudinsights/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloudinsights/ws_allowed_file_types.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloudinsights/ws_allowed_file_types.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/cloudinsights/js/na-search.js'></script><script src='/it-it/cloudinsights/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/it-it/cloudinsights/js/custom-dropdown.js'></script>
+  <script src='/it-it/cloudinsights/js/FileSaver.min.js'></script>
+  <script src='/it-it/cloudinsights/js/jszip-utils.min.js'></script>
+  <script src='/it-it/cloudinsights/js/jszip.min.js'></script><script src='/it-it/cloudinsights/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/it-it/cloudinsights/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/it">
+                <image id="ie-header-logo" src="/it-it/cloudinsights/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/it/support-and-training/documentation/">Documenti</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/it-it/cloudinsights/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">Italiano</span>
+                    <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/it-it/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/cloudinsights/ws_allowed_file_types.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/it-it/cloudinsights/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">Tutto NetApp</span>
+                    <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Supporto</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/it/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/it-it/cloudinsights/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/it-it/cloudinsights/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">Tutti i documenti</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/it-it/cloudinsights/">-->
+      Cloud Insights
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/it-it/cloudinsights/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/it-it/cloudinsights/search.html" 
+        data-type="widget"
+        data-placeholder="Esplora la documentazione"
+        data-no-results-found="Nessun risultato per {query}"
+        data-did-you-mean="Cerca {suggestion}."
+        data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+        data-results-found="{hitCount} risultati trovati"
+        data-error-message="Si è verificato un errore. Riprova."
+        data-error-reset="Reimposta ricerca"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentazione Cloud Insights"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/index.html">
+        Documentazione Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_whats_new.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/concept_whats_new.html">
+        Novità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Iscrizione a Cloud Insights"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_cloud_insights_onboarding_1.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/task_cloud_insights_onboarding_1.html">
+        Iscrizione a Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Sicurezza</div>-->
+         Sicurezza
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di sicurezza"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/security_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/security_overview.html">
+        Procedure di sicurezza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cosa memorizzare e dove"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/security_information_and_region.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/security_information_and_region.html">
+        Cosa memorizzare e dove
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Strumento securityadmin"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/security_admin_tool.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/security_admin_tool.html">
+        Strumento securityadmin
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Per iniziare"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Per iniziare</div>-->
+         Per iniziare
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tutorial sulle funzioni"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_feature_tutorials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_feature_tutorials.html">
+        Tutorial sulle funzioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Raccolta dei dati"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Raccolta dei dati</div>-->
+         Raccolta dei dati
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_getting_started_with_cloud_insights.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_getting_started_with_cloud_insights.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti dell'unità di acquisizione"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_acquisition_unit_requirements.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/concept_acquisition_unit_requirements.html">
+        Requisiti dell'unità di acquisizione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un'unità di acquisizione"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_configure_acquisition_unit.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_configure_acquisition_unit.html">
+        Configurazione di un'unità di acquisizione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un agente su Windows/Linux"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_agent.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_agent.html">
+        Configurazione di un agente su Windows/Linux
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Data Collector"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_configure_data_collectors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_configure_data_collectors.html">
+        Configurazione di Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Determinazione dello stato di acquisizione del Data Collector"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_determining_data_collector_acq_status.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/concept_determining_data_collector_acq_status.html">
+        Determinazione dello stato di acquisizione del Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i Data Collector configurati"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_view_configured_data_collectors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_view_configured_data_collectors.html">
+        Gestire i Data Collector configurati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ricercare gli errori del data collector"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_research_failed_collector.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_research_failed_collector.html">
+        Ricercare gli errori del data collector
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Importazione di dashboard consigliati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_import_from_dashboard_gallery.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_import_from_dashboard_gallery.html">
+        Importazione di dashboard consigliati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account utente e ruoli"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_user_roles.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_user_roles.html">
+        Account utente e ruoli
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Collector List (elenco Data Collector)"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/data_collector_list.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/data_collector_list.html">
+        Data Collector List (elenco Data Collector)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Iscrizione a Cloud Insights"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_subscribing_to_cloud_insights.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/concept_subscribing_to_cloud_insights.html">
+        Iscrizione a Cloud Insights
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione automatica del dispositivo"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Risoluzione automatica del dispositivo</div>-->
+         Risoluzione automatica del dispositivo
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica sulla risoluzione dei dispositivi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_device_resolution_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_device_resolution_overview.html">
+        Panoramica sulla risoluzione dei dispositivi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Regole di risoluzione dei dispositivi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_device_resolution_rules.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_device_resolution_rules.html">
+        Regole di risoluzione dei dispositivi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione del dispositivo Fibre Channel"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_device_resolution_fibre_channel.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_device_resolution_fibre_channel.html">
+        Risoluzione del dispositivo Fibre Channel
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione del dispositivo IP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_device_resolution_ip.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_device_resolution_ip.html">
+        Risoluzione del dispositivo IP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostazione delle preferenze di risoluzione del dispositivo"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_device_resolution_preferences.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_device_resolution_preferences.html">
+        Impostazione delle preferenze di risoluzione del dispositivo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esempi di espressioni regolari"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_device_resolution_regex_examples.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_device_resolution_regex_examples.html">
+        Esempi di espressioni regolari
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di dashboard"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Creazione di dashboard</div>-->
+         Creazione di dashboard
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica della dashboard"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_dashboards_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_dashboards_overview.html">
+        Panoramica della dashboard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Funzionalità dei dashboard"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_dashboard_features.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_dashboard_features.html">
+        Funzionalità dei dashboard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard di esempio"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Dashboard di esempio</div>-->
+         Dashboard di esempio
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance delle macchine virtuali"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dashboard_example_VM_performance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dashboard_example_VM_performance.html">
+        Performance delle macchine virtuali
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Best practice per la dashboard"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_dashboard_best_practices.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_dashboard_best_practices.html">
+        Best practice per la dashboard
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Kubernetes</div>-->
+         Kubernetes
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pagina panoramica di Kubernetes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/kubernetes_landing_page.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/kubernetes_landing_page.html">
+        Pagina panoramica di Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prima di installare o aggiornare l'operatore"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/pre-requisites_for_k8s_operator.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/pre-requisites_for_k8s_operator.html">
+        Prima di installare o aggiornare l'operatore
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione dell'operatore di monitoraggio"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_agent_k8s.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_config_telegraf_agent_k8s.html">
+        Installazione dell'operatore di monitoraggio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opzioni operatore di monitoraggio"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/telegraf_agent_k8s_config_options.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/telegraf_agent_k8s_config_options.html">
+        Opzioni operatore di monitoraggio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pagina del cluster Kubernetes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/kubernetes_cluster_detail.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/kubernetes_cluster_detail.html">
+        Pagina del cluster Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitoraggio di rete e mappa"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_kubernetes_network_monitoring_and_map.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_kubernetes_network_monitoring_and_map.html">
+        Monitoraggio di rete e mappa
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cambia analisi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/kubernetes_change_analytics.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/kubernetes_change_analytics.html">
+        Cambia analisi
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Approfondimenti"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Approfondimenti</div>-->
+         Approfondimenti
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/insights_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/insights_overview.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risorse condivise sotto stress"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/insights_shared_resources_under_stress.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/insights_shared_resources_under_stress.html">
+        Risorse condivise sotto stress
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes Namespace che esauriscono lo spazio"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/insights_k8s_namespaces_running_out_of_space.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/insights_k8s_namespaces_running_out_of_space.html">
+        Kubernetes Namespace che esauriscono lo spazio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Recuperare lo storage a freddo ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/insights_reclaim_ontap_cold_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/insights_reclaim_ontap_cold_storage.html">
+        Recuperare lo storage a freddo ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elementi di base di ONTAP"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_ontap_essentials.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/concept_ontap_essentials.html">
+        Elementi di base di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lavorare con le query"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Lavorare con le query</div>-->
+         Lavorare con le query
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esecuzione di query sulle risorse"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_querying_assets.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_querying_assets.html">
+        Esecuzione di query sulle risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di una query"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_query.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_create_query.html">
+        Creazione di una query
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzazione delle query disponibili"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_view_queries.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_view_queries.html">
+        Visualizzazione delle query disponibili
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Esportazione dei risultati delle query in formato .CSV"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_export_query_results.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_export_query_results.html">
+        Esportazione dei risultati delle query in formato .CSV
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modifica o eliminazione di una query"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_modify_delete_query.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_modify_delete_query.html">
+        Modifica o eliminazione di una query
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Assegnazione di più applicazioni/annotazioni agli oggetti"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_query_assign_multiple_applicationss.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_query_assign_multiple_applicationss.html">
+        Assegnazione di più applicazioni/annotazioni agli oggetti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Copia dei valori delle tabelle negli Appunti"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_query_copy_table_values.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_query_copy_table_values.html">
+        Copia dei valori delle tabelle negli Appunti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Query dei registri"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_log_explorer.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_log_explorer.html">
+        Query dei registri
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle annotazioni"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Utilizzo delle annotazioni</div>-->
+         Utilizzo delle annotazioni
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Definizione delle annotazioni"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_defining_annotations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_defining_annotations.html">
+        Definizione delle annotazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle annotazioni"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_annotation.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_create_annotation.html">
+        Utilizzo delle annotazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle regole di annotazione"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_annotation_rules.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_create_annotation_rules.html">
+        Utilizzo delle regole di annotazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Importazione di annotazioni con API"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_annotation_import.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_annotation_import.html">
+        Importazione di annotazioni con API
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle applicazioni"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Utilizzo delle applicazioni</div>-->
+         Utilizzo delle applicazioni
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concetti applicativi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_about_applications.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_about_applications.html">
+        Concetti applicativi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione delle applicazioni"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_application.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_create_application.html">
+        Configurazione delle applicazioni
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor e avvisi"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Monitor e avvisi</div>-->
+         Monitor e avvisi
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di monitor"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_monitor.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_create_monitor.html">
+        Creazione di monitor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzazione e gestione degli avvisi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_view_and_manage_alerts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_view_and_manage_alerts.html">
+        Visualizzazione e gestione degli avvisi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione dei destinatari delle notifiche"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_notifications_email.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_notifications_email.html">
+        Configurazione dei destinatari delle notifiche
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor definiti dal sistema"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_system_monitors.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_system_monitors.html">
+        Monitor definiti dal sistema
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo delle API"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/API_Overview.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/API_Overview.html">
+        Utilizzo delle API
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notifica Webhook"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_create_webhook.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/task_create_webhook.html">
+        Notifica Webhook
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitoraggio dell'ambiente"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Monitoraggio dell'ambiente</div>-->
+         Monitoraggio dell'ambiente
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eventi di controllo"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_audit.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_audit.html">
+        Eventi di controllo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="TTL e downsampling"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="concept_ttl_and_downsampling.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_ttl_and_downsampling.html">
+        TTL e downsampling
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informazioni sulla pagina delle risorse"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Informazioni sulla pagina delle risorse</div>-->
+         Informazioni sulla pagina delle risorse
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica della pagina delle risorse"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_asset_page_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_asset_page_overview.html">
+        Panoramica della pagina delle risorse
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Filtraggio nel contesto degli oggetti"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_in_context_filters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_in_context_filters.html">
+        Filtraggio nel contesto degli oggetti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezioni Riepilogo e topologia"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_asset_summary_section.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_asset_summary_section.html">
+        Sezioni Riepilogo e topologia
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione Expert View"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_asset_expert_view_section.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_asset_expert_view_section.html">
+        Sezione Expert View
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione dati utente"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_asset_user_data_section.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_asset_user_data_section.html">
+        Sezione dati utente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sezione Avvisi correlati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_asset_alerts_section.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_asset_alerts_section.html">
+        Sezione Avvisi correlati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtualizzazione dello storage"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_storage_virtualization.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_storage_virtualization.html">
+        Virtualizzazione dello storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Suggerimenti e suggerimenti per la ricerca delle risorse"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_searching_assets.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_searching_assets.html">
+        Suggerimenti e suggerimenti per la ricerca delle risorse
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di report"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Creazione di report</div>-->
+         Creazione di report
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica sui report"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_overview.html">
+        Panoramica sui report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ruoli utente di reporting"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_user_roles.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_user_roles.html">
+        Ruoli utente di reporting
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo dei report predefiniti"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_predefined_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_predefined_reports.html">
+        Utilizzo dei report predefiniti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard di Storage Manager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_storage_manager_dashboard.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_storage_manager_dashboard.html">
+        Dashboard di Storage Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creazione di un report di esempio"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_create_example.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_create_example.html">
+        Creazione di un report di esempio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione dei report"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_managing_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_managing_reports.html">
+        Gestione dei report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Report personalizzati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_creating_custom_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_creating_custom_reports.html">
+        Report personalizzati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modelli di dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_creating_custom_reports.html#reporting-data-models" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_creating_custom_reports.html#reporting-data-models">
+        Modelli di dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API del database di reporting"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_querying_database.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_querying_database.html">
+        API del database di reporting
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conservazione dei dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_data_retention.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_data_retention.html">
+        Conservazione dei dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Diagrammi dello schema"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reporting_schema_diagrams.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reporting_schema_diagrams.html">
+        Diagrammi dello schema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tabelle dello schema"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reference_schemas.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reference_schemas.html">
+        Tabelle dello schema
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza del carico di lavoro"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Sicurezza del carico di lavoro</div>-->
+         Sicurezza del carico di lavoro
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informazioni sulla sicurezza del carico di lavoro"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/cs_intro.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/cs_intro.html">
+        Informazioni sulla sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Per iniziare"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Per iniziare</div>-->
+         Per iniziare
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introduzione alla sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_cs_getting_started.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_cs_getting_started.html">
+        Introduzione alla sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti dell'agente per la sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_cs_agent_requirements.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/concept_cs_agent_requirements.html">
+        Requisiti dell'agente per la sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Workload Security Agent"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_cs_add_agent.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_cs_add_agent.html">
+        Configurazione di Workload Security Agent
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminazione di un agente di sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_cs_delete_agent.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_cs_delete_agent.html">
+        Eliminazione di un agente di sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un servizio di raccolta directory ad"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_user_dir_connect.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_user_dir_connect.html">
+        Configurazione di un servizio di raccolta directory ad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di un servizio di raccolta directory LDAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_user_dir_connect_ldap.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_user_dir_connect_ldap.html">
+        Configurazione di un servizio di raccolta directory LDAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione del Data Collector SVM di ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_add_collector_svm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_add_collector_svm.html">
+        Configurazione del Data Collector SVM di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Cloud ONTAP Data Collector"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_cs_incloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_cs_incloud.html">
+        Configurazione di Cloud ONTAP Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione degli utenti per la sicurezza del carico di lavoro"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_cs_user_management.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_cs_user_management.html">
+        Gestione degli utenti per la sicurezza del carico di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Event Rate Checker (Guida alle dimensioni dell'agente)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_cs_event_rate_checker.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/concept_cs_event_rate_checker.html">
+        Event Rate Checker (Guida alle dimensioni dell'agente)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Avvisi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/cs_alert_data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/cs_alert_data.html">
+        Avvisi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Analisi</div>-->
+         Analisi
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi delle attività - tutte le attività"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/forensic_activity_history.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/forensic_activity_history.html">
+        Analisi delle attività - tutte le attività
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analisi delle attività - entità"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/forensic_entity_detail.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/forensic_entity_detail.html">
+        Analisi delle attività - entità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utenti"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/forensic_user_overview.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/forensic_user_overview.html">
+        Utenti
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Policy di risposta automatizzate"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/cs_automated_response_policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/cs_automated_response_policies.html">
+        Policy di risposta automatizzate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Criteri tipi di file consentiti"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/ws_allowed_file_types.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/ws_allowed_file_types.html">
+        Criteri tipi di file consentiti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrazione della protezione ransomware autonoma di ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_cs_integration_with_ontap_arp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_cs_integration_with_ontap_arp.html">
+        Integrazione della protezione ransomware autonoma di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrazione con accesso ONTAP negato"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_ws_integration_with_ontap_access_denied.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_ws_integration_with_ontap_access_denied.html">
+        Integrazione con accesso ONTAP negato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Blocco dell'accesso utente"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/cs_restrict_user_access.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/cs_restrict_user_access.html">
+        Blocco dell'accesso utente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Simulazione di un attacco ransomware"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_cs_attack_simulator.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_cs_attack_simulator.html">
+        Simulazione di un attacco ransomware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notifiche"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/cs_notifications_email.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/cs_notifications_email.html">
+        Notifiche
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API per la sicurezza del carico di lavoro"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_cs_api.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_cs_api.html">
+        API per la sicurezza del carico di lavoro
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Active IQ"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_activeiq.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/concept_activeiq.html">
+        Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Risoluzione dei problemi</div>-->
+         Risoluzione dei problemi
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione generale dei problemi"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_troubleshooting_general_problems.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_troubleshooting_general_problems.html">
+        Risoluzione generale dei problemi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi relativi all'unità di acquisizione Linux"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_troubleshooting_linux_acquisition_unit_problems.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_troubleshooting_linux_acquisition_unit_problems.html">
+        Risoluzione dei problemi relativi all'unità di acquisizione Linux
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi relativi all'unità di acquisizione di Windows"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_troubleshooting_windows_acquisition_unit_problems.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_troubleshooting_windows_acquisition_unit_problems.html">
+        Risoluzione dei problemi relativi all'unità di acquisizione di Windows
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ricerca degli errori di Data Collector"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_research_failed_collector.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/task_research_failed_collector.html">
+        Ricerca degli errori di Data Collector
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Matrice di supporto Data Collector"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reference_data_collector_support_matrix.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/reference_data_collector_support_matrix.html">
+        Matrice di supporto Data Collector
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento e supporto"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Riferimento e supporto</div>-->
+         Riferimento e supporto
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiesta di supporto"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_requesting_support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/concept_requesting_support.html">
+        Richiesta di supporto
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Collector Reference - infrastruttura"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Data Collector Reference - infrastruttura</div>-->
+         Data Collector Reference - infrastruttura
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica di riferimento del vendor"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/concept_data_collector_reference.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/concept_data_collector_reference.html">
+        Panoramica di riferimento del vendor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_amazon_ec2.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_amazon_ec2.html">
+        AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amazon FSX per NetApp ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_amazon_fsx.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_na_amazon_fsx.html">
+        Amazon FSX per NetApp ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ms_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_ms_azure.html">
+        Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Broadcom"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Broadcom</div>-->
+         Broadcom
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Brocade Network Advisor"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_brocade_bna.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_brocade_bna.html">
+        Brocade Network Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Switch Fibre Channel"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_brocade_fc_switch.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_brocade_fc_switch.html">
+        Switch Fibre Channel
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cisco"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_cisco_fc_switch.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_cisco_fc_switch.html">
+        Cisco
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SmartfFiles di Cohesity"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_cohesity_smartfiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_cohesity_smartfiles.html">
+        SmartfFiles di Cohesity
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dell"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Dell</div>-->
+         Dell
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Serie XC"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_dell_xc_series.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_dell_xc_series.html">
+        Serie XC
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dell EMC"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Dell EMC</div>-->
+         Dell EMC
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data Domain (dominio dati)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_datadomain.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_datadomain.html">
+        Data Domain (dominio dati)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ECS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_ecs.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_ecs.html">
+        ECS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerScale"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_isilon.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_isilon.html">
+        PowerScale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ISILON/PowerScale REST"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_isilon_rest.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_isilon_rest.html">
+        ISILON/PowerScale REST
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerStore"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_powerstore.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_powerstore.html">
+        PowerStore
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="RecoverPoint"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_recoverpoint.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_recoverpoint.html">
+        RecoverPoint
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ScaleIO"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_scaleio.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_scaleio.html">
+        ScaleIO
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Unità (VNXe)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_unity.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_unity.html">
+        Unità (VNXe)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMAX/PowerMax"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_vmax_powermax.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_vmax_powermax.html">
+        VMAX/PowerMax
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Blocco VNX (CLARiiON)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_vnx_block.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_vnx_block.html">
+        Blocco VNX (CLARiiON)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="File VNX (Celerra)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_vnx_file.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_vnx_file.html">
+        File VNX (Celerra)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VNX unificato"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_vnx_unified.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_vnx_unified.html">
+        VNX unificato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VPLEX"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_vplex.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_vplex.html">
+        VPLEX
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="XtremIO"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_emc_xio.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_emc_xio.html">
+        XtremIO
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Fujitsu"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_fujitsu_eternus.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_fujitsu_eternus.html">
+        Fujitsu
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Google"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_google_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_google_cloud.html">
+        Google
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HP Enterprise"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> HP Enterprise</div>-->
+         HP Enterprise
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HP Alletra 9000 e Primera"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hp_3par.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hp_3par.html">
+        HP Alletra 9000 e Primera
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AE HP Command View"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hpe_commandview.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hpe_commandview.html">
+        AE HP Command View
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HPE Alletra 6000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hpe_nimble.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hpe_nimble.html">
+        HPE Alletra 6000
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hitachi Data Systems"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Hitachi Data Systems</div>-->
+         Hitachi Data Systems
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Suite di comandi HDS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hds_commandsuite.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hds_commandsuite.html">
+        Suite di comandi HDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HNAS HDS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hds_nas.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hds_nas.html">
+        HNAS HDS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Centro operativo HDS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_hds_ops_center.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_hds_ops_center.html">
+        Centro operativo HDS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Infinidat"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_infinidat_infinibox.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_infinidat_infinibox.html">
+        Infinidat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Huawei"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_huawei_oceanstor.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_huawei_oceanstor.html">
+        Huawei
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="IBM"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> IBM</div>-->
+         IBM
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cleversafe"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_cleversafe.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_cleversafe.html">
+        Cleversafe
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SERIE CS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_cs.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_cs.html">
+        SERIE CS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage di sistema serie DS8000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_ds.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_ds.html">
+        Storage di sistema serie DS8000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PowerVM"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_powervm.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_powervm.html">
+        PowerVM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Controller volume SAN (SVC)"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_svc.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_svc.html">
+        Controller volume SAN (SVC)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="XIV/A9000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ibm_xiv.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ibm_xiv.html">
+        XIV/A9000
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lenovo"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_lenovo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_lenovo.html">
+        Lenovo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Microsoft"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Microsoft</div>-->
+         Microsoft
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure NetApp Files"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ms_anf.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ms_anf.html">
+        Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hyper-V."
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_ms_hyperv.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_ms_hyperv.html">
+        Hyper-V.
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> NetApp</div>-->
+         NetApp
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connessione cloud per ONTAP 9.9+"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_cloud_connection.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_cloud_connection.html">
+        Connessione cloud per ONTAP 9.9+
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_cloud_volumes_ontap.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_cloud_volumes_ontap.html">
+        Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes Services per AWS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_cloud_volumes.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_cloud_volumes.html">
+        Cloud Volumes Services per AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Software per la gestione dei dati ONTAP"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_cdot.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_cdot.html">
+        Software per la gestione dei dati ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modalità Data ONTAP 7"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_7mode.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_7mode.html">
+        Modalità Data ONTAP 7
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="E-Series"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_eseries.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_eseries.html">
+        E-Series
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Server di gestione NetApp HCI"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_hci.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_hci.html">
+        Server di gestione NetApp HCI
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SolidFire"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_solidfire.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_solidfire.html">
+        SolidFire
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="StorageGRID"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_na_storagegrid.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/cloudinsights/task_dc_na_storagegrid.html">
+        StorageGRID
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nutanix"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_nutanix.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_nutanix.html">
+        Nutanix
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="OpenStack"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_openstack.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_openstack.html">
+        OpenStack
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Oracle"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_oracle_zfs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_oracle_zfs.html">
+        Oracle
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Puro"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_pure_flasharray.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_pure_flasharray.html">
+        Puro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Red Hat"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_redhat_virtualization.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_redhat_virtualization.html">
+        Red Hat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rubrik CDM"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_rubrik_cdm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_rubrik_cdm.html">
+        Rubrik CDM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_dc_vmware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_dc_vmware.html">
+        VMware
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento Data Collector - servizi"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/cloudinsights/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/cloudinsights/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Riferimento Data Collector - servizi</div>-->
+         Riferimento Data Collector - servizi
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Host/nodo"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_node.html">
+        Host/nodo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ActiveMQ"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_activemq.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_activemq.html">
+        ActiveMQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Apache"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_apache.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_apache.html">
+        Apache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Console"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_consul.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_consul.html">
+        Console
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Couchbase"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_couchbase.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_couchbase.html">
+        Couchbase
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Database dei CouchDB"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_couchdb.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_couchdb.html">
+        Database dei CouchDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Docker"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_docker.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_docker.html">
+        Docker
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elasticsearch"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_elasticsearch.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_elasticsearch.html">
+        Elasticsearch
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flink"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_flink.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_flink.html">
+        Flink
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Hadoop"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_hadoop.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_hadoop.html">
+        Hadoop
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HAProxy"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_haproxy.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_haproxy.html">
+        HAProxy
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Java"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_jvm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_jvm.html">
+        Java
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kafka"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_kafka.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_kafka.html">
+        Kafka
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kapacitor"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="task_config_telegraf_kapacitor.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_kapacitor.html">
+        Kapacitor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kibana"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_kibana.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_kibana.html">
+        Kibana
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_agent.html#kubernetes" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_agent.html#kubernetes">
+        Kubernetes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Memcached"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_memcached.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_memcached.html">
+        Memcached
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MongoDB"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_mongodb.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_mongodb.html">
+        MongoDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="MySQL"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_mysql.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_mysql.html">
+        MySQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Netstat"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_netstat.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_netstat.html">
+        Netstat
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nginx"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_nginx.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_nginx.html">
+        Nginx
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="OpenZFS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="task_config_telegraf_openzfs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_openzfs.html">
+        OpenZFS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="PostgreSQL"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_postgresql.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_postgresql.html">
+        PostgreSQL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Marionetta"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_puppetagent.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_puppetagent.html">
+        Marionetta
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Redis"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/task_config_telegraf_redis.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_redis.html">
+        Redis
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="RethinkDB"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="task_config_telegraf_rethinkdb.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_rethinkdb.html">
+        RethinkDB
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Zoosekeeper"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="task_config_telegraf_zookeeper.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/cloudinsights/task_config_telegraf_zookeeper.html">
+        Zoosekeeper
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento icona oggetto"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reference_object_icons.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/cloudinsights/reference_object_icons.html">
+        Riferimento icona oggetto
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/ws_allowed_file_types.html" 
+      dale-entry-url="/reference_legal_notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/cloudinsights/reference_legal_notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/it-it/cloudinsights"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/it-it/cloudinsights"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/it-it/cloudinsights/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Criteri tipi di file consentiti</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-11-01 15:15:41 +0000">11/01/2023</time>
+        
+    
+    
+        <span>Collaboratori
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/it-it/cloudinsights/images/discuss-sm.svg" alt="" class="github-icon" />Suggerisci modifiche</span>
+        <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/it-it/cloudinsights/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/cloudinsights/ws_allowed_file_types.html&page-title=Criteri tipi di file consentiti" class="page-nav-contribute-link" role="button">Richiedi modifiche alla documentazione</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/cloudinsights/blob/main/ws_allowed_file_types.adoc" class="page-nav-contribute-link" role="button">Modifica questa pagina</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Scopri come collaborare</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/it-it/cloudinsights/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/it-it/cloudinsights/pdfs/fullsite-sidebar/Documentazione_Cloud_Insights.pdf" >
+                    <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Sicurezza.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Sicurezza
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Per_iniziare.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Per iniziare
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Raccolta_dei_dati.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Raccolta dei dati
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Risoluzione_automatica_del_dispositivo.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Risoluzione automatica del dispositivo
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Creazione_di_dashboard.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Creazione di dashboard
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dashboard_di_esempio.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Dashboard di esempio
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Kubernetes.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Kubernetes
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Approfondimenti.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Approfondimenti
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Lavorare_con_le_query.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Lavorare con le query
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Utilizzo_delle_annotazioni.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Utilizzo delle annotazioni
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Utilizzo_delle_applicazioni.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Utilizzo delle applicazioni
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Monitor_e_avvisi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Monitor e avvisi
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Monitoraggio_dell_ambiente.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Monitoraggio dell'ambiente
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Informazioni_sulla_pagina_delle_risorse.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Informazioni sulla pagina delle risorse
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Creazione_di_report.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Creazione di report
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Sicurezza_del_carico_di_lavoro.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Sicurezza del carico di lavoro
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Per_iniziare.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Per iniziare
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Analisi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Analisi
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Risoluzione_dei_problemi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Risoluzione dei problemi
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Riferimento_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Riferimento e supporto
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Data_Collector_Reference___infrastruttura.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Data Collector Reference - infrastruttura
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Broadcom.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Broadcom
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dell.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Dell
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Dell_EMC.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Dell EMC
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/HP_Enterprise.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            HP Enterprise
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Hitachi_Data_Systems.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Hitachi Data Systems
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/IBM.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            IBM
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Microsoft.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Microsoft
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/NetApp.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/cloudinsights/pdfs/sidebar/Riferimento_Data_Collector___servizi.pdf" 
+            
+          >
+            <img src="/it-it/cloudinsights/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Riferimento Data Collector - servizi
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/it-it/cloudinsights/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph lead">
+<p>Se viene rilevato un attacco ransomware per un'estensione di file nota e vengono generati degli avvisi nella schermata Alerts, è possibile aggiungere tale estensione a un elenco dei tipi di file <em>consentiti</em> per evitare avvisi non necessari.</p>
+</div>
+<div class="paragraph">
+<p>Accedere a <strong>sicurezza del carico di lavoro &gt; Criteri</strong> e andare alla scheda <em>Criteri del tipo di file consentiti</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="WS_Allowed_File_Type_Policies.png" alt="Criteri tipi di file consentiti"></span></p>
+</div>
+<div class="paragraph">
+<p>Una volta aggiunto all'elenco <em>allowed file types</em>, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito. Si noti che la policy <em>tipi di file consentiti</em> è applicabile solo per il rilevamento del ransomware.</p>
+</div>
+<div class="paragraph">
+<p>Ad esempio, se un file denominato <em>test.txt</em> viene rinominato <em>test.txt.abc</em> e workload Security rileva un attacco ransomware a causa dell'estensione <em>.abc</em>, l'estensione <em>.abc</em> può essere aggiunta all'elenco <em>allowed file types</em>. Dopo essere stati aggiunti all'elenco, gli attacchi ransomware non verranno più generati sui file con estensione <em>.abc</em>.</p>
+</div>
+<div class="paragraph">
+<p>I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".<strong>type", ".type</strong>" o "<strong>type</strong>"). Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.</p>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/it-it/cloudinsights/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/it-it/cloudinsights/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">In questa pagina</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/cloudinsights/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/cloudinsights/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/cloudinsights/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/cloudinsights/js/ie-tabbed-blocks.js'></script>
+    <script src='/it-it/cloudinsights/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
