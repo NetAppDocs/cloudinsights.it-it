@@ -260,16 +260,16 @@ Eseguire il frammento Image Pull dalla sezione di installazione di NetApp Monito
 Funzionalità principale dell'operatore e monitoraggio Kubernetes
 
 * monitoraggio netapp
-* kube-rbac-proxy
-* kube-state-metrics
-* telefono
+* ci-kube-rbac-proxy
+* ci-ksm
+* ci-telegraf
 * distroless-root-user
 
 
 Registro eventi
 
-* fluente
-* kubernetes-event-exportent
+* ci-fluent-bit
+* ci-kukasub-esportatore-di-eventi
 
 
 Mappa e performance di rete
@@ -282,7 +282,7 @@ Trasferire l'immagine del gestore nel repository del supporto privato/locale/azi
 Modificare l'implementazione dell'operatore di monitoraggio in operator-deployment.yaml e modificare tutti i riferimenti alle immagini per utilizzare il repository Docker privato.
 
 ....
-image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<kube-rbac-proxy version>
+image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<ci-kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
 Modificare la configurazione dell'agente in operator-config.yaml in modo che rifletta la nuova posizione del responsabile del docker. Crea un nuovo imagePullSecret per il tuo repository privato; per ulteriori dettagli, consulta _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
