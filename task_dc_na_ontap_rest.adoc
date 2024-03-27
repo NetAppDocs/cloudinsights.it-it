@@ -23,16 +23,123 @@ NOTE: Il collettore REST ONTAP può essere utilizzato in sostituzione del collet
 
 
 
+== Requisiti
+
+Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
+
+* È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.
++
+** Dal punto di vista funzionale, Cloud Insights effettua principalmente richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Cloud Insights possa registrarsi con l'array ONTAP. Consultare la _Nota sulle autorizzazioni_ immediatamente riportata di seguito.
+
+
+* ONTAP versione 9.14.1 o successiva.
+* Requisiti di porta: 443
+
+
+
+
+== Nota sulle autorizzazioni
+
+Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
+
+Per creare un account locale per Cloud Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
+
+. Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
+. Recuperare il nome del server virtuale di tipo _admin_. Questo nome verrà utilizzato nei comandi successivi.
++
+ vserver show -type admin
+. Creare un ruolo utilizzando i seguenti comandi:
++
+....
+security login rest-role create -role {role name} -api /api -access readonly
+security login rest-role create -role {role name} -api /api/cluster/agents -access all
+vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
+security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
+....
+. Creare l'utente di sola lettura utilizzando il seguente comando. Una volta eseguito il comando create, viene richiesto di inserire una password per questo utente.
++
+ security login create -username ci_user -application http -authentication-method password -role ci_readonly
+
+
+Se si utilizza un account ad/LDAP, il comando deve essere
+
+ security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly
+Il ruolo e l'accesso utente risultanti saranno simili a quanto segue. L'output effettivo può variare:
+
+[listing]
+----
+security login rest-role show -vserver <vserver name> -role restRole
+
+               Role                                    Access
+Vserver        Name            API                     Level
+----------     -------------   -------------------     ------
+<vserver name> restRole        /api                    readonly
+                               /api/cluster/agents     all
+2 entries were displayed.
+
+security login show -vserver <vserver name> -user-or-group-name restUser
+
+Vserver: <vserver name>
+                                                                 Second
+User/Group                 Authentication                 Acct   Authentication
+Name           Application Method        Role Name        Locked Method
+-------------- ----------- ------------- ---------------- ------ --------------
+restUser       http        password      restRole         no     none
+----
+
+
 == Migrazione
 
 Per migrare da un data collector ONTAP (ontapi) precedente al più recente REST Collector ONTAP, procedere come segue:
 
-. Aggiungere il REST Collector, inserendo tutti gli stessi utenti/autorizzazioni/ecc. hai avuto per il collezionista precedente.
-. Mettere in pausa il raccoglitore precedente.
-. Lasciare che il sistema raccolga i dati per circa 30 minuti. Ignorare eventuali variazioni di dati durante questo intervallo di tempo.
-. Dopo il periodo di riposo, si vedrà una continuazione stabile dei dati sul collettore di RIPOSO.
+. Aggiungere il REST Collector. Si consiglia di immettere informazioni per un utente diverso da quello configurato per il collettore precedente. Ad esempio, utilizzare l'utente annotato nella sezione autorizzazioni sopra riportata.
+. Mettere in pausa il collettore precedente, in modo che non continui a raccogliere dati.
+. Lasciare che il nuovo REST Collector acquisisca i dati per almeno 30 minuti. Ignorare i dati che non appaiono "normali" durante questo periodo di tempo.
+. Dopo il periodo di riposo, i dati dovrebbero stabilizzarsi mentre il collettore di REST continua ad acquisire.
 
 
+È possibile utilizzare lo stesso processo per tornare al raccoglitore precedente, se lo si desidera.
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP di gestione ONTAP | Indirizzo IP o nome di dominio completo del cluster NetApp. Deve essere IP/FQDN di gestione cluster. 
+
+
+| Nome utente REST ONTAP | Nome utente del cluster NetApp 
+
+
+| Password REST ONTAP | Password per il cluster NetApp 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti. 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 60 secondi. 
+
+
+| Advanced Counter Data Collection | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Attivato per impostazione predefinita. 
+
+
+| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. Attivato per impostazione predefinita. 
+
+
+| Intervallo polling EMS (sec) | Il valore predefinito è 60 secondi. 
+|===
 
 
 == Terminologia
@@ -123,63 +230,6 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 
 
-== Requisiti
-
-Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
-
-* È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.
-* ONTAP versione 9.14.1 o successiva.
-* I dettagli dell'account includono nome utente e password.
-* Requisiti di porta: 443
-* Permessi dell'account:
-+
-** Dal punto di vista funzionale, Cloud Insights sta effettuando richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Cloud Insights possa registrarsi con l'array ONTAP. Vedere <<a-note-about-permissions,Nota sulle autorizzazioni>> di seguito.
-
-
-
-
-
-
-== Configurazione
-
-[cols="2*"]
-|===
-| Campo | Descrizione 
-
-
-| Indirizzo IP di gestione ONTAP | Indirizzo IP o nome di dominio completo del cluster NetApp. Deve essere IP/FQDN di gestione cluster. 
-
-
-| Nome utente REST ONTAP | Nome utente del cluster NetApp 
-
-
-| Password REST ONTAP | Password per il cluster NetApp 
-|===
-
-
-== Configurazione avanzata
-
-[cols="2*"]
-|===
-| Campo | Descrizione 
-
-
-| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti. 
-
-
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 60 secondi. 
-
-
-| Advanced Counter Data Collection | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Attivato per impostazione predefinita. 
-
-
-| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. Attivato per impostazione predefinita. 
-
-
-| Intervallo polling EMS (sec) | Il valore predefinito è 60 secondi. 
-|===
-
-
 == Metriche di potenza ONTAP
 
 Diversi modelli ONTAP forniscono metriche di alimentazione per Cloud Insights che possono essere utilizzate per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
@@ -219,56 +269,6 @@ FAS/AFF 8040
 FAS/AFF 8060
 FAS/AFF 8080
 
-
-
-== Nota sulle autorizzazioni
-
-Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
-
-Per creare un account locale per Cloud Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
-
-. Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
-. Recuperare il nome del server virtuale di tipo _admin_. Questo nome verrà utilizzato nei comandi successivi.
-+
- vserver show -type admin
-. Creare un ruolo utilizzando i seguenti comandi:
-+
-....
-security login rest-role create -role {role name} -api /api -access readonly
-security login rest-role create -role {role name} -api /api/cluster/agents -access all
-vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
-security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
-....
-. Creare l'utente di sola lettura utilizzando il seguente comando. Una volta eseguito il comando create, viene richiesto di inserire una password per questo utente.
-+
- security login create -username ci_user -application http -authentication-method password -role ci_readonly
-
-
-Se si utilizza un account ad/LDAP, il comando deve essere
-
- security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly
-Il ruolo e l'accesso utente risultanti saranno simili a quanto segue. L'output effettivo può variare:
-
-[listing]
-----
-security login rest-role show -vserver <vserver name> -role restRole
-
-               Role                                    Access
-Vserver        Name            API                     Level
-----------     -------------   -------------------     ------
-<vserver name> restRole        /api                    readonly
-                               /api/cluster/agents     all
-2 entries were displayed.
-
-security login show -vserver <vserver name> -user-or-group-name restUser
-
-Vserver: <vserver name>
-                                                                 Second
-User/Group                 Authentication                 Acct   Authentication
-Name           Application Method        Role Name        Locked Method
--------------- ----------- ------------- ---------------- ------ --------------
-restUser       http        password      restRole         no     none
-----
 
 
 == Risoluzione dei problemi
