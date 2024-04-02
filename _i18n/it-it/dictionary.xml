@@ -1080,8 +1080,6 @@
   <block id="38cfe5a8a180b915d5558a3770b76e3e" category="paragraph">Best practice: Si consiglia vivamente di assegnare il criterio _AmazonS3ReadOnlyAccess_ predefinito di AWS all'account principale S3. Inoltre, l'utente configurato nell'origine dati deve avere assegnato almeno il criterio _AWSOrganizationsReadOnlyAccess_ predefinito, per eseguire query su AWS.</block>
   <block id="e9017792019e9d0101cc81616e5cec41" category="summary">Iscrizione a Cloud Insights e creazione dell'ambiente.</block>
   <block id="695d7a391bb9043561bcc3c254868311" category="doc">Assunzione di Cloud Insights</block>
-  <block id="964a8b3315ffa6f99cb6f09543be37c8" category="paragraph">Prima di iniziare a lavorare con Cloud Insights, è necessario iscriversi al portale *NetApp BlueXP* (in precedenza Cloud Central). Se disponi già di un account di accesso a NetApp Cloud Central, puoi avviare una versione di prova gratuita di Cloud Insights con pochi passaggi rapidi.</block>
-  <block id="25866b1c01dcfb4e4ba435720ed78045" category="section-title">Creazione del tuo account NetApp Cloud Central</block>
   <block id="21a763771df4e64b083a2b050ce81f09" category="inline-link">*NetApp BlueXP*</block>
   <block id="79f4eac777cfb8f368485c1ed783c385" category="paragraph">Per iniziare a utilizzare i servizi cloud di NetApp, visitare il sito Web all'indirizzo<block ref="bb4bedb035450655c109a482f18f7a40" category="inline-link-rx"></block> E fare clic su *inizia*.</block>
   <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">Se non hai ancora effettuato la registrazione, seleziona *Registrati*</block>
@@ -1098,19 +1096,13 @@
   <block id="5d6203b83b93ae1cf7e9b34368cd7f9d" category="paragraph"><block ref="5d6203b83b93ae1cf7e9b34368cd7f9d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b1d39b97c6fe789fe5e7963f078e112d" category="section-title">Avvio della versione di prova gratuita di Cloud Insights</block>
   <block id="7395877188489ccb99fbacc8cc003a01" category="paragraph">Se è la prima volta che accedi a Cloud Insights, sotto l'offerta Cloud Insights, fai clic su *Avvia prova gratuita*. Cloud Insights ti guiderà nella creazione dell'ambiente della tua azienda.</block>
-  <block id="5787741cafb89158f9880654c9e9b5a5" category="paragraph">Una volta completata la creazione del tuo ambiente, puoi utilizzare le tue credenziali Cloud Central per accedere e iniziare la prova gratuita di 30 giorni di Cloud Insights. Durante questa versione di prova potrai esplorare le funzionalità offerte da Cloud Insights.</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">avvia l'abbonamento</block>
   <block id="93219f4a6fd1dbd20138a0a65d6e08de" category="paragraph">Durante la prova gratuita, è possibile <block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> A Cloud Insights in qualsiasi momento. Una volta effettuato l'abbonamento, è possibile utilizzare le funzioni di Cloud Insights in base all'abbonamento in uso.</block>
   <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">Accedi e vai</block>
-  <block id="485f7bb9e7cc7894cf2e75343120bbf5" category="paragraph">Una volta creato l'ambiente, è sufficiente accedere al portale cloud di NetApp e fare clic su *Go to Cloud Insights* (Vai a NetApp*). Sarete portati direttamente al vostro ambiente Cloud Insights.</block>
   <block id="8dac70c4541c93f0deed8b8bd734a673" category="paragraph">È anche possibile aprire un browser direttamente sull'URL dell'ambiente Cloud Insights, ad esempio:</block>
-  <block id="0e15f0ff9eb552105028ff08fc92e09f" category="paragraph">L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per un accesso semplice e per la creazione di segnalibri. Se l'utente non ha già effettuato l'accesso a Cloud Central, verrà richiesto di effettuare l'accesso.</block>
-  <block id="0df3e25ccf83cd4779234f7f928bebb5" category="admonition">I nuovi utenti devono comunque iscriversi per accedere a Cloud Central prima di poter accedere all'URL del proprio ambiente.</block>
   <block id="da115c4fc9cae6fc87764395ef9ff331" category="inline-link-macro">*iniziare a raccogliere i dati*</block>
   <block id="8308d29f13c3d3cc69f506dfead0a733" category="paragraph">La prima volta che si accede a un nuovo ambiente, viene guidata la configurazione di <block ref="2949f1254245e371c2d697f481723a7e" category="inline-link-macro-rx"></block>.</block>
   <block id="cc580c5eecd9c28053db6de1830561ee" category="section-title">Disconnessione</block>
-  <block id="5f5052459ed746a225d85b63238531d1" category="paragraph">Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrà visualizzata nuovamente la schermata di accesso a Cloud Central.</block>
-  <block id="21648aceb436779ee1938a15ced12e7e" category="admonition">La disconnessione da Cloud Insights ti disconnette da Cloud Central. Sarai anche disconnesso da altri servizi cloud di NetApp che utilizzano l'accesso a Cloud Central.</block>
   <block id="aca759ec023e2e4c6156b1c2ced1b16b" category="summary">Aggiunta di data colleziones</block>
   <block id="fc5aca4e5185f241f9160502eac0b160" category="doc">Configurazione di NetApp ONTAP Data Collector</block>
   <block id="0280e5619ae48b4e379ebb140a49e816" category="paragraph">Workload Security utilizza i data colleator per raccogliere i dati di accesso ai file e agli utenti dai dispositivi. I dati vengono forniti a workload Security per l'analisi.</block>
@@ -13044,4 +13036,14 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="6e79cf0edf33ec7a0066155d964eeb57" category="list-text">Dal menu Cloud Insights, fare clic su *osservabilità &gt; Collector* e fare clic sul pulsante *+ Data Collector*.</block>
   <block id="710ec696cccefe4c3faa1d7ebf8fca87" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegli Kibana.</block>
   <block id="c71f6654a45927e285ab22a697438b43" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegli MongoDB.</block>
+  <block id="2e95a4622d16ffb729672b5838f5732b" category="paragraph">Prima di iniziare a lavorare con Cloud Insights, è necessario registrarsi sul portale *NetApp BlueXP*. Se hai già un accesso BlueXP, puoi avviare una prova gratuita di Cloud Insights con pochi e rapidi passaggi.</block>
+  <block id="5bff30d13ce98c505187872963af1f25" category="section-title">Creazione dell'account NetApp BlueXP</block>
+  <block id="f21c4669cdc7c8b69bb7b9e4f65412b9" category="paragraph">Una volta completata la creazione del tuo ambiente, puoi utilizzare le tue credenziali BlueXP per accedere e iniziare la prova gratuita di 30 giorni di Cloud Insights. Durante questa versione di prova potrai esplorare le funzionalità offerte da Cloud Insights.</block>
+  <block id="43e7ba0a52e8b0f8e52ee853f0e4ece5" category="paragraph">Una volta creato l'ambiente, sarà possibile accedere in qualsiasi momento al portale NetApp BlueXP e fare clic su *Vai a Cloud Insights*. Sarete portati direttamente al vostro ambiente Cloud Insights.</block>
+  <block id="c95038e09e37b3186bbce880a572f8f5" category="paragraph">L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per un accesso semplice e per la creazione di segnalibri. Se l'utente non ha già effettuato l'accesso a BlueXP, verrà richiesto di effettuare l'accesso.</block>
+  <block id="30a2b0510383d7eabe73f5621c5ec906" category="admonition">I nuovi utenti devono comunque registrarsi per l'accesso a BlueXP prima che possano accedere all'URL del loro ambiente.</block>
+  <block id="73d58318fd6991da49fe32dc00a56f19" category="paragraph">Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.</block>
+  <block id="201ec49877bf4303e362a0aac3add32b" category="admonition">La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.</block>
+  <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">Timeout di inattività</block>
+  <block id="db7d4581c8073d9c4dda50c4994c4383" category="paragraph">Per impostazione predefinita, BlueXP effettua il log out di un utente in assenza di attività per sei ore (360 minuti). Indipendentemente dall'attività, gli utenti verranno disconnessi dopo sette giorni.</block>
 </blocks>
