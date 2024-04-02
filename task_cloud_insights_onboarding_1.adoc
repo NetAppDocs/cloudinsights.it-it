@@ -38,7 +38,7 @@ Per iniziare a utilizzare i servizi cloud di NetApp, visitare il sito Web all'in
 
 
 
-=== Cosa fare se si dispone già di un login NetApp Cloud?
+=== Cosa succede se dispongo già di un accesso a NetApp BlueXP?
 
 Una volta ottenuto un account NetApp BlueXP, è sufficiente selezionare *Accedi* sul https://cloud.netapp.com["*NetApp BlueXPl*"^] pagina del portale.
 
@@ -78,7 +78,7 @@ La prima volta che si accede a un nuovo ambiente, viene guidata la configurazion
 
 == Disconnessione
 
-Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.
+Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato al link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-logging-in.html["Accedi a BlueXP"] schermo.
 
 
 NOTE: La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.
