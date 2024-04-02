@@ -40,11 +40,45 @@ Le credenziali del data collector vengono crittografate quando vengono immesse i
 
 == Configurazione di Data Collector
 
-* Dal menu Cloud Insights, fare clic su *osservabilità > Collector* e fare clic sul pulsante *+ Data Collector*. Puoi scegliere di visualizzare tutti i data collezionisti o di filtrare per visualizzare solo i data collezionisti disponibili in base al tuo abbonamento.
-
-
+* Dal menu Cloud Insights, fare clic su *osservabilità > Collector* e fare clic sul pulsante *+ Data Collector*.
 * A seconda del tipo di data collector scelto, i passaggi per l'installazione variano.
 
+
+
+
+=== Infrastruttura:
+
+I data collettori dell'infrastruttura includono elementi come lo storage o gli switch.
+
+.Prima di iniziare
+* Per iniziare a raccogliere i dati dell'infrastruttura, è necessario configurare almeno un'unità di acquisizione.
++
+.. Fare clic su un data collector per l'infrastruttura.
+.. Inserire un nome per il data collector. I nomi possono contenere i seguenti caratteri:
+
+
+* lettera (a-z)
+* numero (0-9)
+* trattino (-)
+* sottolineatura (_)
+* periodo (.)
+* spazio ( )
++
+I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.
+
++
+.. Inserire l'unità di acquisizione da associare a questo data collector.
+.. Inserire i campi obbligatori nella schermata Configuration (Configurazione).
+.. Fare clic su *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori campi di configurazione. Non tutti i data collettori richiedono una configurazione avanzata.
+.. Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
+.. Al termine, fare clic su *Add Collector*.
+
+
+
+
+Per informazioni sull'aggiunta di una nuova unità di acquisizione, vedere link:task_configure_acquisition_unit.html["Configurazione delle unità di acquisizione"]
+
+Inoltre, potrebbero essere necessari fino a due periodi di polling prima che i dati dell'ambiente vengano visualizzati in dashboard o disponibili per la query.
 
 
 
@@ -86,39 +120,3 @@ Potrebbero essere necessari fino a due periodi di polling prima che i dati del s
 
 
 
-
-
-
-=== Infrastruttura:
-
-I data collettori dell'infrastruttura includono elementi come lo storage o gli switch.
-
-.Prima di iniziare
-* Per iniziare a raccogliere i dati dell'infrastruttura, è necessario configurare almeno un'unità di acquisizione.
-+
-.. Fare clic su un data collector per l'infrastruttura.
-.. Inserire un nome per il data collector. I nomi possono contenere i seguenti caratteri:
-
-
-* lettera (a-z)
-* numero (0-9)
-* trattino (-)
-* sottolineatura (_)
-* periodo (.)
-* spazio ( )
-+
-I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.
-
-+
-.. Inserire l'unità di acquisizione da associare a questo data collector.
-.. Inserire i campi obbligatori nella schermata Configuration (Configurazione).
-.. Fare clic su *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori campi di configurazione. Non tutti i data collettori richiedono una configurazione avanzata.
-.. Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
-.. Al termine, fare clic su *Add Collector*.
-
-
-
-
-Per informazioni sull'aggiunta di una nuova unità di acquisizione, vedere link:task_configure_acquisition_unit.html["Configurazione delle unità di acquisizione"]
-
-Inoltre, potrebbero essere necessari fino a due periodi di polling prima che i dati dell'ambiente vengano visualizzati in dashboard o disponibili per la query.

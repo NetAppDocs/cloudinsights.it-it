@@ -21,7 +21,7 @@ summary: Configurazione del data collector Elasticsearch
 [role="lead"]
 Cloud Insights utilizza questo data collector per raccogliere le metriche da Elasticsearch.
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Elasticsearch.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Elasticsearch.
 +
 Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
 

@@ -25,7 +25,7 @@ Cloud Insights utilizza questo data collector per raccogliere metriche da DC/OS.
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere *DC/OS*.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere *DC/OS*.
 +
 Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"] nel tuo ambiente.
 

@@ -25,7 +25,7 @@ Cloud Insights utilizza questo data collector per raccogliere le metriche da HAP
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere HAProxy.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere HAProxy.
 +
 Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
 

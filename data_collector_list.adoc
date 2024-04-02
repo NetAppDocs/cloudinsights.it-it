@@ -34,9 +34,6 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | Data Collector | Tipo 
 
 
-| link:task_config_telegraf_activemq.html["ActiveMQ"] | Servizio 
-
-
 | link:task_dc_amazon_ec2.html["Amazon EC2 ed EBS"] | Infrastruttura 
 
 

@@ -25,7 +25,7 @@ Cloud Insights utilizza questo data collector per raccogliere le metriche da Inf
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. In *servizi*, scegliere Kapacitor.
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Kapacitor.
 +
 Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
 
