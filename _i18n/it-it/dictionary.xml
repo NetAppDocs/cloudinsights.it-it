@@ -7831,7 +7831,6 @@
   <block id="3b7c5615013c6b42362845591653e503" category="cell">EnableDNSLookup</block>
   <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">Vero/falso, attiva ricerca DNS</block>
   <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">Esempio di file AgentConfiguration</block>
-  <block id="fc8a8119975d70c9ea4470d26aa4640b" category="paragraph">Di seguito è riportato un esempio di file AgentConfiguration. Non tutte le opzioni vengono acquisite qui:</block>
   <block id="e15fca67cd8338997729ad4099343915" category="summary">Utilizzare questa procedura per creare un report utilizzando i report Cloud Insights predefiniti.</block>
   <block id="8dff98a51b599d1388a5c2eaff15bfbd" category="doc">Creazione di un report (esempio)</block>
   <block id="d4bcce6f1018e3844c63df7e66d7890d" category="paragraph">Utilizzare i passaggi descritti in questo esempio per generare un semplice report sulla capacità fisica dei pool di storage e storage in diversi data center.</block>
@@ -13047,4 +13046,6 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="e3ad3e57d0a33a78b565817ed4710dea" category="inline-link-macro">Accedi a BlueXP</block>
   <block id="b00323e3fc84f69070c5dc2be8e5ce9e" category="paragraph">Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato al <block ref="8d1c4f3c88725cbe8b8d86c07fb5d410" category="inline-link-macro-rx"></block> schermo.</block>
   <block id="4405c285662a5ac6f84ad517037907a7" category="admonition">La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.</block>
+  <block id="e04813a849ce9da2afe9f3bfcaf85f0e" category="cell">Vero/falso - impostare runPrivileged su true se SELinux è abilitato sui tuoi nodi Kubernetes.</block>
+  <block id="e40d435b2f81693776ecb79899e30849" category="paragraph">Di seguito è riportato un esempio di file AgentConfiguration.</block>
 </blocks>
