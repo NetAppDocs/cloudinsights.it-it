@@ -40,7 +40,21 @@ La tabella seguente elenca le possibili opzioni per il file AgentConfiguration:
 |  | Nome cluster | Campo di testo libero che identifica in modo univoco un cluster in tutti i cluster dei clienti. Questo dovrebbe essere unico in un tenant Cloud Insights. Il valore predefinito è quello che il cliente inserisce nell'interfaccia utente per il campo "Cluster Name" (Nome cluster) 
 
 
-|  | Proxy Format: Proxy: Server: Porta: Nome utente: Password: NoProxy: IsTelegrafProxyEnabled: IsAuProxyEnabled: IsFluentbitProxyEnabled: IsCollectorProxyEnabled: | Opzionale per il cliente per impostare il proxy. Di solito si tratta di un proxy aziendale del cliente. 
+|  | proxy
+
+Formato:
+
+proxy:
+
+  server:
+  porta:
+  nome utente:
+  password:
+  NoProxy:
+  IsTelegrafProxyEnabled:
+  IsAuxyEnabled:
+  IsFluentbitProxyEnabled:
+  IsCollectorProxyEnabled: | Opzionale per impostare proxy. Si tratta in genere del proxy aziendale del cliente. 
 
 
 | telefono |  | Opzioni di configurazione che consentono di personalizzare l'installazione di telegraf dell'operatore 
@@ -168,10 +182,10 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
 | mappa del carico di lavoro |  | Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione della mappa del carico di lavoro dell'operatore 
 
 
-|  | CpuLimit | Limite CPU per il net osservatore ds 
+|  | CpuLimit | Limite CPU per i server di osservazione della rete 
 
 
-|  | MemLimit | Limite mem per la rete di osservazione 
+|  | MemLimit | limite mem per gli osservatori netti 
 
 
 |  | CpuRequest | Richiesta CPU per net osservatore ds 
@@ -193,6 +207,47 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
 
 
 |  | RunPriveged | Vero/falso - impostare runPrivileged su true se SELinux è abilitato sui tuoi nodi Kubernetes. 
+
+
+| change-management |  | Opzioni di configurazione per l'analisi e la gestione delle modifiche di Kubernetes 
+
+
+|  | CpuLimit | Limite CPU per change-observer-watch-rs 
+
+
+|  | MemLimit | Limite MEM per change-observer-watch-rs 
+
+
+|  | CpuRequest | Richiesta CPU per change-observer-watch-rs 
+
+
+|  | MemRequest | richiesta mem per change-observer-watch-rs 
+
+
+|  | FailureDeclarationIntervalMins | Intervallo in minuti dopo il quale un'implementazione non riuscita di un carico di lavoro viene contrassegnata come non riuscita 
+
+
+|  | DeployAggrIntervalSeconds | Frequenza con cui vengono inviati gli eventi di distribuzione del carico di lavoro in corso 
+
+
+|  | NonWorkloadAggrIntervalSeconds | Frequenza di combinazione e invio delle implementazioni non a carico di lavoro 
+
+
+|  | TermsToRedact | Insieme di espressioni regolari utilizzate nei nomi env e nelle mappe di dati il cui valore verrà rivisto
+Termini di esempio:"pwd", "password", "token", "apikey", "api-key", "jwt" 
+
+
+|  | AdditionalKindsToWatch | Un elenco separato da virgole di tipi aggiuntivi da guardare dal set di tipi predefinito guardato dal raccoglitore 
+
+
+|  | KindsToIgnoreFromWatch | Un elenco di tipi separati da virgole da ignorare dall'insieme predefinito di tipi controllati dal raccoglitore 
+
+
+|  | LogRecordAggrIntervalSeconds | Frequenza con cui i record di registro vengono inviati al ci dal raccoglitore 
+
+
+|  | tolleranza di controllo | modifica-osservatore-guarda-ds tolleranze aggiuntive. Solo formato abbreviato a riga singola.
+Esempio: '{key: taint1, operator: Exists, Effect: NoSchedule},{key: taint2, operator: Exists, Effect: NoExecute}' 
 |===
 
 
