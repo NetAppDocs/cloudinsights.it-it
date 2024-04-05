@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_acquisition_unit_requirements.html 
-summary: Il server o la macchina virtuale utilizzata come unità di acquisizione deve soddisfare i requisiti minimi 
-keywords: AU, acquisition unit, RAU, requirements, sizing 
+summary: Il server o la VM utilizzata come unità di acquisizione deve soddisfare i requisiti minimi. 
+keywords: AU, acquisition unit, requirements, sizing 
 ---
 = Requisiti dell'unità di acquisizione
 :toc: macro
@@ -33,12 +33,15 @@ keywords: AU, acquisition unit, RAU, requirements, sizing
 
 | Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti componenti:
 
-* CentOS (64 bit): Da 7,2 a 7,9, Stream 8, Stream 9
+* CentOS (64 bit): Da 7,2 a 7,9, da 8,1 a 8,4, Stream 8, Stream 9
 * Debian (64 bit): 9 e 10
-* Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,4
-* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,7, 9,1
-* Rocky 9,0, 9,1
-* Ubuntu Server: 18,04 e 20,04 LTS
+* OpenSUSE Leap dal 15,1 al 15,5
+* Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,8
+* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,8, 9,1, 9,2
+* Rocky 9,0, 9,1, 9,3
+* SUSE Enterprise Linux Server 15, dal 15 SP2 al 15 SP5
+* Ubuntu Server: 18,04, 20,04, 22,04 LTS
+* SELinux sulle piattaforme precedenti
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.
 
