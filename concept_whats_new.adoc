@@ -22,6 +22,30 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
+== Aprile 2024
+
+
+
+=== Latenza del volume iSCSI
+
+Le metriche per la latenza del volume iSCSI sono disponibili per l'utilizzo in dashboard, avvisi e altro ancora. Per raccogliere le metriche di latenza iSCSI, attivare _Network Performance and Map_ dalla voce di menu "Modifica distribuzione" di Kubernetes Collector.
+
+
+
+=== Supporto del sistema operativo
+
+Oltre a questi, le unità di acquisizione Cloud Insights supportano i seguenti sistemi operativi link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["già supportato"]:
+
+* Oracle Enterprise Linux 8,8
+* Red Hat Enterprise Linux 8,8
+* Rocky 9,3
+* OpenSUSE Leap da 15,1 a 15,5
+* SUSE Enterprise Linux Server 15, da 15 SP2 a 15 SP5
+
+
+'''
+
+
 == Marzo 2024
 
 
@@ -93,7 +117,7 @@ image:RelatedLogsTable.png["Registri correlati su una pagina di destinazione deg
 
 === Raccogliere i dati degli switch ONTAP
 
-Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"] e ha l'appropriato <<a-note-about-permissions,permessi>> impostare.
+Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"] e ha l'appropriato link:task_dc_na_cdot.html#a-note-about-permissions["permessi"] impostare.
 
 
 
@@ -116,7 +140,7 @@ Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire 
 
 === Quanto salutano i miei carichi di lavoro?
 
-Lo stato dei workload è disponibile con una semplice occhiata alla pagina *Kubernetes > Esplora > workload*, in modo da poter vedere rapidamente quali carichi di lavoro funzionano correttamente e quali potrebbero richiedere assistenza.
+Lo stato dei workload è disponibile con una semplice occhiata alla pagina *Kubernetes > Esplora > workload*, in modo da poter vedere rapidamente quali carichi di lavoro funzionano correttamente e quali potrebbero richiedere assistenza. Identifica con facilità se il problema di salute è correlato a modifiche all'infrastruttura, alla rete o alla configurazione e analizza la causa principale.
 
 image:WorkloadHealth.png["Panoramica sulla salute del workload"]
 
