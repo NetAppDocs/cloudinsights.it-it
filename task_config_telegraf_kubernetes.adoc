@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_config_telegraf_kubernetes.html 
-keywords: telegraf, installation, install, kubernetes 
+keywords: telegraf, kubernetes 
 summary: Configurazione del data collector Kubernetes 
 ---
 = Kubernetes Data Collector
@@ -25,10 +25,7 @@ Cloud Insights utilizza questo data collector per raccogliere le metriche di Kub
 
 == Installazione
 
-Per istruzioni sull'installazione di Kubernetes, consultare la link:task_config_telegraf_agent.html#kubernetes["Installazione dell'agente"] pagina.
-
-
-NOTE: Le informazioni relative alle *metriche di stato del kube* sono state spostate in link:task_config_telegraf_agent.html#kubernetes["Installazione dell'agente"] pagina.
+Per istruzioni sull'installazione di Kubernetes, consultare la link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] pagina.
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_config_telegraf_agent.html 
-keywords: telegraf, installation, install, agent, telegraf agent 
+keywords: telegraf, agent, telegraf agent 
 summary: Cloud Insights supporta Telegraf come agente per la raccolta dei dati di integrazione e può essere configurato su Windows o Linux. 
 ---
 = Configurazione di un agente per la raccolta dei dati (Windows/Linux)
@@ -23,7 +23,7 @@ Cloud Insights utilizza link:https://docs.influxdata.com/telegraf["Telefono"] co
 
 La versione corrente di Telegraf per Cloud Insights è *1.24.0*.
 
-Per informazioni sull'installazione su Kubernetes, vedere link:task_config_telegraf_agent_k8s.html["questa pagina"].
+Per informazioni sull'installazione su Kubernetes, consulta la link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] pagina.
 
 
 NOTE: Per un audit e un reporting dei dati accurati, si consiglia di sincronizzare l'ora sul computer dell'agente utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
