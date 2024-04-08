@@ -3725,7 +3725,6 @@
   <block id="0e07493de1ccce1a68aff3dbd2cd6cac" category="list-text"><block ref="0e07493de1ccce1a68aff3dbd2cd6cac" category="inline-link-macro-rx"></block></block>
   <block id="e87433704018842ba5eb9ad6c1a93e26" category="inline-link-macro">Principi di privacy di NetApp</block>
   <block id="e56b6ba842252c40995f764b4ae57614" category="list-text"><block ref="e56b6ba842252c40995f764b4ae57614" category="inline-link-macro-rx"></block></block>
-  <block id="ccb06b64aa7e8cb6a869d22deb1de8bd" category="summary">Configurazione del data collector Kubernetes</block>
   <block id="e93e9e1daf8e7243cd54ae6878bcbd91" category="paragraph">Cloud Insights utilizza questo data collector per raccogliere le metriche di Kubernetes Pod, Node e Container.</block>
   <block id="2c1099d2eb2a8a08bba13169800b9ecb" category="cell">Container Kubernetes</block>
   <block id="5415e066c63454268882855520be8f45" category="cell">Namespace Pod Container Cluster</block>
@@ -8245,7 +8244,6 @@
   <block id="ce3d712deda180dd445bfed60562d712" category="cell">Cosa succede se si esegue Event Rate Checker con un agente esistente?</block>
   <block id="697ee668360d1c19e858e5fdd25062e6" category="cell">L'esecuzione di Event Rate Checker con un agente già esistente può causare un aumento della latenza sulla SVM. Questo aumento sarà temporaneo durante l'esecuzione di Event Rate Checker.</block>
   <block id="c75d4b042f6604bc016e5b15ff4dea18" category="summary">Cloud Insights supporta Telegraf come agente per la raccolta di dati di integrazione su Kubernetes.</block>
-  <block id="562442a302f1457c8c9df7cbde80c0b4" category="doc">Configurazione di NetApp Kubernetes Monitoring Operator</block>
   <block id="b9f54c4d152facdb82c18e1719662b9f" category="paragraph">Cloud Insights offre la raccolta * NetApp Kubernetes Monitoring Operator* (NKMO) per Kubernetes. Quando si aggiunge un data collector, è sufficiente selezionare la sezione Kubernetes.</block>
   <block id="6a65175f7f76169aeeaf32acdda0d82f" category="section-title">Prima di installare NetApp Kubernetes Monitoring Operator</block>
   <block id="13f0cf7e64ed13ef0b58a80209d8e032" category="list-text">Se si utilizza un repository di docker privato o personalizzato, seguire le istruzioni nella sezione utilizzo di un repository di docker privato o personalizzato</block>
@@ -12434,7 +12432,6 @@ Rocky 8.x 64 bit, Rocky 9.x 64 bit, SELinux
 SUSE Linux Enterprise Server 15 SP3, SUSE Linux Enterprise Server 15 SP4, SELinux su SUSE 15 SP3
 
 Questo computer non deve eseguire alcun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato.</block>
-  <block id="449735a59883598ca6b4afe7cb57336a" category="admonition">Leggere il <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> Documentazione prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes.</block>
   <block id="4f05106cca363b0f3c492314ab777534" category="cell">Mancano i dati _involvedobject_ per alcuni registri eventi.</block>
   <block id="67ee92e19812baa7cedb346320ca0182" category="cell">Assicurarsi di aver seguito i passaggi descritti in <block ref="d9283cdb1b027ed2a61fa92c8dc3e314" category="inline-link-macro-rx"></block> sezione precedente.</block>
   <block id="dafe147a7f0074749f1e1c76f1e05008" category="section-title">Versioni di prova dei moduli</block>
@@ -13097,4 +13094,8 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Per informazioni sull'installazione su Kubernetes, consulta la <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> pagina.</block>
   <block id="ed300e62408d01715c593931df6a2352" category="paragraph">Per istruzioni sull'installazione di Kubernetes, consultare la <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> pagina.</block>
   <block id="9475d89ab72707a841c177322d6462fa" category="summary">L'operatore di monitoring NetApp Kubernetes raccoglie i dati Kubernetes per l'utilizzo in Cloud Insights.</block>
+  <block id="8c362b737d9d3a6fff5acfc29aaa5225" category="summary">Raccolta di dati per Kubernetes</block>
+  <block id="3ce5067a26bb6509b15cfb6487590ed5" category="doc">Data Collector: Kubernetes</block>
+  <block id="c7e254ef92577e872c85b9cc18b384ea" category="doc">Installazione e configurazione dell'operatore di monitoraggio Kubernetes</block>
+  <block id="0ec327c74f375d121d057b61ae7dc1be" category="admonition">Leggere il <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> Documentazione pre-requisiti prima di installare o aggiornare l'operatore di monitoraggio Kubernetes NetApp.</block>
 </blocks>

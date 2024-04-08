@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_config_telegraf_kubernetes.html 
-keywords: telegraf, kubernetes 
-summary: Configurazione del data collector Kubernetes 
+keywords: telegraf 
+summary: Raccolta di dati per Kubernetes 
 ---
-= Kubernetes Data Collector
-:toc: macro
+= Data Collector: Kubernetes
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
