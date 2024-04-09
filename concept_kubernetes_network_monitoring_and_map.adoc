@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_kubernetes_network_monitoring_and_map.html 
-keywords: service map, workloads, Kubernetes, 
+keywords: service map, workloads, 
 summary: Presenta le dipendenze e i flussi dei carichi di lavoro di Kubernetes e evidenzia i problemi di rete e di performance 
 ---
 = Kubernetes Network Performance Monitoring and Map
@@ -19,10 +19,8 @@ summary: Presenta le dipendenze e i flussi dei carichi di lavoro di Kubernetes e
 
 
 [role="lead"]
-La funzionalità Kubernetes Network Performance Monitoring and Map semplifica il troubleshooting mappando le dipendenze tra i servizi Kubernetes (detti anche carichi di lavoro). Fornisce visibilità in tempo reale sulle latenze e sulle anomalie delle performance di rete di Kubernetes per identificare i problemi di performance prima che influiscano sugli utenti. Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e revisionando i flussi di traffico Kubernetes.
-
-
-NOTE: Kubernetes Network Performance Monitoring and Map è un link:concept_preview_features.html["Anteprima"] e sono soggetti a modifiche.
+Le funzionalità MAP e di Kubernetes Network Performance Monitoring semplificano il troubleshooting mappando le dipendenze tra i servizi (anche denominati workload) e offrono visibilità real-time sulle latenze delle performance di rete e sulle anomalie per identificare i problemi di performance prima che incidano sugli utenti.
+Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e revisionando i flussi di traffico Kubernetes.
 
 Caratteristiche principali: • La mappa del carico di lavoro presenta le dipendenze e i flussi dei carichi di lavoro di Kubernetes e evidenzia i problemi di rete e di performance. • Monitora il traffico di rete tra pod, carichi di lavoro e nodi Kubernetes; identifica l'origine dei problemi di traffico e latenza. • Riduci i costi complessivi analizzando il traffico di rete in entrata, in uscita, cross-region e cross-zone.
 

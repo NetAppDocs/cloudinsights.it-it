@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_log_explorer.html 
-keywords: logs, monitors, alerts, EMS, Kubernetes, 
+keywords: logs, monitors, alerts, EMS, 
 summary: 'Log Explorer è un potente strumento per l"analisi dei problemi attraverso diversi log di sistema.' 
 ---
 = Esplora log
