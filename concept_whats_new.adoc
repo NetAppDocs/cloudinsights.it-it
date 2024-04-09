@@ -26,9 +26,12 @@ NOTE: Alcune di queste funzionalità potrebbero non essere disponibili nell'ediz
 
 
 
-=== Latenza del volume iSCSI
+=== Supporto SAN iSCSI per Kubernetes Network Map
 
-Le metriche per la latenza del volume iSCSI sono disponibili per l'utilizzo in dashboard, avvisi e altro ancora. Per raccogliere le metriche di latenza iSCSI, attivare _Network Performance and Map_ dalla voce di menu "Modifica distribuzione" di Kubernetes Collector.
+Identifica le dipendenze dello storage sottostante di Kubernetes per NFS e ora iSCSI.
+Accelera la risoluzione dei problemi ottenendo informazioni approfondite sull'attività della rete di storage dell'applicazione Kubernetes e sulle metriche di storage non definite. Scopri come l'applicazione Kubernetes utilizza l'infrastruttura storage per chargeback e reporting di showback.
+
+image:pod-to-storage.png["Esempio da pod a storage"]
 
 
 

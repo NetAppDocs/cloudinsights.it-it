@@ -13082,8 +13082,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
  sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
  Sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="3b3d7bce734c0832c20ba464b1f2d199" category="section-title">Aprile 2024</block>
-  <block id="f3ef1b9644edf713f62c657ef54694d0" category="section-title">Latenza del volume iSCSI</block>
-  <block id="6251d6375601d27b7a63aae2bde6bf54" category="paragraph">Le metriche per la latenza del volume iSCSI sono disponibili per l'utilizzo in dashboard, avvisi e altro ancora. Per raccogliere le metriche di latenza iSCSI, attivare _Network Performance and Map_ dalla voce di menu "Modifica distribuzione" di Kubernetes Collector.</block>
   <block id="d18f4b3cae368b2ec43457dddff4af20" category="list-text">Oracle Enterprise Linux 8,8</block>
   <block id="55b374c5f09d1fe118ccac20abfe40c1" category="list-text">Red Hat Enterprise Linux 8,8</block>
   <block id="c3571084e6793888922121d12a2dca13" category="list-text">Rocky 9,3</block>
@@ -13098,4 +13096,9 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="3ce5067a26bb6509b15cfb6487590ed5" category="doc">Data Collector: Kubernetes</block>
   <block id="c7e254ef92577e872c85b9cc18b384ea" category="doc">Installazione e configurazione dell'operatore di monitoraggio Kubernetes</block>
   <block id="0ec327c74f375d121d057b61ae7dc1be" category="admonition">Leggere il <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> Documentazione pre-requisiti prima di installare o aggiornare l'operatore di monitoraggio Kubernetes NetApp.</block>
+  <block id="f198d7bd876499c7a876c665606e2d82" category="section-title">Supporto SAN iSCSI per Kubernetes Network Map</block>
+  <block id="d14b2ad81a63e0273293afd80b29ec37" category="paragraph">Identifica le dipendenze dello storage sottostante di Kubernetes per NFS e ora iSCSI.
+Accelera la risoluzione dei problemi ottenendo informazioni approfondite sull'attività della rete di storage dell'applicazione Kubernetes e sulle metriche di storage non definite. Scopri come l'applicazione Kubernetes utilizza l'infrastruttura storage per chargeback e reporting di showback.</block>
+  <block id="54fc47ade0e8b56477f3a565a1183811" category="inline-image-macro">Esempio da pod a storage</block>
+  <block id="b4ee1759943c32311eab48ecd432c0d9" category="paragraph"><block ref="b4ee1759943c32311eab48ecd432c0d9" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
