@@ -51,7 +51,7 @@ Cloud Insights conserva i dati storici da utilizzare nei report in base ai data 
 | Performance mart | Nodo storage | Ogni giorno | 13 mesi 
 
 
-| Performance mart | Performance delle macchine virtuali | Ogni ora | 35 giorni 
+| Performance mart | Performance delle macchine virtuali | Ogni ora | 14 giorni 
 
 
 | Performance mart | Performance delle macchine virtuali | Ogni giorno | 13 mesi 

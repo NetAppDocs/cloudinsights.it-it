@@ -293,6 +293,8 @@ sidebar:
           url: "/task_dc_brocade_bna.html"
         - title: Switch Fibre Channel
           url: "/task_dc_brocade_fc_switch.html"
+        - title: Brocade FOS REST
+          url: "/task_dc_brocade_rest.html"
       - title: Cisco
         url: "/task_dc_cisco_fc_switch.html"
       - title: SmartfFiles di Cohesity
