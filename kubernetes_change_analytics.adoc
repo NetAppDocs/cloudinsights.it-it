@@ -23,7 +23,7 @@ Kubernetes Change Analytics offre una vista completa delle recenti modifiche all
 
 Tenere presente quanto segue:
 
-* Negli ambienti multi-tenant, è possibile che si verifichino interruzioni a causa di modifiche non configurate correttamente. In ambienti molto dinamici, Cloud Insights potrebbe non essere in grado di tenere traccia di tutte le modifiche.
+* Negli ambienti multi-tenant, è possibile che si verifichino interruzioni a causa di modifiche non configurate correttamente. In ambienti molto dinamici, l'analisi delle modifiche Cloud Insights potrebbe non essere in grado di tenere traccia correttamente di tutte le modifiche.
 * Change Analytics offre un singolo riquadro per visualizzare e correlare lo stato dei carichi di lavoro e le modifiche alla configurazione. Questo può essere utile nella risoluzione dei problemi degli ambienti dinamici.
 
 
