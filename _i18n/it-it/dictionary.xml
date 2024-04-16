@@ -6718,8 +6718,6 @@
   <block id="2a7a1c69f19a2dce7c6cd235a0426527" category="cell">&lt;site_name&gt;.cs01-ap-1.cloudinsights.netapp.com &lt;site_name&gt;.c01-ap-1.cloudinsights.netapp.com &lt;site_name&gt;.c02-ap-1.cloudinsights.netapp.com</block>
   <block id="ccc64c65f1e8c75ec95b9e7045b1e7da" category="cell">gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com</block>
   <block id="0cd58d8585970b5311e84ca2c34ba5ef" category="section-title">Regole in-network</block>
-  <block id="44ba65ef8e60d1727d77c9b3244b6b01" category="inline-link-macro">csuser</block>
-  <block id="a8f52a9563e47eb33fbdc4c48dfcf8f5" category="paragraph">Notare che quando si aggiunge _<block ref="d95c3cfe38a15370491721a373f38df2" category="inline-link-macro-rx"></block>_, l'utente richiede l'accesso SSH alla LIF di gestione ONTAP.</block>
   <block id="1b09a58921479be87f9dae639915150f" category="cell">389 (LDAP) 636 (LDAPS / start-tls)</block>
   <block id="84caee864977bc98db0b0df24853f63c" category="cell">URL del server LDAP</block>
   <block id="b272c206ad7d80ebc1e17385c8d4450c" category="cell">Connettersi a LDAP</block>
@@ -13101,4 +13099,8 @@ Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi anali
   <block id="41f9e4070ff69cb3ab05150a383b982d" category="summary">L'operatore di monitoring Kubernetes raccoglie i dati Kubernetes per l'utilizzo in Cloud Insights.</block>
   <block id="3c25ca8d0b15faf67f1de6aacaaaa615" category="paragraph">L'operatore Kubernetes e i data collector vengono scaricati dal Registro di Docker di Cloud Insights. Una volta installato, l'operatore gestisce quindi tutti i collettori compatibili con l'operatore implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</block>
   <block id="99caa80e6c446108c367beb2add705b3" category="list-text">Negli ambienti multi-tenant, è possibile che si verifichino interruzioni a causa di modifiche non configurate correttamente. In ambienti molto dinamici, l'analisi delle modifiche Cloud Insights potrebbe non essere in grado di tenere traccia correttamente di tutte le modifiche.</block>
+  <block id="1efee558528b235998f6c37634f18ec9" category="paragraph">Autorizzazioni per l'integrazione ONTAP ARP:</block>
+  <block id="ea68be0a35687ab64afad562f46dff32" category="paragraph">Autorizzazioni per accesso ONTAP negato:</block>
+  <block id="64ac4b9298207f0fc756c6288f8c1a80" category="paragraph">Nota: Se è già stato aggiunto un ruolo di pausa, _arwrole_ o _csrestrole_, non è necessario aggiungere un secondo ruolo di pausa. È possibile aggiungere semplicemente le autorizzazioni API come nell'esempio seguente.</block>
+  <block id="2e99c7c5f8b0c692f20c07f49b37d122" category="paragraph">Esempio: _Csrestrole_ è già presente, per cui dobbiamo abilitare la protezione anti-ransomware e assegnare autorizzazioni API al _csrestrole_ esistente:</block>
 </blocks>

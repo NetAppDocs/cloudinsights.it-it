@@ -124,6 +124,27 @@ security login role create -role csrole -cmddirname "security certificate" -acce
 security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
 security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
 ....
+Autorizzazioni per l'integrazione ONTAP ARP:
+
+....
+security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
+security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+....
+Autorizzazioni per accesso ONTAP negato:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+....
+Nota: Se è già stato aggiunto un ruolo di pausa, _arwrole_ o _csrestrole_, non è necessario aggiungere un secondo ruolo di pausa. È possibile aggiungere semplicemente le autorizzazioni API come nell'esempio seguente.
+
+Esempio: _Csrestrole_ è già presente, per cui dobbiamo abilitare la protezione anti-ransomware e assegnare autorizzazioni API al _csrestrole_ esistente:
+
+....
+security login rest-role create -role csrestrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
+security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
+....
 
 
 === Autorizzazioni per l'aggiunta tramite *Vserver Management IP*:
@@ -144,6 +165,12 @@ security login role create -vserver <vservername> -role csrole -cmddirname "vser
 security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
 ....
  security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
+Autorizzazioni per accesso ONTAP negato:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+....
 
 
 === Autorizzazioni per la protezione autonoma da ransomware ONTAP
