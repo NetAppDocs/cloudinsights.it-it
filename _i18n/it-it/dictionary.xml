@@ -13106,4 +13106,11 @@ Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi anali
   <block id="2b9cb1c6561901b8c103aee1d5c61dfd" category="cell">Viene visualizzato il messaggio "Heartbeat Error:"</block>
   <block id="a79a7a75840b1e266cc0c6c037c2d7f0" category="cell">Quando si reinstalla l'unità di acquisizione, viene visualizzato "ValueError: File context for /opt/netapp/cloudinsights(/.*)? già definito".</block>
   <block id="ae27abd8286d1b98e00b46440cd90926" category="cell">Su un sistema con SELinux, questo messaggio di errore potrebbe essere visualizzato dopo<block ref="36f17859b55b3c1f8840366ccf62d8d6" prefix=" " category="inline-code"></block> È stato eseguito e l'unità di acquisizione deve essere reinstallata. Esecuzione del comando<block ref="42f732f1bf8255184086b8f48ec741c3" prefix=" " category="inline-code"></block> dovrebbe risolvere il problema e rimuovere il messaggio.</block>
+  <block id="ae2e91be06ba70b73fa6c74eeeb93115" category="section-title">Funzionalità obsoleta</block>
+  <block id="4b19ce62e1686c6b02dce6a6a618fab8" category="paragraph">Occasionalmente la funzionalità è obsoleta con l'evolversi delle funzioni. Ecco alcune delle caratteristiche e funzionalità che sono state deprecate in Cloud Insights:</block>
+  <block id="f10826ff9826bc53b76b340699d7486c" category="section-title">Workload Secure REST Cloud Secure_forensics.Activities.v1 API obsoleto</block>
+  <block id="22e1977c2373212d5a86d5500fb987b6" category="paragraph">L'API _cloudsecure_forensics.activities.v1_ è obsoleta. Questa API restituisce informazioni sulle attività associate alle entità nell'ambiente Storage workload Security. Questa API è stata sostituita con cloudsecure_forensics.activities.*v2*_.</block>
+  <block id="2f536f055cc49f30b2b045622c25fdbc" category="paragraph">GET per questa API ha precedentemente restituito quanto segue:</block>
+  <block id="4d50bab3a705e7ae04c75813a7d22ad2" category="paragraph">Questa API ora restituisce:</block>
+  <block id="c124771302bfe76ccd178d7854d906f5" category="paragraph">Per ulteriori informazioni, vedere la documentazione di Swagger in "Admin &gt; API Access &gt; API Documentation &gt; workload Security".</block>
 </blocks>
