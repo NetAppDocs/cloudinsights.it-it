@@ -60,7 +60,10 @@ Qui troverai suggerimenti per la risoluzione dei problemi relativi alle unità d
 | Stato: Heartbeat non riuscito | L'unità di acquisizione (AU) invia un heartbeat a Cloud Insights ogni 60 secondi per rinnovarne il lease. Se la chiamata heartbeat non riesce a causa di un problema di rete o di un Cloud Insights che non risponde, il tempo di lease dell'AU non viene aggiornato. Allo scadere del tempo di lease dell'AU, Cloud Insights mostra lo stato "Heartbeat Failed" (battito cardiaco non riuscito). Procedura per la risoluzione dei problemi: Controllare la connessione di rete tra il server dell'unità di acquisizione e CloudInsights. Verificare che il servizio Acquisition Unit sia in esecuzione. Se il servizio non è in esecuzione, avviarlo. Controllare il log dell'unità di acquisizione (/var/log/netapp/cloudintives/acq/acq.log) per verificare la presenza di errori. 
 
 
-| Viene visualizzato il messaggio "Heartbeat Error: (Errore heartbeat: Errore heartbeat | Questo errore può verificarsi se si verifica un'interruzione di rete che causa l'interruzione della comunicazione tra l'unità di acquisizione e l'ambiente Cloud Insights per più di un minuto. Verificare che la connessione tra AU e Cloud Insights sia stabile e attiva. 
+| Viene visualizzato il messaggio "Heartbeat Error:" | Questo errore può verificarsi se si verifica un'interruzione di rete che causa l'interruzione della comunicazione tra l'unità di acquisizione e l'ambiente Cloud Insights per più di un minuto. Verificare che la connessione tra AU e Cloud Insights sia stabile e attiva. 
+
+
+| Quando si reinstalla l'unità di acquisizione, viene visualizzato "ValueError: File context for /opt/netapp/cloudinsights(/.*)? già definito". | Su un sistema con SELinux, questo messaggio di errore potrebbe essere visualizzato dopo `cloudinsights-uninstall.sh -p` È stato eseguito e l'unità di acquisizione deve essere reinstallata. Esecuzione del comando `semanage fcontext -d -t usr_t "/opt/netapp/cloudinsights(/.*)?"` dovrebbe risolvere il problema e rimuovere il messaggio. 
 |===
 
 
