@@ -247,6 +247,9 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | link:task_dc_na_cdot.html["Software per la gestione dei dati NetApp ONTAP"] | Infrastruttura 
 
 
+| link:task_dc_na_ontap_rest.html["Collettore REST NetApp ONTAP "] | Infrastruttura 
+
+
 | link:task_dc_na_cdot.html["NetApp ONTAP Select"] | Infrastruttura 
 
 

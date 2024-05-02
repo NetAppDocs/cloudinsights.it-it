@@ -381,14 +381,14 @@ sidebar:
           url: "/task_dc_ms_hyperv.html"
       - title: NetApp
         entries:
-        - title: Connessione cloud per ONTAP 9.9+
-          url: "/task_dc_na_cloud_connection.html"
         - title: Cloud Volumes ONTAP
           url: "/task_dc_na_cloud_volumes_ontap.html"
         - title: Cloud Volumes Services per AWS
           url: "/task_dc_na_cloud_volumes.html"
         - title: Software per la gestione dei dati ONTAP
           url: "/task_dc_na_cdot.html"
+        - title: Collettore REST ONTAP
+          url: "/task_dc_na_ontap_rest.html"
         - title: Modalità Data ONTAP 7
           url: "/task_dc_na_7mode.html"
         - title: E-Series
