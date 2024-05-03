@@ -13116,4 +13116,6 @@ Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi anali
   <block id="01d9a0d595dd9694b83ce5628a29f326" category="inline-link-macro">Collettore REST NetApp ONTAP </block>
   <block id="de38f5c9c41b0a8b6187edd7a04b16b2" category="cell"><block ref="de38f5c9c41b0a8b6187edd7a04b16b2" category="inline-link-macro-rx"></block></block>
   <block id="bf9973f393dbc9824e3e96f831e12c25" category="sidebar">Collettore REST ONTAP</block>
+  <block id="b6544593f70ff0a8915cbd1f9aabb49f" category="cell">Event-exportant-maxEventAgeSeconds</block>
+  <block id="ec57a05c2326d433af7b24b3adb77f1a" category="cell">età massima dell'evento dell'esportatore.  Vedere<block ref="6708727d05fa40eed58ce8404e60b4a3" category="inline-link-rx"></block></block>
 </blocks>
