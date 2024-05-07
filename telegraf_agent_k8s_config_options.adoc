@@ -87,15 +87,6 @@ proxy:
 |  | RsMemRequest | Richiesta di memoria per telegraf rs 
 
 
-|  | DockerMountPoint | Un override per il percorso dockerMountPoint. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud 
-
-
-|  | DockerUnixSocket | Un override per il percorso dockerUnixSocket. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud. 
-
-
-|  | CrioSockPath | Un override per il percorso di crioSockPath. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud. 
-
-
 |  | RunPriveged | Eseguire il container telegraf in modalità privilegiata. Impostare questa opzione su true se SELinux è attivato sui nodi k8s 
 
 
@@ -121,9 +112,6 @@ proxy:
 
 
 |  | OutputTimeout | Vedere link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentazione sulla configurazione di Telegraf"] 
-
-
-|  | DockerMetricCollectionEnabled | Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false. 
 
 
 |  | DsTolerazioni | teletegraf-ds tollerazioni aggiuntive. 
