@@ -7773,12 +7773,6 @@
   <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">Richiesta CPU per telegraf rs</block>
   <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">RsMemRequest</block>
   <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">Richiesta di memoria per telegraf rs</block>
-  <block id="04808c0fd1505eb55198b91e2910694e" category="cell">DockerMountPoint</block>
-  <block id="8b4f648381c209aa11d7baaf654c5f90" category="cell">Un override per il percorso dockerMountPoint. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud</block>
-  <block id="986b967d4a19de83ed59389872e2eb46" category="cell">DockerUnixSocket</block>
-  <block id="4dccb3941fc9760d547f9ae348685ad3" category="cell">Un override per il percorso dockerUnixSocket. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud.</block>
-  <block id="6ae45dc429d1f96b8c63fba54419b0f7" category="cell">CrioSockPath</block>
-  <block id="eeec0978474a40f056df3ffd9acfa360" category="cell">Un override per il percorso di crioSockPath. Questo vale per le installazioni di docker non standard su piattaforme k8s come la fonderia cloud.</block>
   <block id="6fd605953233d5564943f85815683d62" category="cell">RunPriveged</block>
   <block id="06b131db41fa22ef6ac7de5a7eae4aef" category="cell">Eseguire il container telegraf in modalità privilegiata. Impostare questa opzione su true se SELinux è attivato sui nodi k8s</block>
   <block id="986b07451fa1766c43f2eead1470731c" category="cell">Batch Size (dimensione batch)</block>
@@ -10185,8 +10179,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="6aae913b976c156306d8a5cbbbc06ad5" category="inline-link-macro">In _AgentConfiguration_</block>
   <block id="e1e08e40036f927a0e660c22aa837f88" category="inline-link-macro">Contamini e pedaggi</block>
   <block id="9680829f0eb82d9736ac7fe477135a87" category="paragraph">Scopri di più su Kubernetes <block ref="2a69bcb19ea6a4db3f5d1b466ff78e77" category="inline-link-macro-rx"></block>.</block>
-  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">DockerMetricCollectionEnabled</block>
-  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Raccogli le metriche di Docker. Per impostazione predefinita, questa opzione è impostata su true e le metriche del docker verranno raccolte per le implementazioni k8s on-premise e basate su docker. Per disattivare la raccolta di metriche docker, impostarla su false.</block>
   <block id="bb0a12c3834207119851374142a76ac0" category="cell">DsTolerazioni</block>
   <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">teletegraf-ds tollerazioni aggiuntive.</block>
   <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">RsTolerazioni</block>
@@ -13093,12 +13085,10 @@ Accelera la risoluzione dei problemi ottenendo informazioni approfondite sull'at
   <block id="54fc47ade0e8b56477f3a565a1183811" category="inline-image-macro">Esempio da pod a storage</block>
   <block id="b4ee1759943c32311eab48ecd432c0d9" category="paragraph"><block ref="b4ee1759943c32311eab48ecd432c0d9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9ec645581caafa9fbb6d571ba008b9cc" category="paragraph">Kubernetes Change Analytics offre una vista completa delle recenti modifiche all'ambiente K8s. Gli avvisi e lo stato dell'implementazione sono a portata di mano. Con Change Analytics, puoi monitorare ogni modifica di implementazione e configurazione e correlarla con lo stato e le performance dei servizi, dell'infrastruttura e dei cluster K8s.</block>
-  <block id="1bcd8d7a1a68529c34cd9af8cc0cfda9" category="list-text">Change Analytics offre un singolo riquadro per visualizzare e correlare lo stato dei carichi di lavoro e le modifiche alla configurazione. Questo può essere utile nella risoluzione dei problemi degli ambienti dinamici.</block>
   <block id="60a414e81fe118967fa6232e8eb9f5ed" category="paragraph">Le funzionalità MAP e di Kubernetes Network Performance Monitoring semplificano il troubleshooting mappando le dipendenze tra i servizi (anche denominati workload) e offrono visibilità real-time sulle latenze delle performance di rete e sulle anomalie per identificare i problemi di performance prima che incidano sugli utenti.
 Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e revisionando i flussi di traffico Kubernetes.</block>
   <block id="41f9e4070ff69cb3ab05150a383b982d" category="summary">L'operatore di monitoring Kubernetes raccoglie i dati Kubernetes per l'utilizzo in Cloud Insights.</block>
   <block id="3c25ca8d0b15faf67f1de6aacaaaa615" category="paragraph">L'operatore Kubernetes e i data collector vengono scaricati dal Registro di Docker di Cloud Insights. Una volta installato, l'operatore gestisce quindi tutti i collettori compatibili con l'operatore implementati nei nodi del cluster Kubernetes per acquisire i dati, inclusa la gestione del ciclo di vita di tali collettori. In seguito a questa catena, i dati vengono acquisiti dai collettori e inviati a Cloud Insights.</block>
-  <block id="99caa80e6c446108c367beb2add705b3" category="list-text">Negli ambienti multi-tenant, è possibile che si verifichino interruzioni a causa di modifiche non configurate correttamente. In ambienti molto dinamici, l'analisi delle modifiche Cloud Insights potrebbe non essere in grado di tenere traccia correttamente di tutte le modifiche.</block>
   <block id="1efee558528b235998f6c37634f18ec9" category="paragraph">Autorizzazioni per l'integrazione ONTAP ARP:</block>
   <block id="ea68be0a35687ab64afad562f46dff32" category="paragraph">Autorizzazioni per accesso ONTAP negato:</block>
   <block id="64ac4b9298207f0fc756c6288f8c1a80" category="paragraph">Nota: Se è già stato aggiunto un ruolo di pausa, _arwrole_ o _csrestrole_, non è necessario aggiungere un secondo ruolo di pausa. È possibile aggiungere semplicemente le autorizzazioni API come nell'esempio seguente.</block>
@@ -13118,4 +13108,7 @@ Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi anali
   <block id="bf9973f393dbc9824e3e96f831e12c25" category="sidebar">Collettore REST ONTAP</block>
   <block id="b6544593f70ff0a8915cbd1f9aabb49f" category="cell">Event-exportant-maxEventAgeSeconds</block>
   <block id="ec57a05c2326d433af7b24b3adb77f1a" category="cell">età massima dell'evento dell'esportatore.  Vedere<block ref="6708727d05fa40eed58ce8404e60b4a3" category="inline-link-rx"></block></block>
+  <block id="639bed0f86ee37975166505f25500f59" category="paragraph">In che modo Change Analysis aiuta?</block>
+  <block id="8c0ffb3a96aefd29a8b298519ff82eb8" category="list-text">Negli ambienti Kubernetes multi-tenant, le interruzioni possono verificarsi a causa di modifiche non configurate correttamente. Negli ambienti molto dinamici, il monitoraggio dell'infrastruttura Cloud Insights potrebbe non essere in grado di tenere traccia correttamente di tutte le modifiche.</block>
+  <block id="6cfc89cbc741a775222e1cd65f12a4a0" category="list-text">L'analisi delle modifiche aiuta a questo scopo fornendo un singolo riquadro per visualizzare e correlare lo stato di salute dei carichi di lavoro e le modifiche alla configurazione. Ciò può risultare utile nella risoluzione dei problemi degli ambienti Kubernetes dinamici.</block>
 </blocks>
