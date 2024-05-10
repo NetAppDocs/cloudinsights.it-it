@@ -130,6 +130,12 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 
 
+=== Requisiti di autorizzazione per la raccolta delle metriche degli switch ONTAP
+
+Cloud Insights è in grado di raccogliere i dati degli switch del cluster ONTAP come opzione nel collettore <<advanced-configuration,Configurazione avanzata>> impostazioni. Oltre ad attivarlo sul Cloud Insights Collector, è necessario anche *configurare il sistema ONTAP* stesso per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"], e verificare che sia corretto <<a-note-about-permissions,permessi>> Sono impostati, per consentire l'invio dei dati dello switch a Cloud Insights.
+
+
+
 == Configurazione
 
 [cols="2*"]
