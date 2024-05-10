@@ -51,6 +51,8 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 * L'unità di acquisizione Cloud Insights avvia le connessioni alla porta TCP 443 al cluster Rubrik. Un collector per cluster.
 * Indirizzo IP del cluster Rubrik.
 * Nome utente e password del cluster.
+* Indirizzo IP o nome host del cluster Rubrik.
+* Per l'autenticazione di base, un nome utente e una password per il cluster. Se si preferisce utilizzare l'autenticazione basata sull'account del servizio, è necessario disporre di un account del servizio, di un segreto e di un ID organizzazione
 * Requisito della porta: HTTPS 443
 
 
