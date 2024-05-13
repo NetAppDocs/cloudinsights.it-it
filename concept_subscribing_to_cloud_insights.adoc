@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_subscribing_to_cloud_insights.html 
 summary: In qualsiasi momento della prova gratuita, puoi iscriverti a Cloud Insights. 
-keywords: subscribe, trial, subscription, contract, raw capacity, region, data retention, retention, MU, managed unit, managed units, units, managed 
+keywords: subscribe, trial, subscription, contract, raw capacity, region, data retention, retention, MU, managed unit, managed units, units, managed, module, evaluation 
 ---
 = Iscrizione a Cloud Insights
 :toc: macro
@@ -69,27 +69,25 @@ Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Cloud 
 
 
 
-== Versioni di prova dei moduli
+== Valutazione del modulo
 
-Presto disponibile!
-
-
-NOTE: La versione di prova del modulo è considerata una funzionalità di anteprima ed è pertanto soggetta a modifiche.
-
-Oltre alla versione di prova iniziale di Cloud Insights, è possibile usufruire anche di *versioni di prova dei moduli*. Ad esempio, se sei già abbonato all'osservabilità dell'infrastruttura ma stai aggiungendo Kubernetes al tuo ambiente, potrai entrare automaticamente in una prova di 30 giorni dell'osservabilità Kubernetes, a partire da quando installi l'operatore di monitoring NetApp Kubernetes. Ti verrà addebitato solo l'utilizzo delle unità gestite da Kubernetes Observability al termine del periodo di prova.
+È inoltre possibile usufruire delle *valutazioni dei moduli*. Ad esempio, se sei già abbonato all'osservabilità dell'infrastruttura ma stai aggiungendo Kubernetes al tuo ambiente, potrai entrare automaticamente in una valutazione di 30 giorni dell'osservabilità Kubernetes, a partire da quando installi l'operatore di monitoring NetApp Kubernetes. Ti verrà addebitato solo l'utilizzo delle unità gestite di Kubernetes Observability al termine del periodo di valutazione.
 
 
-NOTE: Tenere presente che dopo il periodo di prova verrà addebitato l'utilizzo di nuove unità gestite (MU), quindi assicurarsi di pianificare di conseguenza. Al termine del periodo di prova del modulo, verrà visualizzato un messaggio di notifica se sarà necessario aggiungere altre MU per evitare l'interruzione del servizio.
+NOTE: Tenere presente che dopo la valutazione verrà addebitato l'utilizzo di nuove unità gestite (MU), quindi assicurarsi di pianificare di conseguenza. Al termine della valutazione del modulo, l'utente verrà avvisato della necessità di aggiungere altre MU per evitare l'interruzione del servizio.
 
 È possibile monitorare l'utilizzo dell'unità gestita nella pagina *Admin > Subscription* della scheda *Usage*.
 
 image:Module_Trials_UsageTab.png["Schermata utilizzo UM"]
 
 
+NOTE: Una _Valutazione modulo_ non è una _prova_ - utilizziamo il termine prova quando forniamo ai clienti un periodo di prova gratuito dell'utilizzo del servizio ci per confermare l'idoneità e consentire l'acquisto. La valutazione di un modulo è diversa: In questo caso consentiamo a un cliente a pagamento di provare un modulo di Cloud Insights che non ha utilizzato negli ultimi mesi dell'abbonamento a pagamento. Quando la valutazione è attiva, gli addebiti solo per il modulo appena configurato vengono ignorati. L'ambiente di lavoro dei clienti è ancora sotto abbonamento e non è tornato alla prova gratuita. L'abbonamento non è stato modificato.
+
+
 
 === Generatore di stime
 
-Durante una prova del modulo, non viene modificato l'utilizzo delle UM per le risorse consumate per il modulo, ma potete aprire il *Tool* (nella scheda _Summary_) per vedere come le MU saranno addebitate dopo la prova, così come giocare con gli scenari "What if" con il numero di MU che potreste avere bisogno in futuro. Azzerare i numeri uscendo dal calcolatore.
+Durante la valutazione di un modulo, non viene modificato l'utilizzo delle UM per le risorse consumate per il modulo, ma potete aprire il *Tool* (nella scheda _Summary_) per vedere come le MU saranno addebitate dopo la valutazione, così come giocare con scenari ipotetici con il numero di MU che potreste avere bisogno in futuro. Azzerare i numeri uscendo dal calcolatore.
 
 image:Module_Trials_Estimator.png["Generatore di stime"]
 
@@ -97,7 +95,7 @@ Selezionare la casella di controllo accanto a un modulo per aggiungere o rimuove
 
 Lo strumento di stima consente inoltre di vedere in che modo i numeri si accumulano per un Add on (Aggiungi), in cui si mantiene il periodo di abbonamento corrente e si aumenta il numero di unità gestite concesse in licenza, o per un'opzione Renew (Rinnova) per un abbonamento di rinnovo che si desidera acquistare al momento dell'abbonamento corrente termine terminato.
 
-Si noti che i clienti hanno diritto a una versione di prova del modulo una sola volta per abbonamento.
+Si noti che i clienti hanno diritto a una valutazione del modulo solo una volta per abbonamento.
 
 
 
