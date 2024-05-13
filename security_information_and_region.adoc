@@ -49,7 +49,7 @@ Si tratta di dati generati in seguito alla fornitura da parte di NetApp del Clou
 
 * Dati di accesso dell'utente
 +
-Autenticazione e informazioni di accesso che consentono a NetApp BlueXP di comunicare con i siti Cloud Insights regionali, inclusi i dati relativi all'autorizzazione dell'utente.
+a020ee54398cbdbb6220eb6dbbb2eea3
 
 * Storage workload Security User Directory Data
 +
@@ -85,7 +85,7 @@ Nella regione host vengono memorizzate le seguenti informazioni:
 Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla regione in cui risiede l'ambiente Cloud Insights:
 
 * Informazioni sul sito dell'ambiente (talvolta chiamate "tenant"), come il proprietario del sito o dell'account.
-* Informazioni che consentono a NetApp BlueXP di comunicare con i siti Cloud Insights regionali, incluse qualsiasi cosa fare con l'autorizzazione dell'utente.
+* 477495be48e10387478849fdda012566
 * Informazioni relative alla relazione tra l'utente Cloud Insights e il tenant.
 
 
