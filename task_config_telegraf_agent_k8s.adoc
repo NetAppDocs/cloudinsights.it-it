@@ -562,5 +562,8 @@ In alternativa, si può anche <<uninstalling,disinstallazione>> e. <<installing-
 
 
 | Sto vedendo i pod implementati dal crash dell'operatore di monitoring Kubernetes a causa di risorse insufficienti. | Fare riferimento a Kubernetes Monitoring Operator link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] Per aumentare i limiti di CPU e/o memoria in base alle esigenze. 
+
+
+| Un'immagine mancante o una configurazione non valida ha causato il mancato avvio o la mancata preparazione dei pod di metriche a stato di netapp-ci-kube. Ora StatefulSet è bloccato e le modifiche della configurazione non vengono applicate ai pod di metriche stato netapp-ci-kube. | StatefulSet si trova in un link:https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#forced-rollback["rotto"] stato. Dopo aver risolto eventuali problemi di configurazione, bounce i pod di metrica stato netapp-ci-kube. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

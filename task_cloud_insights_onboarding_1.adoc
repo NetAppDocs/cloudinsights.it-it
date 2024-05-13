@@ -4,22 +4,19 @@ permalink: task_cloud_insights_onboarding_1.html
 summary: 'Iscrizione a Cloud Insights e creazione dell"ambiente.' 
 ---
 = Assunzione di Cloud Insights
-:toc: macro
 :hardbreaks:
 :toclevels: 2
 :allow-uri-read: 
-:toc: 
 :toclevels: 2
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
 :keywords: Cloud Insights, documentation, help, onboarding, getting started,
-:toc-position: content
 
 
 [role="lead"]
-2e95a4622d16ffb729672b5838f5732b
+Prima di iniziare a lavorare con Cloud Insights, è necessario registrarsi sul portale *NetApp BlueXP*. Se hai già un accesso a NetApp BlueXP, puoi avviare una prova gratuita di Cloud Insights con pochi e rapidi passaggi.
 
 
 toc::[]
@@ -78,10 +75,10 @@ La prima volta che si accede a un nuovo ambiente, viene guidata la configurazion
 
 == Disconnessione
 
-b00323e3fc84f69070c5dc2be8e5ce9e
+Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.
 
 
-NOTE: 4405c285662a5ac6f84ad517037907a7
+NOTE: La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.
 
 
 
