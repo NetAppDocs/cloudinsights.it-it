@@ -798,7 +798,7 @@ L'aggiornamento automatico non è disponibile per l'intervallo di tempo della da
 Se combinato con la modalità *TV*, l'aggiornamento automatico consente la visualizzazione quasi in tempo reale dei dati su una dashboard o una pagina di risorse. La modalità TV offre una visualizzazione semplice; il menu di navigazione è nascosto, offrendo una maggiore capacità di visualizzazione dei dati, così come il pulsante Edit. La modalità TV ignora i timeout Cloud Insights tipici, lasciando il display attivo fino a quando non viene disconnesso manualmente o automaticamente dai protocolli di sicurezza autorizzati.
 
 
-NOTE: Poiché NetApp Cloud Central ha un timeout di accesso utente di 7 giorni, Cloud Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
+NOTE: Poiché NetApp BlueXP ha un timeout di login utente di 7 giorni, Cloud Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
 
 * Per attivare la modalità TV, fare clic su image:ActivateTVMode.png["Modalità TV"] pulsante.
 * Per disattivare la modalità TV, fare clic sul pulsante *Exit* in alto a sinistra sullo schermo. image:ExitTVMode.png["Pulsante Exit (Esci)"]

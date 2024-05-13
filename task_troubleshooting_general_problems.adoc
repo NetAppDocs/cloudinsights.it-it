@@ -31,22 +31,35 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 | *Problema:* | *Provare questo:* 
 
 
-| Cloud Insights si disconnette ogni 5 minuti | Consentire l'accettazione da parte di terzi dei cookie NetApp e auth0 necessari. Esempio: In Chrome, immettere "Chrome://settings/cookies" nell'URL del browser. Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie). *O* selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per [*.]auth0.com e [*.]netapp.com. Nota: Quando si crea un'eccezione, assicurarsi di selezionare l'opzione "includere cookie di terze parti in questo sito". 
+| Cloud Insights si disconnette ogni 5 minuti | Consentire l'accettazione da parte di terzi dei cookie NetApp e auth0 necessari.
+
+Esempio:
+In Chrome, inserisci "Chrome://settings/cookies" nell'URL del browser.
+
+Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie).
+*O*
+Selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per [\*.]auth0.com e [*.]netapp.com.
+
+Nota: Quando si crea un'eccezione, assicurarsi di selezionare l'opzione "includere cookie di terze parti in questo sito". 
 
 
-| Dispongo di un account Cloud Central ma non riesco ad accedere a Cloud Central. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Selezionare la categoria "cloud.netapp.com > account/problemi di accesso" o "cloud.netapp.com > problemi relativi alla federazione". Questo è specifico per problemi o domande di Cloud Central. Per tutti gli altri problemi di supporto tecnico Cloud Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
+| Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione".  Questi sono specificamente per problemi o domande di BlueXP.
+Per tutti gli altri problemi di supporto tecnico Cloud Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
 
 
-| Ho ricevuto un invito a Cloud Insights ma ricevo un messaggio "non autorizzato". | Verifica di aver effettuato la registrazione per un account Cloud Central o che la tua organizzazione utilizzi l'accesso SSO con Cloud Central. Verifica che l'indirizzo e-mail del tuo profilo Cloud Central corrisponda all'indirizzo e-mail visualizzato nell'e-mail di benvenuto di Cloud Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
+| Ho ricevuto un invito a Cloud Insights ma ricevo un messaggio "non autorizzato". | Verifica di aver effettuato l'iscrizione a un account BlueXP o che l'organizzazione utilizzi l'accesso SSO con BlueXP.
+
+Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo e-mail mostrato nell'e-mail di benvenuto di Cloud Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
 
 
-| Mi sono disconnesso da Cloud Central o Cloud Secure e sono stato disconnesso automaticamente da Cloud Insights. | Single Sign-on (SSO) nel cloud NetApp disconnette tutte le sessioni di Cloud Insights, Cloud Secure e reporting. Se si dispone dell'accesso a più account Cloud Insights, la disconnessione da uno qualsiasi disconnette tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
+| Ho effettuato la disconnessione da BlueXP e mi è stato disconnesso automaticamente da Cloud Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp disconnette tutte le sessioni Cloud Insights. Se si dispone dell'accesso a più account Cloud Insights, la disconnessione da uno qualsiasi disconnette tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
 
 
-| Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account NetApp Cloud richiedono una nuova autenticazione ogni pochi giorni (l'attuale impostazione Cloud Central è di 7 giorni). Effettua nuovamente l'accesso per accedere all'account. 
+| Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account cloud NetApp richiedono la riautenticazione ogni pochi giorni (l'impostazione attuale di BlueXP è di 7 giorni). Effettua nuovamente l'accesso per accedere all'account. 
 
 
-| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Cloud Insights. Verifica che l'indirizzo e-mail del tuo profilo Cloud Central corrisponda all'indirizzo e-mail visualizzato nell'e-mail di benvenuto di Cloud Insights 
+| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Cloud Insights.
+Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo e-mail mostrato nell'e-mail di benvenuto di Cloud Insights 
 
 
 | Altri errori di accesso | Provare la modalità incognito in Chrome o cancellare la cronologia del browser, i cookie e la cache. Provare con un profilo del browser diverso (ad esempio Chrome - Aggiungi persona). 

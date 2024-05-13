@@ -268,3 +268,31 @@ image:SecurityAdmin_Encrypt_Key_Swagger_API.png["API per la raccolta dati"]
 Se si imposta l'opzione _preEncrypted_ su _True_, qualsiasi password passata attraverso il comando API verrà considerata come *già crittografata*; l'API non crittograferà nuovamente le password. Quando si crea l'API, è sufficiente incollare la password precedentemente crittografata nella posizione appropriata.
 
 image:SecurityAdmin_Encrypt_Key_API_Example.png["Esempio API, width=600"]
+
+
+
+== Crittografia di una password per l'utilizzo in API
+
+L'opzione 8 consente di crittografare una password, che è quindi possibile passare a un agente di raccolta dati tramite API.
+
+Avviare lo strumento securityadmin in modalità interattiva e selezionare l'opzione 8: _Encrypt Password_.
+
+ securityadmin.sh -i
+Viene richiesto di immettere la password che si desidera crittografare. I caratteri digitati non vengono visualizzati sullo schermo.  Inserire nuovamente la password quando richiesto.
+
+In alternativa, se si utilizza il comando in uno script, sulla riga di comando utilizzare _securityadmin.sh_ con il parametro "-enc", passando la password non crittografata:
+
+ securityadmin -enc mypassword
+image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["Esempio CLI"]
+
+La password crittografata viene visualizzata sullo schermo. Copiare l'intera stringa, inclusi i simboli iniziali o finali.
+
+image:SecurityAdmin_Encrypt_Key_1.png["Password di crittografia in modalità interattiva, larghezza=640"]
+
+Per inviare la password crittografata a un data collector, è possibile utilizzare l'API di raccolta dati. Lo swagger per questa API si trova in *Admin > API Access* e fare clic sul collegamento "API Documentation". Selezionare il tipo di API "raccolta dati".  Sotto l'intestazione _data_collection.data_collector_, scegliere l'API _/collector/datasources_ POST per questo esempio.
+
+image:SecurityAdmin_Encrypt_Key_Swagger_API.png["API per la raccolta dati"]
+
+Se si imposta l'opzione _preEncrypted_ su _True_, qualsiasi password passata attraverso il comando API verrà considerata come *già crittografata*; l'API non crittograferà nuovamente le password. Quando si crea l'API, è sufficiente incollare la password precedentemente crittografata nella posizione appropriata.
+
+image:SecurityAdmin_Encrypt_Key_API_Example.png["Esempio API, width=600"]
