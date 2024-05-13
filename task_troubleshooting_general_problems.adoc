@@ -31,16 +31,18 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 | *Problema:* | *Provare questo:* 
 
 
-| Cloud Insights si disconnette ogni 5 minuti | Consentire l'accettazione da parte di terzi dei cookie NetApp e auth0 necessari.
+| Cloud Insights si disconnette automaticamente ogni 6 ore | Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Cloud Insights.
 
 Esempio:
-In Chrome, inserisci "Chrome://settings/cookies" nell'URL del browser.
+Aprire le impostazioni del browser
 
 Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie).
 *O*
-Selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per [\*.]auth0.com e [*.]netapp.com.
+Seleziona "Blocca cookie di terze parti" e Aggiungi eccezioni per _[\*.]auth0.com_ e _[*.]netapp.com_.
 
-Nota: Quando si crea un'eccezione, assicurarsi di selezionare l'opzione "includere cookie di terze parti in questo sito". 
+Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome.
+
+In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_. 
 
 
 | Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione".  Questi sono specificamente per problemi o domande di BlueXP.

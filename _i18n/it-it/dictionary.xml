@@ -7488,7 +7488,6 @@
   <block id="33d5b65987e920095c97ae5d99207a0e" category="inline-link-macro">Risoluzione dei problemi relativi all'unità di acquisizione Linux</block>
   <block id="62c67fa153e5c97540977071f595a3e2" category="inline-link-macro">Risoluzione dei problemi relativi all'unità di acquisizione di Windows</block>
   <block id="06aca4757909dd673728a20d193d0656" category="paragraph">Vedere anche <block ref="35efea8886727053938c867d4e4688d5" category="inline-link-macro-rx"></block> e. <block ref="5e216da5f7cd032fff10ef75fa563a40" category="inline-link-macro-rx"></block>.</block>
-  <block id="55117c7bec968b88df3f1dfc434eac84" category="cell">Cloud Insights si disconnette ogni 5 minuti</block>
   <block id="0659d428df833a806e29e65e632d380a" category="inline-link-macro">Supporto NetApp</block>
   <block id="6630a98adbdb71bde030ce83a4d0a274" category="cell">Ho ricevuto un invito a Cloud Insights ma ricevo un messaggio "non autorizzato".</block>
   <block id="6db6d0d20a3dd35029f13f472f68dbbd" category="cell">Sono stato disconnesso automaticamente dopo diversi giorni.</block>
@@ -13100,16 +13099,6 @@ Storage Virtual Machine: REST non riporta più SVM di tipo diverso da 'data' (ad
   <block id="a84e9c9e2352076ba01af70b577a7e6e" category="paragraph">L'interrogazione dell'URL della posizione restituirà le stesse intestazioni se la risposta non è ancora pronta o restituirà lo stato 200 se la risposta è pronta. Il contenuto della risposta sarà di tipo text e contiene lo stato http della query originale e alcuni metadati, seguiti dai risultati della query originale.</block>
   <block id="b0ed84b2f2f19c2de4e5ffef83497b41" category="paragraph">Per visualizzare un elenco di tutte le query asincrone e di quali sono pronte, utilizzare il seguente comando:</block>
   <block id="699058fd0a28bd24bd4721ecd1db6615" category="paragraph">La risposta ha il seguente formato:</block>
-  <block id="1d87793fac8c219c888ab86c18c15b01" category="cell">Consentire l'accettazione da parte di terzi dei cookie NetApp e auth0 necessari.
-
-Esempio:
-In Chrome, inserisci "Chrome://settings/cookies" nell'URL del browser.
-
-Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie).
-*O*
-Selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per [\*.]auth0.com e [*.]netapp.com.
-
-Nota: Quando si crea un'eccezione, assicurarsi di selezionare l'opzione "includere cookie di terze parti in questo sito".</block>
   <block id="8ff0a6baa556dcfc21fcb29db0eff472" category="cell">Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP.</block>
   <block id="11412b458ed06c197e73ff0aaecb2e6c" category="cell">Aprire un ticket da<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block>. Seleziona la categoria "blueXP.netapp.com &gt; problemi di account/login" o "bluexp.netapp.com &gt; problemi di federazione".  Questi sono specificamente per problemi o domande di BlueXP.
 Per tutti gli altri problemi di supporto tecnico Cloud Insights, contattare <block ref="1a8b44ad735b0e8f3f08395032e9cb16" category="inline-link-macro-rx"></block>.</block>
@@ -13126,4 +13115,17 @@ Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo
   <block id="201ec49877bf4303e362a0aac3add32b" category="admonition">La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.</block>
   <block id="d7a21ae00693a409dd262b09be87f4f7" category="paragraph">Esempio: _Utente *Tony Lavoie* collegato da *10,1.120,15*, agente utente *Mozilla/5,0 (Windows NT 10,0; Win64; x64) AppleWebKit/537,36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537,36*, metodo(i) di login *BlueXP Portal Login_*</block>
   <block id="2cff43f0f641bc8705f38ceb3049b8ca" category="sidebar">Amministrazione e altre attività</block>
+  <block id="c0662b30d3408e55d4ca86a4556ab305" category="cell">Cloud Insights si disconnette automaticamente ogni 6 ore</block>
+  <block id="125d2f260a38158435c7e7d5900894da" category="cell">Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Cloud Insights.
+
+Esempio:
+Aprire le impostazioni del browser
+
+Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie).
+*O*
+Seleziona "Blocca cookie di terze parti" e Aggiungi eccezioni per _[\*.]auth0.com_ e _[*.]netapp.com_.
+
+Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome.
+
+In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_.</block>
 </blocks>
