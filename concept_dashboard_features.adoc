@@ -29,7 +29,7 @@ toc::[]
 
 I widget vengono denominati automaticamente in base all'oggetto, alla metrica o all'attributo selezionato per la prima query del widget. Se si sceglie anche un raggruppamento per il widget, gli attributi "Raggruppa per" vengono inclusi nella naming automatica (metodo di aggregazione e metrica).
 
-image:WidgetNameExample.png["Esempio di denominazione dei widget"]
+image:WidgetNamingExample-C.png["Esempio di denominazione dei widget"]
 
 La selezione di un nuovo oggetto o attributo di raggruppamento aggiorna il nome automatico.
 
@@ -231,7 +231,7 @@ I dati visualizzati in un widget vengono raggruppati (talvolta chiamati arrotola
 * *Massimo*: Visualizza ogni riga come _massimo_ dei dati sottostanti.
 * *Minimum* (minimo): Visualizza ciascuna riga come _Minimum_ dei dati sottostanti.
 * *SUM*: Visualizza ogni riga come _somma_ dei dati sottostanti.
-* *Count*: Visualizza un _count_ di oggetti che hanno riportato dati entro il periodo di tempo specificato. È possibile scegliere l' _intera finestra temporale_ in base all'intervallo di tempo della dashboard (o l'intervallo di tempo del widget, se impostato per ignorare l'ora della dashboard) o una _finestra temporale personalizzata_ selezionata.
+* *Count*: Visualizza un _count_ di oggetti che hanno riportato dati entro il periodo di tempo specificato. È possibile scegliere _intera finestra temporale_ in base all'intervallo temporale del dashboard.
 
 
 .Fasi
@@ -369,11 +369,13 @@ L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni co
 
 È possibile ignorare l'impostazione dell'intervallo di tempo della dashboard principale nei singoli widget. Questi widget visualizzano i dati in base al periodo di tempo impostato, non al periodo di tempo della dashboard.
 
-Per ignorare l'ora del dashboard e forzare un widget a utilizzare il proprio intervallo di tempo, nella modalità di modifica del widget impostare *Ignora ora ora ora dashboard* su *on* (selezionare la casella) e selezionare un intervallo di tempo per il widget. *Salva* il widget nella dashboard.
+Per ignorare l'ora del dashboard e forzare un widget a utilizzare il proprio intervallo di tempo, nella modalità di modifica del widget scegliere l'intervallo di tempo desiderato e salvare il widget nel dashboard.
 
 Il widget visualizza i dati in base all'intervallo di tempo impostato, indipendentemente dall'intervallo di tempo selezionato sulla dashboard stessa.
 
 L'intervallo di tempo impostato per un widget non influisce sugli altri widget della dashboard.
+
+image:OverrideTimeOnWidget.png["ignorare l'intervallo temporale del dashboard per un widget"]
 
 
 
@@ -748,7 +750,7 @@ La seguente tabella mostra tutte le unità disponibili per categoria.
 
 == Modalità TV e aggiornamento automatico
 
-I dati nei widget su Dashboard e Asset Landing Pages si aggiornano automaticamente in base a un intervallo di refresh determinato dal Dashboard Time Range selezionato (o intervallo di tempo widget, se impostato per sostituire l'ora del dashboard). L'intervallo di refresh si basa sul fatto che il widget sia costituito da serie temporali (linea, spline, area, grafico a aree sovrapposte) o da serie non temporali (tutti gli altri grafici).
+I dati nei widget nei dashboard e nelle pagine di destinazione degli asset si aggiornano automaticamente in base a un intervallo di aggiornamento determinato dall'intervallo temporale del dashboard selezionato. L'intervallo di refresh si basa sul fatto che il widget sia costituito da serie temporali (linea, spline, area, grafico a aree sovrapposte) o da serie non temporali (tutti gli altri grafici).
 
 |===
 
