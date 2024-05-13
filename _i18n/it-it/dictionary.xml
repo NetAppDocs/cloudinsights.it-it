@@ -9912,11 +9912,8 @@ NOTA: I calcolatori sono solo a scopo di stima. Il tuo prezzo esatto verrà impo
   <block id="3d3a14a6970653e82934d70556e92edc" category="inline-image-macro">Pagina di abbonamento che mostra i calcolatori di stima dei costi di infrastruttura e Kubernetes</block>
   <block id="93dd899a28072850f389977b64f3eb1b" category="paragraph"><block ref="93dd899a28072850f389977b64f3eb1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="380912a894b2ed4e52150b87b17024b2" category="paragraph">Una volta completato il processo di abbonamento AWS, si torna all'ambiente Cloud Insights. In alternativa, se l'ambiente non è più attivo (ad esempio, l'utente si è disconnesso), verrà visualizzata la pagina di accesso a NetApp BlueXP. Quando accedi nuovamente a Cloud Insights, l'abbonamento sarà attivo.</block>
-  <block id="d1f15ae17b64c6a381736fceb36824b1" category="paragraph">La scheda Subscription Summary (Riepilogo abbonamento) visualizza quanto segue:</block>
   <block id="2638d109f7501322af782022ec53f096" category="list-text">Edizione corrente</block>
   <block id="19cf2ec0c9b04a9d1e83a5c88cfd0526" category="list-text">Numero di serie dell'abbonamento</block>
-  <block id="7fe46cdf8a500ce7ce79c9bab4fb0678" category="list-text">Utilizzo corrente delle UM e "cosa succederebbe se?" stimatori dei costi</block>
-  <block id="824254db492a2daf86c1fa9977bc9c7d" category="list-text">Link per modificare l'abbonamento</block>
   <block id="d3d856c02816952b24a5110171a09834" category="paragraph">La scheda Usage Management (Gestione utilizzo) mostra una panoramica dell'utilizzo delle unità gestite e schede che suddividono il consumo delle unità gestite per collettore o cluster Kubernetes.</block>
   <block id="7702a4028f8e4df8a4c7cc7e0e9629c9" category="paragraph">Nel caso in cui l'utilizzo sia quasi o superi l'importo sottoscritto, è possibile ridurre l'utilizzo eliminando i data collezioner o interrompendo il monitoraggio di Kubernetes Clusters. Eliminare una voce dall'elenco facendo clic sul menu "tre punti" e selezionando _Elimina_.</block>
   <block id="718a66b23c9ea5a577883d447f892296" category="cell">Viene visualizzato un banner di errore e le funzionalità saranno limitate fino a quando non si esegue una delle seguenti operazioni:
@@ -10013,7 +10010,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="46f506a87cfed781f4ca50c5456e5dea" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.</block>
   <block id="c418d072678072a9d451ca92f8cbbcdd" category="list-text">1 unità gestita = 4 vCPU di Kuberentes</block>
   <block id="72a8f3e5ddcd565deaadfe888f6ec6ad" category="paragraph">I calcolatori degli abbonamenti consentono di stimare il costo dell'abbonamento a Cloud Insights in base al numero di unità gestite necessarie. I valori correnti sono precompilati e puoi modificarli per aiutarti nella pianificazione della crescita futura stimata. È possibile regolare i valori per Infrastructure (infrastruttura), Kubernetes (Kubernetes) o entrambi.</block>
-  <block id="e83566ec8beb942e786f102a35482e5d" category="list-text">Viste dell'utilizzo dell'unità gestita</block>
   <block id="5fe48850b2ef6a213ed01dde1958dfa4" category="section-title">Modifica di un report esistente</block>
   <block id="5bd415396ca9b48afa3306c238307445" category="paragraph">Tenere presente che la modifica dei file nella posizione predefinita comporta il rischio di sovrascrittura dei report al successivo aggiornamento del catalogo dei report. Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione non predefinita.</block>
   <block id="9bb3efbd29374edfd5411d3bf02b3b92" category="cell">Dopo aver digitato alcune lettere contenenti un carattere jolly come l'asterisco (*) nei filtri delle pagine Forensics _All Activity_ o _Entities_, le pagine vengono caricate molto lentamente.</block>
@@ -13128,4 +13124,12 @@ Seleziona "Blocca cookie di terze parti" e Aggiungi eccezioni per _[\*.]auth0.co
 Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome.
 
 In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_.</block>
+  <block id="8bfda936be946f758536df68a230dfab" category="paragraph">La scheda sottoscrizione *Riepilogo* visualizza quanto segue:</block>
+  <block id="9b7f10f52064c80bcec17905afd00559" category="list-text">Autorizzazione UM corrente</block>
+  <block id="f02a81449f4e8c1806fe657044887b30" category="paragraph">La scheda *utilizzo* mostra l'utilizzo attuale delle UM e come tale utilizzo si suddivide in base al data collector.</block>
+  <block id="5e4b95db832e18e6c9bfe688b8cb8044" category="inline-image-macro">Utilizzo delle UM per modulo</block>
+  <block id="36be66d4e4e4fc3739c2b9f067442449" category="paragraph"><block ref="36be66d4e4e4fc3739c2b9f067442449" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b55f9a8374f81f85e7606ece767371" category="paragraph">La scheda *Cronologia* fornisce informazioni sull'utilizzo delle UM negli ultimi 7 o 90 giorni. Passando con il mouse sopra una colonna del grafico si ottiene un'analisi per modulo (ad esempio osservabilità, Kubernetes).</block>
+  <block id="fbc13ba96b933d65afd4caf522ab96b6" category="inline-image-macro">Cronologia utilizzo UM</block>
+  <block id="2319aa26c375ca721d328685f3585394" category="paragraph"><block ref="2319aa26c375ca721d328685f3585394" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

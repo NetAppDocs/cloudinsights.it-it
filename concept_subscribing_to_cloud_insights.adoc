@@ -168,14 +168,20 @@ Se si verifica un problema e il processo di abbonamento non viene completato cor
 
 Una volta attivato l'abbonamento, puoi visualizzare lo stato dell'abbonamento e l'utilizzo dell'unità gestita dalla pagina *Admin > Subscription*.
 
-La scheda Subscription Summary (Riepilogo abbonamento) visualizza quanto segue:
+La scheda sottoscrizione *Riepilogo* visualizza quanto segue:
 
 * Edizione corrente
 * Numero di serie dell'abbonamento
-* Utilizzo corrente delle UM e "cosa succederebbe se?" stimatori dei costi
-* Link per modificare l'abbonamento
-* Viste dell'utilizzo dell'unità gestita
+* Autorizzazione UM corrente
 
+
+La scheda *utilizzo* mostra l'utilizzo attuale delle UM e come tale utilizzo si suddivide in base al data collector.
+
+image:SubscriptionUsageByModule.png["Utilizzo delle UM per modulo"]
+
+La scheda *Cronologia* fornisce informazioni sull'utilizzo delle UM negli ultimi 7 o 90 giorni. Passando con il mouse sopra una colonna del grafico si ottiene un'analisi per modulo (ad esempio osservabilità, Kubernetes).
+
+image:Subscription_Usage_History.png["Cronologia utilizzo UM"]
 
 
 
