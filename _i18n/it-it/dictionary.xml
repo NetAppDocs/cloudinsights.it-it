@@ -3274,41 +3274,19 @@
   <block id="228775e556bb7d0b1893a0069479cc55" category="cell">Byte ricevuti byte inviati pacchetti Outboud scartati pacchetti Outboud errori pacchetti ricevuti pacchetti scartati ricevuti errori ricevuti pacchetti ricevuti pacchetti inviati</block>
   <block id="620f85b913de46972f8dc2d9791d0335" category="inline-link-macro">Configurazione di un agente</block>
   <block id="11e9a60bae5c09e0b15ee77e596f4b30" category="paragraph">Le informazioni relative all'installazione e alla risoluzione dei problemi sono disponibili sul <block ref="253f1bddd94d888bccb7868889c4eaa6" category="inline-link-macro-rx"></block> pagina.</block>
-  <block id="e5f2463f379aba48a0f9ca6c913203cc" category="summary">Densità io</block>
-  <block id="169c132355ddfd9b9cf9d499b71aeb68" category="doc">Garantire che i dati di densità io descrivano solo i volumi di dati interni</block>
-  <block id="7bb98d35c109da2ebbaa1c7a65d3f399" category="paragraph">Nei sistemi storage NetApp, l'aggregato root contiene il volume root, contenente directory speciali e file di configurazione per la gestione e il controllo del sistema storage. Queste operazioni potrebbero comportare una grande quantità di attività nell'aggregato root. Quando interroga Cloud Insights per i primi 10 volumi interni con la densità di i/o più elevata, i risultati potrebbero includere gli aggregati root NetApp come membri dei primi 10 volumi.</block>
   <block id="7a1632b55f7e986af31872ad12602af6" category="paragraph">Durante il monitoraggio dell'ambiente, è più importante determinare quali volumi di dati interni producono numeri di densità i/o elevati. Per identificare con precisione solo i volumi di dati, è necessario isolare i volumi interni di NetApp dalle query utilizzate per monitorare la densità di i/O.</block>
-  <block id="46b224de326ea16a55f2530720d59843" category="paragraph">Questa guida descrive come identificare facilmente gli aggregati root di NetApp, isolarli dai risultati delle query di volume interne e creare regole che escludono eventuali nuovi aggregati root di NetApp man mano che vengono aggiunti al sistema. Le seguenti funzionalità di Cloud Insights vengono utilizzate per garantire che i report di densità i/o derivino da volumi di dati interni.</block>
-  <block id="ea13f09d1bfd316504e8a7c0dfcf2fb4" category="list-text">Viene creata una query per identificare tutti gli aggregati root NetApp monitorati da Cloud Insights.</block>
   <block id="8700faa20755e344888acd970889234f" category="list-text">A ciascuno degli aggregati root di NetApp viene assegnata un'annotazione.</block>
-  <block id="289afca30f86dfd5f20fe4a89589b1db" category="list-text">Viene creata una regola di annotazione per escludere gli aggregati root di NetApp.</block>
   <block id="7bd58bbae4d324679ac6d2e2c28b03bc" category="section-title">Creazione di una query per identificare gli aggregati root di NetApp nel tuo ambiente</block>
   <block id="9f8d4499d918e16a737d6bf8d37dbddb" category="paragraph">Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare volumi interni nell'ambiente che contengono l'aggregato root NetApp.</block>
-  <block id="c0bea941d1547f078dda6774ee69c9dd" category="list-text">In Cloud Insights creare una query per identificare gli aggregati root NetApp nel proprio ambiente: *Query &gt; +Nuova query &gt; Pool di storage*</block>
   <block id="f8b3cf53a4e69e8d205a5c6f4a5dd4c8" category="list-text">Immettere il nome dell'aggregato root</block>
-  <block id="68eef2c4bf0c1205a9d57f62ff34da2c" category="paragraph">In questo esempio viene utilizzato "aggr0" come nome. Quando si crea un aggregato, è necessario rispettare solo i seguenti requisiti per il nome:</block>
-  <block id="908b60c3be27b2357fa1238e02988f51" category="list-text">Deve iniziare con una lettera o un carattere di sottolineatura (_).</block>
-  <block id="aadc1aba5d247eca2f42714ed5bcd8cf" category="list-text">Può contenere solo lettere, cifre e caratteri di sottolineatura.</block>
-  <block id="7ce969a0dacdf30d2053f97537327dfe" category="list-text">Può contenere fino a 250 caratteri.</block>
-  <block id="ddc5fe45a1f8c76f3176ef59297915a5" category="paragraph">Nella maggior parte dei casi l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.</block>
   <block id="681dee9bbf117a59d6590ee3c6051976" category="list-text">Fare clic su *Save* (Salva) e immettere un nome per la nuova query.</block>
   <block id="3ed6c78a3c2f0d621e647df2b3796fca" category="paragraph">Come accennato in precedenza, questo potrebbe essere un processo iterativo e richiedere più query per identificare tutti gli aggregati root di NetApp.</block>
   <block id="783606c01e3c46054cfad5b469434086" category="section-title">Creare un'annotazione per i volumi root restituiti dalle query</block>
-  <block id="36460e710952fbc968c76ef4e9f3d51e" category="paragraph">Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L'annotazione creata verrà utilizzata per identificare gli aggregati root di NetApp nel tuo ambiente e garantire che non siano inclusi in un elenco di volumi interni con la densità io più elevata.</block>
   <block id="42551f0bbf0137c002ae83a65e5ca80e" category="paragraph">È necessario aver identificato tutti gli aggregati root che si desidera escludere dal report "High i/o Density" (densità i/o elevata).</block>
-  <block id="019f9302ad1b005fa5fa6e0bdda042c7" category="list-text">Creare un'annotazione per associare tutti gli aggregati root NetApp identificati con le query: *Gestisci &gt; Annotazioni*</block>
   <block id="e63d06501304a9c184018eb58a729103" category="list-text">Inserire il nome dell'annotazione: *RootAgg*</block>
-  <block id="554a808ec0af233c17e7e70b43072e1f" category="list-text">Inserire una descrizione dell'annotazione: *Rimuovere l'aggregato root dall'elenco "High i/o Density" (densità i/o elevata)*</block>
   <block id="e3d01768f4feeb31194225e495d78ad9" category="list-text">Inserire il tipo di annotazione: *Booleano*</block>
   <block id="216cccf9a11330381ead4d645bc105a9" category="section-title">Creare una regola di annotazione per automatizzare l'esclusione di aggregati specifici dal report di densità i/O.</block>
-  <block id="146fab5bc96cd6aa587f1c2a260a7b70" category="paragraph">In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi dall'inclusione, anche i nuovi asset vengono automaticamente esclusi.</block>
-  <block id="6273dfead9d8cac501012af839fb8f91" category="paragraph">È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente.</block>
-  <block id="21611fc590adaaf65bfbe5d847c57bdd" category="list-text">Nel menu Cloud Insights, fare clic su *Gestisci &gt; Annotazioni*</block>
   <block id="cd55bfd42602b8f720a9d41caf148f78" category="list-text">Fare clic su *Aggiungi*</block>
-  <block id="d6bed7bad1624af0fa9be87684edae09" category="list-text">Nella casella Nome, immettere un nome univoco che descriva la regola: *RootAggrExclude*</block>
-  <block id="d5e6634ae4019ea4993c5fee3a276807" category="list-text">Fare clic su Query e selezionare la query che Cloud Insights deve utilizzare per applicare la regola di annotazione a: *Aggregate0*</block>
-  <block id="a8297ead7d4d1f0590bf46a98e70b494" category="list-text">Fare clic su Annotation (Annotazione) e selezionare *Root Agg Exclude*</block>
-  <block id="e62dcc88e7504fa135502828cf3f3374" category="list-text">Fare clic su *valore* e immettere *vero*</block>
   <block id="a70d68072b5d5451925d557ed5fc3b10" category="summary">Aggiunta di agenti workload Security</block>
   <block id="b68323a5af32b2326c99a99a76c02d39" category="doc">Installazione di workload Security Agent</block>
   <block id="c5e6328a22d9b02f4b44ea5270252b38" category="paragraph">Workload Security (in precedenza Cloud Secure) raccoglie i dati delle attività degli utenti utilizzando uno o più agenti. Gli agenti si connettono ai dispositivi del tuo ambiente e raccolgono i dati inviati al livello SaaS per la sicurezza del carico di lavoro per l'analisi. Vedere <block ref="7db04bd496cdb9ab394c662c3f00f7ed" category="inline-link-macro-rx"></block> Per configurare una macchina virtuale dell'agente.</block>
@@ -3954,29 +3932,6 @@
   <block id="24a1a9023bf78f02042ebc02aae1acda" category="cell">Namespace Check ID Service Node</block>
   <block id="4cbed0b534c83a56e07762ba4b9a62f4" category="cell">Nodo IP nodo SO nodo UUID nodo Nome nodo Nome servizio Nome controllo ID servizio Stato</block>
   <block id="701fda79498070ea91a9c98bbdd1dd4e" category="cell">Avviso di passaggio critico</block>
-  <block id="de2080ec5e0e147976f00793ebd67db1" category="summary">Dettaglio entità legale</block>
-  <block id="ab440e736c2d9e3403efa72117388494" category="doc">Dettaglio entità forense</block>
-  <block id="0759459fd7984031945fba78588c75bb" category="paragraph">Utilizzare la pagina Entity Detail per accedere a informazioni dettagliate su un'entità.</block>
-  <block id="f8db4b534ba055c3a01a896220cf7409" category="paragraph">È possibile accedere a.</block>
-  <block id="153bbbe3830b008df288fad38c0b3a83" category="list-text">Profilo entità</block>
-  <block id="4a4a73d66611aace8d92f097448ce81b" category="list-text">Descrive i dettagli, tra cui:</block>
-  <block id="8947a09168ba764c52eb7b93be315a8f" category="list-text">Fare clic per accedere a [Entity Overview] (Panoramica entità)</block>
-  <block id="14526abd8bda5af347775025cd5342cf" category="list-text">Community</block>
-  <block id="54bc6f9dec592e510fe90ddcb5c6e572" category="list-text">Ultimo accesso</block>
-  <block id="22936c219b9fad247df75a21ff0a7b0e" category="list-text">Fare clic su User (utente) per accedere a [User Overview] (Panoramica utente)</block>
-  <block id="6f6cb72d544962fa333e2e34ce64f719" category="list-text">Dimensione</block>
-  <block id="85525c565d3741d72d4f4f86d783bd00" category="list-text">Utente e community</block>
-  <block id="c1e735eead256ce16dddd5709aaef387" category="list-text">Il numero di volte in cui gli utenti hanno effettuato l'accesso all'entità</block>
-  <block id="0e24ee04bc9ce222c893aba101ef6d43" category="list-text">Il numero di volte in cui le community hanno effettuato l'accesso all'entità.</block>
-  <block id="5679e71f2012621385ed2e7789f3207b" category="list-text">Entità Bahavior</block>
-  <block id="40926e069052929a1c74d824a8e32295" category="list-text">Attività recente:</block>
-  <block id="a1f6abd56494e8f8aa2dd028fe6e8327" category="list-text">Data dell'ultimo accesso</block>
-  <block id="d31527e48f3e267b31ebf68a8452a926" category="list-text">Utente che ha effettuato l'ultimo accesso all'entità</block>
-  <block id="282662c8bc8f4ccffd063bc4179b8d94" category="list-text">Ubicazione da cui è stata effettuata l'accesso all'entità</block>
-  <block id="456d0deba6a86c9585590550c797502d" category="list-text">Operazioni</block>
-  <block id="e1796f873ff8ad4bc99c1496e6eb7f87" category="list-text">Numero di operazioni di scrittura</block>
-  <block id="740155e144f4a52eaeb72a9385ed0d33" category="list-text">Numero di operazioni di lettura</block>
-  <block id="c1e108c2f999f00f38cf1ce52cc8164f" category="list-text">Numero di accessi ai metadati</block>
   <block id="f675ac1ea34754aba3279d7f93746721" category="summary">Configurazione del data collector Kibana</block>
   <block id="d6678652208f4e26109690d4ab6151e5" category="doc">Kibana Data Collector</block>
   <block id="75ac4fff844290c8b306aced90a6ad0d" category="paragraph">Cloud Insights utilizza questo data collector per raccogliere le metriche da Kibana.</block>
@@ -4040,49 +3995,7 @@
   <block id="016ed0e49b011ec69d8599631c4570d3" category="paragraph">È possibile scegliere quale dashboard impostare come *home page* dell'ambiente utilizzando uno dei seguenti metodi:</block>
   <block id="a35bc916a1e75254232ca54369197a02" category="list-text">Accedere a *Dashboard &gt; Show All Dashboard* (Mostra tutti i dashboard) per visualizzare l'elenco dei dashboard nell'ambiente. Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.</block>
   <block id="21383d1a6375f071dadd8d05e3e6f6ba" category="list-text">Fare clic su una dashboard dall'elenco per aprire la dashboard. Fare clic sul menu a discesa nell'angolo superiore e selezionare *Imposta come home page*.</block>
-  <block id="f2c00107b5158d2563b78a7e2ec3a970" category="paragraph">È possibile configurare i Data Collector nell'ambiente Cloud Insights per raccogliere dati da host, servizi o dispositivi nel data center.</block>
-  <block id="22265760d3379d0bb5a64374d95aa587" category="list-text">Per configurare i data collezioner, è necessario disporre dei privilegi di amministratore o proprietario dell'account.</block>
-  <block id="b8ad8b1d3e73e72eeba197fe8cfed4ef" category="list-text">Prima di iniziare a raccogliere i dati, è necessario aver configurato un'unità di acquisizione (per Infrastructre) o un agente (per servizi o host).</block>
-  <block id="b776d95fcadabfbede1f04ed42e70b38" category="list-text">Sono necessarie le credenziali per i dispositivi dell'infrastruttura da cui si stanno raccogliendo i dati.</block>
-  <block id="46b64733605b7642b18a0bb2d586bd5c" category="paragraph">Gli indirizzi di rete, le informazioni sull'account e le password dei dispositivi sono necessari per tutti i dispositivi da cui si desidera raccogliere i dati.</block>
-  <block id="f4b59a337513071e6d4843f553d49bc6" category="section-title">Sicurezza delle credenziali</block>
-  <block id="4a2fd5083496ddce3be60eef8073b637" category="paragraph">Le credenziali del data collector vengono crittografate quando vengono immesse in Cloud Insights e inviate all'unità di acquisizione (AU) crittografate prima dalla chiave pubblica dell'AU, quindi crittografate su HTTPS. I valori crittografati vengono decifrati quando l'AU li utilizza per comunicare con dispositivi e software.</block>
-  <block id="ca28d4c52bb2a654a2678ff8d3dcefa2" category="section-title">Configurazione di Data Collector</block>
-  <block id="c339d1a32a95310d9e4a053f77cad28b" category="list-text">A seconda del tipo di data collector scelto, i passaggi per l'installazione variano.</block>
-  <block id="13762a4c9e8fa47d574db722fc1b3fa2" category="section-title">Sistemi operativi:</block>
-  <block id="b00d7c7ac92f4aaddc21f00ae51e9ffb" category="paragraph">È necessario installare almeno un agente Cloud Insights per iniziare a raccogliere i dati del sistema operativo o del servizio dal proprio ambiente. È possibile installare tutti gli agenti che si desidera. Ogni agente può raccogliere dati da più servizi.</block>
-  <block id="6caa4b361faebcb803a409db1b88d8a6" category="paragraph">Oltre a raccogliere dati dai servizi, ogni agente funge anche da data collector per la macchina virtuale/host su cui è installato. I dati raccolti vengono presentati come dati "nodo" in widget dashboard o query.</block>
-  <block id="78ace3389e374f5f298be8d67bfa4a58" category="list-text">Fare clic sul tipo di piattaforma o sul sistema operativo della macchina virtuale o dell'host (ad esempio, il nodo) da cui si accede a Cloud Insights.</block>
-  <block id="c2bfe2eaf58eb4609047a3e1eea65778" category="list-text">Copiare il comando visualizzato negli Appunti. È possibile fare clic sull'icona degli Appunti per copiare rapidamente il comando.</block>
-  <block id="a53af23d658a9535fc02012c55ef38c8" category="list-text">Aprire una finestra terminale/comando sulla macchina virtuale/host dell'agente e incollare il comando. Premere Invio per eseguire il comando.</block>
-  <block id="c3b9d0200b01f416076842501c9ae206" category="list-text">Una volta installato l'agente, fare clic su *fine*. L'agente inizia a raccogliere i dati.</block>
-  <block id="5010b1ac42dba70893a9d0885fbe6153" category="paragraph">Potrebbero essere necessari fino a due periodi di polling prima che i dati del nodo vengano visualizzati in dashboard o disponibili per la query.</block>
-  <block id="0e5b9bfd33de4aacc0a1ca8f5719168a" category="paragraph">I servizi di raccolta dati sono quelli basati sull'agente telegrafe, come Docker o Kibana.</block>
-  <block id="95237aad105439410978d832422ec5f8" category="list-text">Per raccogliere i dati del servizio dal proprio ambiente, è necessario disporre di almeno un agente Cloud Insights. Se non si dispone di un agente installato, viene richiesto di installarlo quando si configura un servizio di raccolta dati.</block>
-  <block id="9d1d946c56f906fe4eda196507962e75" category="list-text">Il Servizio dal quale si desidera raccogliere i dati deve essere installato e in esecuzione nel proprio ambiente.</block>
-  <block id="f5b3a38421e3564dc407081a58490b3b" category="list-text">Fare clic su un data collector di servizi.</block>
-  <block id="7aaf5cf369a105094116ca809d0cc0c2" category="list-text">Scegliere un sistema operativo o una piattaforma dell'agente. Se non è stato installato un agente per la piattaforma, seguire le istruzioni per eseguire questa operazione.</block>
-  <block id="26983a904e0717c520032a2178795368" category="list-text">Fare clic su *continua*.</block>
-  <block id="04d6e043600695763216a74149b824d0" category="list-text">Seguire le istruzioni per la configurazione del data collector. È possibile fare clic sull'icona degli Appunti per copiare rapidamente i comandi o i frammenti di codice visualizzati.</block>
-  <block id="33365fcfbdf45a4d9ec1761cc9bb43e2" category="list-text">Una volta configurato correttamente il data collector, fare clic su *fine*.</block>
   <block id="de0a3477c1c391a811d9b2911a84fb19" category="paragraph">Potrebbero essere necessari fino a due periodi di polling prima che i dati del servizio vengano visualizzati in dashboard o disponibili per la query.</block>
-  <block id="cfd3e8ee788479f95905fd7f4ae27be6" category="section-title">Infrastruttura:</block>
-  <block id="7b7102b6e1f4866e3babe053b86b90ac" category="paragraph">I data collettori dell'infrastruttura includono elementi come lo storage o gli switch.</block>
-  <block id="ac637daa3ccd1254a990c56b13cbf3e9" category="list-text">Per iniziare a raccogliere i dati dell'infrastruttura, è necessario configurare almeno un'unità di acquisizione.</block>
-  <block id="c050d9221193610ab179db826d0ebe03" category="list-text">Fare clic su un data collector per l'infrastruttura.</block>
-  <block id="211512ec77b8c6e0ce1dab5a4bb593aa" category="list-text">Inserire un nome per il data collector. I nomi possono contenere i seguenti caratteri:</block>
-  <block id="3fd760f5a5dc71312ce1dd808d747265" category="list-text">lettera (a-z)</block>
-  <block id="c941c7696194a60a16e5962a0d5dbb37" category="list-text">numero (0-9)</block>
-  <block id="e5e058c4eece6b2f44372f1be024219c" category="list-text">trattino (-)</block>
-  <block id="7d36ba9acc13f7a9d2fc56dcb952101b" category="list-text">sottolineatura (_)</block>
-  <block id="ec69cea1e605a2ea754da699ed4b967b" category="list-text">periodo (.)</block>
-  <block id="35f7e769e75dabc896b7969ce411cfaa" category="list-text">spazio ( )</block>
-  <block id="ab36095ea637c9091ba22ae50c85cc76" category="paragraph">I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.</block>
-  <block id="19110098d937705ce65c4bb5ad97a475" category="list-text">Fare clic su *Advanced Configuration* (Configurazione avanzata) per inserire ulteriori campi di configurazione. Non tutti i data collettori richiedono una configurazione avanzata.</block>
-  <block id="618758304f92b490c243390d7a43774d" category="list-text">Al termine, fare clic su *Add Collector*.</block>
-  <block id="644b4fa94e97c40a6df4575a32bdb388" category="inline-link-macro">Configurazione delle unità di acquisizione</block>
-  <block id="0d72fee8b671c19a26656d7fb11ab5c7" category="paragraph">Per informazioni sull'aggiunta di una nuova unità di acquisizione, vedere <block ref="f6d6d1d8bb58f56bfd9166104e49bf6e" category="inline-link-macro-rx"></block></block>
-  <block id="03600e14e8c249775af21bb69579dc2c" category="paragraph">Inoltre, potrebbero essere necessari fino a due periodi di polling prima che i dati dell'ambiente vengano visualizzati in dashboard o disponibili per la query.</block>
   <block id="b33554a1697b5000df418d400a57bdd1" category="doc">Configurazione e dispositivi supportati</block>
   <block id="572067bb227ce5c78f69ce716a35af5e" category="paragraph">Questa domanda frequente risponde alle domande più frequenti sulla configurazione Cloud Insights e sui dispositivi supportati.</block>
   <block id="2e43d8ffe77f394a83fdbdd6269eeb96" category="section-title">Cloud Insights apporta modifiche al mio ambiente?</block>
@@ -5563,20 +5476,7 @@
   <block id="8ee4098d58fcec0a8ad1bbc6ef3a278b" category="paragraph">Il sistema visualizza i Data Collector disponibili organizzati in base al vendor.</block>
   <block id="d0db1cfd406b8574a7bc2d171e484e1e" category="paragraph">Nella finestra di dialogo è possibile configurare il data collector e aggiungere un'unità di acquisizione.</block>
   <block id="8e90b5dce519000dad943c071bfdb2d7" category="list-text">Inserire un nome per il data collector.</block>
-  <block id="b24e662ae4d73165d52933b92edea048" category="paragraph">I nomi possono contenere lettere (a-z), numeri (0-9), trattini (-), caratteri di sottolineatura (_), apostrofi ('), e punti (.).</block>
-  <block id="13ea58a04825bf78b2f2da7f3b0831b5" category="list-text">Inserire l'unità di acquisizione da associare a questo data collector.</block>
-  <block id="82f142e6d7380c3d45f29c8550f338a3" category="list-text">Inserire i campi obbligatori nella schermata Configuration (Configurazione).</block>
-  <block id="e2b330c7ae678ef7cd6514d5ae7e7e7c" category="list-text">Quando viene richiesto di configurare le notifiche, scegliere di inviare avvisi tramite e-mail, Webhook o entrambi e scegliere i tipi di avvisi in base ai quali inviare la notifica (critico, Avviso, informativo e/o risolto). È possibile scegliere di inviare una notifica all'elenco dei destinatari di Global Monitor (configurato in *Admin &gt; Notifiche*) o specificare altri destinatari. Quando si desidera continuare, fare clic su *complete Setup* (completa installazione).</block>
-  <block id="0292cc6d66cbe7b6a5ec202251834d24" category="inline-image-macro">Notifiche di Collector</block>
-  <block id="6e4e94174c881dd343d58645dcd7fece" category="paragraph"><block ref="6e4e94174c881dd343d58645dcd7fece" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f9696d5ebb5a2bc3b4e557d0f479e831" category="paragraph">Quando si visualizza una landing page di *ONTAP data collector*, è possibile modificare le notifiche facendo clic sull'icona a forma di matita nel campo "Notifiche" della sezione di riepilogo del data collector.</block>
   <block id="d07e55df7f133c0213955a67c979d808" category="admonition">Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifica specifica del Monitor rilevante per il cluster/data collector. L'elenco dei destinatari impostato per Data Collector riceverà gli avvisi di data collector. Se non sono presenti avvisi di data collector attivi, gli avvisi generati dal monitor verranno inviati a destinatari specifici del monitor.</block>
-  <block id="5d1096bf66c89ad0f817c4dc28e58b2f" category="inline-image-macro">Modifica delle notifiche di Collector</block>
-  <block id="1016031bc19103211cb4e343acdc32cc" category="paragraph"><block ref="1016031bc19103211cb4e343acdc32cc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="792171f0bd1e324307f6b4ba189249a8" category="list-text">Fare clic su *Advanced Configuration* (Configurazione avanzata) per aggiungere ulteriori campi di configurazione. (Non tutti i data collettori richiedono una configurazione avanzata).</block>
-  <block id="4279b596662924e6b4010f919f84d17c" category="list-text">Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.</block>
-  <block id="fde3f7c671a4c40a9d5099c319bbabaa" category="list-text">Fare clic su *Aggiungi modulo di raccolta* per salvare la configurazione e aggiungere il modulo di raccolta dati al tenant Cloud Insights.</block>
-  <block id="62ab4599363ab12f861dc69c2a905582" category="paragraph">Dopo aver aggiunto un nuovo data collector, Cloud Insights avvia tre sondaggi:</block>
   <block id="98be204914713a1fd39ff19bbc956666" category="list-text">primo sondaggio di inventario: immediatamente</block>
   <block id="f8be5685f8c7c5768bbc90c8ce7fb95d" category="list-text">1° sondaggio sui dati delle performance per stabilire un riferimento: immediatamente dopo il sondaggio dell'inventario</block>
   <block id="9baa8b33ea662dffa7faa1d9b47e5e8d" category="list-text">secondo sondaggio sulle performance: entro 15 secondi dal completamento del primo sondaggio sulle performance</block>
@@ -8178,10 +8078,7 @@
   <block id="697ee668360d1c19e858e5fdd25062e6" category="cell">L'esecuzione di Event Rate Checker con un agente già esistente può causare un aumento della latenza sulla SVM. Questo aumento sarà temporaneo durante l'esecuzione di Event Rate Checker.</block>
   <block id="c75d4b042f6604bc016e5b15ff4dea18" category="summary">Cloud Insights supporta Telegraf come agente per la raccolta di dati di integrazione su Kubernetes.</block>
   <block id="edcc6d64ff09289fd7b549c0265f3ea6" category="inline-xref">Aggiornamento in corso</block>
-  <block id="44df9c10959f57dfdf2dd50f7591a9c9" category="section-title">Configurazione dell'operatore</block>
   <block id="cac54dc379f23a7aed8745bde8386662" category="inline-link-macro">impostazioni disponibili</block>
-  <block id="cfda62a17e54042dffdf6eb6a74c7977" category="paragraph">Nelle versioni più recenti dell'operatore, le impostazioni modificate più comunemente possono essere configurate nella risorsa personalizzata _AgentConfiguration_. È possibile modificare questa risorsa prima di implementare l'operatore modificando il file _operator-config.yaml_. Questo file include esempi commentati di alcune impostazioni. Vedere l'elenco di <block ref="d0a687c4569dc784e63f3960b33ab7c7" category="inline-link-macro-rx"></block> per la versione più recente dell'operatore.</block>
-  <block id="342414165099895140bbfbd3ffb613ca" category="paragraph">È inoltre possibile modificare questa risorsa dopo che l'operatore è stato distribuito utilizzando il seguente comando:</block>
   <block id="3ab04e244a91c8a73c48633c62ac613a" category="paragraph">Per determinare se la versione implementata dell'operatore supporta AgentConfiguration, eseguire il seguente comando:</block>
   <block id="51ba9262aad7e83aa5f74ed6dc93a039" category="paragraph">Se viene visualizzato il messaggio "Error from server (notfound)" (errore dal server (non trovato)), l'operatore deve essere aggiornato prima di poter utilizzare AgentConfiguration.</block>
   <block id="b33361bde0bcb58125ffdc8fc36d8b99" category="section-title">Configurazione del supporto proxy</block>
@@ -10182,7 +10079,6 @@ FAS/AFF 8080</block>
   <block id="29dc284dcf38e4fe32feb8a0fd5c0b4b" category="cell">AWS Cloud Volumes</block>
   <block id="36df1b975561708b246ef1801ea416e5" category="cell">FSX per ONTAP</block>
   <block id="13816363e2eaa66d7be294be0dbaef8c" category="cell">Data ONTAP</block>
-  <block id="64b14a7e6bb27e2b2b4b1397266f46b8" category="cell">Qtree.1+</block>
   <block id="341a7ed392b3acf42503f54b89dd0954" category="cell">Percentuale di utilizzo della licenza</block>
   <block id="88bf89db528a107f9dcf9d0ab7b1203b" category="cell">Limite volume interno</block>
   <block id="7212522e5e7c1b74429f93734919f229" category="cell">Clona capacità salvata totale</block>
@@ -12813,7 +12709,6 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="80502f098bcf776c1d9ceec1ba9d636a" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegliere Couchbase.</block>
   <block id="b9edb2d8cbff35711b7021f32a2692dd" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegliere Flink.</block>
   <block id="53a22ff7bf05343afd43baa85e5c7883" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegli MySQL.</block>
-  <block id="6e79cf0edf33ec7a0066155d964eeb57" category="list-text">Dal menu Cloud Insights, fare clic su *osservabilità &gt; Collector* e fare clic sul pulsante *+ Data Collector*.</block>
   <block id="710ec696cccefe4c3faa1d7ebf8fca87" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegli Kibana.</block>
   <block id="c71f6654a45927e285ab22a697438b43" category="list-text">Da *osservabilità &gt; Collector*, fare clic su *+Data Collector*. Scegli MongoDB.</block>
   <block id="5bff30d13ce98c505187872963af1f25" category="section-title">Creazione dell'account NetApp BlueXP</block>
@@ -12895,7 +12790,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="04178a20ab55400da1419fd8fb46d169" category="paragraph">Cloud Insights è in grado di raccogliere dati dagli switch back-end del sistema ONTAP; è sufficiente abilitare la raccolta nella sezione _Configurazione avanzata_ del data Collector e verificare che il sistema ONTAP sia configurato per fornire <block ref="d459f31dbd039334427e234b6edb8373" category="inline-link-macro-rx"></block> e ha l'appropriato <block ref="d90f3f5210a51c1e01a73513b6257018" category="inline-link-macro-rx"></block> impostare.</block>
   <block id="4cfa97a1b14caa2256ef4dc5cd3d0fed" category="paragraph">Lo stato dei workload è disponibile con una semplice occhiata alla pagina *Kubernetes &gt; Esplora &gt; workload*, in modo da poter vedere rapidamente quali carichi di lavoro funzionano correttamente e quali potrebbero richiedere assistenza. Identifica con facilità se il problema di salute è correlato a modifiche all'infrastruttura, alla rete o alla configurazione e analizza la causa principale.</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Per informazioni sull'installazione su Kubernetes, consulta la <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> pagina.</block>
-  <block id="ed300e62408d01715c593931df6a2352" category="paragraph">Per istruzioni sull'installazione di Kubernetes, consultare la <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> pagina.</block>
   <block id="8c362b737d9d3a6fff5acfc29aaa5225" category="summary">Raccolta di dati per Kubernetes</block>
   <block id="3ce5067a26bb6509b15cfb6487590ed5" category="doc">Data Collector: Kubernetes</block>
   <block id="c7e254ef92577e872c85b9cc18b384ea" category="doc">Installazione e configurazione dell'operatore di monitoraggio Kubernetes</block>
@@ -13030,9 +12924,6 @@ kubectl get all -n &lt;namespace&gt; | grep -i psp (dovrebbe mostrare che non si
   <block id="70d79a6ca6098037988336f11346dce8" category="cell">I pod Net-observer (mappa del carico di lavoro) nello spazio dei nomi Operator si trovano in CrashLoopBackOff</block>
   <block id="e49c236734fe2ea50ae36fcb5353eed9" category="cell">I pod vengono eseguiti in Operator namespace (predefinito: Monitoring netapp), ma non vengono visualizzati dati nell'interfaccia utente per la mappa dei carichi di lavoro o le metriche Kubernetes nelle query</block>
   <block id="665dddc2adb2f34c745ef47345ee5e93" category="cell">Alcuni dei pod net-observer nello spazio dei nomi Operator sono in stato Pending</block>
-  <block id="a5ecb374e5b37ce04e31d68dc3716305" category="cell">Vedo quanto segue nei miei log subito dopo l'installazione dell'operatore di monitoraggio Kubernetes:
-
-[inputs.prometheus] errore nel plugin: Errore durante la richiesta HTTP a.<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> Ottieni<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> dial tcp: lookube-state-metrics.&lt;namespace&gt;.svc.cluster.local: no tale host</block>
   <block id="b3b6bea000b13acbfcb412bad49ee494" category="cell">Verificare la versione di Kubernetes (ad es<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>).  Se è v1.20.x o inferiore, si tratta di un limite previsto.  La release kube-state-metrics implementata con Kubernetes Monitoring Operator supporta solo v1.cronjob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa cronjob è v1beta.cronjob.  Di conseguenza, le metriche dello stato del kube non riescono a trovare la risorsa di crono-job.</block>
   <block id="cacd73b257654b42f59477320860f203" category="cell">Sto vedendo i pod implementati dal crash dell'operatore di monitoring Kubernetes a causa di risorse insufficienti.</block>
   <block id="1bf4c34fd6e2ff1bf1741953bce0f5e1" category="cell">Fare riferimento a Kubernetes Monitoring Operator <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> Per aumentare i limiti di CPU e/o memoria in base alle esigenze.</block>
@@ -13134,4 +13025,29 @@ In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_
   <block id="3b1dbe846304b427475d6a670fb96413" category="inline-image-macro">ignorare l'intervallo temporale del dashboard per un widget</block>
   <block id="c9b0370dc5d789bfc283022e4c0d9d9e" category="paragraph"><block ref="c9b0370dc5d789bfc283022e4c0d9d9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="776202c829612e565a462d31af745afd" category="paragraph">I dati nei widget nei dashboard e nelle pagine di destinazione degli asset si aggiornano automaticamente in base a un intervallo di aggiornamento determinato dall'intervallo temporale del dashboard selezionato. L'intervallo di refresh si basa sul fatto che il widget sia costituito da serie temporali (linea, spline, area, grafico a aree sovrapposte) o da serie non temporali (tutti gli altri grafici).</block>
+  <block id="16a53ba18c619dcf3d471d85becaeee6" category="section-title">Cose importanti da notare prima di iniziare</block>
+  <block id="ef2fbd69b6e60cf6860a0466960c15a2" category="inline-xref">repository personalizzato</block>
+  <block id="ca988e68e82cbabbd81d5c8fe6c458c2" category="inline-xref">OpenShift</block>
+  <block id="fd75e30f03557ae02b87c843dca05eef" category="paragraph">Se si utilizza un <block ref="1997cc9e11e3840958347d54a5502495" category="inline-xref-macro-rx"></block>, hanno un <block ref="8117c39ae2fe2d46fc88eb3e138ef1e6" category="inline-xref-macro-rx"></block>, o stanno utilizzando <block ref="355c126f2151d7a3495e6210dabdd072" category="inline-xref-macro-rx"></block>, leggere attentamente le seguenti sezioni.</block>
+  <block id="ccd3239a9f19d6d508e3603882b2f0a7" category="paragraph">Leggi anche di <block ref="abccd48aba555dd896a8cc74442f4360" category="inline-xref-macro-rx"></block>.</block>
+  <block id="cc2bb73c3e6fbe9cfa1882cd8e797fd4" category="paragraph">Se si sta eseguendo l'aggiornamento da un'installazione precedente, leggere la <block ref="8c16618fd0a2a4546027523bc90153a9" category="inline-xref-macro-rx"></block> informazioni.</block>
+  <block id="4ce29774235b5ad70135520aad0c4a92" category="paragraph">Per installare NetApp Kubernetes Monitoring Operator, è possibile utilizzare un proxy nel proprio ambiente in due punti. Questi possono essere sistemi proxy identici o separati:</block>
+  <block id="3aabe2789e92746b5404b30428bb4f9e" category="paragraph">Se si utilizza un proxy per uno o entrambi questi, per installare il monitor operativo Kubernetes di NetApp è necessario prima assicurarsi che il proxy sia configurato per consentire una buona comunicazione con l'ambiente Cloud Insights. Ad esempio, dai server/VM da cui si desidera installare l'operatore, è necessario poter accedere a Cloud Insights e scaricare i file binari da Cloud Insights.</block>
+  <block id="73689eeba538dc0b4e24b0c08682858c" category="paragraph">Per il proxy utilizzato per installare NetApp Kubernetes Operating Monitor, prima di installare l'operatore, impostare le variabili di ambiente _http_proxy/https_proxy_. Per alcuni ambienti proxy, potrebbe essere necessario impostare la variabile _no_proxy environment_.</block>
+  <block id="05de88b1f0962d418af51426b2e42b5c" category="paragraph">Per impostare le variabili, eseguire le seguenti operazioni sul sistema *prima* dell'installazione di NetApp Kubernetes Monitoring Operator:</block>
+  <block id="a4e1e6009cd02048a3c4c625810efdde" category="paragraph">Per il proxy utilizzato per la comunicazione del cluster Kubernetes con l'ambiente Cloud Insights, installare l'operatore di monitoraggio Kubernetes dopo aver letto tutte le istruzioni.</block>
+  <block id="6a487db38d52ee4c14d91f1b1ddd2fac" category="paragraph">Configurare la sezione proxy di AgentConfiguration in operator-config.yaml prima di implementare NetApp Kubernetes Monitoring Operator.</block>
+  <block id="496310011786854d1bf0863b20b159b3" category="paragraph">Per impostazione predefinita, l'operatore di monitoraggio di NetApp Kubernetes estrarrà le immagini container dal repository Cloud Insights. Se si utilizza un cluster Kubernetes come destinazione per il monitoraggio e tale cluster è configurato in modo da estrarre solo immagini container da un repository Docker personalizzato o privato o da un registro container, è necessario configurare l'accesso ai container richiesti dall'operatore di monitoraggio NetApp Kubernetes.</block>
+  <block id="4a3ecd51c30dc55cebd7ed9babbb7931" category="list-text">kube-rbac-proxy</block>
+  <block id="bb84790255aac66744320e4417143dd8" category="list-text">fluente</block>
+  <block id="2941fa605b5a46d4cf07aade64af8b6e" category="list-text">kubernetes-event-exportent</block>
+  <block id="4099aa818be44a204ef7ec3ba69b96c7" category="inline-link-macro">aggregati da visualizzare</block>
+  <block id="6046897f8c0f41425f2e47227c5932e8" category="paragraph">Se il cluster che si sta monitorando contiene risorse personalizzate che non hanno un ClusterRole che <block ref="c09eb6051f010e6e01a634a8b6a5c304" category="inline-link-macro-rx"></block>, Sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.</block>
+  <block id="8f0ae9ae8e0fd7f3e8fe6ff175a59943" category="list-text">Modificare _operator-additional-permissions.yaml_ prima dell'installazione o dopo l'installazione modificare la risorsa _ClusterRole/&lt;namespace&gt;-additional-permissions_</block>
+  <block id="8a75e64ac585bb8eb6efae44768cfc8e" category="list-text">Creare una nuova regola per gli apartGroup e le risorse desiderati con i verbi ["Get", "Watch", "list"]. Vedere \https://kubernetes.io/docs/reference/access-authn-authz/rbac/</block>
+  <block id="5aa700b8892918bb447b666e3ba9b2a8" category="list-text">Applicare le modifiche al cluster</block>
+  <block id="0b681475d547cee4e6a8aa2975d2a6ad" category="cell">Vedo quanto segue nei miei log subito dopo l'installazione dell'operatore di monitoraggio Kubernetes:
+
+[inputs.prometheus] errore nel plug-in: Errore durante la richiesta HTTP a \http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics: Get \http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics: Dial tcp: lookup kube-state-metrics.&lt;namespace&gt;.svc.cluster.local: Nessun tale host</block>
+  <block id="079771aecc679d555303419cd98137ca" category="paragraph">Per istruzioni sull'installazione di Kubernetes, consultare la <block ref="c4dd0ed9c7aa586e1ccc41d08bd166bb" category="inline-link-macro-rx"></block> pagina.</block>
 </blocks>

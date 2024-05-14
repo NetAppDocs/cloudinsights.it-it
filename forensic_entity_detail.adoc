@@ -1,16 +1,14 @@
 ---
 sidebar: sidebar 
 permalink: forensic_entity_detail.html 
-keywords: Forensic, entity, entity overview, entity behavior, detail 
-summary: Dettaglio entità legale 
+keywords: Forensic, entity, entity overview, entity behavior, entities 
+summary: Pagina delle entità forensi 
 ---
-= Dettaglio entità forense
+= Pagina delle entità forensi
 :toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
 :toc: 
-:toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -18,60 +16,18 @@ summary: Dettaglio entità legale
 :toc-position: content
 
 
-Utilizzare la pagina Entity Detail per accedere a informazioni dettagliate su un'entità.
+La pagina delle entità Forensics fornisce informazioni dettagliate sull'attività delle entità nell'ambiente.
 
 
 
 == Esame delle informazioni sull'entità
 
-È possibile accedere a.
+Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entities_ per accedere alla pagina Entities.
 
-Profilo entità:: Descrive i dettagli, tra cui:
-+
---
-* Nome
-+
-** Fare clic per accedere a [Entity Overview] (Panoramica entità)
+Questa pagina fornisce una panoramica dell'attività dell'entità nel proprio ambiente, evidenziando le seguenti informazioni: * Un grafico che mostra _entità univoche_ cui si accede al minuto * Un grafico di _tipi di entità a cui si accede_ * una suddivisione dei _percorsi comuni_ * Un elenco delle _prime 50 entità_ rispetto al numero totale di entità
 
+image:CS-Entities-Page.png["Pagina Entities"]
 
-* Tipo
-* Community
-* Percorso
-* Ultimo accesso
-+
-** Fare clic su User (utente) per accedere a [User Overview] (Panoramica utente)
+Facendo clic su un'entità nell'elenco, viene visualizzata una pagina panoramica dell'entità, che mostra un profilo dell'entità con dettagli come nome, tipo, nome del dispositivo, indirizzo IP e percorso più utilizzati, oltre al comportamento dell'entità come l'utente, l'IP, e ora dell'ultimo accesso all'entità.
 
-
-* Dimensione
-
-
---
-Utente e community::
-+
---
-* Il numero di volte in cui gli utenti hanno effettuato l'accesso all'entità
-* Il numero di volte in cui le community hanno effettuato l'accesso all'entità.
-
-
---
-Entità Bahavior::
-+
---
-* Attività recente:
-+
-** Data dell'ultimo accesso
-** Utente che ha effettuato l'ultimo accesso all'entità
-** Ubicazione da cui è stata effettuata l'accesso all'entità
-
-
-* Operazioni
-+
-** Numero di operazioni di scrittura
-** Numero di operazioni di lettura
-** Numero di accessi ai metadati
-
-
-
-
---
-
+image:CS-entity-detail-page.png["Pagina Entity Overview"]

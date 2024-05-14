@@ -17593,7 +17593,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.4+| performance | Qtree.1+ | Storage | Dischi guasti | Implementato | HTTPS 
+.4+| Performance | Qtree | Storage | Dischi guasti | Implementato | HTTPS 
 
 
 |  .3+| Nodo di storage | Totale rapporto di hit della cache | Implementato | HTTPS 

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task_query_assign_multiple_applicationss.html 
+permalink: task_query_assign_multiple_applications.html 
 summary: Utilizzare una query per assegnare più applicazioni o annotazioni agli oggetti o per rimuoverli da più applicazioni o annotazioni. 
 keywords: query, queries, application, annotation, multiple 
 ---
