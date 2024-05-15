@@ -2,6 +2,7 @@
 sidebar: sidebar 
 permalink: index.html 
 summary: Benvenuti nel portale di documentazione per Cloud Insights. 
+keywords:  
 ---
 = Documentazione Cloud Insights
 :toc: macro

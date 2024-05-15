@@ -91,7 +91,7 @@ Quando si esporta un identificativo del dispositivo IP in un file .CSV, il file 
 . Fare clic su *Gestisci > risoluzione periferica*
 . Selezionare la scheda *IP Address Identify* (identificazione indirizzo IP).
 . Selezionare il dispositivo IP o i dispositivi di cui si desidera esportare l'identificativo.
-. Fare clic su *Export* (Esporta) image:ExportButton.png[""] pulsante.
+. Fare clic su *Export* (Esporta) image:ExportButton.png["Pulsante Export (Esporta)"] pulsante.
 +
 Selezionare se aprire il file .CSV o salvarlo.
 

@@ -15,6 +15,7 @@ keywords: features
 :imagesdir: ./media/
 
 
+[role="lead"]
 NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguito sono riportate alcune delle funzionalità più recenti disponibili nelle edizioni commerciali di Cloud Insights.
 
 
@@ -1418,8 +1419,8 @@ _Nuove variabili per gli attributi e la possibilità di utilizzare le variabili 
 
 Le dashboard sono ora più potenti e flessibili che mai. Crea dashboard adattivi con variabili di attributo per filtrare rapidamente le dashboard in tempo reale. Utilizzando questi e altri pre-esistenti link:concept_dashboard_features.html#variables["variabili"] ora puoi creare una dashboard di alto livello per visualizzare le metriche per l'intero ambiente e filtrare senza problemi in base a nome, tipo, posizione e altro ancora. Utilizza le variabili numeriche nei widget per associare le metriche raw ai costi, ad esempio il costo per GB per lo storage come servizio.
 
-image:Variables_Drop_Down_Showing_Annotations.png[""]
-image:Variables_Attribute_Filtering.png[""]
+image:Variables_Drop_Down_Showing_Annotations.png["Annotazioni a discesa in una variabile"]
+image:Variables_Attribute_Filtering.png["filtro degli attributi in una variabile"]
 
 
 
@@ -1594,19 +1595,19 @@ Le potenti API di Cloud Insights sono più accessibili che mai, con le API Alert
 | Categoria API | Di base | Standard | Premium 
 
 
-| Unità di acquisizione | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Unità di acquisizione | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Raccolta di dati | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Raccolta di dati | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Avvisi |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Avvisi |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Risorse |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Risorse |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Acquisizione dei dati |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Acquisizione dei dati |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 |===
 
 
@@ -1688,19 +1689,19 @@ L'accesso API è ora disponibile in tutte le edizioni di Cloud Insights. Gli ute
 | Categoria API | Di base | Standard | Premium 
 
 
-| Unità di acquisizione | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Unità di acquisizione | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Raccolta di dati | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Raccolta di dati | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Risorse |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Risorse |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Acquisizione dei dati |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Acquisizione dei dati |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Data Warehouse |  |  | image:SmallCheckMark.png[""] 
+| Data Warehouse |  |  | image:SmallCheckMark.png["segno di spunta"] 
 |===
 Per ulteriori informazioni sull'utilizzo delle API, fare riferimento a. link:https://docs.netapp.com/us-en/cloudinsights/API_Overview.html#api-documentation-swagger["Documentazione API"].
 

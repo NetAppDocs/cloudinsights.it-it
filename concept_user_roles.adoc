@@ -291,4 +291,4 @@ Vengono visualizzate le seguenti opzioni:
 * Limitare l'accesso ai valori predefiniti e ai domini specificati. Elencare tutti i domini ai quali si desidera accedere all'ambiente Cloud Insights, oltre ai domini predefiniti.
 
 
-image:Restrict_Domains_Tooltip.png[""]
+image:Restrict_Domains_Tooltip.png["Descrizione comando limita domini"]

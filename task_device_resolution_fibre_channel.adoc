@@ -120,7 +120,7 @@ Quando si esporta l'identificazione di un dispositivo Fibre Channel in un file .
 . Fare clic su *Gestisci > risoluzione periferica*
 . Selezionare la scheda *Fibre Channel Identify*.
 . Selezionare il dispositivo Fibre Channel o i dispositivi di cui si desidera esportare l'identificativo.
-. Fare clic su *Export* (Esporta) image:ExportButton.png[""] pulsante.
+. Fare clic su *Export* (Esporta) image:ExportButton.png["Pulsante Export (Esporta)"] pulsante.
 +
 Selezionare se aprire il file .CSV o salvarlo.
 

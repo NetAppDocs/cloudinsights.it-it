@@ -32,23 +32,21 @@ Il Kubernetes Monitoring Operator installa automaticamente le metriche dello sta
 
 
 
-=== Contatori di metriche di stato kube
+=== Contatori Kube-state-metering
 
-Utilizzare i seguenti collegamenti per accedere alle informazioni relative ai contatori delle metriche di stato del kube:
+L'operatore di monitoraggio Kubernetes NetApp estrae i contatori delle metriche stato-kube elencati di seguito. Ulteriori dettagli su ciascun contatore sono disponibili all'indirizzo: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
 
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/configmap-metrics.md["Metriche di ConfigMap"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/daemonset-metrics.md["Metriche DemonSet"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/deployment-metrics.md["Metriche di implementazione"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/ingress-metrics.md["Metriche di ingresso"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/namespace-metrics.md["Metriche dello spazio dei nomi"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/node-metrics.md["Metriche del nodo"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/persistentvolume-metrics.md["Metriche di volume persistenti"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/persistentvolumeclaim-metrics.md["Metriche delle richieste di rimborso per volumi persistenti"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/pod-metrics.md["Metriche pod"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/replicaset-metrics.md["Metriche ReplicaSet"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/secret-metrics.md["Metriche segrete"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/service-metrics.md["Metriche del servizio"]
-. https://github.com/kubernetes/kube-state-metrics/blob/master/docs/statefulset-metrics.md["Metriche StatefulSet"]
+. Metriche di ConfigMap
+. Metriche DemonSet
+. Metriche di implementazione
+. Metriche di ingresso
+. Metriche dello spazio dei nomi
+. Metriche del nodo
+. Metriche di volume persistenti
+. Metriche di richiesta di volume persistente
+. Metriche pod
+. Metriche ReplicaSet
+. Metriche segrete
+. Metriche del servizio
+. Metriche StatefulSet
 
-
-'''

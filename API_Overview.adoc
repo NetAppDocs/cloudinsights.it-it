@@ -28,22 +28,22 @@ Tenere presente che le API Cloud Insights sono disponibili in base all'edizione 
 | Tipo API | Di base | Standard | Premium 
 
 
-| Unità di acquisizione | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Unità di acquisizione | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Raccolta di dati | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Raccolta di dati | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Avvisi |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Avvisi |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Risorse |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Risorse |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Acquisizione dei dati |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Acquisizione dei dati |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 
 
-| Gestione dei log |  | image:SmallCheckMark.png[""] | image:SmallCheckMark.png[""] 
+| Gestione dei log |  | image:SmallCheckMark.png["segno di spunta"] | image:SmallCheckMark.png["segno di spunta"] 
 |===
 Inoltre, il tuo Cloud Insights link:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html#permission-levels["ruolo del set di funzionalità"] Determina le API a cui è possibile accedere. I ruoli utente e ospite hanno meno privilegi rispetto al ruolo Amministratore. Ad esempio, se si ha il ruolo di amministratore in Monitor e Optimize, ma il ruolo di utente in Reporting, è possibile gestire tutti i tipi di API tranne Data Warehouse.
 

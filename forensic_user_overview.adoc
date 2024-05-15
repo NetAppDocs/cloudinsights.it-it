@@ -13,6 +13,7 @@ summary: 'dettagli forensi per l"utente'
 :imagesdir: ./media/
 
 
+[role="lead"]
 Le informazioni per ciascun utente sono fornite nella Panoramica utente. Utilizzare queste viste per comprendere le caratteristiche dell'utente, le entità associate e le attività recenti.
 
 

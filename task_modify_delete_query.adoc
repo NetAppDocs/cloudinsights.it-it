@@ -18,7 +18,7 @@ keywords: query, queries, modify, edit, delete, remove
 :toc-position: content
 
 
-[role="lead]"]
+[role="lead"]
 È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse che si stanno interrogando.
 
 

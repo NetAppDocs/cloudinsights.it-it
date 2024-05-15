@@ -2,6 +2,7 @@
 sidebar: sidebar 
 permalink: task_create_annotation_rules.html 
 summary: È possibile creare regole di annotazione per applicare automaticamente le annotazioni a più risorse. 
+keywords: annotate, annotation, rules 
 ---
 = Creazione di regole di annotazione
 :toc: macro

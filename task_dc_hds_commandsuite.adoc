@@ -111,7 +111,7 @@ Per raccogliere i dati di inventario, è necessario disporre di quanto segue:
 * Nome utente e password di sola lettura per il software HiCommand Device Manager e privilegi peer
 * Requisiti delle porte: 2001 (http) o 2443 (https)
 * Accedere al software HiCommand Device Manager utilizzando il nome utente e la password
-* Verificare l'accesso a HiCommand Device Manager http://<HiCommand_Device_Manager_IP>:2001/service/StorageManager[]
+* Verificare l'accesso a Gestione dispositivi HiCommand \http://<HiCommand_Device_Manager_IP>:2001/service/StorageManager
 
 
 

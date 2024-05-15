@@ -47,7 +47,7 @@ Viene visualizzata la finestra di dialogo Edit Widget (Modifica widget). I dati 
 
 
 
-image:VMDashboard-TableWidget1.png[""]
+image:VMDashboard-TableWidget1.png["Finestra di dialogo Modifica widget tavola"]
 
 . Possiamo personalizzare questo widget. Nel campo Name (Nome) in alto, eliminare "Widget 1" e immettere "Virtual Machine Performance table" (Tabella delle prestazioni della macchina virtuale).
 . Fare clic sull'elenco a discesa tipo di risorsa e modificare _Storage_ in _Virtual Machine_.
@@ -68,7 +68,7 @@ Le righe della tabella vengono ora raggruppate in base alle impostazioni. È pos
 
 
 
-image:VMDashboard-TableWidgetGroup.png[""]
+image:VMDashboard-TableWidgetGroup.png["Esempio di raggruppamento di widget della tabella"]
 
 . Una volta personalizzato il widget della tabella in base alle proprie esigenze, fare clic sul pulsante *[Salva]*.
 +
@@ -88,7 +88,7 @@ Successivamente aggiungeremo alcuni grafici per mostrare le nostre performance d
 . Fare clic su *[Save]* per aggiungere questo widget alla dashboard.
 
 
-image:VMDashboard-LineChartVMLatency.png[""]
+image:VMDashboard-LineChartVMLatency.png["Grafico a linee che mostra i dati sulla latenza"]
 
 Successivamente, aggiungeremo un grafico che mostra gli IOPS totali, di lettura e scrittura delle macchine virtuali in un singolo grafico.
 
@@ -100,7 +100,7 @@ Successivamente, aggiungeremo un grafico che mostra gli IOPS totali, di lettura 
 . Fare clic su *Mostra legenda* per visualizzare una legenda per questo widget nella dashboard.
 
 
-image:VMDashboard-AreaChartVMIOPS.png[""]
+image:VMDashboard-AreaChartVMIOPS.png["Grafico ad area che mostra gli IOPS delle VM"]
 
 . Fare clic su *[Save]* per aggiungere questo widget alla dashboard.
 
@@ -121,4 +121,4 @@ Assicurati di *[Salva]* la dashboard dopo aver apportato le modifiche.
 
 La tua dashboard finale sulle performance delle macchine virtuali avrà un aspetto simile al seguente:
 
-image:VMDashExample1.png[""]
+image:VMDashExample1.png["Esempio di dashboard VM completo che mostra tutti i widget presenti"]

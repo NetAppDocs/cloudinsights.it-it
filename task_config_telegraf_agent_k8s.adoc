@@ -30,8 +30,8 @@ Vedere link:pre-requisites_for_k8s_operator.html["Prerequisiti"] Documentazione 
 
 == Installazione dell'operatore di monitoraggio Kubernetes
 
-image:NKMO-Instructions-1.png[""]
-image:NKMO-Instructions-2.png[""]
+image:NKMO-Instructions-1.png["Istruzioni per il monitoraggio dell'operatore"]
+image:NKMO-Instructions-2.png["Istruzioni per il monitoraggio dell'operatore"]
 
 .Passaggi per installare l'agente Kubernetes Monitoring Operator su Kubernetes:
 . Immettere un nome cluster e uno spazio dei nomi univoci. Se lo sei <<aggiornamento in corso,aggiornamento in corso>> Da un operatore Kubernetes precedente, utilizzare lo stesso nome del cluster e lo stesso namespace.
@@ -532,7 +532,7 @@ telegraf:
 
 | Nei registri di Telegraf vengono visualizzati messaggi di errore ricorrenti simili a quelli riportati di seguito:
 
- E! [Agent] Error writing to outputs.http: Post "https://<tenant_url>/rest/v1/lake/ingest/influxdb":[] Scadenza contesto superata (timeout client superato in attesa di intestazioni) | Modificare la sezione telegraf in _AgentConfiguration_ e impostare _dockerMetricCollectionEnabled_ su false. Per ulteriori dettagli, fare riferimento al manuale dell'operatore  link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"]. 
+ E! [Agent] errore di scrittura in outputs.http: Post "\https://<tenant_url>/REST/v1/Lake/ingerment/influenzxdb": Scadenza contesto superata (client. Timeout durante l'attesa delle intestazioni) | Modificare la sezione telegraf in _AgentConfiguration_ e aumentare _outputTimeout_ a 10s. Per ulteriori dettagli, fare riferimento al manuale dell'operatore link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"]. 
 
 
 | Mancano i dati _involvedobject_ per alcuni registri eventi. | Assicurarsi di aver seguito i passaggi descritti in link:pre-requisites_for_k8s_operator.html["Permessi"] sezione precedente. 

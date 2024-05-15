@@ -23,7 +23,7 @@ La sezione Summary (Riepilogo) di una pagina asset visualizza informazioni gener
 
 Le informazioni contenute nella sezione di riepilogo, nonché in qualsiasi tabella o widget personalizzati nella pagina di asset, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. È possibile visualizzare la frequenza di aggiornamento corrente nell'angolo superiore destro della sezione Riepilogo, nelle tabelle e in qualsiasi widget personalizzato.
 
-image:Summary_Section_Example.png[""]
+image:Summary_Section_Example.png["Esempio di sezione di riepilogo della landing page"]
 
 Nota: Le informazioni visualizzate nella sezione Riepilogo variano a seconda del tipo di risorsa visualizzata.
 
@@ -56,4 +56,4 @@ La topologia è disponibile per i seguenti tipi di risorse:
 * Volume
 
 
-image:TopologyExample.png[""]
+image:TopologyExample.png["Esempio di sezione topologia della landing page"]

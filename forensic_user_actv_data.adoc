@@ -18,6 +18,7 @@ summary: dati sulle attività degli utenti forensi
 :toc-position: content
 
 
+[role="lead"]
 La pagina User Activity (attività utente) consente di comprendere le azioni eseguite dagli utenti sulle entità.
 
 I dati disponibili in questa pagina, descrivono:

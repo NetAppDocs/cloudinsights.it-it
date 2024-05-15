@@ -16,6 +16,7 @@ summary: Pagina delle entità forensi
 :toc-position: content
 
 
+[role="lead"]
 La pagina delle entità Forensics fornisce informazioni dettagliate sull'attività delle entità nell'ambiente.
 
 

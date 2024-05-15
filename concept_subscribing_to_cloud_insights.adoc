@@ -19,6 +19,7 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 :toc-position: content
 
 
+[role="lead"]
 Per iniziare con Cloud Insights è sufficiente seguire tre semplici passaggi:
 
 * Iscriviti per un account su link:https://https://bluexp.netapp.com//["*NetApp BlueXP*"] Per accedere a tutte le offerte cloud di NetApp.

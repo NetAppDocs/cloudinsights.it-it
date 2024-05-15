@@ -156,7 +156,6 @@ Le voci di audit precedenti al tempo di conservazione vengono eliminate automati
 
 == Risoluzione dei problemi
 
-[role="lead"]
 Qui troverai suggerimenti per la risoluzione dei problemi con Audit.
 
 |===
