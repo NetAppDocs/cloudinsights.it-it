@@ -52,12 +52,12 @@ Rancher + Cattle.io come piattaforma di orchestrazione/Kubernetes: Cattle.io/os 
 
 | Connettività | Kubectl cli è configurato per comunicare con il cluster K8s di destinazione e per disporre di connettività Internet al vostro ambiente Cloud Insights.
 
-Se si è dietro un proxy durante l'installazione, seguire le istruzioni nella link:/task_config_telegraf_agent_k8s.html#configuring-proxy-support["Configurazione del supporto proxy"] Sezione dell'installazione dell'operatore.
+Se si è dietro un proxy durante l'installazione, seguire le istruzioni nella link:task_config_telegraf_agent_k8s.html#configuring-proxy-support["Configurazione del supporto proxy"] Sezione dell'installazione dell'operatore.
 
 Per un controllo accurato e la refertazione dei dati, sincronizzare l'ora sul computer dell'agente utilizzando il protocollo NTP (Network Time Protocol) o SNTP (Simple Network Time Protocol). 
 
 
-| Altro | Se si utilizza OpenShift 4,6 o versione successiva, è necessario seguire il link:task_config_telegraf_Agent_k8s.html#openshift-instructions[istruzioni OpenShift oltre a garantire che questi prerequisiti siano soddisfatti. 
+| Altro | Se si utilizza OpenShift 4,6 o versione successiva, è necessario seguire la link:task_config_telegraf_agent_k8s.html#openshift-instructions["Istruzioni per OpenShift"] oltre ad assicurare che questi prerequisiti siano soddisfatti. 
 
 
 | Token API | Se si sta ridistribuendo l'operatore (ad esempio se lo si sta aggiornando o sostituendo), non è necessario creare un nuovo token API; è possibile riutilizzare il token precedente. 
@@ -169,7 +169,7 @@ Modificare la configurazione dell'agente in operator-config.yaml in modo che rif
 agent:
   ...
   # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-  # Please see documentation link here: https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  # Please see documentation for link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[using a custom or private docker repository].
   dockerRepo: your.docker.repo/long/path/to/test
   # Optional: A docker image pull secret that maybe needed for your private docker registry
   dockerImagePullSecret: docker-secret-name

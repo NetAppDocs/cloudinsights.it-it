@@ -92,7 +92,7 @@ Nella pagina dell'elenco dei webhook, vengono visualizzati il nome, creato da, c
 
 == Scelta di Webhook Notification in a Monitor
 
-Per scegliere la notifica webhook in un link:task_create_monitor.html#creating-a-monitor["monitorare"], Accedere a *Alerts > Manage Monitors* (Avvisi > Gestione monitor) e selezionare il monitor desiderato oppure aggiungere un nuovo monitor. Nella sezione _Imposta notifiche team_, scegli _Webhook_ come metodo di consegna. Selezionare i livelli di avviso (critico, Avviso, risolto), quindi scegliere il webhook desiderato.
+Per scegliere la notifica webhook in un link:task_create_monitor.html["monitorare"], Accedere a *Alerts > Manage Monitors* (Avvisi > Gestione monitor) e selezionare il monitor desiderato oppure aggiungere un nuovo monitor. Nella sezione _Imposta notifiche team_, scegli _Webhook_ come metodo di consegna. Selezionare i livelli di avviso (critico, Avviso, risolto), quindi scegliere il webhook desiderato.
 
 image:Webhook_Monitor_Notify.png["Notifica di Webhook Monitor"]
 

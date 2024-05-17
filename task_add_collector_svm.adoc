@@ -49,7 +49,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 
 
 ** Utilizzando SVM Vserver Management IP, Username e Password
-** Se non si è in grado o non si è disposti a utilizzare il nome utente e la password completi di Administrator Cluster/SVM Management, è possibile creare un utente personalizzato con privilegi inferiori, come indicato nella link:#a-note-about-permissions[""Nota sulle autorizzazioni""] di seguito. Questo utente personalizzato può essere creato per l'accesso a SVM o Cluster.
+** Se non si è in grado o non si è disposti a utilizzare il nome utente e la password completi di Administrator Cluster/SVM Management, è possibile creare un utente personalizzato con privilegi inferiori, come indicato nella <<a-note-about-permissions,"Nota sulle autorizzazioni">> di seguito. Questo utente personalizzato può essere creato per l'accesso a SVM o Cluster.
 +
 *** o è anche possibile utilizzare un utente ad con un ruolo che disponga almeno delle autorizzazioni di csrole, come indicato nella sezione "A note about permissions" (Nota sulle autorizzazioni) riportata di seguito. Consultare anche la link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["Documentazione ONTAP"].
 
@@ -124,33 +124,9 @@ security login role create -role csrole -cmddirname "security certificate" -acce
 security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
 security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
 ....
-<<<<<<< TESTA
 
-[]
-====
-Autorizzazioni per l'integrazione ONTAP ARP:
 
-....
-security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
-....
-Autorizzazioni per accesso ONTAP negato:
-
-....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-....
-Nota: Se è già stato aggiunto un ruolo di pausa, _arwrole_ o _csrestrole_, non è necessario aggiungere un secondo ruolo di pausa. È possibile aggiungere semplicemente le autorizzazioni API come nell'esempio seguente.
-
-Esempio: _Csrestrole_ è già presente, per cui dobbiamo abilitare la protezione anti-ransomware e assegnare autorizzazioni API al _csrestrole_ esistente:
-
-....
-security login rest-role create -role csrestrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-....
->>>>>>> b8087143154c7d9f5d1d3f33e1bdf97a7c9d1
-=== autorizzazioni per l'aggiunta tramite *Vserver Management IP*:
+=== Autorizzazioni per l'aggiunta tramite *Vserver Management IP*:
 
 Se non è possibile utilizzare l'utente amministratore della gestione del cluster per consentire a workload Security di accedere al data collector SVM di ONTAP, è possibile creare un nuovo utente denominato "csuser" con i ruoli indicati nei comandi seguenti. Utilizzare il nome utente "csuser" e la password per "csuser" quando si configura il data collector di workload Security per utilizzare Vserver Management IP.
 
@@ -168,17 +144,9 @@ security login role create -vserver <vservername> -role csrole -cmddirname "vser
 security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
 ....
  security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
-<<<<<<< TESTA
 
-====
-Autorizzazioni per accesso ONTAP negato:
 
-....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-....
->>>>>>> b8087143154c7d9f5d1d3f33e1bdf97a7c9d1
-=== autorizzazioni per la protezione autonoma da ransomware ONTAP
+=== Autorizzazioni per la protezione autonoma da ransomware ONTAP
 
 Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
 
@@ -384,7 +352,7 @@ G) aprire il firewall in ONTAP, in modo che ONTAP sia in grado di connettere la 
 
 8. Verificare che la porta 7 sia aperta.
 
-9. Se nessuna delle soluzioni precedenti risolve il problema, aprire un caso con link:http://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Supporto NetApp"] per ulteriore assistenza. 
+9. Se nessuna delle soluzioni precedenti risolve il problema, aprire un caso con link:concept_requesting_support.html["Supporto NetApp"] per ulteriore assistenza. 
 
 
 | Messaggio: "Impossibile determinare il tipo di ONTAP per [hostname: <IP Address>. Motivo: Errore di connessione al <IP Address> del sistema di storage: Host irraggiungibile (host irraggiungibile)" | 1. Verificare che sia stato fornito l'indirizzo IP di gestione SVM o l'IP di gestione del cluster corretto. 2. SSH alla SVM o al cluster a cui si intende connettersi. Una volta stabilita la connessione, assicurarsi che il nome SVM o il nome del cluster sia corretto. 
@@ -420,6 +388,15 @@ G) aprire il firewall in ONTAP, in modo che ONTAP sia in grado di connettere la 
 | Data Collector in error, visualizza questo messaggio di errore. "Errore: Il connettore è in stato di errore. Nome del servizio: Audit. Motivo dell'errore: Impossibile configurare il criterio su SVM svm_test. Motivo: Valore mancante per il campo zapi: Eventi. " | Inizia con una nuova SVM con solo il servizio NFS configurato. Aggiungere un data collector SVM ONTAP in sicurezza del carico di lavoro. CIFS viene configurato come protocollo consentito per SVM mentre si aggiunge il Data Collector SVM ONTAP in sicurezza del carico di lavoro. Attendere che il Data Collector in workload Security visualizzi un errore. Poiché il server CIFS NON è configurato su SVM, questo errore, come mostrato a sinistra, viene visualizzato da workload Security. Modificare il data collector ONTAP SVM e deselezionare CIFS come protocollo consentito. Salvare il data collector. Verrà avviato solo con il protocollo NFS attivato. 
 
 
-| Data Collector visualizza il messaggio di errore: "Errore: Impossibile determinare lo stato di salute del raccoglitore entro 2 tentativi, provare a riavviare nuovamente il Collector (codice di errore: AGENT008)". | 1. Nella pagina Data Collector, scorrere a destra del data collector che indica l'errore e fare clic sul menu a 3 punti. Selezionare _Edit_. Immettere nuovamente la password del data collector. Salvare il data collector premendo il pulsante _Save_. Data Collector verrà riavviato e l'errore dovrebbe essere risolto. 2. Il computer dell'agente potrebbe non disporre di spazio sufficiente per la CPU o la RAM, motivo per cui i DSC si guastano. Verificare il numero di Data Collector aggiunti all'Agente nel computer. Se è superiore a 20, aumentare la capacità della CPU e della RAM del computer dell'agente. Una volta aumentate la CPU e la RAM, i DSC entrano automaticamente in Inizializzazione e quindi in esecuzione. Consultare la guida al dimensionamento su link:https://docs.netapp.com/us-en/cloudinsights/concept_cs_event_rate_checker.html["questa pagina"]. 
+| Data Collector visualizza il messaggio di errore: "Errore: Impossibile determinare lo stato di salute del raccoglitore entro 2 tentativi, provare a riavviare nuovamente il Collector (codice di errore: AGENT008)". | 1. Nella pagina Data Collector, scorrere a destra del data collector che indica l'errore e fare clic sul menu a 3 punti. Selezionare _Edit_.
+Immettere nuovamente la password del data collector.
+Salvare il data collector premendo il pulsante _Save_.
+Data Collector verrà riavviato e l'errore dovrebbe essere risolto.
+
+2. Il computer dell'agente potrebbe non disporre di spazio sufficiente per la CPU o la RAM, motivo per cui i DSC si guastano.
+Verificare il numero di Data Collector aggiunti all'Agente nel computer.
+Se è superiore a 20, aumentare la capacità della CPU e della RAM del computer dell'agente.
+Una volta aumentate la CPU e la RAM, i DSC entrano automaticamente in Inizializzazione e quindi in esecuzione.
+Consultare la guida al dimensionamento su link:concept_cs_event_rate_checker.html["questa pagina"]. 
 |===
 Se i problemi persistono, accedere ai collegamenti di supporto indicati nella pagina *Guida > supporto*.

@@ -133,7 +133,13 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Errore: I pool di storage non riportano i dischi sul Service Processor all'indirizzo IP configurato | Configurare il data collector con entrambi gli IP del Service Processor, separati da una virgola 
 
 
-| Errore: Errore di mancata corrispondenza della revisione | • Questo problema è dovuto in genere all'aggiornamento del firmware sul dispositivo di storage a blocchi VNX, ma non all'aggiornamento dell'installazione di navicli.exe. Questo potrebbe essere causato anche dalla presenza di dispositivi diversi con firmware diversi, ma solo una CLI installata (con una versione firmware diversa). • Verificare che il dispositivo e l'host eseguano versioni identiche del software: - Dall'unità di acquisizione Cloud Insights, aprire una finestra della riga di comando - modificare la directory nella directory di installazione configurata - stabilire una connessione con il dispositivo CLARiiON digitando "navicli -h{ip} getagent" - cercare il numero di versione sulle prime due righe. Esempio: "Agent Rev: 6.16.2 (0.1)" - cercare e confrontare la versione sulla prima riga. Esempio: "Navisphere CLI Revisione 6.07.00.04.07" 
+| Errore: Errore di mancata corrispondenza della revisione | • Questo problema è in genere causato dall'aggiornamento del firmware sul dispositivo di storage a blocchi VNX, ma non dall'aggiornamento dell'installazione di navicli.exe. Questo potrebbe essere causato anche dalla presenza di dispositivi diversi con firmware diversi, ma solo una CLI installata (con una versione firmware diversa).
+• Verificare che il dispositivo e l'host eseguano entrambe versioni identiche del software:
+    - Dall'unità di acquisizione Cloud Insights, aprire una finestra della riga di comando
+    - Modificare la directory nella directory di installazione configurata
+    - Stabilire una connessione con il dispositivo CLARiiON digitando “navicli -h <ip> getagent”
+    - Cercare il numero di versione sulla prima coppia di righe. Esempio: "Rev. Agente: 6.16.2 (0,1)"
+    - Cercare e confrontare la versione sulla prima riga. Esempio: "Navisphere CLI Revisione 6.07.00.04.07" 
 
 
 | Errore: Configurazione non supportata - Nessuna porta Fibre Channel | Il dispositivo non è configurato con porte Fibre Channel. Attualmente, sono supportate solo le configurazioni FC. Verificare che questa versione/firmware sia supportata. 

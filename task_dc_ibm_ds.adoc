@@ -124,7 +124,8 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| Errore contenente: CMUC00192E, CMUC00191E o CMUC00190E | * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con l'array tramite la console di gestione Web https://${ip}:8452/DS8000/Console[]. Sostituire l'indirizzo{ip} con l'indirizzo IP configurato per il data collector. 
+| Errore contenente: CMUC00192E, CMUC00191E o CMUC00190E | * Verificare le credenziali e l'indirizzo IP immessi.
+* Provare a comunicare con l'array tramite la console di gestione Web \https://<ip>:8452/DS8000/Console.  Sostituire <ip> con IP configurato per il data collector. 
 
 
 | Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Dall'unità di acquisizione Cloud Insights aprire un file CMD * aprire il file CLI.CFG nella directory home di CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente * visualizzare la versione di Java installata su questa macchina, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di storage IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 

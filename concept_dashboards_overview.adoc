@@ -74,7 +74,7 @@ image:Time-Series Charts.png["Area, area impilata, linea, grafici Spline"]
 +
 image:Single-Value Widgets.png["Widget a valore singolo con e senza formattazione"]
 
-* Widget *Gauge*: Visualizza i dati a valore singolo in un indicatore tradizionale (a tinta unita) o in un indicatore a tinta unita, con colori basati sui valori "Avvertenza" o "critici" link:concept_dashboard_features.adoc#formatting-gauge-widgets["personalizzare"].
+* Widget *Gauge*: Visualizza i dati a valore singolo in un indicatore tradizionale (a tinta unita) o in un indicatore a tinta unita, con colori basati sui valori "Avvertenza" o "critici" link:concept_dashboard_features.html#formatting-gauge-widgets["personalizzare"].
 +
 image:Gauge Widgets.png["Valore singolo con formattazione, indicatore tradizionale, indicatore elenco"]
 

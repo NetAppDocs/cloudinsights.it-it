@@ -260,6 +260,13 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Errore: Errore di configurazione: Storage Array non segnalato dall'inventario | Controllare se lo Storage Array in questione è configurato nel server HiCommand 
 
 
-| Errore: * Nessun array registrato con la CLI modulare 2 di Storage Navigator * l'array non è registrato con la CLI modulare 2 di Storage Navigator * errore di configurazione: Storage Array non registrato con la CLI modulare di StorageNavigator | * Aprire il prompt dei comandi e modificare la directory nel percorso configurato * eseguire il comando "set=STONAVM_HOME=". * Eseguire il comando "auunitref" * verificare che l'output del comando contenga i dettagli dell'array con IP * se l'output non contiene i dettagli dell'array, registrare l'array con la CLI di Storage Navigator: - Aprire il prompt dei comandi e modificare la directory nel percorso configurato - eseguire il comando "set=STONAVM_HOME=". - Eseguire il comando "auunitaddauto -ip{ip}". Sostituire{ip} con un IP reale 
+| Errore: * Nessun array registrato con la CLI modulare 2 di Storage Navigator * l'array non è registrato con la CLI modulare 2 di Storage Navigator * errore di configurazione: Storage Array non registrato con la CLI modulare di StorageNavigator | * Aprire il prompt dei comandi e modificare la directory nel percorso configurato
+* Eseguire il comando “set=STONAVM_HOME=.”
+* Eseguire il comando "auunitref"
+* Verificare che l'output del comando contenga i dettagli dell'array con IP
+* Se l'output non contiene i dettagli dell'array, registrare l'array con l'interfaccia CLI di Storage Navigator:
+    - Aprire il prompt dei comandi e modificare la directory nel percorso configurato
+    - Eseguire il comando “set=STONAVM_HOME=.”
+    - Eseguire il comando "auunitaddauto -ip <ip>". Sostituire <ip> con l'IP corretto. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

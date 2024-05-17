@@ -54,7 +54,7 @@ Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seg
 | Regione AWS | Scegliere la regione AWS 
 
 
-| Ruolo IAM | Da utilizzare solo se acquisito su un AU in AWS. Per ulteriori informazioni su, vedere di seguito link:task_dc_amazon_ec2.html#iam-roles["Ruoli IAM"]. 
+| Ruolo IAM | Da utilizzare solo se acquisito su un AU in AWS. Per ulteriori informazioni su, vedere di seguito <<iam-role,Ruolo IAM>>. 
 
 
 | ID chiave di accesso AWS IAM | Inserire l'ID della chiave di accesso AWS IAM. Obbligatorio se non si utilizza il ruolo IAM. 
