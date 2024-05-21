@@ -81,7 +81,7 @@ Vedere link:concept_cs_agent_requirements.html["Requisiti dell'agente"] per info
 
 == Prerequisiti per il blocco dell'accesso utente
 
-Tenere presente quanto segue per link:/cloudinsights/cs_restrict_user_access.html["Blocco degli accessi degli utenti"]:
+Tenere presente quanto segue per link:cs_restrict_user_access.html["Blocco degli accessi degli utenti"]:
 
 Per il funzionamento di questa funzionalità sono necessarie credenziali a livello di cluster.
 

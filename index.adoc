@@ -46,10 +46,11 @@ Cloud Insights offre il monitoraggio multicloud ibrido, offrendo l'osservabilit�
 * Come fare link:task_cloud_insights_onboarding_1.html["*per iniziare*"] Con Cloud Insights?
 * Mi sono iscritto. Cosa devo fare?link:task_getting_started_with_cloud_insights.html["Acquisizione dei dati"]
 link:concept_user_roles.html["Configurazione degli utenti"]
-* Fantastico! Quali sono le prossime novità?link:task_defining_annotations.html["Preparazione delle risorse: Annotazione"]
+* Fantastico! Quali sono le prossime novità?
+link:task_defining_annotations.html["Preparazione delle risorse: Annotazione"]
 link:concept_querying_assets.html["Trovare le risorse desiderate: Eseguire query"]
 link:concept_dashboards_overview.html["Visualizzazione dei dati desiderati: Dashboard"]
-link:https:task_create_monitor.html["Monitoraggio e avvisi"]
-link:https://docs.netapp.com/us-en/cloudinsights/task_cs_getting_started.html["Protezione dei dati"]
+link:task_create_monitor.html["Monitoraggio e avvisi"]
+link:task_cs_getting_started.html["Protezione dei dati"]
 * È un'ottima cosa! Sono pronto link:concept_subscribing_to_cloud_insights.html["*iscriviti*"].
 

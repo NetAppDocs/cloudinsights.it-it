@@ -70,8 +70,6 @@ Se si utilizza un <<configuring-proxy-support,proxy>>, hanno un <<using-a-custom
 
 Leggi anche di <<permessi,Permessi>>.
 
-Se si sta eseguendo l'aggiornamento da un'installazione precedente, leggere la <<aggiornamento in corso,Aggiornamento in corso>> informazioni.
-
 
 
 === Configurazione del supporto proxy

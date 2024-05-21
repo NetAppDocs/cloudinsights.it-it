@@ -202,7 +202,7 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | link:task_config_telegraf_kibana.html["Kibana"] | Servizio 
 
 
-| link:https:task_config_telegraf_agent_k8s.html["Kubernetes"] | Servizio 
+| link:task_config_telegraf_agent_k8s.html["Kubernetes"] | Servizio 
 
 
 | link:task_dc_lenovo.html["Lenovo serie HX"] | Infrastruttura 

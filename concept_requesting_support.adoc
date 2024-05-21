@@ -95,13 +95,11 @@ Queste opzioni di supporto sono disponibili in modalità di prova e sono disponi
 +
 Facendo clic sui collegamenti in questa sezione, si passa alla Knowledge base di NetApp, dove è possibile cercare articoli, procedure e altro ancora.
 
-
-
 * *link:https://docs.netapp.com/us-en/cloudinsights/["Documentazione"]*
 +
 Facendo clic sul collegamento Documentation (documentazione) si passa a questo centro di documentazione.
 
-* *link:https://mysupport.netapp.com/site/search?q=cloud%20insights&offset=0&searchType=Manual&autocorrect=true&origin=CI_Support_Community&filter=%28content_type%3D%3D%22community%22;product%3D%3D%22Cloud%20Insights%22%29["Comunità"]*
+* *link:https://community.netapp.com/t5/Cloud-Insights/bd-p/CloudInsights["Comunità"]*
 +
 Facendo clic sul link della community, potrai accedere alla community NetApp Cloud Insights, dove potrai entrare in contatto con colleghi ed esperti.
 
@@ -116,7 +114,7 @@ Esiste anche un link da fornire link:mailto:ng-cloudinsights-customerfeedback@ne
 Oltre alle opzioni di supporto autonomo descritte in precedenza, se si dispone di un abbonamento Cloud Insights o di un supporto a pagamento per prodotti o servizi NetApp monitorati, è possibile collaborare con un tecnico del supporto NetApp per risolvere il problema.
 
 
-NOTE: Per eseguire questa operazione, è necessario registrarsi <<Activating support entitlement and accessing support,attivare il supporto>> Per i prodotti NetApp Cloud. Per registrarti, visita il sito di NetApp link:https://register.netapp.com["Registrazione del supporto Cloud Data Services"].
+NOTE: Per eseguire questa operazione, è necessario registrarsi <<activating-support-entitlement,attivare il supporto>> Per i prodotti NetApp Cloud. Per registrarti, visita il sito di NetApp link:https://register.netapp.com["Registrazione del supporto Cloud Data Services"].
 
 Si consiglia vivamente di selezionare la casella per consentire a un tecnico del supporto NetApp di accedere al proprio ambiente Cloud Insights durante la sessione di supporto. In questo modo, il tecnico potrà risolvere il problema e risolverlo rapidamente. Una volta risolto il problema o terminata la sessione di supporto, è possibile deselezionare la casella.
 

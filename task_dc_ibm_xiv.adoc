@@ -63,7 +63,7 @@ Di seguito sono riportati i requisiti per la raccolta delle performance:
 * È necessario fornire l'accesso utente per CIMServer. L'accesso deve avere accesso completo in lettura alla configurazione e alle proprietà dell'array.
 * Spazio dei nomi SMI-S. Il valore predefinito è root/ibm. È configurabile in CIMServer.
 * Requisiti delle porte: 5988 per HTTP, 5989 per HTTPS.
-* Fare riferimento al seguente link per informazioni su come creare un account per la raccolta di performance SMI-S: http://publib.boulder.ibm.com/infocenter/tivihelp/v4r1/index.jsp?topic=%2Fcom.ibm.tpc_V41.doc%2Ffqz0_t_adding_cim_agent.html[]
+* Fare riferimento al seguente link per informazioni su come creare un account per la raccolta di performance SMI-S: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
 
 
 
