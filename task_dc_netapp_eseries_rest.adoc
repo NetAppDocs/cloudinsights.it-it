@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task_dc_na_eseries.html 
-keywords: data collector, ontap, clustered ontap, e-series, santricity 
-summary: Configurazione di NetApp e-Series Data Collector. 
+permalink: task_dc_na_eseries_rest.html 
+keywords: data collector, ontap, clustered ontap, REST 
+summary: Configurazione di NetApp e-Series REST data Collector. 
 ---
-= Raccolta di dati API SANtricity legacy NetApp e-Series
+= Raccolta di dati REST NetApp e-Series
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -19,13 +19,13 @@ summary: Configurazione di NetApp e-Series Data Collector.
 
 
 [role="lead"]
-Il raccoglitore dati dell'API SANtricity legacy di NetApp e-Series raccoglie i dati di inventario e delle performance. Il collector supporta il firmware 7.x+ utilizzando le stesse configurazioni e riportando gli stessi dati.
+Il servizio DI raccolta dei dati REST NetApp e-Series raccoglie dati di inventario e performance. Il collector supporta il firmware 7.x+ utilizzando le stesse configurazioni e riportando gli stessi dati. Il REST Collector monitora lo stato della crittografia dei pool di storage, nonché lo stato della crittografia dei relativi dischi e volumi e fornisce l'utilizzo della CPU del nodo storage come contatori delle performance - funzionalità non fornite nel Collector SANtricity e-Series legacy.
 
 
 
 == Terminologia
 
-Cloud Insight acquisisce le seguenti informazioni di inventario dal data collector NetApp e-Series. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Cloud Insight acquisisce le seguenti informazioni di inventario da NetApp e-Series, utilizzando la FUNZIONE REST. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
@@ -51,6 +51,41 @@ Cloud Insight acquisisce le seguenti informazioni di inventario dal data collect
 |===
 Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
 
+
+
+== Requisiti
+
+* L'indirizzo IP di ciascun controller dell'array
+* Questo raccoglitore supporta solo gli array di modelli e-Series con *funzionalità API REST native*. La organizzazione e-Series fornisce una distribuzione di API REST installabile off-array per gli array e-Series meno recenti: Questo tool di raccolta non supporta questo scenario. Gli utenti con array meno recenti devono continuare a utilizzare Cloud Insights' link:task_dc_na_eseries.html["API SANtricity e-Series"] collezionista.
+* Il campo "e-Series Controller IP Addresses" (indirizzi IP controller e-Series) supporta una stringa delimitata da virgole di 2 IP/nomi host; il collettore proverà in modo intelligente il secondo IP/nome host se il primo non è accessibile.
+* Porta HTTPS: Il valore predefinito è 8443.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzi IP dei controller e-Series | Indirizzi IP separati da virgola e/o nomi di dominio completi per i controller di array 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 30 minuti 
+
+
+| Intervallo di polling delle performance fino a 3600 secondi | Il valore predefinito è 300 secondi 
+|===
 
 
 == Terminologia e-Series (pagina iniziale)
@@ -107,39 +142,6 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 * Processori: Numero di CPU
 
 
-
-
-== Requisiti
-
-* L'indirizzo IP di ciascun controller dell'array
-* Requisito di porta 2463
-
-
-
-
-== Configurazione
-
-[cols="2*"]
-|===
-| Campo | Descrizione 
-
-
-| Elenco separato da virgole degli IP controller SANtricity array | Indirizzi IP e/o nomi di dominio pienamente qualificati per i controller degli array 
-|===
-
-
-== Configurazione avanzata
-
-[cols="2*"]
-|===
-| Campo | Descrizione 
-
-
-| Intervallo polling inventario (min) | Il valore predefinito è 30 minuti 
-
-
-| Intervallo di polling delle performance fino a 3600 secondi | Il valore predefinito è 300 secondi 
-|===
 
 
 == Risoluzione dei problemi

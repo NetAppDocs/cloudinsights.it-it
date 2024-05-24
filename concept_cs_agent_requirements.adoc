@@ -51,7 +51,7 @@ Questo computer non deve eseguire alcun altro software a livello di applicazione
 
 
 | Spazio su disco disponibile | Lo spazio su disco deve essere allocato in questo modo:
-/Opt/netapp 35 GB (minimo)
+/Opt/netapp 36 GB (minimo 35 GB di spazio libero dopo la creazione del file system)
 
 Nota: Si consiglia di allocare un po' di spazio su disco in più per consentire la creazione del filesystem. Assicurarsi che ci siano almeno 35 GB di spazio libero nel filesystem.
 
