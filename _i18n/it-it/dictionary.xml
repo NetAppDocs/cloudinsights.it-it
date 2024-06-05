@@ -13122,4 +13122,6 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="8fd194517d64c215a9c8b5e2b8d0f67e" category="inline-link-macro">NetApp e-Series REST </block>
   <block id="015094a403d71d47872c1d0819be899a" category="cell"><block ref="015094a403d71d47872c1d0819be899a" category="inline-link-macro-rx"></block></block>
   <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">REST di e-Series</block>
+  <block id="ab53b155d3f5f63613ea9034aaafadbd" category="cell">I pod con metriche a stato di netapp-ci-kube non si avviano dopo l'aggiornamento di un operatore Kubernetes, lanciando ErrImagePull (non riuscendo a estrarre l'immagine).</block>
+  <block id="da4a57ccdb996916b48d63fa3e08bb40" category="cell">Provare a reimpostare i pod manualmente.</block>
 </blocks>

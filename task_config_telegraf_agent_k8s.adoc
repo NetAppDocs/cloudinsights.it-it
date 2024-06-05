@@ -565,5 +565,8 @@ In alternativa, si può anche <<uninstalling,disinstallazione>> e. <<installing-
 
 
 | Un'immagine mancante o una configurazione non valida ha causato il mancato avvio o la mancata preparazione dei pod di metriche a stato di netapp-ci-kube. Ora StatefulSet è bloccato e le modifiche della configurazione non vengono applicate ai pod di metriche stato netapp-ci-kube. | StatefulSet si trova in un link:https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#forced-rollback["rotto"] stato. Dopo aver risolto eventuali problemi di configurazione, bounce i pod di metrica stato netapp-ci-kube. 
+
+
+| I pod con metriche a stato di netapp-ci-kube non si avviano dopo l'aggiornamento di un operatore Kubernetes, lanciando ErrImagePull (non riuscendo a estrarre l'immagine). | Provare a reimpostare i pod manualmente. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
