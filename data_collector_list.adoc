@@ -238,6 +238,9 @@ Elenco alfabetico dei Data Collector supportati da Cloud Insights:
 | link:task_dc_na_eseries.html["NetApp e-Series"] | Infrastruttura 
 
 
+| link:task_dc_netapp_eseries_rest.html["NetApp e-Series REST "] | Infrastruttura 
+
+
 | link:task_dc_na_amazon_fsx.html["Amazon FSX per NetApp ONTAP"] | Infrastruttura 
 
 

@@ -13119,4 +13119,7 @@ Nota: Si consiglia di allocare un po' di spazio su disco in più per consentire 
 
 
 Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicurarsi che gli utenti locali abbiano accesso a questa cartella. L'installazione dell'agente o del Data Collector potrebbe non riuscire se gli utenti locali non dispongono dell'autorizzazione per questa cartella. vedere <block ref="b8e4bfa44cc0a900c6c15b3a86438fdc" category="inline-link-macro-rx"></block> per ulteriori dettagli.</block>
+  <block id="8fd194517d64c215a9c8b5e2b8d0f67e" category="inline-link-macro">NetApp e-Series REST </block>
+  <block id="015094a403d71d47872c1d0819be899a" category="cell"><block ref="015094a403d71d47872c1d0819be899a" category="inline-link-macro-rx"></block></block>
+  <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">REST di e-Series</block>
 </blocks>
