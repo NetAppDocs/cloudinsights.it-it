@@ -568,5 +568,8 @@ In alternativa, si può anche <<uninstalling,disinstallazione>> e. <<installing-
 
 
 | I pod con metriche a stato di netapp-ci-kube non si avviano dopo l'aggiornamento di un operatore Kubernetes, lanciando ErrImagePull (non riuscendo a estrarre l'immagine). | Provare a reimpostare i pod manualmente. 
+
+
+| I messaggi "evento scartato come vecchio allora maxEventAgeSeconds" vengono osservati per il mio cluster Kubernetes in Log Analysis. | Modificare l'operatore _agentconfiguration_ e aumentare il _event-exportant-maxEventAgeSeconds_ (cioè a 60s), il _event-exportant-kubeQPS_ (cioè a 100) e il _event-exportant-kubeBurst_ (cioè a 500). Per ulteriori informazioni su queste opzioni di configurazione, consultare la link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] pagina. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

@@ -13124,4 +13124,6 @@ Se /opt è una cartella montata da un dispositivo di archiviazione NAS, assicura
   <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">REST di e-Series</block>
   <block id="ab53b155d3f5f63613ea9034aaafadbd" category="cell">I pod con metriche a stato di netapp-ci-kube non si avviano dopo l'aggiornamento di un operatore Kubernetes, lanciando ErrImagePull (non riuscendo a estrarre l'immagine).</block>
   <block id="da4a57ccdb996916b48d63fa3e08bb40" category="cell">Provare a reimpostare i pod manualmente.</block>
+  <block id="2bc94fccd24faa68b4153886af40ec57" category="cell">I messaggi "evento scartato come vecchio allora maxEventAgeSeconds" vengono osservati per il mio cluster Kubernetes in Log Analysis.</block>
+  <block id="6c71496a372f3b5c0cbc9e2eb84a5fd0" category="cell">Modificare l'operatore _agentconfiguration_ e aumentare il _event-exportant-maxEventAgeSeconds_ (cioè a 60s), il _event-exportant-kubeQPS_ (cioè a 100) e il _event-exportant-kubeBurst_ (cioè a 500). Per ulteriori informazioni su queste opzioni di configurazione, consultare la <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> pagina.</block>
 </blocks>
