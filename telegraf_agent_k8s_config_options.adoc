@@ -120,9 +120,6 @@ proxy:
 |  | RsTolerazioni | tollerazioni aggiuntive di telegraf-rs. 
 
 
-|  | Memoria ignorata | Vedi questo link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Problema noto di Telegraf"].  L'impostazione di skipLockedMemory richiede all'operatore di monitoraggio Kubernetes di eseguire Telegraf con `--unprotected` allarme. 
-
-
 | kube-state-metrics |  | Opzioni di configurazione che possono personalizzare l'installazione delle metriche di stato kube dell'operatore 
 
 
@@ -439,14 +436,13 @@ spec:
 
     # # A comma separated list of additional kinds to watch from the default set of kinds watched by the collector
     # # Each kind will have to be prefixed by its apigroup
-    # # Example: '"authorization.k8s.io.subjectaccessreviews"'
+    # # Example: 'authorization.k8s.io.subjectaccessreviews'
     # additionalKindsToWatch: ''
 
     # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
     # # Each kind will have to be prefixed by its apigroup
-    # # Example: '"networking.k8s.io.networkpolicies","batch.jobs"'
+    # # Example: 'networking.k8s.io.networkpolicies,batch.jobs'
     # kindsToIgnoreFromWatch: ''
-
 
     # # Frequency with which log records are sent to CI from the collector
     # logRecordAggrIntervalSeconds: '20'
