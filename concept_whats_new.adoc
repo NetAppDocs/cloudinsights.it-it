@@ -20,6 +20,21 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguit
 
 
 
+== Giugno 2024
+
+
+
+=== Supporto del sistema operativo
+
+Oltre a questi, le unità di acquisizione Cloud Insights supportano i seguenti sistemi operativi link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["già supportato"]:
+
+* Red Hat Enterprise Linux 8,9, 8,10, 9,4
+* Rocky 9,4
+* AlmaLinux 9,3 e 9,4
+
+
+
+
 == Maggio 2024
 
 

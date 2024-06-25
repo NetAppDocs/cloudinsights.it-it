@@ -34,11 +34,12 @@ keywords: AU, acquisition unit, requirements, sizing
 | Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti componenti:
 
 * CentOS (64 bit): Da 7,2 a 7,9, da 8,1 a 8,4, Stream 8, Stream 9
+* AlmaLinux 9,3 e 9,4
 * Debian (64 bit): 9 e 10
 * OpenSUSE Leap dal 15,1 al 15,5
 * Oracle Enterprise Linux (64 bit): Da 7,5 a 7,9, da 8,1 a 8,8
-* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,8, 9,1, 9,2
-* Rocky 9,0, 9,1, 9,3
+* Red Hat Enterprise Linux (64 bit): Da 7,2 a 7,9, da 8,1 a 8,10, da 9,1 a 9,4
+* Rocky da 9,0 a 9,4
 * SUSE Enterprise Linux Server 15, dal 15 SP2 al 15 SP5
 * Ubuntu Server: 18,04, 20,04, 22,04 LTS
 * SELinux sulle piattaforme precedenti
