@@ -38,6 +38,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 * SVM ha diversi sottotipi. Di questi, sono supportati solo _default_, _Sync_source_ e _Sync_destination_.
 * Un Agente link:task_cs_add_agent.html["deve essere configurato"] prima di poter configurare i data colleziones.
 * Assicurarsi di disporre di un connettore User Directory configurato correttamente, altrimenti gli eventi mostreranno i nomi utente codificati e non il nome effettivo dell'utente (come memorizzato in Active Directory) nella pagina "Activity Forensics" (analisi delle attività).
+* • ONTAP Persistent Store è supportato da 9.15.1.
 * Per ottenere prestazioni ottimali, è necessario configurare il server FPolicy in modo che si trova sulla stessa subnet del sistema di storage.
 
 
@@ -297,6 +298,8 @@ Tenere presente quanto segue:
 * In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.
 * Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.
 * Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.
+* Non è possibile eliminare un Data Collector in pausa.
+* In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono nuovamente attivate.
 
 
 
@@ -398,5 +401,8 @@ Verificare il numero di Data Collector aggiunti all'Agente nel computer.
 Se è superiore a 20, aumentare la capacità della CPU e della RAM del computer dell'agente.
 Una volta aumentate la CPU e la RAM, i DSC entrano automaticamente in Inizializzazione e quindi in esecuzione.
 Consultare la guida al dimensionamento su link:concept_cs_event_rate_checker.html["questa pagina"]. 
+
+
+| Il Data Collector genera un errore quando viene selezionata la modalità SVM. | Durante la connessione in modalità SVM, se per la connessione si utilizza l'IP di gestione del cluster invece dell'IP di gestione della SVM, la connessione genererà un errore. Verificare di utilizzare l'IP SVM corretto. 
 |===
 Se i problemi persistono, accedere ai collegamenti di supporto indicati nella pagina *Guida > supporto*.

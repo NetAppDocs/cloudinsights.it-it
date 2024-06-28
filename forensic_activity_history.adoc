@@ -127,6 +127,8 @@ I campi precedenti sono soggetti a quanto segue durante il filtraggio:
 
 È possibile esportare la cronologia delle attività in un file .CSV facendo clic sul pulsante _Export_ sopra la tabella Activity History (Cronologia attività). Si noti che vengono esportati solo i primi 100,000 record. A seconda della quantità di dati, l'esportazione potrebbe richiedere da pochi secondi a diversi minuti.
 
+Un esempio di script per estrarre i dati forensi tramite le API è presente all'indirizzo _/opt/netapp/cloudSecure/Agent/export-script/_. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.
+
 
 
 == Selezione colonna per tutte le attività
@@ -235,4 +237,19 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
 
 
 | Si verifica un errore di richiesta non riuscita con codice di stato 500/503 quando si utilizza un filtro percorso. | Provare a utilizzare un intervallo di date più piccolo per filtrare i record. 
+
+
+| L'interfaccia utente forense sta caricando i dati lentamente quando si utilizza il filtro _path_. | Se il percorso è _/AAA/BBB/CCC/DDD_, invece di cercare:
+
+AAA/BBB/CCC*
+
+OPPURE
+
+AAA/BBB/C*
+
+Prova a cercare:
+
+AAA/BBB/CCC/*
+
+Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente. 
 |===

@@ -13281,4 +13281,24 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="0f7a6275819f9811b54d1e8c38069670" category="paragraph"><block ref="0f7a6275819f9811b54d1e8c38069670" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cb0a3ec16e76962936843ae69672ce5" category="list-text">2. Errore non autorizzato</block>
   <block id="c10b2daccdd9136337eaaa94938222bc" category="paragraph">Questo errore viene visualizzato se viene generato il token di accesso API senza selezionare tutte le categorie API richieste. Generare un nuovo token di accesso API selezionando tutte le categorie API richieste.</block>
+  <block id="c7c184039a7fffa14bc4f7273cfd594f" category="paragraph">Un esempio di script per estrarre i dati forensi tramite le API è presente all'indirizzo _/opt/netapp/cloudSecure/Agent/export-script/_. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.</block>
+  <block id="1fb20c216d1008aa26dd3559c9f0c877" category="cell">L'interfaccia utente forense sta caricando i dati lentamente quando si utilizza il filtro _path_.</block>
+  <block id="4ef9ea59ad225f2c525fb8c4286f39e1" category="cell">Se il percorso è _/AAA/BBB/CCC/DDD_, invece di cercare:
+
+AAA/BBB/CCC*
+
+OPPURE
+
+AAA/BBB/C*
+
+Prova a cercare:
+
+AAA/BBB/CCC/*
+
+Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block>
+  <block id="cdce2e96d795e7005dca434f2ebf323f" category="list-text">• ONTAP Persistent Store è supportato da 9.15.1.</block>
+  <block id="61d7d5d4ab7b186759d0452bd45c99d7" category="list-text">Non è possibile eliminare un Data Collector in pausa.</block>
+  <block id="e2fd699ea37a6e30f71f4e37a88d3eaa" category="list-text">In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono nuovamente attivate.</block>
+  <block id="f4635255d83c947a8f5c0873878fce73" category="cell">Il Data Collector genera un errore quando viene selezionata la modalità SVM.</block>
+  <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">Durante la connessione in modalità SVM, se per la connessione si utilizza l'IP di gestione del cluster invece dell'IP di gestione della SVM, la connessione genererà un errore. Verificare di utilizzare l'IP SVM corretto.</block>
 </blocks>
