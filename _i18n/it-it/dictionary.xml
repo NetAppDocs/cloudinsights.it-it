@@ -13141,7 +13141,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="5ecfbb1f5f3536161517dc33155eaa58" category="doc">Installazione manuale di workload Security Agent e Collector</block>
   <block id="b18da8c028e8898757dd43e098d29586" category="paragraph">Per impostazione predefinita, quando è disponibile una nuova versione di un agente di protezione del carico di lavoro o di un agente di raccolta, viene inviata una notifica di pre-aggiornamento e gli agenti e gli agenti di raccolta vengono aggiornati automaticamente nell'ambiente. Tuttavia, in un ambiente controllato protetto, gli aggiornamenti automatici potrebbero non essere desiderati. In questi casi, è possibile configurare la protezione del carico di lavoro per l'installazione/aggiornamento manuale di agenti e collettori, fornendo un maggiore controllo sul software installato nei sistemi.</block>
   <block id="1d7c0bdfd6486be2ad7378309185dd8d" category="list-text">Verificare in swagger che le categorie API denominate "cloudSecure_installers.Agent" e "cloudSecure_installers.Collector" siano disponibili. In caso contrario, il supporto per l'installazione manuale dell'agente non è abilitato. Contattare l'assistenza NetApp per abilitare la funzione.</block>
-  <block id="b6ce3d2e8bbf578cfdcdeb74825d0609" category="paragraph"><block ref="b6ce3d2e8bbf578cfdcdeb74825d0609" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b47cdf24f25c792e7f7bee977b59785f" category="list-text">Eseguire tutti i comandi menzionati in questo documento come utente 'root' o, se eseguito con un altro utente, eseguire i comandi con 'sudo'.</block>
   <block id="24b69749dd40594efb1f2e9cafb0ba86" category="section-title">Installazione di un nuovo agente</block>
   <block id="24d17e357f806ec1c8a435b7688427df" category="list-text">Creare un nuovo token di accesso API di sicurezza del workload.</block>
@@ -13151,25 +13150,18 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="1f13ce10e05713b09a5710af0b9f5f40" category="list-text">Selezionare la durata di scadenza desiderata.</block>
   <block id="73507ba211863509e00da520eff7099c" category="list-text">Fare clic su _Salva_.</block>
   <block id="cc7aef4ed3668a652853c8be5873aa33" category="list-text">Copiare il token di accesso API generato. Una volta chiusa la finestra, il token non può più essere recuperato. In questo caso, è necessario generare un nuovo token.</block>
-  <block id="45bbef09c47259a6fcfbd1f25b63ac9c" category="paragraph"><block ref="45bbef09c47259a6fcfbd1f25b63ac9c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="256176a4f9b26608ca563ee3f1ef34ec" category="paragraph"><block ref="256176a4f9b26608ca563ee3f1ef34ec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="180648243db0d9593e75e0a7dcc9e70c" category="list-text">Accedere a *Admin &gt; API Access &gt; API Documentation* (in alto a destra della pagina) e selezionare l'icona _workload Security_. Viene aperta la documentazione Swagger per le API di sicurezza dei workload.</block>
-  <block id="2034e411b416bb8a1700564433d3cd96" category="paragraph"><block ref="2034e411b416bb8a1700564433d3cd96" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c6e324f498c45c040c62a6fa6c3ee605" category="list-text">Autorizza ad accedere alle API _sicurezza workload_.</block>
   <block id="2fb830e83b717250d3913a3a0b88988e" category="list-text">Fai clic sul pulsante _autorizza_ in alto a destra nella pagina.</block>
   <block id="1742f0a5fd9e84cc6abbac0f91f20145" category="list-text">Nel campo di testo _Customer apiKey (apiKey)_, incollare il token API precedentemente copiato dal passaggio 1c.</block>
   <block id="4d72ae66caf6c8d221f1265fef5074a4" category="list-text">Fare clic su _autorizza_ e chiudere la finestra.</block>
-  <block id="be10b4573e48113fb1ac5c23054ebf52" category="paragraph"><block ref="be10b4573e48113fb1ac5c23054ebf52" category="inline-image-macro-rx" type="image"></block></block>
   <block id="92d059abe745a2f9412e7e28cf8d4b7a" category="list-text">Scaricare il programma di installazione dell'agente.</block>
   <block id="9bfb10dfddb775b19e5382b100f3b95c" category="list-text">In Swagger, selezionare _cloudSecure_installers.Agent_ &gt; _/v1/cloudSecure/agents/installers/{platform}/latest_ (GET) API. Fare clic su _prova_.</block>
   <block id="9a9218c558d48a113241255b493ebce4" category="list-text">Nel campo _platform_, immettere _linux_. Fare clic su _Execute_.</block>
-  <block id="81fa97985e807c92a56b0503fbb64e90" category="paragraph"><block ref="00f688012d021ff7555f49c98fcaa137" category="inline-image-macro-rx" type="image"></block>
-<block ref="01005f9d47b011c1212f7bf5ad6f9024" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee6a52b13fbddb62016bcb2805c17702" category="list-text">Fare clic su ‘Download file’ per scaricare il programma di installazione.</block>
   <block id="0f8979c47074a8474a7b68f6b5041333" category="list-text">Se il file del programma di installazione viene scaricato esternamente su un computer diverso dal sistema in cui deve essere installato l'agente, copiare il file del programma di installazione in tale sistema.</block>
   <block id="2ca042fd80784e45a082b48e420ab342" category="list-text">In alternativa, è possibile copiare il comando curl ed eseguirlo direttamente nel sistema in cui deve essere installato l'agente.</block>
   <block id="c63360f268fe9cedccae33ff3677374e" category="list-text">Aggiungere l'argomento “-o {{file_name}}” al comando curl per salvare il file del programma di installazione con il nome desiderato. Il nome effettivo del file del programma di installazione si trova nella sezione delle intestazioni di risposta di swagger. Tale nome può essere utilizzato anche.</block>
-  <block id="187e0a2ad583571b3a862394f5de152d" category="paragraph"><block ref="187e0a2ad583571b3a862394f5de152d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="916cf5f1dfa408f84ad15ac58fb178b7" category="list-text">Sebbene il file possa essere scaricato in qualsiasi posizione, si consiglia di scaricarlo in una cartella vuota in cui è possibile estrarre il file .zip del programma di installazione.</block>
   <block id="ff324aae593d3293768656baf930a788" category="list-text">Creare una nuova cartella (consigliata), copiare il file del programma di installazione in questa cartella e decomprimere:</block>
   <block id="6ce9d80723d57729143449d1cd127853" category="list-text">Impostare l'autorizzazione _execute_ per il file "cloudSecure-Agent-install.sh".</block>
@@ -13186,7 +13178,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="eacf181f15af1f0579e56a30c60711dc" category="list-text">Controllo di integrità per l'installazione dell'agente:</block>
   <block id="b8d752e2b793a20d3b97803fa8bd137f" category="list-text">Eseguire "systemctl status cloudsecure-agent.service” e verificare che il servizio dell'agente sia in stato _running_.</block>
   <block id="a85cd1b0bb395d30fe2d656af8c45241" category="list-text">L'agente deve essere visibile nella pagina "Agenti" e deve trovarsi nello stato "connesso".</block>
-  <block id="5d5d717f52e6d8847a7780754fc0fb2c" category="paragraph"><block ref="5d5d717f52e6d8847a7780754fc0fb2c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dfbadd34e39758c3ba5d6aa09a579b79" category="list-text">Pulizia post-installazione.</block>
   <block id="140b66a6d0a9e50bee73565be1467b63" category="list-text">Se l'installazione dell'agente ha esito positivo, è possibile eliminare i file del programma di installazione dell'agente scaricati.</block>
   <block id="58130a8aadcaf720b42fcca8adaae36c" category="section-title">Installazione di un nuovo Data Collector.</block>
@@ -13196,51 +13187,36 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="f88df495978aea1949fd994d1bd434f5" category="list-text">Ora abbiamo bisogno di recuperare la versione di Collector e UUID di Collector. Accedere all'API "cloudSecure_config.collector-types".</block>
   <block id="d01630b920021fdbcfded91d28c943bb" category="list-text">Andare a swagger, "cloudSecure_config.collector-types &gt; /v1/cloudSecure/collector-types" (GET) API. Nel menu a discesa "CollectorCategory", selezionare il tipo di Collector come "DATA". Selezionare "TUTTO" per recuperare tutti i dettagli del tipo di collettore.</block>
   <block id="f48b5207fe43ebc5402b9c278bd7fcce" category="list-text">Copiare l'UUID del tipo di collettore richiesto.</block>
-  <block id="eea6c85e871ed7d5ae81ca5d661e78d5" category="paragraph"><block ref="eea6c85e871ed7d5ae81ca5d661e78d5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ddfde501612f68f80a91fec5fc0f07c7" category="list-text">Scaricare il programma di installazione del collettore.</block>
   <block id="c1c6a754702a1c4ab63fc9982a6ce591" category="list-text">Passare all'API "cloudSecure_installers.collector &gt; /v1/cloudSecure/collector-types/installers/{collectorTypeUUID}" (GET). Immettere UUID copiato dal passaggio precedente e scaricare il file del programma di installazione.</block>
-  <block id="8180e782ffbaa5d5ac127d240a765e10" category="paragraph"><block ref="8180e782ffbaa5d5ac127d240a765e10" category="inline-image-macro-rx" type="image"></block></block>
   <block id="960963d0b016c92eaeccc263ef52fdba" category="list-text">Se il file del programma di installazione viene scaricato esternamente in un altro computer, copiare il file del programma di installazione nel sistema in cui l'agente è in esecuzione e posizionarlo nella directory “/tmp/collector”.</block>
   <block id="55a4c61aa7efda1711d77921e1a92a8d" category="list-text">In alternativa, è possibile copiare il comando curl dalla stessa API ed eseguirlo direttamente sul sistema in cui deve essere installato il collector.</block>
   <block id="1fee2c4ec45fbe47ced2acd43c9d4447" category="paragraph">Si noti che il nome del file deve essere lo stesso presente nelle intestazioni di risposta dell'API di raccolta download. vedere la schermata riportata di seguito.</block>
-  <block id="5ed4fdc46422ad7a3d943bfb0a365487" category="paragraph"><block ref="5ed4fdc46422ad7a3d943bfb0a365487" category="inline-image-macro-rx" type="image"></block></block>
   <block id="45212f4567fd41d5e2982cda11096e58" category="list-text">Accedere a *sicurezza workload &gt; Collector* e selezionare *+Collector*. Scegli il raccoglitore _ONTAP SVM_.</block>
   <block id="615d69b66e616d31e597f5daab30304d" category="list-text">Configurare i dettagli del collettore e _salvare_ il collettore.</block>
   <block id="86ecf670dbd931937d00a5378aa07840" category="list-text">Facendo clic su "Salva", Agent Process individua il programma di installazione del collettore nella directory "/tmp/collezionisti/" e installa il collettore.</block>
   <block id="6787ef48e0f1a2e3871017f73c1104d0" category="list-text">Come opzione alternativa, invece di aggiungere il collector tramite UI, può essere aggiunto anche tramite API.</block>
   <block id="b27df93d8844fa78c07fad879a901800" category="list-text">Naviga fino all'API "cloudSecure_config.collector" &gt; "/v1/cloudSecure/Collector" (POST).</block>
   <block id="d91a6e2ddbc6f9b866b28804de7d2ea2" category="list-text">Nell'esempio a discesa, selezionare "ONTAP SVM data collector json sample", aggiornare i dettagli di configurazione del collettore ed eseguire.</block>
-  <block id="e17d71bf716fbe0dbfb5f044e69abd47" category="paragraph"><block ref="e17d71bf716fbe0dbfb5f044e69abd47" category="inline-image-macro-rx" type="image"></block></block>
   <block id="65430216dd6e04aeb4ec77900543d9c0" category="list-text">Collector dovrebbe ora essere visibile nella sezione ‘Data Collectors’.</block>
-  <block id="8505d18bd42482fac2134d562f4f0951" category="paragraph"><block ref="8505d18bd42482fac2134d562f4f0951" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e2dcb3aa661588b80bf624cee20a4d9a" category="list-text">Se l'installazione di Collector ha esito positivo, è possibile eliminare tutti i file nella directory “/tmp/Collector”.</block>
   <block id="5c988949b33fdff8d1cb685edd772a78" category="section-title">Installazione di un nuovo servizio di raccolta directory utente</block>
   <block id="c1d3d73ef2be97edc6318c8b9e1be652" category="paragraph">Nota: In questo documento sono stati descritti i passaggi per l'installazione di un collettore LDAP. La stessa procedura si applica per l'installazione di un ad Collector.</block>
   <block id="2ab3b812979b03e6897a80c035d884e3" category="list-text">Ora abbiamo bisogno di recuperare la versione di Collector e UUID di Collector. Accedere all'API "cloudSecure_config.collector-types". Nel menu a discesa CollectorCategory, selezionare il tipo di Collector come "UTENTE". Selezionare "TUTTO" per recuperare tutti i dettagli del tipo di collettore in una singola richiesta.</block>
-  <block id="2851cf59c3b636d2286e3601c840bf0b" category="paragraph"><block ref="2851cf59c3b636d2286e3601c840bf0b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="aa26819573f8d5de196d75c2940b9140" category="list-text">Copiare l'UUID del collettore LDAP.</block>
-  <block id="b49c1096ebc6903e47a29c40f0574f0c" category="paragraph"><block ref="b49c1096ebc6903e47a29c40f0574f0c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="28a727e9a70db036cc6e4b1381a93f66" category="list-text">Scaricare il programma di installazione di Collector.</block>
   <block id="cac3390b8d7c3963dd149f531a17b42d" category="list-text">Passare all'API "cloudSecure_installers.collector" &gt; "/v1/cloudSecure/collector-types/installers/{collectorTypeUID}" (GET). Immettere UUID copiato dal passaggio precedente e scaricare il file del programma di installazione.</block>
-  <block id="63707277cd58c76baa5fcedb992ac5b8" category="paragraph"><block ref="63707277cd58c76baa5fcedb992ac5b8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4c57cd0ffcecf9cea5cc8cd058524581" category="list-text">Se il file del programma di installazione viene scaricato esternamente in un altro computer, copiare il file del programma di installazione nel sistema in cui è in esecuzione l'agente e nella directory “/tmp/collector”.</block>
   <block id="58237ddf4e8c451c3f1c93e5c96bf452" category="list-text">In alternativa, è possibile copiare il comando curl dalla stessa API ed eseguirlo direttamente nel sistema in cui Collector dovrebbe essere installato.</block>
-  <block id="88ad8720d8a141ccd2cb753bd4e97afb" category="paragraph">+
-<block ref="5ed4fdc46422ad7a3d943bfb0a365487" category="inline-image-macro-rx" type="image"></block></block>
   <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="5709666caa5256a262f0055350a1c41f" category="list-text">Modificare la proprietà del file zip del programma di installazione del raccoglitore in cssys:cssys.</block>
   <block id="841d5bf0ac1c3f88a052517da8b24155" category="list-text">Accedere alla pagina ‘User Directory Collector’ e fare clic su ‘+ User Directory Collector’.</block>
-  <block id="cd78c76e5ad6c0b400cbcf623f92e49a" category="paragraph"><block ref="cd78c76e5ad6c0b400cbcf623f92e49a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e9198d5902f64b3cae6ac3671c1677e" category="list-text">Selezionare 'Server directory LDAP'.</block>
-  <block id="bc924648c1cee8ab0ee13d42575d59c5" category="paragraph"><block ref="bc924648c1cee8ab0ee13d42575d59c5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fe0c0f9a77be12447da802b62442e67e" category="list-text">Immettere i dettagli del server di directory LDAP e fare clic su 'Salva'</block>
-  <block id="c11b04b153e3ae99f621725197405334" category="paragraph"><block ref="c11b04b153e3ae99f621725197405334" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e632d5518578306a762a61b755d4c5be" category="list-text">Facendo clic su “Save” (Salva), il servizio Agent individua il programma di installazione del collector nella directory “/tmp/collector/” e installa il collector.</block>
   <block id="63a6b3c8c2e58ddc47bddb7e0e1765c6" category="list-text">Come opzione alternativa, invece di aggiungere Collector tramite UI, può essere aggiunto anche tramite API.</block>
   <block id="a0a7d3e7a6cb2e91beed5114cc067cce" category="list-text">Nell'esempio a discesa, selezionare "LDAP Directory Server user collector json sample", aggiornare i dettagli della configurazione del collettore e fare clic su "Esegui".</block>
-  <block id="7ed2e2c584b8462cda0058266b65f5df" category="paragraph"><block ref="7ed2e2c584b8462cda0058266b65f5df" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b3f5c445c4bc966c8652199ceb82762c" category="list-text">Il raccoglitore dovrebbe ora essere visibile nella sezione "User Directory Collectors" (Collettori directory utente).</block>
-  <block id="abc9edb3d074e13fa39590e1b8e1592e" category="paragraph"><block ref="abc9edb3d074e13fa39590e1b8e1592e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="62c9ab325204f66c9fca63c88b31f244" category="section-title">Aggiornamento di un agente</block>
   <block id="d6d45cdaacc8f0955983f7639a303c90" category="paragraph">Una notifica e-mail verrà inviata quando sarà disponibile una nuova versione dell'agente/raccoglitore.</block>
   <block id="e1484285201e25aff4afdd10c3789c4e" category="list-text">Scaricare il programma di installazione dell'agente più recente.</block>
@@ -13258,17 +13234,14 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="84409f99ba6f01bcc3c8c3cfe5f4edab" category="list-text">Assicurarsi che la directory "collezionisti" sia di proprietà di cssys:cssys.</block>
   <block id="30cb8ff7690cb51e2ba4a45fa1fec47b" category="list-text">In swagger, passare a "cloudSecure_config.collector-types" GET API. Nel menu a discesa "CollectorCategory", selezionare "DATA" (DATI) (selezionare "USER" (UTENTE) per il raccoglitore della directory utente o "ALL" (TUTTI)).</block>
   <block id="b63f1156c2b0b306d2c21686c4671290" category="paragraph">Copiare UUID e versione dal corpo della risposta.</block>
-  <block id="be2931485319fe61c020322a40893d98" category="paragraph"><block ref="be2931485319fe61c020322a40893d98" category="inline-image-macro-rx" type="image"></block></block>
   <block id="26f085ec96f326a83a2cd1c9a101547a" category="list-text">Scaricare il file più recente del programma di installazione di Collector.</block>
   <block id="38836b79dd635a5e513204082f0d059b" category="list-text">Passare a "cloudSecure_installers.collector" &gt; API "/v1/cloudSecure/collector-types/installers/{collectorTypeUID}". Immettere "collectorTypeUUID" copiato dal passaggio precedente. Scaricare il programma di installazione nella directory "/tmp/collezionisti".</block>
   <block id="4aca3370873bcc20704038a3b449349c" category="list-text">In alternativa, può essere utilizzato anche il comando curl della stessa API.</block>
-  <block id="942215776ab4c9b3ecd9304dcbd6b397" category="paragraph"><block ref="942215776ab4c9b3ecd9304dcbd6b397" category="inline-image-macro-rx" type="image"></block></block>
   <block id="87aac0bd54f48e3ea018cdbf4c49240f" category="paragraph">Nota: Il nome del file deve essere uguale a quello presente nelle intestazioni di risposta dell'API di raccolta download.</block>
   <block id="1e161bf723a8e1aeb010097d8893525c" category="list-text">API collettore di aggiornamento trigger.</block>
   <block id="4e8e4b67b8a4e686cd0697d1631ba57f" category="list-text">In swagger, accedere a "cloudSecure_installers.collector" &gt; API "/v1/cloudSecure/collector-types/upgrade" (PUT).</block>
   <block id="c702d61016e786540c3423a56068d5fa" category="list-text">Nel menu a discesa "esempi", selezionare "ONTAP SVM data collector upgrade json sample" (Aggiorna campione json) per popolare il payload del campione.</block>
   <block id="1658e77190c6002b3789ca2dd5bbdc65" category="list-text">Sostituire la versione con la versione copiata dal passaggio 3 e fare clic su 'Esegui'.</block>
-  <block id="8815603aed46dcf87c07c5d729099d74" category="paragraph"><block ref="8815603aed46dcf87c07c5d729099d74" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ac934065e06072ceec86257a2f72087d" category="paragraph">Attendere alcuni secondi, i collettori verranno aggiornati automaticamente.</block>
   <block id="59e00ac512bd959d2a3ded4209823e6f" category="list-text">Controllo di integrità.</block>
   <block id="eac5a780e5ba342d31bf3d406ab502ca" category="paragraph">I collettori devono essere in stato di esecuzione nell'interfaccia utente.</block>
@@ -13278,7 +13251,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="9d72500e8a5c053eafcdfe4056754eb8" category="section-title">Problemi comuni e correzioni.</block>
   <block id="b69ea6725a0b6525e6cf544da1adc773" category="list-text">Errore AGENT014.</block>
   <block id="21375ff3b38428634b0bb8f11745059a" category="paragraph">Questo errore si verifica se il file del programma di installazione di Collector non è presente nella directory “/tmp/Collecters” o non è accessibile. Assicurarsi che il file del programma di installazione sia stato scaricato e che la directory "collezionisti" e il file zip del programma di installazione siano di proprietà di cssys:cssys e riavviare il servizio agente – "systemctl restart cloudsecure-agent.service”</block>
-  <block id="0f7a6275819f9811b54d1e8c38069670" category="paragraph"><block ref="0f7a6275819f9811b54d1e8c38069670" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cb0a3ec16e76962936843ae69672ce5" category="list-text">2. Errore non autorizzato</block>
   <block id="c10b2daccdd9136337eaaa94938222bc" category="paragraph">Questo errore viene visualizzato se viene generato il token di accesso API senza selezionare tutte le categorie API richieste. Generare un nuovo token di accesso API selezionando tutte le categorie API richieste.</block>
   <block id="c7c184039a7fffa14bc4f7273cfd594f" category="paragraph">Un esempio di script per estrarre i dati forensi tramite le API è presente all'indirizzo _/opt/netapp/cloudSecure/Agent/export-script/_. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.</block>
@@ -13301,4 +13273,61 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="e2fd699ea37a6e30f71f4e37a88d3eaa" category="list-text">In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono nuovamente attivate.</block>
   <block id="f4635255d83c947a8f5c0873878fce73" category="cell">Il Data Collector genera un errore quando viene selezionata la modalità SVM.</block>
   <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">Durante la connessione in modalità SVM, se per la connessione si utilizza l'IP di gestione del cluster invece dell'IP di gestione della SVM, la connessione genererà un errore. Verificare di utilizzare l'IP SVM corretto.</block>
+  <block id="6a5710d8de4bc30f9d19e0130e1b9cc1" category="inline-image-macro">API di installazione manuale</block>
+  <block id="3cb349981b0c3fbdfec63bb8939d7d04" category="paragraph"><block ref="3cb349981b0c3fbdfec63bb8939d7d04" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9b0b610b8724eb077521c5c13157458a" category="inline-image-macro">Creare e salvare il token API</block>
+  <block id="6b38552c80002012b2adb89043ad684a" category="paragraph"><block ref="6b38552c80002012b2adb89043ad684a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47968eb432dc036db74ba1312831f397" category="inline-image-macro">Confermare la creazione del token</block>
+  <block id="76deec689143c4fdb480f503fe99d442" category="paragraph"><block ref="76deec689143c4fdb480f503fe99d442" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b21104b7f80fb6bbb2790885a3b7b6e" category="inline-image-macro">Documentazione Swagger per la sicurezza del carico di lavoro</block>
+  <block id="1ed503708ee75a227c1e0f762072a172" category="paragraph"><block ref="1ed503708ee75a227c1e0f762072a172" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a288614dc1d54280bfe6576ce6e1098" category="inline-image-macro">Autorizzare l'API</block>
+  <block id="8adece6726c022d40aa95b10a8cd0ad5" category="paragraph"><block ref="8adece6726c022d40aa95b10a8cd0ad5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a90da8f751fe0ca744f630f08729b894" category="inline-image-macro">Swagger per API programma di installazione agente - top</block>
+  <block id="2bb2f34de3ff5a70b1b3e5e18eea8642" category="inline-image-macro">Swagger per l'API del programma di installazione dell'agente - risposta</block>
+  <block id="4c11b484666827702b88be2a69517ef6" category="paragraph"><block ref="ae471bdc9fa554de4996f11b46cbded9" category="inline-image-macro-rx" type="image"></block>
+<block ref="0c70644a9b526d85a099629fa869fe4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a8ef4302ed4ab3948634312b8b9832e" category="inline-image-macro">Scelta dell'agente più recente tramite API - Swagger</block>
+  <block id="7c46be8c7ba1e8c21cc05acf0a0cad1f" category="paragraph"><block ref="7c46be8c7ba1e8c21cc05acf0a0cad1f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cee66c20846361a7fc962e88e9e5768c" category="inline-image-macro">UI con agenti connessi</block>
+  <block id="315f589f96e307775f7324ab49a54c06" category="paragraph"><block ref="315f589f96e307775f7324ab49a54c06" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbeaa359ee333083a2179745bb2e6358" category="inline-image-macro">Risposta API di raccolta che mostra UUID</block>
+  <block id="524be844becec351b37b6af5ac100760" category="paragraph"><block ref="524be844becec351b37b6af5ac100760" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58210a3367e2b67875991e5b52c1c1b3" category="inline-image-macro">API per scaricare Collector tramite UUID</block>
+  <block id="77cc9fd7ee910c50aad73ab2803c0802" category="paragraph"><block ref="77cc9fd7ee910c50aad73ab2803c0802" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f97ed5d4ec9a9f6892a5bd58c8d7f8d1" category="inline-image-macro">Esempio di comando Curl che mostra il token offuscato</block>
+  <block id="56c50c17d4584aa507435906081eea90" category="paragraph"><block ref="56c50c17d4584aa507435906081eea90" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="02c48cf7017cbf985634f5b7ea8632ba" category="inline-image-macro">API per aggiungere il collettore</block>
+  <block id="de2b19ee2287f2612878060c87ee2e69" category="paragraph"><block ref="de2b19ee2287f2612878060c87ee2e69" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94d2a0ff1886282d7a22d96e6a125118" category="inline-image-macro">Pagina dell'elenco UI con i collettori</block>
+  <block id="865fce37c12842e5291be9b402a14d00" category="paragraph"><block ref="865fce37c12842e5291be9b402a14d00" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b518bff2e7ab7b786e29222cf1481019" category="inline-image-macro">API per ottenere tutti i collettori</block>
+  <block id="e9218de6b059dbe3d0a4b2254272060b" category="paragraph"><block ref="e9218de6b059dbe3d0a4b2254272060b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="64b7e0b2c44effc1f95d5d234d97115e" category="inline-image-macro">Risposta API che mostra l'UUID del collettore LDAP</block>
+  <block id="4d86ae17564f5e192a9f10e1696cafc6" category="paragraph"><block ref="4d86ae17564f5e192a9f10e1696cafc6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f3406bb8f978777c1724d6e8ca96adf4" category="inline-image-macro">API e risposta per scaricare Collector</block>
+  <block id="91601075b46dcf50d3b1909d0a4bbceb" category="paragraph"><block ref="91601075b46dcf50d3b1909d0a4bbceb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1408f74b7a92dffe6114bf5f799f0f8a" category="inline-image-macro">API comando curl</block>
+  <block id="d37182c813875a19f3816d91aff11fbb" category="paragraph">+
+<block ref="1eecc7532bc0ff49c5414691e450bb66" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b01eb85bee8dd2ac8125b4e646707f45" category="inline-image-macro">Aggiunta di un agente di raccolta directory utente</block>
+  <block id="1c4b72f32b1ec160176f3d57f7519993" category="paragraph"><block ref="1c4b72f32b1ec160176f3d57f7519993" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="29c5aece735f28f4fe582851e174f98a" category="inline-image-macro">Finestra UI per la selezione di un utente LDAP</block>
+  <block id="ef4dc8163d2f0525c32fe9d4d8568e34" category="paragraph"><block ref="ef4dc8163d2f0525c32fe9d4d8568e34" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7138e06d350a6ac3024a0be6b832038e" category="inline-image-macro">Interfaccia utente che mostra i dettagli dell'utente LDAP</block>
+  <block id="e395013e4e274cc2911f786ff10b3457" category="paragraph"><block ref="e395013e4e274cc2911f786ff10b3457" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a721b8d54227b40387265009bce8ac5" category="inline-image-macro">API per LDAP Collector</block>
+  <block id="44cc9d4d8a3072c6876182e3770762e8" category="paragraph"><block ref="44cc9d4d8a3072c6876182e3770762e8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="858de91a4a0357f5c26e926d81f7d16b" category="inline-image-macro">Elenco LDAP Collector nell'interfaccia utente</block>
+  <block id="2ce75611ffb804f2d833aa78611b9079" category="paragraph"><block ref="2ce75611ffb804f2d833aa78611b9079" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="611350f05043edcec5efed76ce14a9d0" category="inline-image-macro">UI che mostra gli agenti connessi</block>
+  <block id="73c28ff5675693eddcb79999e10da4d0" category="paragraph"><block ref="73c28ff5675693eddcb79999e10da4d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bdb4d7354cc8a41b106b9c9d369890b9" category="inline-image-macro">Risposta API che mostra l'UUID del collettore e la versione evidenziata</block>
+  <block id="983e33a17fd037d75d7911eb30c9e4dd" category="paragraph"><block ref="983e33a17fd037d75d7911eb30c9e4dd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb627a04ed10e35b8c6fd5fdca19b796" category="inline-image-macro">Esempio di comando Curl</block>
+  <block id="bc8d31643a32bf3e4e8aa0ce44aece11" category="paragraph"><block ref="bc8d31643a32bf3e4e8aa0ce44aece11" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="28cac232142e7c46b6b9f25d2ac0699e" category="inline-image-macro">Esempio di aggiornamento SVM nell'interfaccia utente Swagger</block>
+  <block id="4f46e6105a9637d03f131c48ff2dbcc3" category="paragraph"><block ref="4f46e6105a9637d03f131c48ff2dbcc3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d8490c9089d989bf468613ea9b946f89" category="inline-image-macro">Schermata dell'interfaccia utente che mostra il suggerimento di errore "Agent 014"</block>
+  <block id="275f1fc2756027a2e9293774dfb2629e" category="paragraph"><block ref="275f1fc2756027a2e9293774dfb2629e" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
