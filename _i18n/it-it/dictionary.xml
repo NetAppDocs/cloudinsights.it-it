@@ -9404,7 +9404,6 @@
   <block id="5a9350e3ec5e1d6389a7846d4b45fff3" category="paragraph"><block ref="5a9350e3ec5e1d6389a7846d4b45fff3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8b91cb352f837187391eccc1bbd95135" category="summary">Riferimento all'icona dell'oggetto Cloud Insights.</block>
   <block id="08844d91b668f6d73a4cc2d167be69b7" category="doc">Riferimento icona oggetto</block>
-  <block id="9c760c96232338b3451e1d7fde6ce957" category="paragraph">Un riferimento rapido per le icone degli oggetti utilizzate in Cloud Insights.</block>
   <block id="0f5b0e7a7a789ccd322ec7cb57023624" category="doc">Risoluzione del dispositivo IP</block>
   <block id="94c40ee234b0010adb864fb9bf373a5b" category="paragraph">La schermata IP Identify (identificazione IP) visualizza tutte le condivisioni iSCSI e CIFS o NFS identificate dalla risoluzione automatica del dispositivo o dalla risoluzione manuale del dispositivo. Vengono visualizzati anche i dispositivi non identificati. La schermata include l'indirizzo IP, il nome, lo stato, il nodo iSCSI e il nome di condivisione dei dispositivi. Viene visualizzata anche la percentuale di dispositivi identificati correttamente.</block>
   <block id="e63b461ab7abed846867f3bfde06b84e" category="paragraph"><block ref="e63b461ab7abed846867f3bfde06b84e" category="inline-image-macro-rx" type="image"></block></block>
@@ -9778,15 +9777,6 @@ In alternativa, utilizzare l'opzione "Add to Filter" (Aggiungi al filtro) nella 
   <block id="8d44687186d37f705aa7f2282722aeb5" category="sidebar">Opzioni operatore di monitoraggio</block>
   <block id="8b673d5f702e58efd947465ead5c9647" category="cell">Limite di CPU per l'implementazione delle metriche di stato kube</block>
   <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">Limite MEM per l'implementazione delle metriche dello stato del kube</block>
-  <block id="4d0f1a88ac64f025d3fa96e291e7a276" category="section-title">Icone dell'infrastruttura:</block>
-  <block id="2a8b7bf5296e8ac5b8214e85ec2bab16" category="inline-image-macro">Riferimento icona infrastruttura</block>
-  <block id="4e28165ac3c643283efd04c55df2d70d" category="paragraph"><block ref="4e28165ac3c643283efd04c55df2d70d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="736b641409d5a49654659a490becb9df" category="section-title">Icone Kubernetes:</block>
-  <block id="8c33e4b99d8bd8524b8cd4b67b114b73" category="inline-image-macro">Riferimento icona Kubernetes, larghezza=180</block>
-  <block id="374b7286b134bc4e5b85eb1d48980842" category="paragraph"><block ref="374b7286b134bc4e5b85eb1d48980842" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea0512b988d2823de06af98254ea6811" category="section-title">Icone mappa e monitoraggio delle performance di rete di Kubernetes:</block>
-  <block id="9039c950f48328372952e360cb5e909a" category="inline-image-macro">Kubernetes Network Performance Monitoring and Map (monitoraggio e mappa delle performance di rete Kubernetes), WIDTH=640</block>
-  <block id="680bf29e063b6b3133c4881cb55b6d34" category="paragraph"><block ref="680bf29e063b6b3133c4881cb55b6d34" category="inline-image-macro-rx" type="image"></block></block>
   <block id="63c80d21f4266efe4883c2f6f1d26fc2" category="list-text">Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.</block>
   <block id="46f506a87cfed781f4ca50c5456e5dea" category="list-text">Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.</block>
   <block id="c418d072678072a9d451ca92f8cbbcdd" category="list-text">1 unità gestita = 4 vCPU di Kuberentes</block>
@@ -13330,4 +13320,16 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="4f46e6105a9637d03f131c48ff2dbcc3" category="paragraph"><block ref="4f46e6105a9637d03f131c48ff2dbcc3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d8490c9089d989bf468613ea9b946f89" category="inline-image-macro">Schermata dell'interfaccia utente che mostra il suggerimento di errore "Agent 014"</block>
   <block id="275f1fc2756027a2e9293774dfb2629e" category="paragraph"><block ref="275f1fc2756027a2e9293774dfb2629e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f66bc2df80ac37f354b591907be92e18" category="section-title">Luglio 2024</block>
+  <block id="c95d60ebb4d51c931dcb044c429e5471" category="section-title">Navigazione semplificata sul cruscotto</block>
+  <block id="0bff35c7b383b6acafd81522392282b8" category="paragraph">Questa funzionalità consente di ottimizzare i flussi di lavoro operativi e semplificare la collaborazione tra i team.</block>
+  <block id="06f1d2abcf2870548b998e073289d617" category="paragraph">Il raggruppamento delle dashboard semplifica la visibilità richiesta. Inoltre, grazie al nuovo menu di navigazione, è possibile passare da una dashboard all'altra senza perdere il posto, rendendo più semplice esplorare e gestire l'infrastruttura. Allinea i gruppi di dashboard con i tuoi runbook operativi per migliorare ulteriormente la tua esperienza.</block>
+  <block id="88de6acb1a05ed53be1eb11796125d52" category="inline-image-macro">Per selezionare un altro dashboard nello stesso gruppo o negli stessi gruppi del dashboard corrente</block>
+  <block id="ebde4cb30069bf7811bcab479a98b1de" category="paragraph"><block ref="ebde4cb30069bf7811bcab479a98b1de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf85d02f145fd398f6b83e53e7eae578" category="section-title">Icone oggetto fresco</block>
+  <block id="e1146db7650c421537a792eef24c30b4" category="paragraph">Cloud Insights ora dispone di un'iconografia oggetto aggiornata, che riduce la varianza complessiva delle icone utilizzate nelle varie pagine Cloud Insights e raggruppa oggetti simili (ad esempio, oggetti correlati al volume). Le precedenti icone basate su lettere vengono sostituite da immagini grafiche basate su immagini, rendendo gli schermi Cloud Insights più semplici e accessibili.</block>
+  <block id="f8064c9450e605d5bbbf34b0cea86cf7" category="paragraph">Non sei sicuro del significato di un'icona? La tabella riportata di seguito (disponibile anche nella <block ref="77ae8c6d870a7e114fd79dc75e0e0c29" category="inline-link-macro-rx"></block> pagina) ne spiega tutte le caratteristiche.</block>
+  <block id="6668a5009a3cd3a27f3cb362ac89ff43" category="inline-image-macro">"Immagine che mostra tutte le icone degli oggetti utilizzate in Cloud Insights raggruppate in Storage, Networking, Compute, and Integration (incluso Kubernetes) e Additional"</block>
+  <block id="f45804d947a7b131eecbbbf3efb0603f" category="paragraph"><block ref="f45804d947a7b131eecbbbf3efb0603f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf0b6689b45787134fc0c6f10cd64fd2" category="paragraph">Icone oggetto utilizzate in Cloud Insights.</block>
 </blocks>

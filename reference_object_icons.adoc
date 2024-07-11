@@ -5,36 +5,10 @@ summary: 'Riferimento all"icona dell"oggetto Cloud Insights.'
 keywords: icons, assets, objects, reference, map 
 ---
 = Riferimento icona oggetto
-:toc: macro
-:hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
-Un riferimento rapido per le icone degli oggetti utilizzate in Cloud Insights.
+Icone oggetto utilizzate in Cloud Insights.
 
-
-
-== Icone dell'infrastruttura:
-
-image:Icon_Glossary.png["Riferimento icona infrastruttura"]
-
-
-
-== Icone Kubernetes:
-
-image:K8sIconsWithLabels.png["Riferimento icona Kubernetes, larghezza=180"]
-
-
-
-== Icone mappa e monitoraggio delle performance di rete di Kubernetes:
-
-image:ServiceMap_Icons.png["Kubernetes Network Performance Monitoring and Map (monitoraggio e mappa delle performance di rete Kubernetes), WIDTH=640"]
+image:Icons_2024.png["Immagine che mostra tutte le icone degli oggetti utilizzate in Cloud Insights raggruppate in Storage, Networking, Compute, and Integration (incluso Kubernetes) e Additional"]

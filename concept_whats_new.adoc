@@ -20,6 +20,31 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguit
 
 
 
+== Luglio 2024
+
+
+
+=== Navigazione semplificata sul cruscotto
+
+Questa funzionalità consente di ottimizzare i flussi di lavoro operativi e semplificare la collaborazione tra i team.
+
+Il raggruppamento delle dashboard semplifica la visibilità richiesta. Inoltre, grazie al nuovo menu di navigazione, è possibile passare da una dashboard all'altra senza perdere il posto, rendendo più semplice esplorare e gestire l'infrastruttura. Allinea i gruppi di dashboard con i tuoi runbook operativi per migliorare ulteriormente la tua esperienza.
+
+image:Dashboard_Nav_Group_Dropdown.png["Per selezionare un altro dashboard nello stesso gruppo o negli stessi gruppi del dashboard corrente"]
+
+
+
+=== Icone oggetto fresco
+
+Cloud Insights ora dispone di un'iconografia oggetto aggiornata, che riduce la varianza complessiva delle icone utilizzate nelle varie pagine Cloud Insights e raggruppa oggetti simili (ad esempio, oggetti correlati al volume). Le precedenti icone basate su lettere vengono sostituite da immagini grafiche basate su immagini, rendendo gli schermi Cloud Insights più semplici e accessibili.
+
+Non sei sicuro del significato di un'icona? La tabella riportata di seguito (disponibile anche nella link:reference_object_icons.html["Riferimento icona oggetto"] pagina) ne spiega tutte le caratteristiche.
+
+image:Icons_2024.png["Immagine che mostra tutte le icone degli oggetti utilizzate in Cloud Insights raggruppate in Storage, Networking, Compute, and Integration (incluso Kubernetes) e Additional"]
+
+'''
+
+
 == Giugno 2024
 
 
