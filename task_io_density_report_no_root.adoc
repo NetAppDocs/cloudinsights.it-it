@@ -79,6 +79,16 @@ Le annotazioni sono note specializzate assegnate alle risorse, che consentono di
 In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.
 
 .Prima di iniziare
-È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente. . Fasi . Nella barra degli strumenti di Cloud Insights, fare clic su *Gestisci > regole annotazione* . Fare clic su *Aggiungi*
+È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente.
 
-+ viene visualizzata la finestra di dialogo Add Rule (Aggiungi regola): .. Nella casella Nome, immettere un nome univoco che descriva la regola: *"RootAggrExclude"* .. Fare clic su Query e selezionare la query che Insight deve utilizzare per applicare la regola di annotazione a: *"Aggregate0"* .. Fare clic su Annotation (Annotazione) e selezionare: *"Root Agg Exclude"* .. Fare clic su *valore* e immettere *vero*
+.Fasi
+. Nella barra degli strumenti di Cloud Insights, fare clic su *Gestisci > regole di annotazione*.
+. Fare clic su *Aggiungi*. Viene visualizzata la finestra di dialogo Aggiungi regola.
++
+.. Nella casella Nome, immettere un nome univoco che descriva la regola: *"RootAggrExclude"*
+.. Fare clic su Query e selezionare la query che Insight deve utilizzare per applicare la regola di annotazione a: *"Aggregate0"*
+.. Fare clic su Annotation (Annotazione) e selezionare: *"Root agg exclude"*
+.. Fare clic su *valore* e immettere *vero*
+
+
+

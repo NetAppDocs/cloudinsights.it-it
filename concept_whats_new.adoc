@@ -32,16 +32,6 @@ Il raggruppamento delle dashboard semplifica la visibilità richiesta. Inoltre, 
 
 image:Dashboard_Nav_Group_Dropdown.png["Per selezionare un altro dashboard nello stesso gruppo o negli stessi gruppi del dashboard corrente"]
 
-
-
-=== Icone oggetto fresco
-
-Cloud Insights ora dispone di un'iconografia oggetto aggiornata, che riduce la varianza complessiva delle icone utilizzate nelle varie pagine Cloud Insights e raggruppa oggetti simili (ad esempio, oggetti correlati al volume). Le precedenti icone basate su lettere vengono sostituite da immagini grafiche basate su immagini, rendendo gli schermi Cloud Insights più semplici e accessibili.
-
-Non sei sicuro del significato di un'icona? La tabella riportata di seguito (disponibile anche nella link:reference_object_icons.html["Riferimento icona oggetto"] pagina) ne spiega tutte le caratteristiche.
-
-image:Icons_2024.png["Immagine che mostra tutte le icone degli oggetti utilizzate in Cloud Insights raggruppate in Storage, Networking, Compute, and Integration (incluso Kubernetes) e Additional"]
-
 '''
 
 
