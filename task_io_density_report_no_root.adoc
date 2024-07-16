@@ -38,12 +38,18 @@ I passaggi descritti in questa guida possono essere applicati anche ai sistemi s
 
 Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare volumi interni nell'ambiente che contengono l'aggregato root NetApp.
 
-. Fasi
+.Fasi
 . Creare una query per identificare gli aggregati root NetApp nel proprio ambiente: Fare clic su *Query > Nuova query > Seleziona tipo di risorsa* (?)
 . Fare clic su *pool di storage*
 . Immettere il nome dell'aggregato root
 +
-In questo esempio viene utilizzato "aggr0" come nome. Quando si crea un aggregato, devono essere rispettati solo i seguenti requisiti per il nome: .. Deve iniziare con una lettera o un carattere di sottolineatura (_). .. Può contenere solo lettere, cifre e caratteri di sottolineatura. .. Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.
+In questo esempio viene utilizzato "aggr0" come nome. Quando si crea un aggregato, è necessario rispettare solo i seguenti requisiti per il nome:
+
++
+.. Deve iniziare con una lettera o un carattere di sottolineatura (_).
+.. Può contenere solo lettere, cifre e caratteri di sottolineatura.
+.. Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.
+
 
 . Fare clic su *Save* (Salva) e immettere un nome per la nuova query.
 +

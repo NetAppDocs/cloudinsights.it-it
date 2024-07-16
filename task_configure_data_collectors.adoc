@@ -37,17 +37,12 @@ Il sistema visualizza i Data Collector disponibili organizzati in base al vendor
 Nella finestra di dialogo è possibile configurare il data collector e aggiungere un'unità di acquisizione.
 
 . Inserire un nome per il data collector.
-
-
-<<<<<<< TESTA
 . Fare clic su *Advanced Configuration* (Configurazione avanzata) per aggiungere ulteriori campi di configurazione. (Non tutti i data collettori richiedono una configurazione avanzata).
 . Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
 . Fare clic su *Aggiungi modulo di raccolta* per salvare la configurazione e aggiungere il modulo di raccolta dati al tenant Cloud Insights.
 
-[]
-====
+
 Potrebbero essere necessari fino a due periodi di polling prima che i dati del servizio vengano visualizzati in dashboard o disponibili per la query.
->>>>>>> b8087143154c7d9f5d1d3f33e1bdf97a7c9d1
 
 * primo sondaggio di inventario: immediatamente
 * 1° sondaggio sui dati delle performance per stabilire un riferimento: immediatamente dopo il sondaggio dell'inventario
@@ -55,5 +50,3 @@ Potrebbero essere necessari fino a due periodi di polling prima che i dati del s
 
 
 Il polling procede quindi in base agli intervalli di polling delle performance e dell'inventario configurati.
-
-====

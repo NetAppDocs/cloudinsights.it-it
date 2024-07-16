@@ -19900,55 +19900,70 @@ Prodotti supportati da questo data collector:
 | Oggetti totali | Implementato |  |  
 
 
-| Qtree.4+ | Storage | Capacità raw non riuscita | Implementato |  
+.5+| Qtree | Capacità utilizzata | Implementato |  |  
 
 
-|  | Capacità raw di riserva | Implementato |  | Capacità raw dei dischi spare (somma di tutti i dischi spare) 
+| IOPS totali | Implementato |  |  
 
 
-| Capacità di StoragePools | Implementato |  |  | Capacità raw 
+| Quota di capacità limite massimo | Implementato |  |  
 
 
-| Implementato |  |  .8+| Nodo di storage | Metadati consentiti per l'utilizzo della capacità del nodo 
+| Limite soft della quota di capacità | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo capacità nodo totale 
+| Numero file | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzabile 
+.4+| Storage | Capacità raw non riuscita | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzato 
+| Capacità raw di riserva | Implementato |  | Capacità raw dei dischi spare (somma di tutti i dischi spare) 
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo dati Meta utilizzati 
+| Capacità di StoragePools | Implementato |  |  
 
 
-| Implementato |  |  | Throughput Read (lettura throughput) 
+| Capacità raw | Implementato |  |  
 
 
-| Implementato |  |  | Throughput totale 
+.8+| Nodo di storage | Metadati consentiti per l'utilizzo della capacità del nodo | Implementato |  |  
 
 
-| Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput 
+| Utilizzo capacità nodo totale | Implementato |  |  
 
 
-| Implementato |  |  .6+| Disco StoragePool | Provisioning della capacità 
+| Utilizzo della capacità del nodo utilizzabile | Implementato |  |  
 
 
-| Implementato |  |  | Capacità raw 
+| Utilizzo della capacità del nodo utilizzato | Implementato |  |  
 
 
-| Implementato |  |  | Capacità totale 
+| Utilizzo della capacità del nodo dati Meta utilizzati | Implementato |  |  
 
 
-| Implementato |  |  | Capacità utilizzata 
+| Throughput Read (lettura throughput) | Implementato |  |  
 
 
-| Implementato |  |  | Rapporto di capacità di overcommit 
+| Throughput totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Implementato |  | Riportato come serie temporale | Rapporto capacità utilizzata 
+| Scrittura throughput | Implementato |  |  
+
+
+.6+| Disco StoragePool | Provisioning della capacità | Implementato |  |  
+
+
+| Capacità raw | Implementato |  |  | Capacità totale 
+
+
+| Implementato |  |  | Capacità utilizzata | Implementato 
+
+
+|  |  | Rapporto di capacità di overcommit | Implementato |  
+
+
+| Riportato come serie temporale | Rapporto capacità utilizzata | Implementato |  |  
 |===
 API di gestione utilizzate da questo data collector:
 
