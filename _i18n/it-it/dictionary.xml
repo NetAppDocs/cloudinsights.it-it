@@ -13350,4 +13350,7 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="908b60c3be27b2357fa1238e02988f51" category="list-text">Deve iniziare con una lettera o un carattere di sottolineatura (_).</block>
   <block id="aadc1aba5d247eca2f42714ed5bcd8cf" category="list-text">Può contenere solo lettere, cifre e caratteri di sottolineatura.</block>
   <block id="916689960ce65e1de22db9f36e52d7cb" category="list-text">Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.</block>
+  <block id="ea0b91ea0d8c2da2db5e90fb9a4e9e26" category="doc">Pure Storage FlashBlade Data Collector</block>
+  <block id="c86126d1dbfe0404d7466362d438f513" category="paragraph">Cloud Insights utilizza il data collector di pure Storage FlashBlade per raccogliere dati di inventario e sulle performance.</block>
+  <block id="f9d3bec9195ec6c5658d84fa106cf520" category="cell">Indirizzo IP host FlashBlade</block>
 </blocks>
