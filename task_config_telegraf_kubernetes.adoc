@@ -36,17 +36,14 @@ Il Kubernetes Monitoring Operator installa automaticamente le metriche dello sta
 
 L'operatore di monitoraggio Kubernetes NetApp estrae i contatori delle metriche stato-kube elencati di seguito. Ulteriori dettagli su ciascun contatore sono disponibili all'indirizzo: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
 
-. Metriche di ConfigMap
 . Metriche DemonSet
 . Metriche di implementazione
-. Metriche di ingresso
 . Metriche dello spazio dei nomi
 . Metriche del nodo
 . Metriche di volume persistenti
 . Metriche di richiesta di volume persistente
 . Metriche pod
 . Metriche ReplicaSet
-. Metriche segrete
 . Metriche del servizio
 . Metriche StatefulSet
 
