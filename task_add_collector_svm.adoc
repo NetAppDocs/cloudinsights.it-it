@@ -29,7 +29,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 +
 ** Data ONTAP 9.2 e versioni successive. Per prestazioni ottimali, utilizzare una versione Data ONTAP superiore a 9.13.1.
 ** Protocollo SMB versione 3.1 e precedenti.
-** Protocollo NFS versione 4.0 e precedenti
+** Protocollo NFS versione 4.1 e precedenti
 ** FlexGroup è supportato da ONTAP 9.4 e versioni successive
 ** ONTAP Select è supportato
 
@@ -147,44 +147,15 @@ security login role create -vserver <vservername> -role csrole -cmddirname "volu
  security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
 
 
-=== Autorizzazioni per la protezione autonoma da ransomware ONTAP
+=== Autorizzazioni per la protezione autonoma da ransomware ONTAP e accesso ONTAP negato
 
 Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
 
 Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, seguire la procedura riportata di seguito per assegnare le autorizzazioni alla sicurezza del carico di lavoro per raccogliere informazioni relative all'ARP da ONTAP.
 
-Per _csuser_ con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:
-
-....
-security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
-....
-Per ulteriori informazioni, consultare la sezione link:concept_cs_integration_with_ontap_arp.html["Integrazione con la protezione ransomware autonoma di ONTAP"]
-
-
-
-=== Autorizzazioni per accesso ONTAP negate
-
-Se Data Collector viene aggiunto utilizzando le credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
-
-Se il servizio di raccolta viene aggiunto utilizzando un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, attenersi alla procedura riportata di seguito per assegnare a sicurezza del carico di lavoro l'autorizzazione necessaria per registrare gli eventi di accesso negato con ONTAP.
-
-Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Si noti che _csrestrole_ è un ruolo personalizzato e _csuser_ è un utente personalizzato di ONTAP.
-
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-----
-Per csuser con credenziali _SVM_, eseguire i seguenti comandi dalla riga di comando di ONTAP:
-
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-----
 Per ulteriori informazioni, consultare la sezione link:concept_ws_integration_with_ontap_access_denied.html["Integrazione con accesso ONTAP negato"]
+
+e. link:concept_cs_integration_with_ontap_arp.html["Integrazione con la protezione ransomware autonoma di ONTAP"]
 
 
 
@@ -299,7 +270,7 @@ Tenere presente quanto segue:
 * Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.
 * Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.
 * Non è possibile eliminare un Data Collector in pausa.
-* In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono nuovamente attivate.
+* In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono riattivate.
 
 
 

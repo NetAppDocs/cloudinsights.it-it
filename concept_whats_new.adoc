@@ -24,6 +24,20 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguit
 
 
 
+=== Miglioramenti alla sicurezza del carico di lavoro
+
+*Supporto NFS 4,1*
+
+Il Data Collector SVM ora supporta le versioni NFS fino a *NFS 4,1* incluso.
+
+*Nuova API di attività forense*
+
+L'attività Forensics link:concept_cs_api.html["API"] ha una nuova versione. Quando si chiama l'API per l'attività Forensics, utilizzare l'API *cloudSecure_forensics.activities._v2_*.
+
+Tenere presente che se si effettuano più chiamate a questa API, per ottenere risultati ottimali, assicurarsi che le chiamate vengano eseguite in sequenza, anziché in parallelo. Più chiamate parallele possono causare il timeout dell'API.
+
+
+
 === Navigazione semplificata sul cruscotto
 
 Questa funzionalità consente di ottimizzare i flussi di lavoro operativi e semplificare la collaborazione tra i team.
