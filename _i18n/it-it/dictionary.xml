@@ -13358,7 +13358,6 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="92ba817bcf69387f3ad0bdb24161ab8e" category="list-text">Modificare l'abbonamento per aumentare il numero di unità gestite sottoscritte</block>
   <block id="667677d8bd1877e973ea57e00d3810db" category="section-title">Miglioramenti alla sicurezza del carico di lavoro</block>
   <block id="5918f5af03cf64b439fa77e65a5e7850" category="paragraph">*Supporto NFS 4,1*</block>
-  <block id="ccecb67a3f8de46bc8414046f6069d3d" category="paragraph">Il Data Collector SVM ora supporta le versioni NFS fino a *NFS 4,1* incluso.</block>
   <block id="04bcd65528979db2a56f4aa0e2aa03d7" category="paragraph">*Nuova API di attività forense*</block>
   <block id="712b4529dbd7ed8d4ab547cb0d833ecc" category="paragraph">L'attività Forensics <block ref="75acd4de005cc0eb64ec0713808ffe03" category="inline-link-macro-rx"></block> ha una nuova versione. Quando si chiama l'API per l'attività Forensics, utilizzare l'API *cloudSecure_forensics.activities._v2_*.</block>
   <block id="7e83289e012180c50c5327cfe3e51094" category="paragraph">Tenere presente che se si effettuano più chiamate a questa API, per ottenere risultati ottimali, assicurarsi che le chiamate vengano eseguite in sequenza, anziché in parallelo. Più chiamate parallele possono causare il timeout dell'API.</block>
@@ -13367,4 +13366,5 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="f58ea91d80c99ab7a1779372e221d889" category="section-title">Autorizzazioni per la protezione autonoma da ransomware ONTAP e accesso ONTAP negato</block>
   <block id="f08061ff72c0b74c50af5b9af0dddb55" category="paragraph">e. <block ref="b175fa20c42bfc20eae9965f6210437c" category="inline-link-macro-rx"></block></block>
   <block id="243b99ee952c73f66e7461d943f01834" category="list-text">In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono riattivate.</block>
+  <block id="580c0c98d8c4eb79fb929b7b1eb5f4f2" category="paragraph">Il Data Collector SVM ora supporta le versioni NFS fino a *NFS 4,1* con ONTAP 9.15.1 o versioni successive.</block>
 </blocks>
