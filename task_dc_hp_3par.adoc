@@ -52,7 +52,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Requisiti
 
-Per configurare questo data colletor sono necessari i seguenti requisiti:
+Per configurare questo data collector sono necessari i seguenti requisiti:
 
 * Indirizzo IP o FQDN del cluster InServ
 * Per l'inventario, nome utente e password di sola lettura per il server StoreServ

@@ -29,7 +29,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 +
 ** Data ONTAP 9.2 e versioni successive. Per prestazioni ottimali, utilizzare una versione Data ONTAP superiore a 9.13.1.
 ** Protocollo SMB versione 3.1 e precedenti.
-** Protocollo NFS versione 4.1 e precedenti
+** Versioni di NFS fino a NFS 4,1 con ONTAP 9.15.1 o versioni successive comprese.
 ** FlexGroup è supportato da ONTAP 9.4 e versioni successive
 ** ONTAP Select è supportato
 
@@ -38,7 +38,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 * SVM ha diversi sottotipi. Di questi, sono supportati solo _default_, _Sync_source_ e _Sync_destination_.
 * Un Agente link:task_cs_add_agent.html["deve essere configurato"] prima di poter configurare i data colleziones.
 * Assicurarsi di disporre di un connettore User Directory configurato correttamente, altrimenti gli eventi mostreranno i nomi utente codificati e non il nome effettivo dell'utente (come memorizzato in Active Directory) nella pagina "Activity Forensics" (analisi delle attività).
-* • ONTAP Persistent Store è supportato da 9.15.1.
+* • ONTAP Persistent Store è supportato da 9.14.1.
 * Per ottenere prestazioni ottimali, è necessario configurare il server FPolicy in modo che si trova sulla stessa subnet del sistema di storage.
 
 
@@ -269,10 +269,34 @@ Tenere presente quanto segue:
 * In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.
 * Se il data collector si trova nello stato _Error_, il collector non può essere modificato nello stato _Paused_. Il pulsante Pausa viene attivato solo se lo stato del raccoglitore è _in esecuzione_.
 * Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Paused_. Il raccoglitore passerà allo stato _Stopped_ e il pulsante Pausa verrà disattivato.
-* Non è possibile eliminare un Data Collector in pausa.
-* In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono riattivate.
 
 
+
+
+== Memorizzazione persistente
+
+L'archivio persistente è supportato con ONTAP 9.14.1 e versioni successive. Le istruzioni relative al nome del volume variano da ONTAP 9,14 a 9,15.
+
+È possibile attivare Archivio persistente selezionando la casella di controllo nella pagina di modifica/aggiunta del raccoglitore. Dopo aver selezionato la casella di controllo, viene visualizzato un campo di testo per accettare il nome del volume. Il nome del volume è un campo obbligatorio per l'abilitazione dell'archivio permanente.
+
+* Per ONTAP 9.14.1, è necessario creare il volume prima di attivare la funzione e specificare lo stesso nome nel campo _Nome volume_. La dimensione del volume consigliata è 16GB.
+* Per ONTAP 9.15.1, il volume viene creato automaticamente con dimensioni 16GB dal raccoglitore, utilizzando il nome fornito nel campo _Nome volume_.
+
+
+Sono necessarie autorizzazioni specifiche per l'archivio permanente (alcune o tutte queste possono già esistere):
+
+Modalità cluster:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <cluster-name>
+....
+Modalità Vserver:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <vserver-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <vserver-name>
+....
 
 
 == Risoluzione dei problemi

@@ -699,7 +699,6 @@
   <block id="bab16bd280bad939243defec2ae54eba" category="cell">Disco fisico</block>
   <block id="3edcb2400ce9f6580e362c8a9d6102ff" category="cell">Nodo controller</block>
   <block id="89693d6595f0aef621cb8fd0804326a5" category="cell">Gruppo di provisioning comune</block>
-  <block id="2083196b10cec6f027f8645b9e960b3c" category="paragraph">Per configurare questo data colletor sono necessari i seguenti requisiti:</block>
   <block id="c3deb2066e20cbed62d1bfed93943bb1" category="list-text">Indirizzo IP o FQDN del cluster InServ</block>
   <block id="1b4137d092037ad17a20e57351c33d8e" category="list-text">Per l'inventario, nome utente e password di sola lettura per il server StoreServ</block>
   <block id="7abd5032a929f340867545508d1a1933" category="list-text">Per le performance, leggere e scrivere nome utente e password sul server StoreServ</block>
@@ -13188,8 +13187,6 @@ Prova a cercare:
 AAA/BBB/CCC/*
 
 Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block>
-  <block id="cdce2e96d795e7005dca434f2ebf323f" category="list-text">• ONTAP Persistent Store è supportato da 9.15.1.</block>
-  <block id="61d7d5d4ab7b186759d0452bd45c99d7" category="list-text">Non è possibile eliminare un Data Collector in pausa.</block>
   <block id="f4635255d83c947a8f5c0873878fce73" category="cell">Il Data Collector genera un errore quando viene selezionata la modalità SVM.</block>
   <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">Durante la connessione in modalità SVM, se per la connessione si utilizza l'IP di gestione del cluster invece dell'IP di gestione della SVM, la connessione genererà un errore. Verificare di utilizzare l'IP SVM corretto.</block>
   <block id="6a5710d8de4bc30f9d19e0130e1b9cc1" category="inline-image-macro">API di installazione manuale</block>
@@ -13362,9 +13359,67 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="712b4529dbd7ed8d4ab547cb0d833ecc" category="paragraph">L'attività Forensics <block ref="75acd4de005cc0eb64ec0713808ffe03" category="inline-link-macro-rx"></block> ha una nuova versione. Quando si chiama l'API per l'attività Forensics, utilizzare l'API *cloudSecure_forensics.activities._v2_*.</block>
   <block id="7e83289e012180c50c5327cfe3e51094" category="paragraph">Tenere presente che se si effettuano più chiamate a questa API, per ottenere risultati ottimali, assicurarsi che le chiamate vengano eseguite in sequenza, anziché in parallelo. Più chiamate parallele possono causare il timeout dell'API.</block>
   <block id="1440701fe8e2d4ab8f09b74a7443df20" category="paragraph">Un esempio di script per estrarre i dati forensi tramite le API è presente all'indirizzo _/opt/netapp/cloudSecure/Agent/export-script/_. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.</block>
-  <block id="e440db99ab8972afb639115c16f2426c" category="list-text">Protocollo NFS versione 4.1 e precedenti</block>
   <block id="f58ea91d80c99ab7a1779372e221d889" category="section-title">Autorizzazioni per la protezione autonoma da ransomware ONTAP e accesso ONTAP negato</block>
   <block id="f08061ff72c0b74c50af5b9af0dddb55" category="paragraph">e. <block ref="b175fa20c42bfc20eae9965f6210437c" category="inline-link-macro-rx"></block></block>
-  <block id="243b99ee952c73f66e7461d943f01834" category="list-text">In pausa, le impostazioni di fpolicy in ONTAP sono disattivate ma non vengono eliminate. Al momento della ripresa, le impostazioni fpolicy in ONTAP vengono riattivate.</block>
   <block id="580c0c98d8c4eb79fb929b7b1eb5f4f2" category="paragraph">Il Data Collector SVM ora supporta le versioni NFS fino a *NFS 4,1* con ONTAP 9.15.1 o versioni successive.</block>
+  <block id="be2f9224b979c292cb15fb8ca6626094" category="summary">Monitorare le metriche per verificare l'eventuale presenza di anomalie</block>
+  <block id="de4898eb228c5960d7add96b5bd2ad82" category="doc">Monitoraggio rilevamento anomalie</block>
+  <block id="cbcb7e323368454d1aaea827422f8ab4" category="paragraph">Il rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati nel tuo ambiente. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia nel tuo ambiente, ad esempio, se un oggetto sperimenta un certo livello di latenza a una determinata ora il mercoledì, ma la latenza sale al di sopra di quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Cloud Insights consente la creazione di monitor per avvisare quando si verificano anomalie di questo tipo.</block>
+  <block id="6ee4ef3e25dbca514480336d70c68b6f" category="paragraph">Il rilevamento delle anomalie è adatto per le metriche degli oggetti che mostrano un modello ricorrente e prevedibile. Quando queste metriche dell'oggetto superano o scendono al di sotto dei livelli previsti, Cloud Insights può generare un avviso per sollecitare l'analisi.</block>
+  <block id="f9e98659236dd136d51fbe90184c9350" category="inline-image-macro">grafico che mostra l'anomalia rilevata</block>
+  <block id="6d45093f10be1c53f9db64c498f5d580" category="paragraph"><block ref="6d45093f10be1c53f9db64c498f5d580" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d2575e3b331dd7b57d604dc713e48c2" category="section-title">Cos'è il rilevamento delle anomalie?</block>
+  <block id="9191e0d6339fc5dc7a81e5a8c55ed26b" category="paragraph">Un'anomalia si verifica quando il valore medio di una metrica è un numero di deviazioni standard lontano dalla media ponderata di quella metrica per le settimane precedenti, con settimane recenti che hanno più peso rispetto alle settimane precedenti. Cloud Insights consente di monitorare i dati e avvisare in caso di anomalie. È possibile impostare i livelli di rilevamento della "sensibilità". Ad esempio, una sensibilità maggiore è quando il valore medio è meno deviazioni standard dalla media, causando così la generazione di un maggior numero di avvisi. Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.</block>
+  <block id="833e967d7ee3cf2f23601ccdafe6306f" category="section-title">Il monitoraggio del rilevamento delle anomalie differisce dal monitoraggio della soglia.</block>
+  <block id="707a70f8b64924d439fa4e0679dc94e9" category="list-text">*Il monitoraggio basato su soglia* funziona quando si dispone di soglie predefinite per metriche specifiche. In altre parole, quando si ha una chiara comprensione di ciò che ci si aspetta (cioè all'interno di un intervallo normale).</block>
+  <block id="c1045d44e2c7b706bb670c2d93126209" category="inline-image-macro">I monitor metrici sono adatti a quando si conosce la gamma operativa</block>
+  <block id="8a651de0b445271791957a02b7f7ab12" category="paragraph"><block ref="8a651de0b445271791957a02b7f7ab12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="248d11a06c917163d4c218e182751e10" category="list-text">*Monitoraggio rilevamento anomalie* utilizza algoritmi di apprendimento automatico per identificare gli outliers che si discostano dalla norma, per quando la definizione di "normale" non è chiara.</block>
+  <block id="050471a8ed4b8c04c6b9d753064cc4d4" category="inline-image-macro">I monitor di rilevamento delle anomalie sono destinati a quando si desidera conoscere picchi o cadute</block>
+  <block id="44cf95d43f633731498e7905f9aa796f" category="paragraph"><block ref="44cf95d43f633731498e7905f9aa796f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="89998a7699ba0967d4747309973670d5" category="section-title">Quando è necessario il rilevamento delle anomalie?</block>
+  <block id="cbe837020343dfcd14bef7b99f21f113" category="paragraph">Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili per molte situazioni, tra cui:</block>
+  <block id="515e7be6213cf58d48b39c170b448353" category="list-text">Quando la definizione di _normale_ non è chiara. Ad esempio, è possibile che le percentuali di errore SAN siano diverse in base alla porta. La segnalazione di un errore è rumorosa e non necessaria, ma un aumento improvviso o significativo potrebbe indicare un problema diffuso.</block>
+  <block id="858889ea561e10cb6de83250a829bb72" category="list-text">Dove ci sono cambiamenti nel tempo. Carichi di lavoro caratterizzati da stagionalità (ovvero, sono occupati o silenziosi in determinati momenti). Ciò potrebbe includere periodi di inattività imprevisti che potrebbero indicare un blocco del batch.</block>
+  <block id="07cd3ac948fc0a9966297e9ebb6e200a" category="list-text">Lavorare con grandi quantità di dati quando la definizione e la regolazione manuale delle soglie non sono pratiche. Ad esempio, un ambiente con un elevato numero di host e/o volumi con workload variabili. Ciascuno di essi può disporre di SLA diversi, pertanto è importante comprendere quelli che superano la norma.</block>
+  <block id="4bf3bd72ae0959df9c9f71dc2ca7782c" category="section-title">Creazione di un monitor di rilevamento anomalie</block>
+  <block id="181074ffe7428fd491335b80f676903b" category="paragraph">Per segnalare eventuali anomalie, creare un monitor accedendo a *osservabilità &gt; Avvisi &gt; +Monitor*. Selezionare _monitoraggio rilevamento anomalie_ come tipo di monitor.</block>
+  <block id="53f0acb9650a3311851819fb2a0f49b0" category="inline-image-macro">Selezione del rilevamento delle anomalie durante la creazione di un monitor, larghezza=480</block>
+  <block id="e252e58b0713f9856d0a0d0b5aba870b" category="paragraph"><block ref="e252e58b0713f9856d0a0d0b5aba870b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53475b0e462d8632e63ce95786693f94" category="paragraph">Scegliere l'oggetto e la metrica da monitorare. È possibile impostare filtri e raggruppamenti come per altri tipi di monitor.</block>
+  <block id="a622dfc527a1cb769a9cb8f5251c5722" category="paragraph">Quindi, impostare le condizioni per il monitor.</block>
+  <block id="a2adecda270991bbe54f4b599329e2fe" category="list-text">Attiva un avviso quando la metrica selezionata _picchi sopra_ i limiti previsti, _scende sotto_ quei limiti o entrambi.</block>
+  <block id="8bc993e57aef8f829550768090da9b0d" category="list-text">Impostare la sensibilità su _Medium_, _Low_ (vengono rilevate meno anomalie) o _High_ (vengono rilevate più anomalie).</block>
+  <block id="24167a985b902e0e2d7a081b6013a2c9" category="list-text">Determinare se il livello di avviso è _critico_ o _Avviso_.</block>
+  <block id="2e8e6d4492fccf3be846da219495beea" category="list-text">Facoltativamente, impostare un valore al di sotto del quale le anomalie sono _ignorate_. Questo può contribuire a ridurre il rumore. Questo valore viene visualizzato come una linea tratteggiata sul grafico campione.</block>
+  <block id="f69a8cf61f4e95828fa362a7a3789fcc" category="inline-image-macro">Impostazione delle condizioni per il monitor di rilevamento anomalie</block>
+  <block id="abf46926497e07e99587de4807a2ab2a" category="paragraph"><block ref="abf46926497e07e99587de4807a2ab2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="512aa9e270052050fd7133f7c815aba4" category="paragraph">Infine, è possibile configurare un metodo di recapito per gli avvisi (e-mail, webhook o entrambi), fornire al monitor una descrizione opzionale o azioni correttive e, se lo si desidera, aggiungere il monitor a un gruppo personalizzato.</block>
+  <block id="fab06889941e3b5c2391fd34bd7beaac" category="paragraph">Salvate il monitor con un nome significativo e avete finito.</block>
+  <block id="5b168d18500cad56ba4dfe58f2ff34a0" category="paragraph">Al momento della creazione, il monitor analizza i dati della settimana precedente per stabilire una linea di base iniziale. Il rilevamento delle anomalie diventa più accurato con il passare del tempo e con una maggiore cronologia.</block>
+  <block id="56fcf918982ae9c2b1aec4da88526a61" category="section-title">Visualizzazione delle anomalie</block>
+  <block id="1d58d2f2ca69574aba1ed5f31bde491c" category="paragraph">In una pagina di destinazione di un avviso, gli avvisi attivati quando vengono rilevate anomalie mostrano una banda evidenziata nel grafico, dal momento in cui la metrica è aggiunta al di fuori dei limiti previsti al momento in cui si è spostata indietro all'interno di tali limiti.</block>
+  <block id="2ab54321d1ba259795df47fcabb17a13" category="inline-image-macro">Grafico che mostra l'ora in cui si è verificata un'anomalia</block>
+  <block id="2ad61a846e7819f62ef6d6e841319792" category="paragraph"><block ref="2ad61a846e7819f62ef6d6e841319792" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5dc3af95092fd8c3105a28d3093349e2" category="paragraph">Durante la visualizzazione di un grafico delle anomalie in una landing page degli avvisi, puoi scegliere le seguenti opzioni:</block>
+  <block id="cad64385bb1c47803c5bd69ef88cfa2a" category="list-text">Trend settimanale: Confrontare i valori con la stessa ora, nello stesso giorno delle settimane precedenti, fino a 5 settimane precedenti.</block>
+  <block id="9c221afc4c43a58770febf3135de5c16" category="list-text">Limiti di anomalia completi: Per impostazione predefinita, il grafico si concentra sul valore metrico in modo da poter analizzare meglio il comportamento metrico. Selezionare per visualizzare i limiti di anomalia completi (valore massimo, ecc.)</block>
+  <block id="1f8a18333ce962d420f009316db68135" category="paragraph">È inoltre possibile visualizzare gli oggetti che hanno contribuito all'anomalia selezionandoli nella visualizzazione esperto della pagina di destinazione. Il grafico mostra il comportamento degli oggetti selezionati.</block>
+  <block id="7db867678d69bd78eaeb6b23565fbadb" category="inline-image-macro">inserimento di oggetti che contribuiscono all'anomalia</block>
+  <block id="7a739c7bd23951027862cb0746253d51" category="paragraph"><block ref="7a739c7bd23951027862cb0746253d51" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="27f579af3362e110ecd440dc8bf9e526" category="section-title">AIOps: Rilevamento anomalie</block>
+  <block id="bb488ae395c5a616e026cebeb1d22b11" category="paragraph">Cloud Insights utilizza l'apprendimento automatico per rilevare le modifiche impreviste nei modelli di dati nel tuo ambiente e fornire avvisi proattivi per aiutarti a identificare tempestivamente i problemi.</block>
+  <block id="ed665f31221c4a08eef181ec8d0a72db" category="paragraph">Un data center si comporta in modi diversi a seconda delle ore del giorno e dei giorni della settimana. Cloud Insights utilizza la stagionalità settimanale per confrontare il comportamento storico di ogni giorno e ora.</block>
+  <block id="bf43ac8b8257828bb0ffddb4736d081c" category="paragraph">Il monitoraggio del rilevamento delle anomalie può fornire avvisi in situazioni quali quando la definizione di "normale" non è chiara, dove il comportamento cambia nel tempo o quando si lavora con grandi quantità di dati in cui la definizione manuale delle soglie non è pratica.</block>
+  <block id="fb60a89ddc5f4c906fea295c053a5be0" category="paragraph">Nuovo <block ref="d288de494ea9d7a329c8dfc0fccf699b" category="inline-link-macro-rx"></block> avviso quando si verificano anomalie di questo tipo nelle metriche degli oggetti scelte.</block>
+  <block id="7c6a37577f49fc25a4c899cda17f9040" category="list-text">Versioni di NFS fino a NFS 4,1 con ONTAP 9.15.1 o versioni successive comprese.</block>
+  <block id="b8667da3102e0adbbd2fe25017f00394" category="list-text">• ONTAP Persistent Store è supportato da 9.14.1.</block>
+  <block id="fa10b18dd52742e5f2cd029f0249346b" category="section-title">Memorizzazione persistente</block>
+  <block id="b611ad23a0a26f050542f8157d95cb61" category="paragraph">L'archivio persistente è supportato con ONTAP 9.14.1 e versioni successive. Le istruzioni relative al nome del volume variano da ONTAP 9,14 a 9,15.</block>
+  <block id="928fe55cae4b263961426402bcf31be7" category="paragraph">È possibile attivare Archivio persistente selezionando la casella di controllo nella pagina di modifica/aggiunta del raccoglitore. Dopo aver selezionato la casella di controllo, viene visualizzato un campo di testo per accettare il nome del volume. Il nome del volume è un campo obbligatorio per l'abilitazione dell'archivio permanente.</block>
+  <block id="0241f48b4ba5acc2c0fe7c5ebae0b009" category="list-text">Per ONTAP 9.14.1, è necessario creare il volume prima di attivare la funzione e specificare lo stesso nome nel campo _Nome volume_. La dimensione del volume consigliata è 16GB.</block>
+  <block id="9ba8df77f1ed6f2669acdf983da92bd3" category="list-text">Per ONTAP 9.15.1, il volume viene creato automaticamente con dimensioni 16GB dal raccoglitore, utilizzando il nome fornito nel campo _Nome volume_.</block>
+  <block id="90d00ac7078d36b9a3f2093e6708b52e" category="paragraph">Sono necessarie autorizzazioni specifiche per l'archivio permanente (alcune o tutte queste possono già esistere):</block>
+  <block id="f9555b564ff818367b2bbeb217f9f4aa" category="paragraph">Modalità cluster:</block>
+  <block id="d21d9916425ed680af643d24ed5db91d" category="paragraph">Modalità Vserver:</block>
 </blocks>
