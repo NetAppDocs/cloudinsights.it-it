@@ -22,28 +22,25 @@ summary: Cloud Insights fornisce più account utente con diversi livelli di auto
 Cloud Insights offre fino a quattro ruoli di account utente: Proprietario dell'account, amministratore, utente e ospite. A ciascun account vengono assegnati livelli di autorizzazione specifici, come indicato nella tabella seguente.  Gli utenti lo sono link:#creating-accounts-by-inviting-users["invitato"] A Cloud Insights e assegnato un ruolo specifico, oppure può accedere tramite link:#single-sign-on-sso-and-identity-federation["Autorizzazione Single Sign-on (SSO)"] con un ruolo predefinito. L'autorizzazione SSO è disponibile come funzione nell'edizione Premium di Cloud Insights.
 
 
-NOTE: Gli accessi utente nell'edizione federale di Cloud Insights sono limitati ai provider di identità configurati (con i rispettivi domini di posta elettronica specificati). Quando un nuovo utente viene invitato a un ambiente federale Cloud Insights, il relativo indirizzo e-mail deve corrispondere al dominio configurato per tale ambiente.
-
-
 
 == Livelli di autorizzazione
 
 Per creare o modificare gli account utente, si utilizza un account con privilegi di amministratore. A ciascun account utente viene assegnato un ruolo per ciascuna funzione di Cloud Insights a partire dai seguenti livelli di autorizzazione.
 
 |===
-| Ruolo | Osservabilità | Sicurezza del carico di lavoro | Creazione di report 
+| Ruolo | Osservabilità | Sicurezza del carico di lavoro | Creazione di report | Amministratore 
 
 
-| Proprietario dell'account 3+| Può modificare le sottoscrizioni, visualizzare le informazioni di fatturazione e utilizzo ed eseguire tutte le funzioni di amministratore per Observability, Security e Reporting. I proprietari possono anche invitare e gestire gli utenti, oltre a gestire le impostazioni di autenticazione SSO e federazione di identità. Il primo account Owner viene creato quando ti registri a Cloud Insights. Si consiglia vivamente di avere almeno due account Owner per ogni ambiente Cloud Insights.  
+| Proprietario dell'account | Come per l'amministratore | Come per l'amministratore | Come per l'amministratore | Come Administrator, nonché gestire l'autenticazione SSO e la configurazione di Identity Federation. Può anche assegnare altri proprietari. 
 
 
-| Amministratore | Può eseguire tutte le funzioni di osservazione, tutte le funzioni dell'utente, nonché la gestione dei data raccoglitori, dei token API di osservazione e delle notifiche. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di osservabilità. | È in grado di eseguire tutte le funzioni di sicurezza, incluse quelle per Avvisi, analisi, raccolta dati, policy di risposta automatizzate e token API per la sicurezza. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza. | Può eseguire tutte le funzioni utente/autore, inclusa la gestione dei token API di reporting, nonché tutte le attività amministrative, come la configurazione dei report, l'arresto e il riavvio delle attività di reporting. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di reporting. 
+| Amministratore | È in grado di eseguire tutte le funzioni di osservabilità, nonché la gestione dei data collector. | È in grado di eseguire tutte le funzioni di sicurezza, incluse quelle per Avvisi, analisi, raccolta dati, policy di risposta automatizzate e token API per la sicurezza. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza. | Può eseguire tutte le funzioni utente/autore, inclusa la gestione dei token API di reporting, nonché tutte le attività amministrative, come la configurazione dei report, l'arresto e il riavvio delle attività di reporting. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di reporting. | Può invitare altri utenti ma può assegnare solo ruoli di osservabilità. È possibile visualizzare ma non modificare la configurazione SSO. Può creare e gestire token di accesso API. Può visualizzare le informazioni di controllo. Consente di visualizzare le informazioni relative all'abbonamento, all'utilizzo e alla cronologia. Consente di gestire gli elenchi dei destinatari delle notifiche di avvisi globali e delle sottoscrizioni. 
 
 
-| Utente | Può visualizzare e modificare dashboard, query, avvisi, annotazioni, regole di annotazione, e le applicazioni, oltre a gestire la risoluzione dei dispositivi. | Consente di visualizzare e gestire gli avvisi e visualizzare le analisi. Il ruolo dell'utente può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente e gestire la limitazione dell'accesso degli utenti. | Può eseguire tutte le funzioni Guest/Consumer, nonché creare e gestire report e dashboard. 
+| Utente | Può visualizzare e modificare dashboard, query, avvisi, annotazioni, regole di annotazione, e le applicazioni, oltre a gestire la risoluzione dei dispositivi. | Consente di visualizzare e gestire gli avvisi e visualizzare le analisi. Il ruolo dell'utente può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente e gestire la limitazione dell'accesso degli utenti. | Può eseguire tutte le funzioni Guest/Consumer, nonché creare e gestire report e dashboard. | Non disponibile 
 
 
-| Ospite | Dispone di accesso in sola lettura a pagine di risorse, dashboard, avvisi e può visualizzare ed eseguire query. | Consente di visualizzare avvisi e analisi. Il ruolo ospite non può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente o limitare l'accesso dell'utente. | Consente di visualizzare, pianificare ed eseguire report e di impostare preferenze personali, ad esempio per lingue e fusi orari. Gli utenti guest/consumer non possono creare report o eseguire attività amministrative. 
+| Ospite | Dispone di accesso in sola lettura a pagine di risorse, dashboard, avvisi e può visualizzare ed eseguire query. | Consente di visualizzare avvisi e analisi. Il ruolo ospite non può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente o limitare l'accesso dell'utente. | Consente di visualizzare, pianificare ed eseguire report e di impostare preferenze personali, ad esempio per lingue e fusi orari. Gli utenti guest/consumer non possono creare report o eseguire attività amministrative. | Non disponibile 
 |===
 La procedura consigliata consiste nel limitare il numero di utenti con autorizzazioni di amministratore. Il maggior numero di account deve essere costituito da account utente o guest.
 

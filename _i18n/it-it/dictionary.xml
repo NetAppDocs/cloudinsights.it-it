@@ -5392,16 +5392,13 @@
   <block id="11a7aeec2e88edd275331af35166c8ec" category="doc">Account utente e ruoli</block>
   <block id="0f9642bcff1dc3cd224f1f3e2f1ca629" category="inline-link-macro">invitato</block>
   <block id="fc1a24cc0d6d7c3e25a51a3d66a9d033" category="inline-link-macro">Autorizzazione Single Sign-on (SSO)</block>
-  <block id="6a1a692b3423f858e5d6fa10a48a203d" category="admonition">Gli accessi utente nell'edizione federale di Cloud Insights sono limitati ai provider di identità configurati (con i rispettivi domini di posta elettronica specificati). Quando un nuovo utente viene invitato a un ambiente federale Cloud Insights, il relativo indirizzo e-mail deve corrispondere al dominio configurato per tale ambiente.</block>
   <block id="4239d1a0d4b43b912ff81e4656377274" category="section-title">Livelli di autorizzazione</block>
   <block id="9e81fe47cff9df70ea875a449221eb62" category="paragraph">Per creare o modificare gli account utente, si utilizza un account con privilegi di amministratore. A ciascun account utente viene assegnato un ruolo per ciascuna funzione di Cloud Insights a partire dai seguenti livelli di autorizzazione.</block>
   <block id="31fd0c2c8d388a4cd2c6459234743476" category="cell">Osservabilità</block>
   <block id="1bbfd833c09ec409acb6953c794c8762" category="cell">Sicurezza del carico di lavoro</block>
   <block id="c5562ce2e22a86c247849904ecef3dc8" category="cell">Creazione di report</block>
   <block id="305de530147912d72a50568ee4d65d26" category="cell">Proprietario dell'account</block>
-  <block id="3285ea5e06d78f941361e69f7ae3e762" category="cell">Può modificare le sottoscrizioni, visualizzare le informazioni di fatturazione e utilizzo ed eseguire tutte le funzioni di amministratore per Observability, Security e Reporting. I proprietari possono anche invitare e gestire gli utenti, oltre a gestire le impostazioni di autenticazione SSO e federazione di identità. Il primo account Owner viene creato quando ti registri a Cloud Insights. Si consiglia vivamente di avere almeno due account Owner per ogni ambiente Cloud Insights. </block>
   <block id="7b7bc2512ee1fedcd76bdc68926d4f7b" category="cell">Amministratore</block>
-  <block id="84e7e19408ca9cadd7d1a9781e8afe16" category="cell">Può eseguire tutte le funzioni di osservazione, tutte le funzioni dell'utente, nonché la gestione dei data raccoglitori, dei token API di osservazione e delle notifiche. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di osservabilità.</block>
   <block id="364b5d76e543eea85436eecd771ddf9b" category="cell">È in grado di eseguire tutte le funzioni di sicurezza, incluse quelle per Avvisi, analisi, raccolta dati, policy di risposta automatizzate e token API per la sicurezza. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza.</block>
   <block id="ceecc9f892b56b1081be5d007d545aab" category="cell">Può eseguire tutte le funzioni utente/autore, inclusa la gestione dei token API di reporting, nonché tutte le attività amministrative, come la configurazione dei report, l'arresto e il riavvio delle attività di reporting. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di reporting.</block>
   <block id="8f9bfe9d1345237cb3b2b205864da075" category="cell">Utente</block>
@@ -13422,4 +13419,10 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="90d00ac7078d36b9a3f2093e6708b52e" category="paragraph">Sono necessarie autorizzazioni specifiche per l'archivio permanente (alcune o tutte queste possono già esistere):</block>
   <block id="f9555b564ff818367b2bbeb217f9f4aa" category="paragraph">Modalità cluster:</block>
   <block id="d21d9916425ed680af643d24ed5db91d" category="paragraph">Modalità Vserver:</block>
+  <block id="e3afed0047b08059d0fada10f400c1e5" category="cell">Amministratore</block>
+  <block id="ab0ef3e5340f5400b9f95e43d3b79222" category="cell">Come per l'amministratore</block>
+  <block id="631b24afac365e771fc775aeb7fec0ad" category="cell">Come Administrator, nonché gestire l'autenticazione SSO e la configurazione di Identity Federation. Può anche assegnare altri proprietari.</block>
+  <block id="3e2b646677d9c80b1923b7be8d77407e" category="cell">È in grado di eseguire tutte le funzioni di osservabilità, nonché la gestione dei data collector.</block>
+  <block id="7d86034e4b4cb78c8bb38a5020649dbd" category="cell">Può invitare altri utenti ma può assegnare solo ruoli di osservabilità. È possibile visualizzare ma non modificare la configurazione SSO. Può creare e gestire token di accesso API. Può visualizzare le informazioni di controllo. Consente di visualizzare le informazioni relative all'abbonamento, all'utilizzo e alla cronologia. Consente di gestire gli elenchi dei destinatari delle notifiche di avvisi globali e delle sottoscrizioni.</block>
+  <block id="2d25c72c1b18e562f6654fff8e11711e" category="cell">Non disponibile</block>
 </blocks>
