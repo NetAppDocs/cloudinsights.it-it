@@ -61,9 +61,20 @@ La versione di prova gratuita di AWS Marketplace non può essere estesa. In qual
 
 
 
-==== Cosa fare se la versione di prova è scaduta?
+=== Cosa fare se la versione di prova è scaduta?
 
-Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Cloud Insights, le funzionalità saranno limitate fino a quando non si effettua l'iscrizione.
+Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Cloud Insights, le funzionalità saranno limitate fino a quando non si effettua l'iscrizione. L'acquisizione dei dati potrebbe cessare e, dopo alcune settimane, i dati verranno eliminati in base alla nostra politica di conservazione dei dati.
+
+
+
+== Cosa succede se il mio abbonamento è scaduto?
+
+Se disponi di un abbonamento a Cloud Insights, ma tale abbonamento è scaduto, avrai un periodo di prova di cinque giorni per rinnovare l'abbonamento. Tutte le funzionalità Cloud Insights rimarranno attive durante questo periodo di tolleranza.
+
+Una volta trascorso il periodo di tolleranza, la funzionalità Cloud Insights viene sospesa fino al rinnovo. Per rinnovare, vedere la pagina *Amministratore > abbonamento* o contattare il reparto vendite NetApp.
+
+
+NOTE: I dati Cloud Insights raccolti fino alla fine del Grace period rimangono intatti per 30 giorni dopo il Grace period. Se rinnovi l'abbonamento entro questo intervallo di tempo, tutti i dati fino al termine del periodo di prova saranno disponibili.
 
 
 
@@ -123,28 +134,8 @@ Se il tuo ambiente include o prevede di includere 1,000 o più unità gestite, s
 
 === Misurazione della sicurezza del carico di lavoro
 
-La sicurezza del carico di lavoro viene misurata a seconda che i nodi utilizzati siano di fascia alta, di fascia media o di livello base, ai seguenti conteggi delle unità gestite (MU):
+La sicurezza del carico di lavoro viene misurata dal cluster utilizzando lo stesso approccio della misurazione dell'osservabilità.
 
-|===
-
-
-| Tipo di nodo: | Modelli di esempio: | Misurato a: 
-
-
-| 1 nodo high-end | 700, 800, 900, 9xxx | 80 unità gestite 
-
-
-| 1 nodo intermedio | 300, 400, 500, 8x00 | 40 unità gestite 
-
-
-| 1 nodo entry-level | 1xx, 2xx, 2xxx | 20 unità gestite 
-
-
-| 1 Software ONTAP | CVO, FSX | 10 unità gestite 
-
-
-| 1 nodo sconosciuto |  | 80 unità gestite 
-|===
 È possibile visualizzare l'utilizzo della protezione del carico di lavoro nella pagina *Admin > Subscription* della scheda *sicurezza del carico di lavoro*.
 
 image:ws_metering_example_page.png["Admin > Subscription > scheda sicurezza workload che mostra conteggi nodi di fascia alta, media e entry-level"]
