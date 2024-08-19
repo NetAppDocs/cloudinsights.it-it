@@ -43,13 +43,9 @@ Si verifica un *conflitto* quando gli IOPS influiscono su altre risorse o carich
 
 === Carichi di lavoro che consumano molto
 
-Per iniziare a esaminare i carichi di lavoro di impatto e impatto delle risorse condivise, fare clic su *Dashboard > carichi di lavoro ad alto consumo* nel menu Cloud Insights.
+Tutti i carichi di lavoro ad alto consumo rilevati da Cloud Insights sono mostrati nella _risorse condivise in stress_ Insight. Accedere a *osservabilità > Approfondimenti sull'infrastruttura* per visualizzare questi approfondimenti.
 
-image:Impacts_Workloads_Menu.png["Menu carichi di lavoro ad alto consumo"]
-
-Cloud Insights visualizza un elenco dei carichi di lavoro in cui è stata rilevata una saturazione. Fare clic su un carico di lavoro per aprire la dashboard del carico di lavoro.
-
-image:Impacts_High_Consuming_Workloads.png["Elenco dei carichi di lavoro"]
+image:Impacts_Workloads_Menu.png["Risorse condivise"]
 
 Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto.
 
