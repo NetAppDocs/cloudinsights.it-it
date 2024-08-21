@@ -20,6 +20,47 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Di seguit
 
 
 
+== Agosto 2024
+
+
+
+=== Visualizzare i dati specifici dell'intervallo di tempo
+
+Esaminare un avviso? Hai ingrandito un grafico? Queste azioni modificano l'intervallo di tempo di tali pagine. Ora è possibile bloccare l'intervallo di tempo, passare ad altre pagine Cloud Insights e visualizzare i dati specifici dell'intervallo di tempo bloccato. L'analisi e la risoluzione dei problemi sono state molto più semplici!
+
+image:timerange_lock.png["descrizione comando che indica di fare clic sull'icona per bloccare l'intervallo di tempo da utilizzare su altre pagine"]
+
+
+
+=== Analisi del rapporto di modifica (%)
+
+Le aggregazioni temporali a rapporto di modifica consentono di identificare cambiamenti significativi e tendenze nei valori metrici nel tempo. Queste informazioni sono fondamentali per capire cosa è cambiato, come un considerevole aumento di capacità per un tempo specifico o un cambiamento nelle prestazioni di una singola porta.
+
+* *Modifica* - osservare la variazione di una metrica tra due punti all'interno di un periodo selezionato.
+* *Modifica rapporto* - osservare la variazione proporzionale in una metrica tra due punti, rispetto al punto iniziale, entro un periodo selezionato.
+
+
+image:change_and_change_ratio_bar_chart.png["esempio di grafico a barre che mostra le scelte di aggregazione di rapporti di modifica e modifica"]
+
+
+
+=== Esporta risultati query registro in .CSV
+
+Quando si visualizzano i risultati delle query di registro, è possibile esportare facilmente fino a 10.000 righe in formato .CSV facendo clic sul nuovo pulsante "Esporta". Questo migliora l'accessibilità dei dati, semplifica analisi e reporting dei dati e agevola l'integrazione perfetta con altri tool di Data Processing.
+
+image:csv_export_button.png["Pulsante Esporta in CSV in una pagina di query del registro"]
+
+
+
+=== Risolvi avvisi per ora
+
+Cloud Insights offre ora la possibilità di risolvere un avviso quando la metrica monitorata rimane all'interno dell'intervallo accettabile per un determinato periodo di tempo. Ciò consente di concentrarsi sui problemi reali, riducendo il rumore associato alle metriche che attraversano ripetutamente soglie definite consolidando più avvisi a uno.
+
+image:resolve_alert_by_time_dropdown.png["risoluzione di un avviso in base al tempo"]
+
+'''
+
+
 == Luglio 2024
 
 

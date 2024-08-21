@@ -13422,4 +13422,23 @@ Questa ricerca dovrebbe consentire ai dati di caricarsi più velocemente.</block
   <block id="aefca8640c6f7317db4ede982986441e" category="list-text">Pulizia dopo l'aggiornamento:</block>
   <block id="0b2c01fe038efdc8f7b27285140c4a04" category="list-text">Errore AGENT014</block>
   <block id="80c03754030e95a93e8d8526693ae86d" category="list-text">Errore non autorizzato</block>
+  <block id="9765c3765694fadf98843a154096fbc8" category="section-title">Agosto 2024</block>
+  <block id="1e6efa140bfb7e4679629d8194b62518" category="section-title">Visualizzare i dati specifici dell'intervallo di tempo</block>
+  <block id="63466a1339697704533771c662e97a95" category="paragraph">Esaminare un avviso? Hai ingrandito un grafico? Queste azioni modificano l'intervallo di tempo di tali pagine. Ora è possibile bloccare l'intervallo di tempo, passare ad altre pagine Cloud Insights e visualizzare i dati specifici dell'intervallo di tempo bloccato. L'analisi e la risoluzione dei problemi sono state molto più semplici!</block>
+  <block id="b4d4f3a9a060bb1e2ec83e69b952584b" category="inline-image-macro">descrizione comando che indica di fare clic sull'icona per bloccare l'intervallo di tempo da utilizzare su altre pagine</block>
+  <block id="380958dc02dd73e95eaa4a082063f871" category="paragraph"><block ref="380958dc02dd73e95eaa4a082063f871" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b2b019dcd0bf47e844870e8113a09653" category="section-title">Analisi del rapporto di modifica (%)</block>
+  <block id="a683fea3c6e8375ed9b41bdc7ffe4a52" category="paragraph">Le aggregazioni temporali a rapporto di modifica consentono di identificare cambiamenti significativi e tendenze nei valori metrici nel tempo. Queste informazioni sono fondamentali per capire cosa è cambiato, come un considerevole aumento di capacità per un tempo specifico o un cambiamento nelle prestazioni di una singola porta.</block>
+  <block id="615b3d3d31be175d0b1eee89348e65ab" category="list-text">*Modifica* - osservare la variazione di una metrica tra due punti all'interno di un periodo selezionato.</block>
+  <block id="74809a036bca54139a2d261d2626d034" category="list-text">*Modifica rapporto* - osservare la variazione proporzionale in una metrica tra due punti, rispetto al punto iniziale, entro un periodo selezionato.</block>
+  <block id="476dc2fbda7f575b4fa5a12c84315d97" category="inline-image-macro">esempio di grafico a barre che mostra le scelte di aggregazione di rapporti di modifica e modifica</block>
+  <block id="7babf63048a268c171c9a35946c31542" category="paragraph"><block ref="7babf63048a268c171c9a35946c31542" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b422b4687d8e61310c31588c0f40502a" category="section-title">Esporta risultati query registro in .CSV</block>
+  <block id="9cea24be2464c00b86b714b65366d6f7" category="paragraph">Quando si visualizzano i risultati delle query di registro, è possibile esportare facilmente fino a 10.000 righe in formato .CSV facendo clic sul nuovo pulsante "Esporta". Questo migliora l'accessibilità dei dati, semplifica analisi e reporting dei dati e agevola l'integrazione perfetta con altri tool di Data Processing.</block>
+  <block id="7a2e6dfd3424cc782f8ace3835b61f07" category="inline-image-macro">Pulsante Esporta in CSV in una pagina di query del registro</block>
+  <block id="0477f9f6d00aae30603158474a92755a" category="paragraph"><block ref="0477f9f6d00aae30603158474a92755a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97ee1f978fba9c94fb5be3fd10c7458f" category="section-title">Risolvi avvisi per ora</block>
+  <block id="b0d5063317400902cd605d3e001cdfe3" category="paragraph">Cloud Insights offre ora la possibilità di risolvere un avviso quando la metrica monitorata rimane all'interno dell'intervallo accettabile per un determinato periodo di tempo. Ciò consente di concentrarsi sui problemi reali, riducendo il rumore associato alle metriche che attraversano ripetutamente soglie definite consolidando più avvisi a uno.</block>
+  <block id="e321661400eff0a6d2ff74375e581dfe" category="inline-image-macro">risoluzione di un avviso in base al tempo</block>
+  <block id="bf06ca1c7f8b70edeba39bebe3b60e6e" category="paragraph"><block ref="bf06ca1c7f8b70edeba39bebe3b60e6e" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
