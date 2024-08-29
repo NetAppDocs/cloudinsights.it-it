@@ -19,7 +19,7 @@ summary: Configurazione di VMware Data Collector.
 
 
 [role="lead"]
-Il data collector per VMware vSphere raccoglie le informazioni dell'host ESX e richiede privilegi di sola lettura per tutti gli oggetti all'interno del Virtual Center.
+Il raccoglitore dati per VMware vSphere raccoglie le informazioni sulla configurazione e sulle prestazioni del guest VM e dell'host ESXi e richiede Privileges di sola lettura su tutti gli oggetti di vSphere. Ad agosto 2024, vSphere Collector integra inoltre i messaggi di registro degli ambienti vSphere e alcune metriche specifiche di VMware. Cloud Insights può recuperare solo le informazioni dei registri VMware da vSphere 8.0.1 o da ambienti superiori. Analogamente, le metriche specifiche del fornitore sono supportate solo per gli ambienti vSphere 7+. Pertanto, è possibile disattivare la casella di controllo Log e/o Vendor Specific Metrics (metriche specifiche del fornitore) su un determinato raccoglitore, se puntata a un'istanza vSphere precedente.
 
 
 
