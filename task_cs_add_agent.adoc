@@ -95,6 +95,24 @@ Output di esempio:
  35000-55000/tcp
 
 
+== "Inserimento" di un agente nella versione corrente
+
+Per impostazione predefinita, Cloud Insights workload Security aggiorna automaticamente gli agenti. Alcuni clienti potrebbero voler sospendere l'aggiornamento automatico, lasciando un Agent nella versione corrente fino a quando non si verifica una delle seguenti situazioni:
+
+* Il cliente riprende gli aggiornamenti automatici dell'agente.
+* sono passati 30 giorni. Si noti che i 30 giorni iniziano il giorno dell'ultimo aggiornamento agente precedente, non il giorno in cui l'agente viene messo in pausa.
+
+
+In ciascuno di questi casi, l'agente verrà aggiornato al prossimo aggiornamento di sicurezza del carico di lavoro. Per sospendere o riprendere gli aggiornamenti automatici dell'agente, utilizzare le _cloudSecure_config.agents API_:
+
+image:ws_pin_agent_apis.png["API di WS pin Agent"]
+
+Nota: Potrebbero essere necessari fino a cinque minuti affinché l'azione di pausa o ripresa diventi effettiva. È possibile visualizzare le versioni correnti di Agent nella pagina protezione del carico di lavoro > Collectors, nella scheda Agenti.
+
+image:ws_agent_version.png["Versioni di WS Agent"]
+
+
+
 == Risoluzione dei problemi relativi agli errori dell'agente
 
 I problemi noti e le relative risoluzioni sono descritti nella seguente tabella.
@@ -104,7 +122,7 @@ I problemi noti e le relative risoluzioni sono descritti nella seguente tabella.
 | Problema: | Risoluzione: 
 
 
-| L'installazione dell'agente non riesce a creare la cartella /opt/netapp/cloudsecsicuro/Agent/logs/agent.log e il file install.log non fornisce informazioni rilevanti. | Questo errore si verifica durante il bootstrap dell'agente. L'errore non viene registrato nei file di log perché si verifica prima dell'inizializzazione del logger. L'errore viene reindirizzato all'output standard ed è visibile nel log di servizio utilizzando `journalctl -u cloudsecure-agent.service` comando. Questo comando può essere utilizzato per risolvere ulteriormente il problema. 
+| L'installazione dell'agente non riesce a creare la cartella /opt/netapp/cloudsecsicuro/Agent/logs/agent.log e il file install.log non fornisce informazioni rilevanti. | Questo errore si verifica durante il bootstrap dell'agente. L'errore non viene registrato nei file di log perché si verifica prima dell'inizializzazione del logger. L'errore viene reindirizzato all'output standard ed è visibile nel log di servizio utilizzando il `journalctl -u cloudsecure-agent.service` comando. Questo comando può essere utilizzato per risolvere ulteriormente il problema. est 
 
 
 | L'installazione dell'agente non riesce ‘questa distribuzione linux non è supportata. Uscire dall'installazione’. | Questo errore viene visualizzato quando si tenta di installare l'agente su un sistema non supportato. Vedere link:concept_cs_agent_requirements.html["Requisiti dell'agente"]. 
