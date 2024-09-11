@@ -28,7 +28,7 @@ Per iniziare con Cloud Insights è sufficiente seguire tre semplici passaggi:
 
 Durante il processo di registrazione, è possibile scegliere la regione globale in cui ospitare l'ambiente Cloud Insights. Per ulteriori informazioni, leggi informazioni su Cloud Insights link:security_information_and_region.html["Informazioni e Regione"].
 
-Per un confronto completo delle funzionalità disponibili nelle edizioni Cloud Insights di base e Premium, vedere link:https://bluexp.netapp.com/cloud-insights-pricing["Prezzi Cloud Insights"] pagina.
+Per un confronto completo delle funzioni disponibili nelle edizioni base e Premium di Cloud Insights, vedere la link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Prezzi Cloud Insights"] pagina.
 
 
 WARNING: Gli ambienti inattivi dell'edizione di base di Cloud Insights vengono cancellati e le relative risorse vengono recuperate. Un ambiente viene considerato inattivo se non vi sono attività dell'utente per 30 giorni consecutivi, o se non vi sono dati acquisiti per 7 giorni consecutivi. Cloud Insights invierà una notifica e fornirà un periodo di tolleranza di quattro giorni prima dell'eliminazione di un ambiente.
