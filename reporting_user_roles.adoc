@@ -92,14 +92,6 @@ NOTE: Se si modificano le preferenze e-mail dell'utente all'interno di Report Cl
 
 
 
-== Nota importante per i clienti esistenti
-
-Se non hai ancora accesso a Cloud Insights con Reporting, benvenuto! Non c'è altro da fare per iniziare a utilizzare il reporting.
-
-Se sei un cliente Premium Edition, SSO non viene attivato automaticamente per il tuo ambiente. Quando si attiva SSO, l'utente amministratore del portale di reporting (Cognos) cessa di esistere. Ciò significa che tutti i report contenuti nella cartella _My Content_ vengono rimossi e devono essere reinstallati o ricreati in _Team Content_. Inoltre, una volta attivato SSO, è necessario configurare i report pianificati.
-
-
-
 === Quali sono i passaggi da seguire per preparare l'ambiente esistente per l'abilitazione di SSO?
 
 Per garantire la conservazione dei report, migrare tutti i report da _My Content_ a _Team Content_ seguendo la procedura riportata di seguito. È necessario eseguire questa operazione prima di attivare SSO nell'ambiente:
