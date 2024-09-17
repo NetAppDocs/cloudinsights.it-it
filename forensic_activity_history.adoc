@@ -210,6 +210,19 @@ I risultati della ricerca con e senza / saranno diversi
 |===
 
 
+== Modifiche all'attività utente della SVM principale locale
+
+Se un utente della SVM root locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene considerato nel nome utente, che viene mostrato come _root@<ip-address-of-the-client>_ nelle pagine di attività forense e di attività utente.
+
+Ad esempio:
+
+* Se SVM-1 viene monitorato tramite la sicurezza del workload e l'utente root di tale SVM monta la condivisione su un client con indirizzo IP 10.197.12.40, il nome utente visualizzato nella pagina dell'attività forense sarà _root@10.197.12.40_.
+* Se la stessa SVM-1 è montata in un altro client con indirizzo IP 10.197.12.41, il nome utente mostrato nella pagina dell'attività forense sarà _root@10.197.12.41_.
+* Questa operazione viene eseguita per separare l'attività dell'utente root NFS dall'indirizzo IP. In precedenza, tutta l'attività veniva considerata eseguita solo da _root_ utente, senza distinzione IP.
+
+
+
+
 == Risoluzione dei problemi
 
 |===
