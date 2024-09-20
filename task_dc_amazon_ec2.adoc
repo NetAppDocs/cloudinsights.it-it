@@ -141,6 +141,7 @@ Cloud Insights supporta la raccolta di account figlio per AWS all'interno di un 
 * È necessario configurare ciascun account figlio in modo che disponga di un ruolo AWS che consenta all'ID account principale di accedere ai dettagli EC2 dall'account figlio.
 * Ogni account figlio deve avere il nome del ruolo configurato come la stessa stringa.
 * Inserire questa stringa di nome ruolo nella sezione *Configurazione avanzata* del Data Collector AWS di Cloud Insights, nel campo *ruolo account incrociato*.
+* L'account in cui è installato il Collector deve disporre di _delegate access Administrator_ Privileges. Per link:https://docs.aws.amazon.com/accounts/latest/reference/using-orgs-delegated-admin.html["Documentazione AWS"]ulteriori informazioni, vedere la .
 
 
 Best practice: Si consiglia vivamente di assegnare il criterio _AmazonEC2ReadOnlyAccess_ predefinito di AWS all'account principale EC2. Inoltre, l'utente configurato nell'origine dati deve avere assegnato almeno il criterio _AWSOrganizationsReadOnlyAccess_ predefinito, per eseguire query su AWS.
