@@ -19,10 +19,10 @@ summary: Panoramica
 
 
 [role="lead"]
-La sicurezza del carico di lavoro dello storage Cloud Insights (in precedenza Cloud Secure) aiuta a proteggere i tuoi dati con informazioni pratiche sulle minacce interne. Offre visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti di cloud ibrido per garantire il rispetto degli obiettivi di sicurezza e conformità.
+Data Infrastructure Insights Storage workload Security (in precedenza Cloud Secure) aiuta a proteggere i dati con informazioni pratiche su minacce interne. Offre visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti di cloud ibrido per garantire il rispetto degli obiettivi di sicurezza e conformità.
 
 
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
+NOTE: La sicurezza del carico di lavoro non è disponibile in Data Infrastructure Insights Federal Edition.
 
 
 

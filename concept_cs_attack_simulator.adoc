@@ -22,9 +22,6 @@ summary: Utilizzando uno script, è possibile simulare un attacco ransomware per
 È possibile utilizzare le istruzioni riportate in questa pagina per simulare un attacco per il test o la dimostrazione di workload Security utilizzando lo script ransomware Simulation incluso.
 
 
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
-
 
 == Cose da notare prima di iniziare
 

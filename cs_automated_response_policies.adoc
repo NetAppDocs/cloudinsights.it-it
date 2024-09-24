@@ -16,9 +16,6 @@ summary: 'È possibile impostare policy di risposta automatiche per potenziali a
 [role="lead"]
 Le policy di risposta attivano azioni come l'esecuzione di uno snapshot o la limitazione dell'accesso dell'utente in caso di attacco o comportamento anomalo dell'utente.
 
-
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
 È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi. Per impostare un criterio di risposta, selezionare *Admin > Automated Response Policies* (Amministrazione > Criteri di risposta automatici) e fare clic sul pulsante *+Policy* appropriato. È possibile creare policy per gli attacchi o per gli avvisi.
 
 image:Automated_Response_Screenshot.png["Creare una policy di attacco"]

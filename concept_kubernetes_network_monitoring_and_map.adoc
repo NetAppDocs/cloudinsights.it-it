@@ -38,9 +38,9 @@ image:ServiceMap_NKMO_Deployment_Options.png["Selezionare l'opzione Map (Mappa) 
 
 == Monitor
 
-La mappa del carico di lavoro utilizza link:task_create_monitor.html["monitor"] per ricavare informazioni. Cloud Insights fornisce una serie di monitor Kubernetes predefiniti (si noti che per impostazione predefinita potrebbero essere _in pausa_). È possibile _riprendere_ (ad esempio attivare) i monitor desiderati) oppure creare monitor personalizzati per gli oggetti Kubernetes, che verranno utilizzati anche dalla mappa del carico di lavoro.
+La mappa del carico di lavoro utilizza link:task_create_monitor.html["monitor"] per derivare le informazioni. Data Infrastructure Insights fornisce alcuni monitor Kubernetes predefiniti (si noti che per impostazione predefinita questi possono essere _Paused_). È possibile _riprendere_ (ad esempio attivare) i monitor desiderati) oppure creare monitor personalizzati per gli oggetti Kubernetes, che verranno utilizzati anche dalla mappa del carico di lavoro.
 
-È possibile creare avvisi Cloud Insights metric su uno qualsiasi dei tipi di oggetto riportati di seguito. Assicurarsi che i dati siano raggruppati in base al tipo di oggetto predefinito.
+È possibile creare avvisi metrici di Data Infrastructure Insights per uno qualsiasi dei tipi di oggetto seguenti. Assicurarsi che i dati siano raggruppati in base al tipo di oggetto predefinito.
 
 * kubernetes.workload
 * kubernetes.demonset
@@ -83,7 +83,7 @@ image:Workload_Map_Slideout_with_Alert.png["Dettagli dello slidout del workload 
 
 == Ricerca e filtraggio
 
-Come per le altre funzionalità di Cloud Insights, è possibile impostare facilmente i filtri in modo che si concentrino sugli oggetti o sugli attributi dei carichi di lavoro specifici desiderati.
+Come per le altre funzionalità di Data Infrastructure Insights, puoi facilmente impostare filtri per concentrarsi su oggetti o attributi specifici del carico di lavoro che desideri.
 
 image:Workload_Map_Filtering.png["Filtro delle mappe dei carichi di lavoro"]
 
@@ -117,7 +117,7 @@ Le etichette dei carichi di lavoro sono necessarie se si desidera che la mappa i
 
 * Se l'origine è esterna al cluster kubernetes:
 +
-** Cloud Insights tenterà di analizzare il nome DNS risolto per estrarre il tipo di servizio.
+** Data Infrastructure Insights tenterà di analizzare il nome DNS risolto per estrarre il tipo di servizio.
 +
 Ad esempio, con un nome DNS risolto pari a _s3.eu-north-1.amazonaws.com_, il nome risolto viene analizzato per ottenere _s3_ come tipo di servizio.
 

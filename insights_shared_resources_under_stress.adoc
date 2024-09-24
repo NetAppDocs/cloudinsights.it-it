@@ -19,7 +19,7 @@ summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Cloud Insights fornisce strumenti per analizzare la saturazione delle risorse e l'impatto nell'ambiente.
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente.
 
 
 
@@ -31,7 +31,7 @@ Un *carico di lavoro impegnativo* è un carico di lavoro attualmente identificat
 
 Un carico di lavoro * con impatto è un carico di lavoro che viene influenzato da un carico di lavoro molto elevato nel pool di storage condiviso. Questi carichi di lavoro stanno sperimentando IOPS ridotti e/o latenza superiore, causati dai carichi di lavoro esigenti.
 
-Si noti che se Cloud Insights non ha rilevato il carico di lavoro di calcolo principale, il volume o il volume interno stesso verrà riconosciuto come carico di lavoro. Questo vale per carichi di lavoro esigenti e interessati.
+Se Data Infrastructure Insights non ha rilevato il carico di lavoro di calcolo leader, il volume o il volume interno stesso verrà riconosciuto come carico di lavoro. Questo vale per carichi di lavoro esigenti e interessati.
 
 *La saturazione delle risorse condivise* è il rapporto tra IOPS e _baseline_.
 
@@ -47,7 +47,7 @@ Per iniziare a esaminare i carichi di lavoro impegnativi e influenzati nelle ris
 
 image:InsightsMenu.png["Menu Insight"]
 
-Cloud Insights visualizza un elenco dei carichi di lavoro in cui è stata rilevata una saturazione. Si noti che Cloud Insights mostrerà i carichi di lavoro in cui è stata rilevata almeno una _risorsa impegnativa_ *o* _risorsa interessata_.
+Data Infrastructure Insights visualizza un elenco di tutti i carichi di lavoro in cui è stata rilevata una saturazione. Si noti che Data Infrastructure Insights mostrerà i carichi di lavoro in cui è stata rilevata almeno una risorsa _impegnativa_ *o* _risorsa interessata_.
 
 Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto/saturazione.
 

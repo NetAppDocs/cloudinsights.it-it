@@ -162,7 +162,7 @@ e. link:concept_cs_integration_with_ontap_arp.html["Integrazione con la protezio
 == Configurare il data collector
 
 .Procedura per la configurazione
-. Accedere come amministratore o come proprietario dell'account all'ambiente Cloud Insights.
+. Accedere come Amministratore o Proprietario dell'account al proprio ambiente Data Infrastructure Insights.
 . Fare clic su *sicurezza del carico di lavoro > Collector > +Data Collector*
 +
 Il sistema visualizza i Data Collector disponibili.
@@ -256,14 +256,14 @@ Nelle versioni di ONTAP precedenti alla 9.9 non è necessario impostare _data-fp
 
 2 nuove operazioni sono ora visualizzate sul menu kebab del raccoglitore (PAUSA e RIPRESA).
 
-Se Data Collector è in stato _running_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che nessun evento Fpolicy passerà da ONTAP al data collector e da lì a Cloud Insights.
+Se Data Collector è in stato _running_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che non verranno trasmessi eventi Fpolicy da ONTAP al data collector e da lì a Data Infrastructure Insights.
 
 Tenere presente che se in ONTAP vengono creati nuovi volumi e così via mentre il collector è in pausa, workload Security non raccoglierà i dati e quei volumi, ecc. non verranno riflessi in dashboard o tabelle.
 
 Tenere presente quanto segue:
 
 * L'eliminazione degli snapshot non avviene in base alle impostazioni configurate su un raccoglitore in pausa.
-* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, Cloud Insights workload Security non sarà in grado di acquisire quell'evento.
+* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, la sicurezza dei workload di Data Infrastructure Insights non sarà in grado di acquisire quell'evento.
 * Le e-mail di notifica dello stato NON verranno inviate per un raccoglitore in pausa.
 * Le azioni manuali o automatiche (come Snapshot o blocco utente) non sono supportate in un raccoglitore in pausa.
 * In caso di aggiornamenti dell'agente o del raccoglitore, di riavvio/riavvio della VM dell'agente o di riavvio del servizio dell'agente, un raccoglitore in pausa rimarrà nello stato _Paused_.

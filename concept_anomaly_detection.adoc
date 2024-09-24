@@ -19,9 +19,9 @@ summary: 'Monitorare le metriche per verificare l"eventuale presenza di anomalie
 
 
 [role="lead"]
-Il rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati nel tuo ambiente. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia nel tuo ambiente, ad esempio, se un oggetto sperimenta un certo livello di latenza a una determinata ora il mercoledì, ma la latenza sale al di sopra di quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Cloud Insights consente la creazione di monitor per avvisare quando si verificano anomalie di questo tipo.
+Il rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati nel tuo ambiente. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia nel tuo ambiente, ad esempio, se un oggetto sperimenta un certo livello di latenza a una determinata ora il mercoledì, ma la latenza sale al di sopra di quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Data Infrastructure Insights consente la creazione di monitor per avvisare in caso di anomalie in tal senso.
 
-Il rilevamento delle anomalie è adatto per le metriche degli oggetti che mostrano un modello ricorrente e prevedibile. Quando queste metriche dell'oggetto superano o scendono al di sotto dei livelli previsti, Cloud Insights può generare un avviso per sollecitare l'analisi.
+Il rilevamento delle anomalie è adatto per le metriche degli oggetti che mostrano un modello ricorrente e prevedibile. Quando queste metriche dell'oggetto superano o scendono al di sotto dei livelli previsti, Data Infrastructure Insights può generare un avviso per un'analisi tempestiva.
 
 image:anomaly_detection_expert_view.png["grafico che mostra l'anomalia rilevata"]
 
@@ -29,7 +29,7 @@ image:anomaly_detection_expert_view.png["grafico che mostra l'anomalia rilevata"
 
 == Cos'è il rilevamento delle anomalie?
 
-Un'anomalia si verifica quando il valore medio di una metrica è un numero di deviazioni standard lontano dalla media ponderata di quella metrica per le settimane precedenti, con settimane recenti che hanno più peso rispetto alle settimane precedenti. Cloud Insights consente di monitorare i dati e avvisare in caso di anomalie. È possibile impostare i livelli di rilevamento della "sensibilità". Ad esempio, una sensibilità maggiore è quando il valore medio è meno deviazioni standard dalla media, causando così la generazione di un maggior numero di avvisi. Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.
+Un'anomalia si verifica quando il valore medio di una metrica è un numero di deviazioni standard lontano dalla media ponderata di quella metrica per le settimane precedenti, con settimane recenti che hanno più peso rispetto alle settimane precedenti. Data Infrastructure Insights offre la possibilità di monitorare i dati e avvisare in caso di anomalie. È possibile impostare i livelli di rilevamento della "sensibilità". Ad esempio, una sensibilità maggiore è quando il valore medio è meno deviazioni standard dalla media, causando così la generazione di un maggior numero di avvisi. Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.
 
 
 

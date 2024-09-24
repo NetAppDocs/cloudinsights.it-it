@@ -34,7 +34,7 @@ ONTAP Essentials richiede almeno un data collector ONTAP funzionante con i dati 
 
 == Panoramica
 
-Per iniziare l'esplorazione, selezionare *elementi essenziali di ONTAP* dal menu principale di Cloud Insights.
+Per iniziare l'esplorazione, selezionare *ONTAP Essentials* dal menu principale informazioni sull'infrastruttura dati.
 
 image:OE_Overview.png["Dashboard di panoramica per ONTAP Essentials"]
 
@@ -152,7 +152,7 @@ I dettagli del cluster includono stato della connessione, informazioni sul certi
 
 I dettagli delle VM di storage mostrano le informazioni di audit e SSH:image:OE_Storage_Slideout.png["Scheda Storage (archiviazione)"]
 
-I dettagli anti-ransomware mostrano se una VM di storage è protetta dalla protezione anti-ransomware di ONTAP o dalla sicurezza del carico di lavoro Cloud Insights. La colonna ARP ONTAP visualizza lo stato corrente della protezione anti-ransomware integrata di ONTAP, configurata sul sistema ONTAP. La sicurezza del carico di lavoro Cloud Insights può essere attivata selezionando "Proteggi" nella colonna.image:OE_Anti-Ransomware_Slideout.png["Scheda anti-ransomware"]
+I dettagli anti-ransomware mostrano se una VM di storage è protetta dalla protezione anti-ransomware di ONTAP o dalla sicurezza del carico di lavoro di Insights dell'infrastruttura dati. La colonna ARP ONTAP visualizza lo stato corrente della protezione anti-ransomware integrata di ONTAP, configurata sul sistema ONTAP. Data Infrastructure Insights workload Security può essere attivato selezionando "Protect" in quella colonna. image:OE_Anti-Ransomware_Slideout.png["Scheda anti-ransomware"]
 
 
 

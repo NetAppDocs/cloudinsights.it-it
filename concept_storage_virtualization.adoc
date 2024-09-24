@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_storage_virtualization.html 
-summary: Cloud Insights è in grado di fornire viste sullo storage virtualizzato front-end e back-end. 
+summary: Data Infrastructure Insights può fornire viste dello storage virtualizzato front-end e back-end. 
 keywords: storage, virtual, virtualized, virtualization, 
 ---
 = Virtualizzazione dello storage
@@ -19,7 +19,7 @@ keywords: storage, virtual, virtualized, virtualization,
 
 
 [role="lead"]
-Cloud Insights è in grado di distinguere tra un array di storage con storage locale o virtualizzazione di altri array di storage. In questo modo è possibile correlare i costi e distinguere le performance dal front-end fino al back-end dell'infrastruttura.
+Data Infrastructure Insights può differenziare tra uno storage array con storage locale o la virtualizzazione di altri storage array. In questo modo è possibile correlare i costi e distinguere le performance dal front-end fino al back-end dell'infrastruttura.
 
 
 

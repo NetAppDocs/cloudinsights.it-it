@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_alerts_section.html 
-summary: Panoramica della sezione Avvisi correlati della pagina delle risorse in Cloud Insights. 
+summary: Panoramica della sezione relativa agli avvisi della pagina delle risorse in Data Infrastructure Insights. 
 keywords: asset, landing page, violations, Alerts, 
 ---
 = Sezione Avvisi correlati alla pagina risorse

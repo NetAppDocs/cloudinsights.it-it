@@ -65,13 +65,7 @@ Per Linux, lo spazio su disco deve essere allocato in questo modo:
 /Tmp almeno 1 GB disponibili durante l'installazione | 50 GB 
 
 
-| Rete | Sono richiesti un collegamento Ethernet a 100 Mbps/1 Gbps, un indirizzo IP statico e una connettività della porta 80 o 443 dall'unità di acquisizione a *.cloudinsights.netapp.com o l'ambiente Cloud Insights (ad es. \Https://<environment_id>.c01.cloudinsights.netapp.com). Per i requisiti tra l'unità di acquisizione e ciascun Data Collector, fare riferimento alle istruzioni del link:data_collector_list.html["Data Collector"].
-
-Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni per il funzionamento di Cloud Insights. Ad esempio, l'organizzazione blocca l'accesso per impostazione predefinita e consente l'accesso a siti/domini Web specifici solo in base all'eccezione? In tal caso, sarà necessario aggiungere il seguente dominio all'elenco delle eccezioni:
-
-*.cloudinsights.netapp.com
-
-Per ulteriori informazioni, consultare informazioni sui proxy link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Qui (Linux)"] oppure link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Qui (Windows)"]. | Stesso 
+| Rete | È necessaria una connessione Ethernet a 100 Mbps/1 Gbps, un indirizzo IP statico e connettività della porta 80 o 443 dall'unità di acquisizione a *.cloudinsights.NetApp.com o l'ambiente Data Infrastructure Insights (ad es. \Https://<environment_id>.C01.cloudinsigives.NetApp.com). Per i requisiti tra l'unità di acquisizione e ciascun Data Collector, fare riferimento alle istruzioni della link:data_collector_list.html["Data Collector"]. Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni affinché Data Infrastructure Insights funzioni. Ad esempio, l'organizzazione blocca l'accesso per impostazione predefinita e consente l'accesso a siti/domini Web specifici solo in base all'eccezione? In tal caso, sarà necessario aggiungere il seguente dominio all'elenco delle eccezioni: *.cloudinsights.NetApp.com per ulteriori informazioni, leggere su Proxies link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Qui (Linux)"] o link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Qui (Windows)"]. | Stesso 
 
 
 | Permessi | Sudo permissions on the Acquisition Unit server (sudo permessi sul server dell'unità /tmp deve essere montato con funzionalità exec. | Autorizzazioni di amministratore sul server dell'unità di acquisizione 
@@ -90,7 +84,7 @@ Per ulteriori informazioni, consultare informazioni sui proxy link:task_troubles
 
 == Per quanto riguarda il dimensionamento
 
-È possibile iniziare con un'unità di acquisizione Cloud Insights con soli 8 GB di memoria e 50 GB di spazio su disco, tuttavia, per gli ambienti più grandi, è necessario porsi le seguenti domande:
+È possibile iniziare con un'unità di acquisizione di Data Infrastructure Insights con solo 8GB GB di memoria e 50GB GB di spazio su disco, tuttavia per ambienti di grandi dimensioni è necessario porsi le seguenti domande:
 
 Prevedete di:
 
@@ -106,5 +100,5 @@ Per ulteriori domande sul dimensionamento, contatta il supporto NetApp.
 
 == Requisito aggiuntivo della Federal Edition
 
-* Per le installazioni delle unità di acquisizione nei cluster Cloud Insights Edizione Federale, il sistema operativo sottostante deve avere una buona fonte di entropia. Sui sistemi Linux, questo viene generalmente eseguito installando _rng-tools_ o utilizzando la generazione di numeri casuali (RNG) dell'hardware. È responsabilità del cliente assicurarsi che questo requisito sia soddisfatto sulla macchina dell'unità di acquisizione.
+* Per le installazioni delle unità di acquisizione nei cluster Data Infrastructure Insights Federal Edition, il sistema operativo sottostante deve avere una buona fonte di entropia. Sui sistemi Linux, questo viene generalmente eseguito installando _rng-tools_ o utilizzando la generazione di numeri casuali (RNG) dell'hardware. È responsabilità del cliente assicurarsi che questo requisito sia soddisfatto sulla macchina dell'unità di acquisizione.
 

@@ -19,7 +19,7 @@ summary: 'La risoluzione automatica dei dispositivi ti aiuta a tenere traccia co
 
 
 [role="lead"]
-È necessario identificare tutti i dispositivi che si desidera monitorare con Cloud Insights. L'identificazione è necessaria per tenere traccia con precisione delle performance e dell'inventario nel tuo ambiente. In genere, la maggior parte dei dispositivi rilevati nell'ambiente viene identificata tramite _Automatic Device Resolution_.
+È necessario identificare tutti i dispositivi che si desidera monitorare con Data Infrastructure Insights. L'identificazione è necessaria per tenere traccia con precisione delle performance e dell'inventario nel tuo ambiente. In genere, la maggior parte dei dispositivi rilevati nell'ambiente viene identificata tramite _Automatic Device Resolution_.
 
 Dopo aver configurato i data raccoglitori, vengono identificati i dispositivi nell'ambiente, inclusi switch, storage array e l'infrastruttura virtuale di hypervisor e macchine virtuali. Tuttavia, questo non identifica normalmente il 100% dei dispositivi nell'ambiente in uso.
 
@@ -32,7 +32,7 @@ Dopo aver configurato i dispositivi di tipo data collector, la procedura consigl
 
 I dispositivi che rimangono sconosciuti dopo la risoluzione del dispositivo sono considerati dispositivi generici, che è possibile visualizzare anche nelle query e nei dashboard.
 
-Le regole create a loro volta identificheranno automaticamente i nuovi dispositivi con attributi simili man mano che vengono aggiunti all'ambiente. In alcuni casi, la risoluzione del dispositivo consente anche l'identificazione manuale ignorando le regole di risoluzione del dispositivo per i dispositivi non rilevati in Cloud Insights.
+Le regole create a loro volta identificheranno automaticamente i nuovi dispositivi con attributi simili man mano che vengono aggiunti all'ambiente. In alcuni casi, la risoluzione del dispositivo consente anche l'identificazione manuale ignorando le regole di risoluzione del dispositivo per i dispositivi non rilevati all'interno di Data Infrastructure Insights.
 
 L'identificazione incompleta dei dispositivi può causare problemi quali:
 

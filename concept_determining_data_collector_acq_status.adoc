@@ -19,7 +19,7 @@ keywords: collector, acquisition, status
 
 
 [role="lead"]
-Poiché i data collezioner sono la principale fonte di informazioni per Cloud Insights, è fondamentale assicurarsi che rimangano in uno stato di esecuzione.
+Poiché i data collector sono la principale fonte di informazioni per Data Infrastructure Insights, è essenziale assicurarsi che rimangano in esecuzione.
 
 Lo stato del data collector viene visualizzato nell'angolo in alto a destra di qualsiasi pagina asset come messaggio "Acquisited N minutes ago" (acquisito N minuti fa), dove N indica il tempo di acquisizione più recente del data collector dell'asset. Viene visualizzata anche la data e l'ora di acquisizione.
 

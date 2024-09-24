@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Cloud Insights dispone di tutorial per mostrare come eseguire molte attività. 
+summary: Data Infrastructure Insights dispone di tutorial che illustrano come eseguire molte attività. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
 = Tutorial sulle funzioni
@@ -19,22 +19,22 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Cloud Insights è dotato di utili funzionalità che consentono di trovare rapidamente e facilmente i dati, risolvere i problemi e fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
+Data Infrastructure Insights è dotato di utili funzionalità che consentono di trovare i dati in modo rapido e semplice, risolvere i problemi e fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
 
-Cloud Insights include una serie di tutorial video per aiutarti a comprendere queste funzionalità e implementare meglio le tue strategie di business Insight. Tutti gli utenti che hanno accesso al tuo ambiente Cloud Insights possono trarre vantaggio da queste esercitazioni.
+Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight. Tutti gli utenti che hanno accesso al proprio ambiente Data Infrastructure Insights possono usufruire di questi tutorial.
 
 
 
 == Introduzione
 
-Guarda un breve tutorial che spiega come funziona Cloud Insights.
+Guarda un breve tutorial che spiega come funziona Data Infrastructure Insights.
 
 video::howTo.mp4[]
 
 
 == Checklist e video tutorial
 
-La *Lista di controllo per l'avvio* visualizzata sul sito Cloud Insights contiene un elenco di diversi concetti e attività utili. Selezionando un elemento nell'elenco di controllo si accede alla pagina Cloud Insights appropriata per quel concetto. Ad esempio, facendo clic sulla voce _Crea dashboard_ viene aperta la pagina Cloud Insights *Dashboard*.
+La *Startup Checklist* visualizzata sul sito Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili. Selezionando un elemento nella lista di controllo si accede alla pagina Data Infrastructure Insights (informazioni sull'infrastruttura dati) appropriata per tale concetto. Ad esempio, facendo clic sull'elemento _Create a Dashboard_ si apre la pagina Data Infrastructure Insights *Dashboard*.
 
 image:OnboardingChecklist.png["Avanzamento dell'elenco di controllo del tutorial"]
 
@@ -51,7 +51,7 @@ NOTE: È possibile visualizzare i tutorial in qualsiasi ordine, tutte le volte c
 
 === Disperdere l'elenco di controllo
 
-L'elenco di controllo per l'avvio viene visualizzato sul sito fino a quando non si fa clic sul collegamento _Do't Show Again_ (non mostrare più questo) nella parte inferiore dell'elenco di controllo. Anche dopo aver disattivato l'elenco di controllo, i tutorial sono ancora disponibili su ogni pagina Cloud Insights appropriata fino a quando non si chiude ogni pagina dalla barra di intestazione del messaggio.
+L'elenco di controllo per l'avvio viene visualizzato sul sito fino a quando non si fa clic sul collegamento _Do't Show Again_ (non mostrare più questo) nella parte inferiore dell'elenco di controllo. Anche dopo aver eliminato l'elenco di controllo, i tutorial sono ancora disponibili in ciascuna pagina di approfondimento dell'infrastruttura dati appropriata fino a quando non si ignora ciascuno di essi dalla barra dell'intestazione del messaggio.
 
 
 

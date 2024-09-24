@@ -64,7 +64,7 @@ Quando vengono visualizzate le legende, se è possibile accedere alla pagina di 
 
 == Trasformazione delle metriche
 
-Cloud Insights offre diverse opzioni *transform* per determinate metriche nei widget (in particolare, quelle metriche chiamate "personalizzate" o metriche di integrazione, come Kubernetes, dati avanzati ONTAP, plug-in Telegraf, ecc.), consentendo di visualizzare i dati in diversi modi. Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti scelte di trasformazione:
+Data Infrastructure Insights fornisce diverse opzioni *Transform* per determinate metriche nei widget (in particolare, quelle metriche chiamate "personalizzate" o metriche di integrazione, come da Kubernetes, dati avanzati di ONTAP, plug-in Telegraf, ecc.), consentendo di visualizzare i dati in diversi modi. Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti scelte di trasformazione:
 
 Nessuno:: I dati vengono visualizzati così come sono, senza alcuna manipolazione.
 Tasso:: Valore corrente diviso per l'intervallo di tempo dall'osservazione precedente.
@@ -541,7 +541,7 @@ Tuttavia, se si desidera visualizzare temporaneamente solo i nodi nelle singole 
 
 image:Variables_Node_Example_After_Variable_Applied.png["Nodi agente dopo filtro variabile"]
 
-È inoltre possibile impostare una variabile per filtrare gli oggetti _all_ con un attributo particolare indipendentemente dal tipo di oggetto, ad esempio gli oggetti con un attributo di "vendor", specificando _*.vendor_ nel campo della variabile. Non è necessario digitare "*."; se si seleziona l'opzione con il carattere jolly, Cloud Insights lo fornirà.
+È inoltre possibile impostare una variabile per filtrare gli oggetti _all_ con un attributo particolare indipendentemente dal tipo di oggetto, ad esempio gli oggetti con un attributo di "vendor", specificando _*.vendor_ nel campo della variabile. Non è necessario digitare "*."; se si seleziona l'opzione carattere jolly, Data Infrastructure Insights lo fornirà.
 
 image:Variables_Attribute_Vendor_Example.png["Variabile di attributo per il fornitore"]
 
@@ -641,7 +641,7 @@ Facendo clic sul collegamento in un widget a valore singolo o in un widget indic
 Come per i widget a valore singolo e per gli indicatori, è possibile impostare la formattazione condizionale nei widget delle tabelle, consentendo di evidenziare i dati con colori e/o icone speciali.
 
 
-NOTE: La formattazione condizionale non è attualmente disponibile nell'edizione federale di Cloud Insights.
+NOTE: La formattazione condizionale non è attualmente disponibile in Data Infrastructure Insights Federal Edition.
 
 La formattazione condizionale consente di impostare ed evidenziare le soglie di livello di avviso e critico nei widget delle tabelle, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.
 
@@ -659,9 +659,9 @@ image:ConditionalFormatting_GiB.png["Formattazione condizionale - GiB"] image:Co
 
 == Scelta dell'unità per la visualizzazione dei dati
 
-La maggior parte dei widget di una dashboard consente di specificare le unità in cui visualizzare i valori, ad esempio _Megabyte_, _migliaia_, _percentuale_, _millisecondi (ms)_, ecc. In molti casi, Cloud Insights conosce il formato migliore per i dati acquisiti. Nei casi in cui non si conosce il formato migliore, è possibile impostare il formato desiderato.
+La maggior parte dei widget di un dashboard consente di specificare le unità in cui visualizzare i valori, ad esempio _Megabyte_, _migliaia_, _percentuale_, _millisecondi (ms)_, ecc. in molti casi, Data Infrastructure Insights conosce il formato migliore per i dati acquisiti. Nei casi in cui non si conosce il formato migliore, è possibile impostare il formato desiderato.
 
-Nell'esempio riportato di seguito, i dati selezionati per il widget sono in _byte_ (l'unità dati IEC di base: Vedere la tabella seguente), quindi l'unità base viene selezionata automaticamente come 'byte (B)'. Tuttavia, i valori dei dati sono abbastanza grandi da essere presentati come gibytes (GiB), quindi Cloud Insights per impostazione predefinita formatta automaticamente i valori come GiB. L'asse Y del grafico mostra "GiB" come unità di visualizzazione e tutti i valori sono visualizzati in termini di unità.
+Nell'esempio riportato di seguito, i dati selezionati per il widget sono in _byte_ (l'unità dati IEC di base: Vedere la tabella seguente), quindi l'unità base viene selezionata automaticamente come 'byte (B)'. Tuttavia, i valori dei dati sono abbastanza grandi da essere presentati come gibbytes (GiB), pertanto Data Infrastructure Insights per impostazione predefinita formatta automaticamente i valori come GiB. L'asse Y del grafico mostra "GiB" come unità di visualizzazione e tutti i valori sono visualizzati in termini di unità.
 
 image:used_memory_in_bytes.png["Byte dell'unità di base visualizzato in Gigabyte, larghezza=640"]
 
@@ -679,10 +679,10 @@ Per cancellare le impostazioni e ricominciare, fare clic su *Reset Defaults* (Ri
 
 === Una parola su Auto-Format
 
-La maggior parte delle metriche viene riportata dai data collezionisti nell'unità più piccola, ad esempio come un numero intero, ad esempio 1,234,567,890 byte. Per impostazione predefinita, Cloud Insights formatterà automaticamente il valore per la visualizzazione più leggibile. Ad esempio, un valore dei dati di 1,234,567,890 byte viene automaticamente formattato in 1.23 _Gibibytes_. È possibile scegliere di visualizzarlo in un altro formato, ad esempio _Mebibytes_. Il valore viene visualizzato di conseguenza.
+La maggior parte delle metriche viene riportata dai data collezionisti nell'unità più piccola, ad esempio come un numero intero, ad esempio 1,234,567,890 byte. Per impostazione predefinita, Data Infrastructure Insights formatta automaticamente il valore per la visualizzazione più leggibile. Ad esempio, un valore dei dati di 1,234,567,890 byte viene automaticamente formattato in 1.23 _Gibibytes_. È possibile scegliere di visualizzarlo in un altro formato, ad esempio _Mebibytes_. Il valore viene visualizzato di conseguenza.
 
 
-NOTE: Cloud Insights utilizza gli standard di denominazione dei numeri in inglese americano. Il "miliardo" americano equivale a "migliaia di milioni".
+NOTE: Data Infrastructure Insights utilizza gli standard di denominazione del numero inglese americano. Il "miliardo" americano equivale a "migliaia di milioni".
 
 
 
@@ -795,10 +795,10 @@ Ciascun widget visualizza l'intervallo di aggiornamento automatico nell'angolo s
 
 L'aggiornamento automatico non è disponibile per l'intervallo di tempo della dashboard personalizzata.
 
-Se combinato con la modalità *TV*, l'aggiornamento automatico consente la visualizzazione quasi in tempo reale dei dati su una dashboard o una pagina di risorse. La modalità TV offre una visualizzazione semplice; il menu di navigazione è nascosto, offrendo una maggiore capacità di visualizzazione dei dati, così come il pulsante Edit. La modalità TV ignora i timeout Cloud Insights tipici, lasciando il display attivo fino a quando non viene disconnesso manualmente o automaticamente dai protocolli di sicurezza autorizzati.
+Se combinato con la modalità *TV*, l'aggiornamento automatico consente la visualizzazione quasi in tempo reale dei dati su una dashboard o una pagina di risorse. La modalità TV offre una visualizzazione semplice; il menu di navigazione è nascosto, offrendo una maggiore capacità di visualizzazione dei dati, così come il pulsante Edit. La modalità TV ignora i timeout tipici di Data Infrastructure Insights, lasciando il display attivo fino a quando non viene disconnesso manualmente o automaticamente dai protocolli di sicurezza di autorizzazione.
 
 
-NOTE: Poiché NetApp BlueXP ha un timeout di login utente di 7 giorni, Cloud Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
+NOTE: Poiché NetApp BlueXP  ha il proprio timeout di accesso utente di 7 giorni, Data Infrastructure Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
 
 * Per attivare la modalità TV, fare clic sul pulsante modalità TV.
 * Per disattivare la modalità TV, fare clic sul pulsante *Exit* in alto a sinistra sullo schermo.
@@ -835,7 +835,7 @@ Per aggiungere dashboard al gruppo, fare clic sul gruppo _All Dashboards_ per vi
 Rimuovere i dashboard dal gruppo corrente nello stesso modo selezionando _Remove from Group_. Non è possibile rimuovere i dashboard dal gruppo _tutti i dashboard_ o _i miei dashboard_.
 
 
-NOTE: La rimozione di una dashboard da un gruppo non elimina la dashboard da Cloud Insights. Per rimuovere completamente una dashboard, selezionarla e fare clic su _Delete_. In questo modo viene rimosso da tutti i gruppi a cui apparteneva e non è più disponibile per nessun utente.
+NOTE: La rimozione di una dashboard da un gruppo non elimina la dashboard da Data Infrastructure Insights. Per rimuovere completamente una dashboard, selezionarla e fare clic su _Delete_. In questo modo viene rimosso da tutti i gruppi a cui apparteneva e non è più disponibile per nessun utente.
 
 
 
@@ -851,7 +851,7 @@ image:DashboardPin.png["Dashboard bloccati"]
 
 == Tema scuro
 
-È possibile scegliere di visualizzare Cloud Insights utilizzando un tema chiaro (impostazione predefinita), che visualizza la maggior parte delle schermate utilizzando uno sfondo chiaro con testo scuro, o un tema scuro che visualizza la maggior parte delle schermate utilizzando uno sfondo scuro con testo chiaro.
+È possibile scegliere di visualizzare Data Infrastructure Insights utilizzando un tema chiaro (predefinito), che visualizza la maggior parte delle schermate utilizzando uno sfondo chiaro con testo scuro, o un tema scuro che visualizza la maggior parte delle schermate utilizzando uno sfondo scuro con testo chiaro.
 
 Per passare da un tema chiaro a uno scuro e viceversa, fare clic sul pulsante Username (Nome utente) nell'angolo superiore destro dello schermo e scegliere il tema desiderato.
 
@@ -870,7 +870,7 @@ NOTE: Alcune aree dello schermo, ad esempio alcuni grafici di widget, continuano
 
 I diversi data raccoglitori spesso eseguono il polling dei dati a intervalli diversi. Ad esempio, il data collector A può eseguire il polling ogni 15 minuti, mentre il data collector B esegue il polling ogni cinque minuti. Quando un widget di un grafico a linee (anche diagrammi di spline, area e area sovrapposta) aggrega questi dati da più raccolte di dati in una singola riga (ad esempio, quando il widget raggruppa per "tutti"), Inoltre, aggiornando la linea ogni cinque minuti, i dati del raccoglitore B possono essere mostrati con precisione mentre i dati del raccoglitore A possono presentare lacune, influenzando così l'aggregato fino a quando il raccoglitore A esegue di nuovo il polling.
 
-Per ridurre questo problema, Cloud Insights interpola i dati durante l'aggregazione, utilizzando i punti dati circostanti per fare una "ipotesi migliore" sui dati fino a quando i data collezioner non eseguono nuovamente il polling. Puoi sempre visualizzare i dati degli oggetti di ciascun data collector individualmente regolando il raggruppamento del widget.
+Per ovviare a questo problema, Data Infrastructure Insights esegue l'interpolazione dei dati durante l'aggregazione, utilizzando i punti dati circostanti per adottare una "ipotesi migliore" nei dati fino a quando i data collector non eseguono nuovamente il polling. Puoi sempre visualizzare i dati degli oggetti di ciascun data collector individualmente regolando il raggruppamento del widget.
 
 
 

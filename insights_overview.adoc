@@ -31,7 +31,7 @@ Sono disponibili numerose informazioni. Vai a *Dashboard > Insights* per iniziar
 
 === Risorse condivise sotto stress
 
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Cloud Insights fornisce strumenti per analizzare la saturazione delle risorse e l'impatto nell'ambiente. link:insights_shared_resources_under_stress.html["Scopri di più"]
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente. link:insights_shared_resources_under_stress.html["Scopri di più"]
 
 
 
@@ -46,4 +46,4 @@ Kubernetes Namespaces running out of Space Insight offre una vista dei carichi d
 L'analisi di _recupero dello storage a freddo ONTAP_ fornisce dati sulla capacità a freddo, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP. link:insights_reclaim_ontap_cold_storage.html["Scopri di più"]
 
 
-NOTE: Si tratta di una funzione _Preview_ che può cambiare nel tempo man mano che vengono apportati dei miglioramenti. link:/concept_preview_features.html["Scopri di più"] Informazioni sulle funzioni di anteprima di Cloud Insights.
+NOTE: Si tratta di una funzione _Preview_ che può cambiare nel tempo man mano che vengono apportati dei miglioramenti. link:/concept_preview_features.html["Scopri di più"] Informazioni sulle funzioni di anteprima di Data Infrastructure Insights.

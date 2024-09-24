@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_activeiq.html 
 keywords: Active IQ, risks, svm, AIQ, risk 
-summary: Cloud Insights raccoglie i dati sui rischi da NetApp Active IQ 
+summary: Data Infrastructure Insights raccoglie i dati sui rischi da NetApp Active IQ 
 ---
 = Active IQ
 :toc: macro
@@ -22,13 +22,13 @@ summary: Cloud Insights raccoglie i dati sui rischi da NetApp Active IQ
 NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"] Offre una serie di visualizzazioni, analytics e altri servizi di supporto ai clienti NetApp per i loro sistemi hardware/software. I dati riportati da Active IQ possono migliorare la risoluzione dei problemi di sistema e fornire informazioni sull'ottimizzazione e sull'analisi predittiva dei dispositivi.
 
 
-NOTE: ActiveIQ non è disponibile nell'edizione federale di Cloud Insights.
+NOTE: ActiveIQ non è disponibile in Data Infrastructure Insights Federal Edition.
 
-Cloud Insights raccoglie i *rischi* per qualsiasi sistema storage NetApp Clustered Data ONTAP monitorato e segnalato da Active IQ. I rischi segnalati per i sistemi storage vengono raccolti automaticamente da Cloud Insights nell'ambito della raccolta dei dati da tali dispositivi. È necessario aggiungere il data collector appropriato a Cloud Insights per raccogliere le informazioni sui rischi Active IQ.
+Informazioni sull'infrastruttura dati raccoglie i *rischi* per qualsiasi sistema storage Data ONTAP in cluster NetApp monitorato e segnalato da Active IQ. I rischi segnalati per i sistemi storage vengono raccolti automaticamente da Data Infrastructure Insights come parte della raccolta di dati da tali dispositivi. È necessario aggiungere il data collector appropriato a Data Infrastructure Insights per raccogliere le informazioni sui rischi Active IQ.
 
-Cloud Insights non mostra i dati di rischio per i sistemi ONTAP che non sono monitorati e segnalati da Active IQ.
+Data Infrastructure Insights non mostrerà i dati di rischio per i sistemi ONTAP che non sono monitorati e segnalati da Active IQ.
 
-I rischi riportati sono riportati in Cloud Insights nelle pagine di destinazione delle risorse di _storage_ e _storage node_, nella tabella "rischi". La tabella mostra i dettagli del rischio, la categoria di rischio e il potenziale impatto del rischio e fornisce anche un link alla pagina Active IQ che riepiloga tutti i rischi per il nodo di storage (è richiesto l'accesso all'account di supporto NetApp).
+I rischi riportati sono mostrati in Data Infrastructure Insights, nelle landing page delle risorse _storage_ e _nodo storage_, nella tabella "rischi". La tabella mostra i dettagli del rischio, la categoria di rischio e il potenziale impatto del rischio e fornisce anche un link alla pagina Active IQ che riepiloga tutti i rischi per il nodo di storage (è richiesto l'accesso all'account di supporto NetApp).
 
 image:AIQ_Risks_Table_Example.png["Tabella dei rischi di Active IQ"]
 
@@ -42,7 +42,7 @@ image:AIQ_Summary_Example.png["Riepilogo della pagina di storage"]
 
 Quando si fa clic sul collegamento a una pagina Active IQ, se non si è ancora effettuato l'accesso all'account Active IQ, attenersi alla seguente procedura per visualizzare la pagina Active IQ relativa al nodo di storage.
 
-. Nel widget Riepilogo Cloud Insights o nella tabella rischi, fai clic sul link "Active IQ".
+. Nella tabella rischi o widget Riepilogo approfondimenti sull'infrastruttura dati, fare clic sul collegamento "Active IQ".
 . Accedi al tuo account NetApp Support. Viene visualizzata direttamente la pagina del nodo di storage in Active IQ.
 
 
@@ -50,7 +50,7 @@ Quando si fa clic sul collegamento a una pagina Active IQ, se non si è ancora e
 
 == Query per i rischi
 
-In Cloud Insights, è possibile aggiungere la colonna *monitoring.count* a una query del nodo storage o storage. Se il risultato restituito include sistemi storage monitorati con Active IQ, la colonna monitoring.count visualizza il numero di rischi per il sistema o il nodo storage.
+In Data Infrastructure Insights, è possibile aggiungere la colonna *monitoring.count* a una query del nodo di archiviazione o di archiviazione. Se il risultato restituito include sistemi storage monitorati con Active IQ, la colonna monitoring.count visualizza il numero di rischi per il sistema o il nodo storage.
 
 
 

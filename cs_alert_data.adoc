@@ -16,9 +16,6 @@ summary: 'Workload Security crea avvisi in caso di attività utente anomale o po
 [role="lead"]
 La pagina Workload Security Alerts (Avvisi di sicurezza del carico di lavoro) mostra una tempistica degli attacchi e/o degli avvisi recenti e consente di visualizzare i dettagli relativi a ciascun problema.
 
-
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
 image:CloudSecureAlertsListPage.png["Elenco degli avvisi"]
 
 

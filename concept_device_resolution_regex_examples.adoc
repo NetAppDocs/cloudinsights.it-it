@@ -19,13 +19,13 @@ summary:
 
 
 [role="lead"]
-Se è stato selezionato l'approccio alle espressioni regolari come strategia di denominazione di origine, è possibile utilizzare gli esempi di espressioni regolari come guide per le proprie espressioni utilizzate nei metodi di risoluzione automatica di Cloud Insights.
+Se è stato selezionato l'approccio dell'espressione regolare come strategia di denominazione di origine, è possibile utilizzare gli esempi di espressione regolare come guide per le proprie espressioni utilizzate nei metodi di risoluzione automatica di Data Infrastructure Insights.
 
 
 
 == Formattazione delle espressioni regolari
 
-Quando si creano espressioni regolari per la risoluzione automatica di Cloud Insights, è possibile configurare il formato di output immettendo i valori in un campo denominato _FORMAT_.
+Quando si creano espressioni regolari per la risoluzione automatica di Data Infrastructure Insights, è possibile configurare il formato di output immettendo i valori in un campo denominato _FORMAT_.
 
 L'impostazione predefinita è 1, il che significa che il nome di una zona che corrisponde all'espressione regolare viene sostituito dal contenuto della prima variabile creata dall'espressione regolare. In un'espressione regolare, i valori delle variabili vengono creati dalle istruzioni tra parentesi. Se si verificano più istruzioni tra parentesi, le variabili vengono referenziate numericamente, da sinistra a destra. Le variabili possono essere utilizzate nel formato di output in qualsiasi ordine. Il testo costante può anche essere inserito nell'output, aggiungendolo al campo DEL FORMATO.
 
@@ -280,7 +280,7 @@ Il simbolo ^ (circonflesso o accento circonflesso) *all'interno delle parentesi 
 
 *Nome host:* mhs-apps44-d
 
-*RegExp:* ([^_]+)_([AB]).*formato in Cloud Insights:[^_]+ ([^_]+)_([^_]+).*formato in Cloud Insights
+*RegExp:* ([^_]+)_([AB]).*formato in Data Infrastructure Insights: \1-\2 ([^_]+)_ ([^_]+)_([^_]+).*formato in Data Infrastructure Insights: \1-\2-\3
 
 
 

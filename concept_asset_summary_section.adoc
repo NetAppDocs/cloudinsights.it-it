@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_summary_section.html 
-summary: Panoramica della sezione Riepilogo della pagina delle risorse in Cloud Insights. 
+summary: Panoramica della sezione Riepilogo della pagina delle risorse in Data Infrastructure Insights. 
 keywords: asset, summary, landing page, topology, auto, refresh 
 ---
 = Sezione Riepilogo pagina risorse

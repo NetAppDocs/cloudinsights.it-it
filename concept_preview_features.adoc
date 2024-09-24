@@ -19,7 +19,7 @@ keywords: coming soon, preview,
 
 
 [role="lead"]
-Cloud Insights mette in evidenza le nuove funzionalità in un'anteprima. Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
+Data Infrastructure Insights mette in evidenza nuove caratteristiche e funzionalità in modo _Preview_. Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
 
 Se si desidera visualizzare l'anteprima di una o più di queste funzioni, contattare il link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Team di vendita NetApp"] per ulteriori informazioni.
 

@@ -19,7 +19,7 @@ summary: 'Log Explorer è un potente strumento per l"analisi dei problemi attrav
 
 
 [role="lead"]
-Esplora log di Cloud Insights è un potente strumento per eseguire query sui log di sistema. Oltre a fornire assistenza per le analisi, è possibile salvare una query di log in un monitor per fornire avvisi quando vengono attivati i trigger di log specifici.
+Lo strumento Data Infrastructure Insights Log Explorer è un potente strumento per eseguire query sui registri di sistema. Oltre a fornire assistenza per le analisi, è possibile salvare una query di log in un monitor per fornire avvisi quando vengono attivati i trigger di log specifici.
 
 Per iniziare a esplorare i registri, fare clic su *Log queries > +New Log Query*.
 
@@ -33,7 +33,7 @@ NOTE: I tipi di log disponibili per le query possono variare a seconda dell'ambi
 È possibile impostare filtri per perfezionare ulteriormente i risultati della query. Ad esempio, per trovare tutti i messaggi di registro che mostrano un errore, impostare un filtro per _messaggi_ contenente la parola "non riuscito".
 
 
-TIP: È possibile iniziare a digitare il testo desiderato nel campo del filtro; Cloud Insights richiederà di creare una ricerca con caratteri jolly contenente la stringa durante la digitazione.
+TIP: È possibile iniziare a digitare il testo desiderato nel campo del filtro; in Data Infrastructure Insights viene richiesto di creare una ricerca con caratteri jolly contenente la stringa durante la digitazione.
 
 I risultati vengono visualizzati in un grafico che mostra il numero di istanze di log in ciascun periodo di tempo visualizzato. Sotto il grafico sono riportati i modelli di voci di log. Il grafico e le voci si aggiornano automaticamente in base all'intervallo di tempo selezionato.
 
@@ -79,7 +79,7 @@ Si noti che nel caso precedente, poiché sia "cm-monitoring" che "eg-monitoring"
 
 
 . I risultati del filtro corrente, compresi i valori "Filtra per" E il filtro query avanzate, vengono visualizzati nell'elenco dei risultati. L'elenco può essere ordinato in base alle colonne visualizzate. Per visualizzare colonne aggiuntive, selezionare l'icona "marcia".
-. Il grafico è stato ingrandito per visualizzare solo i risultati del registro che si sono verificati in un intervallo di tempo specifico. L'intervallo di tempo mostrato qui riflette il livello di zoom corrente. Selezionare il pulsante _Reimposta zoom_ per riportare il livello di zoom all'intervallo temporale Cloud Insights corrente.
+. Il grafico è stato ingrandito per visualizzare solo i risultati del registro che si sono verificati in un intervallo di tempo specifico. L'intervallo di tempo mostrato qui riflette il livello di zoom corrente. Selezionare il pulsante _Reimposta zoom_ per riportare il livello di zoom all'intervallo temporale corrente di Data Infrastructure Insights.
 . I risultati del grafico sono stati raggruppati in base al campo _source_. Il grafico mostra i risultati in ogni colonna raggruppati in colori. Passando con il mouse sopra una colonna del grafico vengono visualizzati alcuni dettagli relativi alle voci specifiche.
 +
 image:Log_Advanced_Query_Group_Detail.png["Dettagli del passaggio del mouse raggruppati"]

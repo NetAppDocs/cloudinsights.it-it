@@ -22,9 +22,6 @@ summary: Aggiunta di agenti workload Security
 Workload Security (in precedenza Cloud Secure) raccoglie i dati delle attività degli utenti utilizzando uno o più agenti. Gli agenti si connettono ai dispositivi del tuo ambiente e raccolgono i dati inviati al livello SaaS per la sicurezza del carico di lavoro per l'analisi. Vedere link:concept_cs_agent_requirements.html["Requisiti dell'agente"] Per configurare una macchina virtuale dell'agente.
 
 
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
-
 
 == Prima di iniziare
 

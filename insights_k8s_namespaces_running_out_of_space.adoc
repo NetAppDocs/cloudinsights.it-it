@@ -19,7 +19,7 @@ summary: Le informazioni possono aiutarti a prevedere quando gli spazi Kubernete
 
 
 [role="lead"]
-Esaurire lo spazio nel tuo ambiente non è mai una buona situazione. Cloud Insights ti aiuta a prevedere il tempo che hai prima che i volumi persistenti di Kubernetes diventino pieni.
+Esaurire lo spazio nel tuo ambiente non è mai una buona situazione. Data Infrastructure Insights ti aiuta a prevedere il tempo necessario prima che i volumi persistenti di Kubernetes si esauriscano.
 
 L'Insight _Kubernetes Namespace running of Space_ ti offre una vista dei carichi di lavoro degli spazi dei nomi Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni volume persistente si esaurisca.
 
@@ -42,7 +42,7 @@ image:K8sRunningOutOfSpaceWorkloadTable.png["Tabella dei carichi di lavoro che m
 
 === Cosa posso fare se lo spazio è esaurito?
 
-Nella pagina Insight, fare clic su *+Mostra consigli* per visualizzare le possibili soluzioni. L'opzione più semplice quando si esaurisce lo spazio consiste nell'aggiungere sempre più capacità e Cloud Insights mostra la capacità ottimale da aggiungere per aumentare il tempo di riempimento a una previsione di 60 giorni. Vengono inoltre mostrati altri consigli.
+Nella pagina Insight, fare clic su *+Mostra consigli* per visualizzare le possibili soluzioni. L'opzione più semplice quando si esaurisce lo spazio è sempre quella di aggiungere maggiore capacità e Data Infrastructure Insights mostra la capacità ottimale da aggiungere per aumentare il time-to-full a una previsione di 60 giorni. Vengono inoltre mostrati altri consigli.
 
 image:K8sRunningOutOfSpaceRecommendations.png["Capacità da aggiungere per tornare a TTF di 60 giorni"]
 

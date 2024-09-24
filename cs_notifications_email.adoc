@@ -22,9 +22,6 @@ keywords: email, notifications, alerts, warnings, attacks
 Per configurare i destinatari degli avvisi di workload Security, fare clic su *Admin > Notifiche* e inserire gli indirizzi e-mail nelle sezioni appropriate per ciascun destinatario.
 
 
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
-
 
 == Avvisi e avvisi di potenziali attacchi
 
@@ -66,5 +63,5 @@ Tenere presente quanto segue:
 | *Problema:* | *Provare questo:* 
 
 
-| Gli ID e-mail sono presenti negli "Avvisi sullo stato di salute di Data Collector", ma non ricevo notifiche. | Le e-mail di notifica vengono inviate dal dominio NetApp Cloud Insights, ad esempio da _accounts@service.cloudinsights.netapp.com_. Alcune aziende bloccano le e-mail in arrivo se provengono da un dominio esterno. Assicurarsi che le notifiche esterne dai domini NetApp Cloud Insights siano inseriti nella whitelist. 
+| Gli ID e-mail sono presenti negli "Avvisi sullo stato di salute di Data Collector", ma non ricevo notifiche. | Le e-mail di notifica vengono inviate dal dominio di approfondimento dell'infrastruttura dati NetApp, ad esempio da_accounts@service.cledy dintevises.NetApp.com_. Alcune aziende bloccano le e-mail in arrivo se provengono da un dominio esterno. Assicurarsi che le notifiche esterne dai domini di NetApp Data Infrastructure Insights siano inserite nella whitelist. 
 |===

@@ -19,7 +19,7 @@ summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Cloud Insights fornisce strumenti per analizzare la saturazione delle risorse e l'impatto nell'ambiente.
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente.
 
 
 
@@ -29,7 +29,7 @@ Quando si parla di impatto sul carico di lavoro o sulle risorse, sono utili le s
 
 Una risorsa *di impatto* o _avida_ è una risorsa che causa un impatto negativo su un'altra risorsa. Ad esempio, un volume con IOPS molto elevati può causare una maggiore latenza in altri volumi (ad esempio risorse _influenzate_ o _degradate_). Le risorse di impatto e interessate sono "peer" che utilizzano la stessa risorsa condivisa, ad esempio un pool di storage o un volume.
 
-Un *carico di lavoro ad alto consumo* è un carico di lavoro che attualmente viene identificato come un impatto sulle altre risorse nel pool di storage condiviso. Questi carichi di lavoro consentono IOPS più elevati, riducendo gli IOPS nei carichi di lavoro interessati. In Cloud Insights questi sono identificati come *carichi di lavoro esigenti*.
+Un *carico di lavoro ad alto consumo* è un carico di lavoro che attualmente viene identificato come un impatto sulle altre risorse nel pool di storage condiviso. Questi carichi di lavoro consentono IOPS più elevati, riducendo gli IOPS nei carichi di lavoro interessati. In Data Infrastructure Insights questi sono identificati come *carichi di lavoro impegnativi*.
 
 Un carico di lavoro * con impatto è un carico di lavoro influenzato da un carico di lavoro molto elevato nel pool di storage condiviso. Questi carichi di lavoro stanno sperimentando IOPS ridotti e/o latenza superiore, causati dai carichi di lavoro esigenti.
 
@@ -43,7 +43,7 @@ Si verifica un *conflitto* quando gli IOPS influiscono su altre risorse o carich
 
 === Carichi di lavoro che consumano molto
 
-Tutti i carichi di lavoro ad alto consumo rilevati da Cloud Insights sono mostrati nella _risorse condivise in stress_ Insight. Accedere a *osservabilità > Approfondimenti sull'infrastruttura* per visualizzare questi approfondimenti.
+Tutti i carichi di lavoro ad alto consumo rilevati da Data Infrastructure Insights sono mostrati in _Shared Resources in stress_ Insight. Accedere a *osservabilità > Approfondimenti sull'infrastruttura* per visualizzare questi approfondimenti.
 
 image:Impacts_Workloads_Menu.png["Risorse condivise"]
 

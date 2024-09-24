@@ -19,7 +19,7 @@ summary: Istruzioni generali per il data collector
 
 
 [role="lead"]
-I Data Collector vengono configurati nell'ambiente Cloud Insights per la raccolta dei dati dai dispositivi del data center.
+È possibile configurare Data Collector nell'ambiente Data Infrastructure Insights per raccogliere dati dai dispositivi del data center.
 
 .Prima di iniziare
 * È necessario aver configurato un'unità di acquisizione prima di iniziare la raccolta dei dati.
@@ -28,7 +28,7 @@ I Data Collector vengono configurati nell'ambiente Cloud Insights per la raccolt
 
 
 .Fasi
-. Dal menu Cloud Insights, fare clic su *osservabilità > Collector*
+. Dal menu Data Infrastructure Insights (analisi dell'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti)
 +
 Il sistema visualizza i Data Collector disponibili organizzati in base al vendor.
 
@@ -39,7 +39,7 @@ Nella finestra di dialogo è possibile configurare il data collector e aggiunger
 . Inserire un nome per il data collector.
 . Fare clic su *Advanced Configuration* (Configurazione avanzata) per aggiungere ulteriori campi di configurazione. (Non tutti i data collettori richiedono una configurazione avanzata).
 . Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
-. Fare clic su *Aggiungi modulo di raccolta* per salvare la configurazione e aggiungere il modulo di raccolta dati al tenant Cloud Insights.
+. Fare clic su *Aggiungi Collector* per salvare la configurazione e aggiungere il data collector al tenant di Data Infrastructure Insights.
 
 
 Potrebbero essere necessari fino a due periodi di polling prima che i dati del servizio vengano visualizzati in dashboard o disponibili per la query.

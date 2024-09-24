@@ -48,7 +48,7 @@ Per rimuovere un'applicazione, selezionare l'elenco a discesa e deselezionare l'
 
 == Utilizzare la sezione User Data (dati utente) per assegnare o modificare le annotazioni
 
-Quando si personalizza Cloud Insights per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire note specializzate denominate annotazioni e assegnarle alle risorse. La sezione User Data (dati utente) di una pagina asset visualizza le annotazioni assegnate a una risorsa e consente di modificare le annotazioni assegnate a tale risorsa.
+Durante la personalizzazione di Data Infrastructure Insights per tenere traccia dei dati per i tuoi requisiti aziendali, puoi definire note specializzate denominate annotazioni e assegnarle alle tue risorse. La sezione User Data (dati utente) di una pagina asset visualizza le annotazioni assegnate a una risorsa e consente di modificare le annotazioni assegnate a tale risorsa.
 
 .Fasi
 . Per aggiungere un'annotazione alla risorsa, nella sezione User Data (dati utente) della pagina delle risorse, fare clic su *+Annotation (Annotazione)*.

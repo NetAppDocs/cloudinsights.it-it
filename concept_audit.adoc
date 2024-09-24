@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_audit.html 
 keywords: audit, users, activities 
-summary: 'Audit fornisce una vista delle attività del sistema e dell"utente nel sistema Cloud Insights.' 
+summary: 'L"audit fornisce una vista delle attività del sistema e degli utenti nel sistema Data Infrastructure Insights.' 
 ---
 = Controllo
 :toc: macro
@@ -19,7 +19,7 @@ summary: 'Audit fornisce una vista delle attività del sistema e dell"utente nel
 
 
 [role="lead"]
-Per identificare le modifiche previste (per il monitoraggio) o impreviste (per la risoluzione dei problemi), è possibile visualizzare un audit trail degli eventi del sistema Cloud Insights e delle attività dell'utente.
+Per identificare le modifiche previste (per il rilevamento) o impreviste (per la risoluzione dei problemi), è possibile visualizzare un audit trail degli eventi del sistema Data Infrastructure Insights e delle attività degli utenti.
 
 
 
@@ -29,7 +29,7 @@ Per visualizzare la pagina Audit, fare clic su *Admin > Audit* nel menu. Viene v
 
 * *Ora* - Data e ora dell'evento o dell'attività
 * *Utente* - l'utente che ha avviato l'attività
-* *Ruolo* - ruolo dell'utente in Cloud Insights (guest, utente, amministratore)
+* *Ruolo* - il ruolo dell'utente in Data Infrastructure Insights (guest, utente, amministratore)
 * *IP* - l'indirizzo IP associato all'evento
 * *Azione* - tipo di attività, ad esempio Login, Crea, Aggiorna
 * *Categoria* - la categoria di attività
@@ -91,7 +91,7 @@ Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto c
 
 == Eventi e azioni verificati
 
-Gli eventi e le azioni controllati da Cloud Insights possono essere classificati nelle seguenti aree:
+Gli eventi e le azioni controllati da Data Infrastructure Insights possono essere classificati nelle seguenti aree:
 
 * *Account utente*: Accesso, disconnessione, modifica del ruolo, ecc.
 +
@@ -134,7 +134,7 @@ Esempio: Creazione del destinatario _ci-alerts-notifications-dl_
 È possibile esportare i risultati della visualizzazione Audit in un file .CSV, che consente di analizzare i dati o importarli in un'altra applicazione.
 
 .Fasi
-. Nella pagina Audit, impostare l'intervallo di tempo desiderato e i filtri desiderati. Cloud Insights esporterà solo le voci di audit che corrispondono al filtro e all'intervallo di tempo impostati.
+. Nella pagina Audit, impostare l'intervallo di tempo desiderato e i filtri desiderati. Data Infrastructure Insights esporterà solo le voci di controllo corrispondenti al filtraggio e all'intervallo di tempo impostato.
 . Fare clic sul pulsante _Export_ image:ExportButton.png["Pulsante Export (Esporta)"] nella parte superiore destra della tabella.
 
 
@@ -144,7 +144,7 @@ Gli eventi di audit visualizzati verranno esportati in un file .CSV, fino a un m
 
 == Conservazione dei dati di audit
 
-La quantità di tempo in cui Cloud Insights conserva i dati di audit si basa sull'edizione:
+La quantità di tempo in cui Data Infrastructure Insights mantiene i dati di audit si basa sull'edizione:
 
 * Basic Edition: I dati di audit vengono conservati per 30 giorni
 * Edizioni Standard e Premium: I dati di audit vengono conservati per 1 anno più 1 giorno

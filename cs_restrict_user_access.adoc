@@ -16,9 +16,6 @@ summary: 'Con workload Security, puoi limitare l"accesso degli utenti in caso di
 [role="lead"]
 Una volta rilevato un attacco, Workload Security può arrestare l'attacco bloccando l'accesso dell'utente al file system. L'accesso può essere bloccato automaticamente, utilizzando le policy di risposta automatica o manualmente dalle pagine degli avvisi o dei dettagli dell'utente.
 
-
-NOTE: La sicurezza del carico di lavoro non è disponibile nell'edizione federale di Cloud Insights.
-
 Quando si blocca l'accesso dell'utente, è necessario definire un periodo di tempo di blocco. Al termine del periodo di tempo selezionato, l'accesso dell'utente viene ripristinato automaticamente. Il blocco degli accessi è supportato per i protocolli SMB e NFS.
 
 L'utente è direttamente bloccato per SMB e l'indirizzo IP dei computer host che causano l'attacco sarà bloccato per NFS. Gli indirizzi IP di tali macchine non potranno accedere alle macchine virtuali di storage (SVM) monitorate da workload Security.

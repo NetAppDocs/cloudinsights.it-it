@@ -25,7 +25,7 @@ Le pagine delle risorse riepilogano lo stato corrente di una risorsa e contengon
 
 == Tipi di pagine di risorse
 
-Cloud Insights fornisce pagine di risorse per le seguenti risorse:
+Data Infrastructure Insights fornisce pagine dedicate alle seguenti risorse:
 
 * Macchina virtuale
 * SVM (Storage Virtual Machine)
