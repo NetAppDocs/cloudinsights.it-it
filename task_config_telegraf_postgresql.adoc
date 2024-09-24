@@ -19,7 +19,7 @@ summary: Configurazione del data collector PostgreSQL
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da PostgreSQL.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da PostgreSQL.
 
 
 

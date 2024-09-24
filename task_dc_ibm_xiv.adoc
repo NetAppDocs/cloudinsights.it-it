@@ -27,7 +27,7 @@ Il data collector IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di com
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 

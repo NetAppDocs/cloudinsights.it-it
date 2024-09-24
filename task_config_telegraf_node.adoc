@@ -19,7 +19,7 @@ summary: Configurazione del data collector Flink
 
 
 [role="lead"]
-Cloud Insights raccoglie le metriche dal nodo su cui si installa un agente.
+Data Infrastructure Insights raccoglie le metriche dal nodo in cui si installa un agente.
 
 
 

@@ -25,11 +25,11 @@ Il data collector ScaleIO/PowerFlex raccoglie le informazioni di inventario dall
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Cluster MDM (Meta Data Manager) | Storage 

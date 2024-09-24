@@ -25,11 +25,11 @@ Il data collector HP Enterprise Alletra 6000 (precedentemente agile) supporta i 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario da questo collector. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce da questo raccoglitore le seguenti informazioni di inventario. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Array | Storage 
@@ -69,7 +69,7 @@ Per raccogliere i dati di inventario e configurazione dall'array di storage, è 
 Per raccogliere i dati sulle prestazioni dall'array di storage, è necessario disporre di quanto segue:
 
 * L'array deve eseguire NimbleOS 4.0.0 o versione successiva
-* L'array deve avere volumi configurati. L'unica API di performance di NimbleOS è per i volumi e qualsiasi report Cloud Insights di statistiche deriva dalle statistiche sui volumi
+* L'array deve avere volumi configurati. L'unica API delle prestazioni di NimbleOS è per i volumi e qualsiasi report di Data Infrastructure Insights deriva dalle statistiche sui volumi
 
 
 

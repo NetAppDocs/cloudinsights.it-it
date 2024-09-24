@@ -21,17 +21,17 @@ summary: Configurazione di DELL EMC PowerStore Data Collector.
 [role="lead"]
 Il data collector EMC PowerStore raccoglie le informazioni di inventario dallo storage EMC PowerStore. Per la configurazione, il data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
 
-Il data collector EMC PowerStore raccoglie le relazioni di replica volume-volume che PowerStore coordina tra altri array di storage. Cloud Insights mostra un array di storage per ciascun cluster PowerStore e raccoglie i dati di inventario per i nodi e le porte di storage su quel cluster. Non vengono raccolti dati di volumi o pool di storage.
+Il data collector EMC PowerStore raccoglie le relazioni di replica volume-volume che PowerStore coordina tra altri array di storage. Data Infrastructure Insights mostra uno storage array per ogni cluster PowerStore e raccoglie dati di inventario per i nodi e le porte storage in tale cluster. Non vengono raccolti dati di volumi o pool di storage.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | host | host 
@@ -103,7 +103,7 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 
 | Intervallo polling inventario (minuti) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
 |===
-La raccolta di performance PowerStore di Cloud Insight utilizza i dati di origine della granularità di 5 minuti di PowerStore. Di conseguenza, Cloud Insights esegue il polling dei dati ogni cinque minuti e questo non è configurabile.
+La raccolta di performance PowerStore di Cloud Insight utilizza i dati di origine della granularità di 5 minuti di PowerStore. Pertanto, Data Infrastructure Insights esegue il polling dei dati ogni cinque minuti e non è configurabile.
 
 
 

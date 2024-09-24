@@ -19,7 +19,7 @@ summary: Configurazione del data collector Brocade.
 
 
 [role="lead"]
-Cloud Insights utilizza il data collector Brocade Enterprise Fabric Connectivity Manager (EFCM) per rilevare l'inventario degli switch Brocade EFCM. Cloud Insights supporta le versioni EFCM 9.5, 9.6 e 9.7.
+Data Infrastructure Insights utilizza il data collector Brocade Enterprise Fabric Connectivity Manager (EFCM) per rilevare l'inventario degli switch Brocade EFCM. Data Infrastructure Insights supporta le versioni 9,5, 9,6 e 9,7 di EFCM.
 
 
 
@@ -29,7 +29,7 @@ Cloud Insights utilizza il data collector Brocade Enterprise Fabric Connectivity
 * La versione dell'EFCM deve essere 9.5, 9.6 o 9.7
 * Indirizzo IP del server EFCM
 * Nome utente e password di sola lettura per il server EFCM
-* Accesso validato allo switch Connectrix da Telnet dal server Cloud Insights, utilizzando il nome utente e la password di sola lettura sulla porta 51512
+* Accesso convalidato allo switch Connecttrix tramite Telnet dal server Data Infrastructure Insights, utilizzando il nome utente e la password di sola lettura sulla porta 51512
 
 
 
@@ -82,7 +82,7 @@ Cloud Insights utilizza il data collector Brocade Enterprise Fabric Connectivity
 | Escludi dispositivi | Elenco separato da virgole dei nomi di unità da includere o escludere dal polling 
 
 
-| Utilizzare il nome alternativo dello switch EFCM come nome dello switch | Selezionare per utilizzare il nome alternativo dello switch EFCM come nome dello switch Cloud Insights. 
+| Utilizzare il nome alternativo dello switch EFCM come nome dello switch | Selezionare per utilizzare il soprannome dell'interruttore EFCM come nome dell'interruttore Data Infrastructure Insights. 
 
 
 | Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. L'impostazione predefinita è 300 secondi. 

@@ -25,11 +25,11 @@ Questo data collector acquisisce i dati di inventario e performance dai sistemi 
 
 == Terminologia
 
-Cloud Insights acquisisce i dati di inventario e performance dal data collector ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce i dati di inventario e delle prestazioni dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 
@@ -68,8 +68,8 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 * IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati.
 * Versione del microcodice – firmware.
 * Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo.
-* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Cloud Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che offre questa opzione, Cloud Insights esegue in genere un calcolo ponderato per gli IOPS derivato dalle statistiche dei singoli volumi interni.
-* Throughput: Aggregato da volumi interni. Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Cloud Insights come parte del reporting dell'inventario.
+* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Data Infrastructure Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che lo offre, Data Infrastructure Insights sta generalmente eseguendo un calcolo ponderato in IOPS derivato dalle statistiche dei singoli volumi interni.
+* Throughput: Aggregato da volumi interni. Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di codice dall'origine dati Data Infrastructure Insights come parte del reporting di inventario.
 
 
 
@@ -132,7 +132,7 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 === Requisiti di autorizzazione per la raccolta delle metriche degli switch ONTAP
 
-Cloud Insights è in grado di raccogliere i dati degli switch del cluster ONTAP come opzione nel collettore <<advanced-configuration,Configurazione avanzata>> impostazioni. Oltre ad attivarlo sul Cloud Insights Collector, è necessario anche *configurare il sistema ONTAP* stesso per fornire link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"], e verificare che sia corretto <<a-note-about-permissions,permessi>> Sono impostati, per consentire l'invio dei dati dello switch a Cloud Insights.
+Data Infrastructure Insights consente di raccogliere i dati degli switch cluster ONTAP come opzione nelle <<advanced-configuration,Configurazione avanzata>>impostazioni del collettore. Oltre ad attivare questa funzione nel raccoglitore di informazioni sull'infrastruttura dati, è necessario *configurare il sistema ONTAP* stesso in modo che fornisca link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"], e verificare che <<a-note-about-permissions,permessi>>siano impostati i dati corretti, per consentire l'invio dei dati dello switch a informazioni sull'infrastruttura dati.
 
 
 
@@ -190,13 +190,13 @@ Cloud Insights è in grado di raccogliere i dati degli switch del cluster ONTAP 
 | Advanced Counter Data Collection | Abilitare l'integrazione ONTAP. Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Scegliere i contatori desiderati dall'elenco. 
 
 
-| Metriche switch cluster | Consentire a Cloud Insights di raccogliere i dati degli switch del cluster. Oltre ad attivare questa funzione sul lato Cloud Insights, è necessario configurare anche il sistema ONTAP in modo che fornisca link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"], e verificare che sia corretto <<a-note-about-permissions,permessi>> Sono impostati, per consentire l'invio dei dati dello switch a Cloud Insights. Vedere "Nota sulle autorizzazioni" di seguito. 
+| Metriche switch cluster | Consenti a Data Infrastructure Insights di raccogliere dati sugli switch del cluster. Tenere presente che, oltre ad attivare questa link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sull'interruttore"]<<a-note-about-permissions,permessi>>funzione sul lato Data Infrastructure Insights, è necessario configurare anche il sistema ONTAP in modo che fornisca , e assicurarsi che siano impostati i dati corretti, per consentire l'invio dei dati dello switch a Data Infrastructure Insights. Vedere "Nota sulle autorizzazioni" di seguito. 
 |===
 
 
 == Metriche di potenza ONTAP
 
-Diversi modelli ONTAP forniscono metriche di alimentazione per Cloud Insights che possono essere utilizzate per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
+Diversi modelli di ONTAP forniscono metriche di potenza per approfondimenti sull'infrastruttura dati che possono essere utilizzati per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
 
 Modelli supportati:
 
@@ -237,11 +237,11 @@ FAS/AFF 8080
 
 == Nota sulle autorizzazioni
 
-Poiché alcuni dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario attivare *raccolta dati contatore avanzata* nella sezione Configurazione avanzata del data collector.
+Poiché una serie di dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è necessario attivare *raccolta dati contatore avanzata* nella sezione Configurazione avanzata del data collector.
 
 Assicurarsi inoltre che l'autorizzazione di scrittura per l'API ONTAP sia attivata. In genere, questo richiede un account a livello di cluster con le autorizzazioni necessarie.
 
-Per creare un account locale per Cloud Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
+Per creare un account locale per informazioni sull'infrastruttura dati a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore di gestione cluster ed eseguire i seguenti comandi sul server ONTAP:
 
 . Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
 . Creare un ruolo di sola lettura utilizzando i seguenti comandi.
@@ -280,7 +280,7 @@ UserName    Application   Method      Role Name      Locked
 ci_user     ontapi      password    ci_readonly   no
 ....
 
-NOTE: Se il controllo dell'accesso ONTAP non è impostato correttamente, le chiamate di PAUSA Cloud Insights potrebbero non riuscire, con conseguenti interruzioni nei dati per il dispositivo.  Ad esempio, se è stato attivato nel raccoglitore Cloud Insights ma non sono state configurate le autorizzazioni sul ONTAP, l'acquisizione non verrà eseguita correttamente.  Inoltre, se il ruolo è precedentemente definito in ONTAP e si aggiungono le capacità dell'API REST, assicurarsi che _http_ sia aggiunto al ruolo.
+NOTE: Se il controllo dell'accesso ONTAP non è impostato correttamente, le chiamate di PAUSA DI Data Infrastructure Insights potrebbero non riuscire, con conseguenti lacune nei dati per il dispositivo. Ad esempio, se è stato attivato nel raccoglitore di informazioni sull'infrastruttura dati ma non sono state configurate le autorizzazioni sul ONTAP, l'acquisizione non verrà eseguita correttamente. Inoltre, se il ruolo è precedentemente definito in ONTAP e si aggiungono le capacità dell'API REST, assicurarsi che _http_ sia aggiunto al ruolo.
 
 
 

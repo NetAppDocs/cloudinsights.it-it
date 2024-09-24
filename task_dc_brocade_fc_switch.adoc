@@ -19,17 +19,17 @@ summary: Configurazione del data collector degli switch Brocade FC.
 
 
 [role="lead"]
-Cloud Insights utilizza l'origine dati dello switch FC Brocade (SSH) per rilevare l'inventario dei dispositivi switch Brocade o rebranded con firmware FOS 4.2 e versioni successive. Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.
+Data Infrastructure Insights utilizza l'origine dati SSH (Brocade FC Switch) per rilevare l'inventario dei dispositivi Brocade o per switch con marchio che eseguono il firmware 4,2 e versioni successive del sistema operativo fattoriale (FOS). Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector dello switch FC Brocade. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector degli switch FC Brocade. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Switch | Switch 
@@ -58,8 +58,8 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Requisiti
 
-* L'unità di acquisizione Cloud Insights (AU) avvia le connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario. L'AU avvierà inoltre le connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
-* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo Discover All Switch in the Fabric (rileva tutti gli switch nel fabric), Cloud Insights identifica tutti gli switch del fabric; tuttavia, per rilevarli, è necessaria la connettività IP per questi switch aggiuntivi.
+* L'unità di acquisizione di informazioni sull'infrastruttura dati (AU) avvierà connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario. L'AU avvierà inoltre le connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
+* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo rileva tutti gli switch nel fabric, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, per rilevarli è necessaria la connettività IP a tali switch aggiuntivi.
 * Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare putty (emulatore di terminale open source) per confermare l'accesso.
 * Le porte 161 e 162 devono essere aperte per tutti gli switch del fabric per il polling delle prestazioni SNMP.
 * Stringa di comunità di sola lettura SNMP
@@ -156,10 +156,10 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| L'acquisizione dell'inventario dell'origine dati Brocade non riesce e viene visualizzato l'errore: ERRORE <date> <time> [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] errore 2 su 2: <datasource name> [errore interno] - Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori ([Device name <name>]): Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori) | Il problema potrebbe essere causato quando lo switch Brocade impiega troppo tempo per tornare con un prompt, superando il timeout predefinito di 5 secondi. Nelle impostazioni di configurazione avanzata del data collector in Cloud Insights, provare ad aumentare il valore di _timeout attesa banner SSH (sec)_. 
+| L'acquisizione dell'inventario dell'origine dati Brocade non riesce e viene visualizzato l'errore: ERRORE <date> <time> [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] errore 2 su 2: <datasource name> [errore interno] - Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori ([Device name <name>]): Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori) | Il problema potrebbe essere causato quando lo switch Brocade impiega troppo tempo per tornare con un prompt, superando il timeout predefinito di 5 secondi. Nelle impostazioni di configurazione avanzata del data collector in Data Infrastructure Insights, provare ad aumentare il valore _SSH Banner Wait Timeout (sec)_. 
 
 
-| Errore: "Cloud Insights ha ricevuto un ruolo chassis non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
+| Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
 
 
 | Errore: "Indirizzo IP chassis non corrispondente" | Modificare la configurazione dell'origine dati per utilizzare l'indirizzo IP dello chassis. 

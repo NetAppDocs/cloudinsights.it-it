@@ -19,7 +19,7 @@ summary: configurazione dcos
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere metriche da DC/OS.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da DC/OS.
 
 
 

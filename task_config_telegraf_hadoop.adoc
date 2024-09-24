@@ -19,7 +19,7 @@ summary: Configurazione del data collector Hadoop
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da Hadoop.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Hadoop.
 
 
 

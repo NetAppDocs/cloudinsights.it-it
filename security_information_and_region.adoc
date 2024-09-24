@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: security_information_and_region.html 
-summary: 'Cloud Insights segue le Best practice di sicurezza durante l"intero ciclo di vita del rilascio.' 
+summary: 'Data Infrastructure Insights segue le Best practice per la sicurezza durante l"intero ciclo di vita del rilascio.' 
 keywords: security, risk, protection 
 ---
 = Informazioni e Regione
@@ -19,13 +19,13 @@ keywords: security, risk, protection
 
 
 [role="lead"]
-NetApp prende molto sul serio la sicurezza delle informazioni dei clienti. Ecco come e dove Cloud Insights memorizza le tue informazioni.
+NetApp prende molto sul serio la sicurezza delle informazioni dei clienti. Ecco come e dove Data Infrastructure Insights memorizza le tue informazioni.
 
 
 
-== Quali informazioni memorizza Cloud Insights?
+== Quali informazioni vengono memorizzate da Data Infrastructure Insights?
 
-Cloud Insights memorizza le seguenti informazioni:
+Data Infrastructure Insights memorizza le seguenti informazioni:
 
 * Dati sulle performance
 +
@@ -41,7 +41,7 @@ In questo modo vengono riepilogati i dati di configurazione forniti dal cliente 
 
 * Segreti
 +
-I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione Cloud Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando una crittografia asimmetrica avanzata e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE Cloud Insights con privilegi non sono in grado di accedere ai segreti dei clienti in formato testo semplice a causa di questo design.
+I segreti sono costituiti dalle credenziali utilizzate dall'unità di acquisizione di Data Infrastructure Insights per accedere ai dispositivi e ai servizi del cliente. Queste credenziali vengono crittografate utilizzando una crittografia asimmetrica avanzata e le chiavi private vengono memorizzate solo sulle unità di acquisizione e non escono mai dall'ambiente del cliente. Anche gli SRE privilegiati di Data Infrastructure Insights non sono in grado di accedere ai segreti dei clienti in testo normale a causa di questa progettazione.
 
 * Dati funzionali
 +
@@ -49,7 +49,7 @@ Si tratta di dati generati in seguito alla fornitura da parte di NetApp del Clou
 
 * Dati di accesso dell'utente
 +
-Autenticazione e informazioni di accesso che consentono a NetApp BlueXP di comunicare con i siti Cloud Insights regionali, inclusi i dati relativi all'autorizzazione dell'utente.
+Informazioni sull'autenticazione e sull'accesso che consentono a NetApp BlueXP  di comunicare con i siti regionali di Data Infrastructure Insights, inclusi i dati relativi all'autorizzazione dell'utente.
 
 * Storage workload Security User Directory Data
 +
@@ -58,35 +58,35 @@ Nei casi in cui la funzionalità workload Security è attivata E il cliente sceg
 
 
 
-NOTE: I dati della directory utente si riferiscono alle informazioni della directory utente raccolte dal data collector della directory utente di workload Security, non ai dati relativi agli utenti di Cloud Insights/workload Security stessi.
+NOTE: I dati della directory utente si riferiscono alle informazioni della directory utente raccolte dal collettore di dati della directory utente di sicurezza del carico di lavoro, non ai dati sugli utenti di Data Infrastructure Insights/workload Security.
 
 *Nessun dato personale esplicito* viene raccolto dalle risorse dell'infrastruttura e dei servizi. Le informazioni raccolte comprendono solo metriche delle performance, informazioni di configurazione e metadati dell'infrastruttura, come molti case telefoniche dei vendor, tra cui il supporto automatico di NetApp e ActiveIQ. Tuttavia, a seconda delle convenzioni di denominazione di un cliente, i dati per condivisioni, volumi, macchine virtuali, qtree, le applicazioni, ecc. possono contenere informazioni di identificazione personale.
 
-Se la sicurezza del carico di lavoro è attivata, il sistema esamina inoltre i nomi di file e directory su SMB o altre condivisioni, che potrebbero contenere informazioni di identificazione personale. Quando i clienti abilitano il modulo di raccolta directory utente per la sicurezza del carico di lavoro (che essenzialmente associa i SID di Windows ai nomi utente tramite Active Directory), il nome visualizzato, l'indirizzo di posta elettronica aziendale e gli eventuali attributi aggiuntivi selezionati verranno raccolti e memorizzati da Cloud Insights.
+Se la sicurezza del carico di lavoro è attivata, il sistema esamina inoltre i nomi di file e directory su SMB o altre condivisioni, che potrebbero contenere informazioni di identificazione personale. Se i clienti abilitano il servizio di raccolta directory utente per la protezione del workload (che essenzialmente mappa i SID di Windows ai nomi utente tramite Active Directory), il nome visualizzato, l'indirizzo e-mail aziendale e gli eventuali attributi aggiuntivi selezionati verranno raccolti e memorizzati da Data Infrastructure Insights.
 
-Inoltre, i registri di accesso a Cloud Insights vengono mantenuti e contengono gli indirizzi IP e di posta elettronica degli utenti utilizzati per accedere al servizio.
+Inoltre, i registri di accesso a Data Infrastructure Insights sono gestiti e contengono gli indirizzi IP e e e-mail degli utenti utilizzati per accedere al servizio.
 
 
 
 == Dove sono memorizzate le mie informazioni?
 
-Cloud Insights memorizza le informazioni in base alla regione in cui viene creato l'ambiente.
+Data Infrastructure Insights memorizza le informazioni in base all'area in cui viene creato l'ambiente.
 
 Nella regione host vengono memorizzate le seguenti informazioni:
 
 * Telemetria e informazioni su asset/oggetti, inclusi contatori e metriche delle performance
 * Informazioni sull'unità di acquisizione
 * Dati funzionali
-* Informazioni di audit sulle attività degli utenti all'interno di Cloud Insights
+* Informazioni di controllo sulle attività degli utenti all'interno di Data Infrastructure Insights
 * Sicurezza del carico di lavoro informazioni su Active Directory
 * Informazioni sulla verifica della sicurezza del carico di lavoro
 
 
-Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla regione in cui risiede l'ambiente Cloud Insights:
+Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla regione in cui risiede l'ambiente Data Infrastructure Insights:
 
 * Informazioni sul sito dell'ambiente (talvolta chiamate "tenant"), come il proprietario del sito o dell'account.
-* Informazioni che consentono a NetApp BlueXP di comunicare con i siti Cloud Insights regionali, incluse qualsiasi cosa fare con l'autorizzazione dell'utente.
-* Informazioni relative alla relazione tra l'utente Cloud Insights e il tenant.
+* Informazioni che consentono a NetApp BlueXP  di comunicare con i siti regionali di approfondimento sull'infrastruttura dati, incluso qualsiasi cosa fare con l'autorizzazione dell'utente.
+* Informazioni relative alla relazione tra l'utente di Data Infrastructure Insights e il tenant.
 
 
 

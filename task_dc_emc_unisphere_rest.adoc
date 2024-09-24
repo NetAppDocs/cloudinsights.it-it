@@ -23,7 +23,7 @@ Questo data collector acquisisce i dati di inventario e performance da Dell EMC 
 
 Si noti che Dell/EMC non ha introdotto statistiche per volume fino a Unisphere 10.0 - questo data collector supporta 9.2.0+, ma non sarà in grado di raccogliere statistiche di volume in quanto non esistono.
 
-Un'istanza di Unisphere per Vmax/PowerMax potrebbe gestire uno o più array di storage Symmetrix Vmax 3 o superiore - questo collector tenterà per impostazione predefinita di rilevare tutti i file "locali" dell'istanza di Unisphere. Se un'istanza di Unisphere vede gli array "remoti" (ovvero quelli connessi tramite replica SRDF), questi verranno ignorati e per scoprirli, è necessario creare un ulteriore collettore Unisphere in Cloud Insights, che punta a qualsiasi istanza di Unisphere in quel sito li consideri locali.
+Un'istanza di Unisphere per Vmax/PowerMax potrebbe gestire uno o più array di storage Symmetrix Vmax 3 o superiore - questo collector tenterà per impostazione predefinita di rilevare tutti i file "locali" dell'istanza di Unisphere. Se un'istanza di Unisphere rileva gli array "remoti" (ovvero quelli connessi tramite replica SRDF), questi verranno ignorati e per rilevare quelli è necessario creare un ulteriore Unisphere Collector in Data Infrastructure Insights, indicato in qualsiasi istanza di Unisphere in quel sito li consideri locali.
 
 Per la configurazione, il data collector richiede un indirizzo IP/FQDN del server Unisphere, la connettività TCP alla porta 8443 e un nome utente e una password.
 

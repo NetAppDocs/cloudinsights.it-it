@@ -19,7 +19,7 @@ summary: Configurazione del data collector SmartFiles di Cohesity.
 
 
 [role="lead"]
-Questo collector basato su API REST acquisirà un cluster di Cohesity, scoprendo le "viste" (come volumi interni Cloud Insights), i vari nodi e raccogliendo le metriche delle performance.
+Questo raccoglitore basato su API REST acquisirà un cluster Cohesity, scoprendo le "viste" (come Data Infrastructure Insights Internal Volumes) e i vari nodi, oltre a raccogliere le metriche delle performance.
 
 
 

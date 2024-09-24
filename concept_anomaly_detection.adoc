@@ -62,7 +62,7 @@ Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili per mol
 
 Per segnalare eventuali anomalie, creare un monitor accedendo a *osservabilità > Avvisi > +Monitor*. Selezionare _monitoraggio rilevamento anomalie_ come tipo di monitor.
 
-image:Anomaly Detection Monitor Choice.png["Selezione del rilevamento delle anomalie durante la creazione di un monitor, larghezza=480"]
+image:AnomalyDetectionMonitorChoice.png["Selezione del rilevamento delle anomalie durante la creazione di un monitor, larghezza=480"]
 
 Scegliere l'oggetto e la metrica da monitorare. È possibile impostare filtri e raggruppamenti come per altri tipi di monitor.
 
@@ -74,7 +74,7 @@ Quindi, impostare le condizioni per il monitor.
 * Facoltativamente, impostare un valore al di sotto del quale le anomalie sono _ignorate_. Questo può contribuire a ridurre il rumore. Questo valore viene visualizzato come una linea tratteggiata sul grafico campione.
 
 
-image:Anomaly Detection Monitor Conditions.png["Impostazione delle condizioni per il monitor di rilevamento anomalie"]
+image:AnomalyDetectionMonitorConditions.png["Impostazione delle condizioni per il monitor di rilevamento anomalie"]
 
 Infine, è possibile configurare un metodo di recapito per gli avvisi (e-mail, webhook o entrambi), fornire al monitor una descrizione opzionale o azioni correttive e, se lo si desidera, aggiungere il monitor a un gruppo personalizzato.
 

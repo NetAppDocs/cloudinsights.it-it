@@ -19,7 +19,7 @@ summary: Configurazione del data collector JVM
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da JVM.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da JVM.
 
 
 

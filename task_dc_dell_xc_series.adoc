@@ -19,7 +19,7 @@ summary: Configurazione di Dell EMC XC Series Data Collector.
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per rilevare le informazioni sull'inventario e sulle performance degli array di storage Dell EMC serie XC.
+Data Infrastructure Insights utilizza questo data collector per rilevare le informazioni di inventario e sulle prestazioni degli array di storage Dell EMC serie XC.
 
 
 

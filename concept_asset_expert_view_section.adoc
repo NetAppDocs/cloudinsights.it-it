@@ -222,4 +222,4 @@ Ad esempio, facendo clic sulla percentuale collegata accanto a una risorsa corre
 
 
 
-Una volta selezionata, la risorsa viene visualizzata nella sezione delle risorse aggiuntive. Se non si desidera più visualizzare informazioni sulla risorsa, fare clic su image:TrashCanIcon.png["Eliminare"].
+Una volta selezionata, la risorsa viene visualizzata nella sezione delle risorse aggiuntive. Se non si desidera più visualizzare le informazioni sulla risorsa, fare clic sull'icona del cestino per eliminarla.

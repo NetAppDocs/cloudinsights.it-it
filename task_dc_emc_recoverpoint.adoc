@@ -23,7 +23,7 @@ Il caso d'utilizzo principale del data collector EMC RecoverPoint consiste nel r
 
 Per la configurazione, il data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
 
-Il data collector EMC RecoverPoint raccoglie le relazioni di replica volume-volume che RecoverPoint coordina tra altri storage array. Cloud Insights mostra un array di storage per ogni cluster RecoverPoint e raccoglie i dati di inventario per i nodi e le porte di storage su quel cluster. Non vengono raccolti dati di volumi o pool di storage.
+Il data collector EMC RecoverPoint raccoglie le relazioni di replica volume-volume che RecoverPoint coordina tra altri storage array. Data Infrastructure Insights mostra uno storage array per ogni cluster RecoverPoint e raccoglie dati di inventario per i nodi e le porte storage in tale cluster. Non vengono raccolti dati di volumi o pool di storage.
 
 
 

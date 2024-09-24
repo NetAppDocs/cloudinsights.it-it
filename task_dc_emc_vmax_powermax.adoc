@@ -19,13 +19,13 @@ summary: Configurazione di Dell EMC VMAX e della famiglia di dispositivi PowerMa
 
 
 [role="lead"]
-Cloud Insights rileva gli array di storage EMC VMAX e PowerMax utilizzando i comandi simcli di Solutions Enabler insieme a un server di Solutions Enabler esistente nel tuo ambiente. Il server Solutions Enabler esistente dispone della connettività all'array di storage VMAX/PowerMax attraverso l'accesso ai volumi di gatekeeper.
+Data Infrastructure Insights rileva gli storage array EMC VMAX e PowerMax utilizzando i comandi symcli di Solutions Enabler insieme a un server Solutions Enabler esistente nel proprio ambiente. Il server Solutions Enabler esistente dispone della connettività all'array di storage VMAX/PowerMax attraverso l'accesso ai volumi di gatekeeper.
 
 
 
 == Requisiti
 
-Prima di configurare questo data collector, assicurarsi che Cloud Insights disponga della connettività TCP alla porta 2707 sul server di abilitazione soluzioni esistente. Cloud Insights rileva tutti gli array Symmetrix che sono "locali" per questo server, come si vede nell'output "symcfg list" da quel server.
+Prima di configurare questo data collector, è necessario assicurarsi che Data Infrastructure Insights disponga della connettività TCP alla porta 2707 sul server Solutions Enabler esistente. Data Infrastructure Insights rileva tutti gli array Symmetrix che sono "locali" a questo server, come mostrato nell'output "symcfg list" di quel server.
 
 * L'applicazione EMC Solutions Enabler (CLI) con provider SMI-S deve essere installata sul server dell'unità di acquisizione e la versione deve corrispondere o essere precedente alla versione in esecuzione sul server Solutions Enabler.
 * È necessario un file {installdir} EMC SYMAPI config netcnfg configurato correttamente. Questo file definisce i nomi dei servizi per i server Solutions Enabler e il metodo di accesso (SICURO / NOSECURE /ANY).
@@ -58,11 +58,11 @@ cisys storapid <all>
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dall'origine dati EMC VMAX/PowerMax. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dall'origine dati EMC VMAX/PowerMax. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 
@@ -88,7 +88,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Configurazione
 
-*Nota:* se l'autenticazione utente SMI-S non è attivata, i valori predefiniti nel data collector Cloud Insights vengono ignorati.
+*Nota:* se l'autenticazione utente SMI-S non è abilitata, i valori predefiniti nel data collector Data Infrastructure Insights vengono ignorati.
 
 [cols="2*"]
 |===
@@ -121,7 +121,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Elenco dispositivi filtro inventario | Elenco separato da virgole degli ID dei dispositivi da includere o escludere 
 
 
-| Caching della connessione | Scegliere il metodo di caching della connessione: * LOCALE significa che il servizio di acquisizione Cloud Insights è in esecuzione sul server Solutions Enabler, che dispone di connettività Fibre Channel agli array Symmetrix che si desidera rilevare e ha accesso ai volumi del gatekeeper. Questo problema potrebbe verificarsi in alcune configurazioni dell'unità di acquisizione remota (RAU). * REMOTE_CACHED è l'impostazione predefinita e dovrebbe essere utilizzata nella maggior parte dei casi. In questo modo vengono utilizzate le impostazioni del file NETCNFG per connettersi tramite IP al server Solutions Enabler, che deve disporre di connettività Fibre Channel agli array Symmetrix che si desidera rilevare e avere accesso ai volumi di Gatekeeper. * Nel caso in cui le opzioni REMOTE_CACHED rendano falliti i comandi CLI, utilizzare l'opzione REMOTA. Tenere presente che rallenterà il processo di acquisizione (possibilmente fino a ore o persino giorni in casi estremi). Le impostazioni del file NETCNFG vengono ancora utilizzate per una connessione IP al server Solutions Enabler che dispone di connettività Fibre Channel agli array Symmetrix rilevati. *Nota:* questa impostazione non modifica il comportamento di Cloud Insights rispetto agli array elencati COME REMOTI dall'output "symcfg list". Cloud Insights raccoglie i dati solo sui dispositivi indicati COME LOCALI da questo comando. 
+| Caching della connessione | Scegliere il metodo di caching della connessione: * LOCALE significa che il servizio di acquisizione Cloud Insights è in esecuzione sul server Solutions Enabler, che dispone di connettività Fibre Channel agli array Symmetrix che si desidera rilevare e ha accesso ai volumi del gatekeeper. Questo problema potrebbe verificarsi in alcune configurazioni dell'unità di acquisizione remota (RAU). * REMOTE_CACHED è l'impostazione predefinita e dovrebbe essere utilizzata nella maggior parte dei casi. In questo modo vengono utilizzate le impostazioni del file NETCNFG per connettersi tramite IP al server Solutions Enabler, che deve disporre di connettività Fibre Channel agli array Symmetrix che si desidera rilevare e avere accesso ai volumi di Gatekeeper. * Nel caso in cui le opzioni REMOTE_CACHED rendano falliti i comandi CLI, utilizzare l'opzione REMOTA. Tenere presente che rallenterà il processo di acquisizione (possibilmente fino a ore o persino giorni in casi estremi). Le impostazioni del file NETCNFG vengono ancora utilizzate per una connessione IP al server Solutions Enabler che dispone di connettività Fibre Channel agli array Symmetrix rilevati. *Nota:* questa impostazione non modifica il comportamento di Data Infrastructure Insights rispetto agli array elencati come REMOTI dall'output "symcfg list". Data Infrastructure Insights raccoglie i dati solo sui dispositivi visualizzati come LOCALI con questo comando. 
 
 
 | Protocollo SMI-S. | Protocollo utilizzato per connettersi al provider SMI-S. Visualizza anche la porta predefinita utilizzata. 

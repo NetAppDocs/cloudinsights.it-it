@@ -34,7 +34,7 @@ Fare clic su *Forensics > Activity Forensics* (analisi > analisi delle attività
 * Un elenco dei dati di _tutte le attività_
 
 
-La tabella _*tutte le attività*_ mostra le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "ingranaggio" image:GearIcon.png["icona ingranaggio"].
+La tabella _*tutte le attività*_ mostra le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "marcia".
 
 * L'ora * in cui è stato effettuato l'accesso a un'entità, inclusi l'anno, il mese, il giorno e l'ora dell'ultimo accesso.
 * Il *utente* che ha effettuato l'accesso all'entità con un collegamento a link:forensic_user_overview.html["Informazioni sull'utente"].
@@ -212,14 +212,15 @@ I risultati della ricerca con e senza / saranno diversi
 
 == Modifiche all'attività utente della SVM principale locale
 
-Se un utente della SVM root locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene considerato nel nome utente, che viene mostrato come _root@<ip-address-of-the-client>_ nelle pagine di attività forense e di attività utente.
+Se un utente della SVM root locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene ora considerato nel nome utente, che verrà mostrato come root@<ip-address-of-the-client> sia nelle pagine di attività forense che in quelle di attività utente.
 
 Ad esempio:
 
-* Se SVM-1 viene monitorato tramite la sicurezza del workload e l'utente root di tale SVM monta la condivisione su un client con indirizzo IP 10.197.12.40, il nome utente visualizzato nella pagina dell'attività forense sarà _root@10.197.12.40_.
+* Se SVM-1 viene monitorato tramite la sicurezza del carico di lavoro e l'utente root di tale SVM monta la condivisione su un client con indirizzo IP 10.197.12.40, il nome utente mostrato nella pagina dell'attività forense sarà _root@10.197.12.40_.
 * Se la stessa SVM-1 è montata in un altro client con indirizzo IP 10.197.12.41, il nome utente mostrato nella pagina dell'attività forense sarà _root@10.197.12.41_.
-* Questa operazione viene eseguita per separare l'attività dell'utente root NFS dall'indirizzo IP. In precedenza, tutta l'attività veniva considerata eseguita solo da _root_ utente, senza distinzione IP.
 
+
+*• questo è fatto per separare l'attività dell'utente root NFS dall'indirizzo IP. In precedenza, tutta l'attività veniva considerata eseguita solo da _root_ utente, senza distinzione IP.
 
 
 

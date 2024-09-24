@@ -21,17 +21,17 @@ summary: Configurazione di System Storage DS8000 Series Data Collector.
 [role="lead"]
 Il data collector IBM DS (CLI) supporta l'acquisizione di dati relativi a inventario e performance per i dispositivi DS6xxx e DS8xxx.
 
-I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati da link:task_dc_na_eseries.html["Data collector NetApp e-Series"]. Fare riferimento alla matrice di supporto Cloud Insights per i modelli e le versioni del firmware supportati.
+I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati da link:task_dc_na_eseries.html["Data collector NetApp e-Series"]. Fare riferimento alla matrice di supporto di Data Infrastructure Insights per i modelli e le versioni firmware supportati.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector IBM DS. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM DS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Modulo unità disco | Disco 
@@ -58,7 +58,7 @@ Per configurare questo data collector sono necessari i seguenti elementi:
 
 * Indirizzo IP di ciascun array DS
 * Nome utente e password di sola lettura su ciascun array DS
-* Software di terze parti installato su Cloud Insights AU: IBM _dscli_
+* Software di terze parti installato su Data Infrastructure Insights AU: IBM _dscli_
 * Convalida dell'accesso: Eseguire i comandi _dscli_ utilizzando il nome utente e la password
 * Requisiti delle porte: 80, 443 e 1750
 
@@ -128,6 +128,6 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 * Provare a comunicare con l'array tramite la console di gestione Web \https://<ip>:8452/DS8000/Console.  Sostituire <ip> con IP configurato per il data collector. 
 
 
-| Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Dall'unità di acquisizione Cloud Insights aprire un file CMD * aprire il file CLI.CFG nella directory home di CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente * visualizzare la versione di Java installata su questa macchina, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di storage IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 
+| Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Da Data Infrastructure Insights Acquisition Unit aprire un file CMD * Open CLI.CFG nella directory home/lib della CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente in uso * visualizzare la versione java installata su questo computer, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di archiviazione IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

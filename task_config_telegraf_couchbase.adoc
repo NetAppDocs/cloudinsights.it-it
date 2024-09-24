@@ -19,7 +19,7 @@ summary: Configurazione del data collector di Couchbase
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da Couchbase.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Couchbase.
 
 
 

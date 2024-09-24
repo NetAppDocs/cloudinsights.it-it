@@ -19,7 +19,7 @@ summary: Configurazione di Lenovo data collector.
 
 
 [role="lead"]
-Cloud Insights utilizza il data collector Lenovo per rilevare i dati relativi all'inventario e alle performance dei sistemi storage Lenovo HX.
+Data Infrastructure Insights utilizza il data collector Lenovo per rilevare i dati di inventario e relativi alle performance dei sistemi di storage Lenovo HX.
 
 Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
 

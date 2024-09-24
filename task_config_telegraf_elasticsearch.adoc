@@ -19,7 +19,7 @@ summary: Configurazione del data collector Elasticsearch
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da Elasticsearch.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Elasticsearch.
 
 . Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Elasticsearch.
 +

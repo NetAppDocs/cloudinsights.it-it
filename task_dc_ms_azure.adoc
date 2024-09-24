@@ -19,7 +19,7 @@ summary: Configurazione di Azure Compute Data Collector.
 
 
 [role="lead"]
-Cloud Insights utilizza Azure Compute Data Collector per acquisire dati di inventario e performance dalle istanze di calcolo di Azure.
+Data Infrastructure Insights utilizza il tool di raccolta dei dati di calcolo di Azure per acquisire i dati di inventario e sulle performance dalle istanze di calcolo di Azure.
 
 
 
@@ -33,9 +33,9 @@ Per configurare questo data collector sono necessarie le seguenti informazioni.
 * IP di Azure Resource Manager (management.core.windows.net)
 * Azure Service Principal Application (Client) ID (ruolo di lettore richiesto)
 * Chiave di autenticazione principale del servizio Azure (password utente)
-* È necessario impostare un account Azure per il rilevamento Cloud Insights.
+* Devi configurare un account Azure per il rilevamento Data Infrastructure Insights.
 +
-Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Cloud Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento.https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Data Infrastructure Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento. https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
 
 
 

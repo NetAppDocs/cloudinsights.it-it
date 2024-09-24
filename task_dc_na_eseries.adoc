@@ -29,7 +29,7 @@ Cloud Insight acquisisce le seguenti informazioni di inventario dal data collect
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 
@@ -67,9 +67,9 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 * IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati
 * Versione del microcodice – firmware
 * Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo
-* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Cloud Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che offre questa opzione, Cloud Insights esegue in genere un calcolo ponderato per gli IOPS derivato dalle statistiche dei singoli volumi.
-* Throughput: Throughput totale dell'host dell'array. Idealmente generato direttamente dall'array, se non disponibile, Cloud Insights somma il throughput dei volumi per derivare questo valore
-* Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Cloud Insights come parte del reporting dell'inventario
+* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Data Infrastructure Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che lo offre, Data Infrastructure Insights sta generalmente eseguendo un calcolo ponderato in IOPS derivato dalle statistiche dei singoli volumi.
+* Throughput: Throughput totale dell'host dell'array. In teoria, se non è disponibile, Data Infrastructure Insights sta sommando il throughput dei volumi per ricavare questo valore
+* Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Data Infrastructure Insights come parte della creazione di rapporti di inventario  
 
 
 

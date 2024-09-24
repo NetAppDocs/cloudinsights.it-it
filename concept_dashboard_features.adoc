@@ -47,8 +47,6 @@ Tutti i widget della dashboard possono essere posizionati e dimensionati in base
 
 In modalità Dashboard Edit (Modifica dashboard), fare clic sul menu del widget e selezionare *Duplicate* (Duplica). Viene avviato l'editor dei widget, compilato con la configurazione originale del widget e con il suffisso "copy" nel nome del widget. È possibile apportare facilmente le modifiche necessarie e salvare il nuovo widget. Il widget viene posizionato nella parte inferiore della dashboard ed è possibile posizionarlo in base alle esigenze. Ricordarsi di salvare la dashboard una volta completate tutte le modifiche.
 
-image:DuplicateWidget.png["Duplicare un widget"]
-
 
 
 == Visualizzazione delle legende dei widget
@@ -471,7 +469,7 @@ Il widget si apre in modalità di modifica. Per impostazione predefinita, viene 
 +
 Il grafico visualizza una riga che mostra la somma degli IOPS totali.
 
-. Fare clic sull'icona _Duplica questa query_ image:DuplicateQueryIcon.png["Query DUPLICAT"] per creare una copia della query.
+. Fare clic sull'icona _Duplica questa query_ per creare una copia della query.
 +
 Un duplicato della query viene aggiunto sotto l'originale.
 
@@ -505,7 +503,7 @@ Per utilizzare una variabile in un'espressione, è sufficiente digitare il nome 
 
 I widget della tavola gestiscono le espressioni in modo leggermente diverso. È possibile includere fino a cinque espressioni in un singolo widget di tabella, ciascuna delle quali viene aggiunta come nuova colonna alla tabella. Ogni espressione può includere fino a cinque valori su cui eseguire il calcolo. È possibile assegnare un nome alla colonna in modo semplice e significativo.
 
-image:Expression Example.png["Espressione in un widget della tavola"]
+image:ExpressionExample.png["Espressione in un widget della tavola"]
 
 
 
@@ -612,7 +610,7 @@ Nomi delle variabili:
 
 I widget Solid e Bullet Gauge consentono di impostare le soglie per i livelli _Warning_ e/o _critical_, fornendo una chiara rappresentazione dei dati specificati.
 
-image:Gauge Widget Formatting.png["Impostazioni del formato per Gauge Widget"]
+image:GaugeWidgetFormatting.png["Impostazioni del formato per Gauge Widget"]
 
 Per impostare la formattazione per questi widget, attenersi alla seguente procedura:
 
@@ -632,7 +630,7 @@ image:Gauge-Bullet.png["Bullet Gauge, width=374"]
 
 Nel widget valore singolo, oltre all'impostazione delle soglie di avviso (arancione) e critico (rosso), è possibile scegliere di visualizzare i valori "in Range" (sotto il livello di avviso) con sfondo verde o bianco.
 
-image:Single-Value Widgets.png["Widget a valore singolo con e senza formattazione"]
+image:Single-ValueWidgets.png["Widget a valore singolo con e senza formattazione"]
 
 Facendo clic sul collegamento in un widget a valore singolo o in un widget indicatore viene visualizzata una pagina di query corrispondente alla prima query nel widget.
 
@@ -692,7 +690,7 @@ NOTE: Cloud Insights utilizza gli standard di denominazione dei numeri in ingles
 
 Se si dispone di un widget Time-series (ad esempio linea, spline, area, area sovrapposta) che ha due query in cui entrambe sono tracciate l'asse Y primario, l'unità base non viene visualizzata nella parte superiore dell'asse Y. Tuttavia, se il widget dispone di una query sull'asse Y primario e di una query sull'asse Y secondario, vengono visualizzate le unità di base per ciascuno di essi.
 
-image:UnitsOnPrimaryAnd SecondaryYAxis.png["Unità su entrambi gli assi Y"]
+image:UnitsOnPrimaryAndSecondaryYAxis.png["Unità su entrambi gli assi Y"]
 
 Se il widget dispone di tre o più query, le unità di base non vengono visualizzate sull'asse Y.
 
@@ -802,8 +800,8 @@ Se combinato con la modalità *TV*, l'aggiornamento automatico consente la visua
 
 NOTE: Poiché NetApp BlueXP ha un timeout di login utente di 7 giorni, Cloud Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
 
-* Per attivare la modalità TV, fare clic su image:ActivateTVMode.png["Modalità TV"] pulsante.
-* Per disattivare la modalità TV, fare clic sul pulsante *Exit* in alto a sinistra sullo schermo. image:ExitTVMode.png["Pulsante Exit (Esci)"]
+* Per attivare la modalità TV, fare clic sul pulsante modalità TV.
+* Per disattivare la modalità TV, fare clic sul pulsante *Exit* in alto a sinistra sullo schermo.
 
 
 È possibile sospendere temporaneamente l'aggiornamento automatico facendo clic sul pulsante Pause (Pausa) nell'angolo in alto a destra. Durante la pausa, il campo intervallo di tempo della dashboard visualizza l'intervallo di tempo attivo dei dati in pausa. I dati sono ancora in fase di acquisizione e aggiornamento mentre l'aggiornamento automatico è in pausa. Fare clic sul pulsante Riprendi per continuare l'aggiornamento automatico dei dati.

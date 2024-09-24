@@ -19,7 +19,7 @@ summary: Configurazione del data collector Flink
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da Flink.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Flink.
 
 
 

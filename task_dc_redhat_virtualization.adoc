@@ -19,17 +19,17 @@ summary: Configurazione di Red Hat Virtualization Data Collector.
 
 
 [role="lead"]
-Cloud Insights utilizza il data collector per la virtualizzazione Red Hat per raccogliere i dati di inventario dai carichi di lavoro virtualizzati di Linux e Microsoft Windows.
+Data Infrastructure Insights utilizza il data collector di Red Hat Virtualization per raccogliere dati di inventario dai carichi di lavoro Linux e Microsoft Windows virtualizzati.
 
 
 
 == Terminologia
 
-Per ogni tipo di risorsa acquisita da Cloud Insights, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco virtuale 

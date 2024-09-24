@@ -28,7 +28,7 @@ NOTE: È possibile utilizzare questa procedura per aggiungere o rimuovere link:t
 È necessario aver già creato una query che trovi tutte le risorse da modificare.
 
 .Fasi
-. Fare clic su *Query* e selezionare *Mostra tutte le query*.
+. Fare clic su *Explore* e selezionare *Metric Query*.
 +
 Viene visualizzata la pagina Query.
 
@@ -38,15 +38,15 @@ Viene visualizzato l'elenco delle risorse associate alla query.
 
 . Selezionare le risorse desiderate nell'elenco o fare clic sulla casella di controllo in alto per selezionare tutto.
 +
-Il image:BulkActions.png["Azioni"] viene visualizzato il pulsante.
+Viene visualizzato il menu a discesa azioni in blocco.
 
-. Per aggiungere un'applicazione alle risorse selezionate, fare clic su image:BulkActions.png["Azioni"] E selezionare *Aggiungi applicazione*.
+. Per aggiungere un'applicazione alle risorse selezionate, fare clic su azioni in blocco e selezionare *Aggiungi applicazione*.
 . Selezionare una o più applicazioni.
 +
 È possibile selezionare più applicazioni per host, volumi interni, qtree e macchine virtuali; tuttavia, è possibile selezionare una sola applicazione per un volume o una condivisione.
 
 . Fare clic su *Save* (Salva).
-. Per rimuovere un'applicazione assegnata alle risorse, fare clic su image:BulkActions.png["Azioni"] E selezionare *Rimuovi applicazione*.
+. Per rimuovere un'applicazione assegnata alle risorse, fare clic su azioni in blocco e selezionare *Rimuovi applicazione*.
 . Selezionare l'applicazione o le applicazioni che si desidera rimuovere.
 . Fare clic su *Delete* (Elimina).
 

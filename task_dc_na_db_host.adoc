@@ -22,7 +22,7 @@ Questo data collector acquisisce l'inventario
 
 == Terminologia
 
-Cloud Insights acquisisce l'inventario da questo raccoglitore.
+Data Infrastructure Insights acquisisce l'inventario da questo raccoglitore.
 
 
 

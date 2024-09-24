@@ -19,17 +19,17 @@ summary: Configurazione di HP Enterprise Command View data collector.
 
 
 [role="lead"]
-Il data collector HP Enterprise Command View Advanced Edition supporta il rilevamento degli array XP e P9500 tramite il server Command View Advanced Edition (CVAE). Cloud Insights comunica con CVAE utilizzando l'API Command View standard per raccogliere dati di inventario e performance.
+Il data collector HP Enterprise Command View Advanced Edition supporta il rilevamento degli array XP e P9500 tramite il server Command View Advanced Edition (CVAE). Data Infrastructure Insights comunica con CVAE utilizzando l'API Command View standard per raccogliere dati di inventario e sulle performance.
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector HP Enterprise Command View. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector di HP Enterprise Command View. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | PDEV | Disco 
@@ -72,14 +72,14 @@ Per raccogliere i dati sulle performance, è necessario soddisfare i seguenti re
 +
 ** Performance Monitor deve essere concesso in licenza.
 ** Lo switch di monitoraggio deve essere attivato.
-** Lo strumento di esportazione (Export.exe) deve essere copiato nell'AU di Cloud Insights ed estratto in una posizione. Su ci Linux aus, assicurarsi che "cisys" disponga dei permessi di lettura ed esecuzione.
+** Lo strumento di esportazione (Export.exe) deve essere copiato nell'AU di Data Infrastructure Insights ed estratto in una posizione. Su ci Linux aus, assicurarsi che "cisys" disponga dei permessi di lettura ed esecuzione.
 ** La versione dello strumento di esportazione deve corrispondere alla versione del microcodice dell'array di destinazione.
 
 
 * Performance AMS:
 +
 ** Performance Monitor deve essere concesso in licenza.
-** L'utility CLI Storage Navigator Modular 2 (SNM2) deve essere installata sull'AU Cloud Insights.
+** L'utility CLI di Storage Navigator Modular 2 (SNM2) deve essere installata sull'unità AU di Data Infrastructure Insights.
 
 
 * Requisiti di rete
@@ -191,13 +191,13 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| Errore: * Errore durante l'esecuzione dell'utility di esportazione * errore durante l'esecuzione di un comando esterno | * Verificare che l'utility di esportazione sia installata sull'unità di acquisizione Cloud Insights * verificare che la posizione dell'utility di esportazione sia corretta nella configurazione del data collector * verificare che l'IP dell'array USP/R600 sia corretto nella configurazione del data collector * confermare che il nome utente sia corretto E la password sono corrette nella configurazione del data collector * verificare che la versione dell'utility di esportazione sia compatibile con la versione del microcodice dello storage array * dall'unità di acquisizione Cloud Insights, aprire un prompt CMD ed eseguire le seguenti operazioni: - Cambiare la directory nella directory di installazione configurata - provare a stabilire una connessione con lo storage array configurato eseguendo il file batch runWin.bat 
+| Errore: * Errore durante l'esecuzione dell'utility di esportazione * errore durante l'esecuzione di un comando esterno | * Confermare che l'utilità di esportazione sia installata sull'unità di acquisizione di Data Infrastructure Insights * confermare che la posizione dell'utilità di esportazione sia corretta nella configurazione del data collector * confermare che l'IP dell'array USP/R600 sia corretto nella configurazione del data collector * confermare che il nome utente e la password siano corretti nella configurazione del data collector * confermare che la versione dell'utilità di esportazione è compatibile con la versione del micro-codice dell'array di archiviazione * dall'unità di acquisizione di Data Infrastructure Insights, aprire un file CMD - eseguire la seguente procedura di installazione del file runWin.bat configurato per effettuare la directory di archiviazione: Eseguire la seguente procedura di archiviazione 
 
 
 | Errore: Accesso allo strumento di esportazione non riuscito per l'IP di destinazione | * Confermare che nome utente/password sono corretti * creare un ID utente principalmente per questo data collector HDS * verificare che nessun altro data collector sia configurato per acquisire questo array 
 
 
-| Errore: Gli strumenti di esportazione hanno registrato "Impossibile ottenere l'intervallo di tempo per il monitoraggio". | * Verificare che il monitoraggio delle performance sia attivato sull'array. * Prova a invocare i tool di esportazione al di fuori di Cloud Insights per confermare che il problema si trova al di fuori di Cloud Insights. 
+| Errore: Gli strumenti di esportazione hanno registrato "Impossibile ottenere l'intervallo di tempo per il monitoraggio". | * Verificare che il monitoraggio delle performance sia attivato sull'array. * Provare a richiamare gli strumenti di esportazione al di fuori di Data Infrastructure Insights per confermare che il problema non rientra in Data Infrastructure Insights. 
 
 
 | Errore: * Errore di configurazione: Storage Array non supportato da Export Utility * errore di configurazione: Storage Array non supportato da Storage Navigator Modular CLI | * Configurare solo gli array di storage supportati. * Utilizzare l'opzione "Filter Device List" (Filtra elenco dispositivi) per escludere gli array di storage non supportati. 
@@ -206,7 +206,7 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Errore: * Errore durante l'esecuzione del comando esterno * errore di configurazione: Storage Array non segnalato dall'inventario * errore di configurazione: La cartella di esportazione non contiene file jar | * Controllare la posizione dell'utility di esportazione. * Controllare se l'array di storage in questione è configurato nel server Command View * impostare l'intervallo di polling delle prestazioni su più di 60 secondi. 
 
 
-| Errore: * Errore CLI di Storage Navigator * errore durante l'esecuzione del comando auPerform * errore durante l'esecuzione del comando esterno | * Verificare che l'interfaccia CLI modulare di Storage Navigator sia installata sull'unità di acquisizione Cloud Insights * verificare che la posizione dell'interfaccia CLI modulare di Storage Navigator sia corretta nella configurazione di data collector * verificare che l'indirizzo IP dell'array WMS/SMS/SMS sia corretto nella configurazione di data collector * confermare La versione dell'interfaccia CLI modulare di Storage Navigator è compatibile con la versione del microcodice dello storage array configurato nel data collector * dall'unità di acquisizione Cloud Insights, aprire un prompt CMD ed eseguire le seguenti operazioni: - Modificare la directory nella directory di installazione configurata - provare a stabilire una connessione con lo storage array configurato eseguendo il comando "auunitref.exe" 
+| Errore: * Errore CLI di Storage Navigator * errore durante l'esecuzione del comando auPerform * errore durante l'esecuzione del comando esterno | * Verificare che Storage Navigator Modular CLI sia installato sull'unità di acquisizione di Data Infrastructure Insights * verificare che la posizione dell'interfaccia CLI modulare di Storage Navigator sia corretta nella configurazione del data collector * verificare che l'indirizzo IP dell'array WMS/SMS/SMS sia corretto nella configurazione del data collector * confermare che la versione dell'interfaccia CLI modulare di Storage Navigator è compatibile con la versione microcodice dell'array di storage configurata nel data collector * dall'unità di acquisizione di Data Infrastructure Insights, aprire un prompt di CMD ed eseguire il seguente comando "eseguire la directory auitref:" 
 
 
 | Errore: Errore di configurazione: Storage Array non segnalato dall'inventario | Controllare se lo Storage Array in questione è configurato nel server Command View 

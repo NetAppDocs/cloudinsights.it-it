@@ -19,7 +19,7 @@ summary: Configurazione di Azure NetApp Files data collector.
 
 
 [role="lead"]
-Cloud Insights utilizza il data collector Azure NetApp Files per acquisire dati di inventario e performance.
+Data Infrastructure Insights utilizza il data collector di Azure NetApp Files per acquisire i dati di inventario e delle prestazioni.
 
 
 
@@ -31,9 +31,9 @@ Per configurare questo data collector sono necessarie le seguenti informazioni.
 * IP REST di Azure Management (management.azure.com)
 * ID client principale del servizio Azure (account utente)
 * Chiave di autenticazione principale del servizio Azure (password utente)
-* È necessario impostare un account Azure per il rilevamento Cloud Insights.
+* Devi configurare un account Azure per il rilevamento Data Infrastructure Insights.
 +
-Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Cloud Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento:
+Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Data Infrastructure Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento:
 
 
 

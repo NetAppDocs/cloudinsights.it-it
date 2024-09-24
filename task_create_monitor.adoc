@@ -101,6 +101,16 @@ image:Monitor_metric_conditions.png["Definire le condizioni del monitor"]
 
 
 
+==== Definire il comportamento di risoluzione degli avvisi
+
+È possibile scegliere la modalità di risoluzione di un avviso del monitor metrico. Sono disponibili due opzioni:
+
+* Risolvere il problema quando la metrica ritorna alla gamma accettabile.
+* Risolvere quando la metrica rientra nell'intervallo accettabile per un periodo di tempo specificato, da 1 minuto a 7 giorni.
+
+
+
+
 === Log Monitor
 
 Quando si crea un monitor *Log*, scegliere innanzitutto quale registro monitorare dall'elenco Available log (registri disponibili). È quindi possibile filtrare in base agli attributi disponibili, come descritto sopra. Puoi anche scegliere uno o più attributi "Raggruppa per".
@@ -122,12 +132,39 @@ image:Monitor_Group_By_Example.png["Scegliere il registro da monitorare, imposta
 
 È possibile scegliere la modalità di risoluzione di un avviso di log monitor. Sono disponibili tre opzioni:
 
-* Risolvere immediatamente
-* Rimuovi dopo il periodo di conservazione dei dati (per ulteriori informazioni, fare riferimento alla pagina delle edizioni). Tenere presente che il monitor non dispone di alcuna condizione di risoluzione per definizione, pertanto un avviso rimane _attivo_ e elimina tutti gli avvisi successivi con la corrispondenza _group_by_ generata dal monitor, fino al termine del periodo di conservazione dei dati.
-* Resolve Based on log entry (Risolvi in base alla voce del registro): Consente di risolvere l'avviso quando la riga del registro viene rilevata come indicato nella seguente definizione o di eliminare i dati dopo il periodo di conservazione.
+* *Resolve istantaneamente*: L'avviso viene risolto immediatamente senza ulteriori azioni
+* *Risolvi in base al tempo*: L'avviso viene risolto una volta trascorso il tempo specificato
+* *Resolve based on log entry* (Risolvi in base alla voce del registro): L'avviso viene risolto quando si verifica una successiva attività del registro. Ad esempio, quando un oggetto viene registrato come "disponibile".
 
 
-image:LogMonitorAlertResolution.png["Opzioni di risoluzione degli avvisi"]
+image:Monitor_log_monitor_resolution.png["Risoluzione degli avvisi"]
+
+
+
+=== Monitoraggio rilevamento anomalie
+
+. Nell'elenco a discesa, cercare e scegliere un tipo di oggetto e una metrica da monitorare.
+
+
+È possibile impostare i filtri per limitare gli attributi o le metriche degli oggetti da monitorare.
+
+image:AnomalyDetectionMonitorMetricChoosing.png["Filtraggio delle metriche per il rilevamento delle anomalie"]
+
+
+
+==== Definire le condizioni del monitor.
+
+. Dopo aver scelto l'oggetto e la metrica da monitorare, si impostano le condizioni in cui viene rilevata un'anomalia.
++
+** Scegliere se rilevare un'anomalia quando la metrica scelta *picchi sopra* i limiti previsti, *scende al di sotto* di tali limiti, oppure *picchi sopra o scende al di sotto* dei limiti.
+** Impostare la *sensibilità* del rilevamento. *Basso* (meno anomalie vengono rilevate), *Medio* o *Alto* (vengono rilevate più anomalie).
+** Impostare gli avvisi in modo che siano attivi *Avvertenza* o *critico*.
+** Se lo si desidera, è possibile scegliere di ridurre il rumore, ignorando le anomalie quando la metrica scelta è al di sotto di una soglia impostata dall'utente.
+
+
+
+
+image:AnomalyDetectionMonitorDefineConditions.png["Definizione delle condizioni per attivare il rilevamento di un'anomalia"]
 
 
 

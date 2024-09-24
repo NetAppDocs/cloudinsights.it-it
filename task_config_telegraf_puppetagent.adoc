@@ -19,7 +19,7 @@ summary: Configurazione del data collector delle marionette
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche dall'Agente di Puppet.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Puppet Agent.
 
 
 

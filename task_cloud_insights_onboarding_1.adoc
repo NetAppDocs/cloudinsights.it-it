@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: 'Iscrizione a Cloud Insights e creazione dell"ambiente.' 
+summary: Iscrizione a Data Infrastructure Insights e creazione del tuo ambiente. 
 keywords: onboarding, new user 
 ---
-= Assunzione di Cloud Insights
+= Insight dell'infrastruttura dati
 :hardbreaks:
 :toclevels: 2
 :allow-uri-read: 
@@ -16,7 +16,7 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Prima di iniziare a lavorare con Cloud Insights, è necessario registrarsi sul portale *NetApp BlueXP*. Se hai già un accesso a NetApp BlueXP, puoi avviare una prova gratuita di Cloud Insights con pochi e rapidi passaggi.
+Prima di iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale *NetApp BlueXP *. Se disponi già di un accesso a NetApp BlueXP , puoi avviare una prova gratuita di Data Infrastructure Insights con alcuni rapidi passaggi.
 
 
 toc::[]
@@ -41,29 +41,29 @@ Una volta ottenuto un account NetApp BlueXP, è sufficiente selezionare *Accedi*
 
 Inserire l'indirizzo e-mail e la password. Verrà visualizzata la pagina delle offerte cloud di NetApp.
 
-Selezionare Cloud Insights.
+Seleziona Data Infrastructure Insights.
 
-image:BlueXP_CloudInsights.png["Versione di prova gratuita di Cloud Insights su BlueXP"]
+image:BlueXP_CloudInsights.png["Prova gratuita di Data Infrastructure Insights su BlueXP "]
 
 
 
-== Avvio della versione di prova gratuita di Cloud Insights
+== Avviare la prova gratuita di Data Infrastructure Insights
 
-Se è la prima volta che accedi a Cloud Insights, sotto l'offerta Cloud Insights, fai clic su *Avvia prova gratuita*. Cloud Insights ti guiderà attraverso la creazione dell'ambiente aziendale, inclusa la selezione della regione in cui vuoi che il tuo ambiente risieda.
+Se questa è la prima volta che accedi a Data Infrastructure Insights, sotto Data Infrastructure Insights fare clic su *Avvia prova gratuita*. Data Infrastructure Insights ti guiderà nella creazione dell'ambiente della tua azienda, inclusa la selezione della regione in cui si desidera che il tuo ambiente risieda.
 
-image:trial_region_selector.png["Selezione della regione in cui ospitare l'ambiente Cloud Insights"]
+image:trial_region_selector.png["Selezione dell'area in cui ospitare l'ambiente Data Infrastructure Insights"]
 
-Una volta completata la creazione del tuo ambiente, puoi utilizzare le tue credenziali BlueXP per accedere e iniziare la prova gratuita di 30 giorni di Cloud Insights. Durante questa versione di prova potrai esplorare le funzionalità offerte da Cloud Insights.
+Una volta completata la creazione del tuo ambiente, puoi utilizzare le tue credenziali BlueXP  per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights. Durante questa versione di prova, è possibile esplorare le funzioni offerte da Data Infrastructure Insights.
 
-Durante la prova gratuita, è possibile link:concept_subscribing_to_cloud_insights.html["avvia l'abbonamento"] A Cloud Insights in qualsiasi momento. Una volta effettuato l'abbonamento, è possibile utilizzare le funzioni di Cloud Insights in base all'abbonamento in uso.
+Durante la prova gratuita, puoi link:concept_subscribing_to_cloud_insights.html["avvia l'abbonamento"] accedere a Data Infrastructure Insights in qualsiasi momento. Una volta effettuato l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base all'abbonamento corrente.
 
 
 
 == Accedi e vai
 
-Una volta creato l'ambiente, sarà possibile accedere in qualsiasi momento al portale NetApp BlueXP e fare clic su *Vai a Cloud Insights*. Sarete portati direttamente al vostro ambiente Cloud Insights.
+Una volta creato l'ambiente, è possibile accedere in qualsiasi momento al portale NetApp BlueXP  e fare clic su *Vai a informazioni sull'infrastruttura dati*. Verrai indirizzato direttamente al tuo ambiente Data Infrastructure Insights.
 
-È anche possibile aprire un browser direttamente sull'URL dell'ambiente Cloud Insights, ad esempio:
+È inoltre possibile aprire un browser direttamente all'URL dell'ambiente Data Infrastructure Insights, ad esempio:
 
  \https://<environment-prefix>.c01.cloudinsights.netapp.com/
 L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per un accesso semplice e per la creazione di segnalibri. Se l'utente non ha già effettuato l'accesso a BlueXP, verrà richiesto di effettuare l'accesso.
@@ -77,10 +77,10 @@ La prima volta che si accede a un nuovo ambiente, viene guidata la configurazion
 
 == Disconnessione
 
-Per disconnettersi da Cloud Insights, fare clic su *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.
+Per disconnettersi da Data Infrastructure Insights, fare clic sul proprio *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.
 
 
-NOTE: La disconnessione da Cloud Insights consente di uscire da BlueXP. Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.
+NOTE: La disconnessione da Data Infrastructure Insights ti disconnette da BlueXP . Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.
 
 
 

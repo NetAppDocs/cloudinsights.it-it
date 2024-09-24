@@ -19,7 +19,7 @@ summary: HAConfigurazione del data collector Proxy
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da HAProxy.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da HAProxy.
 
 
 

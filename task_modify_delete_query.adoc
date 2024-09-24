@@ -26,13 +26,12 @@ keywords: query, queries, modify, edit, delete, remove
 == Modifica di una query
 
 .Fasi
-. Fare clic su *Query* e selezionare *Mostra tutte le query*.
+. Fare clic su *Esplora* e selezionare *tutte le query metriche*.
 +
 Viene visualizzata la pagina Query.
 
 . Fare clic sul nome della query
-. Per aggiungere un criterio alla query, fare clic su image:GearIcon.png["Colonne"] e selezionare un criterio dall'elenco.
-. Per rimuovere un filtro dalla query, fare clic sulla * X* accanto al filtro da rimuovere.
+. Per aggiungere un criterio alla query, fare clic sull'icona colonne e selezionare una metrica o un attributo dall'elenco.
 
 
 Una volta apportate tutte le modifiche necessarie, effettuare una delle seguenti operazioni:

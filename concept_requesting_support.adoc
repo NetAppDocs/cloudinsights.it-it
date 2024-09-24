@@ -91,9 +91,10 @@ NetApp fornisce supporto per Cloud Insights in diversi modi. Sono disponibili op
 
 Queste opzioni di supporto sono disponibili in modalità di prova e sono disponibili gratuitamente 24 ore su 24, 7 giorni su 7:
 
-* *link:https://mysupport.netapp.com/site/search?q=cloud%20insights&offset=0&searchType=Manual&autocorrect=true&origin=CI_Suppport_KB&filter=%28content_type%3D%3D%22knowledgebase%22;product%3D%3D%22Cloud%20Insights%22%29["Knowledge base"]*
-+
-Facendo clic sui collegamenti in questa sezione, si passa alla Knowledge base di NetApp, dove è possibile cercare articoli, procedure e altro ancora.
+* *https://kb.NetApp.com/Special:Search?query=cloud+Insight[KnowledgeBase]*
+
+
++ facendo clic sui collegamenti in questa sezione, si accede alla Knowledge base di NetApp, dove è possibile cercare articoli importanti, istruzioni e altro ancora.
 
 * *link:https://docs.netapp.com/us-en/cloudinsights/["Documentazione"]*
 +

@@ -80,7 +80,7 @@ Questo data collector supporta la raccolta dell'inventario dalle configurazioni 
 | Performance Concurrent thread Count | Numero di thread simultanei. 
 
 
-| Advanced Counter Data Collection | Selezionare questa opzione per fare in modo che Cloud Insights raccolga le metriche avanzate dall'elenco riportato di seguito. 
+| Advanced Counter Data Collection | Selezionare questa opzione per fare in modo che Data Infrastructure Insights raccolga le metriche avanzate dall'elenco seguente. 
 |===
 
 

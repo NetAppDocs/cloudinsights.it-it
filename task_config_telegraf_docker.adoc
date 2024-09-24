@@ -19,7 +19,7 @@ summary: Configurazione del data collector Docker
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche da Docker.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Docker.
 
 
 
@@ -80,7 +80,7 @@ volumeMounts:
 - name: docker-sock
 mountPath: /var/run/docker.sock
 ----
-Si noti che il programma di installazione di Cloud Insights fornito per la piattaforma Kubernetes si occupa automaticamente di questa mappatura.
+Si noti che il programma di installazione di Data Infrastructure Insights fornito per la piattaforma Kubernetes si occupa automaticamente di questa mappatura.
 
 
 
@@ -122,6 +122,6 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Problema: | Prova: 
 
 
-| Dopo aver seguito le istruzioni riportate nella pagina di configurazione, non riesco a visualizzare le metriche di Docker in Cloud Insights. | Controllare i registri degli agenti di Telegraf per verificare se riporta il seguente errore: E! Errore nel plug-in [inputs.docker]: Permesso ottenuto negato durante il tentativo di connessione al socket del daemon Docker. In caso contrario, eseguire i passaggi necessari per fornire all'agente Telegrafo l'accesso al socket Docker Unix come specificato sopra. 
+| Non riesco a trovare le metriche Docker in Data Infrastructure Insights dopo aver seguito le istruzioni sulla pagina di configurazione. | Controllare i registri degli agenti di Telegraf per verificare se riporta il seguente errore: E! Errore nel plug-in [inputs.docker]: Permesso ottenuto negato durante il tentativo di connessione al socket del daemon Docker. In caso contrario, eseguire i passaggi necessari per fornire all'agente Telegrafo l'accesso al socket Docker Unix come specificato sopra. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] pagina.

@@ -31,7 +31,7 @@ TIP: Monitor e avvisi sono disponibili in Cloud Insights Standard Edition e vers
 Per visualizzare e gestire gli avvisi, procedere come segue.
 
 . Accedere alla pagina *Avvisi > tutti gli avvisi*.
-. Viene visualizzato un elenco dei 1,000 avvisi più recenti. È possibile ordinare questo elenco in qualsiasi campo facendo clic sull'intestazione della colonna corrispondente al campo. L'elenco visualizza le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "ingranaggio" image:gear.png["icona ingranaggio"]:
+. Viene visualizzato un elenco dei 1,000 avvisi più recenti. È possibile ordinare questo elenco in qualsiasi campo facendo clic sull'intestazione della colonna corrispondente al campo. L'elenco visualizza le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "Gear" (marcia):
 +
 ** *ID avviso*: ID avviso univoco generato dal sistema
 ** *Triggered time* (tempo di attivazione): L'ora in cui il monitor interessato ha attivato l'avviso

@@ -19,7 +19,7 @@ summary: Configurazione del data collector VNXe.
 
 
 [role="lead"]
-IL data collector Dell EMC VNXe fornisce il supporto dell'inventario per gli array di storage unificati VNXe. Cloud Insights attualmente supporta i protocolli iSCSI e NAS.
+IL data collector Dell EMC VNXe fornisce il supporto dell'inventario per gli array di storage unificati VNXe. Data Infrastructure Insights supporta attualmente i protocolli iSCSI e NAS.
 
 
 
@@ -31,18 +31,18 @@ IL data collector Dell EMC VNXe fornisce il supporto dell'inventario per gli arr
 * È necessario disporre di almeno un utente di sola lettura per l'utilizzo da parte del data collector.
 * Indirizzo IP del server di abilitazione delle soluzioni di gestione.
 * HTTPS sulla porta 443 è obbligatorio
-* Il data collector EMC VNXe fornisce supporto NAS e iSCSI per l'inventario; verranno rilevati volumi Fibre Channel, ma Cloud Insights non esegue report su mappatura FC, mascheratura o porte di storage.
+* Il data collector EMC VNXe fornisce supporto NAS e iSCSI per l'inventario; verranno rilevati volumi fibre channel, ma Data Infrastructure Insights non segnala la mappatura, il masking o le porte storage FC.
 
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector VNXe. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector VNXe. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 
@@ -119,6 +119,6 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| "Impossibile eseguire l'utility esterna" con il messaggio di errore "Impossibile trovare l'eseguibile Unisphere uemcli" | * Verificare l'indirizzo IP, il nome utente e la password corretti * verificare che l'interfaccia CLI di Unisphere sia installata sull'unità di acquisizione Cloud Insights * verificare che la directory di installazione dell'interfaccia CLI di Unisphere sia corretta nella configurazione dell'origine dati * verificare che l'indirizzo IP dell'unità sia corretto nella configurazione dell'origine dati. Dall'unità di acquisizione Cloud Insights, aprire un CMD e passare alla directory di installazione configurata:{INSTALLDIR. Provare a stabilire una connessione con il dispositivo VNXe digitando: Uemcli -d <Your IP> -u <Your ID> /sys/General show 
+| "Impossibile eseguire l'utility esterna" con il messaggio di errore "Impossibile trovare l'eseguibile Unisphere uemcli" | * Verificare l'indirizzo IP, il nome utente e la password corretti * confermare che Unisphere CLI sia installato sull'unità di acquisizione di Data Infrastructure Insights * verificare che la directory di installazione di Unisphere CLI sia corretta nella configurazione dell'origine dati * verificare che l'IP di VNXe sia corretto nella configurazione dell'origine dati. Dall'unità di acquisizione di Data Infrastructure Insights, aprire un CMD e passare alla directory di installazione configurata: ${INSTALLDIR. Provare a stabilire una connessione con il dispositivo VNXe digitando: Uemcli -d <Your IP> -u <Your ID> /sys/General show 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

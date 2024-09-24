@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: security_admin_tool.html 
-summary: 'Cloud Insights segue le Best practice di sicurezza durante l"intero ciclo di vita del rilascio.' 
+summary: 'Data Infrastructure Insights segue le Best practice per la sicurezza durante l"intero ciclo di vita del rilascio.' 
 keywords: security, risk, protection 
 ---
 = Strumento securityadmin
@@ -19,11 +19,11 @@ keywords: security, risk, protection
 
 
 [role="lead"]
-Cloud Insights include funzionalità di sicurezza che consentono al tuo ambiente di operare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all'hashing delle password e alla possibilità di modificare le password utente interne, nonché coppie di chiavi che crittografano e decrittare le password.
+Data Infrastructure Insights include funzionalità di sicurezza che consentono al tuo ambiente di operare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all'hashing delle password e alla possibilità di modificare le password utente interne, nonché coppie di chiavi che crittografano e decrittare le password.
 
 Per proteggere i dati sensibili, NetApp consiglia di modificare le chiavi predefinite e la password utente _Acquisition_ dopo un'installazione o un aggiornamento.
 
-Le password crittografate dell'origine dati vengono memorizzate in Cloud Insights, che utilizza una chiave pubblica per crittografare le password quando un utente le inserisce in una pagina di configurazione del data collector. Cloud Insights non dispone delle chiavi private necessarie per decrittare le password del data collector; solo le unità di acquisizione (aus) dispongono della chiave privata del data collector necessaria per decrittare le password del data collector.
+Le password crittografate delle origini dati sono memorizzate in Data Infrastructure Insights, che utilizza una chiave pubblica per crittografare le password quando un utente le inserisce in una pagina di configurazione di raccolta dati. Data Infrastructure Insights non dispone delle chiavi private necessarie per decrittografare le password di raccolta dati; solo le unità di acquisizione (AUS) dispongono della chiave privata di raccolta dati necessaria per decrittografare le password di raccolta dati.
 
 
 
@@ -35,7 +35,7 @@ Se il sistema Insight contiene configurazioni di sicurezza non predefinite (ad e
 
 == Gestione della sicurezza sull'unità di acquisizione
 
-Lo strumento securityadmin consente di gestire le opzioni di sicurezza per Cloud Insights e viene eseguito sul sistema dell'unità di acquisizione. La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.
+Lo strumento securityadmin consente di gestire le opzioni di sicurezza per Data Infrastructure Insights, viene eseguito sul sistema dell'unità di acquisizione. La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.
 
 
 
@@ -168,7 +168,7 @@ usage: securityadmin -pr -ap <arg> | -h | -rp | -upr <arg>
 
 The purpose of this tool is to enable reconfiguration of security aspects
 of the Acquisition Unit such as encryption keys, and proxy configuration,
-etc. For more information about this tool, please check the Cloud Insights
+etc. For more information about this tool, please check the Data Infrastructure Insights
 Documentation.
 
 -ap,--add-proxy <arg>       add a proxy server.  Arguments: ip=ip
@@ -207,7 +207,7 @@ Per aggiornare un proxy, il comando è
 
 Se si fornisce uno script di shell UNIX, può essere eseguito dall'unità di acquisizione per recuperare la *chiave privata* e la *chiave pubblica* dal sistema di gestione delle chiavi.
 
-Per recuperare la chiave, Cloud Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.
+Per recuperare la chiave, Data Infrastructure Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.
 
 Per inviare nuovamente il tasto all'unità di acquisizione, lo script deve stampare il tasto sull'output standard. Lo script deve stampare _solo_ la chiave per l'output standard; nessun altro testo deve essere stampato su output standard. Una volta che la chiave richiesta viene stampata nell'output standard, lo script deve uscire con un codice di uscita di 0; qualsiasi altro codice di ritorno viene considerato un errore.
 

@@ -22,17 +22,17 @@ summary: Configurazione del data collector VPLEX.
 Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC VPLEX. Per la configurazione, il data collector richiede un indirizzo IP del server VPLEX e un account di dominio di livello amministrativo.
 
 
-NOTE: La raccolta delle performance di Cloud Insights dai cluster Vplex richiede che il servizio di archiviazione delle performance sia operativo, al fine di popolare i file .CSV e i log che Cloud Insights recupera tramite copie di file basate su SCP. NetApp ha osservato che molti aggiornamenti delle stazioni di gestione/aggiornamento del firmware Vplex non funzioneranno. I clienti che pianificano tali aggiornamenti potrebbero voler chiedere in maniera proattiva a Dell/EMC se l'upgrade pianificato non consente di utilizzare questa funzionalità e, in caso affermativo, come possono riattivarla per ridurre al minimo le lacune nella visibilità delle performance? Il codice delle performance di cloud Insight valuterà in ogni sondaggio se esistono tutti i file previsti e se vengono aggiornati correttamente; se mancano o sono obsoleti, Cloud Insights registrerà gli errori di raccolta delle performance.
+NOTE: La raccolta delle prestazioni di Data Infrastructure Insights dai cluster Vplex richiede che il servizio di archiviazione delle prestazioni sia operativo, al fine di popolare i file .CSV e i registri che Data Infrastructure Insights recupera tramite copie di file basate su SCP. NetApp ha osservato che molti aggiornamenti delle stazioni di gestione/aggiornamento del firmware Vplex non funzioneranno. I clienti che pianificano tali aggiornamenti potrebbero voler chiedere in maniera proattiva a Dell/EMC se l'upgrade pianificato non consente di utilizzare questa funzionalità e, in caso affermativo, come possono riattivarla per ridurre al minimo le lacune nella visibilità delle performance? Il codice delle prestazioni Vplex di Cloud Insight valuterà ad ogni sondaggio se tutti i file previsti esistono e se vengono aggiornati correttamente; se mancano o sono obsoleti, Data Infrastructure Insights registrerà gli errori di raccolta delle prestazioni.
 
 
 
 == Terminologia
 
-Cloud Insightst acquisisce le seguenti informazioni di inventario dal data collector VPLEX. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insightst acquisisce le seguenti informazioni di inventario dal data collector VPLEX. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Cluster | Storage 

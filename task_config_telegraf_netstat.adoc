@@ -19,7 +19,7 @@ summary: Configurazione del data collector netstat
 
 
 [role="lead"]
-Cloud Insights utilizza questo data collector per raccogliere le metriche Netstat.
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche Netstat.
 
 
 

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: index.html 
-summary: Benvenuti nel portale di documentazione per Cloud Insights. 
+summary: Benvenuto nel portale della documentazione di Data Infrastructure Insights. 
 keywords:  
 ---
-= Documentazione Cloud Insights
+= Documentazione Data Infrastructure Insights
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -19,13 +19,13 @@ keywords:
 
 
 [role="lead"]
-NetApp Cloud Insights è uno strumento di monitoraggio dell'infrastruttura cloud che offre visibilità sull'intera infrastruttura. Con Cloud Insights, puoi monitorare, risolvere i problemi e ottimizzare tutte le risorse, inclusi i cloud pubblici e i data center privati.
+NetApp Data Infrastructure Insights (in precedenza Cloud Insights) è un tool di monitoraggio dell'infrastruttura cloud che ti offre visibilità sull'intera infrastruttura. Con Data Infrastructure Insights puoi monitorare, risolvere i problemi e ottimizzare tutte le risorse, inclusi cloud pubblici e data center privati.
 
 
 
-== Cosa può fare Cloud Insights per me?
+== Cosa può fare per me Data Infrastructure Insights?
 
-Cloud Insights offre il monitoraggio multicloud ibrido, offrendo l'osservabilità completa dell'infrastruttura e dei carichi di lavoro.
+Data Infrastructure Insights offre il monitoring del multicloud ibrido, offrendo un'osservabilità full-stack di infrastruttura e carichi di lavoro.
 
 * Raccolta di dati per infrastrutture e carichi di lavoro eterogenei, tra cui Kubernetes
 * Aprire Telegraf Collector e aprire le API per una facile integrazione
@@ -42,7 +42,7 @@ Cloud Insights offre il monitoraggio multicloud ibrido, offrendo l'osservabilit�
 
 == Per iniziare
 
-* Come fare link:task_cloud_insights_onboarding_1.html["*per iniziare*"] Con Cloud Insights?
+* Come è possibile link:task_cloud_insights_onboarding_1.html["*per iniziare*"] utilizzare Data Infrastructure Insights?
 * Mi sono iscritto. Cosa devo fare?link:task_getting_started_with_cloud_insights.html["Acquisizione dei dati"]
 link:concept_user_roles.html["Configurazione degli utenti"]
 * Fantastico! Quali sono le prossime novità?

@@ -17593,16 +17593,19 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.4+| Performance | Qtree | Storage | Dischi guasti | Implementato | HTTPS 
+.5+| Performance | Storage | Dischi guasti | Implementato | HTTPS |  
 
 
-|  .3+| Nodo di storage | Totale rapporto di hit della cache | Implementato | HTTPS 
+.3+| Nodo di storage | Totale rapporto di hit della cache | Implementato | HTTPS |  
 
 
-|  | Totale lettura disco sostituita | Implementato | HTTPS 
+| Totale lettura disco sostituita | Implementato | HTTPS |  
 
 
-|  | Totale utilizzo | Implementato | HTTPS 
+| Totale utilizzo | Implementato | HTTPS |  
+
+
+| Qtree |  | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo data collector:
 

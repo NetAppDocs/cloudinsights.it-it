@@ -19,11 +19,11 @@ summary: Configurazione di Brocade FOS REST Data Collector.
 
 
 [role="lead"]
-Cloud Insights utilizza il REST Collector Brocade FOS per rilevare l'inventario e le prestazioni dei dispositivi switch Brocade che eseguono il firmware FabricOS (FOS) 8,2 e versioni successive.
+Data Infrastructure Insights utilizza il REST Collector Brocade FOS per rilevare l'inventario e le performance dei dispositivi switch Brocade che eseguono il firmware FabricOS (FOS) 8,2 e versioni successive.
 
-Nota: Il livello "utente" predefinito di FOS non è sufficientemente potente per consentire a Cloud Insights di visualizzare tutti gli aspetti logici di un dispositivo. È necessario disporre di un account utente con il "ruolo chassis" abilitato, nonché di autorizzazioni su tutti i fabric virtuali configurati su uno switch.
+Nota: Il livello "utente" predefinito di FOS non è sufficientemente potente perché Data Infrastructure Insights possa visualizzare tutti gli aspetti logici di un dispositivo. È necessario disporre di un account utente con il "ruolo chassis" abilitato, nonché di autorizzazioni su tutti i fabric virtuali configurati su uno switch.
 
-Di seguito è riportato un esempio di come creare un account utente con privilegi minimi per l'utilizzo di Cloud Insights in una sessione SSH su un dispositivo FOS:
+Di seguito è riportato un esempio di come creare un account utente con privilegi minimi per l'utilizzo di Data Infrastructure Insights in una sessione SSH su un dispositivo FOS:
 
 UserConfig --add NetAppCIUser -r utente -l 1-128 -c utente -p Qwerty!
 
@@ -35,11 +35,11 @@ Per impostazione predefinita, questo raccoglitore tenterà di scoprire tutti i d
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal raccoglitore di dati REST Brocade FOS. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati REST Brocade FOS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Switch | Switch 
@@ -65,7 +65,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Requisiti
 
-* Deve essere presente una connettività TCP a tutti gli switch del fabric. Questo tipo di raccolta dati proverà senza problemi sia HTTP che HTTPS per ogni dispositivo nel fabric. Se si seleziona la casella di controllo _rileva tutti gli switch nel fabric_, Cloud Insights identifica tutti gli switch nel fabric; tuttavia, per scoprirli è necessaria la connettività TCP a tali switch aggiuntivi.
+* Deve essere presente una connettività TCP a tutti gli switch del fabric. Questo tipo di raccolta dati proverà senza problemi sia HTTP che HTTPS per ogni dispositivo nel fabric. Se si seleziona la casella di controllo _rileva tutti gli switch nel fabric_, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, per scoprirli è necessaria la connettività TCP a tali switch aggiuntivi.
 * Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare l'interfaccia Web della periferica per confermare l'accesso.
 
 
@@ -133,7 +133,7 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | La funzione Test indica che un protocollo non è accessibile | Un determinato dispositivo Brocade FOS 8,2+ desidera parlare solo su HTTP o HTTPS. Se uno switch dispone di un certificato digitale installato, lo switch genera errori HTTP se si tenta di comunicare con HTTP non crittografato rispetto a HTTPS. La funzione di test tenta di comunicare sia con HTTP che con HTTPS. Se il test indica che un protocollo viene superato, è possibile salvare il collettore senza preoccuparsi che l'altro protocollo non sia riuscito. Il collettore tenta entrambi i protocolli durante la raccolta e non riesce solo se nessuno dei due funziona. 
 
 
-| Errore: "Cloud Insights ha ricevuto un ruolo chassis non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
+| Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
 
 
 | Errore: "Indirizzo IP chassis non corrispondente" | Modificare la configurazione dell'origine dati per utilizzare l'indirizzo IP dello chassis. 

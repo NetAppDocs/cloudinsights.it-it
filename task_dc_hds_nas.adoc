@@ -19,17 +19,17 @@ summary: 'Configurazione di HDS NAS (HNAS) data collector.'
 
 
 [role="lead"]
-Hitachi Vantara NAS data collector è un data collector per l'inventario e la configurazione che supporta il rilevamento di cluster NAS HDS. Cloud Insights supporta il rilevamento di condivisioni NFS e CIFS, file system (volumi interni) e span (pool di storage).
+Hitachi Vantara NAS data collector è un data collector per l'inventario e la configurazione che supporta il rilevamento di cluster NAS HDS. Data Infrastructure Insights supporta il rilevamento di condivisioni NFS e CIFS, file system (volumi interni) e span (pool di storage).
 
 
 
 == Terminologia
 
-Cloud Insights acquisisce le seguenti informazioni di inventario dal data collector HNAS. Per ogni tipo di risorsa acquisita da Cloud Insights, viene mostrata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector HNAS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Tier | Gruppo di dischi 

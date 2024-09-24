@@ -29,7 +29,7 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 * È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.
 +
-** Dal punto di vista funzionale, Cloud Insights effettua principalmente richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Cloud Insights possa registrarsi con l'array ONTAP. Consultare la _Nota sulle autorizzazioni_ immediatamente riportata di seguito.
+** Dal punto di vista funzionale, Data Infrastructure Insights effettua principalmente richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Data Infrastructure Insights possa registrarsi con l'array ONTAP. Consultare la _Nota sulle autorizzazioni_ immediatamente riportata di seguito.
 
 
 * ONTAP versione 9.14.1 o successiva.
@@ -40,9 +40,9 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 == Nota sulle autorizzazioni
 
-Poiché una serie di dashboard ONTAP di Cloud Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
+Poiché una serie di dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
 
-Per creare un account locale per Cloud Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore della gestione del cluster ed eseguire i seguenti comandi sul server ONTAP:
+Per creare un account locale per informazioni sull'infrastruttura dati a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore di gestione cluster ed eseguire i seguenti comandi sul server ONTAP:
 
 . Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
 . Recuperare il nome del server virtuale di tipo _admin_. Questo nome verrà utilizzato nei comandi successivi.
@@ -144,11 +144,11 @@ Per migrare da un data collector ONTAP (ontapi) precedente al più recente REST 
 
 == Terminologia
 
-Cloud Insights acquisisce dati di inventario, log e prestazioni dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce dati di inventario, log e performance dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine Cloud Insights 
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
 
 
 | Disco | Disco 
@@ -190,8 +190,8 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 * IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati.
 * Versione del microcodice – firmware.
 * Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo.
-* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Cloud Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che offre questa opzione, Cloud Insights esegue in genere un calcolo ponderato per gli IOPS derivato dalle statistiche dei singoli volumi interni.
-* Throughput: Aggregato da volumi interni. Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Cloud Insights come parte del reporting dell'inventario.
+* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Data Infrastructure Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che lo offre, Data Infrastructure Insights sta generalmente eseguendo un calcolo ponderato in IOPS derivato dalle statistiche dei singoli volumi interni.
+* Throughput: Aggregato da volumi interni. Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di codice dall'origine dati Data Infrastructure Insights come parte del reporting di inventario.
 
 
 
@@ -232,7 +232,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle lan
 
 == Metriche di potenza ONTAP
 
-Diversi modelli ONTAP forniscono metriche di alimentazione per Cloud Insights che possono essere utilizzate per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
+Diversi modelli di ONTAP forniscono metriche di potenza per approfondimenti sull'infrastruttura dati che possono essere utilizzati per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
 
 Modelli supportati:
 
