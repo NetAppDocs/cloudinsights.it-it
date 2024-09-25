@@ -88,22 +88,18 @@ Premere Invio o fare clic all'esterno della casella del filtro per applicare il 
 È possibile filtrare i dati delle attività forensi in base ai seguenti campi:
 
 * Il tipo *Activity*.
-
-
 * *IP di origine* da cui è stato effettuato l'accesso all'entità. È necessario fornire un indirizzo IP di origine valido tra virgolette doppie, ad esempio "10.1.1.1". Gli IP incompleti come "10.1.1.*", "10.1.*.*", ecc. non funzionano.
 * *Protocollo* per recuperare le attività specifiche del protocollo.
-
-
 * *Nome utente* dell'utente che esegue l'attività. Specificare il nome utente esatto da filtrare. La ricerca con il nome utente parziale o con il prefisso ‘*’ non funziona.
 * *Riduzione del rumore* per filtrare i file creati nelle ultime 2 ore dall'utente. Viene inoltre utilizzato per filtrare i file temporanei (ad esempio, i file .tmp) a cui l'utente accede.
-* *Dominio* dell'utente che esegue l'attività. È necessario fornire il *dominio esatto* da filtrare. La ricerca di un dominio parziale, o di un dominio parziale con prefisso o suffisso con carattere jolly ()'*'), non funzionerà. _Nessuno_ può essere specificato per cercare il dominio mancante.
+* *Dominio* dell'utente che esegue l'attività. È necessario fornire il *dominio esatto* da filtrare. La ricerca di un dominio parziale o di un dominio parziale prefisso o suffisso con carattere jolly ('*') non funzionerà. _Nessuno_ può essere specificato per cercare il dominio mancante.
 
 
 I seguenti campi sono soggetti a speciali regole di filtraggio:
 
 * *Tipo di entità*, utilizzando l'estensione dell'entità (file) - è preferibile specificare il tipo di entità esatto all'interno delle virgolette. Ad esempio _"txt"_.
 * *Percorso* dell'entità - filtri percorso directory (stringa di percorso che termina con /) fino a 4 directory profonde sono consigliate per risultati più veloci. Ad esempio, _/home/userX/nested1/nested2/_ O _"/home/userX/nested1/nested2/"_. Fare riferimento alla tabella riportata di seguito per ulteriori dettagli.
-* *Utente* esecuzione dell'attività - è preferibile specificare l'utente esatto tra virgolette. A titolo esemplificativo, _"Amministratore"_.
+* *Utente* esecuzione dell'attività - è preferibile specificare l'utente esatto tra virgolette. Ad esempio, _"Amministratore"_.
 * *Dispositivo* (SVM) in cui risiedono le entità
 * *Volume* dove risiedono le entità
 * Il percorso *originale* utilizzato per rinominare gli eventi quando il file originale è stato rinominato.
@@ -151,7 +147,7 @@ NOTA:
 
 == Ordinamento dei dati Forensic Activity History
 
-È possibile ordinare i dati della cronologia delle attività in base a _Time, User, Source IP, Activity, Path_ e _Entity Type_. Per impostazione predefinita, la tabella viene ordinata in base a un ordine _time_ decrescente, il che significa che i dati più recenti verranno visualizzati per primi. L'ordinamento è disattivato per i campi _Device_ e _Protocol_.
+È possibile ordinare i dati della cronologia delle attività per _ora, utente, IP di origine, attività,_ e _tipo di entità_. Per impostazione predefinita, la tabella viene ordinata in base a un ordine _time_ decrescente, il che significa che i dati più recenti verranno visualizzati per primi. L'ordinamento è disattivato per i campi _Device_ e _Protocol_.
 
 
 
@@ -178,7 +174,7 @@ La funzionalità di esportazione asincrona di Storage workload Security è proge
 
 
 
-Un esempio di script per estrarre i dati forensi tramite le API è presente all'indirizzo _/opt/netapp/cloudSecure/Agent/export-script/_. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.
+Un esempio di script per estrarre dati forensi tramite API è presente all'indirizzo _/opt/NetApp/cloudSecure/Agent/export-script/_ dell'agente. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.
 
 
 
