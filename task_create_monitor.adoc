@@ -22,7 +22,7 @@ summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inve
 È possibile creare monitor per impostare soglie che attivino avvisi per segnalare problemi relativi alle risorse della rete. Ad esempio, è possibile creare un monitor per avvisare della _latenza di scrittura del nodo_ per una moltitudine di protocolli.
 
 
-TIP: Monitor e avvisi sono disponibili in tutte le edizioni Cloud Insights, tuttavia, l'edizione di base è soggetta a quanto segue: * È possibile che siano attivi solo cinque monitor personalizzati alla volta. Tutti i monitor oltre i cinque verranno creati o spostati nello stato _Paused_. * I monitor VMDK, Virtual Machine, host e datastore non sono supportati. Se sono stati creati dei monitor per queste metriche, questi verranno messi in pausa e non potranno essere ripristinati durante il downgrade a Basic Edition.
+TIP: Monitor e avvisi sono disponibili in tutte le edizioni di Data Infrastructure Insights, tuttavia, l'edizione Basic è soggetta a quanto segue: * È possibile che siano attivi solo cinque monitor personalizzati alla volta. Tutti i monitor oltre i cinque verranno creati o spostati nello stato _Paused_. * I monitor VMDK, Virtual Machine, host e datastore non sono supportati. Se sono stati creati dei monitor per queste metriche, questi verranno messi in pausa e non potranno essere ripristinati durante il downgrade a Basic Edition.
 
 
 toc::[]
@@ -30,19 +30,19 @@ I monitor consentono di impostare soglie sulle metriche generate da oggetti "inf
 
 È inoltre possibile creare monitor per attivare avvisi a livello di avviso, critico o informativo quando vengono rilevati _eventi di log_ specificati.
 
-Cloud Insights fornisce una serie di link:task_system_monitors.html["Monitor definiti dal sistema"] inoltre, in base al tuo ambiente.
+Data Infrastructure Insights mette a disposizione anche una serie dilink:task_system_monitors.html["Monitor definiti dal sistema"], sulla base del tuo ambiente.
 
 
 
 == Best practice per la sicurezza
 
-Gli avvisi Cloud Insights sono progettati per evidenziare i punti dati e le tendenze nell'ambiente in uso e Cloud Insights consente di inserire qualsiasi indirizzo e-mail valido come destinatario dell'avviso. Se si lavora in un ambiente sicuro, prestare particolare attenzione a chi riceve la notifica o a chi ha accesso all'avviso.
+Gli alert di Data Infrastructure Insights sono ideati per evidenziare data point e trend nel tuo ambiente, mentre Data Infrastructure Insights ti consente di inserire qualsiasi indirizzo e-mail valido come destinatario dell'avviso. Se si lavora in un ambiente sicuro, prestare particolare attenzione a chi riceve la notifica o a chi ha accesso all'avviso.
 
 
 
 == Metriche o Log Monitor?
 
-. Dal menu Cloud Insights, fare clic su *Avvisi > Gestisci monitor*
+. Dal menu Data Infrastructure Insights, fare clic su *Alerts > Manage Monitors* (Avvisi > Gestisci monitor*)
 +
 Viene visualizzata la pagina dell'elenco Monitor, che mostra i monitor attualmente configurati.
 
@@ -240,8 +240,8 @@ Vengono visualizzati i seguenti gruppi di monitor. Il numero di monitor contenut
 
 * *Tutti i monitor* elenca tutti i monitor.
 * *Custom Monitor* elenca tutti i monitor creati dall'utente.
-* *I monitor sospesi* elencano tutti i monitor di sistema sospesi da Cloud Insights.
-* Cloud Insights visualizza inoltre una serie di *gruppi di monitor di sistema*, che elenranno uno o più gruppi di link:task_system_monitors.html["monitor definiti dal sistema"], Inclusi i monitor per l'infrastruttura e il carico di lavoro ONTAP.
+* *Monitor sospesi* elenca tutti i monitor di sistema sospesi da Data Infrastructure Insights.
+* Data Infrastructure Insights mostrerà anche un certo numero di *gruppi di monitoraggio del sistema*, che elencheranno uno o più gruppi di link:task_system_monitors.html["monitor definiti dal sistema"], inclusi i monitor dell'infrastruttura ONTAP e del carico di lavoro.
 
 
 
@@ -251,13 +251,13 @@ NOTE: I monitor personalizzati possono essere messi in pausa, ripristinati, canc
 
 === Monitor sospesi
 
-Questo gruppo viene visualizzato solo se Cloud Insights ha sospeso uno o più monitor. Un monitor potrebbe essere sospeso se genera avvisi eccessivi o continui. Se si tratta di un monitor personalizzato, modificare le condizioni per evitare l'invio di avvisi continui, quindi riprendere il monitor. Il monitor viene rimosso dal gruppo di monitor sospesi quando il problema che causa la sospensione viene risolto.
+Questo gruppo viene visualizzato solo se Data Infrastructure Insights ha sospeso uno o più monitor. Un monitor potrebbe essere sospeso se genera avvisi eccessivi o continui. Se si tratta di un monitor personalizzato, modificare le condizioni per evitare l'invio di avvisi continui, quindi riprendere il monitor. Il monitor viene rimosso dal gruppo di monitor sospesi quando il problema che causa la sospensione viene risolto.
 
 
 
 === Monitor definiti dal sistema
 
-Questi gruppi mostrano i monitor forniti da Cloud Insights, a condizione che l'ambiente contenga i dispositivi e/o la disponibilità dei log richiesti dai monitor.
+Questi gruppi mostreranno i monitor forniti da Data Infrastructure Insights, purché l'ambiente contenga i dispositivi e/o la disponibilità dei log richiesti dai monitor.
 
 I monitor definiti dal sistema non possono essere modificati, spostati in un altro gruppo o cancellati. Tuttavia, è possibile duplicare un monitor di sistema e modificare o spostare il duplicato.
 
@@ -283,13 +283,13 @@ image:Monitors_AssociateToGroup.png["Associare al gruppo"]
 Rimuovere i monitor facendo clic su un gruppo e selezionando _Remove from Group_ dal menu. Non è possibile rimuovere i monitor dal gruppo _All Monitors_ o _Custom Monitors_. Per eliminare un monitor da questi gruppi, è necessario eliminarlo.
 
 
-NOTE: La rimozione di un monitor da un gruppo non elimina il monitor da Cloud Insights. Per rimuovere completamente un monitor, selezionarlo e fare clic su _Delete_. In questo modo viene rimosso anche dal gruppo a cui apparteneva e non è più disponibile per nessun utente.
+NOTE: La rimozione di un monitor da un gruppo non elimina il monitor da Data Infrastructure Insights. Per rimuovere completamente un monitor, selezionarlo e fare clic su _Delete_. In questo modo viene rimosso anche dal gruppo a cui apparteneva e non è più disponibile per nessun utente.
 
 È anche possibile spostare un monitor in un gruppo diverso nello stesso modo, selezionando _Move to Group_ (Sposta in gruppo).
 
 Per mettere in pausa o riprendere contemporaneamente tutti i monitor di un gruppo, selezionare il menu del gruppo e fare clic su _Pause_ o _Resume_.
 
-Utilizzare lo stesso menu per rinominare o eliminare un gruppo. L'eliminazione di un gruppo non elimina i monitor da Cloud Insights, ma sono ancora disponibili in _tutti i monitor_.
+Utilizzare lo stesso menu per rinominare o eliminare un gruppo. L'eliminazione di un gruppo non elimina i monitor da Data Infrastructure Insights; essi sono comunque disponibili in _All Monitors_.
 
 image:Monitors_PauseGroup.png["Mettere in pausa un gruppo"]
 
@@ -297,9 +297,9 @@ image:Monitors_PauseGroup.png["Mettere in pausa un gruppo"]
 
 == Monitor definiti dal sistema
 
-Cloud Insights include una serie di monitor definiti dal sistema per metriche e registri. I monitor di sistema disponibili dipendono dai data collezions presenti nell'ambiente. Per questo motivo, i monitor disponibili in Cloud Insights potrebbero cambiare in base all'aggiunta di data collezions o alla modifica delle configurazioni.
+Data Infrastructure Insights include un certo numero di monitor definiti dal sistema sia per metriche che per i registri. I monitor di sistema disponibili dipendono dai data collezions presenti nell'ambiente. Per questo motivo, i monitor disponibili in Data Infrastructure Insights possono cambiare in base all'aggiunta di raccolte dati o alla modifica delle relative configurazioni.
 
-Visualizzare il link:task_system_monitors.html["Monitor definiti dal sistema"] Per le descrizioni dei monitor inclusi in Cloud Insights.
+Visualizza la link:task_system_monitors.html["Monitor definiti dal sistema"] pagina per le descrizioni dei monitor inclusi in Data Infrastructure Insights.
 
 
 

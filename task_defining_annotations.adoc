@@ -19,7 +19,7 @@ summary: Tenere traccia dei dati utilizzando le annotazioni.
 
 
 [role="lead"]
-Quando si personalizza Cloud Insights per tenere traccia dei dati in base ai requisiti aziendali, è possibile definire note specializzate, denominate annotazioni, e assegnarle alle risorse.
+Durante la personalizzazione di Data Infrastructure Insights per il monitoraggio dei dati per i tuoi requisiti aziendali, puoi definire note specializzate, denominate annotazioni e assegnarle alle tue risorse.
 
 È possibile assegnare annotazioni alle risorse con informazioni quali fine del ciclo di vita delle risorse, data center, posizione dell'edificio, Tier di storage o livello di servizio del volume.
 
@@ -38,7 +38,7 @@ Ad esempio, se una risorsa viene affittata e il leasing scade entro due mesi, po
 
 == Tipi di annotazione predefiniti
 
-Cloud Insights fornisce alcuni tipi di annotazione predefiniti. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
+Data Infrastructure Insights fornisce alcuni tipi di annotazioni predefinite. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
 
 È possibile associare le risorse ai tipi di annotazione predefiniti, ad esempio:
 
@@ -48,7 +48,7 @@ Cloud Insights fornisce alcuni tipi di annotazione predefiniti. Queste annotazio
 * Stato, ad esempio hot (utilizzo elevato)
 
 
-La seguente tabella elenca i tipi di annotazione forniti da Cloud Insights.
+La tabella seguente elenca i tipi di annotazioni forniti da Data Infrastructure Insights.
 
 [cols="30,53, 16"]
 |===
@@ -93,10 +93,10 @@ NOTE: Alias, data center, hot, livello di servizio, Sunset, Switch Level (livell
 
 == Creazione di annotazioni personalizzate
 
-Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Sebbene Cloud Insights fornisca una serie di annotazioni predefinite, è possibile che si desideri visualizzare i dati in altri modi. I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio produttore dello storage, volumi numerici e statistiche delle performance. I dati aggiunti utilizzando le annotazioni non vengono rilevati da Cloud Insights.
+Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Sebbene Data Infrastructure Insights fornisca una serie di annotazioni predefinite, è possibile che si desideri visualizzare i dati in altri modi. I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio produttore dello storage, volumi numerici e statistiche delle performance. I dati aggiunti mediante le annotazioni non vengono rilevati da Data Infrastructure Insights.
 
 .Fasi
-. Nel menu Cloud Insights, fare clic su *Gestisci > Annotazioni*.
+. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotations* (Gestione > Annotazioni*).
 +
 La pagina Annotazioni visualizza l'elenco delle annotazioni.
 

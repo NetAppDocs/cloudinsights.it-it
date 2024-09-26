@@ -19,7 +19,7 @@ summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inve
 
 
 [role="lead"]
-Cloud Insights include una serie di monitor definiti dal sistema per metriche e registri. I monitor di sistema disponibili dipendono dai data collezions presenti nell'ambiente. Per questo motivo, i monitor disponibili in Cloud Insights potrebbero cambiare in base all'aggiunta di data collezions o alla modifica delle configurazioni.
+Data Infrastructure Insights include un certo numero di monitor definiti dal sistema sia per metriche che per i registri. I monitor di sistema disponibili dipendono dai data collezions presenti nell'ambiente. Per questo motivo, i monitor disponibili in Data Infrastructure Insights possono cambiare in base all'aggiunta di raccolte dati o alla modifica delle relative configurazioni.
 
 
 NOTE: Per impostazione predefinita, molti monitor di sistema sono in stato di _pausa_. È possibile attivare un monitor di sistema selezionando l'opzione _Riprendi_ per il monitor. Assicurarsi che _raccolta dati contatore avanzata_ e _attiva raccolta log EMS ONTAP_ siano attivati in Data Collector. Queste opzioni sono disponibili nel Data Collector di ONTAP in _Configurazione avanzata_:image:Enable_Log_Monitor_Collection.png["Attivazione della raccolta avanzata di contatori e registri EMS per ONTAP"]
@@ -41,7 +41,7 @@ I seguenti monitor definiti dal sistema sono disponibili, nei gruppi indicati.
 * Per impostazione predefinita, i monitor di entrambi i gruppi passano allo stato _Paused_.
 
 
-Di seguito sono riportati i monitor di sistema attualmente inclusi in Cloud Insights:
+Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infrastructure Insights:
 
 
 
@@ -605,10 +605,10 @@ Pod ideali per liberare la CPU sui nodi. | Avvertenza a > 80 %
 | Nome monitor | Descrizione | Azione correttiva 
 
 
-| Arresto dell'unità di acquisizione | Le unità di acquisizione Cloud Insights vengono riavviate periodicamente come parte degli aggiornamenti per introdurre nuove funzionalità. Questo avviene una volta al mese o meno in un ambiente tipico. Un avviso di avviso relativo allo spegnimento di un'unità di acquisizione deve essere seguito subito dopo da una risoluzione che indica che l'unità di acquisizione appena riavviata ha completato una registrazione con Cloud Insights. In genere, questo ciclo di shutdown-to-registration richiede da 5 a 15 minuti. | Se l'avviso si verifica frequentemente o dura più di 15 minuti, controllare il funzionamento del sistema che ospita l'unità di acquisizione, la rete e qualsiasi proxy che connette l'AU a Internet. 
+| Arresto dell'unità di acquisizione | Le unità di acquisizione di Data Infrastructure Insights vengono periodicamente riavviate durante gli aggiornamenti per introdurre nuove funzioni. Questo avviene una volta al mese o meno in un ambiente tipico. Un avviso di arresto di un'unità di acquisizione deve essere seguito subito dopo da una risoluzione, notando che l'unità di acquisizione appena riavviata ha completato una registrazione con Data Infrastructure Insights. In genere, questo ciclo di shutdown-to-registration richiede da 5 a 15 minuti. | Se l'avviso si verifica frequentemente o dura più di 15 minuti, controllare il funzionamento del sistema che ospita l'unità di acquisizione, la rete e qualsiasi proxy che connette l'AU a Internet. 
 
 
-| Collector non riuscito | Il sondaggio di un data collector ha riscontrato una situazione di errore imprevista. | Visita la pagina di raccolta dati di Cloud Insights per saperne di più sulla situazione. 
+| Collector non riuscito | Il sondaggio di un data collector ha riscontrato una situazione di errore imprevista. | Visita la pagina di raccolta dati in Data Infrastructure Insights per saperne di più sulla situazione. 
 
 
 | Avviso di raccolta | Questo avviso può in genere verificarsi a causa di una configurazione errata del data collector o del sistema di destinazione. Rivedere le configurazioni per evitare avvisi futuri. Può anche essere dovuto a un recupero di dati meno completi in cui il data collector ha raccolto tutti i dati possibili. Ciò può verificarsi quando le situazioni cambiano durante la raccolta dei dati (ad esempio, una macchina virtuale presente all'inizio della raccolta dei dati viene eliminata durante la raccolta dei dati e prima che i dati vengano acquisiti). | Controllare la configurazione del data collector o del sistema di destinazione. Tenere presente che il monitor per Collector Warning può inviare più avvisi rispetto ad altri tipi di monitor, pertanto si consiglia di non impostare destinatari di avvisi a meno che non si stia eseguendo la risoluzione dei problemi. 

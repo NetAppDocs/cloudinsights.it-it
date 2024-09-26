@@ -4,7 +4,7 @@ permalink: reporting_schema_diagrams.html
 keywords: Schema, DB Schema, premium, dwh, data warehouse 
 summary: Diagrammi dello schema di reporting 
 ---
-= Diagrammi dello schema di reporting di Cloud Insights
+= Schemi di reporting di Data Infrastructure Insights
 :toc: macro
 :hardbreaks:
 :allow-uri-read: 
@@ -21,7 +21,7 @@ summary: Diagrammi dello schema di reporting
 Questo documento fornisce i diagrammi dello schema per il database dei report. È inoltre possibile scaricare un file contenente link:ci_reporting_database_schema.pdf["tabelle dello schema"].
 
 
-NOTE: La funzione di reporting è disponibile in Cloud Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
 
 
 

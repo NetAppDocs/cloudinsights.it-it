@@ -5,17 +5,14 @@ summary: 'Vengono definite le applicazioni che vengono quindi applicate alle ris
 keywords: application, create application, 
 ---
 = Creazione di applicazioni
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -28,7 +25,7 @@ Se si desidera associare l'applicazione a un'entità aziendale, è necessario cr
 Cloud Insights consente di tenere traccia dei dati delle risorse associate alle applicazioni per attività come l'utilizzo o il reporting dei costi.
 
 .Fasi
-. Nel menu Cloud Insights, fare clic su *Gestisci > applicazioni*.
+. Nel menu Cloud Insights, fare clic su *osservabilità > arricchimento > applicazioni*. Selezionare
 +
 Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).
 

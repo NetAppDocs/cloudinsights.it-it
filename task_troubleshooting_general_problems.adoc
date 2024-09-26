@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_troubleshooting_general_problems.html 
-summary: Suggerimenti generali per la risoluzione dei problemi di Cloud Insights. 
+summary: Suggerimenti generali per la risoluzione dei problemi di Data Infrastructure Insights. 
 keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
 ---
-= Risoluzione dei problemi generali di Cloud Insights
+= Risoluzione dei problemi di informazioni generali sull'infrastruttura dati
 :toc: macro
 :hardbreaks:
 :toclevels: 1
@@ -19,7 +19,7 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 
 
 [role="lead"]
-Qui troverai suggerimenti per la risoluzione dei problemi di Cloud Insights.
+Qui troverai suggerimenti per la risoluzione dei problemi di Data Infrastructure Insights.
 
 Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Risoluzione dei problemi relativi all'unità di acquisizione Linux"] e. link:task_troubleshooting_windows_acquisition_unit_problems.html["Risoluzione dei problemi relativi all'unità di acquisizione di Windows"].
 
@@ -31,37 +31,22 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 | *Problema:* | *Provare questo:* 
 
 
-| Cloud Insights si disconnette automaticamente ogni 6 ore | Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Cloud Insights.
-
-Esempio:
-Aprire le impostazioni del browser
-
-Selezionare l'opzione "Allow all cookies" (Consenti tutti i cookie).
-*O*
-Seleziona "Blocca cookie di terze parti" e Aggiungi eccezioni per _[\*.]auth0.com_ e _[*.]netapp.com_.
-
-Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome.
-
-In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_. 
+| Data Infrastructure Insights si disconnette automaticamente ogni 6 ore | Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Data Infrastructure Insights. Esempio: Aprire le impostazioni del browser selezionare l'opzione "Consenti tutti i cookie". *O* selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per _[\*.]auth0.com_ e _[*.]NetApp.com_. Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome. In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_. 
 
 
-| Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione".  Questi sono specificamente per problemi o domande di BlueXP.
-Per tutti gli altri problemi di supporto tecnico Cloud Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
+| Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione". Questi sono specificamente per problemi o domande di BlueXP. Per tutti gli altri problemi di supporto tecnico di Data Infrastructure Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
 
 
-| Ho ricevuto un invito a Cloud Insights ma ricevo un messaggio "non autorizzato". | Verifica di aver effettuato l'iscrizione a un account BlueXP o che l'organizzazione utilizzi l'accesso SSO con BlueXP.
-
-Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo e-mail mostrato nell'e-mail di benvenuto di Cloud Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
+| Sono stato invitato a Data Infrastructure Insights ma viene visualizzato il messaggio "non autorizzato". | Verifica di aver effettuato l'iscrizione a un account BlueXP o che l'organizzazione utilizzi l'accesso SSO con BlueXP. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
 
 
-| Ho effettuato la disconnessione da BlueXP e mi è stato disconnesso automaticamente da Cloud Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp disconnette tutte le sessioni Cloud Insights. Se si dispone dell'accesso a più account Cloud Insights, la disconnessione da uno qualsiasi disconnette tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
+| Ho disconnesso da BlueXP  e mi sono disconnesso automaticamente da Data Infrastructure Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp chiude tutte le sessioni di approfondimento sull'infrastruttura dati. Se si dispone dell'accesso a più account Data Infrastructure Insights, la disconnessione da uno qualsiasi interrompe tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
 
 
 | Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account cloud NetApp richiedono la riautenticazione ogni pochi giorni (l'impostazione attuale di BlueXP è di 7 giorni). Effettua nuovamente l'accesso per accedere all'account. 
 
 
-| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Cloud Insights.
-Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo e-mail mostrato nell'e-mail di benvenuto di Cloud Insights 
+| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Data Infrastructure Insights. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights 
 
 
 | Altri errori di accesso | Provare la modalità incognito in Chrome o cancellare la cronologia del browser, i cookie e la cache. Provare con un profilo del browser diverso (ad esempio Chrome - Aggiungi persona). 
@@ -92,11 +77,11 @@ Verifica che l'indirizzo e-mail del tuo profilo BlueXP corrisponda all'indirizzo
 
 Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili nella link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
 
-Ulteriori informazioni di supporto sono disponibili sul sito Cloud Insights link:concept_requesting_support.html["Supporto"] pagina.
+Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].
 
-Se disponi di un abbonamento Cloud Insights attivo, puoi utilizzare le seguenti opzioni di supporto:
+Se si dispone di un abbonamento Data Infrastructure Insights attivo, è possibile utilizzare le seguenti opzioni di supporto:
 
 link:https://www.netapp.com/us/contact-us/support.aspx["Telefono"]
 link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["Ticket di supporto"]
 
-Per ulteriori informazioni, consultare https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Documentazione di supporto Cloud Insights"].
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Documentazione di supporto di Data Infrastructure Insights"].

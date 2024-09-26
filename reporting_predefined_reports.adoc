@@ -19,12 +19,12 @@ keywords: reporting, cognos, data warehouse, dwh, pre-defined
 
 
 [role="lead"]
-Il reporting Cloud Insights include report predefiniti che rispondono a una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui gli stakeholder hanno bisogno per prendere decisioni informate sulla propria infrastruttura di storage.
+Data Infrastructure Insights Reporting include report predefiniti che affrontano una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui gli stakeholder hanno bisogno per prendere decisioni informate sull'infrastruttura storage.
 
 
-NOTE: La funzione di reporting è disponibile in Cloud Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
 
-È possibile generare report predefiniti dal portale di reporting Cloud Insights, inviarli via email ad altri utenti e persino modificarli. Diversi report consentono di filtrare per dispositivo, entità aziendale o Tier. Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati.
+È possibile generare report predefiniti dal Data Infrastructure Insights Reporting Portal, inviarli tramite e-mail ad altri utenti e persino modificarli. Diversi report consentono di filtrare per dispositivo, entità aziendale o Tier. Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati.
 
 I report predefiniti mostrano l'inventario, la capacità dello storage, il chargeback, le performance, l'efficienza dello storage, e dati sui costi del cloud. È possibile modificare questi report predefiniti e salvare le modifiche.
 
@@ -34,7 +34,7 @@ I report predefiniti mostrano l'inventario, la capacità dello storage, il charg
 
 == Accedere ai report predefiniti
 
-Quando si apre il portale di reporting, la cartella _contenuto del team_ rappresenta il punto di partenza per selezionare il tipo di informazioni necessarie nei report di Cloud Insights.
+Quando si apre il portale di reporting, la cartella _Team Content_ è il punto di partenza per selezionare il tipo di informazioni necessarie nei report di Data Infrastructure Insights.
 
 . Nel riquadro di navigazione a sinistra, selezionare *contenuto > contenuto del team*.
 . Selezionare *Report* per accedere ai report predefiniti.
@@ -121,7 +121,7 @@ Il report NetApp Capacity and Performance fornisce dati globali per la capacità
 
 === Scorecard
 
-Il report Scorecard fornisce un riepilogo e lo stato generale di tutte le risorse acquisite da Cloud Insights. Lo stato è indicato da indicatori verdi, gialli e rossi:
+Il report Scorecard fornisce un riepilogo e lo stato generale di tutti gli asset acquisiti da Data Infrastructure Insights. Lo stato è indicato da indicatori verdi, gialli e rossi:
 
 * Verde indica la condizione normale
 * Il giallo indica un potenziale problema nell'ambiente

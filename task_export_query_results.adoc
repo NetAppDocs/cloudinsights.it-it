@@ -22,7 +22,7 @@ keywords: query, queries, export, csv
 È possibile esportare i risultati di qualsiasi query in un file .CSV, che consente di analizzare i dati o importarli in un'altra applicazione.
 
 .Fasi
-. Accedere a Cloud Insights.
+. Accedi a Data Infrastructure Insights.
 . Fare clic su *Query* e selezionare *Mostra tutte le query*.
 +
 Viene visualizzata la pagina Query.

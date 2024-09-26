@@ -67,7 +67,7 @@ Le annotazioni sono note specializzate assegnate alle risorse, che consentono di
 È necessario aver identificato tutti gli aggregati root che si desidera escludere dal report "High i/o Density" (densità i/o elevata).
 
 .Fasi
-. Nel menu Cloud Insights, fare clic su *Gestisci > Annotazioni*
+. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotations* (Gestione > Annotazioni*)
 . Fare clic su *Aggiungi*
 +
 .. Inserire il nome dell'annotazione: *RootAgg*
@@ -88,7 +88,7 @@ In alternativa all'applicazione manuale delle annotazioni a singole risorse, è 
 È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente.
 
 .Fasi
-. Nella barra degli strumenti di Cloud Insights, fare clic su *Gestisci > regole di annotazione*.
+. Nella barra degli strumenti di Data Infrastructure Insights, fare clic su *Manage > Annotation rules* (Gestisci > regole annotazione*).
 . Fare clic su *Aggiungi*. Viene visualizzata la finestra di dialogo Aggiungi regola.
 +
 .. Nella casella Nome, immettere un nome univoco che descriva la regola: *"RootAggrExclude"*

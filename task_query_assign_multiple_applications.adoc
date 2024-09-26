@@ -53,7 +53,7 @@ Viene visualizzato il menu a discesa azioni in blocco.
 
 Tutte le nuove applicazioni assegnate hanno la precedenza su quelle derivate da un'altra risorsa. Ad esempio, i volumi ereditano le applicazioni dagli host e, quando vengono assegnate nuove applicazioni a un volume, la nuova applicazione ha la precedenza sull'applicazione derivata.
 
-Dopo aver fatto clic su _Salva_ in un'aggiunta in blocco o su _Rimuovi_ in un'azione di eliminazione in blocco, Cloud Insights informa che l'azione richiederà del tempo. È possibile ignorare questo messaggio; l'azione continuerà in background.
+Dopo aver fatto clic su _Save_ su un'operazione di aggiunta bulk o _Remove_ su un'azione di eliminazione bulk, Data Infrastructure Insights informa che l'azione richiederà del tempo. È possibile ignorare questo messaggio; l'azione continuerà in background.
 
 
 NOTE: Per gli ambienti con grandi quantità di risorse correlate, l'ereditarietà delle assegnazioni delle applicazioni a tali risorse potrebbe richiedere diversi minuti. Attendere più tempo per l'ereditarietà se si dispone di molte risorse correlate.

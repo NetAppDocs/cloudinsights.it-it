@@ -5,24 +5,21 @@ summary: Visualizzazione delle query create
 keywords: query, queries, viewing 
 ---
 = Visualizzazione delle query
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 È possibile visualizzare le query per monitorare le risorse e modificare il modo in cui le query visualizzano i dati relativi alle risorse.
 
 .Fasi
-. Accedere al tenant Cloud Insights.
+. Effettua l'accesso al tenant Data Infrastructure Insights.
 . Fare clic su *Query* e selezionare *Mostra tutte le query*. È possibile modificare la modalità di visualizzazione delle query effettuando una delle seguenti operazioni:
 . È possibile inserire del testo nella casella di filtro per cercare e visualizzare query specifiche.
 . È possibile modificare l'ordinamento delle colonne nella tabella delle query in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
@@ -30,4 +27,4 @@ keywords: query, queries, viewing
 . Per spostare una colonna, fare clic sull'intestazione della colonna e trascinarla verso destra o verso sinistra.
 
 
-Quando si scorrono i risultati della query, tenere presente che i risultati potrebbero cambiare, poiché Cloud Insights esegue automaticamente il polling dei data collettori. Ciò potrebbe causare la mancanza di alcuni elementi o la mancata visualizzazione di alcuni elementi in base all'ordinamento.
+Quando si scorrono i risultati della query, tenere presente che i risultati possono cambiare in quanto Data Infrastructure Insights esegue automaticamente il polling dei dati di raccolta. Ciò potrebbe causare la mancanza di alcuni elementi o la mancata visualizzazione di alcuni elementi in base all'ordinamento.

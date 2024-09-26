@@ -19,10 +19,10 @@ keywords: monitor, alert, viewing
 
 
 [role="lead"]
-Cloud Insights visualizza gli avvisi quando link:task_create_monitor.html["soglie monitorate"] vengono superati.
+Data Infrastructure Insights visualizza gli avvisi quando link:task_create_monitor.html["soglie monitorate"] vengono superati.
 
 
-TIP: Monitor e avvisi sono disponibili in Cloud Insights Standard Edition e versioni successive.
+TIP: Monitor e avvisi sono disponibili in Data Infrastructure Insights Standard Edition e versioni successive.
 
 
 
@@ -71,7 +71,7 @@ image:alert_detail_page.png["Pagina dei dettagli degli avvisi"]
 
 == Avvisa quando mancano dati
 
-In un sistema in tempo reale come Cloud Insights, per avviare l'analisi di un monitor per decidere se generare un avviso, ci affidiamo a una delle due cose seguenti:
+In un sistema in tempo reale, ad esempio Data Infrastructure Insights, per attivare l'analisi di un monitor e decidere se generare un avviso, ci basiamo su una delle due cose seguenti:
 
 * il prossimo datapoint per arrivare
 * un timer da attivare quando non c'è data apoint e hai atteso abbastanza a lungo
@@ -87,4 +87,4 @@ Se si dispone di un monitor con una finestra di 30 minuti che rileva che una con
 
 È possibile configurare un monitor in modo che la condizione sia *sempre* sull'oggetto monitorato, ad esempio IOPS > 1 o latenza > 0. Questi vengono spesso creati come monitor di "test" e poi dimenticati. Tali monitor creano avvisi che rimangono costantemente aperti sugli oggetti costitutivi, causando problemi di stress e stabilità del sistema nel tempo.
 
-Per evitare questo problema, Cloud Insights chiuderà automaticamente qualsiasi avviso "permanentemente attivo" dopo 7 giorni. Tenere presente che le condizioni di monitoraggio sottostanti potrebbero (probabilmente continueranno) sussistere, causando l'emissione quasi immediata di un nuovo avviso, ma questa chiusura degli avvisi "sempre attivi" riduce alcune delle sollecitazioni del sistema che altrimenti potrebbero verificarsi.
+Per evitare questo problema, Data Infrastructure Insights chiuderà automaticamente qualsiasi avviso "permanentemente attivo" dopo 7 giorni. Tenere presente che le condizioni di monitoraggio sottostanti potrebbero (probabilmente continueranno) sussistere, causando l'emissione quasi immediata di un nuovo avviso, ma questa chiusura degli avvisi "sempre attivi" riduce alcune delle sollecitazioni del sistema che altrimenti potrebbero verificarsi.

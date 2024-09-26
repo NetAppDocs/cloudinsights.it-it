@@ -2,27 +2,24 @@
 sidebar: sidebar 
 permalink: task_annotation_import.html 
 keywords: annotations, import, api 
-summary: 'È possibile importare annotazioni e applicazioni utilizzando l"API Cloud Insights.' 
+summary: 'Puoi importare annotazioni e applicazioni utilizzando l"API Data Infrastructure Insights.' 
 ---
 = Importazione delle annotazioni
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
-Cloud Insights include un'API per importare annotazioni o applicazioni da un file CSV e assegnarle agli oggetti specificati.
+Data Infrastructure Insights include un'API per importare annotazioni o applicazioni da un file CSV e assegnarle agli oggetti specificati.
 
 
-NOTE: L'API Cloud Insights è disponibile in *Cloud Insights Premium Edition*.
+NOTE: L'API Data Infrastructure Insights è disponibile in *Data Infrastructure Insights Premium Edition*.
 
 
 

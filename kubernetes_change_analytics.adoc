@@ -30,13 +30,13 @@ Per visualizzare Kubernetes Change Analytics, accedere a *Kubernetes > Change An
 
 image:ChangeAnalytitcs_Main_Screen.png["Schermata principale di Kubernetes Change Analytics, che mostra avvisi e allarmi critici, implementazioni riuscite e non riuscite e i 3 principali carichi di lavoro che generano avvisi"].
 
-La pagina viene aggiornata automaticamente in base all'intervallo di tempo Cloud Insights attualmente selezionato.  Intervalli di tempo più piccoli significano un aggiornamento dello schermo più frequente.
+La pagina viene aggiornata automaticamente in base all'intervallo di tempo Data Infrastructure Insights attualmente selezionato. Intervalli di tempo più piccoli significano un aggiornamento dello schermo più frequente.
 
 
 
 == Filtraggio
 
-Come per tutte le funzionalità di Cloud Insights, filtrare l'elenco di modifiche è intuitivo: Nella parte superiore della pagina, immettere o selezionare i valori per il cluster Kubernetes, lo spazio dei nomi o il workload oppure aggiungere i propri filtri selezionando il pulsante {+].
+Come per tutte le funzionalità di Data Infrastructure Insights, il filtraggio della lista di modifiche è intuitivo: Nella parte superiore della pagina, immettere o selezionare valori per il cluster Kubernetes, lo spazio dei nomi o il carico di lavoro oppure aggiungere i propri filtri selezionando il pulsante {+].
 
 Quando si applica un filtro a un cluster, uno spazio dei nomi e un carico di lavoro specifici (insieme agli altri filtri impostati), viene visualizzata una timeline di distribuzione e avvisi per il carico di lavoro nello spazio dei nomi in quel cluster. Ingrandire ulteriormente facendo clic e trascinando il grafico per concentrarsi su un intervallo di tempo più specifico.
 

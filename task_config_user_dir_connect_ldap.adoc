@@ -22,7 +22,7 @@ summary: Configurazione di Workload Security LDAP User Directory Collector
 È possibile configurare la sicurezza del carico di lavoro per raccogliere gli attributi utente dai server di directory LDAP.
 
 .Prima di iniziare
-* Per eseguire questa attività, è necessario essere un amministratore o un proprietario di account Cloud Insights.
+* Per eseguire questa attività, è necessario essere un amministratore di Data Infrastructure Insights o un proprietario dell'account.
 * È necessario disporre dell'indirizzo IP del server che ospita il server di directory LDAP.
 * Prima di configurare un connettore di directory LDAP, è necessario configurare un agente.
 

@@ -22,9 +22,9 @@ keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom
 È possibile utilizzare gli strumenti di creazione dei report per creare report personalizzati. Dopo aver creato i report, è possibile salvarli ed eseguirli in base a una pianificazione regolare. I risultati dei report possono essere inviati automaticamente via email a te e ad altri.
 
 
-NOTE: La funzione di reporting è disponibile in Cloud Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
 
-Gli esempi di questa sezione mostrano il seguente processo, che può essere utilizzato per qualsiasi modello di dati di reporting Cloud Insights:
+Gli esempi in questa sezione mostrano il seguente processo, che può essere utilizzato per qualsiasi modello di dati Data Infrastructure Insights Reporting:
 
 * Identificazione di una domanda a cui rispondere con un report
 * Determinazione dei dati necessari per supportare i risultati
@@ -38,7 +38,7 @@ Ad esempio, se non si completa il processo di identificazione del dispositivo, i
 Prima di progettare i report, completare le seguenti attività:
 
 * Configura tutto link:task_configure_data_collectors.html["raccolta di dati"] correttamente.
-* Inserire annotazioni (ad esempio Tier, data center e business unit) sui dispositivi e sulle risorse del proprio ambiente. È vantaggioso che le annotazioni siano stabili prima di generare i report, perché Cloud Insights Reporting raccoglie informazioni cronologiche.
+* Inserire annotazioni (ad esempio Tier, data center e business unit) sui dispositivi e sulle risorse del proprio ambiente. È utile che le annotazioni siano stabili prima di generare i report, perché Data Infrastructure Insights Reporting raccoglie informazioni cronologiche.
 
 
 
@@ -87,9 +87,9 @@ Durante la progettazione dei report, potrebbero essere utili diversi suggeriment
 
 * Determinare se è necessario utilizzare dati correnti o storici.
 +
-La maggior parte dei report deve solo generare report sui dati più recenti disponibili in Cloud Insights.
+La maggior parte dei report deve generare report solo sui dati più recenti disponibili in Data Infrastructure Insights.
 
-* Il reporting Cloud Insights fornisce informazioni storiche su capacità e performance, ma non sull'inventario.
+* Il report di approfondimento sull'infrastruttura dati fornisce informazioni cronologiche su capacità e prestazioni, ma non sull'inventario.
 * Tutti vedono tutti i dati; tuttavia, potrebbe essere necessario limitare i dati a un pubblico specifico.
 +
 Per segmentare le informazioni per diversi utenti, è possibile creare report e impostare autorizzazioni di accesso per tali utenti.
@@ -100,7 +100,7 @@ Per segmentare le informazioni per diversi utenti, è possibile creare report e 
 
 == Modelli di dati di reporting
 
-Cloud Insights include diversi modelli di dati da cui è possibile selezionare report predefiniti o creare report personalizzati.
+Data Infrastructure Insights include diversi modelli di dati da cui è possibile selezionare report predefiniti o creare report personalizzati.
 
 Ogni modello di dati contiene un semplice data mart e un data mart avanzato:
 
@@ -188,7 +188,7 @@ Consente di creare report sull'ambiente virtuale e sull'utilizzo della capacità
 * Quali sono i risparmi in termini di efficienza dello storage ottenuti utilizzando le tecnologie di thin provisioning e deduplica dello storage?
 
 
-Le capacità del modello di dati della capacità della macchina virtuale sono prese dai dischi virtuali (VMDK). Ciò significa che la dimensione di provisioning di una macchina virtuale che utilizza il modello di dati della capacità della macchina virtuale corrisponde alla dimensione dei dischi virtuali. Si tratta di una funzione diversa dalla capacità fornita nella vista macchine virtuali di Cloud Insights, che mostra le dimensioni del provisioning per la macchina virtuale stessa.
+Le capacità del modello di dati della capacità della macchina virtuale sono prese dai dischi virtuali (VMDK). Ciò significa che la dimensione di provisioning di una macchina virtuale che utilizza il modello di dati della capacità della macchina virtuale corrisponde alla dimensione dei dischi virtuali. Si tratta di un'operazione diversa dalla capacità sottoposta a provisioning nella vista Virtual Machine (macchine virtuali) di Data Infrastructure Insights, che mostra le dimensioni del provisioning per la macchina virtuale stessa.
 
 
 
@@ -302,7 +302,7 @@ Il modello di dati sulle performance include informazioni che consentono di dete
 
 === Modello di dati sull'efficienza dello storage
 
-Consente di tenere traccia del potenziale e del punteggio di efficienza dello storage nel tempo. Questo modello di dati memorizza le misurazioni non solo della capacità fornita, ma anche della quantità utilizzata o consumata (la misurazione fisica). Ad esempio, quando il thin provisioning è attivato, Cloud Insights indica la capacità del dispositivo. È inoltre possibile utilizzare questo modello per determinare l'efficienza quando la deduplica è attivata. Puoi rispondere a diverse domande utilizzando il data mart sull'efficienza dello storage:
+Consente di tenere traccia del potenziale e del punteggio di efficienza dello storage nel tempo. Questo modello di dati memorizza le misurazioni non solo della capacità fornita, ma anche della quantità utilizzata o consumata (la misurazione fisica). Ad esempio, quando il thin provisioning è abilitato, Data Infrastructure Insights indica la capacità acquisita dal dispositivo. È inoltre possibile utilizzare questo modello per determinare l'efficienza quando la deduplica è attivata. Puoi rispondere a diverse domande utilizzando il data mart sull'efficienza dello storage:
 
 * Quali sono i nostri risparmi in termini di efficienza dello storage derivanti dall'implementazione delle tecnologie di thin provisioning e deduplica?
 * Quali sono i risparmi in termini di storage nei data center?

@@ -5,17 +5,14 @@ keywords: k8s, pods, clusters, nodes. troubleshooting, planning
 summary: La pagina dei dettagli del nodo Kubernetes fornisce informazioni dettagliate sullo storage FV e Pod back-end. 
 ---
 = Pagina dei dettagli del nodo Kubernetes
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -27,9 +24,9 @@ image:KubernetesNodeFiltering.png["Kubernetes Node Detail (Dettagli nodo Kuberne
 
 == Esplorazione dei pod e dei volumi persistenti del nodo
 
-Cloud Insights offre visibilità sullo storage back-end per gli ambienti Kubernetes, fornendo informazioni dettagliate sui pod Kubernetes e sui volumi persistenti (PVS). È possibile tenere traccia dei contatori FV come IOPS, latenza e throughput dall'utilizzo di un singolo Pod attraverso un contatore FV a un FV e fino al dispositivo di storage back-end.
+Data Infrastructure Insights offre visibilità sullo storage back-end per i tuoi ambienti Kubernetes, fornendo informazioni utili ai tuoi Kubernetes Pods e volumi persistenti (PVS). È possibile tenere traccia dei contatori FV come IOPS, latenza e throughput dall'utilizzo di un singolo Pod attraverso un contatore FV a un FV e fino al dispositivo di storage back-end.
 
-A livello di PV, Cloud Insights raccoglie le informazioni sulla capacità back-end (volume interno o volume a seconda del tipo di PV) (totale, utilizzato, percentuale utilizzata), oltre al numero di snapshot del volume interno. Nel Pod a livello di storage, raccoglie la capacità back-end e il numero di snapshot dei volumi interni.
+A livello PV, Data Infrastructure Insights raccoglie informazioni sulla capacità di back-end (volume interno o volume a seconda del tipo di PV) (totale, utilizzato, percentuale utilizzata), nonché il conteggio snapshot del volume interno. Nel Pod a livello di storage, raccoglie la capacità back-end e il numero di snapshot dei volumi interni.
 
 In una landing page del volume o del volume interno, vengono visualizzate due tabelle:
 

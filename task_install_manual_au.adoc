@@ -2,26 +2,23 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: 'Cloud Insights può essere configurato per l"aggiornamento manuale del software AU, garantendo un maggiore controllo sul software installato nell"ambiente.' 
+summary: Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato nel proprio ambiente. 
 ---
 = Installazione manuale del software dell'unità di acquisizione
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
-Per impostazione predefinita, Cloud Insights aggiorna automaticamente il software dell'unità di acquisizione (AU) non appena vengono implementati gli aggiornamenti. Tuttavia, in ambienti controllati sicuri, l'aggiornamento automatico potrebbe non essere possibile o desiderato.  In questi casi, Cloud Insights può essere configurato per l'aggiornamento manuale del software AU, garantendo un maggiore controllo sul software installato nell'ambiente.
+Per impostazione predefinita, Data Infrastructure Insights aggiorna automaticamente il software dell'unità di acquisizione (AU) non appena vengono distribuiti gli aggiornamenti. Tuttavia, in ambienti controllati sicuri, l'aggiornamento automatico potrebbe non essere possibile o desiderato. In questi casi, Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato nel proprio ambiente.
 
-Per scaricare e installare manualmente il software AU, procedere come segue. Cloud Insights fornisce un'utile pagina di documentazione di Swagger che è possibile utilizzare per molte di queste istruzioni, oppure è possibile utilizzare i propri script/comandi API. Accedere a Admin > API Access (Amministrazione > accesso API) e fare clic sul collegamento "API Documentation" (documentazione API).
+Per scaricare e installare manualmente il software AU, procedere come segue. Data Infrastructure Insights fornisce un'utile pagina di documentazione di Swagger che è possibile utilizzare per molte di queste istruzioni o per utilizzare i propri script/comandi API. Accedere a Admin > API Access (Amministrazione > accesso API) e fare clic sul collegamento "API Documentation" (documentazione API).
 
 Il processo è simile per Linux e Windows.
 
@@ -29,7 +26,7 @@ Il processo è simile per Linux e Windows.
 
 == Esecuzione di UNA nuova installazione AU su Linux:
 
-. In Cloud Insights, creare un token API.
+. In Data Infrastructure Insights, creare un token API.
 +
 .. Accedere a *Admin > API Access* e selezionare *+API Access Token*.
 +
@@ -47,7 +44,7 @@ Il processo è simile per Linux e Windows.
 
 image:Manual_AU_Create_API_Token.png["Crea token API"]
 
-. In Swagger (Amministratore > accesso API > documentazione API), utilizzare il token per autorizzare le API Cloud Insights
+. In Swagger (Admin > API Access > API Documentation), utilizzare il token per autorizzare le API di Data Infrastructure Insights
 +
 .. Fare clic su _autorizzare_ nella parte superiore destra della schermata Swagger
 .. Incollare il token copiato dall'alto nel campo Customer apiKey
@@ -82,7 +79,7 @@ NOTE: Se non si sta scaricando la versione più recente, confermare con NetApp l
 
 IMPORTANT: I passaggi successivi richiedono l'utilizzo di un token temporaneo. Non utilizzare il token di accesso API creato in precedenza.
 
-. Nello Swagger API di Cloud Insights, creare un token una tantum utilizzando l'API _/au/oneTimeToken_.
+. Nello Swagger API di Data Infrastructure Insights, creare un token monouso utilizzando l'API _/au/oneTimeToken_.
 +
 .. Copia il token monouso risultante.
 
@@ -151,7 +148,7 @@ Nota: Se si utilizzano l'utente e il gruppo "cisys", questi verranno visualizzat
 +
 Nota: Se si prevede di installare utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate in lettura e scrittura sia per il proprietario che per il gruppo (chmod 660 …)
 
-. Riavviare l'AU. In Cloud Insights, accedere a osservabilità > collettori e selezionare la scheda unità di acquisizione. Scegliere Riavvia dal menu "tre punti" a destra dell'unità AU.
+. Riavviare l'AU. In Data Infrastructure Insights, accedere a Observability > Collectors e selezionare la scheda Acquisition Units (unità di acquisizione). Scegliere Riavvia dal menu "tre punti" a destra dell'unità AU.
 
 
 
@@ -194,7 +191,7 @@ Nota: Se si utilizzano l'utente e il gruppo "cisys", questi verranno visualizzat
 +
 Nota: Se si prevede di installare utilizzando diversi utenti personalizzati, assicurarsi che le autorizzazioni di gruppo siano impostate in lettura e scrittura sia per il proprietario che per il gruppo (chmod 660 …)
 
-. Riavviare l'AU. In Cloud Insights, accedere a osservabilità > collettori e selezionare la scheda unità di acquisizione. Scegliere Riavvia dal menu "tre punti" a destra dell'unità AU.
+. Riavviare l'AU. In Data Infrastructure Insights, accedere a Observability > Collectors e selezionare la scheda Acquisition Units (unità di acquisizione). Scegliere Riavvia dal menu "tre punti" a destra dell'unità AU.
 
 
 
@@ -203,7 +200,7 @@ Nota: Se si prevede di installare utilizzando diversi utenti personalizzati, ass
 
 Se si fornisce uno script di shell UNIX, può essere eseguito dall'unità di acquisizione per recuperare la *chiave privata* e la *chiave pubblica* dal sistema di gestione delle chiavi.
 
-Per recuperare la chiave, Cloud Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.
+Per recuperare la chiave, Data Infrastructure Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.
 
 Per inviare nuovamente il tasto all'unità di acquisizione, lo script deve stampare il tasto sull'output standard. Lo script deve stampare _solo_ la chiave per l'output standard; nessun altro testo deve essere stampato su output standard. Una volta che la chiave richiesta viene stampata nell'output standard, lo script deve uscire con un codice di uscita di 0; qualsiasi altro codice di ritorno viene considerato un errore.
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_with_cloud_insights.html 
-summary: Introduzione a Cloud Insights. 
+summary: Guida introduttiva di Data Infrastructure Insights. 
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
 = Per iniziare a raccogliere i dati
@@ -19,11 +19,11 @@ keywords: invite, roles, data collector, acquisition unit, AU
 
 
 [role="lead"]
-Dopo aver effettuato la registrazione a Cloud Insights e aver effettuato l'accesso all'ambiente per la prima volta, verrà illustrata la procedura seguente per iniziare a raccogliere e gestire i dati.
+Dopo aver effettuato la registrazione a Data Infrastructure Insights e aver effettuato l'accesso all'ambiente per la prima volta, verranno eseguite le procedure guidate per iniziare a raccogliere e gestire i dati.
 
 I raccoglitori di dati rilevano le informazioni provenienti dalle origini dati, ad esempio dispositivi di storage, switch di rete e macchine virtuali. Le informazioni raccolte vengono utilizzate per l'analisi, la convalida, il monitoraggio e la risoluzione dei problemi.
 
-Cloud Insights ha a disposizione tre tipi di raccolta dati:
+Data Infrastructure Insights mette a disposizione tre tipi di raccolta dati:
 
 * Infrastruttura (dispositivi storage, switch di rete, infrastruttura di calcolo)
 * Sistemi operativi (ad esempio VMware o Windows)
@@ -36,7 +36,7 @@ Seleziona il tuo primo data collector tra i vendor e i modelli supportati dispon
 
 == Installare un'unità di acquisizione
 
-Se è stato selezionato un data collector _infrastruttura_, è necessaria un'unità di acquisizione per inserire i dati in Cloud Insights. È necessario scaricare e installare il software dell'unità di acquisizione su un server o una macchina virtuale nel data center da cui si desidera effettuare la raccolta. È possibile utilizzare una singola unità di acquisizione per più data colleziones.
+Se è stato selezionato un data collector _Infrastructure_, è necessaria un'unità di acquisizione per inserire i dati in Data Infrastructure Insights. È necessario scaricare e installare il software dell'unità di acquisizione su un server o una macchina virtuale nel data center da cui si desidera effettuare la raccolta. È possibile utilizzare una singola unità di acquisizione per più data colleziones.
 
 image:NewLinuxAUInstall.png["Istruzioni Linux AU"]
 
@@ -69,7 +69,7 @@ Sarà possibile configurare altri data collezioner in un secondo momento.
 
 === Sistema operativo:
 
-Per i data raccoglitori di sistemi operativi, scegliere una piattaforma (Linux, Windows) per installare un agente Cloud Insights. Per raccogliere i dati dai servizi, è necessario disporre di almeno un agente. L'agente raccoglie anche i dati dall'host stesso, per l'utilizzo in Cloud Insights. Questi dati sono classificati come dati "nodo" nei widget, ecc.
+Per i raccoglitori di dati _sistema operativo_, scegliete una piattaforma (Linux, Windows) per installare un agente di Data Infrastructure Insights. Per raccogliere i dati dai servizi, è necessario disporre di almeno un agente. L'agente raccoglie inoltre i dati dall'host stesso, per utilizzarli in Data Infrastructure Insights. Questi dati sono classificati come dati "nodo" nei widget, ecc.
 
 * Aprire un terminale o una finestra di comando sull'host dell'agente o sulla macchina virtuale e incollare il comando visualizzato per installare l'agente.
 * Al termine dell'installazione, fare clic su *complete Setup* (completa installazione).
@@ -92,7 +92,7 @@ Per i data raccoglitori _Service_, fare clic su un riquadro per aprire la pagina
 
 == Aggiungere dashboard
 
-A seconda del tipo di data collector iniziale selezionato per la configurazione (storage, switch, ecc.), verranno importati uno o più dashboard pertinenti. Ad esempio, se è stato configurato un data collector per lo storage, verrà importato un set di dashboard relativi allo storage e ne verrà impostata una come home page di Cloud Insights. È possibile modificare la home page dall'elenco *Dashboards > Show All Dashboards* (Dashboard > Mostra tutti i dashboard).
+A seconda del tipo di data collector iniziale selezionato per la configurazione (storage, switch, ecc.), verranno importati uno o più dashboard pertinenti. Ad esempio, se è stato configurato un agente di raccolta dati di storage, verrà importato un set di dashboard relativi allo storage, che verrà impostato come home page di Data Infrastructure Insights. È possibile modificare la home page dall'elenco *Dashboards > Show All Dashboards* (Dashboard > Mostra tutti i dashboard).
 
 È possibile importare ulteriori dashboard in un secondo momento oppure link:concept_dashboards_overview.html["crea il tuo"].
 
@@ -113,7 +113,7 @@ Se il processo di configurazione iniziale viene interrotto (ad esempio, se si ch
 
 == Definizioni utili
 
-Le seguenti definizioni possono essere utili quando si parla di raccolta di dati Cloud Insights o di funzionalità:
+Le seguenti definizioni possono essere utili quando si parla di raccolte dati o funzionalità di Data Infrastructure Insights:
 
 * Ciclo di vita del raccoglitore: Un raccoglitore appartiene a uno dei seguenti stati nel suo ciclo di vita:
 +

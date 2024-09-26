@@ -19,14 +19,14 @@ summary: Unità di acquisizione installazione, disinstallazione, configurazione 
 
 
 [role="lead"]
-Cloud Insights raccoglie i dati dei dispositivi utilizzando una o più unità di acquisizione installate sui server locali. Ogni unità di acquisizione può ospitare più Data Collector, che inviano le metriche del dispositivo a Cloud Insights per l'analisi.
+Data Infrastructure Insights raccoglie i dati dei dispositivi utilizzando una o più unità di acquisizione installate sui server locali. Ogni unità di acquisizione può ospitare più Data Collector, che inviano metriche di dispositivo a Data Infrastructure Insights per l'analisi.
 
 In questo argomento viene descritto come aggiungere unità di acquisizione e vengono descritte le procedure aggiuntive necessarie quando l'ambiente utilizza un proxy.
 
 
 NOTE: Per un controllo accurato e la creazione di report dei dati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
 
-Informazioni sulla sicurezza di Cloud Insights link:security_overview.html["qui"].
+Informazioni sulla sicurezza di Data Infrastructure Insights link:security_overview.html["qui"].
 
 
 
@@ -37,7 +37,7 @@ Informazioni sulla sicurezza di Cloud Insights link:security_overview.html["qui"
 
 
 .Procedura per l'installazione dell'unità di acquisizione Linux
-. Accedere come amministratore o come proprietario dell'account all'ambiente Cloud Insights.
+. Accedere come Amministratore o Proprietario dell'account al proprio ambiente Data Infrastructure Insights.
 . Fare clic su *osservabilità > Collector > unità di acquisizione > +unità di acquisizione*
 +
 Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegli Linux.
@@ -87,9 +87,9 @@ Nota: Prestare attenzione alle restrizioni relative ai caratteri speciali nei ca
 
 === Configurazione del proxy
 
-L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Cloud Insights. Il certificato client deve essere passato al server Cloud Insights per essere autenticato. A tale scopo, il proxy deve essere impostato per inoltrare la richiesta https al server Cloud Insights senza decifrare i dati.
+L'unità di acquisizione utilizza l'autenticazione reciproca/a 2 vie per connettersi al server Data Infrastructure Insights. Il certificato client deve essere passato al server Data Infrastructure Insights per essere autenticato. A tal fine, è necessario impostare il proxy per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
 
-Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Cloud Insights, ad esempio:
+Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
 
  *.cloudinsights.netapp.com
 
@@ -113,7 +113,7 @@ Se nel proprio ambiente si dispone di workload Security, in questo elenco vengon
 
 .Procedura per l'installazione dell'unità di acquisizione Windows
 . Accedere al server/VM dell'unità di acquisizione come utente con autorizzazioni di amministratore.
-. Su tale server, aprire una finestra del browser e accedere all'ambiente Cloud Insights come Amministratore o Proprietario dell'account.
+. Sul server, aprire una finestra del browser e accedere all'ambiente Data Infrastructure Insights come Amministratore o Proprietario dell'account.
 . Fare clic su *osservabilità > Collettori > unità di acquisizione > +unità di acquisizione* .
 +
 Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegliere Windows.
@@ -143,9 +143,9 @@ image::NewWindowsAUInstall.png[Installazione di Windows AU]
 
 === Configurazione del proxy
 
-L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Cloud Insights. Il certificato client deve essere passato al server Cloud Insights per essere autenticato. A tale scopo, il proxy deve essere impostato per inoltrare la richiesta https al server Cloud Insights senza decifrare i dati.
+L'unità di acquisizione utilizza l'autenticazione reciproca/a 2 vie per connettersi al server Data Infrastructure Insights. Il certificato client deve essere passato al server Data Infrastructure Insights per essere autenticato. A tal fine, è necessario impostare il proxy per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
 
-Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Cloud Insights, ad esempio:
+Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
 
  *.cloudinsights.netapp.com
 
@@ -174,7 +174,7 @@ Per disinstallare il software dell'unità di acquisizione, procedere come indica
 
 Se si disinstalla un'unità di acquisizione *Windows*:
 
-. Sul server/VM dell'unità di acquisizione, aprire il pannello di controllo e scegliere *Disinstalla un programma*. Selezionare il programma dell'unità di acquisizione Cloud Insights da rimuovere.
+. Sul server/VM dell'unità di acquisizione, aprire il pannello di controllo e scegliere *Disinstalla un programma*. Selezionare il programma Data Infrastructure Insights Acquisition Unit per la rimozione.
 . Fare clic su Disinstalla e seguire le istruzioni.
 
 
@@ -196,7 +196,7 @@ Se si disinstalla un'unità di acquisizione *Linux*:
 
 *Dopo* disinstallazione dell'AU:
 
-. In Cloud Insights, andare su *osservabilità > Collector e selezionare la scheda *unità di acquisizione*.
+. In Data Infrastructure Insights, andare su *Observability > Collectors (osservabilità > Collector) e selezionare la scheda *Acquisition Units* (unità di acquisizione).
 . Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
 
 
@@ -218,7 +218,7 @@ Prima di reinstallare un'unità di acquisizione, è necessario configurare un'un
 
 .Fasi
 . Accedere al server/VM dell'unità di acquisizione e disinstallare il software AU.
-. Accedere all'ambiente Cloud Insights e andare a *osservabilità > Collector*.
+. Accedere all'ambiente Data Infrastructure Insights e andare a *osservabilità > Collector*.
 . Per ciascun data collector, fare clic sul menu Options (Opzioni) a destra e selezionare _Edit_ (Modifica). Assegnare il data collector all'unità di acquisizione temporanea e fare clic su *Save* (Salva).
 +
 È inoltre possibile selezionare più raccoglitori di dati dello stesso tipo e fare clic sul pulsante *azioni in blocco*. Scegliere _Edit_ e assegnare i data collezioner all'unità di acquisizione temporanea.

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reporting_overview.html 
-summary: Report predefiniti e personalizzati dei tuoi dati con Cloud Insights. 
+summary: Reporting pre-definito e personalizzato dei dati con Data Infrastructure Insights. 
 keywords: reporting, cognos, data warehouse, dwh 
 ---
-= Panoramica dei report Cloud Insights
+= Panoramica dei report di approfondimento sull'infrastruttura dati
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -19,12 +19,12 @@ keywords: reporting, cognos, data warehouse, dwh
 
 
 [role="lead"]
-Cloud Insights Reporting è uno strumento di business intelligence che consente di visualizzare report predefiniti o creare report personalizzati.
+Il reporting di Data Infrastructure Insights è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati.
 
 
-NOTE: La funzione di reporting è disponibile in Cloud Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
 
-Con il reporting Cloud Insights è possibile eseguire le seguenti attività:
+Il reporting Data Infrastructure Insights ti consente di eseguire le seguenti attività:
 
 * Eseguire un report predefinito
 * Creare un report personalizzato
@@ -34,7 +34,7 @@ Con il reporting Cloud Insights è possibile eseguire le seguenti attività:
 * Utilizzare i colori per rappresentare le soglie sui dati
 
 
-I report Cloud Insights possono generare report personalizzati per aree come chargeback, analisi dei consumi e previsioni e possono aiutare a rispondere a domande come:
+I report di Data Infrastructure Insights possono generare report personalizzati per aree come il chargeback, l'analisi del consumo e le previsioni e possono aiutare a rispondere a domande come le seguenti:
 
 * Di quale inventario dispongo?
 * Dov'è il mio inventario?
@@ -47,21 +47,21 @@ I report Cloud Insights possono generare report personalizzati per aree come cha
 
 
 
-== Accesso ai report di Cloud Insights
+== Accesso ai report di approfondimento sull'infrastruttura dati
 
-È possibile accedere ai report di Cloud Insights facendo clic sul collegamento *Report* nel menu.
+È possibile accedere a Data Infrastructure Insights Reporting facendo clic sul collegamento *Reports* nel menu.
 
-Viene quindi utilizzata l'interfaccia di reporting. Cloud Insights utilizza IBM Cognos Analytics per il suo motore di reporting.
+Viene quindi utilizzata l'interfaccia di reporting. Data Infrastructure Insights utilizza IBM Cognos Analytics per il proprio motore di reporting.
 
 
 
 == Che cos'è ETL?
 
-Quando si lavora con Reporting, si sentiranno i termini "Data Warehouse" e "ETL". ETL sta per "Estrai, trasforma e carica". Il processo ETL recupera i dati raccolti in Cloud Insights e li trasforma in un formato da utilizzare in Reporting. Per "Data Warehouse" si intendono i dati raccolti disponibili per il reporting.
+Quando si lavora con Reporting, si sentiranno i termini "Data Warehouse" e "ETL". ETL sta per "Estrai, trasforma e carica". Il processo ETL recupera i dati raccolti in Data Infrastructure Insights e trasforma i dati in un formato da utilizzare in Reporting. Per "Data Warehouse" si intendono i dati raccolti disponibili per il reporting.
 
 Il processo ETL include i seguenti processi:
 
-* *Estrai*: Prende i dati da Cloud Insights.
-* *Trasformazione*: Applica le regole o le funzioni della logica di business ai dati quando vengono estratti da Cloud Insights.
+* *Estrai*: Prende i dati da Data Infrastructure Insights.
+* *Transform*: Applica regole o funzioni di logica aziendale ai dati così come vengono estratti da Data Infrastructure Insights.
 * *Load*: Consente di salvare i dati trasformati nel data warehouse per utilizzarli in Reporting.
 

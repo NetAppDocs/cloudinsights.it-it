@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference_object_icons.html 
-summary: 'Riferimento all"icona dell"oggetto Cloud Insights.' 
+summary: Riferimento icona oggetto Data Infrastructure Insights. 
 keywords: icons, assets, objects, reference, map 
 ---
 = Riferimento icona oggetto
@@ -9,7 +9,7 @@ keywords: icons, assets, objects, reference, map
 
 
 [role="lead"]
-Icone oggetto utilizzate in Cloud Insights.
+Icone degli oggetti utilizzate in Data Infrastructure Insights.
 
 
 

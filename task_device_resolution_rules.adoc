@@ -19,7 +19,7 @@ summary: 'Device Resolution ti aiuta a tenere traccia con precisione delle perfo
 
 
 [role="lead"]
-Vengono create regole di risoluzione dei dispositivi per identificare host, storage e nastri che non vengono identificati automaticamente da Cloud Insights. Le regole create consentono di identificare i dispositivi attualmente presenti nell'ambiente e i dispositivi simili man mano che vengono aggiunti all'ambiente.
+È possibile creare regole di risoluzione dei dispositivi per identificare host, storage e nastri che non sono identificati automaticamente al momento da Data Infrastructure Insights. Le regole create consentono di identificare i dispositivi attualmente presenti nell'ambiente e i dispositivi simili man mano che vengono aggiunti all'ambiente.
 
 
 
@@ -57,13 +57,13 @@ NOTE: Fare clic sul collegamento _View Matching Criteria_ per ottenere assistenz
 
 . Nell'elenco *Source* (origine), selezionare l'origine che si desidera utilizzare per identificare l'host.
 +
-A seconda dell'origine scelta, Cloud Insights visualizza la seguente risposta:
+A seconda dell'origine selezionata, Data Infrastructure Insights visualizza la risposta seguente:
 
 +
-.. *Zones* elenca le zone e il WWN che devono essere identificati da Cloud Insights.
-.. *SRM* elenca gli alias non identificati che devono essere identificati da Cloud Insights
-.. *Alias dello storage* elenca gli alias dello storage e il WWN che devono essere identificati da Cloud Insights
-.. *Switch alias* elenca gli alias dello switch che devono essere identificati da Cloud Insights
+.. *Zones* elenca le zone e il WWN che devono essere identificati da Data Infrastructure Insights.
+.. *SRM* elenca gli alias non identificati che devono essere identificati da Data Infrastructure Insights
+.. *Alias storage* elenca gli alias storage e il WWN che devono essere identificati da Data Infrastructure Insights
+.. *Switch alias* elenca gli alias degli switch che devono essere identificati da Data Infrastructure Insights
 
 
 . Nell'elenco *Method* (metodo), selezionare il metodo da utilizzare per identificare l'host.
@@ -86,7 +86,7 @@ A seconda dell'origine scelta, Cloud Insights visualizza la seguente risposta:
 | Zone | Delimitatori, espressioni regolari 
 |===
 +
-** Le regole che utilizzano i delimitatori richiedono i delimitatori e la lunghezza minima del nome host. La lunghezza minima del nome host è il numero di caratteri che Cloud Insights deve utilizzare per identificare un host. Cloud Insights esegue ricerche DNS solo per nomi host lunghi o più lunghi.
+** Le regole che utilizzano i delimitatori richiedono i delimitatori e la lunghezza minima del nome host. La lunghezza minima del nome host è il numero di caratteri che Data Infrastructure Insights deve utilizzare per identificare un host. Data Infrastructure Insights esegue ricerche DNS solo per i nomi host lunghi o più lunghi.
 +
 Per le regole che utilizzano i delimitatori, la stringa di input viene token dal delimitatore e viene creato un elenco di nomi host candidati creando diverse combinazioni del token adiacente. L'elenco viene quindi ordinato, dal più grande al più piccolo. Ad esempio, per un input squing di _vipsnq03_hba3_emc3_12ep0_, l'elenco risulterà nel seguente:
 
@@ -119,7 +119,7 @@ I risultati dell'esecuzione della regola vengono visualizzati nella scheda *FC I
 Un aggiornamento della risoluzione del dispositivo commuta le modifiche manuali aggiunte dall'ultima esecuzione automatica della risoluzione del dispositivo. L'esecuzione di un aggiornamento può essere utilizzata per salvare ed eseguire solo le nuove voci manuali della configurazione della risoluzione del dispositivo. Non viene eseguita alcuna risoluzione completa del dispositivo.
 
 .Procedura
-. Accedere all'interfaccia utente Web di Cloud Insights.
+. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
 . Fare clic su *Gestisci > risoluzione periferica*
 . Nella schermata *Device Resolution* (risoluzione periferica), fare clic sulla freccia verso il basso nel pulsante *Run AR* (Esegui AR*).
 . Fare clic su *Aggiorna* per avviare l'aggiornamento.
@@ -138,7 +138,7 @@ Sono presenti diversi dispositivi non identificati e più regole che consentono 
 NOTE: Se l'origine contiene solo una parte del nome di un host o di un dispositivo, utilizzare una regola di espressione regolare e formattarla per aggiungere il testo mancante.
 
 .Procedura
-. Accedere all'interfaccia utente Web di Cloud Insights.
+. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
 . Fare clic su *Gestisci > risoluzione periferica*
 . Fare clic sulla scheda *Fibre Channel Identify*.
 +
@@ -156,7 +156,7 @@ L'ordine delle regole viene modificato nella schermata Identify (identificazione
 . Selezionare il metodo più adatto alle proprie esigenze.
 
 
-Cloud Insights esegue il processo di risoluzione dell'host nell'ordine in cui vengono visualizzati i metodi, iniziando da quelli in alto.
+Data Infrastructure Insights esegue il processo di risoluzione dell'host nell'ordine in cui vengono visualizzati i metodi, iniziando da quelli in alto.
 
 Quando si incontrano le regole applicabili, i nomi delle regole vengono visualizzati nella colonna rules (regole) e identificati come manual (manuale).
 

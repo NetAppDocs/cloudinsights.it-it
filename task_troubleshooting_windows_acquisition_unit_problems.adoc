@@ -33,13 +33,13 @@ Qui troverai suggerimenti per la risoluzione dei problemi relativi alle unità d
 | Requisiti del server non soddisfatti | Assicurarsi che il server o la macchina virtuale dell'unità di acquisizione soddisfi i requisiti link:concept_acquisition_unit_requirements.html["requisiti"] 
 
 
-| Requisiti di rete non soddisfatti | Assicurarsi che il server/VM dell'unità di acquisizione possa accedere all'ambiente Cloud Insights (<environment-name>.c01.cloudinsights.netapp.com) tramite connessione SSL sulla porta 443. Provare i seguenti comandi: _Ping <environment-name>.c01.cloudinsights.netapp.com_ _traceroute <environment-name>.c01.cloudinsights.netapp.com_ _curl https://<environment-name>.c01.cloudinsights.netapp.com_ _wget https://<environment-name>.c01.cloudinsights.netapp.com_ 
+| Requisiti di rete non soddisfatti | Assicurarsi che il server/VM dell'unità di acquisizione possa accedere all'ambiente di informazioni sull'infrastruttura dati (<environment-name>.C01.cloudinsights.NetApp.com) tramite connessione SSL sulla porta 443. Provare i seguenti comandi: _Ping <environment-name>.C01.cloudinsights.NetApp.com_ _traceroute <environment-name>.C01.cloudinsights.NetApp.com_ _curl \https://<environment-name>.C01.cloudinsights.NetApp.com_ _wget \https://<environment-name>.C01.cloudinsights.NetApp.com_ 
 
 
 | Server proxy non configurato correttamente | Verificare le impostazioni del proxy e, se necessario, disinstallare/reinstallare il software dell'unità di acquisizione per immettere le impostazioni proxy corrette. 1. Provare a "arricciare". Fare riferimento alle informazioni/alla documentazione "man curl" relative ai proxy: --preproxy, --proxy-* (si tratta di un carattere jolly "*" perché curl supporta molte impostazioni proxy). 2. Prova "wget". Consultare la documentazione per le opzioni proxy. 
 
 
-| Installazione dell'unità di acquisizione non riuscita in Cloud Insights con errori di credenziale durante l'avvio del servizio di acquisizione (e visibile nel log acq.). | Ciò può essere causato dall'inclusione di caratteri speciali nelle credenziali proxy. Disinstallare l'AU (_sudo cloudindsights-uninstall.sh_) e reinstallarlo senza utilizzare caratteri speciali. 
+| Installazione dell'unità di acquisizione non riuscita in Data Infrastructure Insights con errori di credenziali durante l'avvio del servizio di acquisizione (e visibile in acq.log). | Ciò può essere causato dall'inclusione di caratteri speciali nelle credenziali proxy. Disinstallare l'AU (_sudo cloudindsights-uninstall.sh_) e reinstallarlo senza utilizzare caratteri speciali. 
 
 
 | Problemi di autorizzazione | Assicurarsi di aver effettuato l'accesso come utente con autorizzazioni di amministratore 
@@ -51,24 +51,24 @@ Qui troverai suggerimenti per la risoluzione dei problemi relativi alle unità d
 | Problemi di raccolta dati | Inviare un report degli errori dalla landing page di Data Collector facendo clic sul pulsante "Send Error Report" (Invia report errori) 
 
 
-| Stato: Heartbeat non riuscito | L'unità di acquisizione (AU) invia un heartbeat a Cloud Insights ogni 60 secondi per rinnovarne il lease. Se la chiamata heartbeat non riesce a causa di un problema di rete o di un Cloud Insights che non risponde, il tempo di lease dell'AU non viene aggiornato. Allo scadere del tempo di lease dell'AU, Cloud Insights mostra lo stato "Heartbeat Failed" (battito cardiaco non riuscito). Procedura per la risoluzione dei problemi: * Controllare la connessione di rete tra il server dell'unità di acquisizione e CloudInsights. * Controllare se il servizio dell'unità di acquisizione è in esecuzione. Se il servizio non è in esecuzione, avviarlo. * Controllare il registro dell'unità di acquisizione (<Install dir>: File di programma/informazioni cloud/unità di acquisizione/log) per verificare se sono presenti errori. 
+| Stato: Heartbeat non riuscito | L'unità di acquisizione (AU) invia un heartbeat a Data Infrastructure Insights ogni 60 secondi per rinnovare il proprio lease. Se la chiamata heartbeat non riesce a causa di un problema di rete o non risponde a Data Infrastructure Insights, il periodo di lease dell'AU non viene aggiornato. Quando il periodo di lease dell'AU scade, Data Infrastructure Insights mostra lo stato "Heartbeat Failed" (Heartbeat non riuscito). Procedura per la risoluzione dei problemi: * Controllare la connessione di rete tra il server dell'unità di acquisizione e CloudInsights. * Controllare se il servizio dell'unità di acquisizione è in esecuzione. Se il servizio non è in esecuzione, avviarlo. * Controllare il registro dell'unità di acquisizione (<Install dir>: File di programma/informazioni cloud/unità di acquisizione/log) per verificare se sono presenti errori. 
 
 
-| Viene visualizzato il messaggio "Heartbeat Error: (Errore heartbeat: Errore heartbeat | Questo errore può verificarsi se si verifica un'interruzione di rete che causa l'interruzione della comunicazione tra l'unità di acquisizione e l'ambiente Cloud Insights per più di un minuto. Verificare che la connessione tra AU e Cloud Insights sia stabile e attiva. 
+| Viene visualizzato il messaggio "Heartbeat Error: (Errore heartbeat: Errore heartbeat | Questo errore può verificarsi se si verifica un'interruzione della rete che causa l'interruzione della comunicazione tra l'unità di acquisizione e l'ambiente Data Infrastructure Insights per più di un minuto. Verificare che la connessione tra AU e Data Infrastructure Insights sia stabile e attiva. 
 |===
 
 
 == Considerazioni su Proxy e Firewall
 
-Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni per il funzionamento di Cloud Insights. Tenere presente quanto segue:
+Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni affinché Data Infrastructure Insights funzioni. Tenere presente quanto segue:
 
 * Innanzitutto, l'organizzazione blocca l'accesso per impostazione predefinita e consente solo l'accesso a siti/domini Web specifici per eccezione? In tal caso, sarà necessario aggiungere il seguente dominio all'elenco delle eccezioni:
 +
  *.cloudinsights.netapp.com
 +
-L'unità di acquisizione Cloud Insights, così come le interazioni in un browser Web con Cloud Insights, andranno tutti agli host con quel nome di dominio.
+L'unità di acquisizione di Data Infrastructure Insights, così come le interazioni in un browser Web con Data Infrastructure Insights, verranno indirizzate agli host con tale nome di dominio.
 
-* In secondo luogo, alcuni proxy tentano di eseguire l'ispezione TLS/SSL impersonando i siti Web Cloud Insights con certificati digitali non generati da NetApp. Il modello di sicurezza dell'unità di acquisizione Cloud Insights è fondamentalmente incompatibile con queste tecnologie. Per consentire all'unità di acquisizione Cloud Insights di accedere correttamente a Cloud Insights e facilitare il rilevamento dei dati, è necessario anche il nome di dominio sopra indicato, ad eccezione di questa funzionalità.
+* In secondo luogo, alcuni proxy tentano di eseguire l'ispezione TLS/SSL impersonando i siti Web Data Infrastructure Insights con certificati digitali non generati da NetApp. Il modello di sicurezza dell'unità di acquisizione di informazioni sull'infrastruttura dati è fondamentalmente incompatibile con queste tecnologie. È inoltre necessario disporre del nome di dominio di cui sopra, salvo questa funzionalità, affinché l'unità di acquisizione di Data Infrastructure Insights effettui correttamente l'accesso a Data Infrastructure Insights e faciliti il rilevamento dei dati.
 
 
 
@@ -85,4 +85,4 @@ image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
 Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili nella link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
 
-Ulteriori informazioni di supporto sono disponibili sul sito Cloud Insights link:concept_requesting_support.html["Supporto"] pagina.
+Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].

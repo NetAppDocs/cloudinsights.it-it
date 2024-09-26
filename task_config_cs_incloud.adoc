@@ -69,7 +69,7 @@ Per configurare il computer in modo che venga utilizzato come agente di sicurezz
 
 == Installare Workload Security Agent
 
-. Accedere come amministratore o come proprietario dell'account all'ambiente Cloud Insights.
+. Accedere come Amministratore o Proprietario dell'account al proprio ambiente Data Infrastructure Insights.
 . Accedere a sicurezza del carico di lavoro *Collectors* e fare clic sulla scheda *Agenti*.
 . Fare clic su *+Agent* e specificare RHEL come piattaforma di destinazione.
 . Copiare il comando Installazione agente.

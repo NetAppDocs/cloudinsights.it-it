@@ -5,23 +5,20 @@ keywords: webhook, notification, slack, integration
 summary: Creare monitor per avvisare sulle soglie di performance o inventario 
 ---
 = Notifica tramite webhook
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato.
 
-Molte applicazioni commerciali supportano i webhook come interfaccia di input standard, ad esempio Slack, PagerDuty, Teams e Discord. Grazie al supporto di un canale webhook generico e personalizzabile, Cloud Insights è in grado di supportare molti di questi canali di delivery. Le informazioni sui webhook sono disponibili su questi siti Web delle applicazioni. Ad esempio, Slack fornisce link:https://api.slack.com/messaging/webhooks["questa utile guida"].
+Molte applicazioni commerciali supportano i webhook come interfaccia di input standard, ad esempio Slack, PagerDuty, Teams e Discord. Supportando un canale webhook generico e personalizzabile, Data Infrastructure Insights può supportare molti di questi canali di distribuzione. Le informazioni sui webhook sono disponibili su questi siti Web delle applicazioni. Ad esempio, Slack fornisce link:https://api.slack.com/messaging/webhooks["questa utile guida"].
 
 È possibile creare più canali webhook, ciascun canale destinato a uno scopo diverso; applicazioni separate, destinatari diversi, ecc.
 
@@ -54,7 +51,7 @@ L'istanza del canale webhook comprende i seguenti elementi:
 
 == Creazione di un webhook
 
-Per creare un webhook Cloud Insights, vai a *Amministratore > Notifiche* e seleziona la scheda *webhook*.
+Per creare un webhook di Data Infrastructure Insights, vai su *Amministrazione > Notifiche* e seleziona la scheda *webhook*.
 
 L'immagine seguente mostra un webhook di esempio configurato per l'allentamento:
 
@@ -64,9 +61,9 @@ Inserire le informazioni appropriate per ciascuno dei campi e fare clic su "Save
 
 È inoltre possibile fare clic sul pulsante "Test Webhook" per verificare la connessione. Si noti che questo invierà il "corpo del messaggio" (senza sostituzioni) all'URL definito in base al metodo selezionato.
 
-I webhook Cloud Insights comprendono una serie di parametri predefiniti. Inoltre, è possibile creare i propri segreti o parametri personalizzati.
+I webhook di Data Infrastructure Insights comprendono una serie di parametri predefiniti. Inoltre, è possibile creare i propri segreti o parametri personalizzati.
 
-image:Webhook_Default_Parameters.png["Parametri webhook predefiniti di Cloud Insights"]
+image:Webhook_Default_Parameters.png["Parametri Webhook predefiniti di Data Infrastructure Insights"]
 
 
 

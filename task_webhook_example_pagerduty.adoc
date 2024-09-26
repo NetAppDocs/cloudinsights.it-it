@@ -33,7 +33,7 @@ NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che potrebber
 +
 image:Webhooks_PagerDutyScreen1.png["Schermata Pagerduty"]
 
-. Fare clic sulla scheda _integrazioni_ per visualizzare la *chiave di integrazione*. Questa chiave sarà necessaria quando crei il webhook Cloud Insights qui sotto.
+. Fare clic sulla scheda _integrazioni_ per visualizzare la *chiave di integrazione*. Questa chiave è necessaria quando si crea il webhook informazioni sull'infrastruttura dati riportato di seguito.
 
 
 . Accedere a *incidenti* o *servizi* per visualizzare gli avvisi.
@@ -44,9 +44,9 @@ image:Webhooks_PagerDutyScreen2.png["Schermata Pagerduty"]
 
 
 
-== Crea un webhook Cloud Insights:
+== Crea Webhook di approfondimento sull'infrastruttura dati:
 
-. In Cloud Insights, accedere a *Amministratore > Notifiche* e selezionare la scheda *webhook*. Fare clic su *+Webhook* per creare un nuovo webhook.
+. In Data Infrastructure Insights, accedere a *Admin > Notifiche* e selezionare la scheda *webhook*. Fare clic su *+Webhook* per creare un nuovo webhook.
 . Assegnare al webhook un nome significativo, ad esempio "PagerDuty Trigger". Utilizzerai questo webhook per eventi critici e di avviso.
 . Nell'elenco a discesa _Template Type_, selezionare *PagerDuty*.
 
@@ -61,13 +61,13 @@ Ripetere questi passaggi per creare un webhook "PagerDuty Resolve" per gli event
 
 
 
-== Mappatura dei campi PagerDuty to Cloud Insights
+== Mappatura del campo di approfondimento PagerDuty a Data Infrastructure
 
-La tabella e l'immagine seguenti mostrano la mappatura dei campi tra PagerDuty e Cloud Insights:
+La tabella e l'immagine seguenti mostrano la mappatura dei campi tra PagerDuty e Data Infrastructure Insights:
 
 [cols="<,<"]
 |===
-| PagerDuty | Cloud Insights 
+| PagerDuty | Informazioni sull'infrastruttura dati 
 
 
 | Tasto Alert (Avviso) | ID avviso 
@@ -90,7 +90,7 @@ image:Webhooks-PagerDuty_Fields.png["Campi PagerDuty in ci"]
 
 == Notifiche tramite Webhook
 
-Per notificare gli eventi tramite webhook, in Cloud Insights selezionare *Avvisi > Monitor* e fare clic su *+Monitor* per crearne uno nuovo link:task_create_monitor.html["monitorare"].
+Per notificare gli eventi tramite webhook, in Data Infrastructure Insights (informazioni sull'infrastruttura datilink:task_create_monitor.html["monitorare"]) accedere a *Alerts > Monitors* (Avvisi > Monitor*) e fare clic su *+Monitor* (monitoraggio*) per creare un nuovo .
 
 * Selezionare una metrica e definire le condizioni del monitor.
 * In _set up team notification(s), scegliere il metodo di consegna *Webhook*.
