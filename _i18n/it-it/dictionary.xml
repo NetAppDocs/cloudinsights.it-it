@@ -2379,8 +2379,6 @@
   <block id="d867bfc5a8d8ee48bd2e10f3615136cf" category="cell">Impostare la dimensione del buffer di invio ONTAP</block>
   <block id="b473afd1a1a7f9aa85950e270c33864e" category="cell">Imposta la dimensione del buffer di invio ONTAP Fpolicy. Se si utilizza una versione di ONTAP precedente a 9.8p7 e si verifica un problema di prestazioni, è possibile modificare le dimensioni del buffer di invio ONTAP per migliorare le prestazioni di ONTAP. Contatta il supporto NetApp se non vedi questa opzione e desideri esplorarla.</block>
   <block id="82d21a2ba2528e048a25848fe767072e" category="list-text">Nella pagina dei Data Collector installati, utilizzare il menu delle opzioni a destra di ciascun collector per modificare il data collector. È possibile riavviare il data collector o modificare gli attributi di configurazione del data collector.</block>
-  <block id="6d7dcfcccd12536dde9ff30f070659ea" category="section-title">Configurazione consigliata per Metro Cluster</block>
-  <block id="dbefbdd0db747220531f4b1da3847502" category="paragraph">Per Metro Cluster si consiglia quanto segue:</block>
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">Collegare due data collettori, uno alla SVM di origine e l'altro alla SVM di destinazione.</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">I data collezioner devono essere collegati da _Cluster IP_.</block>
   <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">In qualsiasi momento, un data collector dovrebbe essere in esecuzione, un altro potrebbe essere in errore.</block>
@@ -13438,4 +13436,6 @@ Se si utilizza SELinux, si consiglia di eseguire i seguenti comandi sul sistema 
   <block id="cdf3e3a169b144bb9d2bce1646acfedc" category="paragraph">La tabella e l'immagine seguenti mostrano la mappatura dei campi tra PagerDuty e Data Infrastructure Insights:</block>
   <block id="55f37f5127b4085cc0881e89df336196" category="cell">Un dockerRepo override per estrarre le immagini dai repos privati dei docker dei clienti rispetto a Data Infrastructure Insights docker repo. Di default è incluso il repo del docker di Data Infrastructure Insights</block>
   <block id="5a550f6f445193e3c7e81200a2c9d8de" category="cell">Campo di testo libero che identifica in modo univoco un cluster in tutti i cluster dei clienti. Questa impostazione deve essere univoca in un tenant Data Infrastructure Insights. Il valore predefinito è quello che il cliente inserisce nell'interfaccia utente per il campo "Cluster Name" (Nome cluster)</block>
+  <block id="3ea40c0971a5d2af49b6f75088f94403" category="section-title">Configurazione consigliata per MetroCluster</block>
+  <block id="eff16f7e2ed55dec2fc30b6481ebf593" category="paragraph">Per MetroCluster si consiglia quanto segue:</block>
 </blocks>
