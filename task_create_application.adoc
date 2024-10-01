@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: 'Vengono definite le applicazioni che vengono quindi applicate alle risorse nell"ambiente in base alle esigenze.' 
+summary: 'È possibile definire le applicazioni da applicare agli asset nell"ambiente in base alle esigenze.' 
 keywords: application, create application, 
 ---
 = Creazione di applicazioni
@@ -16,16 +16,16 @@ keywords: application, create application,
 
 
 [role="lead"]
-Per tenere traccia dei dati associati a specifiche applicazioni in esecuzione nel proprio ambiente, è possibile definire le applicazioni in Cloud Insights.
+Per tenere traccia dei dati associati ad applicazioni specifiche in esecuzione nell'ambiente, è possibile definire le applicazioni in Data Infrastructure Insights.
 
 .Prima di iniziare
 Se si desidera associare l'applicazione a un'entità aziendale, è necessario creare l'entità aziendale prima di definire l'applicazione.
 
 .A proposito di questa attività
-Cloud Insights consente di tenere traccia dei dati delle risorse associate alle applicazioni per attività come l'utilizzo o il reporting dei costi.
+Data Infrastructure Insights ti consente di tenere traccia dei dati dagli asset associati alle applicazioni per elementi come l'utilizzo o il reporting dei costi.
 
 .Fasi
-. Nel menu Cloud Insights, fare clic su *osservabilità > arricchimento > applicazioni*. Selezionare
+. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability > Enrich > Applications* (osservabilità > arricchimento > applicazioni). Selezionare
 +
 Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).
 
