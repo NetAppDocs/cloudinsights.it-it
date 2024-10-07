@@ -76,7 +76,7 @@ Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seg
 
 == Risoluzione dei problemi
 
-* Le credenziali utilizzate dal data collector ANF non devono avere accesso a sottoscrizioni Azure che contengono volumi ANF.
+* Le credenziali utilizzate dal data collector ANF devono avere accesso a qualsiasi sottoscrizione di Azure che contenga volumi ANF.
 * Se l'accesso a Reader causa un errore nella raccolta delle performance, provare a concedere l'accesso del collaboratore a livello di gruppo di risorse.
 
 
