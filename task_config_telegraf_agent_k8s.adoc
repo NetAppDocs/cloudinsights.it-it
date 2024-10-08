@@ -558,5 +558,8 @@ In alternativa, si può anche <<uninstalling,disinstallazione>> e. <<installing-
 
 
 | Telegraf avverte di, o si blocca a causa di, memoria bloccabile insufficiente. | Provare ad aumentare il limite di memoria bloccabile per Telegraf nel sistema operativo/nodo sottostante. Se l'aumento del limite non è un'opzione, modificare la configurazione dell'agente NKMO e impostare _non protetto_ su _true_.  In questo modo, Telegraf non tenterà di riservare pagine di memoria bloccate. Sebbene ciò possa rappresentare un rischio per la sicurezza poiché i segreti decrittografati potrebbero essere scambiati sul disco, consente l'esecuzione in ambienti in cui non è possibile riservare la memoria bloccata. Per ulteriori informazioni sulle opzioni di configurazione _non protetto_, fare riferimento alla link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] pagina. 
+
+
+| Vedo messaggi di avviso da Telegraf simili a quanto segue: _W! [Inputs.diskio] Impossibile raccogliere il nome del disco per "vdc": Errore di lettura /dev/vdc: Nessun file o directory_ | Per l'operatore di monitoring Kubernetes, questi messaggi di avviso sono benigni e possono essere ignorati in modo sicuro. In alternativa, modificare la sezione telegraf in AgentConfiguration e impostare runPrivileged su true. Per ulteriori informazioni, fare riferimento alla link:telegraf_agent_k8s_config_options.html["opzioni di configurazione dell'operatore"]. 
 |===
 Per ulteriori informazioni, consultare link:concept_requesting_support.html["Supporto"] o in link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
