@@ -106,7 +106,7 @@ NOTE: Una _Valutazione modulo_ non è una _prova_ - utilizziamo il termine prova
 
 === Generatore di stime
 
-Durante la valutazione di un modulo, non viene modificato l'utilizzo delle UM per le risorse consumate per il modulo, ma potete aprire il *Tool* (nella scheda _Summary_) per vedere come le MU saranno addebitate dopo la valutazione, così come giocare con scenari ipotetici con il numero di MU che potreste avere bisogno in futuro. Azzerare i numeri uscendo dal calcolatore.
+Durante la valutazione di un modulo, non viene addebitato l'utilizzo delle UM per le risorse consumate per il modulo, ma è possibile aprire il *Tool* (nella scheda _Summary_) per vedere come le UM verranno addebitate dopo la valutazione, nonché giocare con gli scenari ipotetici con il numero di UM che potrebbero essere necessarie in futuro. Azzerare i numeri uscendo dal calcolatore.
 
 image:Module_Trials_Estimator.png["Generatore di stime"]
 
@@ -126,7 +126,36 @@ Per iscriverti, vai a *Admin -> Subscription*. Oltre ai pulsanti *Sottoscrivi*, 
 
 === Misurazione dell'osservabilità
 
-Informazioni sull'infrastruttura dati l'osservabilità dell'infrastruttura e l'osservabilità Kubernetes sono misurate per *unità gestita*. L'utilizzo delle unità gestite viene calcolato in base al numero di *host o macchine virtuali* e alla quantità di *capacità non formattata* gestita nell'ambiente dell'infrastruttura.
+L'osservabilità di Data Infrastructure Insights viene misurata in due modi:
+
+* Misurazione della capacità
+* Misurazione delle unità gestite (legacy)
+
+
+Il tuo abbonamento verrà misurato in base a uno di questi metodi, a seconda che tu abbia già un abbonamento o che stia per lanciare un nuovo abbonamento.
+
+
+
+==== Misurazione della capacità
+
+L'osservabilità di Data Infrastructure Insights misura l'utilizzo in base al Tier di storage del tuo ambiente. È possibile che vi siano depositi che rientrano in una o più di queste categorie:
+
+* Dati grezzi primari
+* Oggetto non elaborato
+* Cloud consumato
+
+
+Ogni livello viene misurato a un tasso diverso, con l'intero calcolato insieme per darvi un _diritto effettivo_. La formula per il calcolo dell'uso effettivo è la seguente:
+
+ Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+
+NOTE: La somma delle unità gestite potrebbe differire leggermente dal conteggio dei Data Collector nella sezione di riepilogo. Questo perché i conteggi delle unità gestite vengono arrotondati all'unità gestita più vicina. La somma di questi numeri nell'elenco Data Collector (raccolta dati) potrebbe essere leggermente superiore a quella delle unità gestite totali nella sezione Status (Stato). La sezione riepilogativa indica il numero effettivo di unità gestite per l'abbonamento. Per facilitare questa operazione, DII calcola un singolo numero *effettivo* in base alle quantità _sottoscritte_; calcola quindi lo stesso numero in base all'archiviazione _scoperta_ e dichiara la violazione solo se la capacità effettiva scoperta è superiore al diritto effettivo. Ciò ti offre la flessibilità di monitorare le quantità che variano dagli importi sottoscritti per ogni livello, che DII consente finché lo storage totale rilevato rientra nell'autorizzazione effettiva sottoscritta.
+
+
+
+==== Misurazione delle unità gestite (legacy)
+
+Data Infrastructure Insights Infrastructure Observability e Kubernetes Observability misurano l'utilizzo per *Managed Unit*. L'utilizzo delle unità gestite viene calcolato in base al numero di *host o macchine virtuali* e alla quantità di *capacità non formattata* gestita nell'ambiente dell'infrastruttura.
 
 * 1 unità gestita = 2 host (qualsiasi macchina virtuale o fisica)
 * 1 unità gestita = 4 TIB di capacità non formattata di dischi fisici o virtuali
