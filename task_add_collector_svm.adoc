@@ -239,7 +239,7 @@ L'attuale data collector SVM ‘in esecuzione’ viene visualizzato come _in ese
 
 == Policy di servizio
 
-Se si utilizza la policy di servizio di ONTAP versione 9.9.1, per connettersi al servizio di raccolta origine dati, è necessario il servizio _data-fpolicy-client_ insieme al servizio dati _data-nfs_ e/o _data-cifs_.
+Se si utilizza la politica di servizio con ONTAP *versione 9.9.1 o successiva*, per connettersi al Data Source Collector, è necessario il servizio _data-fpolicy-client_ insieme al servizio dati _data-nfs_ e/o _data-cifs_.
 
 Esempio:
 
