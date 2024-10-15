@@ -5,7 +5,12 @@ keywords: workload security, cloud secure, include list, allowed, file types, ra
 summary: Aggiungere le estensioni di file a un elenco dei tipi di file consentiti per ridurre gli avvisi. 
 ---
 = Criteri tipi di file consentiti
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

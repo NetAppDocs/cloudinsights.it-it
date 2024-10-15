@@ -4,13 +4,12 @@ permalink: cs_restrict_user_access.html
 keywords: alert, snapshot,  attack 
 summary: 'Con workload Security, puoi limitare l"accesso degli utenti in caso di sospetto sabotaggio' 
 ---
-= Blocco dell'accesso utente
-:hardbreaks:
+= Blocco dell'accesso utente:interruzioni permanenti:
 :allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

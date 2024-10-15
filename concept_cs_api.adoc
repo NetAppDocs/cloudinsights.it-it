@@ -4,8 +4,7 @@ permalink: concept_cs_api.html
 keywords: api, access, token, swagger 
 summary: 'Workload Security include una potente API per l"integrazione con altre applicazioni come CMDB.' 
 ---
-= API per la sicurezza del carico di lavoro
-:hardbreaks:
+= API di sicurezza del carico di lavoro:interruzioni permanenti:
 :allow-uri-read: 
 :nofooter: 
 :icons: font

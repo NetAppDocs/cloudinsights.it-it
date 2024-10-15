@@ -5,17 +5,14 @@ keywords: monitors, alerts, log, metric, system-defined, system, metric,
 summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inventario, nonché sulle condizioni metriche o di log.' 
 ---
 = Avvisi con i monitor
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

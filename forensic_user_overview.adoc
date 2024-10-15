@@ -4,8 +4,7 @@ permalink: forensic_user_overview.html
 keywords: Forensic, user, user, activity 
 summary: 'dettagli forensi per l"utente' 
 ---
-= Panoramica dell'utente legale
-:hardbreaks:
+= Panoramica dell'utente forense:interruzioni permanenti:
 :allow-uri-read: 
 :nofooter: 
 :icons: font

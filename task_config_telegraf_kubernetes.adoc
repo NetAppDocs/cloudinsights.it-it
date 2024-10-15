@@ -4,8 +4,7 @@ permalink: task_config_telegraf_kubernetes.html
 keywords: telegraf 
 summary: Raccolta di dati per Kubernetes 
 ---
-= Data Collector: Kubernetes
-:hardbreaks:
+= Data Collector: Kubernetes:hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
 :toclevels: 1
