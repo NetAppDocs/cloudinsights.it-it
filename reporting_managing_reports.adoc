@@ -22,6 +22,9 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
 
 
+IMPORTANT: Prima di apportare modifiche alle autorizzazioni o alla sicurezza dei report, è necessario copiare i report "contenuto personale" nella cartella "contenuto team" per assicurarsi che i report vengano salvati.
+
+
 
 == Personalizzazione del formato di output e della consegna di un report
 
