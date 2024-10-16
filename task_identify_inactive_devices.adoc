@@ -5,14 +5,17 @@ keywords: inactive, device,
 summary: 'L"identificazione dei dispositivi inattivi consente di scegliere se eliminarli o assegnarli a un ruolo attivo.' 
 ---
 = Identificazione dei dispositivi inattivi
+:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
+:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]
