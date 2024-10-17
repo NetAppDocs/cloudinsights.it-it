@@ -87,7 +87,7 @@ proxy:
 |  | RsMemRequest | Richiesta di memoria per telegraf rs 
 
 
-|  | RunPriveged | Eseguire il container telegraf in modalità privilegiata. Impostare questa opzione su true se SELinux è attivato sui nodi k8s 
+|  | RunPriveged | Eseguire il contenitore _telegraf-mountstats-polliner_ di telegraf DaemonSet in modalità privilegiata. Impostare questo valore su true se SELinux è abilitato sui nodi Kubernetes. 
 
 
 |  | Batch Size (dimensione batch) | Vedere link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentazione sulla configurazione di Telegraf"] 
@@ -179,7 +179,10 @@ persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resour
 |  | RunPriveged | Impostare runPrivileged su true se Fluent bit non si avvia, cercando di aprire/creare il proprio database. 
 
 
-| mappa del carico di lavoro |  | Opzioni di configurazione che consentono di personalizzare la raccolta e l'installazione della mappa del carico di lavoro dell'operatore 
+|  | RunDsPrivileged | Impostare runDsPrivileged su true per eseguire il contenitore telegraf DaemonSet in modalità privilegiata. 
+
+
+| mappa del carico di lavoro |  | Opzioni di configurazione che possono personalizzare la raccolta della mappa del carico di lavoro e l'installazione dell'operatore. 
 
 
 |  | CpuLimit | Limite CPU per i server di osservazione della rete 
